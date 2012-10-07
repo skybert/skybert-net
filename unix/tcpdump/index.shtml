@@ -1,0 +1,36 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <h2>Watching all the HTTP traffic</h2>
+      <p>
+        This is a great way of watching the normal HTTP traffic on a
+        given host using the <code>eth1</code> interface: 
+      </p>
+<pre class="prettyprint">
+tcpdump -i eth1 -l -s0 -w - tcp dst port 80  | strings
+</pre>
+      <p>
+        Note that this will not print the responses from the server as
+        these will not have destination port <code>80</code>. To watch
+        both server requests and responses transmitted on my default
+        interface (i.e. no <code>-i</code>), I use:
+      </p>
+<pre class="prettyprint">
+tcpdump -l -s0 -w - tcp   | strings
+</pre>
+      <h2>Watching all communication to and from memcached</h2>
+      <p>
+        In my case, the memcached is running on its default port,
+        11211, and all communication to and from it is local to the
+        current host, hence all the traffic goes over the loopback
+        interface <code>lo</code>.
+      </p>
+      <p>
+        To view all the memcached traffic, including seeing the
+        key/value pairs and memcached return statuses, you can do: 
+      </p>
+<pre class="prettyprint">
+tcpdump -i  lo -s0 -w - tcp dst port 11211 
+</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

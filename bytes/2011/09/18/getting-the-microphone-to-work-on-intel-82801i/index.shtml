@@ -1,0 +1,24 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Getting the Microphone to Work on Intel 82801I</h1>
+    <div id="main">
+      <p>
+        I had to add the following to <code>/etc/modprobe.d/alsa-base.conf</code> in order to get the microphone on a Lenovo Thinkpad Edge:
+      </p>
+      <pre>options snd-hda-intel model=laptop</pre>
+      <p>
+        The drawback of this solution, is that plugging in earphones or speakers in the audio jack doesn't work anymore. However, this was the only way I could get the built in microphone to work.
+      </p>
+      <p>
+        The full details of the sound card is as follows:
+      </p>
+      <pre>00:1b.0 Audio device: Intel Corporation 82801I (ICH9 Family) HD Audio Controller (rev 03)</pre>
+      <p>
+        Other system details which may be useful for you:
+      </p>
+      <pre>$ lsb_release -r -i
+Distributor ID: Ubuntu
+Release:        11.04
+$ uname -r 
+2.6.38-11-generic</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,24 @@
+#+TITLE: Daily Good Articles
+
+* 2012-07-12
+** nginx srcache and memc backend, updating the memcached directly (or not)
+http://forum.nginx.org/read.php?2,225568,225568
+
+** Understanding the HTTP Vary Header and Caching Proxies (Squid, etc.)
+http://mark.koli.ch/2010/09/understanding-the-http-vary-header-and-caching-proxies-squid-etc.html
+
+* 2012-06-27
+** Tomcat performance tuning
+http://www.springsource.com/files/u1/PerformanceTuningApacheTomcat-Part2.pdf
+
+
+* 2012-06-25
+** Manage sessions closely
+http://www.javapractices.com/topic/TopicAction.do?Id=191
+
+** A Formal Introduction to The Ubuntu Orchestra Project 
+http://blog.dustinkirkland.com/2011/08/formal-introduction-to-ubuntu-orchestra.html
+
+http://bazaar.launchpad.net/~orchestra/orchestra/trunk/view/head:/debian/control
+
+https://fedorahosted.org/cobbler/

@@ -1,0 +1,25 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>New BASH discovery</h1>
+    <div id="main">
+      <p>
+        I just discovered an interesting thing in BASH: normally, you
+        have to dereference a variable by a dollar character, as in:
+      </p>
+<pre class="prettyprint">
+name="Lisa"
+echo "Hi" $name
+</pre>
+      <p>
+        However, when you're inside a <code>$(( ... ))</code>
+        construct, you don't have do use the dollar in front of
+        variables! For instance:
+      </p>
+<pre class="prettyprint">
+age=100
+echo "Half of the age is" $(( age / 2 ))
+</pre>
+      <p>
+        BASH never seizes to amaze me!
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

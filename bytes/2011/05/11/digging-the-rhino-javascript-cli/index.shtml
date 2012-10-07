@@ -1,0 +1,22 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>digging the rhino javascript cli</h1>
+    <div id="main">
+      <p>
+        I've just started playing around with the Mozilla Rhino CLI
+        tool, normally acessible with the command <code>rhino</code>
+        or <code>js</code>.
+      </p>
+      <p>
+        The script lets you both run it in batch mode, getting
+        validation feedback on your JS files, or interactively giving
+        you a shell in which you can do fast JavaScript prototyping.
+      </p>
+      <p>
+        My only complaints so far is that the interactive shell
+        doesn't have Emacs shortcuts (like the BASH, MySQL and
+        PostgreSQL shells have) and that it doesn't follow the POSIX
+        conventions for command line arguments. To remedy the first
+        one, I can wrap it with <code>rlwrap</code>, I suppose ...
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

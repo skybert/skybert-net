@@ -1,0 +1,15 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>VIM - VI Improved</h1>
+    <p>
+      Even though I'm a huge fan of Emacs, I also try to be relatively
+      fluent in VI(m).
+    </p>
+    <h2>My .vimrc</h2>
+    <p>
+      My demands are modest: turn on syntax highlighting, replace
+      TABs with spaces and set indentation to 2 spaces.
+    </p>
+<pre>
+<!--#include virtual=".vimrc" -->
+</pre>
+<!--#include virtual="/ssi/footer.shtml" -->

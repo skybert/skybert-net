@@ -1,0 +1,64 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Installing Sun Java on Debian after it was removed from the official repositories</h1>
+    <div id="main">
+      <p>
+        Now (2012-01) that the Sun packages no longer are present in
+        the official repositories (because Oracle revoked the licence
+        which made it possible for Linux distributions to include it),
+        we have to run through some extra loops.
+      </p>
+      <p>
+        This is how I use the Ubuntu PPT for installing the sun
+        packages:
+      </p>
+      <pre class="prettyprint"># apt-get install python-software-properties</pre>
+      <p>
+        Because of this <a
+        href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=632754">bug</a>,
+        I had to edit
+        <code>/usr/lib/python2.6/dist-packages/softwareproperties/ppa.py</code>
+        and change:
+      </p>
+      <pre class="prettyprint">
+-sourceslistd = apt_pkg.Config.find_dir("Dir::Etc::sourceparts")
++sourceslistd = apt_pkg.config.find_dir("Dir::Etc::sourceparts")</pre>
+      <p>
+        I then could do:
+      </p>
+      <pre class="prettyprint"># add-apt-repository ppa:sun-java-community-team/sun-java6</pre>
+      <p>
+        Since I'm running Debian wheezy, this generated
+        <code>/etc/apt/sources.list.d/sun-java-community-team-sun-java6-wheezy.list</code>
+        (notice the wheezy ending and the wheezy codename in the lines
+        inside the file). Since this is an Ubuntu repository, this
+        codename doesn't exist there, I thus changed this to
+        <code>maverick</code>:
+      </p>
+      <pre class="prettyprint"># sed -i "s#wheezy#maverick#g" /etc/apt/sources.list.d/sun-java-community-team-sun-java6-wheezy.list</pre>
+      <p>
+        With this out of the way, I could now do:
+      </p>
+      <pre class="prettyprint">
+# apt-get update
+# apt-get install sun-java6-jdk</pre>
+      <h2>Making Sun Java the default</h2>
+      <p>
+        If you've got other JDKs or JREs installed, you can run these
+        commands to ensure that Sun Java is the default:
+      </p>
+      <pre class="prettyprint"># update-alternatives --config java
+# update-alternatives --config javac
+# update-alternatives --config javaws</pre>
+      <h2>HtmlConverter doesn't exist. </h2>
+      <p>
+        If you get errors like:
+      </p>
+      <pre class="prettyprint">update-alternatives: error: alternative path /usr/lib/jvm/java-6-sun/bin/HtmlConverter doesn't exist. </pre>
+      <p>
+        It's most likely because you have the old Sun packages
+        installed (from Debian official). To remedy this, purge the
+        old packages before you install the packages from the PPA:
+      </p>
+      <pre class="prettyprint"># apt-get remove --purge sun-java6-jdk</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

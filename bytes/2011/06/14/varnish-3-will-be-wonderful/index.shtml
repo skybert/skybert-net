@@ -1,0 +1,50 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Varnish 3 Will Be Wonderful</h1>
+    <div id="main">
+      <p>
+        A couple of days ago, I read that <a
+        href="http://kristianlyng.wordpress.com/2011/06/09/varnish-3-0-0-rsn/">Varnish
+        3 will be released on this Thursday</a>. The biggest news for
+        me, working with many <a
+        href="http://www.vizrt.com/products/escenic_content_engine/">Escenic
+        Content Engine</a> based web sites that utilse <a
+        href="http://www.w3.org/TR/esi-lang">ESI</a> to get
+        personalised sites with high cache-ability, is that Varnish
+        3 will be able to do ESI parsing of gzip-ed content.
+      </p>
+      <p>
+        This is excellent news which means that we now can skip one
+        server from the typical Escenic architecture. Before Varnish
+        2.1.x we had:
+      </p>
+      <code>internet =&gt; web1/gzip =&gt; cache1/esi =&gt; web2/session binding =&gt; app1..n/java =&gt; db1/ldap1/nfs1</code>
+      <p>
+        With the <a
+        href="http://www.varnish-cache.org/docs/trunk/reference/vcl.html#the-client-director">client
+        director</a>, added in Varnish 2.1.x, Varnish was able to do
+        session binding without resorting to inline C. We could then
+        (in most cases) simplify the setup to:
+      </p>
+      <code>internet =&gt; web1/gzip =&gt; cache1/esi &amp; session binding =&gt; app1..n/java =&gt; db1/ldap1/nfs1</code>
+      <p>
+        With Varnish 3, we can now skip the first web server as well
+        and let the backend (the application servers in most of our
+        cases, web servers in other cases) add the compression as
+        you'd normally do with non-ESI web sites:
+      </p>
+      <code>internet =&gt; cache1/esi &amp; load balancing =&gt; app1..n/gzip/java &amp; java =&gt; db1/ldap1/nfs1</code>
+      <p>
+        With ESI parsing of gzip-ed content, Varnish 3 has all of the
+        features I've missed from <a
+        href="http://www.oracle.com/technetwork/middleware/ias/index-089317.html">
+        Oracle Web Cache</a>, with the added bonuses that it has an
+        active user community, good IRC &amp; mailing lists, can be
+        installed/upgraded with <code>apt-get</code> and doesn't
+        crash/segfault all the time :-)
+      </p>
+      <p>
+        Setting up a prodution environment has never been
+        easier. Hurrah!
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

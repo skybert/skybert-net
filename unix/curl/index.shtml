@@ -1,0 +1,25 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Some of My Favourite curl Tricks</h1>
+    <div id="main">
+      <h2>PUTing a File with curl</h2>
+      <p>
+        The most important parameters for PUTing a file are
+        <code>-T</code> for the file and <cite>-X</cite> to specify
+        the <code>PUT</code> HTTP method.
+      </p>
+<pre>
+$ curl -I \
+    -u user:pass \
+    -T /tmp/user.xml \
+    -X PUT \
+    -H "Content-Type:application/atom+xml;type=entry" \
+    -H "If-Match:*"
+    http://myserver.com/users/id/10
+</pre>
+      <p>
+        Of course, it might be that you don't need the headers I
+        needed here, or that you need different ones. <cite>-H</cite>
+        is how you specify them in any case.
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

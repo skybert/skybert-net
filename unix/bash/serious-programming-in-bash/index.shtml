@@ -1,0 +1,192 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        Most people use BASH scripting as a quick and dirty way of
+        doing things, often nothing more than a listing of commands
+        with some variable substitution. Some brave soles go further
+        and add for loops and perhaps group some code into a
+        function.
+      </p>
+      <p>
+        However, BASH can do <em>so</em> much more, it's possible to
+        create structured, complex and beautiful BASH programs if you
+        utilise some of BASH hidden powers as a programming
+        language. Below, I give some of useful tips which should boost
+        your BASH scripts onto the next level.
+      </p>
+      <ul>
+        <li>
+          <a href="strings">String manipulation</a>
+        </li>
+        <li>
+          <a href="functions">Using functions</a>
+        </li>
+        <li>
+          <a href="loops">Looping through lists with and without indexes</a>
+        </li>
+        <li>
+          <a href="variables">Variables, local and global.</a>
+        </li>
+        <li>
+          <a href="arrays">Arrays</a>
+        </li>
+        <li>
+          <a href="dictionaries">Using dictionaries, also known as
+          hash maps</a>
+        </li>
+      </ul>
+      <h2>Arithmetics using floating point numbers </h2>
+      <p>
+        BASH supports floating point numbers internally, but you need
+        to pipe the output to <code>bc</code> to display it properly,
+        i.e.:
+      </p>
+      <pre class="prettyprint">$ echo 10 / 3 | bc -l
+3.33333333333333333333</pre>
+      <p>
+        If you, like me, think two decimals looks nicer, you must add
+        this string (yes, it looks a bit funny):
+      </p>
+<pre class="prettyprint">$ echo "scale=2;" 10 / 3 | bc -l
+3.33
+</pre>
+      <h2>Getting the call trace</h2>
+      <p>
+        BASH gives you full control over the call stack inside your
+        programs. Here is a method which prints the call trace:
+      </p>
+      <pre class="prettyprint">function print_call_trace()
+{
+    # skipping i=0 as this is print_call_trace itself
+    for ((i = 1; i &lt; ${#FUNCNAME[@]}; i++)); do
+        echo -n  ${BASH_SOURCE[$i]}:${BASH_LINENO[$i-1]}:${FUNCNAME[$i]}"(): "
+        sed -n "${BASH_LINENO[$i-1]}p" $0 
+    done
+}</pre>
+      <p>
+        Now, if we use it to track the call stack in this wee program
+        were two methods call eachother:
+      </p>
+      <pre class="prettyprint">function one() 
+{ 
+  two "with some argument"; 
+}
+
+function two()
+{
+  print_call_trace "something went wrong"
+}
+
+one "a nice start paramater=" /tmp</pre>
+      <p>
+        We get the following call stack:
+      </p>
+      <pre class="prettyprint">
+myscript.sh:17:two():   print_call_trace "something went wrong"
+myscript.sh:12:one():   two "with some argument"; 
+myscript.sh:20:main(): one "a nice start paramater=" /tmp</pre>
+      <p>
+        This makes debugging your hundreds of lines of BASH scripts a
+        doodle, right? ;-)
+      </p>
+      <h2>Getting auto completion and source code navigation</h2>
+      <p>
+        If you're an Emacs user, I cannot recommend enough that you
+        use <a
+        href="http://cx4a.org/software/auto-complete/">auto-complete-mode</a>
+        for completion of member variables and method names and <a
+        href="/emacs/navigating-source-code/">etags for navigating
+        your source code</a>. Using etags, there's no problem
+        navigating a BASH project consisting of hundreds of BASH in
+        many different directories.
+      </p>
+      <h2>Variable assignment with default values </h2>
+      <p>
+        BASH is extremely flexible with regards to assigning value to
+        a variable if a given variable is set, letting you fall back
+        to a default value if not. Where BASH really rocks, though, is
+        that it allows you to have a default/fallback value on the
+        default/fallback value! 
+      </p>
+      <p>
+        Consider:
+      </p>
+<pre class="prettyprint">
+apple=apple
+orange=orange
+fruit=${apple-${orange}}
+
+=&gt;
+apple
+</pre>
+      <p>
+        Now, if we comment out the apple variable so that it's not set,
+        we instead get:
+      </p>
+<pre class="prettyprint">
+# apple=apple
+orange=orange
+fruit=${apple-${orange}}
+
+=&gt;
+orange
+</pre>
+      <p>
+        Now, let's put a fallback value on the fallback value:
+      </p>
+<pre class="prettyprint">
+# apple=apple
+# orange=orange
+banana=banana
+fruit=${apple-${orange-${banana}}}
+
+=&gt;
+banana
+</pre>
+      <p>
+        Pretty cool, eh?
+      </p>
+      <h2>Debugging</h2>
+      <p>
+        If find for the most part, that running bash with the
+        <code>-x</code> switch is the best way of debugging a script:
+      </p>
+      <pre>$ bash -x my-bash-script</pre>
+      <h2>How to grep from standard error</h2>
+      <p>
+        Sometimes, you want to operate on the messages sent to
+        standard error (for instance grep for a certain error
+        code). To do this, you must re-map the standard out and
+        standard error:
+      </p>
+<pre class="prettyprint">
+$ command-with-error 2>&amp;1 | grep "Error code"
+</pre>
+      <p>
+        One use case for this, is if you want to grep the output from
+        the <code>java -version</code> command. For some reason, this
+        non error output is printed to standard error instead of
+        standard out (!):
+      </p>
+<pre class="prettyprint">
+$ java -version 2>&amp;1 | grep version
+java version "1.6.0_31"
+</pre>
+      <h2>return true;</h2>
+      <p>
+        There, I hope I've managed to encourage you to approach BASH
+        programming with fresh eyes and a new perspective. The <a
+        href="http://tldp.org/LDP/abs/html/">Advanced Bash-Scripting
+        Guide</a> is a primer on the subject and a good choice for
+        further reading. I've also found great joy in reading <a
+        href="http://steve-parker.org/sh/bourne.shtml">Steve Bourne's
+        classic from 1978</a> as well as <a
+        href="http://cfajohnson.com/shell/">Chris F. A. Johnson's
+        blog</a>
+      </p>
+      <p>
+        Happy BASHing!
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,15 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Screen</h1>
+    <p>
+      To put a nice footer on your screen session, enter the
+      following in your <code>~/.screenrc</code>
+    </p>
+    <pre>hardstatus alwayslastline "%{= kR}%H %{= kY}%M %d %{= kG}%c %{= kB}%?%-Lw%?%{= kW}%n*%f %t%?(%u)%?%{= kB}%?%+Lw%?"</pre>
+    <p>
+      To be able to use Emacs shortcuts (in BASH and in the editor),
+      map the escape to <code>C-z</code>; whoever wrote screen wasn't
+      an Emacs user!
+    </p>
+    <pre># use C-z as Screen control key
+escape ^Zz</pre>
+<!--#include virtual="/ssi/footer.shtml" -->

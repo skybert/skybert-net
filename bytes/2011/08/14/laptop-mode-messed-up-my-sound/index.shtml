@@ -1,0 +1,30 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>laptop mode messed up my sound</h1>
+    <div id="main">
+      <p>
+        To my astonishment, I discovered today that
+        <code>laptop-mode-tools</code> crewed up my sound. For some
+        reason, on my Thinkpad X300, <code>laptop-mode-tools</code>
+        makes my sound completely messed up. I don't know how to
+        describe it, but it sounds like there's three screws loose
+        from my soundcard and there's too much vibration in the sound
+        when high and low tones are struck.
+      </p>
+      <p>
+        I have no idea what exactly it is with
+        <code>laptop-mode-tools</code> on my system, but somehow it
+        messes up the sound completely. Luckily, I found out and after
+        removing the package, I can again enjoy good music on my dear
+        laptop.
+      </p>
+      <h2>Details for the ones who are interested</h2>
+      <pre>$ uname
+Linux mithrandir 2.6.32-5-686 #1 SMP Mon Jun 13 04:13:06 UTC 2011 i686 GNU/Linux
+$ cat /etc/debian_version 
+6.0.2
+$ apt-cache show laptop-mode | grep Version
+Version: 1.55-1
+$ lspci | grep Audio
+00:1b.0 Audio device: Intel Corporation 82801H (ICH8 Family) HD Audio Controller (rev 03)</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

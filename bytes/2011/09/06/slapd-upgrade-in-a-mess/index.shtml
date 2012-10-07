@@ -1,0 +1,26 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<h1>slapd upgrade in a mess</h1>
+    <div id="main">
+      <p>
+        I <em>seriously dislike</em> the new configuration layout that
+        was introduced a while back in OpenLDAP, going from hard to
+        understand (the slapd.conf and friends) to nearly impossible
+        (the directory structure ressembling the LDAP tree.
+      </p>
+      <p>
+        Seeing how the upgrade of the <code>slapd</code> failed on my
+        system didn't brought back some old frustrations:
+      </p>
+<pre>Setting up slapd (2.4.25-3) ...
+  Backing up /etc/ldap/slapd.d in /var/backups/slapd-2.4.25-1.1... done.
+  Moving old database directories to /var/backups:
+  Loading from /var/backups/slapd-2.4.25-1.1: 
+  - directory dc=escenic,dc=com... failed.
+
+Loading the database from the LDIF dump failed with the following
+error while running slapadd:
+    olcDbDirectory: value #0: invalid path: No such file or directory
+    config error processing olcDatabase={2}hdb,cn=config: olcDbDirectory: value #0: invalid path: No such file or directory
+</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

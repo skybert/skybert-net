@@ -1,0 +1,20 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        Getting random quotes on Unix is <em>so</em> easy. Just
+        install the <code>fortune</code> program. On Debian it's
+        installed in <code>/usr/games/fortune</code> instaed of
+        <code>/usr/bin</code>, so be sure to have
+        <code>/usr/games</code> in your PATH variable.
+      </p>
+      <p>
+        Once it's there, you can just call it with
+        <code>fortune</code>. You'll get a new, random quote each time
+        you call it. It's easy to combine this with your email client,
+        adding a quote to the email signature or your web page by
+        wrapping it in a CGI script, like I've done here:
+      </p>
+<!--#exec cgi="/cgi-bin/fortune-cookie.cgi" -->
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

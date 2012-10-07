@@ -1,0 +1,22 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>iBus Not Working in GTK Applications</h1>
+    <div id="main">
+      <p>
+        I hade the problem that ibus wasn't working in GTK
+        applications on my <a href="http://gnome.org">GNOME3
+        desktop</a>. Funnily enough, it worked in Qt applications like
+        the Opera web browser.
+      </p>
+      <p>
+        After a lot of digging it turned out that it was because I
+        both had the <code>ibus-gtk</code> and the
+        <code>ibus-gtk3</code> package installed. Removing the
+        <code>ibus-gtk</code> resolved the issue:
+      </p>
+      <pre># apt-get remove ibus-gtk</pre>
+      <p>
+        I this will save some fine folks for a few minutes or hours of
+        error hunting!
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

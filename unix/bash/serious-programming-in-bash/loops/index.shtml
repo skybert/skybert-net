@@ -1,0 +1,28 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <h2>Iterating a predefined number of times</h2>
+      <p>
+        BASH offers <code>in {0..5}</code> style of loops which are
+        useful if you just want to iterate e.g.: 10 times and
+        (optionally) do something with the index variable:
+      </p>
+<pre class="prettyprint">
+for i in {0..9}; do
+  echo "i=$i"
+done
+</pre>
+      <h2>Indexed for loops</h2>
+      <p>
+        If you need a proper indexed for loop where the start and stop
+        conditions must be read from a variable, or you want the step
+        to be different from one, you'll be happy to learn that BASH
+        has a loop constructs which looks very similiar to C-style
+        for-loops.
+      </p>
+<pre class="prettyprint">
+for (( i = 0; i &lt; $number_of_apples; i++ )); do
+  echo "i=$i"
+done
+</pre>
+    </div>

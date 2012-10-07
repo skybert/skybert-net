@@ -1,0 +1,9 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+<pre class="prettyprint">
+tar cf - ~/virtual/my-virtual-image | split -b 1000m - $(date --iso)-my-virtual-image.tar.  
+</pre>      
+
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

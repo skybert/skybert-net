@@ -1,0 +1,50 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <h2>Set up your own a git repository on your server</h2>
+      <p>
+        This is how you set up your own git repository on Unix/Linux
+        server with SSH access.
+      </p>
+      <h3>Locally on your laptop</h3>
+      <p>
+        First set up git in your local project source folder:
+      </p>
+<pre class="prettyprint">
+$ cd ~/src/myproject
+$ git init
+$ find . | xargs git add
+$ git commit
+...write a nice commit message
+</pre>
+<p>
+  Then, create a git repo directory structure based  on your sources
+(we always call this something ending with <code>.git</code>
+</p>
+<pre class="prettyprint">
+$ cd ~/src/
+$ git clone --bare myproject myproject.git
+</pre>
+      <p>
+        Copy it to your server, e.g.:
+      </p>
+<pre class="prettyprint">
+$ scp -r ~/src/myproject.git ssh://user@myserver:~/src/
+</pre>
+      <p>
+        You (and your colleagues) can now use it on your machine(s):
+      </p>
+<pre class="prettyprint">
+$ cd ~/src/
+# move the old sources out of the way just in case
+$ mv myproject myproject.orig
+# then, fetch them from the server:
+$ git clone ssh://user@myserver:~/src/myproject.git
+</pre>
+      <p>
+        You can now work as you're used to with e.g. <a
+        href="http://github.com">github</a>, <code>git pull</code>,
+        <code>git push</code> will all work as you're used to.
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

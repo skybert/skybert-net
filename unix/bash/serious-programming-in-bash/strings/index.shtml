@@ -1,0 +1,37 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <h2>Testing if a string ends with a sub string</h2>
+      <p>
+        Here, I test if the passed argument to the function ends with
+        <code>.zip</code>:
+      </p>
+<pre class="prettyprint">
+function check_if_file_is_a_zip_archive() {
+  if [[ $1 == *.zip ]]; then
+    echo $1 is a ZIP archive
+  else
+    echo $1 is not a ZIP
+  fi
+}  
+</pre>  
+      <h2>Newline handling</h2>
+      <p>
+        Here, I demonstrate storing a newline character and using it
+        for string concatination, storing this in a variable and
+        outputting it with the newline intact.
+      </p>
+<pre class="prettyprint">
+NEW_LINE=$'\n'
+
+my_string="hi"
+my_string=${my_string}${NEW_LINE}"world"
+
+# newline intact
+echo "${my_string}"
+
+# without newline
+echo ${my_string}
+</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

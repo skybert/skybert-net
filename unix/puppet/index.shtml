@@ -1,0 +1,10 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Puppet</h1>
+    <p>
+      Jotting down my puppet notes here in the hope that they will be
+      useful for others too.
+    </p>
+<pre class="prettprint">
+$ puppet apply --verbose --debug --trace --summarize apt_cache.pp
+</pre>
+<!--#include virtual="/ssi/footer.shtml" -->

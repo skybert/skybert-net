@@ -1,0 +1,16 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Impressive Bluetooth Integration in GNOME3</h1>
+    <div id="main">
+      <p>
+        What an ironi: I wanted to turn off the Bluetooth on my laptop
+        since I never use it these days. I then discovered that the
+        Bluetooth integration in GNOME3 is top noch! 
+      </p>
+      <img src="bluetooth-menu-gnome3.png" alt="Bluettoth in GNOME3"/>
+      <p>
+        It's neat, clean, has all the features you would need and it's
+        really, really pretty. Perhaps I should start using Bluetooth
+        again, mhmm...
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

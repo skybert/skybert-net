@@ -1,0 +1,56 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        Perforce is a great version control system which I've been
+        using at work since 2005 (well, strictly speaking, I started
+        using it in 2004, but that was just casual usage). On this
+        page, I'll list some hints on Perforce, which I tend to forget
+        on how to do. If other folks can find this scratchpad useful
+        too, that's a bonus :-)
+      </p>
+      <h2>Ask perforce if a certain change has been integrated</h2>
+<pre class="prettyprint">$ p4 integrate -n -b mybranch-2.0 -s @35297,35297</pre>
+      <h2>See pending changelists</h2>
+      <pre class="prettyprint">$ p4 changelists -s pending -u myuser</pre>
+      <h2>See all changes within a certain date span</h2>
+      <p>
+        This is how you check all changes in the source tree (from
+        where you stand) between the first of January 2011 and the
+        first of February the same year:
+      </p>
+      <pre class="prettyprint">$ p4 changes ...@2011/01/01,2011/02/01</pre>
+      <h2>TAB completion</h2>
+      <p>
+        I've created BASH completion for all p4 commands, you can <a
+        href="https://raw.github.com/skybert/my-little-friends/master/bash_completion.d/p4">get the completion file here</a>.
+      </p>
+      <p>
+        With it in place, you can do:
+      </p>
+      <h3>Auto completion of commands</h3>
+      <pre class="prettyprint">$ p4 c[TAB][TAB]
+change       changelists  client       counter      
+changelist   changes      clients      counters</pre>
+      <h3>Auto completion of branches</h3>
+      <pre class="prettyprint">$ p4 integrate -b plugins-comm[TAB][TAB]
+plugins-common-1.1     plugins-community-3.1  plugins-community-3.4
+plugins-community      plugins-community-3.2  plugins-community-3.5
+plugins-community-3.0  plugins-community-3.3  plugins-community-3.6</pre>
+      <p>The branch list is cached, in case you were wondering :-)</p>
+      <h3>Auto completion of users</h3>
+      <pre class="prettyprint">$ p4 changes -u s[TAB][TAB]
+saa      shah     shud     soku     stbe     sym      
+sai      shaon    sms      sta      support</pre>
+      <p>The user list is cached, in case you were wondering :-)</p>
+      <h3>Auto completion of command specific options</h3>
+      <pre class="prettyprint">$ p4 integrate -[TAB][TAB]
+-b   -d   -Ds  -f   -i   -n   -r   -t   
+-c   -Di  -Dt  -h   -I   -o   -s   -v </pre>
+      <h3>Auto completion of depot paths</h3>
+      <pre class="prettyprint">$ p4 print //depot/[TAB][TAB]
+//depot/BETA      //depot/core      //depot/projects  //depot/tools
+//depot/branches  //depot/escenic   //depot/ps        
+//depot/BUILD     //depot/main      //depot/RELEASE</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

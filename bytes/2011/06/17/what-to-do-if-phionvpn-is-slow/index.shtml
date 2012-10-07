@@ -1,0 +1,38 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>What To Do If Phionvpn Is Slow</h1>
+    <div id="main">
+      <p>
+        Sometimes, I've seen my Phion VPN being unusually slow. You
+        might think, with good reason, that it's due to the local
+        network connection or the up link at your company
+        site. Although this might be true, I've normally found Phion
+        VPN slowness being due to old <code>phionvpn,</code> lurking
+        around my system making the VPN client constantly re-connect.
+      </p>
+      <p>
+        To verify if this is the case with your connection, go to the
+        status page on your VPN client. If everything is fine, the
+        status should constantly be a green <code>CONNECTED</code>
+        string. However, if you've got several clients running, this
+        will constantly show various messages, most telling
+        <code>RECONNECT_PENDING</code>
+      </p>
+      <p>
+        To remedy this (tested both on Linux and Mac OS X), open a
+        terminal and execute:
+      </p>
+      <pre># killall phionvpn</pre>
+      <p>
+        Then start <code>phionvpn</code> again and verify that the
+        connection status keeps itself on the <code>CONNECTED</code>
+        mark. The connection to your internal addresses should now be
+        noticably faster.
+      </p>
+      <p>
+        Also note, that in my experience, you should not run two
+        <code>phionvpn</code> instances on two different computers on
+        your away/home office network as the instance may cause
+        problems for the other.
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

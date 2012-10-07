@@ -1,0 +1,34 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Getting a Fancy Prompt</h1>
+    <div id="main">
+      <h2>For Normal Users</h2>
+      <p>
+        I use this for my normal user.
+      </p>
+      <pre class="code">export PS1="\[\033[0;36m\]{\[\033[0;50m\]\w/\[\033[0;36m\]} \[\033[0;32m\]what now... \[\033[0;39m\]"</pre>
+      <p>
+        Produces:
+      </p>
+      <blockquote>
+        <code><span style="color:
+        cyan;">{</span>/var/www/<span style="color: cyan;">}</span>
+        <span style="color: green">what now...</span></code>
+      </blockquote>
+      <h2>For the Root User</h2>
+      <p>
+        I use this for my root user, it's important for me that the
+        user name <code>root</code> stands out in bold read colour to
+        remind me to be careful :-)
+      </p>
+      <pre class="code">export PS1="\[\033[1;31m\]\u\[\033[0;0m\]@\h "</pre>
+      <p>
+        This produces:
+        <blockquote>
+          <code>
+            <span style="color: red; font-weight: bolder;">root</span>@mithrandir
+            /var/www#
+          </code>
+        </blockquote>
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

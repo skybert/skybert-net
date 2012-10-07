@@ -1,0 +1,27 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Creating Video Slideshow</h1>
+    <div id="main">
+      <p>
+        I have never had the need for such an application before now,
+        but found to my great surprise that there exists several good
+        specialised programs for this on Linux.
+      </p>
+      <p>
+        My first attempt with <a
+        href="http://photofilmstrip.org">Photofilmstrip</a> 1.4.0 was
+        a bad one however, as it crashed when I tried to import 375
+        MBs worth of pictues.
+      </p>
+      <p>
+        My second attempt with <a
+        href="http://imagination.sourceforge.net/">Imagination</a>
+        3.0 was much better. Here, everything worked
+        flawlessly, handling my large picture set without any
+        problems, simple nice UI and few, but essentials options.
+      </p>
+      <p>
+        I love programs like this! Nice, user friendly, simple, stable
+        and works with large amounts of data. Excellent!
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

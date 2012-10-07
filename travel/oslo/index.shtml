@@ -1,0 +1,31 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <h2>Coffee shops</h2>
+      <h3>Collets</h3>
+      <a href="http://www.collettscafe.no/">collettscafe.no</a>
+
+      <h3>Tullins</h3>
+      <a href="http://www.tullins.no/">tullins.no/</a>
+
+      <h3>Godt Brød Grünerløkka</h3>
+      <a href="http://www.bakeverksted.no/comweb.asp?ID=&segment=6">
+        Bakerverksted
+      </a>
+
+      <h2>Night life</h2>
+      <h3>Bl&aring;</h3>
+      <a href="http://www.blaaoslo.no/">blaaoslo.no</a>
+
+      <h3>Mir</h3>
+      <a href="http://www.lufthavna.no/">lufthavna.no</a>
+
+      <h3>Frank Znort Quartet</h3>
+      <a href="http://fzq.no/">fzq.no/</a>
+
+      <h2>Dinner</h2>
+      <h3>Frognerseteren</h3>
+      <a href="http://www.frognerseteren.no/">frognerseteren.no</a>
+
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,33 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>
+      Mysertious Ant error could not create task or type of type componentdef
+    </h1>
+    <div id="main">
+      <p>
+        I was getting this error and couldn't make heads or tails of
+        it. The Ant libraries seemed to contain the task at hand and
+        it just didn't make any sense:
+      </p>
+      <pre>[INFO] An Ant BuildException has occured: The following error occurred while executing this line:
+jar:file:/home/torstein/.m2/repository/org/apache/maven/plugins/maven-antrun-plugin/1.6/maven-antrun-plugin-1.6.jar!/org/apache/maven/ant/tasks/antlib.xml:24:
+The following error occurred while executing this line:
+jar:file:/home/torstein/.m2/repository/org/apache/ant/ant/1.8.1/ant-1.8.1.jar!/org/apache/tools/ant/antlib.xml:37:
+Could not create task or type of type: componentdef.
+
+Ant could not find the task or a class this task relies upon.</pre>
+      <p>
+        It turned out I had to use Maven 3 instead of Maven 2 and also
+        set the MAVEN_HOME environment variable:
+      </p>
+      <pre class="prettyprint"># .basrhc
+export MAVEN_HOME=/opt/apache-maven-3.0
+export PATH=$MAVEN_HOME/bin:$PATH</pre>
+      <p>
+        With this in place, the project built just fine.
+      </p>
+      <p>
+        Man, it's hard to track down this things when the error
+        message is <em>so</em> far from the truth.
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

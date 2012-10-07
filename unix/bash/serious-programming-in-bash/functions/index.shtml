@@ -1,0 +1,37 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <h2>Making Functions Return Values</h2>
+      <p>
+        The clue is to let the function run in its own sub process and
+        let the value be <code>echo</code>-ed instead of
+        <code>return</code>-ed as you'd do in most other programming
+        languages.
+      </p>
+<pre class="prettyprint">
+function get_number()
+{
+  echo 12;
+}
+
+echo "The number is" $(get_number)
+</pre>
+      <h2>Lambda functions in BASH</h2>
+      <p>
+        A great feature I love in Lisp, is lambda functions, a
+        function which is applied to e.g. the values inside a
+        loop. Doing this in BASH is so easy. I've created a simple
+        (and yes, silly) example to illustrate this:
+      </p>
+<pre class="prettyprint">
+for el in black sabbath rocks; do
+    double_length=$(
+        # whatever is echo-ed here, is the return value of the lambda function.
+        echo $(( $(echo $el | wc -c) * 2 ))
+    )
+
+    echo "The dobule length of $el is $double_length"
+done
+</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

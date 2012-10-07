@@ -1,0 +1,57 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <p>
+      ImageMagick is a gem of a library, indispensable in my tool
+      box. Here are some of my notes on using this excellent piece of
+      software.
+    </p>
+    <h2>Converting from CMYK to RGB colour space</h2>
+    <p>
+      Several pieces of software, included, have problems handling
+      images with the CMYK colour space. Sun/Oracle Java, for
+      instance, will bail out with this error:
+    </p>
+<pre class="prettyprint">
+Caused by: javax.imageio.IIOException: Unsupported Image Type 
+  at com.sun.imageio.plugins.jpeg.JPEGImageReader.readInternal(JPEGImageReader.java:977)
+  at com.sun.imageio.plugins.jpeg.JPEGImageReader.read(JPEGImageReader.java:948)
+  at javax.imageio.ImageIO.read(ImageIO.java:1422) at
+</pre>
+    <p>
+      Luckily, ImageMagick can easily help you out, just do:
+    </p>
+<pre class="prettyprint">
+$ convert image.jpg -colorspace rgb image.jpg
+</pre>
+    <p>
+      ImageMagick can also specific CMYK and RGB profiles for the
+      conversion, but for most cases, were you <cite>just want
+      RGB</cite>, the above should suffice.
+    </p>
+    <p>
+      I've created <a
+      href="https://github.com/skybert/my-little-friends/blob/master/bash/convert-images-from-cmyk-to-rgb-colour-space">
+      a wee script which does this en masse</a>. It works on large
+      archives (where the BASH expansion will go out of bounds if you
+      use wildcards and/or for loops) and file names containing white
+      space characters.
+    </p>
+<pre class="code">
+$ convert-images-from-cmyk-to-rgb-colour-space
+Press ENTER to convert all images in the current directory and all sub
+directories to standard RGB colour space if they're currently CMYK.
+
+To abort, press Ctrl + c now.
+
+./WCC1.jpg is using the CMYK colour space, converting it to RGB ...
+./fds1.jpg is using the CMYK colour space, converting it to RGB ...
+./ABNIVSEN2.jpg is using the CMYK colour space, converting it to RGB ...
+./MM1.jpg is using the CMYK colour space, converting it to RGB ...
+</pre>
+    <p>
+      And yes, the 'u' in colour is intended :-)
+    </p>
+
+
+
+<!--#include virtual="/ssi/footer.shtml" -->

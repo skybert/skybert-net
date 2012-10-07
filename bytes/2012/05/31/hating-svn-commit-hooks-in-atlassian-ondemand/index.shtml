@@ -1,0 +1,24 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>hating svn commit hooks in atlassian ondemand</h1>
+    <div id="main">
+      <p>
+        I wanted to commit a change to a project running on Atlassian
+        OnDemand's SVN where I was told that:
+      </p>
+<pre>
+Transmitting file data ..svn: Commit failed (details follow):
+svn: Commit blocked by pre-commit hook (exit code 1) with output:
+Issue UTF-8 does not exist.
+</pre>
+      <p>
+        The reason? I had written <code>UTF-8</code> in my commit
+        message:
+      </p>
+<pre>
+MYPROJECT-123: my commit message where I mention the word UTF-8 somewhere.
+</pre>
+      <p>
+        Duh!
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,62 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>cp on Mac OS X Scares Me</h1>
+    <div id="main">
+      <p>
+        I find the <code>cp</code> command on Mac to be quite scary. I
+        wonder if this is due to its FreeBSD heritage. Mhmm...
+      </p>
+      <p>
+        I've got a directory <code>a</code> with two files:
+      </p>
+      <pre>$ ls a/
+total 0
+-rw-r--r--  1 torstein  wheel     0B Aug 17 10:53 file1
+-rw-r--r--  1 torstein  wheel     0B Aug 17 10:53 file2</pre>
+      <p>
+        And I have two empty directories, <code>b</code> and
+        <code>c</code>.
+      </p>
+      <pre>$ ls b/ c/
+b/:
+
+c/:</pre>
+      <p>
+        Now, I want to copy the entire <code>a</code> directory into
+        my <code>b</code> directory, so I do:
+      </p>
+      <pre>$ cp -r a b</pre>
+      <p>
+        Likewise, I want to copy it to the <code>c</code> directory
+        too:
+      </p>
+      <pre>$ cp -r a/ c</pre>
+      <p>
+        Now, I'd expect to see the same contents of the <code>b</code>
+        and <code>c</code> directories:
+      </p>
+      <pre>$ ls b
+total 0
+drwxr-xr-x  4 torstein  wheel   136B Aug 17 10:53 a
+$ ls c
+total 0
+-rw-r--r--  1 torstein  wheel     0B Aug 17 10:53 file1
+-rw-r--r--  1 torstein  wheel     0B Aug 17 10:53 file2</pre>
+       <p>
+         <strong>Whoa! What is this?!!</strong>. I know, I
+         <em>did</em> add a slash to the second copy command but that
+         can't surely make a difference, can it? 
+       </p>
+       <p>
+         It turns out, it can. On GNU/Linux systems, you'll get the
+         source directory included even if you add the slash. On
+         GNU/Linux you must add a wildcard to say you just want the
+         contained files to be copied:
+       </p>
+       <pre>$ cp -r a/* b</pre>
+       <p>
+         However, adding just the slash doesn't alter behaviour of the
+         copy command. However, it's quite different on Mac OS
+         X. Scary stuff.
+       </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

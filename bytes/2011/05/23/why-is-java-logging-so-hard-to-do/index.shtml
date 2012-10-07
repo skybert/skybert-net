@@ -1,0 +1,37 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Why is java logging so hard to do?</h1>
+    <div id="main">
+      <p>
+        Why is proper logging in Java so friggingly hard to do? Why
+        is there more than one logging framework? Why do the different
+        frameworks collide with eachother? Wny?!!
+      </p>
+      <p>
+        <cite>I hate logging in Java</cite>. Have you ever seen a
+        production set application server with 6-8 web applications
+        where all the applications's logging are properly configured?
+      </p>
+      <p>
+        There's so many good ideas and efforts in the Java world, but
+        there's one area that's utterly frustrating; and that's that
+        it seems that most java developers are not at all conserned
+        with how things will look in a production setting. There's so
+        many cool frameworks and abstractions, but it's utterly
+        frustrating to bring all these wonderful pieces together to
+        one production ready package.
+      </p>
+      <p>
+        I cannot believe how many hours I've spent in my career to
+        get the logging correct. Why so bloody difficult? And on top
+        of this; 3rd party libraries may use logging frameworks that
+        collide with yours, ending up with some error messages in the
+        system out log and not one, but two, malfunctional application
+        loggings as a result. Aaargh!
+      </p>
+      <p>
+        A plea to the Java world: can you please use
+        <strong>ONE</strong> logging framework (I don't care which
+        one) and close down all the others? Please, please, please?!!
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
