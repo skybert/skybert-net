@@ -1,0 +1,20 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Travel With Speed</h1>
+    <div id="main">
+      <div id="pictures">
+        <a href="https://picasaweb.google.com/lh/photo/sgJb1n3aikJIwyjgJy3seN6MLbNJWbsEszbWNUwvbNA?feat=embedwebsite">
+          <img src="https://lh3.googleusercontent.com/_xP7IZ-JRNDI/TYSTYai5mCI/AAAAAAAARCQ/K9z-7VTgIYo/s400/IMG_3518.JPG"
+               alt="Highspeed train from Taipei"
+               height="400"
+               width="300"
+               />
+        </a>
+      </div>
+      <p>
+        Massively impressive high speed train. It leaves on time,
+        every 20 minutes or so, goes fast, is clean, comfortable and
+        makes the trip from Taipei in the north to Tainan in the south
+        in just 1h 45 minutes.
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

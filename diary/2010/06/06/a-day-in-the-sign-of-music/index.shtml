@@ -1,0 +1,21 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>A Day in the Sign of Music</h1>
+    <div id="main">
+      <p>
+        Yesterday, I spent a whole day in the sign of music. Oslo was
+        the venue for the
+        annual <a href="http://musikkfest.no">Musikkfest</a>
+        festival. All over town there were venues with different music
+        themes such as rock, pop, singer/songwriter, reggae, hip hop,
+        metal &amp; choir. The sky was blue, the sun was shining,
+        perfect Norwegian summer temperature and thousands of merry
+        people. 
+      </p>
+      <p>
+        Each band performed for half an owner, giving you a huge
+        number of experiences over the course of the day. I got at
+        least nine hours worth of concerts yesterday. The first
+        concert being at 1300 and the last one starting at 0130!
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

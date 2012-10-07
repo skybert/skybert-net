@@ -1,0 +1,37 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Singing the Praise of Taiwanese Hospitals</h1>
+    <div id="main" class="text-in-columns">
+      <p>
+        In my own beloved country Norway and many other countries, the
+        tendency is to centralise hospital services. The idea is that
+        one big hospital with all features and serverices is more cost
+        effective and effecient than several small ones with a basic
+        set of services. However, the down side of this desire to cost
+        cutting the hospitals, is that they're fever of them, often
+        not in the same city (or county!), there's <em>long</em>
+        queues even for the simples consultation, there's more
+        bureaucracy and last but not least, they big hospitals are
+        impersonal, intimidating giant factory buildings.
+      </p>
+      <p>
+        Therefore, I find it intriguing and hugely intersting that in
+        Taiwan, the opposite is true: here there are a gazillion tiny
+        hopsitals, typically with one doctor, three nurses and an
+        x-ray machine.
+      </p>
+      <p>
+        They're hugely efficient and easily approachable. Anyone with
+        the standard government health ensurance can pop in to the
+        clinic of choice. They all have their specialities, so you can
+        easily find out which clinic you wish to go to with your say,
+        bone fracture.
+      </p>
+      <p>
+        My last visit was even faster than my first one. Including new
+        patient registration, waiting, consultation, prescription and
+        delivery of medicine and payment of it all, I was in and out
+        of the hospital in <em>less than 25 minutes</em>. I kid you
+        not.
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

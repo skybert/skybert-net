@@ -1,0 +1,21 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>In My Right Habitat</h1>
+    <div id="main">
+      <p>
+        An inevitable side effect of living in Taiwan, is that I
+        constantly am faced with every day life shortcomings: I cannot
+        read this, I cannot say that and I cannot understand those
+        words.
+      </p>
+      <p>
+        With that backdrop, it was wonderful to join a mountaineering
+        group for a two day hike in the mountains. Here, I could relax
+        doing things I <em>knew</em> how to do. I "understood" the
+        "language" and culture of mountaineering: crossing a forest
+        river, climbing on slippery stone, setting up a tent, walking
+        in the forest. I believe everyone need to get back to their
+        "home turf" every once in a while. I for one do.
+
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

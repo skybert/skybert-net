@@ -1,0 +1,45 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>My top things to do in Oslo list</h1>
+    <div id="main">
+      <div id="pictures">
+        
+      </div>
+      <ol>
+        <li>
+          The annual
+          <a href="http://musikkfest.no/">Oslo Music Party
+          festival </a>. Free concerts all day throughout the
+          city. Each stage has its own theme or music genre. Sit in
+          the grass in your favourite park and listen to new bands
+          every half an hour.
+        </li>
+        <li>
+          The annual
+          <a href="http://www.aktivioslo.no/redaksjonellt/fakkelvandring/index.php">
+            River walk
+          </a>
+          Walk along the Aker river at night, with candles leading the
+          way and choirs, theatre groups and street musicians
+          entertaining you ever inch of the way.
+        </li>
+        <li>
+          Every Sunday night, <a href="http://blaaoslo.no">Bl&aring;</a> is
+          the only place to be where the
+          ubiquious <a href="http://fzq.no">Frank Znort Quartet</a>
+          gives you a flabbergasting blues, jazz, funk, reggae &amp;
+          rock 'n roll experience for free.
+        </li>
+        <li>
+          For the price of a single fair ticket, you can enter one of
+          the ferries that shuttle between the isles in the Oslo
+          fjord. The isles are great places to go for big city relief,
+          to barbecue, play volleyball, swim or - if you're into that
+          sort o thing - tan.
+          <p>
+            Alternatively, you can simply stay on the ferry and not
+            get of at any of the islands. Your very own, fjord cruise!
+          </p>
+        </li>
+      </ol>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
