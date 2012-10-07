@@ -53,6 +53,7 @@
       </a>
       |
       <img src="http://www.google.com/favicon.ico"
+           style="width: 16px; height: 16px;"
            alt="Google"/>
       <form method="get"
             style="display: inline"
