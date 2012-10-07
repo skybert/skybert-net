@@ -1,0 +1,20 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>slapd cannot allocate memory under load</h1>
+    <div id="main">
+      <p>
+        One way of making OpenLDAP to perform, is to tweak the BDB/HDB
+        backend to use a big in memory cache. However, you may
+        experience this problem if you crank it up too high and set
+        the server under heavy load:
+      </p>
+      <pre>slapd[7399]: ch_malloc of 8388608 bytes failed</pre>
+      <p>
+        Setting the cache size to a sane(r) value
+        in <code>/var/lib/ldap/DB_CONFIG</code> remedied it:
+      </p>
+<pre>
+# Set the database in memory cache size.
+set_cachesize   0       104857600        0
+</pre>      
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
