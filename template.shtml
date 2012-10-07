@@ -1,7 +1,0 @@
-<!--#include virtual="/ssi/header.shtml" -->
-    <h1>TITLE</h1>
-    <div id="main">
-      <p>
-      </p>
-    </div>
-<!--#include virtual="/ssi/footer.shtml" -->
