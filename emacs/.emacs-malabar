@@ -1,0 +1,51 @@
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; -*- emacs-lisp -*-
+;; malabar
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(load "~/.emacs-java-common")
+
+;; For Emacs 23.2 and earlier
+;; (setq cedet-emacs-min-version "some")
+;; (require 'cedet)
+;; (semantic-load-enable-minimum-features) ;; or enable more if you wish
+
+;; Emacs 23.3 or later. Enable more if you wish
+(setq semantic-default-submodes '(global-semantic-idle-scheduler-mode
+                                  global-semanticdb-minor-mode
+                                  global-semantic-idle-summary-mode
+                                  global-semantic-mru-bookmark-mode))
+(semantic-mode 1)
+
+(add-to-list 'load-path "/usr/local/src/malabar-mode/src/main/lisp")
+(require 'malabar-mode)
+
+(setq malabar-groovy-lib-dir "/usr/local/src/malabar-mode/target/malabar-1.5-SNAPSHOT/lib"
+      malabar-load-source-from-sibling-projects t
+      malabar-extra-source-locations
+      '("/usr/lib/jvm/java-6-sun-1.6.0.22/src"
+        "/home/torstein/projects/escenic/escenic/engine/branches/5.2/engine-syndication/src/main/java/"
+        "/home/torstein/projects/escenic/escenic/engine/branches/5.2/engine-core/src/main/java/"
+        "/home/torstein/projects/escenic/escenic/engine/branches/5.2/engine-presentation/src/main/java/"
+        "/home/torstein/projects/escenic/escenic/engine/branches/5.2/engine-indexer-webservice/src/main/java/"
+        "/home/torstein/projects/escenic/escenic/indexer/branches/1.2/indexer-webapp/src/main/java/"                                      
+        "/usr/local/src/apache-tomcat-6.0.16-src/java")
+      )
+
+(add-to-list 'auto-mode-alist '("\\.java\\'" . malabar-mode))
+
+
+(defun my-java-malabar-mode-hook ()
+  ;; IDEA default for jump to source
+  (define-key c-mode-base-map "\C-\M-g" 'malabar-jump-to-thing)
+  (global-set-key "\M-n" 'semantic-ia-complete-symbol)
+  )
+(add-hook 'c-mode-common-hook 'my-java-malabar-mode-hook)
+
+
+;; Compiling the file on save makes malabar display the errors in the
+;; Java source code.
+(add-hook 'malabar-mode-hook
+          (lambda () 
+            (add-hook 'after-save-hook 'malabar-compile-file-silently
+                      nil t)))
+

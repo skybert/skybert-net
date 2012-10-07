@@ -1,0 +1,27 @@
+;; -*- emacs-lisp -*-
+
+(setq jdibug-connect-hosts (quote ("localhost:5005"))
+      jdibug-use-jde-source-paths nil
+      jdibug-source-paths
+      (list
+       "/home/torstein/projects/escenic/escenic/plugins/forum/branches/3.0/forum-core/src/main/java"
+       "/home/torstein/projects/escenic/escenic/plugins/forum/branches/3.0/forum-presentation/src/main/java"
+       "/home/torstein/projects/escenic/escenic/engine/branches/5.2/engine-core/src/main/java"
+       "/home/torstein/projects/escenic/escenic/plugins/community/trunk/community-core/src/main/java"
+       "/home/torstein/projects/escenic/escenic/plugins/community/trunk/community-presentation/src/main/java"
+       "/usr/lib/jvm/java-6-sun/src"
+       )
+)
+
+(add-to-list 'load-path "/usr/local/src/jdibug")
+(require 'jdibug)
+
+
+(defun my-jdibug-mode-hook ()
+  ;; IDEA style debug short cuts
+  (define-key c-mode-base-map [ (f7) ] 'jdibug-step-into)
+  (define-key c-mode-base-map [ (f8) ] 'jdibug-step-over)
+  (define-key c-mode-base-map [ (f9) ] 'jdibug-step-out)
+  (global-set-key "\C-\M-b" 'jdibug-connect)
+)
+(add-hook 'c-mode-common-hook 'my-jdibug-mode-hook)
