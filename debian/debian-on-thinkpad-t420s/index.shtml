@@ -1,0 +1,79 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Installing Debian on Thinkpad T420s</h1>
+    <div id="main">
+      <h2>GRUB</h2>
+      <p>
+        I've passed the following Linux parameters via GRUB's
+        <code>/etc/default/grub</code>:
+      </p>
+<pre>
+GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force i915.semaphores=1 i915.i915_enable_rc6=1 i915.i915_enable_fbc=1 i915.lvds_downclock=1"
+</pre>
+      <p>
+        <code>i915.semaphores=1</code>: "Enablement of semaphores
+        solves several stability issues on Ivy Bridge graphics cards,
+        such as GPU hangs, and improved stability and performance on
+        Sandy Bridge generation of graphics cards". See <a
+        href="http://intellinuxgraphics.org/2011Q4.html">Intel 2011Q4
+        graphics package</a> for more details.
+      </ul>
+      <h2>Wireless</h2>
+      <p>
+        I've experienced instable wireless, often it would just seize
+        to function. The <a
+        href="http://bugzilla.intellinuxwireless.org/show_bug.cgi?id=2315">bug
+        is described here on Intel Linux Wireless</a>
+      </p>
+      <p>
+        To remedy the problem, I did the following:
+      </p>
+<pre class="code">
+# echo "options iwlwifi 11n_disable=1" &gt; /etc/modprobe.d/iwlwifi.conf
+# update-initramfs -u
+</pre>
+      <p>
+        Since I don't like rebooting when I really don't have to, I
+        did the following to activate the changes:
+      </p>
+<pre class="code">
+# modprobe -r iwlwifi
+# modprobe iwlwifi
+</pre>
+      <p>
+        Detailed information about the wireless card:
+      </p>
+<pre>
+03:00.0 Network controller: Intel Corporation Centrino Advanced-N 6205 (rev 34)
+  Subsystem: Intel Corporation Centrino Advanced-N 6205 AGN
+  Flags: bus master, fast devsel, latency 0, IRQ 48
+  Memory at f2900000 (64-bit, non-prefetchable) [size=8K]
+  Kernel driver in use: iwlwifi
+</pre>
+      <h2>Battery life</h2>
+      <p>
+        I've added the following to <code>/etc/rc.local</code> to
+        enhance the battery life. With these in place,
+        <code>powertop</code> lists all the "Toggleables" as "Good":
+      </p>
+<pre class="prettypring">
+# Dynamic power save
+iw wlan0 set power_save on
+
+echo 0 > /proc/sys/kernel/nmi_watchdog
+
+# Enable SATA link power management for /dev/sda
+echo min_power > /sys/class/scsi_host/host0/link_power_management_policy
+echo min_power > /sys/class/scsi_host/host1/link_power_management_policy
+
+# VM writeback timeout
+echo 1500 > /proc/sys/vm/dirty_writeback_centisecs
+
+# Sound power management
+echo Y > /sys/module/snd_hda_intel/parameters/power_save_controller
+echo 1 > /sys/module/snd_hda_intel/parameters/power_save
+
+# Power aware CPU scheduler
+echo 1 > /sys/devices/system/cpu/sched_mc_power_savings  
+</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

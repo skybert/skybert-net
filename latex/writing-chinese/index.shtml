@@ -1,0 +1,45 @@
+<!--#include virtual="/ssi/header.shtml" -->
+         <h1>Writing Chinese Letters</h1>
+         <p>
+           I have the following Chinese related latex (Debian)
+           packages installed: 
+         </p>
+<pre>$ dpkg -l *chinese* | grep latex| cut -d' ' -f3
+latex-cjk-chinese
+latex-cjk-chinese-arphic-bkai00mp
+latex-cjk-chinese-arphic-bsmi00lp
+latex-cjk-chinese-arphic-gbsn00lp
+latex-cjk-chinese-arphic-gkai00mp</pre>
+         <p>
+           Around the block of text where I write Chinese characters,
+           I put the CJK block (this can just as well be around the
+           full text:
+         </p>
+<pre>
+\documentclass[a4paper,12pt]{letter}
+\usepackage[british]{babel}
+<span class="purple">\usepackage</span>[<span class="orange">utf8</span>]{<span class="blue">inputenc</span>}
+<span class="purple">\usepackage</span>{<span class="blue">CJK</span>}
+
+[..]
+
+\begin{document}
+[..]
+
+  <span class="purple">\begin</span>{<span class="blue">CJK*</span>}{GB}{gbsn}
+    Chinese letters can be written here
+    % the newpage *must* be there
+    <span class="red">\newpage</span>
+  <span class="purple">\end</span>{<span class="blue">CJK*</span>}
+
+[..]
+
+\end{document}</pre>
+         <p>
+           Also see
+           the <code>/usr/share/doc/latex-cjk-chinese/examples</code>
+           directory, as with many things, there are different ways of
+           doing it. 
+         </p>
+<!--#include virtual="/ssi/footer.shtml" -->
+

@@ -1,0 +1,22 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        To set up proper logging with the Escenic Content Engine, I
+        use the following log4j configuration:
+      </p>
+     <pre>log4j.rootCategory=ERROR, ECELOG
+log4j.appender.ECELOG=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.ECELOG.File=/var/log/escenic/${escenic.server}-messages
+log4j.appender.ECELOG.layout=org.apache.log4j.PatternLayout
+log4j.appender.ECELOG.layout.ConversionPattern=%d %5p [%t] %x (%c) %m%n</pre>
+      <p>
+        I recommend putting this in
+        <code>/etc/escenic/engine/common/trace.properties</code> and
+        create symlinks from a common class loader directory of the
+        application server, e.g.:
+      </p>
+      <pre># cd /usr/share/tomcat6/lib
+# ln -s /etc/escenic/engine/common/trace.properties</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,145 @@
+<!--#include virtual="/ssi/header.shtml" -->
+      <h1>Oracle Application Server</h1>
+      <div id="main">
+         <p class="reg">
+           This mighty beasts are quite cool once they get running
+              ... some are more mighty than others, I know!
+         </p>
+         <h2>Listing the ports being used</h2>
+         <p>
+           To get a list of all ports and processes running in the
+           OAS, do
+         </p>
+         <pre class="code">./opmn/bin/opmnctl status -l</pre>
+         <h2>Accessing the appserver directly</h2>
+         <p>
+           The OC4J instances do not have an HTTP connector per
+           default. This means that out of the box, the only way to
+           access your webapp is through Apache (what Oracle has
+           branded "Oracle HTTP Server"). This is in production fine,
+           but when testing the appserver itself, you want to access
+           it directly, as you would access your Tomcat or Resin
+           appserver.  
+         </p>
+         <p>
+           Look for an
+           <code>&lt;OC4J_INSTANCE&gt;/config/http-web-site.xml</coe>,
+           it should be there. Add a line to its configuration for
+           your webapp (you'll find the same line in your
+           <code>default-web-stie.xml</code>.
+         </p>
+<pre class="code">
+  &lt;web-app
+    application="default"
+    name="mywebapp"
+    root="/mywebapp"
+    access-log="false"
+  /&gt;
+</pre>
+         <p>
+           Then add a line like this in you
+           <code>server.xml</code> 
+         </p>
+<pre class="code">
+  &lt;web-site default="false" patch="./http-web-site.xml"/&gt;
+</pre>
+         <h2>Logging</h2>
+         <h3>Rotating logs</h3>
+         <p>
+           To enable rotating logs in OC4J, do the following: change
+           the <code>log</code> element to use the odl logger instead
+           of the file logger. The ODL can, among other things, rotate
+           the logs. When going through the conifg files you will see
+           <em>either</em> an access-log element <em>or</em> a log
+           element.
+         </p>
+         <p>
+         <p>
+           If you find an <code>access-log</code> element, comment it
+           out and replace it with <code>odl-access-log</code>. For
+           example: 
+         </p>
+<pre class="code">
+  &lt;!-- 
+    Only have one logging system
+    &lt;access-log 
+      path="../log/default-web-access.log"
+    /&gt;
+  --&gt;
+  &lt;odl-access-log
+    path="../log/default-web-access"
+    max-file-size="1000"
+    max-directory-size="10000"
+  /&gt;
+</pre>
+         <p>
+           Likewise, if you find a <cdoe>file</code> element as a
+           child of the <code>log</code> element, replace it with
+           <code>odl</code>. For example:
+         </p>
+<pre class="code">
+  &lt;!--
+    Only have one logging system
+    &lt;file path="../log/global-application.log"/&gt;
+  --&gt;
+  &lt;odl
+    path="../log/global-application/"
+    max-file-size="1000"
+    max-directory-size="10000"
+  /&gt;
+</pre>
+         <h4>Files you need to edit</h4>
+         <ul>
+           <li>
+             <code>
+               $ORACLE_HOME/j2ee/&lt;OC4J instance&gt;/conf/application.xml
+             </code>
+           </li>
+           <li>
+             <code>
+               $ORACLE_HOME/j2ee/&lt;OC4J instance&gt;/conf/default-web-site.xml
+             </code>
+           </li>
+           <li>
+             <code>
+               $ORACLE_HOME/j2ee/&lt;OC4J instance&gt;/conf/http-web-site.xml
+             </code>
+           </li>
+           <li>
+             <code>
+               $ORACLE_HOME/j2ee/&lt;OC4J instance&gt;/conf/jms.xml
+             </code>
+           </li>
+           <li>
+             <code>
+               $ORACLE_HOME/j2ee/&lt;OC4J instance&gt;/conf/rmi.xml
+             </code>
+           </li>
+           <li>
+             <code>
+               $ORACLE_HOME/j2ee/&lt;OC4J instance&gt;/conf/server.xml
+             </code>
+           </li>
+         </ul>
+         <h2>Updating the configuration</h2>
+         <p>
+           After updating configuration, run the distributed
+           configuration manager and then restart the OC4J instanse you
+           have configured.
+         </p>
+<pre class="code">
+  $ORACLE_HOME/dcm/bin/dcmctl updateconfig
+</pre>
+         <h2>Restarting the entire server</h2>
+<pre class="code">
+  $ORACLE_HOME/opmn/bin/opmnctl stopall
+  $ORACLE_HOME/opmn/bin/opmnctl startall
+</pre>
+         <p>
+           Please note, that usually it is enough to isseu: 
+         </p>
+<pre class="code">
+  $ORACLE_HOME/opmn/bin/opmnctl restartproc
+</pre>
+      </div>
+<!--#include virtual="/ssi/footer.shtml" -->

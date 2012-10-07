@@ -1,0 +1,41 @@
+<!--#include virtual="/ssi/header.shtml" -->
+      <h1>Apache Tomcat</h1>
+      <div id="main">
+         <img src="http://tomcat.apache.org/images/tomcat.gif"
+              alt="tomcat"
+              style="float: right;"
+              />
+         <p>
+           I've written these articles about Tomcat:
+         </p>
+<!--#exec cgi="/cgi-bin/article-list.cgi" -->
+         <p>
+           Below are some small notes I've jotted down when working
+           with Tomcat.
+         </p>
+         <h2>Performance tuning</h2>
+         <h3>Calling Context#getAttribute()</h3>
+         <p>
+           We have experience performance problems becaues of this method:
+           <code>
+             org.apache.catalina.core.ApplicationContext.findAttribute(String)
+           </code> which is synchronised. Thus, limit your
+           application's usage of this method.
+         </p>
+         <h2>Cannot find javax/servlet/Filter</h2>
+         <p>
+           I all of a sudden started getting this exception on my
+           Tomcat 6.0.10:
+         </p>
+<pre class="code">
+  SEVERE: Exception starting filter authenticationFilter
+java.lang.NoClassDefFoundError: javax/servlet/Filter
+</pre>
+         <p>
+           Touching the
+           <code>$CATALINA_HOME/lib/servlet-api.jar</code> seemed to
+           miraculously fix the problem.
+         </p>
+      </div>
+<!--#include virtual="/ssi/footer.shtml" -->
+      

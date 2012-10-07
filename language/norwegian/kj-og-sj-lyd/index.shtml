@@ -1,0 +1,53 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Forskjeller p&aring; kj- og sj-lydene</h1>
+    <div id="main">
+      <h2>Kylling og skylling</h2>
+      <blockquote>
+        Tar du deg av skyllingen?
+      </blockquote>
+      <p>
+        Noen sp&oslash;r deg om du kan skylle noe, f.eks. skyllingen
+        av gr&oslash;nnsakene.
+      </p>
+      <blockquote>
+        Tar du deg av kyllingen?
+      </blockquote>
+      <p>
+        Samme setting, p&aring; kj&oslash;kkenet: Noen sp&oslash;r deg
+        om du kan tilberede kyllingen.
+      </p>
+      <h2>Skj&aelig;re og kj&aelig;re</h2>
+      <blockquote>
+        Kalte du meg skj&aelig;re?
+      </blockquote>
+      <p>Vedkommende lurer p&aring; om du var frekk og kalte ham for
+      en fugl.</p>
+      <blockquote>
+        Kalte du meg kj&aelig;re?
+      </blockquote>
+      <p>Vedkommende lurer p&aring; om du var romantisk</p>
+      <h2>Kjede og skjede</h2>
+      <blockquote>
+        Kan jeg se p&aring; skjeden din?
+      </blockquote>
+      <p>
+        Vedkommende er lege og vil uners&oslash;ke
+        kj&oslash;nnsorganet ditt (gitt at du er ei jente).
+      </p>
+      <blockquote>
+        Kan jeg se p&aring; kjedet ditt?
+      </blockquote>
+      <p>
+        Vedkommende vil uners&oslash;ke sykkelen din.
+      </p>
+      <h2>Kjell og shell</h2>
+      <blockquote>
+        Jeg skal til Kjell
+      </blockquote>
+      <p>Vedkommende skal til kameraten sin Kjell</p>
+      <blockquote>
+        Jeg skal til Shell
+      </blockquote>
+      <p>Vedkommende skal til bensistasjonen Shell</p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,26 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Letter Cases</h1>
+    <div id="main">
+      <h2>Upper Case</h2>
+      <p>
+        <cite>ID</cite> is always upper cased (not 'id' and 'Id'). You
+        may have a function in your code that's called
+        <code>getId()</code>, but when you write human readable
+        texts, it should be upper cased.
+      </p>
+      <p>
+        This is also true for all abbrevations, they should
+        <em>always</em> be upper cased: <cite>XML</cite>,
+        <cite>REST</cite> and <cite>HTTP</cite>
+      </p>
+      <h2>Capitalisation</h2>
+      <p> 
+        Product names are always capitalised (remember, they're just like
+        people's names), hence; Community Engine, Struts and Ant.
+      </p>
+      <p> All table, chapter and section headings are capitalised. </p>
+      <p> The first letter after a comma (',') is not to be capitalised like
+        is the case after a period ('.').
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,28 @@
+<!--#include virtual="/ssi/header.shtml" -->
+      <h1>Issues with DBCP on Gentoo</h1>
+      <div style="float: right">
+        <img src="https://bugs.gentoo.org/extensions/Gentoo/web/gentoo_org.png"
+             alt="Gentoo"/>
+      </div>
+      <p>
+        I ran into the some problems a while back when setting up
+        connection pooling on Tomcat on Gentoo. It turned out that
+        this was <a
+        href="https://bugs.gentoo.org/show_bug.cgi?id=144276">a known
+        issue to Gentoo</a> when using the Gentoo packages.
+      </p>
+      <p>
+        To remedy this, I had to do:
+      </p>
+      <pre># cd /usr/share/tomcat-6/lib
+# ln -s /usr/share/commons-dbcp/lib/commons-dbcp.jar</pre>
+      <p>
+        And override the data source factory in the
+        <code>Resource</code> definitions in my
+        <code>server.xml</code>:
+      </p>
+      <pre>factory="org.apache.commons.dbcp.BasicDataSourceFactory"</pre>
+      <p>instead of the default:</p>
+      <pre>org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory</pre>
+<!--#include virtual="/ssi/footer.shtml" -->
+      

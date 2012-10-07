@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC
+"-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
+<!--
+All kode er laget av Torstein Krause Johansen,
+torstein.k.johansen/at/gmail/dot/com
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="author" content="Torstein Krause Johansen" />
+    <meta http-equiv="Content-Type"
+          content="text/html; charset=utf-8"
+          />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/style/skybert.css" /> 
+    <link rel="alternate" 
+          href="http://twitter.com/statuses/user_timeline/65628228.rss"
+	       title="Skybert's technical RSS feed" 
+	       type="application/rss+xml" />
+    <title>
+      .:: skybert.net
+      <!--#exec cgi="/cgi-bin/nice-title.cgi" -->
+    </title>
+    <script src="http://www.google-analytics.com/urchin.js"
+            type="text/javascript">
+    </script>
+    <script type="text/javascript"
+            src="http://www.studio-s.no/js/jquery.min-1.3.2.js"></script>
+    <script type="text/javascript"
+            src="http://www.studio-s.no/js/jquery.cycle.all-2.72.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <link href="/style/prettify.css" 
+          type="text/css"
+          rel="stylesheet" />
+    <script type="text/javascript"
+            src="/js/google-code-prettify/prettify.js"></script>
+  </head>
+  <body onload="prettyPrint()">
+    <div id="bread-crumb">
+      <!--#exec cgi="/cgi-bin/bread-crumb.cgi" -->
+    </div>

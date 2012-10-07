@@ -1,0 +1,54 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Fixing the Phion VPN DEB package</h1>
+    <h2>Or, how to re-build a Debian package</h2>
+    <div id="main">
+      <p>
+        The Phion VPN package has a version string which isn't
+        compatible with the latest APT system, you'll find that Debian
+        and derivatives like Ubuntu will complain about the version
+        string being illegal and will refuse to install the
+        package:
+      </p>
+<pre class="code">
+dpkg: error processing /tmp/v/phionVPN-R8-SP2.deb (--install):
+ parsing file '/var/lib/dpkg/tmp.ci/control' near line 2 package 'phionvpn':
+ error in Version string 'R8-SP2': version number does not start with digit
+</pre>
+      <p>
+        Here is how you can fix this so that the package will install
+        on your your system.
+      </p>
+<pre class="prettyprint">
+$ mkdir -p /tmp/vpn/debian
+$ dpkg -x phionVPN-R8-SP2.deb /tmp/vpn/debian
+$ mkdir -p /tmp/vpn/debian/DEBIAN
+$ dpkg -e phionVPN-R8-SP2.deb /tmp/vpn/debian/DEBIAN
+</pre>
+      <p>
+        Now, let's change the version string:
+      </p>
+<pre class="prettyprint">
+$ vi /tmp/vpn/debian/DEBIAN/control
+</pre>
+      <p>
+        Change from:
+      </p>
+      <pre class="prettyprint">Version: R8-SP2</pre>
+      <p>
+        to:
+      </p>
+      <pre class="prettyprint">Version: 8-SP2</pre>
+      <p>
+        Now, let's re-build the package:
+      </p>
+<pre class="prettyprint">
+$ cd /tmp/vpn
+$ dpkg-deb --build debian
+$ mv debian.deb phionvpn_8-SP2.deb
+</pre>
+      <p>
+        That's it, you can now install the package successfully:
+      </p>
+<pre class="prettyprint"># dpkg -i /tmp/vpn/phionvpn_8-SP2.deb</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

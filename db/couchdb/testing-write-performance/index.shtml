@@ -1,0 +1,135 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Testing the Write Performance of CouchDB</h1>
+    <div id="main">
+      <p>
+        First off, I had <a
+        href="/bytes/2011/05/16/using-siege-to-test-the-write-performance-of-couchdb">to
+        get Siege to send the correct content type header</a>. Once
+        that was out of the way, I could go ahead and do my tests :-)
+      </p>
+      <p>
+        To conduct the tests, I created a <code>.json</code> file with
+        a typical document I would use in my application:
+      </p>
+<pre>{
+  "action_type_id" : "1",
+  "content_id" : "123",
+  "type" : "slideshow",
+  "created_at" : "2011-05-16 12:42",
+  "publication_id" : "3",
+  "referrer" : "http://mysite.com/add/slideshow/to/one/of/these/blogs",
+  "section_id" : "12",
+  "target_content_id" : "132",
+  "target_content_type" : "blog",
+  "target_section_id" : "22",
+  "target_user_id" : "44",
+  "title" : "The title of the blog 123",
+  "uri" : "/blog/123",
+  "user_id" : "12"
+}
+</pre>
+      <p>
+        I then created a <code>.siege</code> file for my beloved load
+        testing tool to use. It contained ony one line:
+      </p>
+      <pre>http://127.0.0.1:5984/mydb POST &lt; mydb_entry_example.json</pre>
+      <p>
+        I then unleashed siege:
+      </p>
+      <pre>$ siege -c 100 -f mydb_entry_example.json.siege</pre>
+      <p>
+        The above gave me (running this locally, so network latency,
+        DNS lookup and so on, is not included here):
+      </p>
+      <pre>Transactions:       76700 hits
+Availability:      100.00 %
+Elapsed time:      393.84 secs
+Data transferred:  6.95 MB
+Response time:     0.01 secs
+Transaction rate:  194.75 trans/sec
+Throughput:        0.02 MB/sec
+Concurrency:       2.82
+Successful transactions:       76700
+Failed transactions:           0
+Longest transaction:           0.20
+Shortest transaction:          0.00</pre>
+      <p>
+        In general, I found that couchdb could not sustain write load
+        over time when siege runs with much more than 100 concurrent
+        sessions. Cranking the number of concurrent TCP sessions,
+        yielded time outs and long error messages in the couchdb:
+      </p>
+      <pre>[Mon, 16 May 2011 07:30:17 GMT] [error] [<0.20137.2>] Uncaught error in HTTP request: {exit,
+     {timeout,
+     {gen_server,call,
+      [couch_query_servers,</pre>
+      <h2>Testing CouchDB bulk update</h2>
+      <p>
+        To test CouchDB's bulk update entry point, you have to create
+        a container document which holds all the documents. This was
+        easily done with these three lines of BASH:
+      </p>
+<pre>$ echo '{"docs":[' &gt; mydb_entry_example-bulk.json
+$ for i in {1..100}; do cat mydb_entry_example.json &gt;&gt; mydb_entry_example-bulk.json ; done
+$ echo ']}' &gt;&gt; mydb_entry_example-bulk.json</pre>
+      <p>
+        Remember that the container document "docs", also needs to
+        pass the input test of fields required by your application
+        that you may have fined in your
+        <code>validate_doc_update</code> hook.
+      </p>
+      <p>
+        I created a <code>.siege</code> file like the one for the
+        normal updates:
+      </p>
+      <pre>http://127.0.0.1:5984/mydb/_bulk_docs/ POST &lt; mydb_entry_example.json</pre>
+      <p>
+        I could then run my bulk update tests, first a simple one
+        using <code>wget</code>:
+      </p>
+<pre>$ time wget -o /dev/null \
+  -S \
+  --header "Content-type:application/json" \
+  -O /dev/null \
+  --post-file=mydb_entry_example-bulk.json  \
+  http://127.0.0.1:5984/mydb/_bulk_docs/
+
+real0m2.272s
+user0m0.004s
+sys0m0.000s</pre>
+      <p>
+        Interestingly enough, there was no time difference creating
+        100 documents this way or 1000. The reason why I kept the
+        document at 100, was that otherwise couchdb woud throw
+        <code>400</code> error messages when siege was unleashed on
+        it.
+      </p>
+      <p>
+        Running siege was like before, just with different inut
+        parameters:
+      </p>
+      <pre>$ siege -c 30 -f  mydb_entry_example-bulk.json.siege</pre>
+      <p>Lifting it after a while gave these results:</p>
+      <pre>Transactions:        7328 hits
+Availability:      100.00 %
+Elapsed time:     1132.70 secs
+Data transferred: 59.42 MB
+Response time:    1.04 secs
+Transaction rate: 6.47 trans/sec
+Throughput:       0.05 MB/sec
+Concurrency:      6.74
+Successful transactions:    7328
+Failed transactions:        0
+Longest transaction:        1.76
+</pre>
+      <p>
+        These wee tests shows taht using bulk updates improves the
+        CouchDB wirte performacne and (locally on my system) suggests
+        something like <code>100 * 6.47 = 647</code> writes per
+        second, which isn't that bad :-) As hinted at above, these
+        numbers would probably have been better if siege didn't choke
+        on documents of a certain size (I initially ran it with 1000
+        document big <code>.json</code>).
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

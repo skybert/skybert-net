@@ -1,0 +1,25 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <h2>
+        Your app server with Escenic Content Engine &amp; Viz Mobile
+        Expansion fails to start
+      </h2>
+      <p>
+        If you see this in your app log:
+      </p>
+<pre class="prettyprint">
+SEVERE: Servlet /myapp threw load() exception
+javax.servlet.ServletException: The Mobiletech License could not be initialized. Please contact support@mobiletech.no
+        at com.mobiletech.dxf.core.servlet.DeviceRepoInit.init(DeviceRepoInit.java:53)
+</pre>
+      <h2>Remedy</h2>
+      <p>
+        You need <code>frame-license.properties</code> in your common
+        app server classpath (contact Mobiletech for a valid license)
+        and a correct
+        <code>myapp/WEB-INF/classes/config/core.properties</code> for
+        each of your web applications
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

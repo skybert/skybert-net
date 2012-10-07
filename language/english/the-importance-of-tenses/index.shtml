@@ -1,0 +1,51 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Getting the Tenses Right</h1>
+    <div id="main">
+      <img src="http://www.brainstuck.com/wp-content/uploads/2009/02/ask-the-right-question.jpg"
+           alt="asking a question"
+           class="right-image"
+           />
+      <p>
+        In a chat, Lisa asks John if he's seen the new problem in
+        their computer program.
+      </p>
+      <p>
+        John's response could mean five different things depending
+        on what tense he puts on the verb <cite>fix</cite>:
+      </p>
+      <p>
+        <code>lisa:</code> Have you seen the new bug in our program?
+      </p>
+      <ul>
+        <li>
+          <code>john:</code> <cite>Fixing</cite> it (now)
+        </li>
+        <li>
+          <code>john:</code> <cite>Have fixed</cite> it (some time
+          ago)
+        </li>
+        <li>
+          <code>john:</code> <cite>Fixed</cite> it (can even tell
+          you <em>when</em> I did it).
+        </li>
+        <li>
+          <code>john:</code> <cite>Will fix</cite> it (soon, later,
+          sometime)
+        </li>
+        <li>
+          <code>john:</code> <cite>Fix</cite> it (yourself)
+        </li>
+      </ul>
+      <img src="http://www.cartoonstock.com/lowres/aba0011l.jpg"
+           alt="guess"
+           class="right-image"
+           />
+      <p>
+        If the tenses are wrong, the one you talk or write to
+        starts guessing what you <em>really</em> meant.
+      </p>
+      <p>
+        ...and that's when the fun starts :-)
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

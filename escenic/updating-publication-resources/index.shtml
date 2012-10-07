@@ -1,0 +1,32 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        Updating the publication resources for my Escenic publication
+        is so easy <a
+        href="https://github.com/skybert/ece-scripts/blob/master/usr/bin/ece">with
+        the new ece script</a>.
+      </p>
+      <p>
+        Here, I have all my publication resource in a folder on my
+        local computer:
+      </p>
+     <pre class="prettyprint">$ ls my-dir-with-publication-resources
+content-type  feature  image-version  layout  layout-group  security</pre>
+      <p>
+        I can now update all of them for my publication "mypub" with
+        one line of BASH:
+      </p>
+      <pre class="prettyprint">$ cd my-dir-with-publication-resources
+$ for el in *; do ece -i dev1 -p mypub -r $el update; done
+[ece#engine-dev1] Updating the content-type resource for the mypub publication
+[ece#engine-dev1] Updating the feature resource for the mypub publication
+[ece#engine-dev1] Updating the image-version resource for the mypub publication
+[ece#engine-dev1] Updating the layout resource for the mypub publication
+[ece#engine-dev1] Updating the layout-group resource for the mypub publication
+[ece#engine-dev1] Updating the security resource for the mypub publication</pre>
+      <p>
+        That's it, all my publication resources are now up to date.
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,65 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Setting up Wireless</h1>
+    <div id="main">
+      <h2>The Old School Way</h2>
+      <p>
+        Configure your wireless networks in
+        e.g. <code>/etc/wpa_supplicant/my-networks.conf</code>:
+      </p>
+<pre class="code">ctrl_interface=/var/run/wpa_supplicant
+
+# WEP network
+network={
+        ssid="myessid"
+        scan_ssid=1
+        key_mgmt=NONE
+        auth_alg=OPEN
+        wep_key0=myverydifficultpassword
+        wep_tx_keyidx=0
+}
+
+# WPA network
+network={
+  ssid="myothernetw2ork"
+  scan_ssid=1
+  key_mgmt=WPA-PSK
+  psk="myverydifficultpassword"
+}
+</pre>
+      <p>
+        and make <code>/etc/network/interfaces</code> use it:
+      </p>
+<pre class="code">iface wlan0 inet dhcp
+      wpa-conf /etc/wpa_supplicant/my-networks.conf
+      post-up /etc/init.d/firewall start</pre>
+      <p>
+        wpasupplicant also supports roaming, to use roaming, replace
+        <code>wpa-conf</code> with <code>wpa-roam</code>.
+      </p>
+      <h2>Getting help with all the required fields</h2>
+      <p>
+        If you've got problems figuring out all the correct settings
+        for your <code>wpasupplicant</code> configuration file, you
+        may use NetworkManager to read the settings:
+      </p>
+      <pre class="code">$ grep "Config: added" /var/log/daemon.log | grep NetworkManager</pre>
+      <h2>Troubleshooting</h2>
+      <h3>SIOCSIFFLAGS: Unknown error 132</h3>
+      <p>
+        I was all of a sudden, without changing my system (as far as I
+        know) getting this really odd error on kernel
+        version <code>2.6.32-trunk-686</code>: 
+      </p>
+<pre class="code"># ifup -v wlan
+[..]
+SIOCSIFFLAGS: Unknown error 132
+Failed to bring up wlan0.</pre>
+      <p>
+        I was just about trying another kernel, when I checked the
+        wifi on/off switch on my laptop. It turned out, my wifi wasn't
+        properly turned on. Pushing the switch in place made a world
+        of diffrence, <code>ifup wlan0</code> now got the interface
+        up! 
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

@@ -1,0 +1,121 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Arguing the JSP case</h1>
+    <div id="main">
+      <p class="reg">
+        Hi all,
+        there has been some discussion whether regarding the case of the
+        taglib tags.  This article is meant as an invitation to a discussion
+        on the subject.
+      </p>
+      <p>
+        As much as I try to, I cannot understand why anyone would want to
+        write uppercase tags.
+      </p>
+      <h2>
+        The JSR-000052 JavaServer Pages (tm) Standard Tag Library
+        Specification states that:
+      </h2>
+      <blockquote>
+        "JSTL adopts capitalization conventions of Java variables for
+        compound words in action and attribute names. Recommended
+        tag prefixes are kept lowercase. Thus, we have
+        <code>&lt;sql:transaction&gt;</code> and
+        <code>&lt;c:forEach&gt;</code>, as well as attributes such
+        as <code>xmlUrl</code> and <code>varDom</code>."
+      </blockquote>
+      <a href="http://jcp.org/aboutJava/communityprocess/final/jsr052/">
+        jsr052, section 2.6
+      </a>
+      <h2>
+        Sun's JSP code Conventions states the following on tag prefix names:
+      </h2>
+      <blockquote>
+        "A tag prefix should be a short yet meaningful noun in title case, and
+        the first character in lower-case. A tag prefix should not contain
+        non-alphabetic characters."
+      </blockquote>
+      <ul>
+        <li>
+          <a href="http://java.sun.com/developer/technicalArticles/javaserverpages/code_convention/">
+            JSP code conventions
+          </a>
+        </li>
+      </ul>
+      <p>
+        This could imply camel notation, in our case would it mean only lower
+        case, as our taglibs have only one word; article, category, relation,
+        util and so on.
+      </p>
+      <h2>
+        All the Struts Taglibs use lowercase in their documentation:
+      </h2>
+      <ol>
+        <li>
+          <a href="http://struts.apache.org/struts-taglib/tagreference-struts-bean.html">
+            struts-bean
+          </a>
+        </li>
+        <li>
+          <a href="http://struts.apache.org/struts-taglib/tagreference-struts-html.html">
+            struts-html
+          </a>
+        </li>
+        <li>
+          <a href="http://struts.apache.org/struts-taglib/tagreference-struts-logic.html">
+            struts-logic
+          </a>
+        </li>
+        <li>
+          <a href="http://struts.apache.org/struts-taglib/tagreference-struts-nested.html">
+            struts-nested
+          </a>
+        </li>
+      </ol>
+      <h2>The Prime pro-uppercaes argument</h2>
+      <p>
+        The prime argument for UPPERCASE taglib tags, is that they
+        are easier to spot. While this is true for arcane and
+        hopeless editors, such as notepad, all proper text editors
+        and IDEs support XML and thus highlights both the tag prefix
+        and suffix in different colours, making them easy to
+        differentiate. This argument is therefore not, IMHO, worth
+        its salt.
+      </p>
+      <h2>Strain on Eyes</h2>
+      <p>
+        Lowercase letters are easier on the eyes, UPPERCASE LETTERS SCREAM
+        AT YOU!
+      </p>
+      <h2>Look around</h2>
+      <p>
+        Just about all XML documents everywhere, not forgetting all O'Reilly
+        title I've come by, are written in lowercase
+      </p>
+      <h2>The XHTML does it</h2>
+      <p>
+        Also, the XHTML standard stresses lowercase;
+        the <a href="http://www.w3.org/TR/html/#h-4.2">XHTML
+        specification</a> states that:
+      </p>
+      <blockquote>
+        XHTML documents must use lower case for all HTML element and
+        attribute names.
+      </blockquote>
+      <h2>Time to type</h2>
+      <p>
+        It takes longer to constantly switch case. You either have
+        to switch the capslock key on and off, or press shift while
+        typing the entire tag name. Why go through this, when you
+        don't need to? I believe not all UPPERCASE writers have
+        considered this point. Just try one day, writing everything
+        lowercase and feel the difference in speed and strain on
+        your fingers :-)
+      </p>
+      <hr/>
+      <p>
+        So, I ask again (and please take a good think before answering), why
+        do we argue about this, why don't everyone just use lowercase?
+      </p>
+      <address>-Torstein</address>
+    </div>         
+<!--#include virtual="/ssi/footer.shtml" -->

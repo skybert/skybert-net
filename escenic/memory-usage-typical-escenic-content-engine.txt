@@ -1,0 +1,250 @@
+13511:   /usr/lib/jvm/java-6-sun/bin/java -Djava.util.logging.config.file=/opt/tomcat-cohen/conf/logging.properties -Descenic.server=li140-120-cohen -Djava.awt.headless=true -Djava.security.auth.login.config=/etc/escenic/engine/common/security/jaas.config -Djava.security.policy=/etc/escenic/engine/common/security/java.policy -Dsolr.solr.home=/var/lib/escenic/solr -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -Xloggc:/var/log/escenic/engine-cohen-gc.log -XX:+CMSClassUnloadingEnabled -XX:+CMSIncrementalPacing -XX:+CMSPe
+08048000     40K r-x--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/bin/java
+08052000      4K rwx--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/bin/java
+095ba000   4720K rwx--    [ anon ]
+8b200000    540K rwx--    [ anon ]
+8b287000    484K -----    [ anon ]
+8b35e000     12K -----    [ anon ]
+8b361000    312K rwx--    [ anon ]
+8b3af000     12K -----    [ anon ]
+8b3b2000    312K rwx--    [ anon ]
+8b400000   1004K rwx--    [ anon ]
+8b4fb000     20K -----    [ anon ]
+8b500000   1024K rwx--    [ anon ]
+8b600000   1020K rwx--    [ anon ]
+8b6ff000      4K -----    [ anon ]
+8b74a000     12K -----    [ anon ]
+8b74d000    312K rwx--    [ anon ]
+8b79b000     64K r-x--  /lib/i686/cmov/libresolv-2.11.3.so
+8b7ab000      4K r-x--  /lib/i686/cmov/libresolv-2.11.3.so
+8b7ac000      4K rwx--  /lib/i686/cmov/libresolv-2.11.3.so
+8b7ad000      8K rwx--    [ anon ]
+8b7af000     12K -----    [ anon ]
+8b7b2000    312K rwx--    [ anon ]
+8b800000   1020K rwx--    [ anon ]
+8b8ff000      4K -----    [ anon ]
+8b90e000     16K r-x--  /lib/i686/cmov/libnss_dns-2.11.3.so
+8b912000      4K r-x--  /lib/i686/cmov/libnss_dns-2.11.3.so
+8b913000      4K rwx--  /lib/i686/cmov/libnss_dns-2.11.3.so
+8b91d000     12K -----    [ anon ]
+8b920000    312K rwx--    [ anon ]
+8b99a000     80K r-x--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libnet.so
+8b9ae000      4K rwx--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libnet.so
+8b9af000     12K -----    [ anon ]
+8b9b2000    312K rwx--    [ anon ]
+8ba00000   1024K rwx--    [ anon ]
+8bb06000     12K -----    [ anon ]
+8bb09000    312K rwx--    [ anon ]
+8bb57000     12K -----    [ anon ]
+8bb5a000    312K rwx--    [ anon ]
+8bba8000   1268K r-x--  /usr/lib/i686/cmov/libcrypto.so.0.9.8
+8bce5000     96K rwx--  /usr/lib/i686/cmov/libcrypto.so.0.9.8
+8bcfd000     12K rwx--    [ anon ]
+8bd00000   1024K rwx--    [ anon ]
+8be12000     12K r-xs-  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/ext/sunjce_provider.jar
+8be15000     28K r-xs-  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/jsse.jar
+8be1c000     36K r-x--  /lib/i686/cmov/libcrypt-2.11.3.so
+8be25000      4K r-x--  /lib/i686/cmov/libcrypt-2.11.3.so
+8be26000      4K rwx--  /lib/i686/cmov/libcrypt-2.11.3.so
+8be27000    156K rwx--    [ anon ]
+8be4e000     76K r-x--  /usr/lib/libz.so.1.2.3.4
+8be61000      4K rwx--  /usr/lib/libz.so.1.2.3.4
+8be62000    280K r-x--  /usr/lib/i686/cmov/libssl.so.0.9.8
+8bea8000     16K rwx--  /usr/lib/i686/cmov/libssl.so.0.9.8
+8beac000    132K r-x--  /usr/lib/libtcnative-1.so.0.1.20
+8becd000      4K rwx--  /usr/lib/libtcnative-1.so.0.1.20
+8bece000     20K r-xs-  /opt/tomcat-cohen/escenic/lib/xsdlib-2009.1.jar
+8bed3000     28K r-xs-  /opt/tomcat-cohen/escenic/lib/xom-1.1.jar
+8beda000     24K r-xs-  /opt/tomcat-cohen/escenic/lib/xmlParserAPIs-2.6.2.jar
+8bee0000     32K r-xs-  /opt/tomcat-cohen/escenic/lib/xml-apis-1.3.04.jar
+8bee8000     96K r-xs-  /opt/tomcat-cohen/escenic/lib/xercesImpl-2.9.1.jar
+8bf00000   1012K rwx--    [ anon ]
+8bffd000     12K -----    [ anon ]
+8c000000   1012K rwx--    [ anon ]
+8c0fd000     12K -----    [ anon ]
+8c102000     16K r-xs-  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/ext/sunpkcs11.jar
+8c106000     32K r-xs-  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/resources.jar
+8c10e000     12K r-x--  /lib/libuuid.so.1.3.0
+8c111000      4K rwx--  /lib/libuuid.so.1.3.0
+8c112000    176K r-x--  /usr/lib/libapr-1.so.0.4.2
+8c13e000      4K r-x--  /usr/lib/libapr-1.so.0.4.2
+8c13f000      4K rwx--  /usr/lib/libapr-1.so.0.4.2
+8c142000     12K r-xs-  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/jce.jar
+8c145000     16K r-xs-  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/ext/localedata.jar
+8c149000    120K r-xs-  /opt/tomcat-cohen/escenic/lib/xalan-2.7.0.jar
+8c167000     28K r-xs-  /opt/tomcat-cohen/escenic/lib/twelvemonkeys-core-2.3.jar
+8c16e000     60K r-xs-  /opt/tomcat-cohen/escenic/lib/trove4j-2.1.0.jar
+8c17d000     20K r-xs-  /opt/tomcat-cohen/escenic/lib/tika-core-0.8.jar
+8c182000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/oro-2.0.8.jar
+8c184000     16K r-xs-  /opt/tomcat-cohen/escenic/lib/model-core-1.3.5.121857.jar
+8c188000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/metadata-extractor-2.4.1-ece-2.jar
+8c18b000     24K r-xs-  /opt/tomcat-cohen/escenic/lib/mail-1.4.jar
+8c191000     80K r-xs-  /opt/tomcat-cohen/escenic/lib/lucene-core-2.9.1.jar
+8c1a5000     28K r-xs-  /opt/tomcat-cohen/escenic/lib/log4j-1.2.14.jar
+8c1ac000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/jtidy-r918-dev.jar
+8c1af000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/json-20080701.jar
+8c1b1000     60K r-xs-  /opt/tomcat-cohen/escenic/lib/joda-time-1.6.jar
+8c1c0000     36K r-xs-  /opt/tomcat-cohen/escenic/lib/jldap-4.3.jar
+8c1c9000     72K r-xs-  /opt/tomcat-cohen/escenic/lib/jing-20091111.jar
+8c1db000     68K r-xs-  /opt/tomcat-cohen/escenic/lib/jai_imageio-1.1.jar
+8c1ec000     80K r-xs-  /opt/tomcat-cohen/escenic/lib/jai_core-1.1.3.jar
+8c200000   1020K rwx--    [ anon ]
+8c2ff000      4K -----    [ anon ]
+8c302000      4K rwx--    [ anon ]
+8c303000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/studio-webstart-engine-5.3.5.121857.jar
+8c305000      4K r-xs-  /opt/tomcat-cohen/escenic/lib/slf4j-log4j12-1.5.8.jar
+8c306000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/jdom-1.0.jar
+8c309000     24K r-xs-  /opt/tomcat-cohen/escenic/lib/jaxen-1.1.1.jar
+8c30f000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/java_memcached-release_2.0.1.jar
+8c311000     16K r-xs-  /opt/tomcat-cohen/escenic/lib/jai_codec-1.1.3.jar
+8c315000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/isorelax-20030108.jar
+8c318000     16K r-xs-  /opt/tomcat-cohen/escenic/lib/httpcache4j-api-3.2-escenic.jar
+8c31c000     88K r-xs-  /opt/tomcat-cohen/escenic/lib/guava-r07.jar
+8c332000      4K r-xs-  /opt/tomcat-cohen/escenic/lib/escenic-instance-class.jar
+8c333000      4K r-xs-  /opt/tomcat-cohen/escenic/lib/engine-webservice-api-5.3.5.121857.jar
+8c334000     32K r-xs-  /opt/tomcat-cohen/escenic/lib/engine-syndication-5.3.5.121857.jar
+8c33c000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/engine-search-5.3.5.121857.jar
+8c33f000      4K r-xs-  /opt/tomcat-cohen/escenic/lib/engine-ldap-migration-5.3.5.121857.jar
+8c340000    136K r-xs-  /opt/tomcat-cohen/escenic/lib/engine-core-5.3.5.121857.jar
+8c362000     60K r-xs-  /opt/tomcat-cohen/escenic/lib/engine-config-5.3.5.121857.jar
+8c371000      4K r-xs-  /opt/tomcat-cohen/escenic/lib/engine-bootstrap-config.jar
+8c372000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/common-vdf-1.5.5.121857.jar
+8c374000     32K r-xs-  /opt/tomcat-cohen/escenic/lib/common-util-1.5.5.121857.jar
+8c37c000     32K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-vfs-1.0.jar
+8c384000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-validator-1.3.1.jar
+8c387000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-pool-1.3.jar
+8c389000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-logging-1.1.1.jar
+8c38b000     16K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-lang-2.3.jar
+8c38f000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-io-1.4.jar
+8c392000     24K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-httpclient-3.1.jar
+8c398000     16K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-digester-1.6.jar
+8c39c000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-dbcp-1.2.2.jar
+8c39e000     52K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-collections-3.2.jar
+8c3ab000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-codec-1.4.jar
+8c3ad000     20K r-xs-  /opt/tomcat-cohen/escenic/lib/commons-beanutils-1.8.0.jar
+8c3b2000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/common-nursery-1.5.5.121857.jar
+8c3b4000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/classification-syndication-5.3.5.121857.jar
+8c3b6000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/classification-core-5.3.5.121857.jar
+8c3b8000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/classification-backends-database-5.3.5.121857.jar
+8c3ba000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/classification-api-5.3.5.121857.jar
+8c3bc000      4K r-xs-  /opt/tomcat-cohen/escenic/lib/classes.jar
+8c3bd000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/axiom-impl-1.2.5.jar
+8c3c0000     16K r-xs-  /opt/tomcat-cohen/escenic/lib/axiom-api-1.2.5.jar
+8c3c4000      8K r-xs-  /opt/tomcat-cohen/escenic/lib/activation-1.1.1.jar
+8c3c6000     12K r-xs-  /opt/tomcat-cohen/escenic/lib/abdera-parser-1.0.jar
+8c3c9000     20K r-xs-  /opt/tomcat-cohen/escenic/lib/abdera-i18n-1.0.jar
+8c3ce000     16K r-xs-  /opt/tomcat-cohen/escenic/lib/abdera-core-1.0.jar
+8c3d2000      8K r-xs-  /opt/apache-tomcat-6.0.35/lib/tomcat-i18n-ja.jar
+8c3d4000      8K r-xs-  /opt/apache-tomcat-6.0.35/lib/tomcat-i18n-fr.jar
+8c3d6000     16K r-xs-  /opt/apache-tomcat-6.0.35/lib/tomcat-dbcp.jar
+8c3da000      4K -----    [ anon ]
+8c3db000    512K rwx--    [ anon ]
+8c45b000     12K -----    [ anon ]
+8c45e000    312K rwx--    [ anon ]
+8c4ac000     12K -----    [ anon ]
+8c4af000    504K rwx--    [ anon ]
+8c52d000     12K -----    [ anon ]
+8c530000    312K rwx--    [ anon ]
+8c57e000     12K -----    [ anon ]
+8c581000    312K rwx--    [ anon ]
+8c5cf000   2048K r-x--  /usr/lib/locale/locale-archive
+8c7cf000     12K -----    [ anon ]
+8c7d2000    312K rwx--    [ anon ]
+8c820000     12K -----    [ anon ]
+8c823000    312K rwx--    [ anon ]
+8c871000   1632K r-xs-  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/rt.jar
+8ca09000    168K rwx--    [ anon ]
+8ca33000     12K r-xs-  /opt/apache-tomcat-6.0.35/lib/tomcat-i18n-es.jar
+8ca36000     40K r-xs-  /opt/apache-tomcat-6.0.35/lib/tomcat-coyote.jar
+8ca40000      8K r-xs-  /opt/apache-tomcat-6.0.35/lib/servlet-api.jar
+8ca42000      8K r-xs-  /opt/apache-tomcat-6.0.35/lib/jsp-api.jar
+8ca44000     28K r-xs-  /opt/apache-tomcat-6.0.35/lib/jasper.jar
+8ca4b000      4K -----    [ anon ]
+8ca4c000    720K rwx--    [ anon ]
+8cb00000   1024K rwx--    [ anon ]
+8cc00000      4K r-xs-  /opt/tomcat-cohen/escenic/lib/slf4j-api-1.5.8.jar
+8cc01000     12K r-xs-  /opt/apache-tomcat-6.0.35/lib/jasper-el.jar
+8cc04000      8K r-xs-  /opt/apache-tomcat-6.0.35/lib/el-api.jar
+8cc06000     60K r-xs-  /opt/apache-tomcat-6.0.35/lib/ecj-3.7.jar
+8cc15000     64K r-xs-  /opt/apache-tomcat-6.0.35/lib/catalina.jar
+8cc25000     16K r-xs-  /opt/apache-tomcat-6.0.35/lib/catalina-tribes.jar
+8cc29000     12K r-xs-  /opt/apache-tomcat-6.0.35/lib/catalina-ha.jar
+8cc2c000     24K r-x--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libmanagement.so
+8cc32000      4K rwx--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libmanagement.so
+8cc33000    336K rwx--    [ anon ]
+8cc87000      4K -----    [ anon ]
+8cc88000  16228K rwx--    [ anon ]
+8dc61000    384K rwx--    [ anon ]
+8dcc1000    192K rwx--    [ anon ]
+8dcf1000      4K rwx--    [ anon ]
+8dcf2000    820K rwx--    [ anon ]
+8ddbf000    384K rwx--    [ anon ]
+8de1f000 353284K rwx--    [ anon ]
+a3720000   1024K rwx--    [ anon ]
+a3820000  65536K rwx--    [ anon ]
+a7820000 196608K rwx--    [ anon ]
+b3820000     24K r-xs-  /usr/share/java/mysql-connector-java-5.1.10.jar
+b3826000      4K -----    [ anon ]
+b3827000  52512K rwx--    [ anon ]
+b6b6f000     60K r-x--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libzip.so
+b6b7e000      8K rwx--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libzip.so
+b6b80000     40K r-x--  /lib/i686/cmov/libnss_files-2.11.3.so
+b6b8a000      4K r-x--  /lib/i686/cmov/libnss_files-2.11.3.so
+b6b8b000      4K rwx--  /lib/i686/cmov/libnss_files-2.11.3.so
+b6b8c000     32K r-x--  /lib/i686/cmov/libnss_nis-2.11.3.so
+b6b94000      4K r-x--  /lib/i686/cmov/libnss_nis-2.11.3.so
+b6b95000      4K rwx--  /lib/i686/cmov/libnss_nis-2.11.3.so
+b6b96000     24K r-x--  /lib/i686/cmov/libnss_compat-2.11.3.so
+b6b9c000      4K r-x--  /lib/i686/cmov/libnss_compat-2.11.3.so
+b6b9d000      4K rwx--  /lib/i686/cmov/libnss_compat-2.11.3.so
+b6b9e000      4K r-xs-  /opt/tomcat-cohen/escenic/lib/relaxngDatatype-20020414.jar
+b6b9f000     32K rwxs-  /tmp/hsperfdata_escenic/13511
+b6ba7000     76K r-x--  /lib/i686/cmov/libnsl-2.11.3.so
+b6bba000      4K r-x--  /lib/i686/cmov/libnsl-2.11.3.so
+b6bbb000      4K rwx--  /lib/i686/cmov/libnsl-2.11.3.so
+b6bbc000      8K rwx--    [ anon ]
+b6bbe000    140K r-x--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libjava.so
+b6be1000      8K rwx--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libjava.so
+b6be3000     44K r-x--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libverify.so
+b6bee000      4K rwx--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/libverify.so
+b6bef000     28K r-x--  /lib/i686/cmov/librt-2.11.3.so
+b6bf6000      4K r-x--  /lib/i686/cmov/librt-2.11.3.so
+b6bf7000      4K rwx--  /lib/i686/cmov/librt-2.11.3.so
+b6bf8000     12K -----    [ anon ]
+b6bfb000    312K rwx--    [ anon ]
+b6c49000    144K r-x--  /lib/i686/cmov/libm-2.11.3.so
+b6c6d000      4K r-x--  /lib/i686/cmov/libm-2.11.3.so
+b6c6e000      4K rwx--  /lib/i686/cmov/libm-2.11.3.so
+b6c6f000   4996K r-x--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/client/libjvm.so
+b7150000    140K rwx--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/client/libjvm.so
+b7173000   4212K rwx--    [ anon ]
+b7590000   1280K r-x--  /lib/i686/cmov/libc-2.11.3.so
+b76d0000      4K -----  /lib/i686/cmov/libc-2.11.3.so
+b76d1000      8K r-x--  /lib/i686/cmov/libc-2.11.3.so
+b76d3000      4K rwx--  /lib/i686/cmov/libc-2.11.3.so
+b76d4000     12K rwx--    [ anon ]
+b76d7000      8K r-x--  /lib/i686/cmov/libdl-2.11.3.so
+b76d9000      4K r-x--  /lib/i686/cmov/libdl-2.11.3.so
+b76da000      4K rwx--  /lib/i686/cmov/libdl-2.11.3.so
+b76db000     28K r-x--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/jli/libjli.so
+b76e2000      8K rwx--  /usr/lib/jvm/java-6-sun-1.6.0.26/jre/lib/i386/jli/libjli.so
+b76e4000      4K rwx--    [ anon ]
+b76e5000     84K r-x--  /lib/i686/cmov/libpthread-2.11.3.so
+b76fa000      4K r-x--  /lib/i686/cmov/libpthread-2.11.3.so
+b76fb000      4K rwx--  /lib/i686/cmov/libpthread-2.11.3.so
+b76fc000      8K rwx--    [ anon ]
+b76fe000      8K r-xs-  /opt/apache-tomcat-6.0.35/lib/catalina-ant.jar
+b7700000      4K r-xs-  /opt/apache-tomcat-6.0.35/lib/annotations-api.jar
+b7701000      4K r-xs-  /opt/apache-tomcat-6.0.35/bin/tomcat-juli.jar
+b7702000      4K r-xs-  /opt/apache-tomcat-6.0.35/bin/commons-daemon.jar
+b7703000      4K r-xs-  /opt/apache-tomcat-6.0.35/bin/bootstrap.jar
+b7704000      4K r-x--  /usr/lib/locale/locale-archive
+b7705000      4K rwx--    [ anon ]
+b7706000      4K r-x--    [ anon ]
+b7707000     16K rwx--    [ anon ]
+b770b000    108K r-x--  /lib/ld-2.11.3.so
+b7726000      4K r-x--  /lib/ld-2.11.3.so
+b7727000      4K rwx--  /lib/ld-2.11.3.so
+bfe01000    136K rwx--    [ stack ]
+f57fe000      4K r-x--    [ anon ]
+ total   730020K

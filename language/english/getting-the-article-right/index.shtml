@@ -1,0 +1,27 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        You normally have an article in front of the subject and
+        direct object, the exception being names (of people or
+        products that everyone knows, e.g. Windows)
+      </p>
+      <blockquote>
+        <p>
+          The/A/One <cite>subject</cite> is using the/a/one <cite>direct
+          object</cite>
+        </p>
+      </blockquote>
+      <ul>
+        <li>
+          <cite>The</cite> cat was chasing <cite>two</cite> mice.
+        </li>
+        <li>
+          I installed Content Engine on <cite>the</cite> server.
+        </li>
+        <li>
+          You were eating <cite>an</cite> apple.
+        </li>
+      </ul>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

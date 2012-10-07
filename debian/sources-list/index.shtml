@@ -1,0 +1,28 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>/etc/apt/sources.list</h1>
+    <div id="main">
+      <p>
+        These are the sources I'm using
+      </p>
+<pre class="code">
+<!--#include virtual="sources.list" -->
+</pre>
+      <h2>Adding the third party repository keys</h2>
+      <p>
+        I trust these third party sources, therefore I add their keys
+        to my local APT key ring:
+      </p>
+      <h3>debian-multimedia.rg</h3>
+      <pre class="code"># apt-get install keydebian-multimedia-keyring</pre>
+      <h3>opera.com</h3>
+      <pre class="code"># wget -O - http://deb.opera.com/archive.key | apt-key add -</pre>
+      <h3>skype.com</h3>
+      <pre># apt-key adv --keyserver pgp.mit.edu --recv-keys 0xd66b746e</pre>
+      <h3>percona.com</h3>
+      <pre># apt-key adv --keyserver keys.gnupg.net --recv-keys 1C4CBDCDCD2EFD2A</pre>
+<!--
+      <h3>mozilla.debian.net</h3>
+      <pre>wget -O - -q http://mozilla.debian.net/archive.asc | gpg --import</pre>
+-->
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

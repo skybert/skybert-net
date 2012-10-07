@@ -1,0 +1,24 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        Namespaces in JavaScript. This is the neatest way of creating
+        namespacs in JavaScript. <a
+        href="http://tkj.freeshell.org/bytes/2011/06/30/building-the-latest-malabar-mode-for-emacs/">It's
+        simple</a>, works as expeted (as far as I've tested) and don't
+        require an external library.
+      </p>
+<pre class="prettyprint"><!--#include virtual="ns.js" --></pre>
+</pre>
+     <p>
+       You can now write name space protected code like this:
+     </p>
+<pre class="prettyprint"><!--#include virtual="ns-test.js" --></pre>
+     <p>
+       Below you can see the output of the above test (if your browser
+       supports it):
+     </p>
+<pre><script type="text/javascript" src="ns.js"></script>
+<script type="text/javascript" src="ns-test.js"></script></pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->

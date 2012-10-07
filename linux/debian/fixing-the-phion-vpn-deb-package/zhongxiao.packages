@@ -1,0 +1,37 @@
+$ dpkg -l *fonts* | grep ^ii 
+emacs-intl-fonts                     1.2.1-8                        Fonts to allow multi-lingual PostScript prin
+fontconfig                           2.8.0-2.1                      generic font configuration library - support
+fontconfig-config                    2.8.0-2.1                      generic font configuration library - configu
+gsfonts                              1:8.11+urwcyr1.0.7~pre44-4.2   Fonts for the Ghostscript interpreter(s)
+libfontconfig1                       2.8.0-2.1                      generic font configuration library - runtime
+libfontenc1                          1:1.0.5-2                      X11 font encoding library
+libxfont1                            1:1.4.1-2                      X11 font rasterisation library
+ttf-bengali-fonts                    1:0.5.10                       Free TrueType fonts for the Bengali language
+xfonts-100dpi                        1:1.0.1                        100 dpi fonts for X
+xfonts-75dpi                         1:1.0.1                        75 dpi fonts for X
+xfonts-base                          1:1.0.1                        standard fonts for X
+xfonts-cmex-big5p                    0.1-5.2                        Big5+ Chinese Mingti bitmap font (by CMEX & 
+xfonts-encodings                     1:1.0.3-1                      Encodings for X.Org fonts
+xfonts-intl-chinese                  1.2.1-8                        International fonts for X -- Chinese
+xfonts-intl-chinese-big              1.2.1-8                        International fonts for X -- Chinese big
+xfonts-scalable                      1:1.0.1-1                      scalable fonts for X
+xfonts-terminus                      4.30-2                         Fixed-width fonts for fast reading
+xfonts-utils                         1:7.5+2                        X Window System font utility programs
+xfonts-wqy                           0.9.9-3.2                      WenQuanYi Bitmap Song CJK font for X
+
+$ dpkg -l *opera* | grep ^ii 
+opera                                10.61.6430                     A fast and secure web browser and Internet suite
+
+$ dpkg -l *xfs* | grep ^ii 
+x11-xfs-utils                        7.4+1                          X font server utilities
+
+$ locale -a
+C
+en_US.utf8
+POSIX
+
+$ echo $LC_ALL
+$
+
+$ echo $LANG 
+en_US.utf8
