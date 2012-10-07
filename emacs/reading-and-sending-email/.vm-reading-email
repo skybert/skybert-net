@@ -1,0 +1,15 @@
+(setq
+ vm-enable-external-messages '(imap)
+ vm-folder-directory "~/mail"
+ vm-imap-folder-cache-directory "~/mail/cache"
+ vm-imap-max-message-size 512
+ vm-mime-attachment-save-directory "~/tmp"
+ vm-pop-folder-cache-directory "~/mail/cache"
+ vm-preview-lines nil
+ vm-primary-inbox "~/mail/inbox"
+ 
+ vm-imap-account-alist
+ '(
+   ("imap-ssl:imap.googlemail.com:993:inbox:login:myuser@gmail.com:*" "gmail-work")
+   )
+ )

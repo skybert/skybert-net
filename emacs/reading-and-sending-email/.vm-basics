@@ -1,0 +1,9 @@
+(setq
+ mail-signature t
+ mail-signature-file "~/.signature"
+ vm-folder-directory "~/mail"
+ vm-mutable-frames nil
+ vm-mutable-windows nil
+ vm-preview-lines nil
+ vm-primary-inbox "~/mail/inbox"
+)

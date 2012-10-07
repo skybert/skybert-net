@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Reading and Sending Email</h1>
+    <div id="main">
+      <div style="float: right">
+        <img src="../graphics/emacs.png" alt="png"/>
+      </div>
+      <p>
+        <a href="http://www.nongnu.org/viewmail/">View Mail (VM)</a>
+        is an excellent mode for Emacs to read and send email. I find
+        it to be much better as an email client than Emacs' built-in
+        news &amp; mail client, Gnus. Here, I will describe how I've
+        set it up to read and send email using my GMail account, but
+        these instructions can of course be applied for other setups
+        too. At the bottom, I've also described how I've <a
+        href="#install">installed the latest release of VM from
+        source</a>.
+      </p>
+      <p>
+        If you just want to jump to a copy and pastable code snippet
+        to put into your <code>.vm</code>, <a
+        href="#complete-dot-vm">jump to this section</a>. If you'd
+        like a run through of the different settings, you can read on
+        :-)
+      </p>
+      <h2>VM basics</h2>
+      <p>
+        These are the settings I use for basic things like VM
+        appearance and basic behaviour.
+      </p>
+      <pre class="code"><!--#include virtual=".vm-basics" --></pre>
+      <h2>Reading your GMail inbox</h2>
+      <pre class="code"><!--#include virtual=".vm-reading-email" --></pre>
+      <h2>Sending your mail using GMail</h2>
+      <p>
+        These are the settings I use for sending email through the
+        GMail SMTP server, however, these settings can of course be
+        applied to other SMTP servers too, it's mostly a matter of
+        figuring out the server, the port and the authentication
+        method used by the SMTP server and put those into Lisp/VM
+        friendly phrases in your <code>.vm</code>
+      </p>
+      <pre class="code"><!--#include virtual=".vm-sending-email" --></pre>
+      <h2><a name="complete-dot-vm">To sum it up</a></h2>
+      <p>
+        These are all the settings I use to send and receive mail
+        using my GMail account.
+      </p>
+      <pre class="code"><!--#include virtual=".vm-gmail" --></pre>
+      <h2>Install VM from Source</h2>
+      <p>
+        Since I really wanted the latest version of VM, I installed it
+        from source rather than using the pre-prepared package from my
+        distribution. It's really easy, though:
+      </p>
+      <h3>Download the tarball</h3>
+      <p>
+        Head over to <a href="https://launchpad.net/vm">VM's page on
+        Launchpad</a> and download the tarball.
+      </p>
+      <h3>Extract, build and install it</h3>
+      <p>
+        Since I've got several Emacsen on my computer, I specified
+        which the build file should use for compailing
+        against. <code>/usr/bin/emacs</code> is the standard one,
+        installed with the <code>emacs23</code> Debian package.
+      </p>
+      <p>
+        Before installing VM, I had already installed the <a
+        href="http://packages.debian.org/squeeze/emacs23">emacs23</a>
+        (of course), <a
+        href="http://packages.debian.org/squeeze/bbdb">bbdb</a> (for
+        automagic address book), <a
+        href="http://packages.debian.org/squeeze/w3m-el">w3m-el</a>
+        (for displaying HTML email - and surfing inside Emacs if you
+        fancy it) and <a
+        href="http://packages.debian.org/squeeze/stunnel4">stunnel4</a>
+        (for reading and sending messages securely using SSL)
+        packages. I.e.:
+      </p>
+      <pre># apt-get install emacs23 bbdb w3m-el stunnel4</pre>
+      <p>
+        With that out the way, you're ready to get smashing with VM:
+      </p>
+      <pre>
+$ cd /tmp
+$ tar xzf vm-8.2.0a-gnu23.tgz
+$ cd vm-8.2.0a
+$ ./configure \
+  --with-other-dirs="/usr/share/emacs/site-lisp/bbdb/lisp;/usr/share/emacs/site-lisp/w3m"\
+  --with-emacs=/usr/bin/emac
+$ make
+$ su -
+# make install</pre>
+      <p>
+        That's it, you can now continue to the top of this article to
+        add VM to your load path and set up the email connectivity.
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
