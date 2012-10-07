@@ -1,0 +1,72 @@
+#! /usr/bin/env bash
+
+diary_dir=$HOME/src/skybert-net/diary
+log_file=/tmp/$(basename $0).log
+
+function run() {
+  "$@" >> $log_file 2>> $log_file
+}
+
+function create_directories() {
+  if [ ! -d $@ ]; then
+    run mkdir -p $@
+  fi
+}
+
+function create_diary_gallery() {
+  ls $(pwd)/*.JPG > /dev/null || {
+    return;
+  }
+  
+  cat <<EOF
+      <div class="pictures">
+EOF
+
+  for el in $(pwd)/*.JPG; do
+    local web_fn=$(basename $el .JPG).web.jpg
+    convert -resize x300 $el $web_fn
+    run cp $web_fn $diary_entry_dir
+    cat <<EOF
+        <a href="$web_fn">
+          <img src="$(basename $web_fn)" alt="${web_fn}"/>
+        </a>
+EOF
+  done
+  
+  cat <<EOF
+      </div>
+EOF
+}
+
+## $@ :: the title
+function create_entry() {
+  local fn=$(
+    echo "$@" | \
+      tr [A-Z] [a-z] | \
+      sed -e 's# #-#g' -e 's#,##g'
+  )
+
+  diary_entry_dir=$diary_dir/$(date +%Y)/$(date +%m)/$(date +%d)/$fn
+
+  if [ -d $diary_entry_dir ]; then
+    echo $diary_entry_dir "already exists, exiting"
+    exit 1
+  fi
+  
+  create_directories $diary_entry_dir
+
+
+  cat > $diary_entry_dir/index.shtml  <<EOF
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>$@</h1>
+    <div id="main">
+$(create_diary_gallery)
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
+EOF
+
+  emacs $diary_entry_dir/index.shtml &
+}
+
+
+create_entry "$@"
