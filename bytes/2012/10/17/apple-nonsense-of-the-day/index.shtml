@@ -1,0 +1,23 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        How many times haven't you heard that Mac is "just like Linux
+        with a nicer GUI on the top"? Well, this one has never
+        surfaced on me when using Linux for 12 years: 
+      </p>
+<pre>
+# killall -9 squid
+No matching processes were found
+# ps aux|grep squid
+squid    19167   0.0  0.0  2426640    348   ??  S     9:22AM   0:00.01 (unlinkd)
+squid    19166   0.0  0.2  2448788   7332   ??  S     9:22AM   0:00.99 (squid) -s
+root     19748   0.0  0.0  2435548    312 s006  S+   10:34AM   0:00.00 grep squid
+# uname -a
+Darwin quanah.local 10.8.0 Darwin Kernel Version 10.8.0: Tue Jun  7 16:33:36 PDT 2011; root:xnu-1504.15.3~1/RELEASE_I386 i386
+</pre>
+      <p>
+        Now, can someone tell me why Mac is so great again? 
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
