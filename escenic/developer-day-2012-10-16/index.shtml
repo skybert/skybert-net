@@ -1,0 +1,22 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <p>
+        Here are my slides from the three presentations I did at the
+        Escenic Developer Day in Stockholm, 2012-10-16. If I've missed
+        anything, please give me a shout!
+      </p>
+      <ul>
+        <li><a href="saas.html">SaaS</a> (ece-install, KVM, Amazon WS,
+        build scripts, generated documentation, monitoring plugins++)
+        </li>
+        <li>
+          <a href="opensourcing-wf.html">Opensourcing Widget Framework</a>
+        </li>
+        <li>
+          <a href="changelog.html">The Changelog - a cool web
+          service</a>
+        </li>
+      </ul>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
