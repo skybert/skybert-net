@@ -1,0 +1,48 @@
+#+TITLE: Changelog - A Cool Webservice 
+#+AUTHOR: Torstein Krause Johansen / Vizrt Online
+
+* The self documenting web service
+- The documentation has been vastly improved
+- The web services are self documenting 
+
+* The change log web service
+- One of the webservices available
+- Instantly available, if you've got the =/webservice= webapp, you've got
+  the change log service
+
+* Let's have a look
+- We can have a change log on a per section basis
+- Here, we'll have  look at the sub section
+
+http://jollygood:8080/webservice/publication/wf-escenic-times/escenic/section/ROOT/subsections
+
+* It's got pagination
+- Previous and next links
+- An never ending Atom feed of ...
+- Ordered by Last Changed Date
+- Previous goes forward in time (isn't it logical?)
+- Next goes backward in time
+- Follows RFC 5005 (Feed Paging and Archiving)
+ 
+* Especially for you my friend
+- We've got a changelogd
+- Has set up the harness for you
+- Several handlers (called agents)
+- a JAR, some .properties and a wee shell script
+- Persistent
+- Resilient
+
+* Especially for you my friend - II
+- Engine Version Agnostic
+- Implements Consumption
+
+* Especially for you my friend - III
+- It has state file: .daemon-state
+- Delete it to 'start over'
+- You can manipulate where it starts from,  set to '0' to start from...
+
+* Available agents
+- Executor (of a shell command)
+- XML tree (JDOM and XOM)
+- File based
+
