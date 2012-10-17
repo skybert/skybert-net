@@ -7,43 +7,45 @@
         which will make your life easier when working with Escenic
         Content Engine imports.
       </p>
-      <h1>Retrying all failed import jobs</h1>
+      <h2>Analysing the logs for import errors</h2>
+      <p>
+        I've created the following command to analyse the import
+        related errors:
+        <a href="https://github.com/skybert/ece-scripts/blob/master/usr/share/escenic/import-scripts/import-error-log-analyzer">
+          import-error-log-analyzer
+        </a>
+      </p>
+      <p>
+        Among other things, it will output things like:
+      </p>
+      <ul>
+        <li>Missing multimedia files</li>
+        <li>Multimedia files with the wrong case (typical problem with
+        import jobs only tested on a Windows platform before moving
+        into staging/production.</li>
+        <li>
+          Empty multimedia files.
+        </li>
+        <li>
+          Images with the wrong colour space (images imported into
+          Escenic Content Engine must use the RGB colour space).
+        </li>
+        <li>
+          SAX parsing errors
+        </li>
+        <li>
+          Resulting Escenic XML (after parsing it from the origin XML
+          format) having unknown/unhandled fields++ 
+        </li>
+      </ul>
+      <p>
+        The script will also suggest shell commands on how to fix some
+        of these errors.
+      </p>
+      <h2>Retrying all failed import jobs</h2>
 <pre class="prettyprint">
 $ cd /var/spoo/escenic/import/my-import-job/error
 $ i=0; for el in *.xml; do i=$(( $i + 1 )); mv $el ../new/${i}.xml; done
-</pre>
-      <h1>Finding Missing Images</h1>
-      <p>
-        Here, I'm using ECE's Log4j log to find images missing which I
-        believe I have in my migration/import data set:
-      </p>
-<pre class="prettyprint">
-# Pass the list produced by this command to the script:
-#
-# grep FileNotFoundException /var/log/escenic/edit1-edit1-messages* |
-# cut -d' ' -f5
-src_dir=/mnt/import-data/images
-target_dir=/var/lib/escenic/engine/binary
-
-for el in $@; do
-  file_name=$(basename $el)
-  dir_name=$(dirname $el)
-  img=$(find $src_dir -name ${file_name} | sort | uniq | head -1)
-
-  if [ -z "${img}" ]; then
-    echo "$el not found :-("
-    continue
-  fi
-
-  if [ -e ${target_dir}/${dir_name}/${file_name} ]; then
-    echo "${target_dir}/${dir_name}/${file_name} already exists"
-    continue
-  fi
-
-  mkdir -p $target_dir/${dir_name}
-  echo cp $img $target_dir/${dir_name}/${file_name}
-  cp $img $target_dir/${dir_name}/${file_name}
-done
 </pre>
       <h2>Convert all images to use the RGB colour space</h2>
       <p>
