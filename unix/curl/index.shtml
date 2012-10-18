@@ -21,5 +21,20 @@ $ curl -I \
         needed here, or that you need different ones. <cite>-H</cite>
         is how you specify them in any case.
       </p>
+      <h2>Seeing what a site looks like as an iPhone</h2>
+      <p>
+        To see what the site looks like as a particular user agent,
+        e.g. an iPhone, you can do the below. I find this very useful
+        for testing the mobile version of web sites I'm developing.
+      </p>
+      <pre>$ curl \
+    --header ""Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_3_3 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8J2 Safari/6533.18.5" \
+    --dump-header - \
+    http://mywebsite.com/</pre>
+    <p>
+      I also add <code>--dump-header -</code> to see the server
+      response headers, essential when setting up servers and
+      developing web applications :-)
+    </p>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
