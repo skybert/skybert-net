@@ -1,5 +1,5 @@
 <!--#include virtual="/ssi/header.shtml" -->
-<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <h1>Escenic Developer Day the 16th of October in Stockholm</h1>
     <div id="main">
       <p>
         Here are my slides from the three presentations I did at the
@@ -18,5 +18,7 @@
           service</a>
         </li>
       </ul>
+      <p>Cheers,</p>
+      <p>-<em>Torstein</em></p>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
