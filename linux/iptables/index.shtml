@@ -1,0 +1,22 @@
+<!--#include virtual="/ssi/header.shtml" -->
+<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
+    <div id="main">
+      <img src="http://tuxbrewr.fedorapeople.org/tuxbrewer.png"
+           alt="tuxbrewer"
+           style="float: right;"
+           />
+      <p>
+        This is a simple way of logging all new outgoing TCP
+        connections:
+      </p>
+<pre>
+# iptables \
+    --append OUTPUT \
+    --match state \
+    --protocol tcp \
+    --state NEW \
+    -j LOG \
+    --log-uid
+</pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
