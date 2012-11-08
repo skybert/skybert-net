@@ -5,6 +5,7 @@ src_dir=$HOME/src/skybert-net
 rsync_opts="
 -avz
 --cvs-exclude
+--checksum
 "
 
 conf_file=$HOME/.$(basename $0).conf
