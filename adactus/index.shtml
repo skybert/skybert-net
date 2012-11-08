@@ -1,6 +1,7 @@
 <!--#include virtual="/ssi/header.shtml" -->
 <!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
     <div id="main">
+      <h2>Seeing which video variant Adactus picks</h2>
       <p>
         Seeing which video profile/variant
         Adactus/Mobilize/VMEO/Diactus finds for the web clients, see
