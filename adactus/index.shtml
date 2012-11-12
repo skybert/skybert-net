@@ -8,7 +8,8 @@
         the output of:
         <code>adactus.diactus.di.adpatation.engine.AdaptationProfileEngine</code>:
       </p>
-      <pre>$ tail -f /var/diactus/log/diactusDebug.log | grep adactus.diactus.di.adpatation.engine.AdaptationProfileEngine</pre>
+      <pre>$ tail -f /var/diactus/log/diactusDebug.log | \
+  grep adactus.diactus.di.adpatation.engine.AdaptationProfileEngine</pre>
       <h2>Unrecognised devices</h2>
       <p>
         To see which devices your VMEO isn't able to find a profile
