@@ -52,3 +52,4 @@ done</pre>
 tarballs=($(ls /my/dir/*.tar.gz))
 </pre>
     </div>
+<!--#include virtual="/ssi/footer.shtml" -->

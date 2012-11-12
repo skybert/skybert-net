@@ -19,4 +19,4 @@ my_function
 echo "my_variable=$my_variable"
 my_function</pre>
     </div>
-    
+<!--#include virtual="/ssi/footer.shtml" -->

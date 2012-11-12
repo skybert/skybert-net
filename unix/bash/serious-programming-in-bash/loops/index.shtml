@@ -26,3 +26,4 @@ for (( i = 0; i &lt; $number_of_apples; i++ )); do
 done
 </pre>
     </div>
+<!--#include virtual="/ssi/footer.shtml" -->
