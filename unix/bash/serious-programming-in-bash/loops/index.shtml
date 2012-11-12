@@ -21,8 +21,9 @@ done
         for-loops.
       </p>
 <pre class="prettyprint">
-for (( i = 0; i &lt; $number_of_apples; i++ )); do
-  echo "i=$i"
+apple_array=("red" "yellow" "green")  
+for (( i = 0; i &lt; ${#apple_array[@]}; i++ )); do
+  echo "Apple number" $i "is" ${apple_array[$i]}
 done
 </pre>
     </div>
