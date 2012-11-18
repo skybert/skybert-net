@@ -235,3 +235,6 @@ out, and ensure the hover appears on top */
     box-shadow: 0 3px 6px rgba(0,0,0,.5);
 }
 
+td {
+  padding: 0.5em;
+}
