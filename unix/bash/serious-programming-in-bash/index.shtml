@@ -35,6 +35,9 @@
           <a href="dictionaries">Using dictionaries, also known as
           hash maps</a>
         </li>
+        <li>
+          <a href="exit-hooks">Writing your own program exit hooks</a>
+        </li>
       </ul>
       <h2>Arithmetics using floating point numbers </h2>
       <p>
