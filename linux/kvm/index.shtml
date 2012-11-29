@@ -88,10 +88,18 @@ Could not initialize SDL - exiting</pre>
         And the reason? It was because my root user didn't have access
         to the local X session. Duh! Hence, simply doing:
       </p>
-      <pre class="prettyprint">$ xhost +</pre> in a normal user shell
-      remedied it. Man! This bugger made me scratch my head, I was
-      even reading through the Linux kerenl documentation on
-      framebuffers :-)
+      <pre>$ xhost +</pre>
+      <p>
+        in a normal user shell remedied it. Man! This bugger made me
+        scratch my head, I was even reading through the Linux kerenl
+        documentation on framebuffers :-)
+      </p>
+      <h2>Another error message for the same reason</h2>
+      <p>
+        I've also discovered that this error message
+        also has the same remedy:
+      </p>
+      <pre class="prettyprint">Invalid MIT-MAGIC-COOKIE-1 keyCould not initialize SDL</pre>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
     
