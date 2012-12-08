@@ -36,6 +36,8 @@ torstein.k.johansen/at/gmail/dot/com
           rel="stylesheet" />
     <script type="text/javascript"
             src="/js/google-code-prettify/prettify.js"></script>
+    <script type="text/javascript"
+            src="/js/google-code-prettify/lang-lisp.js"></script>
   </head>
   <body onload="prettyPrint()">
     <div id="bread-crumb">
