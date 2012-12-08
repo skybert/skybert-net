@@ -28,6 +28,18 @@
       </p>
       <img src="../../graphics/jdibug_remote_debugging_browsing_the_call_stack.png"
            alt="remote debugging with JDIbug"/>
+      <p>
+        Here's an example of the elisp I've used with JDIbug:
+      </p>
+<pre class="prettyprint lang-lisp">
+<!--#include virtual="tkj-jdibug.el" -->
+</pre>  
+      <p>
+        If you are so inclined, you may browse <a
+        href="https://github.com/skybert/my-little-friends/blob/master/emacs/.emacs.d/tkj-jdibug.el">my
+        current JDIbug setup here</a>, it might change from time to
+        time.
+      </p>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
 
