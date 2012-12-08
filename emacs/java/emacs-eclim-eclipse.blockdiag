@@ -1,0 +1,6 @@
+blocdiag {
+    eclipse [color="purple"];
+    emacs [color="brown"];
+    eclimd [color="green"];
+    emacs -> eclimd -> eclipse;
+}
