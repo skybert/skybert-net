@@ -50,6 +50,27 @@
         <code>eclim-java-show-documentation-for-current-element</code>:
       </p>
       <img src="eclim-show-javadoc.png" alt="show javadoc"/>
+      <h2>Source code control second to none</h2>
+      <p>
+        The source code control integration in Emacs is second to
+        none. It's extremely fast and supports just about all systems
+        out of the box.
+      </p>
+      <p>
+        You don't have to worry about which backend you're using,
+        Emacs will let you do all the checkins, checkouts,
+        annotations, diff-ing and so on using the same commands,
+        regardless if you're using CVS, Subversion, Perforce, Git or
+        Mercurial.
+      </p>
+      <p>
+        Here, I'm viewing the commit log (by running
+        <code>vc-print-log</code>) for one Java class while viewing
+        the diff (by hitting <code>d</code> when navigating the
+        commits with <code>n</code> and <code>p</code>)of one of the
+        commits in the bottom buffer.
+      </p>
+      <img src="vc-git-log-and-diff.png" alt="version control in Emacs"/>
       <h2>
         <a name="installation">Installation</a>
       </h2>
