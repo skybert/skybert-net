@@ -50,7 +50,26 @@
         <code>eclim-java-show-documentation-for-current-element</code>:
       </p>
       <img src="eclim-show-javadoc.png" alt="show javadoc"/>
-      <h2>Source code control second to none</h2>
+      <h2>Maven integration</h2>
+      <p>
+        Using the excellent <a
+        href="http://www.thaiopensource.com/nxml-mode/">nxml-mode</a>,
+        Emacs gives you both on the fly syntax checking (or XML
+        validation if you will) and auto completion when editing your
+        POM files:
+      </p>
+      <img src="nxml-maven-pom-auto-completion-and-syntax-checking.png"
+           alt="Using nxml mode for editing POMs"
+          />
+      <p>
+        Wherever you are in your Java project, you can always invoke
+        <code>eclim-maven-run</code> to run any of the Maven
+        goals. Any errors, be that compilation or unit test failure,
+        can be clicked on for instant viewing of the offending code in
+        the editor:
+      </p>
+      <img src="eclim-run-maven.png" alt="eclim run maven"/>
+      <h2>Source control</h2>
       <p>
         The source code control integration in Emacs is second to
         none. It's extremely fast and supports just about all systems
