@@ -29,6 +29,27 @@
       </p>
       <img src="eclim-jump-to-source-after.png"
            alt="jump to source after jump"/>
+      <h2>Refactoring</h2>
+      <p>
+        Java developers love refactoring, especially changing the name
+        of variables and methods is something many of us do all the
+        time. Emacs will happily do all of the work for you if you
+        just navigate to the method, class or variable in question
+        invoke
+        <code>eclim-java-refactor-rename-symbol-at-point</code>:
+      </p>
+      <img src="eclim-refactoring-before.png" alt="refactoring before"/>
+      <p>
+        Emacs will then make all the required changes in all files in
+        the project: 
+      </p>
+      <img src="eclim-refactoring-after.png" alt="refactoring after"/>
+      <h2>Getting help wherever you are</h2>
+      <p>
+        Put your pointer on the class or method you want and call
+        <code>eclim-java-show-documentation-for-current-element</code>:
+      </p>
+      <img src="eclim-show-javadoc.png" alt="show javadoc"/>
       <h2>
         <a name="installation">Installation</a>
       </h2>
