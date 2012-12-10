@@ -13,6 +13,16 @@
         <code>auto-complete-mode</code>:
       </p>
       <img src="eclim-code-completion.png" alt="code completion"/>
+      <h2>On the fly syntax checking</h2>
+      <p>
+        Since very few of us can remember all the nuts and bolts of
+        the vast Java class library, not to mention all the brilliant
+        and esoteric 3rd party APIs out there, Emacs offers just the
+        thing we need: on the fly syntax checking. It will underline
+        plain compilation errors in red, whereas Java warnings will be
+        underlined with yellow marker:
+      </p>
+      <img src="eclim-java-warning.png" alt="eclim java warning"/>
       <h2>Jump to source</h2>
       <p>
         When navigating huge source trees, this feature is
