@@ -3,6 +3,7 @@
     <div id="main">
       <div style="float: right">
         <img src="../graphics/emacs.png" alt="png"/>
+      </div>
       <h2>Code completion</h2>
       <p>
         This is my favourite feature of <a href="">emacs-eclim</a>,
