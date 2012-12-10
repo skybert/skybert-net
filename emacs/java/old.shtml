@@ -1,0 +1,512 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Enterprise Java Development in Emacs</h1>
+    <div id="main">
+      <div style="float: right">
+        <img src="../graphics/emacs.png" alt="png"/>
+      </div>
+      <p>
+        I will on this page describe how I use <a
+        href="http://gnu.org/software/emacs">GNU Emacs</a> for
+        enterprise <a href="http://java.sun.com">Java</a> &trade;
+        development using <a href="http://jdee.sf.net">JDEE</a>, <a
+        href="http://ecb.sourceforge.net/">ECB</a>, <a
+        href="http://code.google.com/p/jdibug/">JDIbug</a>, <a
+        href="http://www.eclipse.org/jdt/core/index.php">The Eclipse
+        Java Compiler</a> and <a
+        href="http://www.thaiopensource.com/nxml-mode/">nxml-mode</a>.
+      </p>
+      <p>
+        On this page, you'll learn how you can:
+      </p>
+      <ul>
+        <li>
+          Get <a href="#method-autocompletion">method autocompletion</a>
+        </li>
+        <li>
+          Get <a href="#on-the-fly-syntax-checking">on the fly syntax
+          checking</a>
+        </li>
+        <li>
+          Do <a href="#remote-debugging">remote debugging</a>
+        </li>
+        <li>
+          Get <a href="#maven">Maven support</a>
+        </li>
+        <li>
+          Get <a href="#ant">Ant support</a>
+        </li>
+        <li>
+          Edit <a href="#other-xml-formats"> all Java related XML
+          formats</a>
+        </li>
+        <li>
+          Make Emacs <a href="#jump-to-source">jump to the source of a
+          given class</a>
+        </li>
+        <li>
+          Get Emacs to <a href="#import">import missing classes</a>
+        </li>
+        <li>
+          Get Emacs to <a href="#override">override a method</a>
+        </li>
+        <li>
+          Generate <a href="#javadoc">sensible JavaDoc</a>
+          for your methods and classes.
+        </li>
+        <li>
+          Run <a href="#junit">JUnit tests</a>
+        </li>
+      </ul>
+      <div>
+        <h2>Bear necessities</h2>
+        <p>
+          The <a href="http://www.youtube.com/watch?v=9ogQ0uge06o">bear
+          necessities</a> for any java developer is syntax highlighting,
+          autocompletion of methods and a class browser. Luckily enough,
+          Emacs provides them all <img
+          src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Face-smile.svg/50px-Face-smile.svg.png"
+          style="width: 2em; height: 2em;"
+          alt=":-)" />
+        </p>
+        <img src="../graphics/jde_mode_ecb_and_auto_complete_menu.png"
+             alt="ecb and auto complete menu"/>
+      </div>
+      <div>
+        <h2>
+          <a name="on-the-fly-syntax-checking">On the fly syntax checking</a>
+        </h2>
+        <p>
+          A well kept secret, is that it's possible to achieve on the
+          fly syntax checking of your Java code using <a
+          href="http://www.eclipse.org/jdt/core/index.php">The Eclipse
+          compiler</a> and Emacs' built-in <code>flymake</code> mode.
+        </pp>
+        <img src="../graphics/flymake_ecj.png" alt="flymake and ecj"/>
+        <p>
+          I was first made aware of this thanks to <a
+          href="http://www.credmp.org/?p=54">Arjen Wiersma's excellent
+          blog post</a>
+        </p>
+      </div>
+      <div>
+        <h2><a name="remote-debugging">Remote debugging</a></h2>
+        <p>
+          Emacs can quite comfortably do debugging of Java applications
+          running on remote JVMs using the excellent <a
+          href="http://http://code.google.com/p/jdibug/">JDIbug</a>. 
+        </p>
+        <p>
+         <a href="http://jdee.sf.net">JDEE</a> provides two other means
+         to debug applications, but I would recommend JDIbug any day of
+         the week. It's fast and provides a visual tree of
+         variables. Currently (2009-07-18 13:06), it has one drawback;
+         it cannot debug inner classes, but I'm sure this is something
+         that will be remedied in a later release.
+        </p>
+        <img src="../graphics/jdibug_remote_debugging.png"
+             alt="remote debugging with JDIbug"/>
+        <p>
+          Given that you have the given source code in the
+          <code>jde-sourcepath</code> variable, you can browse the call
+          stack leading up to the break point. Here, I am browsing the
+          state of one of Tomcat's classes when executing my
+          <code>test.jsp</code>
+        </p>
+        <img src="../graphics/jdibug_remote_debugging_browsing_the_call_stack.png"
+             alt="remote debugging with JDIbug"/>
+        <p>
+          Here's a
+          <a
+          href="graphics/jdibug_remote_debugging_browsing_the_call_stack_wider.png">
+          wider screenshot when browsing the call stack
+        </a>
+        </p>
+      </div>
+      <div>
+        <h2><a name="maven">Maven support</a></h2>
+        <img class="right" src="../graphics/maven.gif" alt="maven"/>
+        <p>
+          As a Java developer you're most probably using <a
+          href="http://maven.apache.org">Maven</a> to build, package and
+          releaese software. Thanks to <a
+          href="http://www.thaiopensource.com/nxml-mode/">nxml-mode</a>,
+          Emacs provides auto completion of tags and on the fly syntax
+          checking of your <code>pom.xml</code> files.
+        </p>
+        <img src="../graphics/nxml_mode_maven_pom.png"
+             alt="maven pom and nxml-mode"/>
+        <p>
+          To compile projects from within Emacs, I've bound Emacs'
+          <code>compile</code> command to <code>C-z</code>. This is
+          personal preference of course, but I far more often want to
+          compile my software than minimise Emacs (which is the default
+          behaviour of <code>C-z</code>
+        </p>
+        <p>
+          Here, I am compiling my project using Maven. Compilation
+          errors are given as links that will take you to the line and
+          column in the source file where the error is. As with all
+          <code>compile</code> buffers in Emacs, you can jump to the
+          next error by hittihg <code>C-`</code> (very easy shortcut on
+          an American keyboard, on e.g. Norwegian or German it's not,
+          hence I recommend using American keyboard layout for
+          programming).
+        </p>
+        <img src="../graphics/compile_with_maven.png" alt="compile with Maven"/>
+      </div>
+      <div>
+        <h2><a name="ant">Ant support</a></h2>
+        <p>
+          Emacs will happily allow you to compile Ant projects with jump
+          to error links (as shown above with Maven projects) and edit
+          Ant <code>build.xml</code> files. 
+        </p>
+        <img src="../graphics/nxml_mode_ant.png" alt="ant and nxml-mode"/>
+      </div>
+      <div>
+        <h2>
+          <a name="other-xml-formats">
+            Support for editing Java related XML formats
+          </a>
+        </h2>
+        <p>
+          As a Java developer, you're most likely to also want support
+          for the following XML formats:
+        </p>
+        <ul>
+          <li>
+            <a href="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+              Webapp deployment descriptors
+            </a>
+            - web.xml
+          </li>
+          <li><a href="http://www.springsource.org/">Spring</a> beans</li>
+          <li><a href="https://www.hibernate.org/">Hibernate</a></li>
+          <li><a href="https://www.ibatis.org/">iBATIS</a></li>
+          <li>
+            <a href="http://struts.apache.org/">
+              Struts
+            </a>
+            configuration
+          </li>
+        </ul>
+        <p>
+          Luckily, this is a doodle for Emacs, as long as it has <a
+          href="#java-related-xml-setup">everything's setup
+          correctly.</a>
+        </p>
+      </div>
+      <div>
+        <h2><a name="junit">Running JUnit tests</a></h2>
+      </div>
+      <div>
+        <h2><a name="override">Override method</a></h2>
+        <p>
+          Override any of the parent class(es)' methods by hitting
+          <code>C-c C-v o</code>. Emacs will then let you
+          <code>TAB</code> complete your way through the available
+          methods.
+        </p>
+        <img src="../graphics/jde_mode_override_method.png"
+             alt="override method"/>
+      </div>
+      <div>
+        <h2><a name="jump-to-source">Jump to source</a></h2>
+        <p>
+          Emacs will jump to the source of the class at point or where
+          the variable is instantiated when you hit <code>C-c C-v
+          C-y</code>
+        </p>
+      </div>
+      <div>
+        <h2>Imports</h2>
+        <p>
+          Emacs can either import the class where your cursor is by
+          hitting <code>C-c C-v C-z</code> or import all classes missing
+          from the import list by hitting the (almost identical)
+          shortcult: <code>C-c C-v z</code>
+        </p>
+        <img src="../graphics/jde_mode_import_all.png" alt="import all"/>
+      </div>
+      <div>
+        <h2>Implement interface</h2>
+        <p>
+          Emacs will implement any interface that in its
+          <code>jde-global-classpath</code> variable (or
+          <code>prj.el</code>). Hit <code>C-x C-v i</code> and
+          <code>TAB</code>-complete your way to the interface and hit
+          <code>ENTER</code>. Emacs will then generated method stubs of
+          all the interface methods.
+        </p>
+        <img src="../graphics/jde_mode_implement_interface.png"
+             alt="implement interface"/>
+      </div>
+      <div>
+        <h2>How to set it all up</h2>
+        <p>
+          Okay, now I've shown you what you get, now I show you what you
+          need to get it
+          <img
+          src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Face-smile.svg/50px-Face-smile.svg.png"
+          style="width: 2em; height: 2em;"
+          alt=":-)" />
+        </p>
+        <h3>Using Debian based systems</h3>
+        <p>
+          If you're using <a href="http://debian.org">Debian</a> or a
+          Debian based system such as <a
+          href="http://ubuntu.com">Ubuntu</a>, then all you need to do
+          to install the different packages are:
+        </p>
+  <pre># apt-get install sun-java6-bin emacs22 nxml-mode jde ecb ecj</pre>
+        <p>
+          Currently (2009-07-18 16:12), there's no Debian package for
+          JDIbug, so you must download it from <a
+          href="http://code.google.com/p/jdibug/downloads/list">
+          code.google.com/jdibug
+        </a>
+        </p>
+        <h3>If you're using a different system</h3>
+        <p>
+          All the packages above are possible to install on other
+          systems such as <a href="http://windows.com">Microsoft
+          Windows</a>, <a href="http://mac.com">Mac OS X</a>, <a
+          href="http://solaris.sun.com">Sun Solaris</a>, <a
+          href="http://fedora.org">Fedora</a>, <a
+          href="http//suse.org">SuSE</a> and <a
+          href="http//freebsd.org">FreeBSD</a>
+        </p>
+        <p>
+          The packages may or may not be available through the system's
+          package manager (the BSDs, Open Solaris and GNU/Linux
+          distributions have this, Windows, Mac and Sun Solaris
+          doesn't).
+        </p>
+        <p>
+          To manually install the needed software packages, download
+          them from the these addresses:
+        </p>
+        <ul>
+          <li>
+            <a href="http://gnu.org/software/emacs">GNU Emacs</a>
+          </li>
+          <li>
+            <a href="http://java.sun.com">Sun's Java Development Kit</a>
+          </li>
+          <li>
+            <a href="http://jdee.sf.net">Java Development Environment
+            for Emacs </a>
+          </li>
+          <li>
+            <a href="http://ecb.sourceforge.net/">Emacs Code Browser</a>
+          </li>
+          <li>
+            <a href="http://code.google.com/p/jdibug/">JDIbug</a>
+          </li>
+          <li>
+            <a href="http://www.eclipse.org/jdt/core/index.php">
+              The Eclipse Java Compiler
+            </a>
+          </li>
+          <li>
+            <a
+            href="http://www.thaiopensource.com/nxml-mode/">
+              nxml-mode
+            </a>
+          </li>
+        </ul>
+        <h3>
+          <a name="java-related-xml-setup">
+            Support for Java related XML formats
+          </a>
+        </h3>
+        <p>
+          Download <a href="../xml/#my-rnc-files">these RNC files</a>
+          and <a href="../xml/#my-schemas.xml">this schemas.xml</a> to
+          make <code>nxml-mode</code> recognise Java related XML files
+          such as <code>spring-beans.xml</code>,
+          <code>struts-config.xml</code>, <code>web.xml</code>,
+          <code>pom.xml</code> and <code>build.xml</code>.
+        </p>
+        <h3>Java related Emacs settings</h3>
+        <p>
+          This is my Java hook, giving me:
+        </p>
+        <ul>
+          <li>two space indent</li>
+          <li>
+            <code>M-x compile</code> runs <code>mvn compile</code> in my
+            project.
+          </li>
+          <li>
+            <code>M-n</code> does autocompletion of Java methods using
+            the mini buffer (fastest).
+          </li>
+          <li>
+            <code>M-N</code> does autocompletion of Java methods using
+            the (GTK) menu (slower, but nicer).
+          </li>
+          <li>
+            <code>C-c C-p</code> and <code>C-c C-n</code> jumps to
+            next/previous compile error or warning given by the Eclipse
+            compiler.
+          </li>
+          <li>
+            <code>switch/case</code> statements looks the way I want,
+            i.e. indents the <code>switch</code> contents like any other
+            block.
+          </li>
+        </ul>
+  <pre>(defun my-c-mode-hook ()
+    (setq c-basic-offset 2
+          c-label-offset 0
+          indent-tabs-mode nil
+          compile-command "cd ~/projects/myproject; mvn compile"
+          require-final-newline nil)
+    (lambda () (auto-fill-mode 1))
+    (define-key c-mode-base-map "\C-m" 'c-context-line-break)
+    (global-set-key "\M-n" 'jde-complete-minibuf)
+    (global-set-key "\M-N" 'jde-complete-menu)
+    (define-key c-mode-base-map "\C-c\C-p" 'show-previous-error)
+    (define-key c-mode-base-map "\C-c\C-n" 'show-next-error)
+    (c-set-offset 'substatement-open 0))
+  (add-hook 'c-mode-common-hook 'my-c-mode-hook)</pre>      
+        <h3>Understanding compiler output</h3>      
+  <pre>(require 'compile)
+  (setq compilation-error-regexp-alist
+    (append (list
+       ;; works for jikes
+       '("^\\s-*\\[[^]]*\\]\\s-*\\(.+\\):\\([0-9]+\\):\\([0-9]+\\):[0-9]+:[0-9]+:" 1 2 3)
+       ;; works for javac
+       '("^\\s-*\\[[^]]*\\]\\s-*\\(.+\\):\\([0-9]+\\):" 1 2)
+       ;; works for maven 2.x
+       '("^\\(.*\\):\\[\\([0-9]*\\),\\([0-9]*\\)\\]" 1 2 3)
+       ;; works for maven 3.x
+       '("^\\(\\[ERROR\\] \\)?\\(/[^:]+\\):\\[\\([0-9]+\\),\\([0-9]+\\)\\]" 2 3 4))
+    compilation-error-regexp-alist))</pre>
+        <h3>Setting up JDIbug</h3>
+        <p>
+          Add this to your <code>.emacs</code>, adjusting the path to
+          jdibug to where you have your copy.
+        </p>
+  <pre>(add-to-list 'load-path "/usr/local/src/jdibug")
+  (require 'jdibug)</pre>
+        <p>
+          Be sure to start the app server with the following JVM
+          parameters:
+          <code>
+            -Xdebug -Xnoagent -Djava.compiler=NONE
+            -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=6001
+          </code>
+        </p>
+        <p>
+          If you're using <a href="http://tomcat.apache.org">Apache
+          Tomcat</a>, you can set the <code>CATALINA_OPTS</code>
+          variable, e.g.:
+        </p>
+  <pre>$ export CATALINA_OPTS="-Xdebug -Xnoagent -Djava.compiler=NONE \
+      -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=6001"
+  $ ./tomcat/bin/catalina.sh start</pre>
+        <p>
+          Nedless to say, you will soon put this in a script instead of typing it every time you start the app server
+          <img
+          src="http://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Face-smile.svg/50px-Face-smile.svg.png"
+          style="width: 2em; height: 2em;"
+          alt=":-)" />
+        </p>
+        <h3>Setting up flymake and ejc</h3>
+        <p>
+          This configuration is taken from <a
+          href="http://www.credmp.org/?p=54">Arjen Wiersma's excellent
+          blog post</a>, I have modified it a wee bit (using the
+          <code>ecj</code> BASH script instead of calling the JAR
+          directly) and added two methods for jumping to next/previous
+          errors.
+        </p>
+  <pre>;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Java flymake support using the Eclipse compiler
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  (require 'flymake)
+
+  (defun flymake-java-ecj-init ()
+    (let* ((temp-file   (flymake-init-create-temp-buffer-copy
+                         'jde-ecj-create-temp-file))
+           (local-file  (file-relative-name
+                         temp-file
+                         (file-name-directory buffer-file-name))))
+
+      ;; if you've downloaded ecj from eclipse.org, then use these two lines:
+      ;;    (list "java" (list "-jar" 
+      ;;                       "/usr/share/java/ecj.jar"
+
+      ;; if installing it with DEB packages,or by some other means
+      ;; giving you the ecj BASH script front end, simply use this line
+      ;; instead:
+      (list "ecj" (list 
+                         "-Xemacs" 
+                         "-d" "/dev/null" 
+                         "-source" "1.5"
+                         "-target" "1.5"
+                         "-sourcepath" (car jde-sourcepath)
+                         "-classpath" 
+                         (jde-build-classpath jde-global-classpath)
+                         local-file))))
+
+  (defun flymake-java-ecj-cleanup ()
+    "Cleanup after `flymake-java-ecj-init' -- delete temp file and dirs."
+    (flymake-safe-delete-file flymake-temp-source-file-name)
+    (when flymake-temp-source-file-name
+      (flymake-safe-delete-directory
+       (file-name-directory flymake-temp-source-file-name))))
+
+  (defun jde-ecj-create-temp-file (file-name prefix)
+    "Create the file FILE-NAME in a unique directory in the temp directory."
+    (file-truename (expand-file-name
+                    (file-name-nondirectory file-name)
+                    (expand-file-name  (int-to-string (random)) 
+                                       (flymake-get-temp-dir)))))
+
+  (push '(".+\\.java$" flymake-java-ecj-init 
+          flymake-java-ecj-cleanup) flymake-allowed-file-name-masks)
+
+  (push '("\\(.*?\\):\\([0-9]+\\): error: \\(.*?\\)\n" 1 2 nil 2 3
+          (6 compilation-error-face)) compilation-error-regexp-alist)
+
+  (push '("\\(.*?\\):\\([0-9]+\\): warning: \\(.*?\\)\n" 1 2 nil 1 3
+          (6 compilation-warning-face)) compilation-error-regexp-alist)
+
+  (defun credmp/flymake-display-err-minibuf () 
+    "Displays the error/warning for the current line in the minibuffer"
+    (interactive)
+    (let* ((line-no             (flymake-current-line-no))
+           (line-err-info-list  (nth 0 (flymake-find-err-info
+                                        flymake-err-info line-no)))
+           (count               (length line-err-info-list))
+           )
+      (while (> count 0)
+        (when line-err-info-list
+          (let* ((file       (flymake-ler-file (nth (1- count)
+                                                    line-err-info-list)))
+                 (full-file  (flymake-ler-full-file (nth (1- count)
+                                                         line-err-info-list)))
+                 (text (flymake-ler-text (nth (1- count) line-err-info-list)))
+                 (line       (flymake-ler-line (nth (1- count)
+                                                    line-err-info-list))))
+            (message "[%s] %s" line text)
+            )
+          )
+        (setq count (1- count)))))
+
+  (defun show-previous-error ()
+    (interactive)
+    (flymake-goto-prev-error)
+    (credmp/flymake-display-err-minibuf))
+
+  (defun show-next-error ()
+    (interactive)
+    (flymake-goto-next-error)
+    (credmp/flymake-display-err-minibuf))</pre>      
+      </div>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
+
