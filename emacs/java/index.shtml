@@ -74,6 +74,23 @@
         <code>eclim-java-hierarchy</code>:
       </p>
       <img src="eclim-show-class-inheritance.png" alt="show inheritance"/>
+      <h2>Importing classes &amp; organising imports</h2>
+      <p>
+        Emacs will import any missing classes and re-organising the
+        imports while it's at it when you call
+        <code>eclim-java-import-organize</code>:
+      </p>
+      <img src="eclim-import-before.png"
+           alt="before importing missing classes"
+           />
+      <p>
+        For the most part, this will work without an itch, the
+        exception being ambiguities like <code>java.util.List</code>
+        and <code>java.awt.List</code>:
+      </p>
+      <img src="eclim-import-after.png"
+           alt="after importing missing classes"
+           />
       <h2>Maven integration</h2>
       <p>
         Using the excellent <a
@@ -113,7 +130,18 @@
         commits with <code>n</code> and <code>p</code>)of one of the
         commits in the bottom buffer.
       </p>
-      <img src="vc-git-log-and-diff.png" alt="version control in Emacs"/>
+      <img src="vc-git-log-and-diff.png"
+           alt="version control in Emacs"/>
+      <h2>Editing popular Java world XML files</h2>
+      <p>
+        Emacs and <code>nxml-mode</code> will give you on the fly
+        syntax checking and auto completion for all popular XML file
+        formats in the Java world. I've enjoyed error free editing of
+        iBATIS, Struts, DWR, Spring, Tomcat, Resin, Escenic Ant &amp;
+        Maven XML files using <a
+        href="https://github.com/skybert/my-little-friends/tree/master/emacs/.emacs.d/xml">these
+        Relax NG RNC files</a> with <code>nxml-mode</code>
+      </p>
       <h2>
         <a name="installation">Installation</a>
       </h2>
