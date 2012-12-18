@@ -127,7 +127,7 @@
         Here, I'm viewing the commit log (by running
         <code>vc-print-log</code>) for one Java class while viewing
         the diff (by hitting <code>d</code> when navigating the
-        commits with <code>n</code> and <code>p</code>)of one of the
+        commits with <code>n</code> and <code>p</code>) of one of the
         commits in the bottom buffer.
       </p>
       <img src="vc-git-log-and-diff.png"
