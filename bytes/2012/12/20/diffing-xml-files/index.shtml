@@ -1,0 +1,29 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Diffing XML files</h1>
+    <div id="main">
+      <p>
+        Let's say you've got these two XML files:
+      </p>
+<pre class="prettyprint"><![CDATA[$ cat test*xml
+<xml><arne tore="hallo" lise="hei"/></xml>
+<xml><arne lise="hei" tore="hallo"/></xml>]]></pre>
+      <p>
+        Now, if you diff them as regular files, you will see that they
+        are different, even after you've pretty printed them with the
+        ubiquitous <code>xmllint</code>:
+      </p>
+      <pre class="prettyprint"><![CDATA[$ diff <(xmllint --format test.xml) <(xmllint --format test2.xml)
+3c3
+<   <arne lise="hei" tore="hallo"/>
+---
+>   <arne tore="hallo" lise="hei"/>]]></pre>
+      <p>
+        Now, this may very well be exactly what you want. However, if
+        you're thinking of the differences XML wise, there are none
+        between the two XML files, it's the same elements and the same
+        attributes. Here, <code>xml_pp</code> helps us the last bit of
+        the way:
+      </p>
+      <pre class="prettyprint"><![CDATA[$ diff <(xml_pp test.xml) <(xml_pp test2.xml)]]></pre>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
