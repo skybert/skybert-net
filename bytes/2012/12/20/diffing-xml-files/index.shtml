@@ -6,7 +6,8 @@
       </p>
 <pre class="prettyprint">$ cat test*xml
 &lt;xml&gt;&lt;arne tore="hallo" lise="hei"/&gt;&lt;/xml&gt;
-&lt;xml&gt;&lt;arne lise="hei" tore="hallo"/&gt;&lt;/xml&gt;</pre>
+&lt;xml&gt;&lt;arne lise="hei" tore="hallo"/&gt;&lt;/xml&gt;
+$</pre>
       <p>
         Now, if you diff them as regular files, you will see that they
         are different, even after you've pretty printed them with the
@@ -14,16 +15,22 @@
       </p>
       <pre class="prettyprint">$ diff &lt;(xmllint --format test.xml) &lt;(xmllint --format test2.xml)
 3c3
-&lt;   <arne lise="hei" tore="hallo"/>
+&lt;   &lt;arne lise="hei" tore="hallo"/&gt;
 ---
-&gt;   <arne tore="hallo" lise="hei"/></pre>
+&gt;   &lt;arne tore="hallo" lise="hei"/&gt;
+$</pre>
       <p>
         Now, this may very well be exactly what you want. However, if
         you're thinking of the differences XML wise, there are none
         between the two XML files, it's the same elements and the same
-        attributes. Here, <code>xml_pp</code> helps us the last bit of
-        the way:
+        attributes. Here, <a
+        href="http://linux.die.net/man/1/xml_pp">xml_pp</a> helps us
+        the last bit of the way:
       </p>
-      <pre class="prettyprint"><![CDATA[$ diff <(xml_pp test.xml) <(xml_pp test2.xml)]]></pre>
+      <pre class="prettyprint">$ diff &lt;(xml_pp test.xml) &lt;(xml_pp test2.xml)
+$</pre>
+      <p>
+        There! No difference and all is good.
+      </p>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
