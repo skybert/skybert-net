@@ -4,19 +4,19 @@
       <p>
         Let's say you've got these two XML files:
       </p>
-<pre class="prettyprint"><![CDATA[$ cat test*xml
-<xml><arne tore="hallo" lise="hei"/></xml>
-<xml><arne lise="hei" tore="hallo"/></xml>]]></pre>
+<pre class="prettyprint">$ cat test*xml
+&lt;xml&gt;&lt;arne tore="hallo" lise="hei"/&gt;&lt;/xml&gt;
+&lt;xml&gt;&lt;arne lise="hei" tore="hallo"/&gt;&lt;/xml&gt;</pre>
       <p>
         Now, if you diff them as regular files, you will see that they
         are different, even after you've pretty printed them with the
         ubiquitous <code>xmllint</code>:
       </p>
-      <pre class="prettyprint"><![CDATA[$ diff <(xmllint --format test.xml) <(xmllint --format test2.xml)
+      <pre class="prettyprint">$ diff &lt;(xmllint --format test.xml) &lt;(xmllint --format test2.xml)
 3c3
-<   <arne lise="hei" tore="hallo"/>
+&lt;   <arne lise="hei" tore="hallo"/>
 ---
->   <arne tore="hallo" lise="hei"/>]]></pre>
+&gt;   <arne tore="hallo" lise="hei"/></pre>
       <p>
         Now, this may very well be exactly what you want. However, if
         you're thinking of the differences XML wise, there are none
