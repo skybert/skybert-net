@@ -1,4 +1,4 @@
-<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Deploying and rolling back using ece-deploy</h1>
 <!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
     <div id="main">
       <p>
