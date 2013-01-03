@@ -7,8 +7,7 @@
       </p>
       <pre class="prettyprint">$ jar xf /dev/null
 $ echo $?
-0
-$</pre>
+0</pre>
       <p>
         This is different from <code>jar tf faulty.jar</code> which
         returns a non zero value -- as you'd expect.
