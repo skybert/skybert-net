@@ -124,7 +124,7 @@
         easier. And this works regardless of this being a development
         VMware image, test, staging or production server. To get the
         <code>ece-deploy</code> command, you can either <a
-        href="http;//github.com/vizrt/ece-scripts">head over to the
+        href="http://github.com/vizrt/ece-scripts">head over to the
         ece-scripts module on Github</a> or you can install the
         <code>escenic-content-engine-scripts</code> package using the
         APT repository at <a
