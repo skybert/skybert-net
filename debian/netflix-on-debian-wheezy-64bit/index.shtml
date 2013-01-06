@@ -5,12 +5,12 @@
            alt="netflix on debian"
            style="float: right;"/>
       <p>
-        Thanks to <a href="deb
-        http://ppa.launchpad.net/ehoover/compholio/ubuntu">ehoover's
-        excellent packages</a> and the grandness of <a
-        href="">Wine</a> and other good forces of the Linux world, I
-        got Netflix up and running on my 64 bit Debian Wheezy box
-        yesterday.
+        Thanks to <a
+        href="http://ppa.launchpad.net/ehoover/compholio/ubuntu">
+        ehoover's excellent packages</a> and the grandness of <a
+        href="http://www.winehq.org/">Wine</a> and other good forces
+        of the Linux world, I got Netflix up and running on my 64 bit
+        Debian Wheezy box yesterday.
       </p>
       <p>
         The mentioned packages are made for Ubuntu, so there were a
@@ -28,7 +28,7 @@
       </p>
       <h2>Getting the netflix and custom wine packages</h2>
       <p>
-        I add this to my <code>/etc/apt/sources.list</code>:
+        I added this to my <code>/etc/apt/sources.list</code>:
       </p>
       <pre class="prettyprint">deb http://ppa.launchpad.net/ehoover/compholio/ubuntu oneiric main</pre>
       <p>
@@ -39,9 +39,10 @@
       <h2>Getting the required Windows fonts</h2>
       <p>
         For some reason, I had to re-run the font installer after
-        setting the EULA selection:
+        setting the EULA selection (I had already run the installer
+        and accepted the EULA long time ago):
       </p>
-      <pre class="prettyprint">#  echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
+      <pre class="prettyprint"># echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections
 # apt-get install --reinstall ttf-mscorefonts-installer</pre>
       <h2>Running the netflix-desktop post-install hooks</h2>
       <p>
