@@ -1,6 +1,11 @@
 <!--#include virtual="/ssi/header.shtml" -->
     <h1>Deploying and rolling back using ece-deploy</h1>
     <div id="main">
+      <iframe src="http://www.screenr.com/embed/zwp7"
+              width="650"
+              height="396"
+              frameborder="0">
+      </iframe>
       <p>
         The <code>ece-deploy</code> command makes it easy to deploy a
         new EAR and, optionally, a DEB or RPM configuration package
