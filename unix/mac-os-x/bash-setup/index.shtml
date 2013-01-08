@@ -20,5 +20,18 @@
       <p>
         If it returns a date like 2012-03-01, you're homefree
       </p>
+      <h2>Spell checking</h2>
+      <p>
+        I cannot live without <code>aspell</code>, so I also install
+        this:
+      </p>
+      <pre>$ sudo port install aspell aspell-dict-en aspell-dict-uk</pre>
+      <h2>Emacs<h2>
+      <p>
+        Install the latest, full graphical GNU Emacs and let it answer
+        to the standard <code>/usr/bin/emacs</code>:  
+      </p>
+      <pre>$ sudo mv /usr/bin/emacs /usr/bin/emacs.mac-os-x
+$ sudo ln -s /Applications/Emacs.app/Contents/MacOS/Emacs /usr/bin/emacs</pre>      
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
