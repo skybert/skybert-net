@@ -1,0 +1,24 @@
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Getting a proper BASH environment</h1>
+    <div id="main">
+      <p>
+        First off, install the GNU core utils, GNU awk and GNU sed so
+        that we can get most of the basic command line power we're
+        used to from GNU/Linux:
+      </p>
+      <pre>$ sudo port install gawk gsed coreutils</pre>
+      <p>
+        Prefer GNU core utils over the ancient BSD utils that come
+        with Mac. Add this to your <code>.bashrc</code>:
+      </p>
+      <pre>export PATH=/opt/local/libexec/gnubin:$PATH</pre>
+      <p>
+        A wee test to see if the GNU core utils have taken precedence
+        on your system is to run:
+      </p>
+      <pre>$ date --iso</pre>
+      <p>
+        If it returns a date like 2012-03-01, you're homefree
+      </p>
+    </div>
+<!--#include virtual="/ssi/footer.shtml" -->
