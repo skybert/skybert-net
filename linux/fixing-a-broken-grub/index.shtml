@@ -16,12 +16,12 @@
       <p>
         First, I found the name of my Linux partition by running:
       </p>
-      <pre># fdisk -l /dev/sda</pre>
+      <pre class="prettyprint"># fdisk -l /dev/sda</pre>
       <p>
-        I then found it to be <code>/dev/sda4</code> and could proceed
+        I found it to be <code>/dev/sda4</code> and could proceed
         with the command line magic:
       </p>
-      <pre># mkdir /mnt/debian
+      <pre class="prettyprint"># mkdir /mnt/debian
 # mount /dev/sda4 /mnt/debian
 # mount -o bind /dev /mnt/debian/dev
 # mount -o bind /sys /mnt/debian/sys
