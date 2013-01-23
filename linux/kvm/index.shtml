@@ -36,13 +36,21 @@ iface br0 inet static
       bridge_maxwait 0
       post-up sysctl -p /etc/sysctl.conf
 </pre>
+      <p>
+        The lines I've added to <code>/etc/sysctl.conf</code> to get
+        it working with the KVM guests is:
+      </p>
+      <pre class="prettyprint"># for KVM guests
+net.bridge.bridge-nf-call-ip6tables = 0
+net.bridge.bridge-nf-call-iptables = 0
+net.bridge.bridge-nf-call-arptables = 0</pre>
       <h2>kvm quits, just saying "Aborted"</h2>
       <p>
         Running <code>strace -f</code> in front of the
         <code>kvm</code> command showed that it couldn't allocate the
         memory:
       </p>
-      <pre class="prettyprint"># strace -f kvm  -net nic -net tap -m 1024 my.img 
+      <pre class="prettyprint"># strace -f kvm  -net nic -net tap -m 1024 my.img
 [pid  8260] mmap(NULL, 1073881088, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = -1 ENOMEM (Cannot allocate memory)</pre>
       <p>
         This could be verified by looking at <code>free -m</code>,
@@ -67,7 +75,7 @@ iface br0 inet static
         (c) 2000-2004  Convergence (integrated media) GmbH
       ----------------------------------------------------------------
 
-(*) DirectFB/Core: Single Application Core. (2011-10-17 12:04) 
+(*) DirectFB/Core: Single Application Core. (2011-10-17 12:04)
 (*) Direct/Memcpy: Using libc memcpy()
 (!) Direct/Util: opening '/dev/fb0' and '/dev/fb/0' failed
     --> No such file or directory
@@ -102,4 +110,3 @@ Could not initialize SDL - exiting</pre>
       <pre class="prettyprint">Invalid MIT-MAGIC-COOKIE-1 keyCould not initialize SDL</pre>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
-    
