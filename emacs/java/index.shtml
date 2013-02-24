@@ -223,10 +223,6 @@ $ git clone https://github.com/senny/emacs-eclim.git</pre>
         ~/.emacs.d/tkj-eclim.el </a>, but you can of course put it
         anywhere you like, like <code>~/.emacs</code> :-)
       </p>
-      <pre class="prettyprint lang-lisp">
-<!--#include virtual="tkj-eclim.el" -->  
-</pre>
-      </div>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
 
