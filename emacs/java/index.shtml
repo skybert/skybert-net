@@ -202,6 +202,28 @@ $ ant clean deploy -Declipse.home=/opt/eclipse
       <pre>$ ls /opt/eclipse/eclim*
 lrwxrwxrwx 1 torstein 8779 44 Dec  1 11:40 /opt/eclipse/eclim -> plugins/org.eclim_2.2.5.3-gaad35e4/bin/eclim
 lrwxrwxrwx 1 torstein 8779 45 Dec  1 11:40 /opt/eclipse/eclimd -> plugins/org.eclim_2.2.5.3-gaad35e4/bin/eclimd</pre>
+      <p>
+        If you like me, prefer launching <code>eclimd</code> from a
+        dedicated shell, be sure to set up your workspace directory in
+        <code>.eclimrc</code> if it's different from
+        <code>~/worskpace</code>. Here you can also assign more memory
+        to <code>eclimd</code>:
+      </p>
+      <pre># workspace dir
+osgi.instance.area.default=@user.home/src/workspace
+
+# increase heap size
+-Xmx256M
+
+# increase perm gen size
+-XX:PermSize=64m
+-XX:MaxPermSize=128m</pre>
+      <p>
+        If you're using a non default location for your workspace and
+        you don't set the workspace directory here, you'll probably
+        get confused as to when <code>eclim</code> does and does not
+        find your projects. I for sure was!
+      </p>
       <h3>emacs-eclim</h3>
       <p>
         The last piece of the puzzle, is the excellent Emacs eclim
