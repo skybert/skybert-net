@@ -1,0 +1,81 @@
+#+TITLE: Creating HTML5 Presentation Slides in 5 Minutes
+
+* Presentation in 5 minutes
+You just edit a text file like =slides.org=; With a little help from a
+unicorn [[./org-mode-unicorn-logo.png]] and a gnu [[./meditate.png]] 
+editing a few slides or a hundred slides is a breeze.
+
+* Presentation in 5 minutes - II
+Bullets are of course as easy as pie. You write them like
+#+BEGIN_SRC org
+- hello there
+  - on the top
+  - of the world
+#+END_SRC
+
+Which becomes:
+- hello there
+  - on the top
+  - of the world
+
+
+* Presentation in 5 minutes - III
+Here, I create a table:
+#+BEGIN_SRC org
+|----------+-------------------------------|
+| Key      | Description                   |
+|----------+-------------------------------|
+| tables   | Are really easy               |
+| diagrams | Must come from other programs |
+|----------+-------------------------------|
+#+END_SRC
+
+|----------+-------------------------------|
+| Key      | Description                   |
+|----------+-------------------------------|
+| tables   | Are really easy               |
+| diagrams | Must come from other programs |
+|----------+-------------------------------|
+
+* Beautiful code examples
+There's absolutely no fiddling about to get Java syntax highlighting ...
+#+BEGIN_SRC java
+public class HelloWorld {
+  public static void main(String args[]) {
+    System.out.println("Hello world");
+  }
+}
+#+END_SRC
+
+* Beautiful code examples II
+... or XML syntax highlighting:
+#+BEGIN_SRC nxml
+<?xml version="1.0"?>
+<jolly-good>yeah?</jolly-good>
+#+END_SRC
+
+
+* Beautiful code examples III
+... or just plain monotype:
+#+BEGIN_SRC text
+$ make world
+#+END_SRC
+
+* All that it takes 
+#+BEGIN_SRC text
+# apt-get install emacs24 org-mode
+#+END_SRC
+- And a wee Gist: https://gist.github.com/kinjo/509761
+- Edit your =slide.org=
+- And then run:
+#+BEGIN_SRC text
+M-x org-export-as-html5presentation
+#+END_SRC
+* 謝謝!
+#+BEGIN_SRC text
+$ echo questions > tkj@conduct.no
+#+END_SRC
+
+My =.emacs= & =.emacs.d= can be found at
+https://github.com/skybert/my-little-friends/tree/master/emacs
+
