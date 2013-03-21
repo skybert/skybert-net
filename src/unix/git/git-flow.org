@@ -1,0 +1,23 @@
+#+TITLE: Using git flow
+
+* Creating a release
+Here, I'm using git flow to create a release named =1.0=, also using
+the =mvn versions= feature:
+
+#+BEGIN_SRC text
+$ git flow release start 1.0
+$ mvn  versions:set -DnewVersion=1.0
+$ mvn versions:commit
+$ git commit -a -m "- Setting project version to 1.0"
+$ git flow release finish 1.0
+#+END_SRC
+
+* Creating a hot fix
+This is very similar to creating a release:
+#+BEGIN_SRC text
+$ git flow hotfix start 1.01
+<make code changes  changes>
+$ git commit -a -m "Puppet fix for JBoss bind interface"
+$ git flow hotfix finish 1.01
+$ git push origin 1.01
+#+END_SRC
