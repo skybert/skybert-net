@@ -1,6 +1,5 @@
 #! /usr/bin/env bash
 
-diary_dir=$HOME/src/skybert-net/diary
 log_file=/tmp/$(basename $0).log
 
 function run() {
@@ -17,7 +16,7 @@ function create_diary_gallery() {
   ls $(pwd)/*.JPG > /dev/null || {
     return;
   }
-  
+
   cat <<EOF
       <div class="pictures">
 EOF
@@ -32,7 +31,7 @@ EOF
         </a>
 EOF
   done
-  
+
   cat <<EOF
       </div>
 EOF
@@ -52,7 +51,7 @@ function create_entry() {
     echo $diary_entry_dir "already exists, exiting"
     exit 1
   fi
-  
+
   create_directories $diary_entry_dir
 
 
@@ -68,5 +67,23 @@ EOF
   emacs $diary_entry_dir/index.shtml &
 }
 
+function read_user_input() {
+  local next_is_type=0
 
-create_entry "$@"
+  for el in "$@"; do
+    if [[ "$el" == "-t" || "$el" == "--type" ]]; then
+      next_is_type=1
+      shift 1
+    elif [ $next_is_type -eq 1 ]; then
+      local type=$el
+      next_is_type=0
+      shift 1
+    fi
+  done
+
+  diary_dir=$HOME/src/skybert-net/${type-diary}
+  title="$@"
+}
+
+read_user_input "$@"
+create_entry "$title"
