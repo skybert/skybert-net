@@ -1,8 +1,7 @@
-#+TITLE How to use Security Domains on JBoss
+#+TITLE: How to use Security Domains on JBoss
 
 * standalone.xml
 
 * jboss-web.xml
 
 * web.xml
-
