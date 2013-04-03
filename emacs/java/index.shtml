@@ -58,7 +58,7 @@
       <img src="eclim-refactoring-before.png" alt="refactoring before"/>
       <p>
         Emacs will then make all the required changes in all files in
-        the project: 
+        the project:
       </p>
       <img src="eclim-refactoring-after.png" alt="refactoring after"/>
       <h2>Getting help wherever you are</h2>
@@ -90,6 +90,39 @@
       </p>
       <img src="eclim-import-after.png"
            alt="after importing missing classes"
+           />
+      <h2>Correcting problems</h2>
+      <p>
+        A feature which makes Java IDEs so appealing is that they
+        suggest fixes to various problems in your code. In fact, this feature
+        has gotten so good, many Java developers rely on it as a way
+        of programming. Instead of creating methods and variables
+        before using them, they instead rely on the IDE to create them
+        as they refer to new methods or field members.
+      </p>
+      <p>
+        Many will be very surprised to find that Emacs now also has
+        this feature, here's an example where the code refers to a
+        not yet written method:
+      </p>
+      <img src="eclim-correct-problem-method-doesnt-exist.png"
+           alt="referring to non existent method"
+           />
+      <p>
+        Invoking <code>eclim-problems-correct</code> opens up another
+        buffer in which you may preview the different suggestions and
+        before applying them with the suggested fix's number
+        (<code>0-9</code>):
+      </p>
+      <img src="eclim-correct-problem.png"
+           alt="eclim problems correct"
+           />
+      <p>
+        After hitting <code>0</code>, the method is added to the
+        correct class:
+      </p>
+      <img src="eclim-correct-problem-success.png"
+           alt="problem corrected"
            />
       <h2>Maven integration</h2>
       <p>
@@ -147,7 +180,7 @@
       </h2>
       <p>
         To get the code completion, code navigation, javadoc lookup
-        and so on working, we need to set up this call flow: 
+        and so on working, we need to set up this call flow:
       </p>
       <img src="emacs-eclim-eclipse.svg"
            alt="emacs to eclim to eclipse call flow"
@@ -228,13 +261,13 @@ osgi.instance.area.default=@user.home/src/workspace
       <p>
         The last piece of the puzzle, is the excellent Emacs eclim
         library which acts as a bridge between Emacs and the
-        <code>eclimd</code> process. 
+        <code>eclimd</code> process.
       </p>
       <p>
         At the time of writing (2012-12-01), there's no Emacs package
         of <code>emacs-eclim</code>, hence, I put it with my other
         Emacs modules that are neither installed with APT nor with
-        Emacs packages in <code>/usr/local/src/emacs</code>. Hence: 
+        Emacs packages in <code>/usr/local/src/emacs</code>. Hence:
       </p>
       <pre>$ cd /usr/local/src/emacs
 $ git clone https://github.com/senny/emacs-eclim.git</pre>
@@ -247,4 +280,3 @@ $ git clone https://github.com/senny/emacs-eclim.git</pre>
       </p>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
-
