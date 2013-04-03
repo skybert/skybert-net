@@ -6,7 +6,8 @@
       </div>
       <h2>Code completion</h2>
       <p>
-        This is my favourite feature of <a href="">emacs-eclim</a>,
+        This is my favourite feature of <a
+        href="https://github.com/senny/emacs-eclim"> emacs-eclim </a>,
         the ability to get real, 100% correct auto completion of
         everything, without clever hacks like
         <code>hippe-expand</code> and vanilla
