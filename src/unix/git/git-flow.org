@@ -29,3 +29,13 @@ $ git commit -a -m "Puppet fix for JBoss bind interface"
 $ git flow hotfix finish 1.01
 $ git push origin 1.01
 #+END_SRC
+
+* Creating a feature branch
+#+begin_src text
+$ git flow feature start my-great-feature
+
+# Often, you also want to publish the branch you're working on (optional)
+$ git push -u origin my-great-feature
+
+$ git flow feature finish my-great-feature
+#+end_src
