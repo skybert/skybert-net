@@ -1,0 +1,7 @@
+#+TITLE: Using git 
+
+* Publishing a branch
+Often, you also want to publish the branch you're working on (optional):
+#+begin_src text
+$ git push -u origin my-great-feature
+#+end_src
