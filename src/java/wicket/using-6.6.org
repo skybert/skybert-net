@@ -1,0 +1,22 @@
+#+TITLE: Changes in Wicket after 1.5
+
+These are some of the changes I've noticed with Wicket, happening
+some time after 1.5.x and 6.6.x.
+
+* Input validation
+In 1.5 you could use =MiniumValidator= for validating an input
+field. Checking that a user doesn't enter an age below 0, you'd do:
+#+begin_src java
+TextField<Integer> ageField = new TextField<Integer>(0);
+ageField.add(new MinimumValidator<Integer>(0));
+#+end_src
+
+In 6.6, however, =MiniumValidator= is gone and can use
+=RangeValidator= instead:
+#+begin_src java
+TextField<Integer> ageField = new TextField<Integer>(0);
+ageField.add(new RangeValidator<Integer>(0, Integer.MAX_VALUE));
+#+end_src
+
+I'm catering for _really_ old folks here, as you can see ;-)
+
