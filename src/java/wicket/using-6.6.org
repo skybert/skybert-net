@@ -18,5 +18,5 @@ TextField<Integer> ageField = new TextField<Integer>(0);
 ageField.add(new RangeValidator<Integer>(0, Integer.MAX_VALUE));
 #+end_src
 
-I'm catering for _really_ old folks here, as you can see ;-)
+Now, as you can see, I'm catering for _really_ old folks here ;-)
 
