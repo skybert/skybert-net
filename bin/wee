@@ -6,6 +6,15 @@ rsync_opts="
 -avz
 --cvs-exclude
 "
+sync_dir_list="
+  diary
+  java
+  unix
+  linux
+  bytes
+  db
+"
+sync_dir_list=""
 
 conf_file=$HOME/.$(basename $0).conf
 
@@ -23,7 +32,21 @@ elif [ -z $remote_user ]; then
 fi
   
 function wee_push() {
-  rsync $rsync_opts $src_dir/ ${remote_user}@${remote_host}:${remote_dir}/
+  for el in $sync_dir_list; do
+    rsync $rsync_opts \
+      $src_dir/$el/ \
+      ${remote_user}@${remote_host}:${remote_dir}/$el/
+  done
+
+  find $src_dir/generated  -maxdepth 1 -type d | while read f; do
+    local dir=$(basename $f)
+    if [[ "$dir" == "generated" ]]; then
+      continue
+    fi
+    rsync $rsync_opts \
+      $src_dir/generated/$dir/ \
+      ${remote_user}@${remote_host}:${remote_dir}/$dir/
+  done
 }
 
 function wee_outgoing() {
