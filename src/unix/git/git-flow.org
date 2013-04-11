@@ -25,6 +25,8 @@ $ git flow hotfix start 1.01
 Make your changes, then:
 
 #+BEGIN_SRC text
+=======
+  <make code changes>
 $ git commit -a -m "Puppet fix for JBoss bind interface"
 $ git flow hotfix finish 1.01
 $ git push origin 1.01
