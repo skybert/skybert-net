@@ -1,0 +1,28 @@
+#+TITLE: SSLPeerUnverifiedException pper not authenticated
+
+#+begin_src 
+javax.net.ssl.SSLPeerUnverifiedException: peer not authenticated
+  at sun.security.ssl.SSLSessionImpl.getPeerCertificates(SSLSessionImpl.java:397)
+  at org.apache.http.conn.ssl.AbstractVerifier.verify(AbstractVerifier.java:128)
+  at org.apache.http.conn.ssl.SSLSocketFactory.connectSocket(SSLSocketFactory.java:397)
+  at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:148)
+  at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:149)
+  at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:121)
+  at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:573)
+  at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:425)
+  at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:820)
+  at org.apache.http.impl.client.AbstractHttpClient.execute(AbstractHttpClient.java:754)
+  at org.jboss.resteasy.client.core.executors.ApacheHttpClient4Executor.execute(ApacheHttpClient4Executor.java:109)
+  at org.jboss.resteasy.core.interception.ClientExecutionContextImpl.proceed(ClientExecutionContextImpl.java:39)
+  at org.jboss.resteasy.plugins.interceptors.encoding.AcceptEncodingGZIPInterceptor.execute(AcceptEncodingGZIPInterceptor.java:40)
+  at org.jboss.resteasy.core.interception.ClientExecutionContextImpl.proceed(ClientExecutionContextImpl.java:45)
+  at org.jboss.resteasy.client.ClientRequest.execute(ClientRequest.java:443)
+  at org.jboss.resteasy.client.ClientRequest.httpMethod(ClientRequest.java:677)
+  at org.jboss.resteasy.client.ClientRequest.get(ClientRequest.java:479)
+  at org.jboss.resteasy.client.ClientRequest.get(ClientRequest.java:508)
+#+end_src
+
+This is probably because the server is using a self signed SSL
+certificate. This article describes the remedy (apart using a properly
+signed certificate, of course):
+http://javaskeleton.blogspot.no/2010/07/avoiding-peer-not-authenticated-with.html
