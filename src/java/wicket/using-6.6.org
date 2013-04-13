@@ -23,7 +23,7 @@ ageField.add(new RangeValidator<Integer>(0, Integer.MAX_VALUE));
 Now, as you can see, I'm catering for _really_ old folks here ;-)
 
 
-* Continuing to original destination
+* Continuing to the original destination
 In 1.5, you could do the following to break out of the rendering of
 one page, go to another page (like login page) and then send the user
 back to where he/she was:
