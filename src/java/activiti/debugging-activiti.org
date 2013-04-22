@@ -1,0 +1,15 @@
+#+TITLE Debugging Activiti
+
+* Seeing which of your tasks Activi is executing
+Put debug on
+=org.activiti.engine.impl.persistence.entity.ExecutionEntity.insertExecution=
+and you'll see whenever Activiti updates the historic table where you
+can recognise the task names from your BPMN:
+
+#+begin_src text
+31 [main] DEBUG
+org.activiti.engine.impl.persistence.entity.ExecutionEntity.insertExecution
+- ==> Parameters: 9(String), 6(String), null, autoipvpn:1:5(String),
+taskMySuperDuperTask(String), true(Boolean), false(Boolean),
+true(Boolean), false(Boolean), 6(String), null, 1(Integer), 4(Integer)
+#+end_src
