@@ -166,6 +166,23 @@
       </p>
       <img src="vc-git-log-and-diff.png"
            alt="version control in Emacs"/>
+      <h2>One the fly display of Checkstyle and PMD violations</h2>
+      <p>
+        <a href="http://checkstyle.sf.net">Checkstyle</a> and <a
+        href="http://pmd.sf.net">PMD</a> are two tools often used in
+        java projects. Checkstyle is for checking the code adheres to
+        the project's coding standard (e.g. the Sun Java coding
+        standard) and PMD detects unused code, bad design patterns,
+        unnecessary constructs as well as duplicate code segments in
+        your source tree.    
+      </p>
+      <p>
+        Using <a href="http://flymake.sf.net/">flymake</a> and a <a
+        href="https://github.com/skybert/my-little-friends/blob/master/bash/my-java-flymake-checks">wee
+        command I wrote</a>, it's easy to get this into Emacs.
+      </p>
+      <img src="flymake-checkstyle-and-pmd.png"
+           alt="Checkstyle and PMD checks in Emacs"/>
       <h2>Editing popular Java world XML files</h2>
       <p>
         Emacs and <code>nxml-mode</code> will give you on the fly
@@ -279,5 +296,31 @@ $ git clone https://github.com/senny/emacs-eclim.git</pre>
         ~/.emacs.d/tkj-eclim.el </a>, but you can of course put it
         anywhere you like, like <code>~/.emacs</code> :-)
       </p>
+      <h3>Checkstyle &amp; PMD checks</h3>
+      <p>
+        First off, install checkstyle with <code>#apt-get install
+        checkstyle</code> (if you're on a Debian based system, or
+        else, get it with your package manager, or set it up manually
+        so that you have the <code>checkstyle</code> command wrapper
+        in your PATH) and make PMD available in <code>/opt/pmd</code>:
+      </p>
+      <pre>$ unzip /tmp/pmd-bin-5.0.4.zip -d /opt
+$ cd /opt
+$ ln -s pmd-5.0.4 pmd
+$ ls -l /opt/pmd
+lrwxrwxrwx 1 torstein torstein 14 May  4 17:21 /opt/pmd -> pmd-bin-5.0.4/</pre>
+      <p>
+        Then, get my command <a
+        href="https://github.com/skybert/my-little-friends/blob/master/bash/my-java-flymake-checks">my-java-flymake-checks</a>
+        or write your own. Then put the following in your
+        <code>.emacs</code> to wire it up:
+      </p>
+      <pre>(require 'flymake)
+(defun my-flymake-init ()
+  (list "my-java-flymake-checks"
+        (list (flymake-init-create-temp-buffer-copy
+               'flymake-create-temp-with-folder-structure))))
+(add-to-list 'flymake-allowed-file-name-masks
+             '("\\.java$" my-flymake-init flymake-simple-cleanup))</pre>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
