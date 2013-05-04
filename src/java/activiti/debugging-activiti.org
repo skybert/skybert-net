@@ -1,0 +1,23 @@
+#+TITLE Debugging Activiti
+
+* Seeing which of your tasks Activi is executing
+Put debug on these classes and you'll see whenever Activiti updates
+the historic table where you can recognise the task names from your
+BPMN:
+
+#+begin_src text
+org.activiti.engine.impl.persistence.entity.TaskEntity.insertTask
+org.activiti.engine.impl.persistence.entity.ExecutionEntity.insertExecution
+org.activiti.engine.impl.persistence.entity.ExecutionEntity.updateExecution
+#+end_src
+
+Here's an example of the debug output. Spotting the task Activiti is
+executing is pretty easy.
+
+#+begin_src text
+31 [main] DEBUG
+org.activiti.engine.impl.persistence.entity.ExecutionEntity.insertExecution
+- ==> Parameters: 9(String), 6(String), null, myprocessdefinition:1:5(String),
+taskMySuperDuperTask(String), true(Boolean), false(Boolean),
+true(Boolean), false(Boolean), 6(String), null, 1(Integer), 4(Integer)
+#+end_src

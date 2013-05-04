@@ -1,0 +1,12 @@
+#+TITLE: Using git 
+
+* Publishing a branch
+Often, you want to publish the branch you're working on:
+#+begin_src text
+$ git push -u origin my-great-feature
+#+end_src
+
+* Deleting a branch
+#+begin_src text
+git push origin --delete my-great-feature
+#+end_src

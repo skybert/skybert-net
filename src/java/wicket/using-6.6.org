@@ -1,0 +1,72 @@
+#+TITLE: Changes in Wicket after 1.5
+
+These are some of the changes I've noticed with Wicket, happening
+some time after 1.5.x and 6.6.x.
+
+* Input validation
+In 1.5 you could use =MiniumValidator= for validating an input
+field. Checking that a user doesn't enter an age below 0, you'd do:
+
+#+begin_src java
+TextField<Integer> ageField = new TextField<Integer>(0);
+ageField.add(new MinimumValidator<Integer>(0));
+#+end_src
+
+In 6.6, however, =MiniumValidator= is gone and can use
+=RangeValidator= instead:
+
+#+begin_src java
+TextField<Integer> ageField = new TextField<Integer>(0);
+ageField.add(new RangeValidator<Integer>(0, Integer.MAX_VALUE));
+#+end_src
+
+Now, as you can see, I'm catering for _really_ old folks here ;-)
+
+
+* Continuing to original destination
+In 1.5, you could do the following to break out of the rendering of
+one page, go to another page (like login page) and then send the user
+back to where he/she was:
+#+begin_src java
+public class BuyProductPage extends WebPage {
+  [..]
+    User user = session.getLoggedInUser();
+    if (user == null) {
+      throw new RestartResponseAtInterceptPageException(LoginPage.class);
+    }
+  [..]  
+}
+#+end_src
+
+and then in =LoginPage.java= have this to redirect the user back to
+=BuyProductPage= after he/she's logged in:
+
+#+begin_src java
+public class LoginPage extends WebPage {
+  public LoginPage() {
+    // first, login the user, then check were to send him/her:
+    if (!continueToOriginalDestination()) {
+      // redirect the user to the default page.
+      setResponsePage(HomePage.class);
+    }
+  }
+}
+#+end_src
+
+The method =continueToOriginalDestination= has changed in Wicket 6,
+it's now =void= which makes your code look more magic and less than
+logic IMHO:
+
+#+begin_src java
+public class LoginPage extends WebPage {
+  public LoginPage() {
+    // first, login the user, then check were to send him/her:
+    continueToOriginalDestination();
+
+    // Magic! If we get this far, it means that we should redirect the
+    // to the default page.
+
+    setResponsePage(HomePage.class);
+  }
+}
+#+end_src

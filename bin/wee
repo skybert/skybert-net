@@ -3,10 +3,17 @@
 remote_dir=www
 src_dir=$HOME/src/skybert-net
 rsync_opts="
--avz
+-az
 --cvs-exclude
 "
-
+sync_dir_list="
+  diary
+  java
+  unix
+  linux
+  bytes
+  db
+"
 conf_file=$HOME/.$(basename $0).conf
 
 source $conf_file 2>/dev/null || {
@@ -23,7 +30,23 @@ elif [ -z $remote_user ]; then
 fi
   
 function wee_push() {
-  rsync $rsync_opts $src_dir/ ${remote_user}@${remote_host}:${remote_dir}/
+  for el in $sync_dir_list; do
+    echo "Pushing" $el "articles ..."
+    rsync $rsync_opts \
+      $src_dir/$el/ \
+      ${remote_user}@${remote_host}:${remote_dir}/$el/
+  done
+
+  find $src_dir/generated  -maxdepth 1 -type d | while read f; do
+    local dir=$(basename $f)
+    if [[ "$dir" == "generated" ]]; then
+      continue
+    fi
+    echo "Pushing generated" $dir "articles ..."
+    rsync $rsync_opts \
+      $src_dir/generated/$dir/ \
+      ${remote_user}@${remote_host}:${remote_dir}/$dir/
+  done
 }
 
 function wee_outgoing() {
