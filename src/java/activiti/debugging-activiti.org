@@ -21,3 +21,27 @@ org.activiti.engine.impl.persistence.entity.ExecutionEntity.insertExecution
 taskMySuperDuperTask(String), true(Boolean), false(Boolean),
 true(Boolean), false(Boolean), 6(String), null, 1(Integer), 4(Integer)
 #+end_src
+
+* Error while closing command context
+** Problem
+#+BEGIN_SRC text
+INFO: taskGetVLANTasks throws error event with errorCode 'local_error', but no catching boundary event was defined. Execution will simply be ended (none end event semantics).
+Apr 04, 2013 10:53:31 AM org.activiti.engine.impl.interceptor.CommandContext close
+SEVERE: Error while closing command context
+java.lang.NullPointerException
+  at org.activiti.engine.impl.pvm.runtime.AbstractEventAtomicOperation.execute(AbstractEventAtomicOperation.java:34)
+  at org.activiti.engine.impl.interceptor.CommandContext.performOperation(CommandContext.java:85)
+  at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperationSync(ExecutionEntity.java:535)
+  at org.activiti.engine.impl.persistence.entity.ExecutionEntity.performOperation(ExecutionEntity.java:530)
+#+END_SRC
+
+** Remedy
+The missing error element as indicated by the INFO message (why is
+this logged on INFO and not ERROR/FATAL?) needs to be added to the
+top of your BPMN:
+#+BEGIN_SRC nxml
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" .. >
+  <error id="localError" errorCode="local_error" />
+  [..]
+</definitions>
+#+END_SRC
