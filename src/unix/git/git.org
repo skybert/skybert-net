@@ -1,4 +1,4 @@
-#+TITLE: Using git 
+#+TITLE: Using git
 
 * Publishing a branch
 Often, you want to publish the branch you're working on:
