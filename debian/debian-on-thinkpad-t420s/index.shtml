@@ -16,7 +16,7 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet pcie_aspm=force i915.semaphores=1 i915.i915_en
         Sandy Bridge generation of graphics cards". See <a
         href="http://intellinuxgraphics.org/2011Q4.html">Intel 2011Q4
         graphics package</a> for more details.
-      </ul>
+      </p>
       <h2>Wireless</h2>
       <p>
         I've experienced instable wireless, often it would just seize
