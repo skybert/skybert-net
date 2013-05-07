@@ -1,0 +1,25 @@
+#+TITLE: JBoss caveats
+
+** Empty JNDI variables
+JBoss will crash if a JNDI value is empty:
+
+#+begin_src text
+  13:23:53,696 ERROR [org.jboss.as.server] JBAS015956: Caught exception
+    during boot:
+    org.jboss.as.controller.persistence.ConfigurationPersistenceException:
+    JBAS014676: Failed to parse configuration at
+    org.jboss.as.controller.persistence.XmlConfigurationPersister.load(XmlConfigurationPersister.java:141)
+    [jboss-as-controller-7.1.3.Final.jar:7.1.3.Final] at
+    org.jboss.as.server.ServerService.boot(ServerService.java:275)
+    [jboss-as-server-7.1.3.Final.jar:7.1.3.Final] at
+    org.jboss.as.controller.AbstractControllerService$1.run(AbstractControllerService.java:156)
+    [jboss-as-controller-7.1.3.Final.jar:7.1.3.Final] at
+    java.lang.Thread.run(Thread.java:722) [rt.jar:1.7.0_21]
+  
+  Caused by: javax.xml.stream.XMLStreamException: ParseError at
+  [row,col]:[345,15] Message: "JBAS014704: '' is an invalid value for
+  parameter value. Values must have a minimum length of 1 characters"
+#+end_src
+
+
+
