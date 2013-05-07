@@ -8,13 +8,13 @@
       </p>
 <pre class="prettyprint">
 Caused by: java.lang.NullPointerException: Failed to retrieve atom name.
-	at sun.awt.X11.XlibWrapper.XGetAtomName(Native Method)
-	at sun.awt.X11.XAtom.getName(XAtom.java:169)
-	at sun.awt.X11.XDataTransferer.getTargetNameForAtom(XDataTransferer.java:123)
-	at sun.awt.X11.XDataTransferer.getNativeForFormat(XDataTransferer.java:112)
-	at sun.awt.datatransfer.DataTransferer.getFlavorsForFormatsAsSet(DataTransferer.java:845)
-	at sun.awt.datatransfer.SunClipboard.formatArrayAsDataFlavorSet(SunClipboard.java:333)
-	at sun.awt.datatransfer.SunClipboard.addFlavorListener(SunClipboard.java:361)
+  at sun.awt.X11.XlibWrapper.XGetAtomName(Native Method)
+  at sun.awt.X11.XAtom.getName(XAtom.java:169)
+  at sun.awt.X11.XDataTransferer.getTargetNameForAtom(XDataTransferer.java:123)
+  at sun.awt.X11.XDataTransferer.getNativeForFormat(XDataTransferer.java:112)
+  at sun.awt.datatransfer.DataTransferer.getFlavorsForFormatsAsSet(DataTransferer.java:845)
+  at sun.awt.datatransfer.SunClipboard.formatArrayAsDataFlavorSet(SunClipboard.java:333)
+  at sun.awt.datatransfer.SunClipboard.addFlavorListener(SunClipboard.java:361)
 </pre>
       <p>
         It's because of some <a
@@ -30,8 +30,8 @@ Caused by: java.lang.NullPointerException: Failed to retrieve atom name.
         working again.
       </p>
 <pre class="prettyprint">
-$ killall clipt
-$ xclipboard &
+$ killall clipit
+$ xclipboard &amp;
 </pre>
       <p>
         If you're an application developer, you might
@@ -49,20 +49,20 @@ $ xclipboard &
       </p>
 <pre class="prettyprint">
 Caused by: java.lang.NullPointerException: Failed to retrieve atom name.
-	at sun.awt.X11.XlibWrapper.XGetAtomName(Native Method)
-	at sun.awt.X11.XAtom.getName(XAtom.java:169)
-	at sun.awt.X11.XDataTransferer.getTargetNameForAtom(XDataTransferer.java:123)
-	at sun.awt.X11.XDataTransferer.getNativeForFormat(XDataTransferer.java:112)
-	at sun.awt.datatransfer.DataTransferer.getFlavorsForFormatsAsSet(DataTransferer.java:845)
-	at sun.awt.datatransfer.SunClipboard.formatArrayAsDataFlavorSet(SunClipboard.java:333)
-	at sun.awt.datatransfer.SunClipboard.addFlavorListener(SunClipboard.java:361)
-	at org.jdesktop.application.TextActions.&lt;init&gt;(TextActions.java:65)
-	at org.jdesktop.application.ActionManager$KeyboardFocusPCL.&lt;init&gt;(ActionManager.java:184)
-	at org.jdesktop.application.ActionManager.initProxyActionSupport(ActionManager.java:109)
-	at org.jdesktop.application.ActionManager.getActionMap(ActionManager.java:102)
-	at org.jdesktop.application.ActionManager.getActionMap(ActionManager.java:174)
-	at org.jdesktop.application.ApplicationContext.getActionMap(ApplicationContext.java:303)
-	at com.escenic.swing.application.DefaultUndoManager.&lt;init&gt;(DefaultUndoManager.java:52)
+  at sun.awt.X11.XlibWrapper.XGetAtomName(Native Method)
+  at sun.awt.X11.XAtom.getName(XAtom.java:169)
+  at sun.awt.X11.XDataTransferer.getTargetNameForAtom(XDataTransferer.java:123)
+  at sun.awt.X11.XDataTransferer.getNativeForFormat(XDataTransferer.java:112)
+  at sun.awt.datatransfer.DataTransferer.getFlavorsForFormatsAsSet(DataTransferer.java:845)
+  at sun.awt.datatransfer.SunClipboard.formatArrayAsDataFlavorSet(SunClipboard.java:333)
+  at sun.awt.datatransfer.SunClipboard.addFlavorListener(SunClipboard.java:361)
+  at org.jdesktop.application.TextActions.&lt;init&gt;(TextActions.java:65)
+  at org.jdesktop.application.ActionManager$KeyboardFocusPCL.&lt;init&gt;(ActionManager.java:184)
+  at org.jdesktop.application.ActionManager.initProxyActionSupport(ActionManager.java:109)
+  at org.jdesktop.application.ActionManager.getActionMap(ActionManager.java:102)
+  at org.jdesktop.application.ActionManager.getActionMap(ActionManager.java:174)
+  at org.jdesktop.application.ApplicationContext.getActionMap(ApplicationContext.java:303)
+  at com.escenic.swing.application.DefaultUndoManager.&lt;init&gt;(DefaultUndoManager.java:52)
 </pre>  
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
