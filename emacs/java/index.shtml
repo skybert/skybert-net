@@ -181,6 +181,26 @@
         href="https://github.com/skybert/my-little-friends/blob/master/bash/my-java-flymake-checks">wee
         command I wrote</a>, it's easy to get this into Emacs.
       </p>
+      <p>
+        Having PMD, Checkstyle &amp; friends running under Flymake
+        also doesn't hinder your work in Emacs. Flymake runs in the
+        background and doesn't block any thread in Emacs. It just
+        updates the error/warning highlighting whenever it's ready. I
+        find that running PMD with all checks enabled and Checkstyle
+        running with a full Sun coding standards checks set,
+        Emacs/flymake is snappy enough, with new updates coming in 1-2
+        seconds after I save the file (the old check markings are left
+        until the new are available).
+      </p>
+      <p>
+        One PMD check I'm particular found of, is
+        <code>javabeans</code>. It will spot if you have a getter but
+        no setter for a member variable, or more importantly, if you
+        have misspelled your getter or setter. This is the kind of bug
+        you will often first spot in runtime when your JSON
+        serialisation isn't working and you wonder why on earth isn't
+        it?
+      </p>
       <img src="flymake-checkstyle-and-pmd.png"
            alt="Checkstyle and PMD checks in Emacs"/>
       <h2>Editing popular Java world XML files</h2>
