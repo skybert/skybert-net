@@ -22,6 +22,7 @@ taskMySuperDuperTask(String), true(Boolean), false(Boolean),
 true(Boolean), false(Boolean), 6(String), null, 1(Integer), 4(Integer)
 #+end_src
 
+<<<<<<< HEAD
 * Error while closing command context
 ** Problem
 #+BEGIN_SRC text
@@ -45,3 +46,15 @@ top of your BPMN:
   [..]
 </definitions>
 #+END_SRC
+
+* Listing all Activiti variables
+It's often useful to list all the historic variables for your process,
+especially when you pass variables back and forth between Java calls,
+which you again check for in exclusive gateways and the like:
+#+begin_src java
+List<HistoricVariableInstance> list = engine.getHistoryService().createHistoricVariableInstanceQuery().list();
+for (HistoricVariableInstance variable : list) {
+    System.out.println("variable=" + variable.getVariableName() + "=" + variable.getValue() + " of type=" + variable.getVariableTypeName());
+}
+#+end_src
+
