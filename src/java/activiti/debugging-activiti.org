@@ -51,9 +51,12 @@ It's often useful to list all the historic variables for your process,
 especially when you pass variables back and forth between Java calls,
 which you again check for in exclusive gateways and the like:
 #+begin_src java
-List<HistoricVariableInstance> list = engine.getHistoryService().createHistoricVariableInstanceQuery().list();
+List<HistoricVariableInstance> list =
+  engine.getHistoryService().createHistoricVariableInstanceQuery().list();
 for (HistoricVariableInstance variable : list) {
-    System.out.println("variable=" + variable.getVariableName() + "=" + variable.getValue() + " of type=" + variable.getVariableTypeName());
+    System.out.println("variable=" + variable.getVariableName()
+                       + "=" + variable.getValue()
+                       + " of type=" + variable.getVariableTypeName());
 }
 #+end_src
 
