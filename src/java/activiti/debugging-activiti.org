@@ -1,4 +1,4 @@
-#+TITLE Debugging Activiti
+#+TITLE: Debugging Activiti
 
 * Seeing which of your tasks Activi is executing
 Put debug on these classes and you'll see whenever Activiti updates
