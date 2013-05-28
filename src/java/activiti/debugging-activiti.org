@@ -22,7 +22,6 @@ taskMySuperDuperTask(String), true(Boolean), false(Boolean),
 true(Boolean), false(Boolean), 6(String), null, 1(Integer), 4(Integer)
 #+end_src
 
-<<<<<<< HEAD
 * Error while closing command context
 ** Problem
 #+BEGIN_SRC text
