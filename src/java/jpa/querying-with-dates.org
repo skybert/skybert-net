@@ -1,0 +1,10 @@
+#+title Querying by Dates
+
+It' important to explicitly tell the query to only consider the date
+part of the Date, otherwise, today's entries will always be ignored:
+
+#+begin_src java
+TypedQuery<SwitchDeliveryDate> query = 
+  entityManager.createQuery(select x from Orders  x where createdAt >= :now", Order.class);
+query.setParameter("today", new Date(), TemporalType.DATE);
+#+end_src
