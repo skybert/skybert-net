@@ -1,4 +1,4 @@
-#+title Querying by Dates
+#+title: Querying by Dates
 
 It' important to explicitly tell the query to only consider the date
 part of the Date, otherwise, today's entries will always be ignored:
