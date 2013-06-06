@@ -10,7 +10,7 @@ midnight and the time of day when you run the code.
 Here's an example to illustrate this:
 
 #+begin_src java
-TypedQuery<SwitchDeliveryDate> query = 
+TypedQuery<Order> query = 
   entityManager.createQuery("select x from Orders x where validUntil >= :today", Order.class);
 
 // will return all entries valid from now, when the code is run and in the future
