@@ -28,6 +28,7 @@ if (entity != null) {
         while (elements.hasNext()) {
           JsonNode arrayElement = elements.next();
           JSONObject jsonObject = JSONObject.fromObject(arrayElement.toString());
+          // do something useful with jsonObject
         }
       }
     } catch (IOException ioe) {
@@ -36,8 +37,8 @@ if (entity != null) {
   } catch (RuntimeException re) {
     httpGET.abort();
     throw re;
+  } finally {
+    httpClient.getConnectionManager().shutdown();
   }
-
-  httpClient.getConnectionManager().shutdown();
 }
 #+end_src
