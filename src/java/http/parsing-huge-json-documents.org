@@ -1,0 +1,44 @@
+#+title: Parsing Huge JSON Documents
+
+#+begin_src java
+String url = "http://example.com/huge-file.json";
+HttpClient httpClient = new DefaultHttpClient();
+HttpGet httpGET = new HttpGet(url);
+HttpResponse response;
+try {
+  response = httpClient.execute(httpGET);
+} catch (IOException e) {
+  // log and handle exception
+}
+
+// handle various values for response.getStatusLine().getStatusCode()
+
+HttpEntity entity = response.getEntity();
+if (entity != null) {
+  try (InputStream inputStream = entity.getContent()) {
+      BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+      ObjectMapper objectMapper = new ObjectMapper();
+      JsonFactory factory = objectMapper.getJsonFactory();
+      JsonParser jsonParser = factory.createJsonParser(reader);
+      JsonNode actualObj = objectMapper.readTree(jsonParser);
+
+      if (actualObj.isArray()) {
+        Iterator<JsonNode> elements = actualObj.getElements();
+
+        while (elements.hasNext()) {
+          JsonNode arrayElement = elements.next();
+          JSONObject jsonObject = JSONObject.fromObject(arrayElement.toString());
+          // do something useful with jsonObject
+        }
+      }
+    } catch (IOException ioe) {
+      // log and handle exception
+
+  } catch (RuntimeException re) {
+    httpGET.abort();
+    throw re;
+  } finally {
+    httpClient.getConnectionManager().shutdown();
+  }
+}
+#+end_src

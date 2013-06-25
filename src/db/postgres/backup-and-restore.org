@@ -1,0 +1,5 @@
+#+title: PostgreSQL Backup & Restore
+
+#+begin_src test
+$ pg_dump -o <db> > /tmp/$(date --iso)-<db>.sql
+#+end_src
