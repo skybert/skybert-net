@@ -23,18 +23,18 @@ ageField.add(new RangeValidator<Integer>(0, Integer.MAX_VALUE));
 Now, as you can see, I'm catering for _really_ old folks here ;-)
 
 
-* Continuing to original destination
+* Continuing to the original destination
 In 1.5, you could do the following to break out of the rendering of
 one page, go to another page (like login page) and then send the user
 back to where he/she was:
 #+begin_src java
 public class BuyProductPage extends WebPage {
-  [..]
-    User user = session.getLoggedInUser();
-    if (user == null) {
-      throw new RestartResponseAtInterceptPageException(LoginPage.class);
+    public BuyProductPage() {
+      User user = session.getLoggedInUser();
+      if (user == null) {
+        throw new RestartResponseAtInterceptPageException(LoginPage.class);
+      }
     }
-  [..]  
 }
 #+end_src
 
@@ -55,7 +55,7 @@ public class LoginPage extends WebPage {
 
 The method =continueToOriginalDestination= has changed in Wicket 6,
 it's now =void= which makes your code look more magic and less than
-logic IMHO:
+logic IMO:
 
 #+begin_src java
 public class LoginPage extends WebPage {

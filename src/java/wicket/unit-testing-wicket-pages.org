@@ -1,0 +1,76 @@
+#+TITLE: Unit testing your Wicket pages
+
+Due to Wicket's nature, it often feels like a mine field deploying a
+new component for the first time; you never know when and where
+Wicket will throw a =RuntimeException= at you next time.
+
+To help ease this situation, I've found running unit tests for my
+pages greatly speed up my development and especially comfort and
+trust ratio that my pages will not blow up in runtime because of a
+missing UI component not added in Java space or it has a misspelled
+=wicket:id= value in the HTML file.
+
+Setting up unit testing of your page(s) is pretty easy, granted that
+you've added a these Maven dependencies (in addition to the regular
+Wicket dependencies):
+#+begin_src nxml
+<properties>
+  <wicket.version>6.6.0</wicket.version>
+  <jetty.version>7.6.3.v20120416</jetty.version>
+</properties>
+<dependencies>
+  <dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <version>4.10</version>
+    <scope>test</scope>
+  </dependency>
+  <dependency>
+    <groupId>org.eclipse.jetty.aggregate</groupId>
+    <artifactId>jetty-all-server</artifactId>
+    <version>${jetty.version}</version>
+    <scope>test</scope>
+  </dependency>
+</dependencies>
+#+end_src
+
+With this in place, you can add your pages to a unit test like this:
+
+#+begin_src java
+import org.apache.wicket.util.tester.WicketTester;
+import org.junit.Before;
+import org.junit.Test;
+
+public class TestWicketPages {
+  private WicketTester tester;
+
+  @Before
+  public void setUp() {
+    tester = new WicketTester(new WicketApplication());
+  }
+
+  @Test
+  public void canOrderPageRender() {
+    tester.startPage(OrderPage.class);
+    tester.assertRenderedPage(OrderPage.class);
+  }
+
+#+end_src
+
+JUnit and Wicket will then catch common runtime errors like undefined
+components or wrongly used models in UI components:
+
+#+begin_src text
+ERROR - MarkupContainer - Unable to find component with id 'feedback'
+in [Page class = net.skybert.OrderPage, id = 0, render count = 1]
+  Expected: '.feedback'.
+  Found with similar names: ''
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.546 sec <<< FAILURE!
+
+Results :
+
+Tests in error: 
+  orderPageRendersSuccessfully(net.skybert.TestWicketPages): Unable to
+  find component with id 'feedback' in [Page class =
+  net.skybert.OrderPage, id = 0, render count = 1]
+#+end_src
