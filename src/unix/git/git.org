@@ -10,3 +10,20 @@ $ git push -u origin my-great-feature
 #+begin_src text
 git push origin --delete my-great-feature
 #+end_src
+* Make a local branch track a remote branch
+This is typically what you want when you want to connect your local
+branch to the corresponding one on the git server/github:
+
+#+begin_src text
+$ git branch --set-upstream-to=origin/feature/orphan-order-list feature/orphan-order-list
+#+end_src
+
+This creates the following stanza in your =.git/config= inside your
+project source directory:
+
+#+begin_src conf
+[branch "feature/orphan-order-list"]
+	remote = origin
+	merge = refs/heads/feature/orphan-order-list
+	rebase = true
+#+end_src
