@@ -15,4 +15,6 @@ Host *.example.com, orange.example.net
 User john
 #+end_src
 
+You can specify many more options. They are all listed in the
+ssh_config man page: =man ssh_config=.
 
