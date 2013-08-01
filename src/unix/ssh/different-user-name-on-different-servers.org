@@ -1,0 +1,18 @@
+#+title: Defining different user names for different servers
+
+Say that locally on your machine, your user is called =jonathan= and
+this is also your preferred username on external servers. However, on
+some servers, namely all servers in the =example.com= domain plus on
+=orange.example.net= you've got the user =john= instead.
+
+Now, you _could_ specify this when logging on these servers using
+=ssh john@orange.example.net=. However, if you wish to define this
+instead, so that you just can do =ssh orange.example.net=, you can
+put the following in your =~/.ssh/config=.
+
+#+begin_src text
+Host *.example.com, orange.example.net
+User john
+#+end_src
+
+
