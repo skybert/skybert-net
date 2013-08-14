@@ -1,0 +1,11 @@
+#+title: Asserting that all fields in a Java class is set
+
+Sometimes you want to test that all the fields of an object is
+populated by say a factory. Using =ReflectionAssert=, this is easy:
+
+#+begin_src java
+import org.unitils.reflectionassert.ReflectionAssert;
+[..]
+MyObject myObject = factory.getMyObject();
+ReflectionAssert.assertPropertiesNotNull("some fields are not set", myObject);
+#+end_src
