@@ -1,4 +1,4 @@
-
+#+title: JBoss on the command line
 #+begin_src text
 ./bin/jboss-cli.sh -c --controller=app1.example.com
 #+end_src
