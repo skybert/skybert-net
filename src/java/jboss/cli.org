@@ -1,0 +1,4 @@
+
+#+begin_src text
+./bin/jboss-cli.sh -c --controller=app1.example.com
+#+end_src
