@@ -1,0 +1,7 @@
+#title: Using JS Confirm Dialoges With AJAX Buttons
+
+#+begin_src  java
+AjaxCallListener ajaxCallListener = new AjaxCallListener();
+ajaxCallListener.onPrecondition(getConfirmString(key));
+ajaxRequestAttributes.getAjaxCallListeners().add(ajaxCallListener);
+#+end_src java
