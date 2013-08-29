@@ -1,0 +1,12 @@
+#+title: How to determine if your hard drive is SSD or not 
+
+It's easy and elegant on Linux, you can just do:
+
+#+begin_src text
+$ cat /sys/block/sda/queue/rotational
+1
+#+end_src
+
+If it returns =1=, it means no, you've got a conventional, rotating
+hard drive. If it returns =0=, you're using an SSD drive.
+
