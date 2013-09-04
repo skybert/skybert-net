@@ -14,11 +14,11 @@ torstein.k.johansen/at/gmail/dot/com
           />
     <link rel="stylesheet"
           type="text/css"
-          href="/style/skybert.css" /> 
-     <link rel="alternate"
-           type="application/atom+xml"
-           title="Skybert's feed"
-           href="/skybert-net-feed.xml"/>
+          href="/style/skybert.css" />
+    <link rel="alternate"
+          type="application/atom+xml"
+          title="Skybert's feed"
+          href="/skybert-net-feed.xml"/>
     <title>
       .:: skybert.net
       <!--#exec cgi="/cgi-bin/nice-title.cgi" -->
@@ -31,7 +31,7 @@ torstein.k.johansen/at/gmail/dot/com
     <script type="text/javascript"
             src="http://www.studio-s.no/js/jquery.cycle.all-2.72.js"></script>
     <script type="text/javascript" src="/js/common.js"></script>
-    <link href="/style/prettify.css" 
+    <link href="/style/prettify.css"
           type="text/css"
           rel="stylesheet" />
     <script type="text/javascript"
