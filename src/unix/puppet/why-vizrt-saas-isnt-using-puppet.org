@@ -1,6 +1,5 @@
 #+title: Why Vizrt isn't using Puppet for its SaaS platform
 
-* Introduction
 I wrote this as [[http://forum.vizrt.com/showthread.php?t=5948][a response to some Puppet question]] on the Vizrt forum
 related to Puppet and Vizrt's fully automatic installation of
 production ready clusters.
