@@ -3,10 +3,14 @@
 remote_dir=www
 src_dir=$HOME/src/skybert-net
 rsync_opts="
--az
+-avz
 --cvs-exclude
 "
+
+feed_output_file=skybert-net-feed.xml
 sync_dir_list="
+  ssi
+  generated/${feed_output_file}
   emacs
   diary
   java
@@ -32,10 +36,17 @@ fi
   
 function wee_push() {
   for el in $sync_dir_list; do
-    echo "Pushing" $el "articles ..."
-    rsync $rsync_opts \
-      $src_dir/$el/ \
-      ${remote_user}@${remote_host}:${remote_dir}/$el/
+    if [ -d ${src_dir}/$el ]; then
+      echo "Pushing" $el "articles ..."
+      rsync $rsync_opts \
+        $src_dir/$el/ \
+        ${remote_user}@${remote_host}:${remote_dir}/$el/
+    elif [ -e $src_dir/$el ]; then
+      echo "Pushing single file:" $el "..."
+      rsync $rsync_opts \
+        $src_dir/$el \
+        ${remote_user}@${remote_host}:${remote_dir}/
+    fi
   done
 
   find $src_dir/generated  -maxdepth 1 -type d | while read f; do
@@ -61,6 +72,19 @@ function wee_incoming() {
     $src_dir/ 
 }
 
+function wee_feed() {
+  echo "Generating Atom feed in" $feed_output_file "..."
+  cd $HOME/src/common-bashing/src/org2atom
+  ./org2atom $HOME/src/skybert-net/src | \
+    xmllint --format - \
+    > $src_dir/generated/${feed_output_file}
+}
+
+function wee_generate() {
+  cd $HOME/src/common-bashing/src/org2html
+  ./org2html
+}
+
 function wee_pull() {
   rsync $rsync_opts ${remote_user}@${remote_host}:${remote_dir}/ \
     $src_dir/
@@ -68,6 +92,13 @@ function wee_pull() {
 
 function get_fn_list() {
   declare -f | grep ^wee | grep "()" | cut -d'_' -f2 | cut -d' ' -f1
+}
+
+## A wee bit of BSD inspiration here...
+function wee_world() {
+  wee_generate
+  wee_feed
+  wee_push
 }
 
 for el in $(get_fn_list); do

@@ -1,4 +1,10 @@
-#+TITLE: Using git flow
+#+title: Using git flow
+
+This is a thin layer on top of =git= to help you follow some
+best practises about branching and merging when doing large scale
+development with git, having multiple release branches, hotfixes,
+feature branches, stable and unstable version of your source code and
+so on.
 
 * Creating a release
 

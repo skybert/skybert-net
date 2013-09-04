@@ -1,5 +1,7 @@
 #+TITLE: Using git
 
+Here are some of my wee =git= notes.
+
 * Publishing a branch
 Often, you want to publish the branch you're working on:
 #+begin_src text

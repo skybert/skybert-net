@@ -15,10 +15,10 @@ torstein.k.johansen/at/gmail/dot/com
     <link rel="stylesheet"
           type="text/css"
           href="/style/skybert.css" /> 
-    <link rel="alternate" 
-          href="http://twitter.com/statuses/user_timeline/65628228.rss"
-	       title="Skybert's technical RSS feed" 
-	       type="application/rss+xml" />
+     <link rel="alternate"
+           type="application/atom+xml"
+           title="Skybert's feed"
+           href="/skybert-net-feed.xml"/>
     <title>
       .:: skybert.net
       <!--#exec cgi="/cgi-bin/nice-title.cgi" -->

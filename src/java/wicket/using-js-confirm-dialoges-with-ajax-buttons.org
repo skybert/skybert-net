@@ -1,4 +1,11 @@
-#title: Using JS Confirm Dialoges With AJAX Buttons
+#+title: Using JS Confirm Dialogues With AJAX Buttons
+
+If you use buttons with confirm dialogues instead of AJAX links,
+you'll get the problem that Wicket will fire the =onSubmit= event
+regardless of what the user clicked in the JS dialogue. 
+
+The remedy is to still use buttons, but to override the
+=updateAjaxAttributes= method like this:
 
 #+begin_src  java
 @Override
