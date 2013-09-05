@@ -1,0 +1,15 @@
+#+title: Writing an ISO image to a USB drive from the command line
+
+This is one of my absolute favourite things on Linux: how to easily write
+an ISO image of a CD/DVD to a USB drive in a matter of a few key strokes:
+
+#+begin_src text
+dd if=/tmp/dvd-image.iso of=/dev/sdc
+#+end_src
+
+That's it. That's all. But beware, before doing this, be sure that =/dev/sdc=
+is in fact your USB drive ;-). Normally, a mere =fdisk -l /dev/sdc= should
+give you enough information to determine this.
+
+/Happy hacking!/
+
