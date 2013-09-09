@@ -1,5 +1,6 @@
 #+title: JRebel 
 
+To start JBoss,I use:
 #+begin_src sh
 workspace_dir=/home/torstein/src/workspace-eclim
 jrebel_jar=/opt/jrebel/jrebel.jar
@@ -11,4 +12,19 @@ export JREBEL_OPTS="
 "
 
 $(dirname $0)/standalone.sh $@
+#+end_src
+
+To configure JRebel, I use:
+#+begin_src sh
+rebel.license.url=https://example.com/key
+
+rebel.log=true
+# For some reason, this is always relative to $HOME, 
+rebel.log.file=.jrebel/jrebel.log
+
+rebel.properties.version=2
+rebel.license=$HOME/.jrebel/client.lic
+
+# since I'm runnign jrebel as a different user, I don't use $HOME here
+rebel.workspace.path=/home/torstein/src/workspace-eclim
 #+end_src
