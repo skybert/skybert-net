@@ -1,5 +1,9 @@
 #+title: JRebel 
 
+First off, be sure to have matching versions of the JRebel license
+server and the JRebel clients. Otherwise, you might experience weird,
+illogical errors as explanations for why JRebel isn't working.
+
 To start JBoss,I use:
 #+begin_src sh
 workspace_dir=/home/torstein/src/workspace-eclim
