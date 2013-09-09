@@ -1,0 +1,14 @@
+#+title: JRebel 
+
+#+begin_src sh
+workspace_dir=/home/torstein/src/workspace-eclim
+jrebel_jar=/opt/jrebel/jrebel.jar
+export JREBEL_OPTS="
+  -javaagent:${jrebel_jar}
+  -Drebel.workspace.path=${workspace_dir}
+  -Drebel.log.file=$HOME/.jrebel/jrebel.log
+  -Drebel.properties=$HOME/.jrebel/jrebel.properties
+"
+
+$(dirname $0)/standalone.sh $@
+#+end_src
