@@ -1,8 +1,8 @@
-#+title: JRebel 
+#+title: JRebel
 
 [[http://zeroturnaround.com/software/jrebel][JRebel]] is a dash of magic: it brings a lot of the benefits of Python,
-PHP, Perl, JSP &amp; friends to Java. You change your Java file in
-your editor, hit reload in your browser and: TADA! You're changes are
+PHP, Perl, JSP & friends to Java. You change your Java file in your
+editor, hit reload in your browser and: TADA! You're changes are
 live. Amazing. Wondeful. Just the way it "should be" you will start to
 think. Once you're used to this wonderful class proxying, hot swapping
 goodness, you'll get pretty addicted to it. That's at least my
@@ -13,7 +13,7 @@ license server and the JRebel clients. Otherwise, you might experience
 weird, illogical errors as explanations for why JRebel isn't working.
 
 To start JBoss with JRebel, I use a wrapping script which I call
-=/opt/jboss/bin/jrebel.sh=: 
+=/opt/jboss/bin/jrebel.sh=:
 
 #+begin_src sh
 jrebel_jar=/opt/jrebel-5.3.2/jrebel.jar
@@ -32,10 +32,10 @@ start script. To configure JRebel, I use the following in this
 #+begin_src sh
 rebel.license.url=https://example.com/key
 
-# This will produce a _lot_ of logging, so just keep it on when 
+# This will produce a _lot_ of logging, so just keep it on when
 # debugging JRebel issues.
 rebel.log=true
-# For some reason, this is always relative to $HOME, 
+# For some reason, this is always relative to $HOME,
 rebel.log.file=.jrebel/jrebel.log
 
 rebel.properties.version=2
