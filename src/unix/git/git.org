@@ -25,7 +25,17 @@ project source directory:
 
 #+begin_src conf
 [branch "feature/orphan-order-list"]
-	remote = origin
-	merge = refs/heads/feature/orphan-order-list
-	rebase = true
+  remote = origin
+  merge = refs/heads/feature/orphan-order-list
+  rebase = true
+#+end_src
+* Deleting a tag
+
+I use this when =git flow release= fails in the middle because of
+something and I don't want to create a new version (tag) just to fix
+the error:
+
+#+begin_src text
+$ git tag -d 1.10.1
+$ git push origin :refs/tags/1.10.1
 #+end_src
