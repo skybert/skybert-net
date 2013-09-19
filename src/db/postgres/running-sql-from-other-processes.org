@@ -1,0 +1,8 @@
+#+title: Running SQL from standard in using psql
+
+Passing SQL  in from a different process is as easy as using a pipe
+on the command line like this:
+
+#+begin_src text
+$ echo "select count(id) from user" | psql -U my-db-user -d  my-db
+#+end_src
