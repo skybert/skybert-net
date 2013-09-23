@@ -12,7 +12,7 @@ echo foo | sed -e 's/foo/bar/p' -e 's/bar/baz/p'
 #+end_src
 
 * grep
-This is slow (but easy to read):
+This is slow (but easy to read codewise):
 #+begin_src sh
 for el in foo bar baz;
    grep $el file.log
