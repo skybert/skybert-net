@@ -3,7 +3,9 @@
 remote_dir=www
 src_dir=$HOME/src/skybert-net
 rsync_opts="
--avz
+--recursive
+--compress
+--checksum
 --cvs-exclude
 "
 

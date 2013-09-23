@@ -38,6 +38,11 @@
         <li>
           <a href="exit-hooks">Writing your own program exit hooks</a>
         </li>
+        <li>
+          <a href="how-to-improve-performance">
+            Significantly improve the performance of your BASH scripts
+          </a>
+        </li>
       </ul>
       <h2>Arithmetics using floating point numbers </h2>
       <p>
