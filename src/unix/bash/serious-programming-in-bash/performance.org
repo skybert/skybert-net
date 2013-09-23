@@ -2,12 +2,12 @@
 
 * sed
 This is slow:
-#+begin_src text
+#+begin_src sh
 echo foo | sed 's/foo/bar/p' | sed 's/bar/baz/p'
 #+end_src
 
 This is fast:
-#+begin_src text
+#+begin_src sh
 echo foo | sed -e 's/foo/bar/p' -e 's/bar/baz/p'
 #+end_src
 
