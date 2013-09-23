@@ -1,0 +1,25 @@
+#+title: How to improve performance in BASH scripts
+
+* sed
+This is slow:
+#+begin_src text
+echo foo | sed 's/foo/bar/p' | sed 's/bar/baz/p'
+#+end_src
+
+This is fast:
+#+begin_src text
+echo foo | sed -e 's/foo/bar/p' -e 's/bar/baz/p'
+#+end_src
+
+* grep
+This is slow (but easy to read):
+#+begin_src sh
+for el in foo bar baz;
+   grep $el file.log
+done
+#+end_src
+
+This is fast:
+#+begin_src sh
+egrep "foo|bar|baz" file.log
+#+end_src
