@@ -16,6 +16,8 @@ To start JBoss with JRebel, I use a wrapping script which I call
 =/opt/jboss/bin/jrebel.sh=:
 
 #+begin_src sh
+#! /usr/bin/env bash
+
 jrebel_jar=/opt/jrebel-5.3.2/jrebel.jar
 export JREBEL_OPTS="
   -javaagent:${jrebel_jar}
