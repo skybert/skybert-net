@@ -17,19 +17,19 @@ h1, h2 {
 }
 
 h1 {
-    color: #4A5241;
+    color: black;
     text-shadow: 2px 2px 2px grey;
     font-size: 3em;
 }
 
 h1:first-letter, h2:first-letter {
-    color: green;
+    color: #660000;
 }
 
 
 a, cite {
-  /*    color: #ADD07E; */
-    color: green;
+    /*    color: #ADD07E; */
+    color: #660000;
 }
 
 a {
@@ -38,8 +38,8 @@ a {
 }
 
 a:hover {
-    text-shadow: 2px 2px 2px black;
-    color: orange;
+/*    text-shadow: 2px 2px 2px black; */
+    color: red;
 /*    color: #718541; */
 }
 
@@ -64,7 +64,7 @@ img {
 }
 
 pre {
-    border: thin solid #4A5241;
+    border: thin solid #660000;
     padding: 0.5em;
     font-weight: bold;
     color: grey;
