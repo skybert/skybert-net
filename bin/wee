@@ -11,6 +11,7 @@ rsync_opts="
 
 feed_output_file=skybert-net-feed.xml
 sync_dir_list="
+  style
   ssi
   generated/${feed_output_file}
   emacs
@@ -35,7 +36,7 @@ elif [ -z $remote_user ]; then
   echo "$conf_file must have remote_user"
   exit 1
 fi
-  
+
 function wee_push() {
   for el in $sync_dir_list; do
     if [ -d ${src_dir}/$el ]; then
@@ -71,15 +72,20 @@ function wee_outgoing() {
 function wee_incoming() {
   rsync $rsync_opts --dry-run \
     ${remote_user}@${remote_host}:${remote_dir}/ \
-    $src_dir/ 
+    $src_dir/
 }
 
 function wee_feed() {
   echo "Generating Atom feed in" $feed_output_file "..."
+  local dir=${src_dir}/generated
+  if [ ! -d ${dir} ]; then
+      mkdir -p ${dir}
+  fi
+
   cd $HOME/src/common-bashing/src/org2atom
   ./org2atom $HOME/src/skybert-net/src | \
     xmllint --format - \
-    > $src_dir/generated/${feed_output_file}
+    > ${dir}/${feed_output_file}
 }
 
 function wee_generate() {
@@ -109,7 +115,7 @@ for el in $(get_fn_list); do
     break
   fi
 done
-    
+
 if [[ $1 == "--help" ]]; then
   cat <<EOF
   Usage: $(basename $0) <command>
@@ -121,4 +127,3 @@ EOF
      echo "    -" $el
    done
 fi
-
