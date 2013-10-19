@@ -18,6 +18,7 @@
 <!--#endif -->
     <div id="footer">
       <img src="http://mail.google.com/favicon.ico"
+           class="favicon"
            alt="Tips en venn"
            />
       Write me on
@@ -27,6 +28,7 @@
       |
       <a href="http://twitter.com/torsteinkrause">
         <img src="http://twitter.com/favicon.ico"
+             class="favicon"
              alt="twitter"/>
         my personal feed
       </a>
@@ -39,6 +41,7 @@
       <a href="/"><!--#echo var="HTTP_HOST" --></a>
       |
       <img src="http://www.w3.org/2008/site/images/favicon.ico"
+           class="favicon"
            alt="W3C"/>
       This page validates
       <a href="http://validator.w3.org/check?uri=referer">
@@ -49,11 +52,12 @@
       -->&amp;t=The%20World%20of%20Skybert">
         <img src="http://www.facebook.com/favicon.ico"
              alt="Share this on Facebook"
+             class="favicon"
              />&nbsp;Share this article on Facebook
       </a>
       |
       <img src="http://www.google.com/favicon.ico"
-           style="width: 16px; height: 16px;"
+           class="favicon"
            alt="Google"/>
       <form method="get"
             style="display: inline"
