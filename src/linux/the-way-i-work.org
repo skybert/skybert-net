@@ -1,0 +1,103 @@
+#+title: My Desktop
+This is a story about how I have set up my computer to work
+efficiently in a typical modern office environment where I have to
+have flawless interaction with a plethora of systems, including the
+infamous Microsoft enterprise solutions.
+
+* The rock on which I stand
+My operation system of choice has since 2001 been Debian
+GNU/Linux. Even after the advent of the excellent Ubuntu in 2004, I
+still stuck with Debian proper and have never strayed from it. I love
+it for it's stability, speed and unclutter -- even though it means I
+have to work harder to get some things to work than if I had used say
+Ubuntu or Mint.
+
+* Desktop environment
+I crave for speed. I want everything on my machine to be as fast as
+possible. Therefore, I use a lightweight window manager called
+Fluxbox. It's minimalist, looks good, is utterly configurable and
+supports both KDE and GNOME dock apps.
+
+I've experienced a lot with my desktop environment. I started out with
+GNOME in 2000, but switched soon over to WindowMaker. I stayed with WM
+until 2003 when I switched, so far for the last time, to Fluxbox. 
+
+In Fluxbox, I've set up a 4x2 grid of workspaces, thinking of the
+first row as my "primary" row of tasks, with the row above as a
+secondary or "helper" row for the corresponding below. Hence, I've got
+=talk=, =web=, =emacs= and =files=. Above these four, I have a
+corresponding helper workspace where I can offload related windows
+that I don't use so much: =talk2=, =web2= and so on.
+
+An example of a window I put on =web2=, are browser windows that I
+just use once in a while for a specific task. These days I use Chrome
+as my primary browser, but some things just works better in
+Firefox. Hence, I put my Firefox windows on =web2=.
+
+** talk
+On my =talk= workspace, I have my dedicated chat clients *) like
+Skype and email clients, such as Thunderbird.
+
+** web
+Browser windows
+
+** emacs
+Emacs is my primary programming environment with other IDEs that I use
+once in a while during the work day on =emacs2=. For instance, I use
+IDEA for debugging Java applications so I put it on =emacs2=.
+
+** files
+SSH sessions to various servers, file browsers and  the like.
+ 
+* Mail
+Sadly, many, many companies use Microsoft's Exchange server solution
+for their mail, calendar and user database. If the (Windows)
+administrators are kind, they'll open the IMAP, LDAP and SMTP interface of
+the Exchange server to the users, in which case it's easy to get it
+work with your favourite email client software.
+
+However, this is not always the case. Sometimes, you'll just have the
+native Exchange interface, in addition to the Exchange web interface
+(Outloook Web Access, OWA). Because of the latter, I now use a local
+Exchange-to-open standards proxy called DavMail. With it, I can use my
+favourite email client, mu4e by the way of offlineimap.
+
+I let =offlineimap= run every five minutes from cron, giving my a
+full, up to date backup of _all_ my email accounts.
+
+=mu= and =mu4e= then indexes and handles this email, giving me
+blistering fast navigation and search.
+
+My setup is like this:
+#+begin_src text
+outlook -> davmail -> offlineimap -> mu4e
+#+end_src
+
+* The programs I use
+** Organising pictures
+Shotwell, gthumb plus two commands I've written called
+=import-pictures= and =upload-to-picasa=.
+
+** Editing images
+GIMP
+
+** Office
+LibreOffice
+
+** Music
+*** Playing
+MPD with the gmpc frontend.
+*** Ripping & encoding
+Grip is still the best ripper and encoder out there
+*** Fixing id3 tags
+
+
+** Browsing the web
+Opera, Google Chrome and Iceweasel (Firefox).
+
+** Video chat
+Skype & GTalk in Chrome.
+
+** Diagrams
+For the most part I use blockdiag. A few times I venture back to DIA
+or use the diagram editor in Google Docs.
