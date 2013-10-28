@@ -1,4 +1,4 @@
-#+TITLE: JBoss caveats
+#+TITLE: JBoss Caveats
 
 ** Empty JNDI variables
 JBoss will crash if a JNDI value is empty:
