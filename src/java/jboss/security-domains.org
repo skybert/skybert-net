@@ -1,7 +1,39 @@
 #+TITLE: How to use Security Domains on JBoss
 
 * standalone.xml
+#+begin_src nxml
+<subsystem xmlns="urn:jboss:domain:security:1.2">
+  <security-domains>
+   <security-domain name="other" cache-type="default">
+     <authentication>
+       <login-module code="org.jboss.security.auth.spi.LdapLoginModule" flag="required">
+         <module-option name="java.naming.factory.initial" value="com.sun.jndi.ldap.LdapCtxFactory"/>
+         <module-option name="java.naming.provider.url" value="ldap://localhost:389"/>
+         <module-option name="java.naming.security.authentication" value="simple"/>
+         <module-option name="principalDNPrefix" value="uid="/>
+         <module-option name="principalDNSuffix" value=",ou=people,dc=auth,dc=skybert,dc=net"/>
+         <module-option name="searchTimeLimit" value="5000"/>
+         <module-option name="searchScope" value="SUBTREE_SCOPE"/>
+         <module-option name="rolesCtxDN" value="ou=auth,dc=auth,dc=skybert,dc=net"/>
+         <module-option name="roleAttributeID" value="cn"/>
+         <module-option name="uidAttributeID" value="uniqueMember"/>
+         <module-option name="roleAttributeIsDN" value="false"/>
+         <module-option name="roleNameAttributeID" value="cn"/>
+         <module-option name="matchOnUserDN" value="true"/>
+       </login-module>
+     </authentication>
+   </security-domain>
+  </security-domains>
+</subsystem>
+#+end_src
 
 * jboss-web.xml
+#+begin_src nxml
+<?xml version="1.0" encoding="UTF-8"?>
+<jboss-web>
+  <context-root>/ws</context-root>
+  <security-domain>my-security-domain</security-domain>
+</jboss-web>
+#+end_src
 
 * web.xml
