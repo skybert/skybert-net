@@ -1,0 +1,35 @@
+#+title: Distributed memory cache with Memcached
+
+* Command line interface
+To get a statistics overview, do:
+#+begin_src text
+stats
+#+end_src
+
+To investigate the cached items in more detail, use =stats items=:
+#+begin_src text
+stats items
+STAT items:3:number 4
+STAT items:3:age 327
+STAT items:3:evicted 0
+STAT items:3:evicted_nonzero 0
+STAT items:3:evicted_time 0
+STAT items:3:outofmemory 0
+STAT items:3:tailrepairs 0
+STAT items:3:reclaimed 0
+STAT items:3:expired_unfetched 0
+STAT items:3:evicted_unfetched 0
+#+end_src
+
+To get the cache key, do:
+#+begin_src text
+stats cachedump 3 0
+ITEM fruit-20100080 [502 b; 1386347220 s]
+#+end_src
+
+You can now get the contents with =get <key>= or to purge item from
+the cache, use the =delete= command:
+#+begin_src text
+delete fruit-20100080
+#+end_src
+
