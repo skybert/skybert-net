@@ -5,7 +5,7 @@ have flawless interaction with a plethora of systems, including the
 infamous Microsoft enterprise solutions.
 
 * The rock on which I stand
-My operation system of choice has since 2001 been Debian
+My operating system of choice has since 2001 been Debian
 GNU/Linux. Even after the advent of the excellent Ubuntu in 2004, I
 still stuck with Debian proper and have never strayed from it. I love
 it for it's stability, speed and unclutter -- even though it means I
@@ -20,7 +20,7 @@ supports both KDE and GNOME dock apps.
 
 I've experienced a lot with my desktop environment. I started out with
 GNOME in 2000, but switched soon over to WindowMaker. I stayed with WM
-until 2003 when I switched, so far for the last time, to Fluxbox. 
+until 2003 when I switched, so far for the last time, to Fluxbox.
 
 In Fluxbox, I've set up a 4x2 grid of workspaces, thinking of the
 first row as my "primary" row of tasks, with the row above as a
@@ -48,7 +48,7 @@ IDEA for debugging Java applications so I put it on =emacs2=.
 
 ** files
 SSH sessions to various servers, file browsers and  the like.
- 
+
 * Mail
 Sadly, many, many companies use Microsoft's Exchange server solution
 for their mail, calendar and user database. If the (Windows)
@@ -112,7 +112,7 @@ laptop.
 
 When working, I use a long playlist and just bind shortcuts for next,
 previous and pause/resume. I never use a graphical music player when
-working, it's just distracting and sucks system resources unnecessary. 
+working, it's just distracting and sucks system resources unnecessary.
 
 At home, I use the [[http://gmpclient.org/][gmpc]] graphical frontend and to control =mpd= from
 my mobile phone, I use [[https://play.google.com/store/apps/details?id=com.namelessdev.mpdroid&hl=en][mpdroid]]. =mpdroid= does a fine job at it. It
@@ -144,7 +144,7 @@ SVG or PNG of your diagram.
 
 =blockdiag= is really fast, makes nice looking diagrams and allows you
 to check your diagrams into version control systems in a meaningful
-way (since it's all just text files). 
+way (since it's all just text files).
 
 The killer feature, though, is in my opinion that you can _generate_
 documentation by e.g. writing a BASH script which looks for all the
@@ -157,7 +157,7 @@ need an updated version of it.
 ** Whenever I prefer to point and click
 A few times I venture back to [[https://projects.gnome.org/dia/][Dia]] (I've used this for many years) or
 use the diagram editor in [[http://docs.google.com][Google Docs]].
-** Office 
+** Office
 I don't author that many office documents, but when I do, or when I
 need to open any of the Microsoft Office formats, I normally find
 [[http://libreoffice.org][LibreOffice]] more than adequate for the job.
