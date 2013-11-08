@@ -1,4 +1,4 @@
-#+title: My Desktop
+#+title: The Way I work
 This is a story about how I have set up my computer to work
 efficiently in a typical modern office environment where I have to
 have flawless interaction with a plethora of systems, including the
@@ -74,9 +74,29 @@ outlook -> davmail -> offlineimap -> mu4e
 #+end_src
 
 * The programs I use
-** Organising pictures
-Shotwell, gthumb plus two commands I've written called
-=import-pictures= and =upload-to-picasa=.
+** Pictures
+*** Organising pictures
+I've written called =import-pictures= and =upload-to-picasa= which
+manages all of my picture organisation. =import-pictures= imports my
+pictures from my camera and puts them in a directory structure of my
+liking. I.e.:
+#+begin_src text
+~/pictures/2013/2013-11/DCM_1000.JPG
+~/pictures/2013/2013-11/DCM_1001.JPG
+~/pictures/2013/2013-11/DCM_1002.JPG
+#+end_src
+
+*** Uploading pictures to Picasa
+=upload-to-picasa= uploads pictures in a given directory to albums
+with names corresponding to the time the pictures where taken. For
+instance, for a picture taken the 17th of May 2013, =upload-to-picasa= will
+create an album called "May 2013" if it doesn't already exist and then
+uploads the pictures to that album.
+
+*** Browsing pictures
+To browse my pictures, I really like gThumb and Shotwell. gthumb is
+the faster of the two so I tend to prefer it, although Shotwell is a
+tad slicker and more polished.
 
 ** Editing images
 GIMP
@@ -86,10 +106,26 @@ LibreOffice
 
 ** Music
 *** Playing
-MPD with the gmpc frontend.
+I use the [[http://www.musicpd.org/][MPD]] music server on all my computers. It works well both as
+a living room music solution and a stand alone music player on your
+laptop.
+
+When working, I use a long playlist and just bind shortcuts for next,
+previous and pause/resume. I never use a graphical music player when
+working, it's just distracting and sucks system resources unnecessary. 
+
+At home, I use the [[http://gmpclient.org/][gmpc]] graphical frontend and to control =mpd= from
+my mobile phone, I use [[https://play.google.com/store/apps/details?id=com.namelessdev.mpdroid&hl=en][mpdroid]]. =mpdroid= does a fine job at it. It
+looks pretty and gives access to most things that I want. The only
+problem with =mpdroid= is that it crashes often, but since it's a
+remote control and not the music player itself, it's not a problem.
+
 *** Ripping & encoding
-Grip is still the best ripper and encoder out there
-*** Fixing id3 tags
+[[http://en.wikipedia.org/wiki/Grip_(software)][Grip]] is still the best ripper and encoder out there. It doesn't
+complain if you want to rip MP3s and not OGGs, it let's you specify
+the exact format of the output files and generally speaking, it
+doesn't get on my nerves by insisting on doing something one
+particular way.
 
 
 ** Browsing the web
@@ -99,5 +135,36 @@ Opera, Google Chrome and Iceweasel (Firefox).
 Skype & GTalk in Chrome.
 
 ** Diagrams
-For the most part I use blockdiag. A few times I venture back to DIA
-or use the diagram editor in Google Docs.
+*** blockdiag
+For the most part I use [[http://blockdiag.com/en/blockdiag/][blockdiag]]. It's a text format for describing
+diagrams by writing code instead of using a mouse. Once you're done
+entering the entities of your diagram (the boxes), you define the
+relation ship between them and let =blockdiag= generate a nice looking
+SVG or PNG of your diagram.
+
+=blockdiag= is really fast, makes nice looking diagrams and allows you
+to check your diagrams into version control systems in a meaningful
+way (since it's all just text files). 
+
+The killer feature, though, is in my opinion that you can _generate_
+documentation by e.g. writing a BASH script which looks for all the
+current servers running on your machine and then generates the
+=blockdiag= text filed, from which =blockdiag= generates the final
+diagram. Now, you've got a system architecture diagram which _never_
+needs to become out of date. You just re-run the script whenever you
+need an updated version of it.
+
+** Whenever I prefer to point and click
+A few times I venture back to [[https://projects.gnome.org/dia/][Dia]] (I've used this for many years) or
+use the diagram editor in [[http://docs.google.com][Google Docs]].
+** Office 
+I don't author that many office documents, but when I do, or when I
+need to open any of the Microsoft Office formats, I normally find
+[[http://libreoffice.org][LibreOffice]] more than adequate for the job.
+
+LibreOffice is a beautiful, professional suite of programs that are
+constantly updated and improved upon by a large community.
+
+When I do need to write some documents (and I'm not writing them in
+Org, HTML, XML or LaTeX) I often use Google Docs as it has excellent
+collaboration super powers up its sleeve.
