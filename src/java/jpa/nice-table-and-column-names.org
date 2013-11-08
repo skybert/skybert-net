@@ -6,7 +6,7 @@ called =RollerCoasterCar=, I want the table to be called
 =roller_coaster_car=. This is easy to accomplish with this bit of
 configuration in your =persistence.xml=:
 
-#begin_src nxml
+#+begin_src nxml
 <persistence>
   <persistence-unit>
     <properties>
