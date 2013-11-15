@@ -1,0 +1,43 @@
+#+title: Non Greedy Matching in sed
+
+If you've used =sed= for a while, you've probably encountered the
+problem that all your (group) matches are greedy. This is easy to
+illustrate with an example:
+
+Say you have some Org mode markup that you want to convert into HTML:
+
+#+begin_src text
+The =java.util.HashMap= and =java.util.ArrayList= classes are great!
+#+end_src
+
+To convert this into HTML, you'd typically create groups and wrap
+these two inside =<code>= elements:
+
+#+begin_src sh
+echo $string | sed 's#.*\(=.*=\)#<code>\1</code>#g'
+#+end_src
+
+However, =sed= will always do a greedy search, matching the _longest_
+possible match, not yielding the result you desired:
+
+#+begin_src nxml
+The <code>java.util.HashMap= and =java.util.ArrayList</code> classes are great!
+#+end_src
+
+** The solution
+What you need to do, is to match against everything _but_ the closing
+delimiter, in our case, the '='. This is done with the character group
+notation and the negator =^= in front of the closing delimiter:
+
+#+begin_src sh
+echo $string | sed 's#.*\([^=]*\)#<code>\1</code>#g'
+#+end_src
+
+Now, we get what we want, both the java classes wrapped in HTML
+=<code>= elements:
+
+#+begin_src sh
+echo 'The =java.util.HashMap= and =java.util.ArrayList= classes are great!' | sed 's#\=\([^=]*\)=#<code>\1</code>#g'
+The <code>java.util.HashMap</code> and <code>java.util.ArrayList</code> classes are great!
+#+end_src
+
