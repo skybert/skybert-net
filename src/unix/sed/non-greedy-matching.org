@@ -19,7 +19,7 @@ echo 'The @HashMap@ and @ArrayList@ classes are great!' | sed 's#@\(.*\)@#<code>
 #+end_src
 
 However, =sed= will always do a greedy search, matching the _longest_
-possible match, not quiet yielding the result you wanted:
+possible match, not quiet yielding the result you want:
 
 #+begin_src nxml
 The <code>HashMap@ and @ArrayList</code> classes are great!
@@ -34,7 +34,7 @@ notation and the negator =^= in front of the closing delimiter:
 @\([^@]*\)@
 #+end_src
 
-Now, we get what we want, both the java classes wrapped in HTML
+Now, we get what we want with both java classes wrapped in HTML
 =<code>= elements:
 
 #+begin_src sh
