@@ -19,7 +19,7 @@ echo 'The @HashMap@ and @ArrayList@ classes are great!' | sed 's#@\(.*\)@#<code>
 #+end_src
 
 However, =sed= will always do a greedy search, matching the _longest_
-possible match, not quiet yielding the result you want:
+possible match, not quite yielding the result you want:
 
 #+begin_src nxml
 The <code>HashMap@ and @ArrayList</code> classes are great!
