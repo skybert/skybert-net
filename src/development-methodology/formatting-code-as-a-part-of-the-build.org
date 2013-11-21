@@ -1,0 +1,113 @@
+#+title: Formatting source code as a part of the build
+
+After more than 10 years of Java development, I've come to the
+conclusion that enforcing coding standards is close to
+impossible.
+
+You either have to have a team solely made up of old school
+programmers or open source hackers keen on every detail, every bit and
+byte. Then it works because this lot read and respect standards (they
+read the RFC 2616 if they wonder which HTTP status codes to return
+from their servlets), including the coding standard. They may disagree
+with it. Furiously. But still, they respect it and commit code
+that always adheres to it.
+
+But the truth is that many Java developers can't be bothered. Some
+even don't look at their local =diff= before pushing their changes to
+the code repository! At first I was appalled, but now I'm starting to
+descend into apathy.
+
+_Can't you just let it be?_ some say, or _is it so important?_ others
+wonder. And my answer is: no, I can't let it be because it's in my
+gut, I _care_ about code. I think good code is beautiful. I _love_
+code - when it's good craftsman ship. Therefore, I want the code to
+look good, not just the GUI. Heck, to the programmer, me, the code
+_is_ the interface through which I interact the most with whichever
+program I work on. Therefore, the code should look good too.
+
+And for the second question: does it matter? Yes, it does. Code
+history is important. Sometimes it's instrumental to figuring out why
+your program at some point in time acted weirdly. Having reliable code
+history, telling the story of who changed what line of code when (and
+not, when was the file last messed up by someone re-formatting the
+whole thing in his/her IDE) can solve hard questions like "for exactly
+how long have we have this bug in our system?".
+
+That is not to mention you know who wrote what component. I don't
+believe in the notion that "The team" does everything, that "The team"
+wrote the code. No. Teams a great and important, but within the team,
+there are individuals. People. People who take care and pride in the
+code they write. And therefore, their signature, their coding style,
+shouldn't get washed away just because some one hit =Ctrl-Shif-f=.
+
+So, instead of educating people to read, understand and adhere to
+coding guidelines, I've started venturing down a different path: make
+code formatting a part of the build.
+
+** How to set it up
+
+First off, install Eclipse and use its nice GUI for creating the
+coding style you want. Then, export it to an XML file, say
+=eclipse-coding-style.xml=
+
+Now, add the excellent [[http://maven-java-formatter-plugin.googlecode.com][Maven Java Formatter plugin]] to your Maven
+build setup like this:
+
+#+begin_src nxml
+<project>
+[..]
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.googlecode.maven-java-formatter-plugin</groupId>
+        <artifactId>maven-java-formatter-plugin</artifactId>
+        <version>0.4</version>
+        <configuration>
+          <configFile>
+            ${project.basedir}/src/main/resources/eclipse-coding-style.xml
+        </configFile>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>format</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
+#+end_src
+
+With this in place, the project code is formatting according to the
+coding style XML file every time you run =mvn compile=.
+
+It's also possible to invoke explicitly with:
+#+begin_src text
+$ mvn java-formatter:format
+[..]
+[INFO] --- maven-java-formatter-plugin:0.4:format (default) @ code-format ---
+[INFO] Using 'UTF-8' encoding to format source files.
+[INFO] Number of files to be formatted: 5
+[INFO] Successfully formatted: 1 file(s)
+[INFO] Fail to format        : 0 file(s)
+[INFO] Skipped               : 4 file(s)
+[INFO] Approximate time taken: 1s
+#+end_src
+
+Great stuff.
+
+There's still the problem that some might disable the plugin, but all
+developers I've worked with runs maven from the command line at least
+a couple of times a day (even though their IDEA compiles the files
+for them, or JRebel reloads the classes in the app server), so it
+shouldn't be much of a problem in practice.
+
+The final step would be to call the =mvn java-formatter= as a part of
+a commit hook, but I'm a bit hesitant about that one, so I'll leave
+it like this for now. A great improvement upon the typical
+type-n-format-n-commit feast, nevertheless.
+
+Happy coding!
+
