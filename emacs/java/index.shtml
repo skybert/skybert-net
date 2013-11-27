@@ -174,7 +174,7 @@
         the project's coding standard (e.g. the Sun Java coding
         standard) and PMD detects unused code, bad design patterns,
         unnecessary constructs as well as duplicate code segments in
-        your source tree.    
+        your source tree.
       </p>
       <p>
         Using <a href="http://flymake.sf.net/">flymake</a> and a <a
@@ -235,16 +235,6 @@
       </p>
       <pre>$ ls /opt/eclipse
 lrwxrwxrwx 1 root root 14 Sep 29 00:57 /opt/eclipse -> eclipse-4.2.1</pre>
-      <p>
-        We're not quite done with Eclipse yet as it doesn't have
-        proper support for Maven out of the box. We're now in 2012,
-        but Maven is still no first class citizen in Eclipse. If
-        someone can explain why, I'd be interested in listening. Be
-        that as it may, while we're in set up mode, install the <a
-        href="http://eclipse.org/m2e">m2e plugin</a> for Eclipse. This
-        makes Eclipse treat Maven more or less in the same way as the
-        ubiquitous Intellij IDEA.
-      </p>
       <h3>eclim</h3>
       <p>
         Next stop is the excellent "Eclipse to Any Editor" bridge
