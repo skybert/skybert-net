@@ -11,7 +11,10 @@ instead, so that you just can do =ssh orange.example.net=, you can
 put the following in your =~/.ssh/config=.
 
 #+begin_src text
-Host *.example.com, orange.example.net
+Host *.example.com
+User john.doe
+
+Host orange.example.net
 User john
 #+end_src
 

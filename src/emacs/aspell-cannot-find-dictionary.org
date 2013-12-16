@@ -1,0 +1,12 @@
+#+title: Cannot find dictionary
+
+#+begin_src text
+Starting new Ispell process [aspell::norsk] ...
+cond: Error: The file "/usr/lib/aspell/norsk" is not in the proper format.
+#+end_src
+
+** Solution
+#+begin_src text
+# cd /usr/lib/aspell
+# ln -s norwegian.alias norsk.alias
+#+end_src
