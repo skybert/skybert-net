@@ -12,7 +12,7 @@ put the following in your =~/.ssh/config=.
 
 #+begin_src text
 Host *.example.com
-User john.doe
+User john
 
 Host orange.example.net
 User john
