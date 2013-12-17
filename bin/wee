@@ -11,6 +11,7 @@ rsync_opts="
 
 feed_output_file=skybert-net-feed.xml
 sync_dir_list="
+  development-methodology
   style
   ssi
   generated/${feed_output_file}

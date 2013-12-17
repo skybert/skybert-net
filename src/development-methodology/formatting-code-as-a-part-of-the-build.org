@@ -1,16 +1,31 @@
 #+title: Formatting source code as a part of the build
 
 After more than 10 years of Java development, I've come to the
-conclusion that enforcing coding standards is close to
-impossible.
+conclusion that enforcing coding standards is nearly impossible.
 
-You either have to have a team solely made up of old school
+#+begin_src java
+public class InTheMidstOfEverything{
+  public void sigh() {
+    List<String> inconsistentCode= new ArrayList<>( );
+     for (int i<0; i < inconsistentCode.length;i++){
+       while(true) {
+         System.out.println( "Why the randomness?" );
+       }
+       if (enoughPain){
+         becomeProjectManager();
+      }
+     }
+  }
+}
+#+end_src
+
+To avoid this, you need to have a team solely made up of old school
 programmers or open source hackers keen on every detail, every bit and
-byte. Then it works because this lot read and respect standards (they
-read the RFC 2616 if they wonder which HTTP status codes to return
-from their servlets), including the coding standard. They may disagree
-with it. Furiously. But still, they respect it and commit code
-that always adheres to it.
+byte Then it works because this lot reads and respect standards (they
+read RFC 2616 if they wonder which HTTP status codes to return from
+their servlets), including the coding standard. They may disagree with
+it. Furiously. But still, they respect the project's coding standard
+and will always commit code that adheres to it.
 
 But the truth is that many Java developers can't be bothered. Some
 even don't look at their local =diff= before pushing their changes to
@@ -23,7 +38,8 @@ gut, I _care_ about code. I think good code is beautiful. I _love_
 code - when it's good craftsman ship. Therefore, I want the code to
 look good, not just the GUI. Heck, to the programmer, me, the code
 _is_ the interface through which I interact the most with whichever
-program I work on. Therefore, the code should look good too.
+program I work on. Therefore, the code should look good too. It's
+what I spend most of my day looking at.
 
 And for the second question: does it matter? Yes, it does. Code
 history is important. Sometimes it's instrumental to figuring out why
@@ -35,10 +51,11 @@ how long have we have this bug in our system?".
 
 That is not to mention you know who wrote what component. I don't
 believe in the notion that "The team" does everything, that "The team"
-wrote the code. No. Teams a great and important, but within the team,
-there are individuals. People. People who take care and pride in the
-code they write. And therefore, their signature, their coding style,
-shouldn't get washed away just because some one hit =Ctrl-Shif-f=.
+wrote the code. No. Teams are a great and important and all that, but
+within the team, there are individuals. People. People who take care
+and pride in the code they write. And therefore, their signature,
+their coding style, shouldn't get washed away just because some one
+hit =<Ctrl>-<Shift>-F=.
 
 So, instead of educating people to read, understand and adhere to
 coding guidelines, I've started venturing down a different path: make
@@ -65,7 +82,7 @@ build setup like this:
         <configuration>
           <configFile>
             ${project.basedir}/src/main/resources/eclipse-coding-style.xml
-        </configFile>
+          </configFile>
         </configuration>
         <executions>
           <execution>
@@ -80,10 +97,11 @@ build setup like this:
 </project>
 #+end_src
 
-With this in place, the project code is formatting according to the
+With this in place, the project code is formatted according to the
 coding style XML file every time you run =mvn compile=.
 
-It's also possible to invoke explicitly with:
+It's also possible to invoke the code formatter explicitly with this
+command:
 #+begin_src text
 $ mvn java-formatter:format
 [..]
@@ -100,9 +118,10 @@ Great stuff.
 
 There's still the problem that some might disable the plugin, but all
 developers I've worked with runs maven from the command line at least
-a couple of times a day (even though their IDEA compiles the files
-for them, or JRebel reloads the classes in the app server), so it
-shouldn't be much of a problem in practice.
+a couple of times a day (even though their IDE compiles the files for
+them or JRebel reloads the classes in the app server), so it shouldn't
+be much of a problem in practice. Developers will run =mvn compile=
+often enough to make the code formatter omnipresent.
 
 The final step would be to call the =mvn java-formatter= as a part of
 a commit hook, but I'm a bit hesitant about that one, so I'll leave
