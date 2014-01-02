@@ -12,7 +12,7 @@ $ curl http://127.0.0.1:61616/admin
 
 It's because it's not enabled per default. To enable it:
 #+begin_src text
-zcat /usr/share/doc/activemq/examples/conf/jetty.xml.gz > /etc/activemq/instances-available/main/jetty.xml
+# zcat /usr/share/doc/activemq/examples/conf/jetty.xml.gz > /etc/activemq/instances-available/main/jetty.xml
 #+end_src
 You can now refer to it from your activemq.xml:
 #+begin_src nxml
@@ -65,7 +65,7 @@ $ diff -w  activemq.orig activemq
 This was because I didn't have the activemq.username and password in
 my =activemq.xml=
 #+begin_src text
-cat > /etc/activemq/instances-available/main/credentials.properties <<EOF
+$ cat > /etc/activemq/instances-available/main/credentials.properties <<EOF
 activemq.username=foo
 activemq.password=bar
 EOF
@@ -104,4 +104,5 @@ Destination destination = new ActiveMQTopic(subject);
 #+end_src
 
 Need to confirm this, though.
+
 * Why don't two consumers get the same messages?
