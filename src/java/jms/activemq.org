@@ -106,3 +106,39 @@ Destination destination = new ActiveMQTopic(subject);
 Need to confirm this, though.
 
 * Why don't two consumers get the same messages?
+In my case, it was because I used a =queue= as =destination= instead
+of a =topic=:
+#+begin_src java
+// all subscribers will compete for the same messages
+Destination destination = session.createQueue(TOPIC_FLOOD);
+
+// all subscribers get the messages
+Destination destination = session.createTopic(TOPIC_FLOOD);
+#+end_src
+
+* What's the difference between a queue and a topic?
+A =topic= is a =destination= which sends a copy of each message to
+all the =subscribers=.
+
+A =queue= is a destination, which is a =list= of a number of
+=messages= which are sent to the =subscribers= (but they will not all
+get their own copy).
+
+* Why doesn't my consumer get messages from when it was offline?
+In my case, it was because I wasn't using a durable =subscriber=, but
+only a message consumer:
+
+#+begin_src java
+// Only get topic messages when the consumer is online
+messageConsumer = session.createConsumer(destination);
+
+// get topic messages when the from when the consumer was offline
+session.createDurableSubscriber(topic);
+#+end_src
+
+Note that we have to specify topic and not the more general
+=destination= when creating a durable subscriber.
+
+Also note, that if you're using a queue, the consumer will get the
+offline messages as well, so this is only (AFAIK) needed when you've
+got multiple consumers.
