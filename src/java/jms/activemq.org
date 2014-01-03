@@ -142,3 +142,22 @@ Note that we have to specify topic and not the more general
 Also note, that if you're using a queue, the consumer will get the
 offline messages as well, so this is only (AFAIK) needed when you've
 got multiple consumers.
+
+* ActiveMQ start command doesn't work
+The =bin/activemq= command doesn't work for some odd reason.
+
+#+begin_src text
+echo $APID > /opt/apache-activemq-5.9.0/data/activemq-quanah.pid; echo
+"INFO: pidfile created :
+'/opt/apache-activemq-5.9.0/data/activemq-quanah.pid' (pid
+'$APID')";exit $RET: not found
+#=end_src
+
+Luckily, I found that the command residing in
+=bin/linux-x86-64/activemq= works.
+
+This was really annoying, nevertheless. =bin/activemq= should
+work. It's the one that's documented on the ActiveMQ website and it's
+the natural entry point when downloading the tarball. Whether or not
+it needs an architecture specific command, is up to the (entry)
+script itself to determine.
