@@ -1,0 +1,21 @@
+#+title: Migrating from Hibernate version 3 to 4
+
+These are some of my notes while migrating from Hibernate 3.2.x to
+Hibernate 4.2.x.
+
+First off, be sure to read the JBoss migration guide:
+https://community.jboss.org/wiki/HibernateCoreMigrationGuide40
+
+* A wee bit of sed
+Here are some of the pure search and replaces I did:
+#+begin_src text
+$ find -name *.java | xargs sed -f hibernate-3-to-4.sed
+#+end_src
+
+The contents of my =hibernate-3-to-4.sed= are as follows:
+#+begin_src text
+s#org.hibernate.collection.PersistentCollection#org.hibernate.collection.spi.PersistentCollection#g
+s#org.hibernate.engine.SessionImplementor#org.hibernate.engine.spi.SessionImplementor#g
+s#org.hibernate.classic.Session#org.hibernate.Session#g
+#+end_src
+
