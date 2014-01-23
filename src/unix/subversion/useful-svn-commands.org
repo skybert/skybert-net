@@ -1,0 +1,16 @@
+#+title: Useful svn commands
+
+Here are some of my favourite =svn= commands.
+
+* Merge branch back into trunk
+#+begin_src text
+$ cd trunk
+$ svn merge --reintegrate http://svn.skybert.net/my-project/branches/my-branch
+#+end_src
+
+* Keep your branch up to date with changes in trunk
+#+begin_src text
+$ cd branches/my-branch
+$ svn merge http://svn.skybert.net/my-project/trunk
+#+end_src
+
