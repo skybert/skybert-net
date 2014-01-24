@@ -57,3 +57,14 @@ Debian based systems you can install the =git-svn= package to get
 these additional commands, just as you must install the =git=cvs=
 package to get a the CVS compatibility layer.
 
+To get you started, these are the first commands you need:
+#+begin_src text
+# apt-get install git-svn
+$ git svn \
+  --stdlayout \
+  --prefix origin/ \
+  clone \
+  http://svn.skybert.net/my-project/trunk
+#+end_src
+
+
