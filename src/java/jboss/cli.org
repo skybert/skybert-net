@@ -1,5 +1,29 @@
 #+title: JBoss on the command line
+
+* Starting JBoss from the command line
+For development purposes:
 #+begin_src text
-$ cd /opt/jboss
-$ ./bin/jboss-cli.sh -c --controller=app1.example.com
+$ /opt/jboss/bin/standalone.sh
 #+end_src
+
+Starting with an alternate configuration file. This file must be
+relative to the JBoss =configuration= directory.
+#+begin_src text
+$ /opt/jboss/bin/standalone.sh --server-config=standalone-full.xml
+#+end_src
+This will use the configuration file
+=/opt/jboss/standalone/standalone-full.xml=
+
+* Starting the JBoss command line interface
+#+begin_src text
+$ cd /opt/jboss/bin/jboss-cli.sh -c --controller=app1.example.com
+#+end_src
+
+* Using the JBoss command line interface
+** Listing all JNDI values
+#+begin_src text
+[standalone@localhost:9999] /subsystem=naming:jndi-view
+#+end_src
+Note, you cannot discover this value by simply changing into the
+=subsystem/naming= directory and do an =ls=, you have to execute this
+whole string as a command in itself.
