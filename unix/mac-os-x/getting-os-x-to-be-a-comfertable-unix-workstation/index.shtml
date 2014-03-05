@@ -1,12 +1,27 @@
 <!--#include virtual="/ssi/header.shtml" -->
     <h1>Getting a proper BASH environment</h1>
     <div id="main">
+       <h2>Using Mac Ports</h2>
       <p>
         First off, install the GNU core utils, GNU awk and GNU sed so
         that we can get most of the basic command line power we're
         used to from GNU/Linux:
       </p>
       <pre>$ sudo port install gawk gsed coreutils</pre>
+      <h2>Using brew</h2>
+      <p>
+         If you're using <code>brew</code> the equivalent is:
+      </p>
+      <pre>
+         $ sudo brew install coreutils gnu-tar gnu-sed gawk
+      </pre>
+      <p>
+         Read <a
+         href="http://apple.stackexchange.com/questions/69223/how-to-replace-mac-os-x-utilities-with-gnu-core-utilities">this
+         article</a> for more instructions on how to install GNU
+         coreutils using brew.
+      </p>
+      <h2>Preferring GNU coreutils over BSD utils</h2>
       <p>
         Prefer GNU core utils over the ancient BSD utils that come
         with Mac. Add this to your <code>.bashrc</code>:
@@ -29,9 +44,9 @@
       <h2>Emacs<h2>
       <p>
         Install the latest, full graphical GNU Emacs and let it answer
-        to the standard <code>/usr/bin/emacs</code>:  
+        to the standard <code>/usr/bin/emacs</code>:
       </p>
       <pre>$ sudo mv /usr/bin/emacs /usr/bin/emacs.mac-os-x
-$ sudo ln -s /Applications/Emacs.app/Contents/MacOS/Emacs /usr/bin/emacs</pre>      
+$ sudo ln -s /Applications/Emacs.app/Contents/MacOS/Emacs /usr/bin/emacs</pre>
     </div>
 <!--#include virtual="/ssi/footer.shtml" -->
