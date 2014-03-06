@@ -1,4 +1,4 @@
-#+title: How to determine if your hard drive is SSD or not 
+#+title: How to determine if your hard drive is SSD or not
 
 It's easy and elegant on Linux, you can just do:
 

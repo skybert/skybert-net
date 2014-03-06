@@ -1,7 +1,7 @@
-#+title: Hibernate Profiling 
+#+title: Hibernate Profiling
 
 Starting with Hibernate 3.6.0, you get basic profiling out of the
-box. First, set logging on =org.hibernate.stat at least= to TRACE. 
+box. First, set logging on =org.hibernate.stat at least= to TRACE.
 
 Secondly, set the JVM parameter =hibernate.generate_statistics= to
 =true=. That's it, you should now get log entries for all the SQL
@@ -9,6 +9,4 @@ queries Hibernate makes, together with execution times and more to
 boot.
 
 You'll also get a JMX interface turned on with this so that you can
-browse more statistical information in your favourite JMX browser. 
-
-
+browse more statistical information in your favourite JMX browser.
