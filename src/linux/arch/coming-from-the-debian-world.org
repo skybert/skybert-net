@@ -1,0 +1,12 @@
+#+title: Coming to Arch from Debian
+
+Here are some things I've noticed as different and interesting when starting using
+Arch after 12-13 years of using Debian GNU/Linux.
+
+* Where's the system logs
+
+There are very few familiar logs in =/var/log=. To know what's going on, you can tail the system log  by using the =journalctl= command:
+#+begin_src text
+$ journalctl -f
+#+end_src
+

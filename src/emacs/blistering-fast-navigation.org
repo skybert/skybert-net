@@ -9,6 +9,8 @@ faster in Emacs as it not only auto completes whatever you do with
 =M-x=, but it also remembers what you did previously, listing often
 used commands at the top.
 
+[[/graphics/2014/emacs-smex.gif][Emacs using smex for minibuffer completion]]
+
 * Out of the box IDO setup for all your project
 Install =projectile= and get automatic setup of IDO for all your
 projects.
@@ -30,12 +32,16 @@ an even better IDO experience:
 - =ido-vertical-mode=
 - =ido-ubiquitous=
 
+[[../../graphics/2014/emacs-projectile.gif][Emacs projectile]]
+
 To see my full IDO & friends setup, check out my settings
 here: https://github.com/skybert/my-little-friends/blob/master/emacs/.emacs.d/tkj-smart-file-name-completion.el
 
 * Find file at point
 It's a breeze navigating referenced files in your configuration files
 using the built-in =find-file-at-point=.
+
+[[../../graphics/2014/emacs-find-file-at-point.gif][Emacs find-file-at-point]]
 
 * Word completion
 In addition to the built-in =dabbrev-expand= which will expand any
