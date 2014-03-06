@@ -83,14 +83,14 @@ function wee_feed() {
       mkdir -p ${dir}
   fi
 
-  cd $HOME/src/common-bashing/src/org2atom
+  cd $HOME/src/moria/src/org2atom
   ./org2atom $HOME/src/skybert-net/src | \
     xmllint --format - \
     > ${dir}/${feed_output_file}
 }
 
 function wee_generate() {
-  cd $HOME/src/common-bashing/src/org2html
+  cd $HOME/src/moria/src/org2html
   ./org2html
 }
 
