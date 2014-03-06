@@ -27,3 +27,25 @@ $ cd /opt/jboss/bin/jboss-cli.sh -c --controller=app1.example.com
 Note, you cannot discover this value by simply changing into the
 =subsystem/naming= directory and do an =ls=, you have to execute this
 whole string as a command in itself.
+** Adding a security domain
+#+begin_src ruby
+/subsystem=security/security-domain=my-security-domain/:add(cache-type=default)
+/subsystem=security/security-domain=my-security-domain/authentication=classic:add( \
+  login-modules=[ \
+    { \
+      "code" => "UsersRoles", \
+      "flag" => "required", \
+      "module-options"=>[ \
+        ("usersProperties" => "my-security-domain-users.properties"), \
+        ("rolesProperties"=>"my-security-domain-roles.properties"), \
+        ("unauthenticatedIdentity"=>"nobody") \
+      ] \
+    } \
+  ] \
+)
+#+end_src
+
+** Remove a security domain
+#+begin_src ruby
+/subsystem=security/security-domain=my-security-domain/:remove
+#+end_src
