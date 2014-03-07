@@ -44,6 +44,37 @@ s#org.jboss.resource.adapter.jdbc.ValidConnectionChecker#org.jboss.jca.adapters.
 s#org.jboss.resource.adapter.jdbc.ExceptionSorter#org.jboss.jca.adapters.jdbc.spi.ExceptionSorter#g
 #+end_src
 
+** Debugging problems with global modules
+Often, you want to add global JBoss modules to make libraries
+available to multiple applications. If these modules have
+dependencies on other modules, this must be explicitly declared.
+
+Here's an example of a module which lacks a dependency in its
+=module.xml=:
+#+begin_src text
+  Caused by: java.lang.ClassNotFoundException:
+  org.xml.sax.helpers.DefaultHandler from [Module "net.sf.ehcache:main"
+  from local module loader @29db197 (finder: local module finder
+  @3ef631d8 (roots:
+  /opt/jboss-eap-6.2/modules,/opt/jboss-eap-6.2/modules/system/layers/base))]
+#+end_src
+
+It turned out that the module's descriptor in
+=/opt/jboss-eap-6.2/modules/net/sf/ehcache/main/module.xml=
+missed some dependencies.
+
+I always use [[https://github.com/skybert/moria/blob/master/src/java/find-jar][find-jar]] for locating the JARs containing any missing
+classes, resource bundles or XML descriptors. It works a lot like GNU
+=find=:
+
+#+begin_src text
+$ find /opt/jboss-eap-6.2 org.xml.sax.helpers.DefaultHandler
+#+end_src
+
+It not only will list any JAR files containing the class in question,
+it will also present any matching results within that JAR file (se
+it's *much* better than =grep -r org.xml.sax.helpers.DefaultHandler <dir>)=
+
 
 
 
