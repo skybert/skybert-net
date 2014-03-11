@@ -35,10 +35,10 @@ whole string as a command in itself.
     { \
       "code" => "UsersRoles", \
       "flag" => "required", \
-      "module-options"=>[ \
+      "module-options" => [ \
         ("usersProperties" => "my-security-domain-users.properties"), \
-        ("rolesProperties"=>"my-security-domain-roles.properties"), \
-        ("unauthenticatedIdentity"=>"nobody") \
+        ("rolesProperties" => "my-security-domain-roles.properties"), \
+        ("unauthenticatedIdentity" => "nobody") \
       ] \
     } \
   ] \
@@ -49,3 +49,9 @@ whole string as a command in itself.
 #+begin_src ruby
 /subsystem=security/security-domain=my-security-domain/:remove
 #+end_src
+
+** List all resources of a running JBoss instance
+#+begin_src text
+:read-resource(include-runtime=true, recursive=true)
+#+end_src
+Gives you a JSON structure which gives 

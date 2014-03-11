@@ -39,3 +39,20 @@ the error:
 $ git tag -d 1.10.1
 $ git push origin :refs/tags/1.10.1
 #+end_src
+* Preferring our or their version of files
+Sometimes, you're not interested in the conflicts Git presents you
+with. You _know_ which version is right. In this case, you can apply
+the =-X <strategy>= flag. The two strategies I find useful in this
+context, is =ours= and =theirs=.
+
+For instance, you're cherry picking a commit which has a lot of
+conflicts with the version in your local branch. However, you want
+the cherry picked commit to be preferred every time there's a
+conflict. You can then do:
+#+begin_src text
+$ git cherry-pick -X theirs a4376d6946db12620116fa58786739d47a97a6f2
+#+end_src
+
+Check out =man git-merge= and search for =--strategy-option= for more
+on this topic.
+
