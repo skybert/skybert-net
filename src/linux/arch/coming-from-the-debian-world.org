@@ -10,3 +10,12 @@ There are very few familiar logs in =/var/log=. To know what's going on, you can
 $ journalctl -f
 #+end_src
 
+
+* Finding all files installed by a package
+On Debian, =dpkg -S <package>= is a great way of finding the files
+belonging to a particular package.
+
+On Arch, the equivalent is:
+#+begin_src text
+$ pacmas -Qlq <package>
+#+end_src
