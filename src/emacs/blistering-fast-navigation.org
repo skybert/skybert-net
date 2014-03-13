@@ -34,8 +34,7 @@ an even better IDO experience:
 
 [[../../graphics/2014/emacs-projectile.gif][Emacs projectile]]
 
-To see my full IDO & friends setup, check out my settings
-here: https://github.com/skybert/my-little-friends/blob/master/emacs/.emacs.d/tkj-smart-file-name-completion.el
+To see my full IDO & friends setup, [[https://github.com/skybert/my-little-friends/blob/master/emacs/.emacs.d/tkj-smart-file-name-completion.el][check out my settings here]]:
 
 * Find file at point
 It's a breeze navigating referenced files in your configuration files
@@ -50,12 +49,13 @@ package and turn it on in all modes. It gives you a nice intellisense
 like menu where you can auto complete any word/method name that you
 have in a buffer.
 
+[[../../graphics/2014/emacs-auto-complete-mode.gif][Emacs auto complete mode]]
+
 * Sentence & block completion
 The built-in =hippie-expand= will let you auto complete previously
 written blocks of code, or indeed sentences.
 
 * Summary
 With these packages in place, you will dramatically improve the speed
-with which you fly through your Emacs windows and buffers.
+with which you fly through your Emacs windows and buffers!
 
-Happy hacking!
