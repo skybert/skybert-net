@@ -32,4 +32,4 @@ apt-get upgrade= for on Debian) is easily accomplished with:
 
 Note that Arch is a rolling release distro, so there's no
 differentiation between =apt-get upgrade= and =apt-get dist-upgrade=
-in Arch parle.
+in Arch parlance.
