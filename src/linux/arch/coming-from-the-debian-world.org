@@ -16,6 +16,20 @@ On Debian, =dpkg -S <package>= is a great way of finding the files
 belonging to a particular package.
 
 On Arch, the equivalent is:
+
 #+begin_src text
 $ pacmas -Qlq <package>
 #+end_src
+
+* How to do an apt-get upgrade
+Staying up to date on security patches as well as up to date software
+packages in terms of features (what you'd do =apt-get update &&
+apt-get upgrade= for on Debian) is easily accomplished with:
+
+#+begin_src text
+# pacman -Syu
+#+end_src
+
+Note that Arch is a rolling release distro, so there's no
+differentiation between =apt-get upgrade= and =apt-get dist-upgrade=
+in Arch parle.
