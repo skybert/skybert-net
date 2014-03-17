@@ -4,7 +4,7 @@ Whatever you use Emacs for, you'll definitely want these packages set
 up to get blistering fast code and file navigation.
 
 * Blistering fast M-x
-Install =smex= and you'll never look back. It makes you so much
+Install [[http://www.emacswiki.org/emacs/Smex][smex]] and you'll never look back. It makes you so much
 faster in Emacs as it not only auto completes whatever you do with
 =M-x=, but it also remembers what you did previously, listing often
 used commands at the top.
@@ -12,7 +12,7 @@ used commands at the top.
 [[/graphics/2014/emacs-smex.gif][Emacs using smex for minibuffer completion]]
 
 * Out of the box IDO setup for all your project
-Install =projectile= and get automatic setup of IDO for all your
+Install [[http://www.emacswiki.org/emacs/Projectile][projectile]] and get automatic setup of IDO for all your
 projects.
 
 Projectile will also give you other project specialised features such
@@ -28,9 +28,9 @@ All of this for free. No setup required.
 
 While you're at it, also consider installing these packages for
 an even better IDO experience:
-- =flx-ido=
-- =ido-vertical-mode=
-- =ido-ubiquitous=
+- [[https://github.com/lewang/flx][flx-ido]]
+- [[https://github.com/gempesaw/ido-vertical-mode.el][ido-vertical-mode]]
+- [[https://github.com/technomancy/ido-ubiquitous][ido-ubiquitous]]
 
 [[../../graphics/2014/emacs-projectile.gif][Emacs projectile]]
 
