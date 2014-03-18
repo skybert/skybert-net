@@ -35,3 +35,12 @@ If your webapps use [[http://cxf.apache.org][CXF]], the easiest way to get them 
 disable the =webservices= subsystem in JBoss. See the
 [[https://cxf.apache.org/docs/application-server-specific-configuration-guide.html#ApplicationServerSpecificConfigurationGuide-JBossApplicationServer][CXF documentation]] for further details.
 
+#+begin_src text
+<jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
+    <deployment>
+        <exclude-subsystems>
+            <subsystem name="webservices" />
+        </exclude-subsystems>
+    </deployment>
+</jboss-deployment-structure>
+#+end_src
