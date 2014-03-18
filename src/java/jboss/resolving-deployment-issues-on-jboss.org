@@ -32,8 +32,7 @@ repository for the artifact you need to add to your POM.
 
 ** CXF
 If your webapps use [[http://cxf.apache.org][CXF]], the easiest way to get them working is to
-disable the =webservices= subsystem in JBoss. See the
-[[https://cxf.apache.org/docs/application-server-specific-configuration-guide.html#ApplicationServerSpecificConfigurationGuide-JBossApplicationServer][CXF documentation]] for further details.
+disable the =webservices= subsystem in JBoss.
 
 #+begin_src text
 <jboss-deployment-structure xmlns="urn:jboss:deployment-structure:1.2">
@@ -44,3 +43,5 @@ disable the =webservices= subsystem in JBoss. See the
     </deployment>
 </jboss-deployment-structure>
 #+end_src
+
+See the [[https://cxf.apache.org/docs/application-server-specific-configuration-guide.html#ApplicationServerSpecificConfigurationGuide-JBossApplicationServer][CXF documentation]] for further details.
