@@ -40,6 +40,11 @@ need to press to select either of them: =tc= (their version) or =mc=
 $ svn diff -r <revision>
 #+end_src
 
+To just see the files that were changed, so:
+#+begin_src text
+$ svn diff --summarize -c <revision>
+#+end_src
+
 * Using Git as a frontend for Subversion
 If you're like me and prefer using Git over Subversion, there's an
 easy, secure way of doing this using the command set =git svn <command>=.
@@ -50,7 +55,7 @@ run through of the usual use cases::
 http://viget.com/extend/effectively-using-git-with-subversion and this
 chapter from the Git book gives you the rest of the overview:
 http://git-scm.com/book/ch8-1.html
-  
+
 Please note that the =svn= compatibility set of commands might not be
 installed on your computer with the standard Git distribution. on
 Debian based systems you can install the =git-svn= package to get
