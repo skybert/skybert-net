@@ -3,13 +3,14 @@
 Here are some things I've noticed as different and interesting when starting using
 Arch after 12-13 years of using Debian GNU/Linux.
 
-* Where's the system logs
+* Where are the system logs?
 
-There are very few familiar logs in =/var/log=. To know what's going on, you can tail the system log  by using the =journalctl= command:
+There are very few familiar logs in =/var/log=. To know what's going
+on, you can tail the system log  by using the =journalctl= command:
+
 #+begin_src text
 $ journalctl -f
 #+end_src
-
 
 * Finding all files installed by a package
 On Debian, =dpkg -S <package>= is a great way of finding the files
@@ -33,3 +34,45 @@ for on Debian) is easily accomplished with:
 Note that Arch is a rolling release distro, so there's no
 differentiation between =apt-get upgrade= and =apt-get dist-upgrade=
 in Arch parlance.
+* Where are the changelogs?
+One thing I find _much_ better on Debian is the availability of
+changelogs. Whatever the package, I know I can always find its
+documentation, including the changelog in =/usr/share/doc/<package>=.
+
+With Arch however, there is no such thing. There is a command,
+=pacman -Qc <package>= which gives you the change log if it's
+available, but no packages I've tried (including big ones such as =coreutils=,
+=firefox= and =emacs=) have any, so at the time of writing, my
+conclusion is that there is no changelogs available on your Arch
+system.
+
+The best source for Arch change logs I found is browsing the Git (or
+SVN to Git) [[https://projects.archlinux.org/svntogit/packages.git][repository available at projectsarchlinux.org]] So, to
+browse the changelog for =firefox=, you may browse:
+[[https://projects.archlinux.org/svntogit/packages.git/log/trunk/PKGBUILD?h=packages/firefox][projects.archlinux.org/svntogit/packages.git/log/trunk/PKGBUILD?h=packages/firefox]]
+
+However, I settled for a different approach since I like to have
+everything available at the command line. After all, that's where I
+do all the package management. Therefore, I clone and track the
+=packages= Git repository where all the Arch build descriptors are
+hosted:
+
+#+begin_src text
+$ git clone  git://projects.archlinux.org/svntogit/packages.git arch-packages
+#+end_src
+
+Then, to see the Arch changes to a given package (not the upstream
+changes, mind you), I do:
+#+begin_src text
+$ cd arch-packages
+$ git log -p firefox/trunk
+#+end_src
+
+Using the =-p= parameter I got the diff as well as the commit message
+of each individual commit.
+
+As with regular Git repositories, I keep it updated with:
+#+begin_src text
+$ cd arch-packages
+$ git pull
+#+end_src
