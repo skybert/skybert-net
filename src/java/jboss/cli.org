@@ -1,22 +1,26 @@
 #+title: JBoss on the command line
+#+options: toc:1
 
 * Starting JBoss from the command line
-For development purposes:
+** With the standard set of modules enabled
 #+begin_src text
 $ /opt/jboss/bin/standalone.sh
 #+end_src
 
-Starting with an alternate configuration file. This file must be
-relative to the JBoss =configuration= directory.
+** With the full stack enabled
+You can also start with an alternate configuration file. This file
+must be relative to the JBoss =configuration= directory.
+
 #+begin_src text
 $ /opt/jboss/bin/standalone.sh --server-config=standalone-full.xml
 #+end_src
+
 This will use the configuration file
-=/opt/jboss/standalone/standalone-full.xml=
+=/opt/jboss/standalone/standalone-full.xml= which loads the full stack.
 
 * Starting the JBoss command line interface
 #+begin_src text
-$ cd /opt/jboss/bin/jboss-cli.sh -c --controller=app1.example.com
+$ cd /opt/jboss/bin/jboss-cli.sh -c
 #+end_src
 
 * Using the JBoss command line interface
@@ -54,4 +58,37 @@ whole string as a command in itself.
 #+begin_src text
 :read-resource(include-runtime=true, recursive=true)
 #+end_src
-Gives you a JSON structure which gives 
+Gives you a JSON structure which basically gives you everything you
+ever wanted to know about your JBoss instance :-)
+* Calling JBoss CLI from the command line
+#+begin_src text
+echo "<cli command>" | /opt/jboss/bin/jboss-cli.sh -c
+#+end_src
+
+* Calling JBoss CLI inside BASH scripts
+If you need to substitute any variables in your CLI commands, wrapping
+these inside BASH commands is a neat solution:
+#+begin_src sh
+local jboss_cli_connect="/opt/jboss-eap-6.2/bin/jboss-cli.sh -c"
+
+for domain_name in ${security_domain_name_list}; do
+  ${jboss_cli_connect} <<EOF
+/subsystem=security/security-domain=${domain_name}/:add(cache-type=default)
+EOF
+done
+#+end_src
+
+* JBoss CLI Caveats
+*** cd ..
+Issuing the command =cd ..= always takes you to the root, not the
+parent directory.
+
+*** Meta shortcuts doesn't work
+The shortcuts are hard coded, so [[http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html][GNU readline]] isn't utilised.
+
+This means all shortcuts like =M-d=, =M-<backspace>=, =M-f= and =M-b=
+don't work.
+
+* Further reading
+- [[https://community.jboss.org/wiki/CommandLineInterface][JBoss Command Line Interface overview]]
+- [[https://docs.jboss.org/author/display/AS71/CLI+Recipes][JBoss CLI Recipes]]
