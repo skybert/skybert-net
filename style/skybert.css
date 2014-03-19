@@ -12,7 +12,7 @@ body {
     margin-right: 10%;
 }
 
-h1, h2 {
+h1 {
     font-family: "Over the Rainbow", Helvetica, sans-serif;
 }
 
@@ -134,19 +134,19 @@ address {
 .grey { color: grey; }
 
 .text-in-columns {
-    -webkit-column-count: 2; 
+    -webkit-column-count: 2;
     -webkit-column-rule: 1px solid #bbb;
     -webkit-column-gap: 2em;
-    -moz-column-count: 2; 
+    -moz-column-count: 2;
     -moz-column-rule: 1px solid #bbb;
     -moz-column-gap: 2em;
-    -o-column-count: 2; 
+    -o-column-count: 2;
     -o-column-rule: 1px solid #bbb;
     -o-column-gap: 2em;
-    -ms-column-count: 2; 
+    -ms-column-count: 2;
     -ms-column-rule: 1px solid #bbb;
     -ms-column-gap: 2em;
-    -column-count: 2; 
+    -column-count: 2;
     -column-rule: 1px solid #bbb;
     -column-gap: 2em;
 }
@@ -231,7 +231,7 @@ out, and ensure the hover appears on top */
     -o-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     box-shadow: 0 3px 6px rgba(0,0,0,.25);
 }
- 
+
 /* On hover, darken the shadows a bit */
 .pictures a:hover img {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
