@@ -29,6 +29,15 @@ dependency can be found in one of the JBoss modules. If it cannot
 find the dependency there, it will go on looking in your local Maven
 repository for the artifact you need to add to your POM.
 
+=find-missing-jboss-module-dependencies= will also report problems
+with any missing files, like when the Spring descriptor is missing:
+
+#+begin_src text
+JBoss module skybert-app-webservice fails because:
+  > class path resource [spring/applicationContext-app-services.xml] cannot be opened because it does not exist
+JBoss module skybert-fruit-webservice fails because:
+  > class path resource [spring/applicationContext-fruit-services.xml] cannot be opened because it does not exist
+#+end_src
 
 ** CXF
 If your webapps use [[http://cxf.apache.org][CXF]], the easiest way to get them working is to
