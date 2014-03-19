@@ -3,7 +3,7 @@
 Except for having to read a good portion of articles related to UEFI
 and GRUB, installing Arch on ASUS Zenbook UX31L was pretty easy
 straight forward. Since I've never used Arch Linux before, there were
-of course some new things to learn, as [[coming-to-arch-from-debian][I've described in this article]],
+of course some new things to learn, as [[../coming-to-arch-from-debian][I've described in this article]].
 but as far installing Arch itself, it was pretty ok thanks to the
 excellent Arch documentation.
 
@@ -16,7 +16,9 @@ is =/dev/sdc=):
 
 #+begin_src text
 $ wget http://mirror.archlinux.no/iso/2014.03.01/archlinux-2014.03.01-dual.iso
-# dd if=archlinux-2014.03.01-dual.iso. of=/dev/sdc
+# dd \
+  if=archlinux-2014.03.01-dual.iso \
+  of=/dev/sdc
 #+end_src
 
 Before booting it, I went into the BIOS, err UEFI, and disabled
@@ -65,6 +67,7 @@ builds and installs just fine.
 I found these articles particularly helpful when installing Arch on
 ASUS Zenbook UX31L:
 
-- https://wiki.archlinux.org/index.php/ASUS_Zenbook_Prime_UX31A
-- https://wiki.archlinux.org/index.php/UEFI
-- https://wiki.archlinux.org/index.php/UEFI_Bootloaders
+- [[https://wiki.archlinux.org/index.php/ASUS_Zenbook_Prime_UX31A][ASUS_Zenbook_Prime_UX31A]]
+- [[https://wiki.archlinux.org/index.php/UEFI][UEFI]]
+- [[https://wiki.archlinux.org/index.php/UEFI_Bootloaders][UEFI_Bootloaders]]
+
