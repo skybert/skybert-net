@@ -141,8 +141,8 @@ parent directory.
 *** Meta shortcuts doesn't work
 The shortcuts are hard coded, so [[http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html][GNU readline]] isn't utilised.
 
-This means all shortcuts like =M-d=, =M-<backspace>=, =M-c= and =M-u=
-don't work.
+This means all shortcuts like =Alt-d=, =Alt-<backspace>=, =Alt-c= and
+=Alt-u= don't work.
 
 *** Ctrl-c exits the shell
 I find this really annoying, =Ctrl-d=, =exit= or =quit= should be
