@@ -76,16 +76,28 @@ The dependencies are the names of other JBoss modules as can be found
 in =/opt/jboss/modules=.
 
 * Calling JBoss CLI from the command line
+** Using pipes
 JBoss CLI can read from standard input, which makes for easy UNIX piping:
 #+begin_src text
 echo "<cli command>" | /opt/jboss/bin/jboss-cli.sh -c
 #+end_src
 
-Or you can pass the CLI command directly or using the ==--command== parameter:
+** Passing the commands directly to jboss-cli
+You can pass the CLI command directly or using the ==--command== parameter:
 #+begin_src text
 /opt/jboss/bin/jboss-cli.sh -c "read-attribute server-state"
 /opt/jboss/bin/jboss-cli.sh -c --command="read-attribute server-state"
 #+end_src
+
+* An alias of convenience
+This wee alias saves me a fair bit of typing every day:
+
+#+begin_src sh
+# .bashrc
+alias jboss-cli="/opt/jboss/bin/jboss-cli.sh -c"
+#+end_src
+
+Now, I can just type =jboss-cli= to connect to the JBoss CLI.
 
 * Calling JBoss CLI inside BASH scripts
 If you need to substitute any variables in your CLI commands, wrapping
@@ -127,6 +139,7 @@ $ /opt/jboss/bin/jboss-cli.sh -c read-attribute server-state
 
 This is amazing since the =-c= parameter takes no value, thus
 =jboss-cli.sh= *could* treat all consecutive arguments as commands.
+
 
 * Further reading
 - [[https://community.jboss.org/wiki/CommandLineInterface][JBoss Command Line Interface overview]]
