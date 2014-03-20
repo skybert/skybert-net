@@ -60,9 +60,31 @@ whole string as a command in itself.
 #+end_src
 Gives you a JSON structure which basically gives you everything you
 ever wanted to know about your JBoss instance :-)
+
+** Add your own JBoss modules
+You can add your own JBoss modules (nice for code uses by several
+deployed artifacts):
+
+#+begin_src text
+module add \
+  --name=net.skybert.common \
+  --resources=target/common.jar \
+  --dependencies=javaee.api,com.fasterxml.jackson.core,com.fasterxml.jackson.databind
+#+end_src
+
+The dependencies are the names of other JBoss modules as can be found
+in =/opt/jboss/modules=.
+
 * Calling JBoss CLI from the command line
+JBoss CLI can read from standard input, which makes for easy UNIX piping:
 #+begin_src text
 echo "<cli command>" | /opt/jboss/bin/jboss-cli.sh -c
+#+end_src
+
+Or you can pass the CLI command directly or using the ==--command== parameter:
+#+begin_src text
+/opt/jboss/bin/jboss-cli.sh -c "read-attribute server-state"
+/opt/jboss/bin/jboss-cli.sh -c --command="read-attribute server-state"
 #+end_src
 
 * Calling JBoss CLI inside BASH scripts
@@ -88,6 +110,18 @@ The shortcuts are hard coded, so [[http://cnswww.cns.cwru.edu/php/chet/readline/
 
 This means all shortcuts like =M-d=, =M-<backspace>=, =M-f= and =M-b=
 don't work.
+
+*** Quoting your commands
+Note, you have to wrap the command in quotes, even when not using the
+=--command= parameter (!), i.e.:
+
+#+begin_src text
+# Will fail
+$ /opt/jboss/bin/jboss-cli.sh -c read-attribute server-state
+#+end_src
+
+This is amazing since the =-c= parameter takes no value, thus
+=jboss-cli.sh= *could* treat all consecutive arguments as commands.
 
 * Further reading
 - [[https://community.jboss.org/wiki/CommandLineInterface][JBoss Command Line Interface overview]]
