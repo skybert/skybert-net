@@ -135,7 +135,7 @@ done
 
 * JBoss CLI Caveats
 *** cd ..
-Issuing the command =cd ..= always takes you to the root, not the
+Issuing the command =cd ..= sometimes takes you to the root, not the
 parent directory.
 
 *** Meta shortcuts doesn't work
