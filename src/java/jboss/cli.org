@@ -83,8 +83,8 @@ echo "<cli command>" | /opt/jboss/bin/jboss-cli.sh -c
 #+end_src
 
 ** Passing the commands directly to jboss-cli
-You can pass the CLI command directly or using the =--command=
-parameter:
+You can pass the CLI command directly or using the
+=--command= parameter:
 
 #+begin_src text
 /opt/jboss/bin/jboss-cli.sh -c "read-attribute server-state"
