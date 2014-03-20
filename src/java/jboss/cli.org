@@ -130,6 +130,10 @@ The shortcuts are hard coded, so [[http://cnswww.cns.cwru.edu/php/chet/readline/
 This means all shortcuts like =M-d=, =M-<backspace>=, =M-c= and =M-u=
 don't work.
 
+*** Ctrl-c exits the shell
+I find this really annoying, =Ctrl-d=, =exit= or =quit= should be
+sufficient options for leaving for the comfort of your home shell.
+
 *** Quoting your commands
 Note, you have to wrap the command in quotes, even when not using the
 =--command= parameter (!), i.e.:
