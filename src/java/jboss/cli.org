@@ -96,7 +96,12 @@ local jboss_cli_connect="/opt/jboss-eap-6.2/bin/jboss-cli.sh -c"
 for domain_name in ${security_domain_name_list}; do
   ${jboss_cli_connect} <<EOF
 /subsystem=security/security-domain=${domain_name}/:add(cache-type=default)
+[..]
 EOF
+
+  if [ $? -eq 0 ]; then
+    echo "JBoss CLI command(s) succeeded."
+  fi
 done
 #+end_src
 
