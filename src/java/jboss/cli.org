@@ -127,7 +127,7 @@ parent directory.
 *** Meta shortcuts doesn't work
 The shortcuts are hard coded, so [[http://cnswww.cns.cwru.edu/php/chet/readline/rltop.html][GNU readline]] isn't utilised.
 
-This means all shortcuts like =M-d=, =M-<backspace>=, =M-f= and =M-b=
+This means all shortcuts like =M-d=, =M-<backspace>=, =M-c= and =M-u=
 don't work.
 
 *** Quoting your commands
