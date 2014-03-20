@@ -61,6 +61,20 @@ whole string as a command in itself.
 Gives you a JSON structure which basically gives you everything you
 ever wanted to know about your JBoss instance :-)
 
+** Change the logging level of a given package
+Here, I'm changing the logging level for Spring:
+
+#+begin_src text
+/subsystem=logging/logger=org.springframework:write-attribute(name=level, value=DEBUG)
+#+end_src
+
+This updates this stanza in my =standalone-full.xml=:
+#+begin_src nxml
+<logger category="org.springframework">
+    <level name="DEBUG"/>
+</logger>
+#+end_src
+
 ** Add your own JBoss modules
 You can add your own JBoss modules (nice for code uses by several
 deployed artifacts):
