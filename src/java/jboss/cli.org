@@ -56,7 +56,7 @@ whole string as a command in itself.
 
 ** List all resources of a running JBoss instance
 #+begin_src text
-:read-resource(recursive=true)
+:read-resource(include-runtime=true,recursive=true)
 #+end_src
 Gives you a JSON structure which basically gives you everything you
 ever wanted to know about your JBoss instance :-)
