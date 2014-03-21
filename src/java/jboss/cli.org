@@ -90,6 +90,14 @@ The dependencies are the names of other JBoss modules as can be found
 in =/opt/jboss/modules=.
 
 * Calling JBoss CLI from the command line
+** Using a CLI file
+You can put all your JBoss CLI commands in a file, say
+=add-jdbc-driver.cli= and run it with:
+
+#+begin_src text
+$ /opt/jboss-as-7.1.1.Final/bin/jboss-cli.sh --connect --file=add-jdbc-driver.cli
+#+end_src
+
 ** Using pipes
 JBoss CLI can read from standard input, which makes for easy UNIX piping:
 #+begin_src text
