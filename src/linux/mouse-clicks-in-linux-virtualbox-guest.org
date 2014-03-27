@@ -1,0 +1,25 @@
+#title: Mouse clicks in Linux VirtualBox guest are not registered
+
+I had the problem that my Debian VirtualBox guest did not receive my mouse clicks, only my mouse movement. I *could* get a round the problem by removing the VirtualBox guest addons, but that removed both the shared folders and the improved X/screen resolution, so that wasn't an option for me.
+
+The problem turned out to be that it had loaded the VMWare mouse X.org settings.
+
+The remedy was thus to replace the vmware settings so that the equivalent VirtalBox settings could take effect:
+
+#+begin_src text
+# rm /usr/share/X11/xorg.conf.d/50-vmmouse.conf
+#+end_src
+
+Then add the VirtualBox mouse settings:
+#+being_src text
+# cat > /usr/share/X11/xorg.conf.d/50-vboxmouse.conf <<EOF
+Section "InputClass"
+        Identifier      "vboxmouse"
+        MatchDevicePath "/dev/vboxguest"
+        Driver          "vboxmouse"
+EndSection
+EOF
+#+end_src
+
+Then, after restarting X, my Linux guest received my mouse clicks.
+
