@@ -14,6 +14,14 @@ $ cd trunk
 $ svn merge --reintegrate http://svn.skybert.net/my-project/branches/my-branch
 #+end_src
 
+* Cherry pick a single revision from trunk into your branch
+Here, I cherry pick revision =252723= from trunk into my =release-1=
+branch.
+#+begin_src text
+$ cd branches/release-1
+$ svn merge -c 252723 http://svn.company.com/project/trunk
+#+end_src
+
 * Keep your branch up to date with changes in trunk
 #+begin_src text
 $ cd branches/my-branch
