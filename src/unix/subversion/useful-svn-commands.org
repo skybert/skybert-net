@@ -53,6 +53,13 @@ To just see the files that were changed, so:
 $ svn diff --summarize -c <revision>
 #+end_src
 
+* Reverting a revision
+#+begin_src text
+$ svn merge -c -<revision>
+#+end_src
+
+You can think of it as subtracting (hence minus sign) a commit.
+
 * Using Git as a frontend for Subversion
 If you're like me and prefer using Git over Subversion, there's an
 easy, secure way of doing this using the command set =git svn <command>=.
