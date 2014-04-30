@@ -58,7 +58,7 @@ $ svn diff --summarize -c <revision>
 $ svn merge -c -<revision>
 #+end_src
 
-You can think of it as subtracting (hence minus sign) a commit.
+You can think of it as subtracting (hence the minus sign) a commit.
 
 * Using Git as a frontend for Subversion
 If you're like me and prefer using Git over Subversion, there's an
