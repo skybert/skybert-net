@@ -76,3 +76,10 @@ As with regular Git repositories, I keep it updated with:
 $ cd arch-packages
 $ git pull
 #+end_src
+
+* Restarting a network interface
+Here, I restart an interface (profile):
+#+begin_src text
+# netctl restart my-home
+#+end_src
+
