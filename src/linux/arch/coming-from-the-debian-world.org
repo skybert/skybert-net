@@ -83,3 +83,21 @@ Here, I restart an interface (profile):
 # netctl restart my-home
 #+end_src
 
+* Enabling and starting a daemon
+Whenever you install a daemon, say the Percona database server, it's
+enabled and started automatically for you. On Arch, not so. The
+server is only installed, not started.
+
+To enable boot time startup of the Percona database (it's a collection
+of performance related patches on top of MySQL) and starting it at the
+current session, I did the following (including installing the actual
+server to be sure you've got the context):
+#+begin_src text
+# pacman -S percona-server percona-server-clients
+# systemctl enable mysqld.service
+# systemctl start mysqld.service
+#+end_src
+
+Of course, a lot of the new-iness here, is that Arch uses [[http://www.freedesktop.org/wiki/Software/systemd/][systemd]] per
+default and Debian does not (although it's available in the APT
+repositories).
