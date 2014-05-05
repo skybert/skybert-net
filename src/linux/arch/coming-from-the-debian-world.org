@@ -13,13 +13,22 @@ $ journalctl -f
 #+end_src
 
 * Finding all files installed by a package
-On Debian, =dpkg -S <package>= is a great way of finding the files
+On Debian, =dpkg -L <package>= is a great way of finding the files
 belonging to a particular package.
 
 On Arch, the equivalent is:
 
 #+begin_src text
 $ pacmas -Qlq <package>
+#+end_src
+
+* Finding the package owning a file
+I like the speed with which I can find which packages
+owns a particular file. On Debian, all that it takes is =dpkg -S <file>=.
+
+On Arch, the equivalent is:
+#+begin_src text
+$ pacmas -Qo <file>
 #+end_src
 
 * How to do an apt-get upgrade
