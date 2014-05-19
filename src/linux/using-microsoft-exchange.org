@@ -68,18 +68,18 @@ retrieve the email.
 Here's my settings for using [[http://offlineimap.org/][offlineimap]]:
 #+begin_src text
 [general]
-accounts = mycompany
+accounts = my-company
 maxsyncaccounts = 3
 #
-[Account mycompany]
-localrepository = local-mycompany
-remoterepository = remote-mycompany
+[Account my-company]
+localrepository = local-my-company
+remoterepository = remote-my-company
 #
-[Repository local-mycompany]
+[Repository local-my-company]
 type = Maildir
-localfolders = ~/mail/mycompany
+localfolders = ~/mail/my-company
 #
-[Repository remote-mycompany]
+[Repository remote-my-company]
 type = IMAP
 remotehost = localhost
 remoteport = 1143
@@ -126,15 +126,15 @@ email fetched by =offlineimap=:
 
       mu4e-maildir-shortcuts
          '(
-           ("/broadnet/inbox" . ?i)
-           ("/broadnet/jira" . ?j)
+           ("/my-company/inbox" . ?i)
+           ("/my-company/jira" . ?j)
            )
       user-mail-address "my-windows-user@my-company.com"
-      smtpmail-smtp-server "smtp.mycompany"
+      smtpmail-smtp-server "smtp.my-company"
       smtpmail-smtp-service 1025
       smtpmail-stream-type 'plain
       mu4e-sent-messages-behavior 'sent
-      message-signature-file "~/.signature-mycompany"
+      message-signature-file "~/.signature-my-company"
 )
 #+end_src
 
@@ -158,10 +158,10 @@ way of password protecting your text files.
 To set Emacs (or [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4u]] in my case) up to send email through the
 DavMail gateway, I've got the following in my =~/.authinfo.gpg=:
 #+begin_src text
-machine smtp.mycompany login my-windows-user@my-company.com password you-wish port 1025
+machine smtp.my-company login my-windows-user@my-company.com password you-wish port 1025
 #+end_src
 
-The reason why I have =smtp.mycompany= as my SMTP host, is that I've
+The reason why I have =smtp.my-company= as my SMTP host, is that I've
 got several SMTP servers set up, so that I can send email with
 different accounts. For this to work, the authinfo.gpg file must have
 different host names.
@@ -170,7 +170,7 @@ As you might have guessed, the last piece of the jigsaw puzzle, is
 this entry in my =/etc/hosts= file:
 #+begin_src text
 # mail
-127.0.0.1  smtp.mycompany
+127.0.0.1  smtp.my-company
 #+end_src
 
 Now, with this in place, whenever Emacs wants to send email (I've
