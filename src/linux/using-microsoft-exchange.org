@@ -9,13 +9,13 @@ davmail => offlineimap => mu4e, but of course you can use anything
 you'd like as long as you have =davmail= working.
 
 * 1 - DavMail
-DavMail is an amazing piece of software which exposes all of
-Microsoft Exchange's services as open standard services, including
-IMAP and SMTP. For it to work, the Outlook Web Access, OWA, needs to
-be turned on. OWA is the only prerequisite from your IT-department
-that we cannot get around. Luckily, everywhere I've been have had this
-web mail interface enabled, so it's safe to assume your company has it
-too.
+[[http://davmail.sourceforge.net/][DavMail]] is an amazing piece of
+software which exposes all the Microsoft Exchange services as open
+standard services, including IMAP and SMTP. For it to work, the
+Outlook Web Access, OWA, needs to be turned on. OWA is the only
+prerequisite from your IT-department that we cannot get
+around. Luckily, everywhere I've been have had this web mail interface
+enabled, so it's safe to assume your company has it too.
 
 On Debian based distributions, you can install DavMail like this: Go
 to [[http://sourceforge.net/projects/davmail/files]] and download the
@@ -95,7 +95,7 @@ Since I don't want to manually type =offlineimap= whenever I want to
 get new messages, I've set cron up to run offlineimap every 10
 minutes:
 #+begin_src text
-*/10 * * * *            $HOME/src/my-little-friends/bash/get-new-email
+\*/10 * * * *            $HOME/src/my-little-friends/bash/get-new-email
 #+end_src
 
 The =get-new-email= script is just a wrapper around =offlineimap=,
