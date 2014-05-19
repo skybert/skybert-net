@@ -1,0 +1,198 @@
+#+title: How to use Microsoft Exchange from Linux
+
+Or "how to use any mail or calendar client you like when the
+IT-administrators haven't turned opened up IMAP and SMTP on your
+company Exchange server".
+
+I will here step you through setting up the full flow of exchange =>
+davmail => offlineimap => mu4e, but of course you can use anything
+you'd like as long as you have =davmail= working.
+
+* 1 - DavMail
+DavMail is an amazing piece of software which exposes all of
+Microsoft Exchange's services as open standard services, including
+IMAP and SMTP. For it to work, the Outlook Web Access, OWA, needs to
+be turned on. OWA is the only prerequisite from your IT-department
+that we cannot get around. Luckily, everywhere I've been have had this
+web mail interface enabled, so it's safe to assume your company has it
+too.
+
+On Debian based distributions, you can install DavMail like this: Go
+to [[http://sourceforge.net/projects/davmail/files]] and download the
+latest DEB file.
+
+Then, install it with =dpkg=:
+#+begin_src text
+# dpkg -i davmail_4.4.1-2225-1_all.deb
+#+end_src
+
+Then, you can launch it as your regular user:
+#+begin_src text
+$ davmail &
+#+end_src
+
+DavMail requires Java to run, so if you haven't Java Runtime
+Environment (JRE) installed, you need to install this before launching
+it.
+
+Now, enter the URL to your company's OWA interface,
+e.g. =https://my.company.com/owa=. The defaults are normally fine,
+just set the OWA URL:
+[[/graphics/2014/davmail-main-screen.png]]
+
+Also, enter the default Windows domain in the DavMail config
+dialogues, it makes setting up your mail clients easier:
+[[/graphics/2014/davmail-default-windows-domain.png]]
+
+* 2 - Set up email retrieval in your email client of choice
+When setting up your mail _reader_ (we'll cover the mail _sender_ in
+a bit), it's important that you choose the settings provided by
+DavMail, don't attempt to use any of the Outlook services directly
+(that's the whole point).
+
+The important bits are:
+- use IMAP at port =1143= (or whatever you set DavMail to)
+- be sure to either specify the Windows domain in DavMail (see
+  above), or in the user name string in your mail client. I find it
+  easier to set this in DavMail as some mail clients need double
+  escaping of the backslash between the windows domain and the user
+  name.
+- don't use SSL (since you're only connecting to DavMail running on
+  your own machine).
+
+** offlineimap
+Since I use a mail client which prefers to read its email from a local
+mail directory, I use a dedicated program, offlineimap, to only
+retrieve the email.
+
+Here's my settings for using [[http://offlineimap.org/][offlineimap]]:
+#+begin_src text
+[general]
+accounts = mycompany
+maxsyncaccounts = 3
+#
+[Account mycompany]
+localrepository = local-mycompany
+remoterepository = remote-mycompany
+#
+[Repository local-mycompany]
+type = Maildir
+localfolders = ~/mail/mycompany
+#
+[Repository remote-mycompany]
+type = IMAP
+remotehost = localhost
+remoteport = 1143
+#
+# note, I don't specify the domain here, since I set the default domain in
+# DavMail, otherwise, you need to escape the backslash, i.e.:
+# corp\\my-windows-user.
+remoteuser = my-windows-user
+remotepass = you-wish
+#+end_src
+
+Since I don't want to manually type =offlineimap= whenever I want to
+get new messages, I've set cron up to run offlineimap every 10
+minutes:
+#+begin_src text
+*/10 * * * *            $HOME/src/my-little-friends/bash/get-new-email
+#+end_src
+
+The =get-new-email= script is just a wrapper around =offlineimap=,
+taking care of logging and stuff.
+
+Also note, this is set up for my =torstein= user, so that the
+permissions and stuff gets right without any sweat. Just type =crontab
+-e= as your regular user.
+
+** Emacs/mu4e
+I've got the following *) setup in my emacs configuration to read the
+email fetched by =offlineimap=:
+
+#+begin_src text
+(setq mu4e-maildir "~/mail"
+      mu4e-get-mail-command "offlineimap"
+      mu4e-debug nil
+
+      ;; don't save messages to Sent Messages, Gmail/IMAP will take
+      ;; care of this
+      mu4e-sent-messages-behavior 'trash
+
+      mu4e-show-images t
+      mu4e-html2text-command "html2text -width 72"
+
+      ;; common SMTP settings for all accounts
+      message-send-mail-function 'smtpmail-send-it
+
+      mu4e-maildir-shortcuts
+         '(
+           ("/broadnet/inbox" . ?i)
+           ("/broadnet/jira" . ?j)
+           )
+      user-mail-address "my-windows-user@my-company.com"
+      smtpmail-smtp-server "smtp.mycompany"
+      smtpmail-smtp-service 1025
+      smtpmail-stream-type 'plain
+      mu4e-sent-messages-behavior 'sent
+      message-signature-file "~/.signature-mycompany"
+)
+#+end_src
+
+*) This is only half the truth as I'm using multiple accounts, head
+over to my github account to view [[https://github.com/skybert/my-little-friends/blob/master/emacs/.emacs.d/tkj-mu4e.el][my full mu4e configuration]] if you're
+interested in having multiple accounts set up.
+
+* 3 - Set up email sending  in your email client of choice
+Again, the important bit is to use the service, SMTP this time, which
+is exposed by your locally running DavMail.
+
+Per default, this means using SMTP server =localhost= and port =1025=.
+
+** Emacs SMTP setup
+These days, 2014-05-19, the preferred way of setting up SMTP servers
+in Emacs is by using the =~/.authinfo.gpg= file. This file is, like
+any file suffixed with =.gpg= automatically encrypted and protected
+with a password when opened in Emacs. Using =any-file.gpg= is a great
+way of password protecting your text files.
+
+To set Emacs (or [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4u]] in my case) up to send email through the
+DavMail gateway, I've got the following in my =~/.authinfo.gpg=:
+#+begin_src text
+machine smtp.mycompany login my-windows-user@my-company.com password you-wish port 1025
+#+end_src
+
+The reason why I have =smtp.mycompany= as my SMTP host, is that I've
+got several SMTP servers set up, so that I can send email with
+different accounts. For this to work, the authinfo.gpg file must have
+different host names.
+
+As you might have guessed, the last piece of the jigsaw puzzle, is
+this entry in my =/etc/hosts= file:
+#+begin_src text
+# mail
+127.0.0.1  smtp.mycompany
+#+end_src
+
+Now, with this in place, whenever Emacs wants to send email (I've
+tested this with [[https://launchpad.net/vm][VM]] and
+[[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4u]] and know that also
+[[http://gnus.org][Gnus]] uses this
+mechanism), you'll be prompted for the password you've set when you
+saved the =authinfo.gpg= (once) and your email will be sent through
+your DavMail proxy, to your Exchange SMTP server and out on the great
+wide internet. Yeah!
+
+* Summary
+Outlook Web Access must be enabled, install DavMail and setup up your
+email client(s) to use localhost and the ports exposed by DavMail.
+
+If things are not working, it's probably missing or wrongly typed or
+combined domain name and user name (that's at least my
+experience). DavMail has an option to turn on more debugging
+information and output this to a file. This might be useful if you
+can't make heads or tails of things. The debug will e.g. tell you how
+DavMail finds the different URLs of Outlook.
+
+Good luck!
+
+
