@@ -302,8 +302,8 @@ $ git clone https://github.com/senny/emacs-eclim.git</pre>
       <p>
         Finally, there's some Lisp to set it all up. I've put this in
         my <a
-        href="https://github.com/skybert/my-little-friends/blob/master/emacs/.emacs.d/tkj-eclim.el">
-        ~/.emacs.d/tkj-eclim.el </a>, but you can of course put it
+        href="https://github.com/skybert/my-little-friends/blob/master/emacs/.emacs.d/tkj-java.el">
+        ~/.emacs.d/tkj-java.el </a>, but you can of course put it
         anywhere you like, like <code>~/.emacs</code> :-)
       </p>
       <h3>Checkstyle &amp; PMD checks</h3>
