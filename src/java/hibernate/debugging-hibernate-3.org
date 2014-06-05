@@ -1,0 +1,16 @@
+#+title: Debugging the full SQL that Hibernate 3 produces
+
+Normally, the best way to debug Hibernate 3, is to add a JDBC wrapper
+so that you can see all the SQL that it generates.
+
+However, if you cannot do this, you can attach a (remote) debugger to
+your application and step thorugh the code in the execute method
+inside the entity action classes.
+
+For instance, to figure out the values that Hibernate puts in its SQL
+update statements, check out the =execute()= method in:
+
+#+begin_src text
+org.hibernate.action.EntityUpdateAction
+#+end_src
+
