@@ -110,3 +110,12 @@ server to be sure you've got the context):
 Of course, a lot of the new-iness here, is that Arch uses [[http://www.freedesktop.org/wiki/Software/systemd/][systemd]] per
 default and Debian does not (although it's available in the APT
 repositories).
+* Where is netstat?
+Netsat isn't installed by default. To get it, you'll need to install
+=net-tools=:
+#+begin_src text
+# pacman -S net-tools
+#+end_src
+
+Note that search for netstat will only yield the =netstat-nat= package
+which most probably isn't what you want.
