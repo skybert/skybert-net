@@ -1,0 +1,81 @@
+#! /usr/bin/env bash
+
+
+function add_sitemap_entry() {
+  local format=$1
+  local file=$2
+
+  if [ ! -r $file ]; then
+    echo return
+  fi
+
+  local modification_date=$(stat -c %y $file | cut -d. -f1)
+  local link_text=$(
+    cat ${file} | \
+      sed -n '
+/^[ ]*[<]h1[>]/ {
+  s#<[/]*h1>##g
+  s#^[ ]*##
+  p
+}
+'
+  )
+  local rel_link=$(
+    echo ${file} | sed -n "s#${dir}/##p" | sed 's#/index.[s]*html##'
+  )
+
+  if [ -z "$link_text" ]; then
+    link_text=$rel_link
+  fi
+
+  if [[ "$format" == "html" ]]; then
+    cat <<EOF
+      <li>
+        <a href="${rel_link}">
+          ${link_text}
+        </a>
+        (modified ${modification_date})
+      </li>
+EOF
+  fi
+}
+
+function create_header() {
+  if [[ "$format" == "html" ]]; then
+    cat <<EOF
+<!--#include virtual="/ssi/header.shtml" -->
+    <h1>Sitemap generated on ${HOSTNAME} @ $(date)</h1>
+    <ul>
+EOF
+  fi
+}
+
+function create_footer() {
+  if [[ "$format" == "html" ]]; then
+    cat <<EOF
+    </ul>
+<!--#include virtual="/ssi/footer.shtml" -->
+EOF
+  fi
+}
+
+function create_sitemap() {
+  local format=$1
+  local file=
+
+  create_header
+
+  find $dir -name '*.[s]html' | while read file; do
+    add_sitemap_entry $format $file
+  done
+
+  create_footer
+}
+
+function main() {
+  dir=${1-$(pwd)}
+  local format=html
+  create_sitemap $format $@
+}
+
+main $@
