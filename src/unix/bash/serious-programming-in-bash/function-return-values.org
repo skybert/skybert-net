@@ -1,0 +1,34 @@
+#+title: Returning values from functions and subshells
+
+** Returning a single value
+#+begin_src text
+function get_age() {
+  echo 10;
+}
+
+age=$(get_age)
+#+end_src
+
+** Returning a variable with a value
+#+begin_src text
+function do_something_important() {
+  echo return_code=$?
+}
+
+eval $(do_something_important)
+#+end_src
+
+Very useful for sub shells.
+
+** Returning multiple variables
+#+begin_src text
+function do_something_very_important() {
+  echo return_code=$? \
+    result=the-result
+}
+
+eval $(do_something_very_important)
+#+end_src
+
+
+
