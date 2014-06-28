@@ -31,7 +31,8 @@ function add_sitemap_entry() {
   if [[ "$format" == "html" ]]; then
     cat <<EOF
       <li>
-        <a href="${rel_link}">
+        $(basename $(dirname $(dirname $file))) &gt;
+        <a href="../${rel_link}">
           ${link_text}
         </a>
         (modified ${modification_date})
@@ -65,7 +66,7 @@ function create_sitemap() {
 
   create_header
 
-  find $dir -name '*.[s]html' | while read file; do
+  find $dir -name '*.[s]html' | sort | while read file; do
     add_sitemap_entry $format $file
   done
 
