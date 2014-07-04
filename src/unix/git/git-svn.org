@@ -1,5 +1,15 @@
 #+title: Using Git as a frontend to Subversion
 
+* Getting the latest changes from the Subversion server
+#+begin_src text
+$ git svn rebase
+#+end_src
+
+* Pushing your changes to the Subversion server
+#+begin_src text
+$ git svn dcommt
+#+end_src
+
 * Interactive rebase
 Normally, you can just use =git rebase -i= to squash/reorder/rewrite
 your commits. Using =git-svn=, this doesn't work as your local branch
