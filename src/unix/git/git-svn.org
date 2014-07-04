@@ -1,0 +1,18 @@
+#+title: Using Git as a frontend to Subversion
+
+* Interactive rebase
+Normally, you can just use =git rebase -i= to squash/reorder/rewrite
+your commits. Using =git-svn=, this doesn't work as your local branch
+isn't connected to the repo in the same way.
+
+What I've found to work neatly, is to rebase against the last
+previously committed SHA. So first, look in =git log= to find the SHA
+of the last commit which has been pushed/pulled to/from Subversion and
+use this SHA as an argument to =git rebase=:
+
+#+begin_src text
+$ git rebase -i fc3ec194046e952ab4d0084406b0850210d8e0e8
+#+end_src
+
+
+
