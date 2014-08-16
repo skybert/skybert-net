@@ -36,16 +36,6 @@ network={
         wpasupplicant also supports roaming, to use roaming, replace
         <code>wpa-conf</code> with <code>wpa-roam</code>.
       </p>
-      <h2>wpa_supplicant fails to start</h2>
-      <p>
-        If you see that <code>wpa_supplicant</code> fails to start
-        with this message: <pre class="code">wpa_supplicant:
-        /sbin/wpa_supplicant daemon failed to start</pre> run the
-        wpa_supplicant command manually in the foreground (this means
-        no <code>-B</code> switch with debugging (this means adding
-        the <code>-q</code> switch):
-      </p>
-      <pre># /sbin/wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/my-networks.conf -q</pre>
       <h2>Getting help with all the required fields</h2>
       <p>
         If you've got problems figuring out all the correct settings
@@ -54,6 +44,17 @@ network={
       </p>
       <pre class="code">$ grep "Config: added" /var/log/daemon.log | grep NetworkManager</pre>
       <h2>Troubleshooting</h2>
+      <h3>wpa_supplicant fails to start</h3>
+      <p>
+        If you see that <code>wpa_supplicant</code> fails to start
+        with this message: <pre class="code">wpa_supplicant:
+        /sbin/wpa_supplicant daemon failed to start</pre> run the
+        wpa_supplicant command manually in the foreground (this means
+        no <code>-B</code> switch with debugging (this means adding
+        the <code>-q</code> switch):
+      </p>
+      <pre># /sbin/wpa_supplicant -i wlan0 -c
+      /etc/wpa_supplicant/my-networks.conf -q</pre>
       <h3>SIOCSIFFLAGS: Unknown error 132</h3>
       <p>
         I was all of a sudden, without changing my system (as far as I
