@@ -6,7 +6,7 @@
         Configure your wireless networks in
         e.g. <code>/etc/wpa_supplicant/my-networks.conf</code>:
       </p>
-<pre class="code">ctrl_interface=/var/run/wpa_supplicant
+<pre>ctrl_interface=/var/run/wpa_supplicant
 
 # WEP network
 network={
@@ -29,7 +29,7 @@ network={
       <p>
         and make <code>/etc/network/interfaces</code> use it:
       </p>
-<pre class="code">iface wlan0 inet dhcp
+<pre>iface wlan0 inet dhcp
       wpa-conf /etc/wpa_supplicant/my-networks.conf
       post-up /etc/init.d/firewall start</pre>
       <p>
@@ -42,26 +42,27 @@ network={
         for your <code>wpasupplicant</code> configuration file, you
         may use NetworkManager to read the settings:
       </p>
-      <pre class="code">$ grep "Config: added" /var/log/daemon.log | grep NetworkManager</pre>
+      <pre>$ grep "Config: added" /var/log/daemon.log | grep NetworkManager</pre>
       <h2>Troubleshooting</h2>
       <h3>wpa_supplicant fails to start</h3>
       <p>
         If you see that <code>wpa_supplicant</code> fails to start
-        with this message: <pre class="code">wpa_supplicant:
-        /sbin/wpa_supplicant daemon failed to start</pre> run the
-        wpa_supplicant command manually in the foreground (this means
-        no <code>-B</code> switch with debugging (this means adding
-        the <code>-q</code> switch):
+        with this message:
       </p>
-      <pre># /sbin/wpa_supplicant -i wlan0 -c
-      /etc/wpa_supplicant/my-networks.conf -q</pre>
+      <pre>wpa_supplicant: /sbin/wpa_supplicant daemon failed to start</pre>
+      <p>
+        run the wpa_supplicant command manually in the foreground
+        (this means not adding the <code>-B</code> switch) with
+        debugging (this means adding the <code>-q</code> switch):
+      </p>
+      <pre># /sbin/wpa_supplicant -i wlan0 -c /etc/wpa_supplicant/my-networks.conf -q</pre>
       <h3>SIOCSIFFLAGS: Unknown error 132</h3>
       <p>
         I was all of a sudden, without changing my system (as far as I
         know) getting this really odd error on kernel
         version <code>2.6.32-trunk-686</code>:
       </p>
-<pre class="code"># ifup -v wlan
+<pre># ifup -v wlan
 [..]
 SIOCSIFFLAGS: Unknown error 132
 Failed to bring up wlan0.</pre>
