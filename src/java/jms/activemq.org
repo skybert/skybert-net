@@ -151,7 +151,7 @@ echo $APID > /opt/apache-activemq-5.9.0/data/activemq-quanah.pid; echo
 "INFO: pidfile created :
 '/opt/apache-activemq-5.9.0/data/activemq-quanah.pid' (pid
 '$APID')";exit $RET: not found
-#=end_src
+#+end_src
 
 Luckily, I found that the command residing in
 =bin/linux-x86-64/activemq= works.
