@@ -1,0 +1,17 @@
+#+title: Proper Cygwin setup for UNIX folks
+
+** Install X, needed X scripts and a good terminal
+Using the cygwin =setup.exe=, install the following Cygwin packages.
+
+- xorg
+- xinit
+- rxvt-unicode
+
+** Run the X server in the background
+#+begin_src text
+C:\cygwin\bin\run.exe /usr/bin/bash.exe -l -c /usr/bin/startxwin.exe
+#+end_src
+This starts X in the background and gives you an xterm.
+
+** Start your favourite X applications
+From this xterm, start your favourite X applications, like =urxvt=.
