@@ -1,8 +1,0 @@
-<!--#include virtual="/ssi/header.shtml" -->
-    <h1>Converting Ogg Vorbis Video with Audio to MPEG4</h1>
-    <p>
-      This is how I converted an <code>ogv</code> video with audio
-      to <code>mp4</code>
-    </p>
-    <pre>$ ffmpeg -i myvideo.ogv -f mp4 myvideo.mp4</pre>
-<!--#include virtual="/ssi/footer.shtml" -->

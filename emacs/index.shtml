@@ -1,9 +1,0 @@
-<!--#include virtual="/ssi/header.shtml" -->
-<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
-    <div id="main">
-      <div style="float: right; padding: 1em;">
-        <img src="graphics/emacs.png" alt="emacs"/>
-      </div>
-<!--#exec cgi="/cgi-bin/article-list.cgi" -->
-    </div>
-<!--#include virtual="/ssi/footer.shtml" -->

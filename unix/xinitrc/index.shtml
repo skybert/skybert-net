@@ -1,8 +1,0 @@
-<!--#include virtual="/ssi/header.shtml" -->
-<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
-    <div id="main">
-<pre>
-<!--#include virtual=".xinitrc" -->
-</pre>
-    </div>
-<!--#include virtual="/ssi/footer.shtml" -->

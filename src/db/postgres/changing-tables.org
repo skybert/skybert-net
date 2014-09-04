@@ -1,8 +1,0 @@
-#+title: Changing Tables
-
-* Changing Column size
-Here, I change the size of the =text_= to 5000.
-
-#+begin_src sql
-alter table act_ru_variable alter column text_ type varchar(5000);
-#+end_src

@@ -1,6 +1,0 @@
-<!--#include virtual="/ssi/header.shtml" -->
-<!--#exec cgi="/cgi-bin/simple-h1.cgi" -->
-    <div id="main">
-<!--#exec cgi="/cgi-bin/article-list.cgi" -->
-    </div>
-<!--#include virtual="/ssi/footer.shtml" -->
