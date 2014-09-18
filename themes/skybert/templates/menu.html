@@ -12,17 +12,5 @@
         {% endfor %}
       </ul>
       <hr/>
-      <ul style="display: inline;">
-        <li style="display: inline;">tags:</li>
-        {% for tag, art in tags %}
-        <li style="display: inline;">
-          <a href="{{SITEURL}}/tag/{{tag | replace(" ", "-") }}.html">
-            {{tag}}
-          </a>
-          ({{art | count}})
-        </li>
-        {% endfor %}
-      </ul>
-      <hr/>
     </div>
 
