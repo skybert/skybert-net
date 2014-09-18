@@ -1,4 +1,4 @@
-title: setting-up-apt-repo-with-signed-packages.md
+title: Setting Up Apt Repo With Signed Packages
 tags: debian
 date:    2012-10-07
 category: linux
@@ -7,7 +7,6 @@ category: linux
 
 Add the following contentsto a new
 file,```/var/www/apt/conf/distributions```:
-
 
     Origin: Your Name
     Label: The Name of Your Repository

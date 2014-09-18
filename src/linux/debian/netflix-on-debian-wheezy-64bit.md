@@ -1,4 +1,4 @@
-title: debian
+title: Netflix on Debian Wheezy 64bit
 date:    2013-01-06
 tags: debian
 category: linux

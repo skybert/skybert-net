@@ -7,14 +7,14 @@ tags: redhat
     $ rpm -qa
 
 ## Listing all files of an installed package
-    $ rpm -ql &lt;package&gt;
+    $ rpm -ql <package>
 
 ## Viewing package information
-    $ rpm -qi &lt;package name without version and arch&gt;
+    $ rpm -qi <package name without version and arch>
 
 Or you can ask YUM:
 
-    $ yum info &lt;package&gt;
+    $ yum info <package>
 
 ## Installing a package
     # rpm -Uvh package-name-arch-version.rpm

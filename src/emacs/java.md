@@ -10,10 +10,9 @@ title: java
 ## Code completion
 
 This is my favourite feature of <a
-href="https://github.com/senny/emacs-eclim"> emacs-eclim </a>,
-the ability to get real, 100% correct auto completion of
-everything, without clever hacks like
-```hippe-expand``` and vanilla
+href="https://github.com/senny/emacs-eclim"> emacs-eclim </a>, the
+ability to get real, 100% correct auto completion of everything,
+without clever hacks like ```hippe-expand``` and vanilla
 ```auto-complete-mode```:
 
 <img src="/graphics/emacs/2013/eclim-code-completion.png" alt="code completion"/>
@@ -88,13 +87,13 @@ imports while it's at it when you call
 alt="before importing missing classes"
 />
 
-For the most part, this will work without an itch, the
-exception being ambiguities like```java.util.List```
-and```java.awt.List```:
+For the most part, this will work without an itch, the exception being
+ambiguities like```java.util.List``` and```java.awt.List```:
 
 <img src="/graphics/emacs/2013/eclim-import-after.png"
 alt="after importing missing classes"
 />
+
 ## Correcting problems
 
 A feature which makes Java IDEs so appealing is that they
@@ -147,6 +146,7 @@ can be clicked on for instant viewing of the offending code in
 the editor:
 
 <img src="/graphics/emacs/2013/eclim-run-maven.png" alt="eclim run maven"/>
+
 ## Source control
 
 The source code control integration in Emacs is second to
@@ -161,15 +161,14 @@ regardless if you're using CVS, Subversion, Perforce, Git or
 Mercurial.
 
 
-Here, I'm viewing the commit log (by running
-```vc-print-log```) for one Java class while viewing
-the diff (by hitting```d``` when navigating the
-commits with```n``` and
-```p```) of one of the
-commits in the bottom buffer.
+Here, I'm viewing the commit log (by running ```vc-print-log```) for
+one Java class while viewing the diff (by hitting```d``` when
+navigating the commits with```n``` and ```p```) of one of the commits
+in the bottom buffer.
 
 <img src="/graphics/emacs/2013/vc-git-log-and-diff.png"
 alt="version control in Emacs"/>
+
 ## One the fly display of Checkstyle and PMD violations
 
 <a href="http://checkstyle.sf.net">Checkstyle</a> and <a
@@ -209,24 +208,21 @@ it?
 alt="Checkstyle and PMD checks in Emacs"/>
 ## Editing popular Java world XML files
 
-Emacs and```nxml-mode``` will give you on the fly
-syntax checking and auto completion for all popular XML file
-formats in the Java world. I've enjoyed error free editing of
-iBATIS, Struts, DWR, Spring, Tomcat, Resin, Escenic Ant &amp;
-Maven XML files using <a
+Emacs and```nxml-mode``` will give you on the fly syntax checking and
+auto completion for all popular XML file formats in the Java
+world. I've enjoyed error free editing of iBATIS, Struts, DWR, Spring,
+Tomcat, Resin, Escenic Ant &amp; Maven XML files using <a
 href="https://github.com/skybert/my-little-friends/tree/master/emacs/.emacs.d/xml">these
 Relax NG RNC files</a> with```nxml-mode```
 
-<h2>
-<a name="installation">Installation</a>
-</h2>
+## Installation
 
-To get the code completion, code navigation, javadoc lookup
-and so on working, we need to set up this call flow:
+To get the code completion, code navigation, javadoc lookup and so on
+working, we need to set up this call flow:
 
-<img src="/graphics/emacs/2013/emacs-eclim-eclipse.svg"
-alt="emacs to eclim to eclipse call flow"
-/>
+<img src="/graphics/emacs/2013/emacs-eclim-eclipse.svg" alt="emacs to
+eclim to eclipse call flow" />
+
 ### Eclipse
 
 First things first, you need to get <a
@@ -250,9 +246,8 @@ checking++) in our beloved editor with no extra configuration,
 hacks or fuss.
 
 
-I install all 3rd party sources in```/usr/local/src```
-to differ them from my own sources in```~/src```,
-thus:
+I install all 3rd party sources in```/usr/local/src``` to differ them
+from my own sources in```~/src```, thus:
 
     $ cd /usr/local/src
     $ git clone git://github.com/ervandew/eclim.git
@@ -260,15 +255,14 @@ thus:
     $ ant clean deploy -Declipse.home=/opt/eclipse
 
 
-
-This will install the```eclim``` plugin in our
-```/opt/eclipse``` directory, with symlinks to the two
-eclim binaries in the root (that looks a bit messy, doesn't
-it? Oh well, the important thing is that it works :-)):
+This will install the```eclim``` plugin in our ```/opt/eclipse```
+directory, with symlinks to the two eclim binaries in the root (that
+looks a bit messy, doesn't it? Oh well, the important thing is that it
+works :-)):
 
     $ ls /opt/eclipse/eclim*
-lrwxrwxrwx 1 torstein 8779 44 Dec  1 11:40 /opt/eclipse/eclim -> plugins/org.eclim_2.2.5.3-gaad35e4/bin/eclim
-lrwxrwxrwx 1 torstein 8779 45 Dec  1 11:40 /opt/eclipse/eclimd -> plugins/org.eclim_2.2.5.3-gaad35e4/bin/eclimd
+    lrwxrwxrwx 1 torstein 8779 44 Dec  1 11:40 /opt/eclipse/eclim -> plugins/org.eclim_2.2.5.3-gaad35e4/bin/eclim
+    lrwxrwxrwx 1 torstein 8779 45 Dec  1 11:40 /opt/eclipse/eclimd -> plugins/org.eclim_2.2.5.3-gaad35e4/bin/eclimd
 
 
 If you like me, prefer launching```eclimd``` from a
@@ -278,14 +272,14 @@ dedicated shell, be sure to set up your workspace directory in
 to```eclimd```:
 
     # workspace dir
-osgi.instance.area.default=@user.home/src/workspace
+    osgi.instance.area.default=@user.home/src/workspace
 
     # increase heap size
--Xmx256M
+    -Xmx256M
 
     # increase perm gen size
--XX:PermSize=64m
--XX:MaxPermSize=128m
+    -XX:PermSize=64m
+    -XX:MaxPermSize=128m
 
 
 If you're using a non default location for your workspace and
@@ -299,7 +293,6 @@ The last piece of the puzzle, is the excellent Emacs eclim
 library which acts as a bridge between Emacs and the
 ```eclimd``` process.
 
-
 At the time of writing (2012-12-01), there's no Emacs package
 of```emacs-eclim```, hence, I put it with my other
 Emacs modules that are neither installed with APT nor with
@@ -307,7 +300,6 @@ Emacs packages in```/usr/local/src/emacs```. Hence:
 
     $ cd /usr/local/src/emacs
     $ git clone https://github.com/senny/emacs-eclim.git
-
 
 Finally, there's some Lisp to set it all up. I've put this in
 my <a
@@ -317,30 +309,29 @@ anywhere you like, like```~/.emacs``` :-)
 
 ### Checkstyle &amp; PMD checks
 
-First off, install checkstyle with
-```#apt-get install
-checkstyle``` (if you're on a Debian based system, or
-else, get it with your package manager, or set it up manually
-so that you have the```checkstyle``` command wrapper
-in your PATH) and make PMD available in```/opt/pmd```:
+First off, install checkstyle with ```#apt-get install checkstyle```
+(if you're on a Debian based system, or else, get it with your package
+manager, or set it up manually so that you have the```checkstyle```
+command wrapper in your PATH) and make PMD available in```/opt/pmd```:
 
     $ unzip /tmp/pmd-bin-5.0.4.zip -d /opt
     $ cd /opt
     $ ln -s pmd-5.0.4 pmd
     $ ls -l /opt/pmd
-lrwxrwxrwx 1 torstein torstein 14 May  4 17:21 /opt/pmd -> pmd-bin-5.0.4/
+    lrwxrwxrwx 1 torstein torstein 14 May  4 17:21 /opt/pmd -> pmd-bin-5.0.4/
 
 
 Then, get my command <a
 href="https://github.com/skybert/my-little-friends/blob/master/bash/my-java-flymake-checks">my-java-flymake-checks</a>
-or write your own. Then put the following in your
-```.emacs``` to wire it up:
+or write your own. Then put the following in your ```.emacs``` to wire
+it up:
 
-    (require 'flymake)
+```
+(require 'flymake)
 (defun my-flymake-init ()
-(list "my-java-flymake-checks"
-(list (flymake-init-create-temp-buffer-copy
-'flymake-create-temp-with-folder-structure))))
+  (list "my-java-flymake-checks"
+  (list (flymake-init-create-temp-buffer-copy
+  'flymake-create-temp-with-folder-structure))))
 (add-to-list 'flymake-allowed-file-name-masks
 '("\\.java$" my-flymake-init flymake-simple-cleanup))
-
+```
