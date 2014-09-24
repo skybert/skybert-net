@@ -1,4 +1,4 @@
-date:    2014-03-06
+date:    2012-03-01
 category: mac-os-x
 title: Getting a proper BASH environment
 ## Using Mac Ports
@@ -28,12 +28,10 @@ with Mac. Add this to your```.bashrc```:
 
     export PATH=/opt/local/libexec/gnubin:$PATH
 
-
 A wee test to see if the GNU core utils have taken precedence
 on your system is to run:
 
     $ date --iso
-
 
 If it returns a date like 2012-03-01, you're homefree
 
@@ -44,11 +42,10 @@ this:
 
     $ sudo port install aspell aspell-dict-en aspell-dict-uk
 
-<h2>Emacs<h2>
+## Emacs
 
 Install the latest, full graphical GNU Emacs and let it answer
 to the standard```/usr/bin/emacs```:
 
     $ sudo mv /usr/bin/emacs /usr/bin/emacs.mac-os-x
     $ sudo ln -s /Applications/Emacs.app/Contents/MacOS/Emacs /usr/bin/emacs
-
