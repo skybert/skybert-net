@@ -3,7 +3,6 @@ category: java
 title: My Oracle Application Server Shit List
 tags: oracle
 
-<p class="reg">
 Things that are HUGELY annoying when working with Oracle
 Application Server.
 
@@ -32,8 +31,7 @@ it. This is so stupid only a windows person could have made
 it. How many Unix server programs have you installed that
 require a GUI?
 
-## Oracle's default connection pool does not handle a query that
-fails.
+## Oracle's default connection pool does not handle a query that fails.
 
 Oracle's default connection pool does not handle a query that
 fails. Instead, it gives a "socket write error".
