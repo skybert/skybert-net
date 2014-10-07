@@ -18,14 +18,13 @@ to grep the output of:
 So, to grep on the response HTTP headers returned by
 ```wget``` command, you'd do:
 
-    
-    $ wget \
---quiet \
---server-response \
-http://example.com \
-2>&1 >/dev/null | \
-grep &lt;what ever you are looking for&gt;
 
+    $ wget \
+      --quiet \
+      --server-response \
+      http://example.com \
+      2>&1 >/dev/null | \
+      grep <what ever you are looking for>
 
 
 That's it!
