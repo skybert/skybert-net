@@ -1,5 +1,7 @@
 title: Lombok
 date: 2014-10-09
+category: java
+tags: lombok
 
 [Lombok](http://projectlombok.org) is a real time saver at times but
 it can also lead to unexpected bugs in your code. Here, I've described
