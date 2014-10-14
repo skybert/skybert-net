@@ -19,7 +19,6 @@ $ curl -I \
 http://myserver.com/users/id/10
 ```
 
-
 Of course, it might be that you don't need the headers I
 needed here, or that you need different ones. <cite>-H</cite>
 is how you specify them in any case.
@@ -63,7 +62,7 @@ script around it. There's```libproxy-tools```, but I
 couldn't get it to work, hence, I just update the
 ```http_proxy``` variable whenever I need it:
 
-    export http_proxy=http://&lt;user&gt;:&lt;password&gt;@proxyserver:&lt;port&gt;
+    export http_proxy=http://<user>:<password>@proxyserver:<port>
 
 
 If your proxy is using digest based authentication instead of
