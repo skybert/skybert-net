@@ -5,7 +5,7 @@
         {% for cat, art in categories %}
         <li style="display: inline;">
           <a href="{{ SITEURL }}/category/{{ cat | replace(" ", "-") }}.html">
-            /{{ cat }}
+            {{ cat }}
           </a>
           ~
         </li>

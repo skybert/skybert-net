@@ -1,5 +1,7 @@
 title: Atlassian Stash
 date: 2014-10-07
+category: git
+tags: atlassian, stash, bash
 
 ## Listing all clone URLs for a given project
 This is easy using the REST API:

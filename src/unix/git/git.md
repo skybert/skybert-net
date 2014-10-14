@@ -1,6 +1,6 @@
 title: Git
 date:    2012-10-07
-category: unix
+category: git
 
 ## Set up your own a git repository on your server
 

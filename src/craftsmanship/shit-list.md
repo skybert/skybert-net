@@ -42,16 +42,20 @@ therefore use the full width.
 ## Inconsequent coding style
 
 Some people just don't have a clue what they're doing, they just write
-some code. You can't in one stanza write <code
-style="background-color:#cccccc">if<span
-style="background-color:yellow">&nbsp;</span>(true)<span
-style="background-color:yellow">&nbsp;</span>{```, then in the next
-<code style="background-color:#cccccc">if(true){``` and then in the
-third test <code style="background-color:#cccccc">if(<span
-style="background-color:yellow">&nbsp;</span>true<span
-style="background-color:yellow">&nbsp;</span>)<span
-style="background-color:yellow">&nbsp;</span>{```.  It's ok to
-disagree on coding style; but please be consequent!
+
+some code. You can't in one stanza write:
+
+     if(true){
+
+then in the next:
+
+    if (true) {
+
+and in the third:
+
+    if( true ) {
+
+It's ok to disagree on coding style; but please be consequent!
 
 ## Inconsequent name giving
 
