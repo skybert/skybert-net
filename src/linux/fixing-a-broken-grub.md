@@ -1,11 +1,12 @@
-title: linux
+title: Fixing a broken GRUB
 date:    2013-01-09
 category: linux
+tags: macosx, linux, grub
 
 When upgrading my Mac OS X to Snow Leopard, OS X took the
 liberty of wiping out both my refit boot loader and may
 (chain) loader GRUB on the Linux partition. When booting Linux
-after the refit screen, I got a "Unknown file system" error. 
+after the refit screen, I got a "Unknown file system" error.
 
 
 The remedy was to boot with a Linux live CD (I used <a
