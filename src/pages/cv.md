@@ -167,27 +167,18 @@ Theaterselskab").
 # Technology
 ## Java
 - EJB3
-- CDI (injection, events, decorators, interceptors, classifiers++)
-- JMS (HornetQ and ActiveMQ)
+- CDI :: injection, events, decorators, interceptors, classifiers++
+- JMS with HornetQ and ActiveMQ
 - Spring
 - Spring Batch
 - Activiti
-
-## Persistence
-- iBATIS
-- Hibernate 3 & 4
-- JPA
-- JDBC (if I have a choice, I'd rather write the data layer in pure
+- Persistence: iBATIS, Hibernate 3 & 4, JPA,
+  JDBC (if I have a choice, I'd rather write the data layer in pure
   JDBC (once) and be done with it (instead of spending ages debugging
   Hibernate))
-
-### GUI
-- AWT
-- Swing
-- JSF
-- Rich Faces
-- [Apache Wicket](http://wicket.apache.org)
-- JSP
+- Fat clients with AWT & Swing
+- Web clients with: JSF, Rich Faces, [Apache Wicket](http://wicket.apache.org),
+  JSP, EL & JSTL
 
 ## Python
 - Gtk+
