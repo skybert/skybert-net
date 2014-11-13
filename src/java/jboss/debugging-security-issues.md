@@ -9,7 +9,7 @@ useful to turn on debugging on the following components:
 - org.apache.catalina.authenticator
 
 Here's the corresponding configuration fragments for
-=standalone.xml=:
+```standalone.xml```:
 
 ```
 <logger category="org.jboss.security">
