@@ -1,4 +1,4 @@
-title: Ciriculum Vitae
+title: Curriculum Vitae
 
 I love working with complex Unix and Linux systems comprised of
 components such as HTTP servers, app servers, web caches, load
@@ -29,9 +29,7 @@ Specialities: Multi-server architecture and development of JEE systems
 with high demands for performance, availability and scalability.
 
 # Experience
-## Conduct AS
-### Senior consultant
-Conduct AS February 2013 – Present
+## Conduct AS, Senior consultant, February 2013 – Present
 
 Building world class solutions for our customers using open source
 technologies such as Linux and Java.
@@ -47,8 +45,7 @@ iReporter.
 Server setup and operations are most of the time a breeze using:
 nginx, Apache, RedHat Linux, Ubuntu Linux, BASH, SED, awk & Puppet
 
-## Escenic / Vizrt Online *System architect* Escenic / Vizrt Online
-February 2012 – January 2013 (1 year)
+## Escenic, System architect, February 2012 – January 2013 (1 year)
 
 I worked in a team of five to build a new SaaS solution for Vizrt
 Online's (Escenic's) customers which later will expand to cater for
@@ -67,8 +64,7 @@ integrating development team efforts with proper release management.
 
 [github/vizrt/ece-scripts]: http://github.com/vizrt/ece-scripts
 
-## Escenic / Vizrt Online System architect Escenic / Vizrt Online
-November 2008 – January 2012 (3 years 3 months)
+## Escenic, System architect, November 2008 – January 2012 (3 years 3 months)
 
 As a system architect I was responsible for the general development,
 architecture and future technical direction of my two teams' products.
@@ -96,8 +92,7 @@ leading the development team by example, working concentrated on
 product development with most or all of my commits going into
 production rather than into PoCs.
 
-## Escenic Senior consultant
-October 2005 – November 2008 (3 years 2 months)
+## Escenic, Senior consultant, October 2005 – November 2008 (3 years 2 months)
 
 I worked with some of the biggest newspapers in Europe, helping them
 on-site primarily with production environments: Unix, Linux, DBs,
@@ -112,8 +107,7 @@ hosting partners: Finding the correct solution for the customer that
 serves the needs of all parties' area of interest has been a rewarding
 experience.
 
-## CoreMedia AG Technical Consultant
-2004 – 2005 (1 year)
+## CoreMedia AG, Technical Consultant, 2004 – 2005 (1 year)
 
 Working on one Europe's biggest web portals with hefty JEE
 development on a Solaris platform with extreme demands for high
@@ -123,8 +117,7 @@ This year taught me a lot about working for extremely structured,
 quality conscious and demanding customers; never settling for anything
 but the best.
 
-## Splendid Internet GmbH & Co. KG Developer
-2003 – 2004 (1 year)
+## Splendid Internet GmbH, Developer, 2003 – 2004 (1 year)
 
 I'm very grateful for this job as it taught me a lot of the German
 work ethics, of extreme attention to detail and structured approach to
@@ -134,22 +127,19 @@ Working as a developer on a project for one of the biggest German
 telecoms allowed me to work with JEE, SOAP web services, CORBA,
 GNU/Linux and HP-Unix - all in the same solution!
 
-## Opera Software Intern Opera Software
-2001 – 2002 (1 year)
+## Opera Software, Intern, 2001 – 2002 (1 year)
 
 Summer intern & part time work involving ECMA/JavaScript, DOM and
 Python development as well as testing Opera on the Linux platform.
 
 # Education
-## The University of Stirling
-MSc, Human Resource Management 2002 – 2003
+## The University of Stirling, MSc Human Resource Management 2002 – 2003
 
 Activities and Societies: University of Stirling Mountaineering Club,
 SUDS - Stirling University Drama Society, University of Stirling
 Volleyball Club, CU.
 
-## Østfold University College (HiØ)
-BSc, Business English, Computer Science 1999 – 2002
+## Østfold University College (HiØ), BSc Business English, Computer Science 1999 – 2002
 
 Activities and Societies: Founded the FiFo film society, was a member
 of the STAMP art society ("Studenter angriper med pensel") and was an
@@ -157,103 +147,59 @@ actor in the HiØ Student Drama Society ("Halden Studenternes
 Theaterselskab").
 
 # Languages
-- Norwegian :: mother tongue
-- English :: have studied in Scotland and have had English as working
-  language for 7.5 years
-- German :: have lived in Germany for 2.5 years and have worked in
-  German speaking countries for a total of 4 years.
-- Mandarin :: good oral skills for every day conversation
+- **Norwegian**: Norwegian is my mother tongue
+- **English**: I have taken my master degree in Scotland and have had
+English as my working language for 7.5 years while working at Escenic.
+- **German**: I have lived in Germany for 2.5 years and have worked in
+German speaking countries for a total of 4 years.
+- **Mandarin**: I have good oral skills for every day conversation.
 
-# Technology
-## Java
-- EJB3
-- CDI :: injection, events, decorators, interceptors, classifiers++
-- JMS with HornetQ and ActiveMQ
-- Spring
-- Spring Batch
-- Activiti
-- Persistence: iBATIS, Hibernate 3 & 4, JPA,
-  JDBC (if I have a choice, I'd rather write the data layer in pure
-  JDBC (once) and be done with it (instead of spending ages debugging
-  Hibernate))
-- Fat clients with AWT & Swing
-- Web clients with: JSF, Rich Faces, [Apache Wicket](http://wicket.apache.org),
-  JSP, EL & JSTL
+# Programming languages
 
-## Python
-- Gtk+
+- **Java**: EJB3; CDI (injection, events, decorators, interceptors,
+  classifiers++); JMS, HornetQ & ActiveMQ; Spring; Spring Batch;
+  [Activiti](http://activiti.org/); Persistence with iBATIS, Hibernate 3
+  & 4, JPA, JDBC; fat GUI clients with AWT & Swing; Web GUI clients
+  with: JSF, Rich Faces, [Apache Wicket](http://wicket.apache.org), JSP,
+  EL & JSTL.
+- **BASH**: Unit testing with [shunit2](https://code.google.com/p/shunit2/);
+  JSON parsing with [JSON.sh](https://github.com/dominictarr/JSON.sh);
+  XML & XPATH parsing with [xml_grep](
+  http://search.cpan.org/dist/XML-Twig/tools/xml_grep/xml_grep) (XML
+  Twig Tools)
+- **Python**: Gtk+
+- **C & C++**: OpenAL, OpenGL
+- **ECMASCript**, **JavaScript** & **ActionScript**: jQuery, jChart,
+  ActionScript & Flex
 
-## BASH
-- Unit testing with [shunit2](https://code.google.com/p/shunit2/)
-- JSON parsing with [JSON.sh](https://github.com/dominictarr/JSON.sh)
-- XML & XPATH parsing with [XML Twig Tools / xml_grep]( http://search.cpan.org/dist/XML-Twig/tools/xml_grep/xml_grep)
+# Technologies I've worked a lot with
 
-## C & C++
-- OpenAL
-- OpenGL
+- **Version control**: Git; Perforce; Subversion; CVS; Have conducted
+migration of large Subversion repositories to Git
+- **Virtualisation**: KVM; Amazon AWS; VMWare; VirtualBox
+- **Content Management Systems**:
+[Escenic Content Engine](http://escenic.com) (worked 7.5 years as
+consultant and architect); [Coremedia](http://coremedia.com) (worked 1
+year as consultant); [EZ Publish](http://ez.no/) :: developed a plugin
+for it; Joomla; Wordpress
+- **Web & application servers**: nginx;
+[Apache](http://httpd.apache.org) 1.x and 2.x;
+[Apache Tomcat](http://tomcat.apache.org); Resin; Oracle Application
+Server; [JBoss](http://jboss.org) 7.0, 7.1, EAP 6.2 & Wildfly 8
+- **Reverse proxies & load balancers**:
+[Varnish](http://varnish-cache.org) 2 & 3; Squid; nginx with memcached
+integration; Oracle Web Cache; HA-Proxy; pon
+- **LDAP**: [OpenLDAP](http://openldap.org) with multi master setup for high
+  performance read/write environments
 
-## ECMASCript, JavaScript & ActionScript
-- jQuery
-- jChart
-- ActionScript & Flex
+# Operating systems
 
-## Content Management Systems
-- Escenic
-- Coremedia
-- EZ Publish :: developed a plugin for it
-- Joomla
-- Wordpress
+- **GNU/Linux**: [Debian](http://debian.org); Ubuntu; Arch; SuSE; RedHat
+& CentOS; Gentoo.
+- **UNIX**: [HP-UX](http://en.wikipedia.org/wiki/HP-UX); Solaris 8;
+Solaris 10; NetBSD 6.1; FreeBSD; Mac OS X
 
-## Virtualisation
-- KVM
-- Amazon AWS
-- VMWare
-- VirtualBox
-
-## Version control
-- Migration of large Subversion repositories to Git
-- Git
-- Perforce
-- Subversion
-- CVS
-
-## Web and application servers
-- nginx
-- Apache 1.x and 2.x
-- [Apache Tomcat](http://tomcat.apache.org)
-- Resin
-- Oracle Application Server
-- JBoss 7.0, 7.1, EAP 6.2, Wildfly 8
-
-## Reverse proxies
-- [Varnish](http://varnish-cache.org) 2 & 3
-- Squid
-- nginx with memcached integration
-- Oracle Web Cache
-
-## Operating systems
-### GNU/Linux
-- Debian :: my everyday desktop operating system since summer
-  of 2001. Have also installed and administered numerous servers
-  running Debian.
-- Ubuntu :: have installed and administered many servers running
-  Ubuntu (LTS and regular versions)
-- Arch :: have run Arch on one of my laptops since February 2014
-- SuSE :: have administered a handful of servers running SuSE
-- RedHat & CentOS :: have administered many servers running RedHat
-  and/or CentOS. Also ran RedHat on my desktop back in the days of RH
-  6.1 and 6.2
-- Gentoo :: installed on desktop & administered one server
-
-### UNIX
-- [HP-UX](http://en.wikipedia.org/wiki/HP-UX)
-- Solaris 8
-- Solaris 10
-- NetBSD 6.1
-- FreeBSD
-- Mac OS X
-
-## My toolbox
+# My toolbox
 - I'm particularly found of [Emacs](http://gnu.org/software/emacs), I
   use it for pretty much everything except web browsing and image
   manipulation.
@@ -266,35 +212,25 @@ Theaterselskab").
   [Firebug](http://getfirebug.com/) is excellent.
 - When performance testing, I tend to use httperf and siege.
 
-# Volunteering
-## Icntys International / KIA
-August 2006 -> Present
+# Non-technical matters
+## Icntys International / KIA, Volunteer teacher, August 2006 > Present
 
 Once a week for many years now, I have worked as a volunteer teacher
-teaching Norwegian to immigrants from all over the world.
+teaching Norwegian to immigrants from all over the world. During these
+years, I have had great fun teaching at all levels, from the students
+who do not speak a word of Norwegian, to the ones who have need to
+polish and further improve their already well functioning language.
 
-During these years, I have had great fun teaching at all levels, from
-the students who do not speak a word of Norwegian, to the ones who
-have need to polish and further improve their already well functioning
-language.
-
-Arranging social events around the language...more Projects
-
-Escenic Tip Engine is a Java application that enables media companies
-to gather information from ordinary citizens through Email, SMS or
-MMS. I contributed to the client part of the application, which was
-developed using Java Swing. During this project, I attended a
-two-month training session in Oslo, Norway.
-
-# Interests
-
-mountain biking, jogging, hiking, traveling, languages, rock
-climbing, piano, literature, poetry, politics
-
-## Organizations
-- Oslo Pils and Linux User Group
-- Cafe Ichtys International
+## Organisations
+- [Cafe Ichtys International](https://www.facebook.com/groups/2594375227/),
+  a part of [KIA](http://kianorge.no)
+- [OPLUG](http://oplug.org), Oslo Pils and Linux User Group
 - [Turistforeningen](http://turistforeningen.no)
 - [Kraftverket](http://kraftverket.no)
+
+## Interests
+
+Mountain biking, jogging, hiking, traveling, languages, rock
+climbing, piano, literature, poetry, politics.
 
 
