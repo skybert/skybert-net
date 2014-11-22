@@ -1,7 +1,7 @@
 date:    2012-10-07
 category: java
 title: Session binding with Varnish, Apache and Resin
-tags: varnish, apache, resin, performance
+tags: varnish, apache, resin, performance, java
 
 This is how I set up session binding using Varnish,
 Apache/mod_proxy_balancer and three Resin application server.
@@ -33,44 +33,45 @@ including Resin:
 
 ```
 public class LoadBalancerFilter implements Filter {
-[..]
+  [..]
 
-public static final String LB_COOKIE_NAME = "LBMEMBER";
-public static final String LB_MEMBER_PREXIX = "lbmember";
+  public static final String LB_COOKIE_NAME = "LBMEMBER";
+  public static final String LB_MEMBER_PREXIX = "lbmember";
 
-public void doFilter
-(ServletRequest pRequest,
-ServletResponse pResponse,
-FilterChain pChain)
-throws IOException, ServletException {
+  public void doFilter(
+    ServletRequest pRequest,
+    ServletResponse pResponse,
+    FilterChain pChain)
+    throws IOException, ServletException
+  {
+    String host = "unknown";
+    try
+    {
+      host = InetAddress.getLocalHost().getHostName();
+    }
+    catch (UnknownHostException uhe)
+    {
+      pChain.doFilter(pRequest, pResponse);
+      return;
+    }
 
-String host = "unknown";
-try {
-host = InetAddress.getLocalHost().getHostName();
-}
-catch (UnknownHostException uhe) {
-pChain.doFilter(pRequest, pResponse);
-return;
-}
+    // if we get myhost.mydomain.com, remove .mydomain.com
+    int periodIndex = host.indexOf(".");
+    if (periodIndex != -1)
+    {
+      host = host.substring(0, periodIndex);
+    }
 
-// if we get myhost.mydomain.com, remove .mydomain.com
-int periodIndex = host.indexOf(".");
-if (periodIndex != -1) {
-host = host.substring(0, periodIndex);
-}
+    Cookie cookie =
+      new Cookie(LB_COOKIE_NAME, LB_MEMBER_PREXIX + "." + host + "; path=/");
 
-Cookie cookie =
-new Cookie(LB_COOKIE_NAME, LB_MEMBER_PREXIX + "." + host + "; path=/");
-
-if (pResponse instanceof HttpServletResponse) {
-((HttpServletResponse) pResponse).addCookie(cookie);
-}
-
-pChain.doFilter(pRequest, pResponse);
-}
-
-[..]
-
+    if (pResponse instanceof HttpServletResponse)
+    {
+      ((HttpServletResponse) pResponse).addCookie(cookie);
+    }
+    pChain.doFilter(pRequest, pResponse);
+  }
+  [..]
 }
 ```
 
