@@ -1,6 +1,7 @@
 date:    2012-10-07
 category: windows
 title: Creating an SSH key on Windows
+tags: cygwin, putty
 
 I've been through this so many times with people running
 Windows so that I want to put this down to paper.
@@ -11,8 +12,7 @@ Install <a href="http://cygwin.com">Cygwin</a> and be sure
 to check for the```openssh-client``` package while
 running```setup.exe```
 
-<img src="openssh.png"
-alt="cygwin setup.exe"/>
+<img src="openssh.png" alt="cygwin setup.exe"/>
 <h2>
 Generate the key using the Cygwin shell
 </h2>
@@ -21,13 +21,11 @@ You can now run standard```ssh``` commands that you
 see documented on the plethora of Linux and Unix websites on
 the internet. Right now, the command you really want to run
 is:
+
     $ ssh-keygen -t rsa
-
-
 
 I recommend entering a password so that in case someone
 steals your key, they still cannot use it.
-
 
 This key, found in```~/.ssh/id_rsa.pub``` can now be
 added to the```~/.ssh/authorized_keys``` file on the
