@@ -1,8 +1,4 @@
-/*
-  @import url("http://www.princexml.com/fonts/steffmann/index.css") all;
-  */
-@import url("http://fonts.googleapis.com/css?family=Over+the+Rainbow") all;
-/* @import url("http://fonts.googleapis.com/css?family=Ubuntu") all; */
+@import url("http://fonts.googleapis.com/css?family=Roboto") all;
 
 body {
   font-family: Verdana, Helvetica, sans-serif;
@@ -12,8 +8,8 @@ body {
   margin-right: 10%;
 }
 
-h1 {
-  font-family: "Over the Rainbow", Helvetica, sans-serif;
+h1, h2 {
+  font-family: Roboto, Verdana, Helvetica, sans-serif;
 }
 
 h1 {
@@ -29,7 +25,6 @@ h1:first-letter, h2:first-letter {
 
 
 a, cite {
-  /*    color: #ADD07E; */
   color: #660000;
 }
 
@@ -39,9 +34,7 @@ a {
 }
 
 a:hover {
-  /*    text-shadow: 2px 2px 2px black; */
   color: red;
-/*    color: #718541; */
 }
 
 #article-list li:after {
