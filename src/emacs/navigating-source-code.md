@@ -1,5 +1,6 @@
 date:    2012-10-07
 category: emacs
+tags: emacs
 title: Navigating source code effortlessly
 
 ## C, C++ and Java
@@ -36,15 +37,14 @@ To go back were you were, you can press
 you've navigated from:
 
 
-public class CarFactory {
-car.getName(); -&gt;
-class Car {
-public String getName() {
-super.getModel(); -&gt;
-class Vehicle {
-public String getModel() {
-&lt;cursor&gt;
-
+    public class CarFactory {
+    car.getName(); ->
+    class Car {
+    public String getName() {
+    super.getModel(); ->
+    class Vehicle {
+    public String getModel() {
+    <cursor>
 
 
 ```M-*``` will take you to the previous place were you

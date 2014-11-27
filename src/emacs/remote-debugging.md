@@ -4,6 +4,7 @@ title: Remote Debugging Java applications in Emacs
 
 <div style="float: right">
 <img src="../../graphics/emacs.png" alt="png"/>
+</div>
 
 Emacs can quite comfortably do debugging of Java applications
 running on remote JVMs using the excellent <a
@@ -26,14 +27,8 @@ stack leading up to the break point. Here, I am browsing the
 state of one of Tomcat's classes when executing my
 ```test.jsp```
 
-<img src="../../graphics/jdibug_remote_debugging_browsing_the_call_stack.png"
+<img src="/graphics/emacs/jdibug_remote_debugging_browsing_the_call_stack.png"
 alt="remote debugging with JDIbug"/>
-
-Here's an example of the elisp I've used with JDIbug:
-
-
-
-
 
 If you are so inclined, you may browse <a
 href="https://github.com/skybert/my-little-friends/blob/master/emacs/.emacs.d/tkj-jdibug.el">my

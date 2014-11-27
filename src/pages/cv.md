@@ -139,16 +139,18 @@ Activities and Societies: University of Stirling Mountaineering Club,
 SUDS - Stirling University Drama Society, University of Stirling
 Volleyball Club, CU.
 
-## Østfold University College (HiØ), BSc Business English, Computer Science 1999 – 2002
+## Østfold University College (HiØ), BSc Computer Science 1999 – 2002
 
 Activities and Societies: Founded the FiFo film society, was a member
 of the STAMP art society ("Studenter angriper med pensel") and was an
 actor in the HiØ Student Drama Society ("Halden Studenternes
 Theaterselskab").
 
+## Østfold University College (HiØ),  Business English 1998 – 1999
+
 # Languages
 - **Norwegian**: Norwegian is my mother tongue
-- **English**: I have taken my master degree in Scotland and have had
+- **English**: I have taken my master's degree in Scotland and have had
 English as my working language for 7.5 years while working at Escenic.
 - **German**: I have lived in Germany for 2.5 years and have worked in
 German speaking countries for a total of 4 years.
@@ -191,13 +193,17 @@ Server; [JBoss](http://jboss.org) 7.0, 7.1, EAP 6.2 & Wildfly 8
 integration; Oracle Web Cache; HA-Proxy; pon
 - **LDAP**: [OpenLDAP](http://openldap.org) with multi master setup for high
   performance read/write environments
+- **Databases**: MySQL & Percona 5 & 5.5; PostgreSQL;
+  [Oracle](http://oracle.com) 8, 10g, 11g, Cache DB, CouchDB, Sybase.
 
 # Operating systems
 
-- **GNU/Linux**: [Debian](http://debian.org); Ubuntu; Arch; SuSE; RedHat
-& CentOS; Gentoo.
-- **UNIX**: [HP-UX](http://en.wikipedia.org/wiki/HP-UX); Solaris 8;
-Solaris 10; NetBSD 6.1; FreeBSD; Mac OS X
+- **GNU/Linux**: [Debian](http://debian.org); Ubuntu; Arch; SuSE;
+RedHat & CentOS; Gentoo.
+- **UNIX**: [HP-UX](http://en.wikipedia.org/wiki/HP-UX);
+  [Solaris](http://en.wikipedia.org/wiki/Solaris_%28operating_system%29)
+  8 & 10; [NetBSD](http://netbsd.org) 6.1;
+  [FreeBSD](http://freebsd.org); Mac OS X
 
 # My toolbox
 - I'm particularly found of [Emacs](http://gnu.org/software/emacs), I
@@ -210,7 +216,9 @@ Solaris 10; NetBSD 6.1; FreeBSD; Mac OS X
 - My tool of choice for most HTTP testing is curl
 - For a lot of HTML, JS and CSS investigation,
   [Firebug](http://getfirebug.com/) is excellent.
-- When performance testing, I tend to use httperf and siege.
+- When performance testing, I tend to use
+  [httperf](http://www.hpl.hp.com/research/linux/httperf/), siege &
+  netstat.
 
 # Non-technical matters
 ## Icntys International / KIA, Volunteer teacher, August 2006 > Present

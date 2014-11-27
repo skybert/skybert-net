@@ -3,6 +3,28 @@ date: 2014-11-22
 
 Skybert's small and big discoveries.
 
+## 2014-11-26
+
+[Flask](https://github.com/mitsuhiko/flask): Impressed with what I've
+read and tried out so far. In less than 20 lines of code, I've a
+standalone micro service Python application which routes different
+HTTP URLs to internal methods, reads user input and outputs JSON
+objects.
+
+From the (first hour) look at it, it seems that Flask strikes just the
+right balance between simplicity and bare bones Python on the one hand
+and support for real world world features like security, complex
+objects, templating, database integration, application types, error
+handling, logging and easy deployment on the other.
+
+<div>
+  <a href="http://flask.pocoo.org">
+    <img src="http://flask.pocoo.org/static/logo/flask.png"
+         style="height: 200px;"
+         alt="flask"
+    />
+  </a>
+</div>
 ## 2014-11-22
 
 I've read about these
@@ -39,5 +61,11 @@ mode gives you IDEA/Eclipse-like highlighting of other uses of the
 variable/method under your cursor. It only triggers after a slight
 delay, which is excellent.
 
+<div>
+  <img src="http://i.imgur.com/YJs5WeZ.png"
+       alt="idle highlight"
+       style="height: 200px;"
+  />
+</div>
 
 

@@ -1,7 +1,7 @@
 date:    2012-10-07
 category: emacs
 title: xml
-tags: xml
+tags: xml, emacs
 
 <img class="right" src="/graphics/emacs/emacs.png" alt="png"/>
 
@@ -83,9 +83,9 @@ This is how I convert the Maven POM XML Schema to RNC:
     $ wget http://maven.apache.org/maven-v4_0_0.xsd
     $ java -jar /opt/rngconv/rngconv.jar maven-v4_0_0.xsd &gt; maven-v4_0_0.rnc
     $ java -jar  /opt/trang/trang.jar \
--I rng \
--O rnc \
-maven-v4_0_0.rng maven-v4_0_0.rnc
+      -I rng \
+      -O rnc \
+      maven-v4_0_0.rng maven-v4_0_0.rnc
 
 ### Converting DTDs to RNCs
 

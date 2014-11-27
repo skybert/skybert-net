@@ -1,5 +1,7 @@
 title: A handful packages that will turbo boost your Emacs
 date: 2014-01-22
+category: emacs
+tags: emacs
 
 Whatever you use Emacs for, you'll definitely want these packages set
 up to get blistering fast code and file navigation.

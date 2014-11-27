@@ -1,6 +1,6 @@
 date:    2014-06-02
 category: emacs
-tags: java, eclipse
+tags: java, eclipse, emacs
 title: java
 
 <img class="right" src="/graphics/emacs/emacs.png" alt="png"/>
