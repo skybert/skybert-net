@@ -13,6 +13,7 @@ Create a file called ```.gitmodules``` in your projects top folder:
 Then do:
 
     $ git submodule init
+    $ git submodule update
 
 The contents of your project's folder ```src/main/other``` is now
 "linked" to the Git repo called ```other```.
