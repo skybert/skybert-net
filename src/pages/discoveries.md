@@ -3,6 +3,14 @@ date: 2014-11-22
 
 Skybert's small and big discoveries.
 
+## 2014-12-12
+
+This presenter at [Computerphile](www.youtube.com/user/Computerphile),
+he's absolutely brilliant. It's rare to find someone so technical in
+computer science being so good at presenting. 
+
+<iframe width="560" height="315" src="//www.youtube.com/embed/MijmeoH9LT4" frameborder="0" allowfullscreen></iframe>
+
 ## 2014-11-26
 
 [Flask](https://github.com/mitsuhiko/flask): Impressed with what I've
