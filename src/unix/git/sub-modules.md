@@ -1,5 +1,7 @@
 title: Making another repository directory a part of your repo
 date: 2014-12-12
+category: unix
+tags: unix, git
 
 Say you want the contents of a given folder in your project to point
 to a different Git repo's (top folder).
