@@ -20,7 +20,7 @@ I trust these third party sources, therefore I add their keys
 to my local APT key ring:
 
 ### debian-multimedia.rg
-    # apt-get install keydebian-multimedia-keyring
+    # apt-get install deb-multimedia-keyring
 
 ### opera.com
     # wget -O - http://deb.opera.com/archive.key | apt-key add -
