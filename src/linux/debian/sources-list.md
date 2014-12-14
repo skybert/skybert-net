@@ -3,53 +3,15 @@ tags: debian
 category: linux
 title: /etc/apt/sources.list
 
-These are the sources I'm using on most of my Debian boxes:
+This is the
+[/etc/apt/sources.list](https://github.com/skybert/my-little-friends/blob/master/debian/sources.list)
+I'm using on most of my Debian boxes.
 
-```
-# Torstein's sources.list                                    -*- sh -*-
-#######################################################################
-# stable
-#######################################################################
-deb http://security.debian.org/ stable/updates main contrib non-free
-deb-src http://security.debian.org/ stable/updates main main contrib non-free
+As I often also add sources from both table and testing (and sometimes
+unstable and even experimental), I also have
+[APT pinning](http://jaqque.sbih.org/kplug/apt-pinning.html) set up
+[in /etc/apt/preferences](https://github.com/skybert/my-little-friends/blob/master/debian/preferences).
 
-deb http://ftp.no.debian.org/debian/ stable main contrib non-free
-deb-src http://ftp.no.debian.org/debian/ stable main
-
-deb http://volatile.debian.org/debian-volatile stable/volatile main contrib non-free
-deb-src http://volatile.debian.org/debian-volatile stable/volatile main contrib non-free
-
-#######################################################################
-# testing
-#######################################################################
-# deb http://security.debian.org/ testing/updates main contrib non-free
-# deb-src http://security.debian.org/ testing/updates main main contrib non-free
-
-# deb http://ftp.no.debian.org/debian/ testing main contrib non-free
-# deb-src http://ftp.no.debian.org/debian/ testing main
-
-#######################################################################
-# opera
-#######################################################################
-deb http://deb.opera.com/opera/ stable non-free
-
-#######################################################################
-# google
-#######################################################################
-deb http://dl.google.com/linux/deb/ stable non-free main
-
-#######################################################################
-# Percona repository
-#######################################################################
-deb http://repo.percona.com/apt lenny main
-deb-src http://repo.percona.com/apt lenny main
-
-#######################################################################
-# mplayer etc
-#######################################################################B
-deb http://www.debian-multimedia.org squeeze main
-
-```
 
 
 ## Adding the third party repository keys

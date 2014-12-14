@@ -5,9 +5,9 @@ Skybert's small and big discoveries.
 
 ## 2014-12-12
 
-This presenter at [Computerphile](www.youtube.com/user/Computerphile),
+This presenter at [Computerphile](http://youtube.com/user/Computerphile),
 he's absolutely brilliant. It's rare to find someone so technical in
-computer science being so good at presenting. 
+computer science being so good at presenting.
 
 <iframe width="560" height="315" src="//www.youtube.com/embed/MijmeoH9LT4" frameborder="0" allowfullscreen></iframe>
 
