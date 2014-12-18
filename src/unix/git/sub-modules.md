@@ -20,4 +20,10 @@ Then do:
 The contents of your project's folder ```src/main/other``` is now
 "linked" to the Git repo called ```other```.
 
+When you later want to update the submodule, you'll need to switch to
+its desired branch and then pull in the changes:
+
+    $ cd src/main/other
+    $ git checkout master
+    $ git pull
 
