@@ -6,10 +6,11 @@ tags: emacs
 Whatever you use Emacs for, you'll definitely want these packages set
 up to get blistering fast code and file navigation.
 
-## Blistering fast M-x Install
-[smex](http://www.emacswiki.org/emacs/Smex) and you'll never look
-back. It makes you so much faster in Emacs as it not only auto
-completes whatever you do with =M-x=, but it also remembers what you
+## Blistering fast M-x
+
+Install [smex](http://www.emacswiki.org/emacs/Smex) and you'll never
+look back. It makes you so much faster in Emacs as it not only auto
+completes whatever you do with ```M-x```, but it also remembers what you
 did previously, listing often used commands at the top.
 
 <img src="/graphics/2014/emacs-smex.gif" alt="Emacs using smex for minibuffer completion"/>
@@ -21,9 +22,9 @@ automatic setup of IDO for all your projects.
 Projectile will also give you other project specialised features such
 as:
 
-* searching for a string inside your project using =projectile-grep=,
+* searching for a string inside your project using ```projectile-grep```,
   I use this all of the time, quite seldom, I venture back to
-  =grep-find=.
+  ```grep-find```.
 
 * replacing a string in the project
 
