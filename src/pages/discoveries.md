@@ -3,6 +3,40 @@ date: 2014-11-22
 
 Skybert's small and big discoveries.
 
+## 2014-12-23
+
+When using [GNU sed](https://www.gnu.org/software/sed), you can use
+much more powerful regular expressions by passing the
+```--regexp-extended``` switch to ```sed```.
+
+Passing ```--regexp-extended```, or just ```-r```, also makes some of
+the syntax easier as you don't have to escape group parenthesis.
+
+After just using it a couple of hours, I find using extended regexps
+also makes sed behave much more predictable.
+
+## 2014-12-22
+
+<div>
+  <a href="http://de.wikipedia.org/wiki/Markdown">
+    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/208px-Markdown-mark.svg.png"
+         style="height: 200px;"
+         alt="markdown"
+     />
+   </a>
+</div>
+
+It's easy writing presentation slides using Markdown and generate
+these into beautiful HTML5 slides with CSS3 transitions from
+[reval.js](https://github.com/hakimel/reveal.js/)  by using
+[pandoc](http://johnmacfarlane.net/pandoc/demo/example9/producing-slide-shows-with-pandoc.html)
+
+Previously, I've been using an exporter to Emacs org, but ```pandoc```
+is so much more stable and flexible.
+
+## 2014-12-18
+https://yar.fruct.org/projects/plantuml-deb
+
 ## 2014-11-26
 
 [Flask](https://github.com/mitsuhiko/flask): Impressed with what I've
