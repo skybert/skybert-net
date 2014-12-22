@@ -35,7 +35,10 @@ Previously, I've been using an exporter to Emacs org, but ```pandoc```
 is so much more stable and flexible.
 
 ## 2014-12-18
-https://yar.fruct.org/projects/plantuml-deb
+
+[PlantUML](https://yar.fruct.org/projects/plantuml-deb) is a great
+command for generating diagrams from plain text files. It also sports
+a Confluence plugin - among other things.
 
 ## 2014-11-26
 
