@@ -10,10 +10,9 @@ much more powerful regular expressions by passing the
 ```--regexp-extended``` switch to ```sed```.
 
 Passing ```--regexp-extended```, or just ```-r```, also makes some of
-the syntax easier as you don't have to escape group parenthesis.
+the syntax easier as you don't have to escape group parenthesis and I
+find ```sed``` overall becomes more predictable using this switch.
 
-After just using it a couple of hours, I find using extended regexps
-also makes sed behave much more predictable.
 
 ## 2014-12-22
 
