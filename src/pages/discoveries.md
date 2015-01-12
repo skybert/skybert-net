@@ -3,6 +3,14 @@ date: 2014-11-22
 
 Skybert's small and big discoveries.
 
+## 2015-01-12
+
+[puppet-lint](http://puppet-lint.com/) will not only spot errors and
+deviations from Puppet Lab's best practices, it will also fix many of
+these issues for you:
+
+``` $ puppet-lint --fix init.pp ```
+
 ## 2014-12-23
 
 When using [GNU sed](https://www.gnu.org/software/sed), you can use
