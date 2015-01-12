@@ -178,7 +178,7 @@ German speaking countries for a total of 4 years.
   http://search.cpan.org/dist/XML-Twig/tools/xml_grep/xml_grep) (XML
   Twig Tools); consuming REST and SOAP web services using
   [curl](http://curl.haxx.se/) and [wget](https://www.gnu.org/software/wget/)
-- **Python**: Gtk+
+- **Python**: Gtk+, Flask.
 - **C & C++**: OpenAL, OpenGL
 - **ECMASCript**, **JavaScript** & **ActionScript**: jQuery, jChart,
   ActionScript & Flex
