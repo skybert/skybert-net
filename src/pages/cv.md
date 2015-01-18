@@ -1,9 +1,19 @@
 title: Curriculum Vitae
 
-I love working with complex Unix and Linux systems comprised of
-components such as HTTP servers, app servers, web caches, load
-balancers, distributed memory caches, databases, LDAP and application
-servers. Making them all play together is a treat :-)
+<div class="pictures">
+  <a href="#">
+    <img
+      src="http://0.gravatar.com/avatar/0f8ce8b3ec47f451d48ef0d48973178a?size=200px"
+      alt="picture of moi"
+      class="right"
+    />
+  </a>
+</div>
+
+I am Torstein. I love working with complex Unix and Linux systems
+comprised of components such as HTTP servers, app servers, web caches,
+load balancers, distributed memory caches, databases, LDAP and
+application servers. Making them all play together is a treat!
 
 Also, I enjoy designing and developing JEE applications, using web
 standards such as XML, CSS, DOM, ECMA/JavaScript as well as hacking on
@@ -26,7 +36,7 @@ equally rewarding experience that is also the core of my MSc in Human
 Resource Management.
 
 Specialities: Multi-server architecture and development of JEE systems
-with high demands for performance, availability and scalability.
+with very high demands for performance, availability and scalability.
 
 # Experience
 ## Conduct AS, Senior consultant, February 2013 – Present
@@ -34,7 +44,7 @@ with high demands for performance, availability and scalability.
 Building world class solutions for our customers using open source
 technologies such as Linux and Java.
 
-I've been (for the most part) fortunate to work with these
+I've (for the most part) been fortunate to work with these
 technologies: Java backend and frontend development using JBoss, EJBs,
 JPA, Apache Wicket, Activiti, Mockito, Hibernate 3 & 4, Spring, Spring
 Batch, RESTEasy, memcached, Git, jQuery, jChart, CSS & HTML.
@@ -133,20 +143,18 @@ Summer intern & part time work involving ECMA/JavaScript, DOM and
 Python development as well as testing Opera on the Linux platform.
 
 # Education
-## The University of Stirling, MSc Human Resource Management 2002 – 2003
-
-Activities and Societies: University of Stirling Mountaineering Club,
-SUDS - Stirling University Drama Society, University of Stirling
-Volleyball Club, CU.
-
-## Østfold University College (HiØ), BSc Computer Science 1999 – 2002
-
-Activities and Societies: Founded the FiFo film society, was a member
-of the STAMP art society ("Studenter angriper med pensel") and was an
-actor in the HiØ Student Drama Society ("Halden Studenternes
-Theaterselskab").
-
-## Østfold University College (HiØ),  Business English 1998 – 1999
+- [The University of Stirling](http://www.stir.ac.uk/), **MSc Human
+  Resource Management**: 2002 – 2003; Activities and Societies:
+  University of Stirling Mountaineering Club, SUDS - Stirling
+  University Drama Society, University of Stirling Volleyball Club,
+  CU.
+- [Østfold University College](http://hiof.no) (HiØ), **BSc Computer
+  Science**: 1999 – 2002; Activities and Societies: Founded the FiFo
+  film society, was a member of the STAMP art society ("Studenter
+  angriper med pensel") and was an actor in the HiØ Student Drama
+  Society ("Halden Studenternes Theaterselskab").
+- [Østfold University College](http://hiof.no) (HiØ), **Business
+  English**; 1998 – 1999; Oral and written business communication.
 
 # Languages
 - **Norwegian**: Norwegian is my mother tongue
@@ -168,7 +176,8 @@ German speaking countries for a total of 4 years.
   JSON parsing with [JSON.sh](https://github.com/dominictarr/JSON.sh);
   XML & XPATH parsing with [xml_grep](
   http://search.cpan.org/dist/XML-Twig/tools/xml_grep/xml_grep) (XML
-  Twig Tools)
+  Twig Tools); consuming REST and SOAP web services using
+  [curl](http://curl.haxx.se/) and [wget](https://www.gnu.org/software/wget/)
 - **Python**: Gtk+
 - **C & C++**: OpenAL, OpenGL
 - **ECMASCript**, **JavaScript** & **ActionScript**: jQuery, jChart,

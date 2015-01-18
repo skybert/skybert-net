@@ -22,19 +22,20 @@ automatic setup of IDO for all your projects.
 Projectile will also give you other project specialised features such
 as:
 
-* searching for a string inside your project using ```projectile-grep```,
+- searching for a string inside your project using ```projectile-grep```,
   I use this all of the time, quite seldom, I venture back to
   ```grep-find```.
 
-* replacing a string in the project
+- replacing a string in the project
 
 All of this for free. No setup required.
 
 While you're at it, also consider installing these packages for
 an even better IDO experience:
-* [flx-ido](https://github.com/lewang/flx)
-* [ido-vertical-mode](https://github.com/gempesaw/ido-vertical-mode.el)
-* [ido-ubiquitous](https://github.com/technomancy/ido-ubiquitous)
+
+- [flx-ido](https://github.com/lewang/flx)
+- [ido-vertical-mode](https://github.com/gempesaw/ido-vertical-mode.el)
+- [ido-ubiquitous](https://github.com/technomancy/ido-ubiquitous)
 
 <img src="/graphics/2014/emacs-projectile.gif" alt="Emacs projectile"/>
 
