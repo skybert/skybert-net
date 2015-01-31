@@ -1,0 +1,17 @@
+blockdiag {
+    user [shape = actor, color="green", label="Bruker"];
+    fe [color="green", textcolor="white", label="Flex webapp"];
+    blazeds [color="green", textcolor="white", label="BlazeDS"];
+    java [color="green", textcolor="white", label="Java"];
+    db [color="red", textcolor="white", label="DB"];
+
+    utf16 [color="green", textcolor="white", label="UTF-16"];
+    utf162 [color="green", textcolor="white", label="UTF-16"];
+    utf8 [color="green", textcolor="white", label="UTF-8"];
+    utf82 [color="green", textcolor="white", label="UTF-8"];
+    latin1 [color="red", textcolor="white", label="ISO-8859-1"];
+
+    user   -> fe -> blazeds -> java -> db;
+    utf16 -> utf8 -> utf82 -> utf162 -> latin1
+
+}

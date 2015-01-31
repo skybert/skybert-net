@@ -1,35 +1,33 @@
 
-# Firkanter og spørsmålstegn
+# Squares and question marks
 
-> En oppdagelsesreise inn i tegnsettenes og enkodingenes verden
+> An adventure into the world character sets and encodings
 
-<a href="mailto:torstein@conduct.no">torstein@conduct.no</a>
-
----
-
-## Mål
-- Forståelse for hva et tegnsett er
-- Forståelse for hva en enkoding er
-- Kunne skille enkodingproblemer med visningsproblemer
-- Avlive 3 myter
+<a href="torstein.k.johansen AT gmail DOT com">Torstein Krause Johansen</a>
 
 ---
 
-### Skulle det ikke ha stått "Kjører" her?
+## Goals for this talk
+- Understanding for what a character set is
+- Understanding for what an encoding is
+- Ability to differentiate encoding problems from rendering problems
+- Debunk 2 myths
+
+---
+
+### Shouldn't it say "Kjører" here?
 
 > KjÃ¸rer
 
-og andre spørsmål
+and other questions
 
 ---
 
-Det kommer en *Quiz* til slutt, så følg med!
+You'll get a *Quiz* at the end, so pay attention!
 
 ---
 
-## Lynkurs: tegnsett og enkodinger
-
-Eller "character sets & encodings" som det heter på nynorsk
+## Crash course: character sets and encodings
 
 ---
 
@@ -37,56 +35,56 @@ Eller "character sets & encodings" som det heter på nynorsk
 
 <img src="usa-uk.jpg" alt="usa &amp; uk"/>
 
-- Genial standard
-- ...så lenge du er engelsktalende
+- An absolute genious of a standard
+- ...as long as you speak English
 
 ---
 
-### ASCII - for nerder
-- 7 bits
-- Et tegn tilsvarer en tallverdi, f.eks.:
+### ASCII - for nerds
+- 7 bit
+- One character corresponds to one numeric value e.g.:
 
 ```
 
-Tegn | Desimal | Binær         |
-A    | 65      | 1 0 0 0 0 0 1 |
-B    | 66      | 1 0 0 0 0 1 0 |
+Character | Desimal | Binær         |
+A         | 65      | 1 0 0 0 0 0 1 |
+B         | 66      | 1 0 0 0 0 1 0 |
 ```
 
-Storbokstav verdi + 32 = liten bokstav verdi:
+Value for upper case letter + 32 = value for the lower case letter:
 ```
 
-Tegn | Desimal | Binær         |
-a    | 97      | 1 1 0 0 0 0 1 |
-b    | 98      | 1 1 0 0 0 1 0 |
+Character | Desimal | Binær         |
+a         | 97      | 1 1 0 0 0 0 1 |
+b         | 98      | 1 1 0 0 0 1 0 |
 ```
 
-Genialt!
+Brilliant!
 
 ---
 
-### Og så kom europeerne
+### And then came the Europeans
 
 <img src="columbus.jpg" alt="Columbus"/>
 
-Man trengte nye bokstaver som ikke fantes fra før
+One needed new characters that didn't exist
 
 ---
 
-### Og så kom europeerne - II
+### And then came the Europeans - II
 
-- ...men det var fullt i herberget (alle de 127 rommene var fulle)
-- ...så de la på en 0 til
+- ...but the house was full, all the 127 rooms were taken
+- ...so they added another zero
 
 > **0** 1 0 0 0 0 0 1
 
 ---
 
-### 256 tegn, haraball!
+### 256 characters, hurrah!
 
 ---
 
-### Og så kom asiatene
+### And then came the Asians
 
 <img src="dragon.png" alt="Dragon"/>
 
@@ -94,46 +92,46 @@ Man trengte nye bokstaver som ikke fantes fra før
 
 ---
 
-### Mye tull
+### A whole lot of nonsense
 
-- Mange lagde sine egne tegnsett
-- Inkompatible over hele linja
-
----
-
-### Endelig orden: Unicode
-
-- Plass til alle tegn og bokstaver i alle døde og nålevende språk
-  (har i dag over 110 000 tegn)
-- Og ledige rom hvis noen skulle finne på å stikke innom
+- Many made their own character sets
+- Incompatibility all around
 
 ---
 
-### Unicode er et tegnsett
+### Finally peace: Unicode
 
-- En tabell med tallverdier (codepoints) og navn på alle bokstavene og
-tegn i hele verden
-
-- engelsk: character set, charset
-
+- Caters for all characters and letters in all dead and spoken
+  languages (has today more than 110 000 characters)
+- And more room to spare if other languages decide to drop by
 
 ---
 
-### Unicode eksempler
+### Unicode is a character set
 
-- Tegnet "Ω" har verdien 937 og navnet "GREEK CAPITAL LETTER OMEGA"
+A table with entries for all letters and character in the entire
+world. Each entry has:
 
-- Tegnet for "Å" har verdien 197 og navnet "LATIN CAPITAL LETTER A WITH
-RING ABOVE"
-
+- Numeric values (code points)
+- A name
 
 ---
 
-### Hvordan finne Unicode nummeret til et tegn
+### Unicode examples
 
-For eksempel "~" (tilde)?
+- The character "Ω" has the numeric value 937 an the name "GREEK
+  CAPITAL LETTER OMEGA"
 
-Verdensveven: [Unicode Character Table](http://unicode-table.com/en/)
+- The character "Å" has the numeric value 197 and the name "LATIN
+  CAPITAL LETTER A WITH RING ABOVE"
+
+---
+
+### How to find the Unicode value (code point) for a character
+
+For instance "~" (tilde)?
+
+Word wide web: [Unicode Character Table](http://unicode-table.com/en/)
 
 Java:
 
@@ -153,20 +151,24 @@ Emacs:
 
 ### UTF-8
 
-- Har tatt verden med storm
-- ASCII kompatibel
-- Oppfunnet av Ken Thompson i 1992 mens han spiste på restaurant
+- Has conquered the world
+- ASCII compatible
+- Invented by Ken Thompson in 1992 while he was having dinner in a
+  restaurant
+- A standard so simple you can explain it on a napkin
 
 ---
 
-### UTF-8 - for nerder
+### UTF-8 - for nerds
 
-- En ASCII streng enkodet i UTF-8 har **0** som første bit
+- Killer feature #1: All ASCII strings are valid UTF-8; An ASCII
+  string encoded in UTF-8 has **0** as the first bit.
 
-- Killer feature #2 lett å navigere inne i en bit-strøm for å finne
-  forrige tegn.
+- Killer feature #2: Easy to navigate and find current, previous and
+  next character.
 
-- Et Unicode tegn kan enkodes med opptil **4** bytes:
+- Unicode characters can use up to **4** bytes (the digits are the
+  header fields, the **x**s can be used for actual values):
 
 ```
 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
@@ -174,31 +176,34 @@ Emacs:
 
 ---
 
-### Forskjellen på Unicode og UTF-8
+### The difference between Unicode and UTF-8
 
-- Unicode er en tabell med tallverdier og navn for alle tegn i hele
-verden.
+- Unicode is a table with numeric values and names for all characters
+in the whole wide world.
 
-- UTF-8 er en av flere måter å oversette en Unicode tallverdi til bytes
-
----
-
-### Ærr'e så fa'li 'a?
-
-- UTF-8 : ASCII-kompatibel
-- UTF-16 : **ikke** ASCII-kompatibel (Windows & Java)
-- UTF-32 : **ikke** ASCII-kompatibel
+- UTF-8 is of several ways to encode a Unicode numeric value to
+  bytes.
 
 ---
 
-## Tegnsett & encoding i Java, HTML, HTTP & venner
+### Why is this important?
+
+For instance, consider this:
+
+- UTF-8 : ASCII compatible
+- UTF-16 : **not** ASCII compatible (Windows & Java)
+- UTF-32 : **not** ASCII compatible
+
+---
+
+## Character set & encoding in Java, HTML, HTTP & friends
 
 ---
 
 ### Java
 
-[Javas interne representasjon av strenger er Unicode](https://docs.oracle.com/javase/7/docs/technotes/guides/intl/overview.html)
-(med UTF-16 enkoding)
+[Java's internal representation of strings is Unicode](https://docs.oracle.com/javase/7/docs/technotes/guides/intl/overview.html)
+(with UTF-16 encoding)
 
     final String name = getNameFromFacebook(id);
 
@@ -206,27 +211,27 @@ verden.
 
 ### Flex & ActionScript
 
-- [Default enkoding i Flex](https://www.adobe.com/support/documentation/en/flex/1/internationalization_flex_short/internationalization_flex_short9.html)
-er UTF-8.
+- [Default encoding in Flex](https://www.adobe.com/support/documentation/en/flex/1/internationalization_flex_short/internationalization_flex_short9.html)
+is UTF-8.
 
-- Du kan overstyre dette i MXML-fila:
+- You can override this in the MXML file:
   ```<?xml version="1.0" encoding="iso-8859-1"?>```
 
-- Eller editoren din kan spesifisere encoding når den skriver
-fila ved å brenne det fast i selve fila, en såkalt BOM.
+- Or your editor can specify the encoding when it writes the file to
+disk, burning a mark in it using a so called BOM
 
 ---
 
-### Sa du BOM?
+### Did you say BOM?
 
-- BOM er noe vi kan bruke hvis vi ikke kan/vil skrive enkodinga i
-selve fila.
+- BOM is something that we can use if cannot write the encoding into
+the file's contents.
 
-- F.eks. når vi skriver en tekst fil
+- For instance when we when write a plain text file
 
-- Eksempel på en [UTF-8-enkodet fil uten BOM](hello-without-bom.txt)
+- An example of a [UTF-8 encoded file without BOM](hello-without-bom.txt)
 
-- Eksempel på en [UTF-8-enkodet fil med BOM](hello-with-bom.txt)
+- An example of a [UTF-8 encoded file with BOM](hello-with-bom.txt)
 
 ---
 
@@ -234,20 +239,19 @@ selve fila.
 
     <?xml version="1.0" encoding="utf-8"?>
 
-- [XML-spesifikasjonen](http://www.w3.org/TR/xml/#charencoding)
-bestemmer at standard enkoding er
+- The [XML specification](http://www.w3.org/TR/xml/#charencoding)
+dictates that the standard encoding to be
 [UTF-8](http://en.wikipedia.org/wiki/UTF-8)
 
-- Alle XML-parsere må som et minimum støtte UTF-8
+- All XML parsers must as a minimum support UTF-8
 
 ---
 
 ### HTTP
 
-Når vi surfer på [facebook.com](http://facebook.com) eller skriver
-Java-kode som konsumerer REST, RPC over HTTP og SOAP tjenester sier
-serveren ifra hvilket enkoding innholdet er oversatt med (serialisert
-som):
+When we surf on [facebook.com](http://facebook.com) or write Java code
+that consume REST, RPC over HTTP and SOAP services, the server says
+with which encoding the contents is serialised:
 
     $ GET http://vg.no
     [..]
@@ -259,25 +263,26 @@ som):
 
 ### HTML
 
-Inne i HTML-siden er det også viktig at enkodingen er riktig for at
-innholdet skal _vises_ riktig i nettleseren:
+Inside the HTML file itself, it's also important that the encoding
+is correct so that the contents is _displayed_ properly in the web
+browser:
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 ---
 
-### Kjøremiljø
+### Runtime environment
 
-I tillegg til hvordan dataene er lagret og serialisert, må vi som
-brukere også ha feiet for egen dør
+In additoin to how the data are stored and serialised it's also
+important that we take care of things on our side:
 
-- Skrifttyper (fonter)
+- Fonts
 
 ---
 
-### Kjøremiljø - for nerder
+### Runtime environment - for nerds
 
-#### JVM parametere
+#### JVM parameters
 
 ```
 
@@ -299,14 +304,15 @@ $ export LANG=en_GB.utf8
 
 ### Myth #1
 
-> Enkoding på Java-fila bestemmer hvordan dataene som strømmer
-> igjennom denne Java-komponenten blir skrevet til databasen.
+> The encoding of the Java file decides how the data that are written
+> by this Java component is written to the database.
 
 ---
 
 ### Myth #1 busted
 
-Fil-encoding styrer hvordan tegnene i selve (Java)-fila blir lagret:
+The file encoding only decides how the characters in the Java file
+itself are stored and displayed:
 ```
 /**
  * @author Søren Westergård
@@ -314,8 +320,8 @@ Fil-encoding styrer hvordan tegnene i selve (Java)-fila blir lagret:
  final static String PRODUKT = "UFØ";
 ```
 
-Data-encoding styrer hvordan _dataene_ som (Java)-fila
-skriver/returnerer blir tolket.
+Data encoding, on the other hand, decides how the _data_ (which the
+Java program writes or reads) are read and written:
 ```
 database.writeData(data, Encoding.UTF-8);
 ```
@@ -324,28 +330,29 @@ database.writeData(data, Encoding.UTF-8);
 
 ### Myth #2
 
-> Enkodingen internt i system X påvirker dataene den sender ut og
-> hvordan vi lagrer disse i vårt system.
+> The encoding inside system X affects the data it sends out and how
+> our system saves these data in our system.
 
 ---
 
 ### Myth #2 busted
 
-Det er irrelevant at P360 lagrer dataene sine med
-[Windows 1252](http://en.wikipedia.org/wiki/Windows-1252) så lenge
-P360 webservicen vi snakker med serverer XML enkodet som
-[UTF-8](http://no.wikipedia.org/wiki/UTF-8).
+It's irrelevant that system X stores its data internally as
+[Windows 1252](http://en.wikipedia.org/wiki/Windows-1252) as long as
+the web services through which it exposes these data returns XML
+encoded as [UTF-8](http://no.wikipedia.org/wiki/UTF-8).
 
 ---
 
-## Databasen
+## The database
 
-- Mange databaser i Europa kjørte (og flere kjører fremdeles) med
-  [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1) tegnsett.
-- Dersom den får noe som ikke dekkes opp av
-  [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1), f.eks. "*–*"
-  ([Unicode](http://no.wikipedia.org/wiki/Unicode) navn "EN DASH",
-  lang bindestrek), vil databasen gi en feil.
+- Many databases in Europe used (and several still use!)
+  [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1) encoding.
+- If someone attempts to write a character into these databases that's
+  not covered by
+  [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1), for instance "*–*"
+  [Unicode EN DASH](http://no.wikipedia.org/wiki/Unicode)
+  (hyphen), the database will through and error up to the web application.
 
 <a href="different-encodings.svg">
 <img src="different-encodings.svg" "different encodings"/>
@@ -353,23 +360,8 @@ P360 webservicen vi snakker med serverer XML enkodet som
 
 
 ```
-Bruker (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
+User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
 ```
-
----
-
-## Myth #3
-
-> Ikke-støttede tegn skrevet fra en batch får batchen til å feile
-> fordi vi ikke har Java-kode som ```catch```-er en ```SQLException```
-> eller vi mangler Spring Batch konfigurasjon.
-
----
-
-## Myth #3 busted
-
-> Nei, det feiler fordi Spring Batch selv oppfatter at det kom en
-> uforutsett Hibernate feil i databaselaget og avbryter kjøringen.
 
 ---
 
@@ -377,76 +369,80 @@ Bruker (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
 
 ---
 
-### Unicode er ....
+### Unicode is ....
 
-1. En encoding
-2. Et tegnsett
-
----
-
-### UTF-8 er ....
-
-1. En encoding
-2. Et tegnsett
+1. An encoding
+2. A character set
 
 ---
 
-### Kan man lagre "Alfa og Ω" i Databasen?
+### UTF-8 is ....
 
-1. Ja
-2. Nei
-
----
-
-### Hvis du ser firkanter istedet for bokstaver så er det fordi ...
-
-1. Dataene er lagret i en enkoding og forsøkt vist med en annen
-2. Tegnsettet brukt ved lagring av dataene hadde ikke støtte for bokstaven
-2. Fonten du bruker (f.eks. "Times New Roman")  mangler en bokstav
+1. An encoding
+2. A character set
 
 ---
 
-### Hvis Java-fila mi har Windows 1252 encoding, blir æ, ø og å skrevet riktig til databasen?
+### Can you save "Alfa and Ω" in a database with ISO 8859-1 encoding?
 
-1. Ja
-2. Nei
-3. Det kommer an på databasen og hvordan JDBC kobler seg til den
+1. Yes
+2. No
 
 ---
 
-### Hva har skjedd her?
+### If you see big squares instead of letters, it's because ...
+
+1. The data are saved using one encoding and are displayed with another
+2. The character set used when saving the data didn't have support for
+   the letter(s)
+2. The font you're using (say "Times New Roman") is missing the letter(s)
+
+---
+
+### If my Java source file uses Windows 1252 encoding, will æ, ø and å be written correctly to the database?
+
+1. Yes
+2. No
+3. That depends on how the DB and the JDBC connection are set up
+
+---
+
+### What has happened here?
 
 > KjÃ¸rer
 
-1. Du mangler en font til å vise bokstaven etter "Kj".
-2. Det er ikke samsvar med hvordan dataene er lagret og hvordan de
-   vises frem
+1. You're missing a font to show the letter after "Kj".
+2. There's a mismatch between the encoding used when saving the data
+   and displaying them.
 
 ---
 
-## Oppsummering - for alle
+## Summary - for everyone
 
-- Ser du **firkanter** er det fordi at fonten du bruker ikke har
-  støtte for bokstaven (men _alt er i orden med systemet_).
+- If you're seeing **squares** it's because the font your program is
+  using doesn't have support for the letter (but _everything is ok
+  with the system_).
 
-- Ser du takras som **KjÃ¸rer** er det fordi noe har gått feil med
-enkodingen et eller annet sted i systemet du bruker.
-
----
-
-## Oppsummering - for alle - II
-
-- Hvilke tegnsett og enkoding tredjepartssystemer bruker internt
-  er irrelevant, det som betyr noe er hvordan dataene _transporteres_
-  mellom systemene.
+- If you're seeing complete nonsense like **KjÃ¸rer** it's because
+  something has gone wrong with the encoding one or more paces in the
+  system you're using.
 
 ---
 
-## Oppsummering - for nerder
+## Summary - for everyone - II
 
-- Unicode og UTF-8 er ikke det samme (siden 1992)
-- Character set (tegnsett) og encoding (enkoding) er ikke det samme.
-- Bruk [UTF-8](http://no.wikipedia.org/wiki/UTF-8) encoding overalt:
+- Which character sets and encoding third party systems are using
+  internally is irrelevant.
+
+- What matters is how the data is _transported_ between the systems.
+
+---
+
+## Summary - for nerds
+
+- Character set and encoding are not the same (at least since 1992)
+- Unicode and UTF-8 are not the same
+- Use [UTF-8](http://no.wikipedia.org/wiki/UTF-8) encoding everywhere:
   file encoding, data encoding, JDBC connection strings, UNIX locales.
 
 ---
@@ -455,17 +451,21 @@ enkodingen et eller annet sted i systemet du bruker.
 
 ---
 
-## Videre fordypning
+## Further exploration into the world of Unicode
 
 -
   [UTF-8 and Unicode FAQ for Unix/Linux](http://www.cl.cam.ac.uk/~mgk25/unicode.html):
-  meget grundig og god innføring i tegnsett og enkodinger.
+  very thorough and good introduction to character sets and encoding.
 
-- [Unicode Character Table](http://unicode-table.com/en/): lar deg
-  visuelt utforske hele Unicode-tabellen
+- [Unicode Character Table](http://unicode-table.com/en/): lets you
+  explore the entire Unicode table visually
 
-- [UTF-8](http://en.wikipedia.org/wiki/UTF-8) på Wikipeidia
+- [UTF-8](http://en.wikipedia.org/wiki/UTF-8) on Wikipeidia
 
 ---
 
-# Fine
+# echo comments >
+
+## [\@torsteinkrausew](https://twitter.com/torsteinkrausew)
+
+## [http://skybert.net](http://skybert.net)
