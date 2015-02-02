@@ -25,13 +25,14 @@ ripping and encoding using the Ogg Vorbis codec.
 I'll probably do some more experimenting with it, but this line
 got me what I wanted:
 
-    $ ripit -l \
--u \
--g Folk \
--y 2011 \
--o ~/music/ \
---dirtemplate '"$artist/$album"'
-
+```
+$ ripit -l \
+  -u \
+  -g Folk \
+  -y 2011 \
+  -o ~/music/ \
+  --dirtemplate '"$artist/$album"'
+```
 
 As you might have guessed, the```-g``` and
 ```-y``` options are only necessary when those music meta
