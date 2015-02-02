@@ -3,6 +3,49 @@ date: 2014-11-22
 
 Skybert's small and big discoveries.
 
+## 2015-02-02
+
+You cannot create files directories on Windows starting with a dot and
+no suffix. Try this: create a directory in Windows Explorer
+called ".ssh".
+
+Windows will not only fail to do this, but ask you to enter a file
+name as if you hadn't written anything at all.
+
+Apparantly this is
+[something inherited from the days of old](http://superuser.com/questions/64471/create-rename-a-file-folder-that-begins-with-a-dot-in-windows#comment66479_64471),
+i.e. Windows' DOS heritage.
+
+## 2015-01-20
+
+Ugly looking capitalised  music, pictures, documents directories
+begone! I prefer to have all my directories and files lower case. It's
+easier on my eyes and it reads faster. Thus, I've hated how GNOME and
+others enforced a pile of directories with names like "Documents" and
+"Music" on me. Deleting them was no good as some kept coming back and
+my actual music and document directories didn't get the icon
+decoration that their capitalised counterparts got.
+
+As you can understand, I was thrilled when I discovered today that
+sanity was a mere text edit away (I thought so!):
+
+    $ vim ~/.config/user-dirs.dir
+
+And then set these to my preferred directories:
+```
+XDG_DESKTOP_DIR="$HOME/"
+XDG_DOWNLOAD_DIR="$HOME/tmp"
+XDG_TEMPLATES_DIR="$HOME/tmp"
+XDG_PUBLICSHARE_DIR="$HOME/tmp"
+XDG_DOCUMENTS_DIR="$HOME/doc"
+XDG_MUSIC_DIR="$HOME/music"
+XDG_PICTURES_DIR="$HOME/pictures"
+XDG_VIDEOS_DIR="$HOME/videos"
+```
+
+Logging out and in again in GNOME gave immediate success. The file
+manager even had my "pictures" and "music" and "tmp" directories
+nicely decorated with meta icons.
 
 ## 2015-01-12
 
