@@ -2,6 +2,14 @@ title: Git
 date:    2012-10-07
 category: git
 
+## Deleting a (remote) branch
+
+The first command deletes the branch locally and the second "pushes" the
+delete to the reomote server.
+
+    $ git branch -D <branch name>
+    $ git push origin --delete <branch name>
+
 ## Set up your own a git repository on your server
 
 This is how you set up your own git repository on Unix/Linux
