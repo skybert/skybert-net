@@ -27,7 +27,7 @@ development methodology.
 
 Distributed development is something I'm comfortable and have great
 experience with. I've worked with multinational teams in several time
-zones from January 2007 to January 2014 and am used to the challenges
+zones from January 2007 to January 2013 and am used to the challenges
 (and benefits!)  of many nationalities and cultural backgrounds.
 
 Getting teams to function optimally, making everyone feel valued and
