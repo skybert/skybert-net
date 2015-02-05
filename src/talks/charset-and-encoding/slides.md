@@ -209,6 +209,25 @@ For instance, consider this:
 
 ---
 
+### Java Resource bundles
+
+- [Java resource bundles must be encoded in ISO-8859-1](http://docs.oracle.com/javase/7/docs/api/java/util/PropertyResourceBundle.html).
+
+- Characters that don't fit into ISO-8859-1 must therefore be
+  represented using Unicode escape notation:
+
+```
+native2ascii -encoding utf8 resources.utf8 resources.properties
+```
+
+- Or, it is still possible to write UTF-8 into your .properties if you
+on the Java side do:
+```
+return new String(val.getBytes("ISO-8859-1"), "UTF-8");
+```
+
+---
+
 ### Flex & ActionScript
 
 - [Default encoding in Flex](https://www.adobe.com/support/documentation/en/flex/1/internationalization_flex_short/internationalization_flex_short9.html)
