@@ -30,6 +30,8 @@ $HOME can be different (!):
     $ echo $HOME
     /cygdrive/c
 
+The reason is that the Windows environment variable is set to
+something different than what's written in ```/etc/passwd```.
 
 ## How to delete a Windows process from Cygwin
 
