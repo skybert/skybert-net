@@ -1,5 +1,6 @@
 date:    2012-12-08
-category: java
+category: emacs
+tags: java, emacs
 title: Remote Debugging Java applications in Emacs
 
 <div style="float: right">
@@ -18,7 +19,7 @@ variables. Currently (2009-07-18 13:06), it has one drawback;
 it cannot debug inner classes, but I'm sure this is something
 that will be remedied in a later release.
 
-<img src="../../graphics/jdibug_remote_debugging.png"
+<img src="/graphics/emacs/jdibug_remote_debugging.png"
 alt="remote debugging with JDIbug"/>
 
 Given that you have the given source code in the

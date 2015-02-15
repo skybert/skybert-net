@@ -19,10 +19,10 @@ e.g. malabar mode does it) and it's very easy to set up:
 
 ### Add this to your .emacs
 
-(autoload 'gtags-mode "gtags" "" t)
-(add-hook 'c-mode-common-hook
-'(lambda ()
-(gtags-mode 1)))
+    (autoload 'gtags-mode "gtags" "" t)
+    (add-hook 'c-mode-common-hook
+      '(lambda ()
+         (gtags-mode 1)))
 
 
 ### You can now fly through your Java source code
@@ -36,22 +36,20 @@ To go back were you were, you can press
 ```M-*```. This will "pop" the navigation stack, so if
 you've navigated from:
 
-
     public class CarFactory {
-    car.getName(); ->
-    class Car {
-    public String getName() {
-    super.getModel(); ->
-    class Vehicle {
-    public String getModel() {
-    <cursor>
+      car.getName(); ->
 
+    class Car {
+      public String getName() {
+        super.getModel(); ->
+
+    class Vehicle {
+      public String getModel() {
+        <cursor>
 
 ```M-*``` will take you to the previous place were you
-pressed```M-.```. The
-```M-.``` also lets you
-search for any method or class you like. Try it out, it's
-brilliant!
+pressed```M-.```. The ```M-.``` also lets you search for any method or
+class you like. Try it out, it's brilliant!
 
 <h2><a name="bash">BASH (and other non-C like languages)</a></h2>
 

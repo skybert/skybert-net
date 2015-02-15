@@ -16,6 +16,10 @@ h1 {
   text-align: center;
 }
 
+h2, h3 {
+    margin-bottom: -0.5em;
+}
+
 h1:first-letter, h2:first-letter {
   color: #660000;
 }
