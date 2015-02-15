@@ -1,7 +1,7 @@
 
 # Squares and question marks
 
-> An adventure into the world character sets and encodings
+> An adventure into the world of character sets and encodings
 
 <a href="torstein.k.johansen AT gmail DOT com">Torstein Krause Johansen</a>
 
