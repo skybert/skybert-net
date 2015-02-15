@@ -9,13 +9,11 @@
 <hr/>
   {% if article.category %}
   <div>
-    Category:
+    <strong>Category:</strong>
     <a href="{{ SITEURL }}/{{ article.category.url }}" rel="category">{{ article.category }}</a>
-  </div>
   {% endif %}
   {% if article.tags %}
-  <div>
-    Tags:
+    <strong>Tags:</strong>
     {% for tag in article.tags %}
     <span>
       #<a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>

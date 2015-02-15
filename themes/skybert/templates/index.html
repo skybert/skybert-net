@@ -4,7 +4,12 @@
 {% endblock %}
 
 {% block content %}
-     Here you can read all you want about:
+     <div style="padding: 0.3em;" >
+       <img src="/graphics/2015/rondane-banner.jpg" alt="rondane"/>
+     </div>
+     <span style="float: left">
+       Among other things, I've written articles about:
+     </span>
      <ul style="display: inline">
        {% for tag in tag_cloud %}
        <li style="display: inline;" class="tag-{{ tag.1 }}">
@@ -12,84 +17,10 @@
        </li>
        {% endfor %}
      </ul>
-      <div class="pictures">
-        <a href="http://picasaweb.google.com/lh/photo/7Zgf1W9CP4VBgxUyhrYLkw?feat=embedwebsite"
-           title="some title">
-          <img src="http://lh6.ggpht.com/_xP7IZ-JRNDI/Rqa-AffizrI/AAAAAAAAA_c/rVIT7Y7YFd4/s144/%3A%20DSCF0179.JPG"
-               alt="Sunset Taitung"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/_skT6y8ACE2ZuwZH5yhbqg?feat=embedwebsite">
-          <img src="http://lh5.ggpht.com/_xP7IZ-JRNDI/TADYVu4CXmI/AAAAAAAAHtU/MHN4zHTv-Bs/s144/dani%20220.jpg"
-               alt="Oslo Fjord ferry"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/r3xuDwvOpQPXbyTKtzPYdQ?feat=embedwebsite">
-          <img src="http://lh4.ggpht.com/_xP7IZ-JRNDI/RqbAu_fi2AI/AAAAAAAABSI/jyxneXSGUjs/s144/%3A%20DSCF0339.JPG"
-               alt="Sun Moon Lake"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/HzqR1x60YW_bMMasqkMY1A?authkey=Gv1sRgCOGt2OC6kOicIw&amp;feat=embedwebsite">
-          <img src="http://lh4.ggpht.com/_Vt6Or8L5rF8/SrMNtLZAtvI/AAAAAAAAAlo/pSwjCk1hIxQ/s144/IMG_0287.JPG"
-               alt="Beijing"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/KyfYOdUQqKyRo1x_AUPeyw?authkey=Gv1sRgCJ66zqDp6rukggE&amp;feat=embedwebsite">
-          <img src="http://lh6.ggpht.com/_Vt6Or8L5rF8/Sl-K9lZAOSI/AAAAAAAAAOg/qkM8Oq-10sA/s144/6452_127765576250_560021250_3479569_3573688_n.jpg"
-               alt="Camp fire"/>
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/QUoaCHLML7pUjTS6cckfsA?authkey=Gv1sRgCJ66zqDp6rukggE&amp;feat=embedwebsite">
-          <img src="http://lh3.ggpht.com/_Vt6Or8L5rF8/Sl-Kz_uorCI/AAAAAAAAAMs/iI5tvFe0VZk/s144/00546.jpg"
-               alt="Sandungen"/>
-        </a>
-
-        <a href="http://picasaweb.google.com/lh/photo/UJH1RCSF8XKZM63bWsPHPg?authkey=Gv1sRgCOGt2OC6kOicIw&amp;feat=embedwebsite">
-          <img src="http://lh5.ggpht.com/_Vt6Or8L5rF8/SrTaFZnTKRI/AAAAAAAAAz8/RBmiUieexYA/s144/IMG_0839.JPG"
-               alt="Manshi"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/3B7OtkMdTToYUIya4fJbAA?feat=embedwebsite">
-          <img src="http://lh6.ggpht.com/_xP7IZ-JRNDI/RqbBlffi3AI/AAAAAAAABaI/qdRkHpNst2Y/s144/%3A%20DSCF0403.JPG"
-               alt="Taipei"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/AHA3_WTS1W_YapH6gyVJVQ?feat=embedwebsite">
-          <img src="http://lh6.ggpht.com/_xP7IZ-JRNDI/Shpsgddmm6I/AAAAAAAAE2s/W46K9RmRGqw/s144/img_1071.jpg"
-               alt="Ullev&aring;ls&aelig;ter"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/VT_343dCpLUnx_W84rXsRQ?authkey=Gv1sRgCNCbvLXe5J-7pgE&amp;feat=embedwebsite">
-          <img src="http://lh3.ggpht.com/_xP7IZ-JRNDI/S3bEzkKGffI/AAAAAAAAFXc/ipxkM-80LVI/s144/IMG_1141.JPG"
-               alt="Skiing in -22C"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/bnUA4xsNZSXAaYYMVk7nGg?authkey=Gv1sRgCKqo76uGu86T3gE&amp;feat=embedwebsite">
-          <img src="http://lh5.ggpht.com/_xP7IZ-JRNDI/ST7eSDPyVQI/AAAAAAAADjk/yyC2mzeItFw/s144/%3A%20img_0864.jpg"
-               alt="Perth, Scotland"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/Jqc60skLtpjMxKKXSUl57Q?authkey=Gv1sRgCKqo76uGu86T3gE&amp;feat=embedwebsite">
-          <img src="http://lh5.ggpht.com/_xP7IZ-JRNDI/ST7htGj-d-I/AAAAAAAADsQ/MnuNSuIpGOA/s144/%3A%20img_0937.jpg"
-               alt="Pitlochry"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/8m_amnVhzIwdZtpTUdc4LA?authkey=Gv1sRgCMPm5dme7ebnWw&amp;feat=embedwebsite">
-          <img src="http://lh6.ggpht.com/_xP7IZ-JRNDI/SH6aIZGOC4I/AAAAAAAADJI/G1dAAIXSsPw/s144/%3A%20img_0572.jpg"
-               alt="Castle in Scotland"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/DFglI5opgcqbX1Uhh675_g?authkey=Gv1sRgCOGt2OC6kOicIw&amp;feat=embedwebsite">
-          <img src="http://lh6.ggpht.com/_Vt6Or8L5rF8/SrMPLlL8XqI/AAAAAAAAAm4/EWiKIq3r5LE/s144/IMG_0390.JPG"
-               alt="The Great Wall" />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/N1tCCXbQ6XsMneeWSeuXuHo4YZeZ10l6RUtyrPYZiQc?feat=embedwebsite">
-          <img src="http://lh4.ggpht.com/_xP7IZ-JRNDI/THIXcs0fnvI/AAAAAAAAMP0/KV3gwWvPIxc/s144/IMG_2203.JPG"
-               alt="Sun rise over Mt. Ali,阿里山"
-               />
-        </a>
-        <a href="http://picasaweb.google.com/lh/photo/_lpr7kErvcxqYx-7BFDCSQ?feat=embedwebsite">
-          <img src="http://lh6.ggpht.com/_xP7IZ-JRNDI/TIVJiuMiW-I/AAAAAAAANhs/D3FsLuhRl4Q/s144/182.JPG"
-               alt="Gjende" />
-        </a>
-      </div>
+     <div style="text-align:right;">
+       I hope you will find this site useful,
+       <span style="font-style: italic; text-shadow: 2px 2px 2px grey;">
+         -Skybert
+       </span>
 {% endblock %}
+

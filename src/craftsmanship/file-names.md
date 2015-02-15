@@ -3,10 +3,9 @@ date:    2012-10-07
 category: craftsmanship
 
 Keep the file names lower case, with hyphens between the words:
-
+```
 this-is-my-picture.png
-
-
+```
 The rationale is as follows:
 
 - Having everything in lower case add security in all situations where
@@ -15,11 +14,13 @@ source file, HTML++) as you always know the case of all the words.
 
 - Lower case file names are easier on the eyes. When looking at files
 for hours on end, having them in lower case easens the strain on the
-eyes as
+eyes as:
 
-    MiXEDCaseWordsAreConfusing_and_can_STRAIN-youreyes.doc
+```
+MiXEDCaseWordsAreConfusing_and_can_STRAIN-youreyes.doc
+```
 
-In stead, consider this file name
+In stead, consider this file name:
 
     mixed-case-words-are-confusing-and-can-strain-your-eyes.doc
 
