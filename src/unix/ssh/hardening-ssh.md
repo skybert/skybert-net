@@ -62,7 +62,7 @@ as these are not considered secure anymore.
 
     # /etc/ssh/sshd_config
 
-Protocol 2
+    Protocol 2
 
 ## Put Clients That Fail a Log In in Jail
 
