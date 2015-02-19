@@ -11,13 +11,18 @@ title: Curriculum Vitae
 </div>
 
 I am Torstein. I love working with complex Unix and Linux systems
-comprised of components such as HTTP servers, app servers, web caches,
-load balancers, distributed memory caches, databases, LDAP and
-application servers. Making them all play together is a treat!
+comprised of components such as HTTP servers, web caches, load
+balancers, distributed memory caches, databases, LDAP and application
+servers. Making them all play together is a treat.
 
 Also, I enjoy designing and developing JEE applications, using web
-standards such as XML, CSS, DOM, ECMA/JavaScript as well as hacking on
-Python and BASH scripts to glue everything together.
+standards like [HTML5](http://w3.org/TR/html5),
+[XML](http://w3.org/TR/xml), [CSS](http://w3.org/TR/css),
+[DOM](http://w3.org/TR/dom),
+[ECMAScript](http://www.ecmascript.org)/JavaScript as well as hacking
+on [Python](http://python.org) and
+[BASH](http://gnu.org/software/bash) scripts to glue everything
+together.
 
 I've been fortunate to work on some of the biggest European web sites
 and newspapers, helping the customer with everything from operating
@@ -44,16 +49,14 @@ with very high demands for performance, availability and scalability.
 Building world class solutions for our customers using open source
 technologies such as Linux and Java.
 
-I've (for the most part) been fortunate to work with these
-technologies: Java backend and frontend development using JBoss, EJBs,
-JPA, Apache Wicket, Activiti, Mockito, Hibernate 3 & 4, Spring, Spring
-Batch, RESTEasy, memcached, Git, jQuery, jChart, CSS & HTML.
-
-And not so fortunate to work with: ActionScript, Flex, Jaspersoft
-iReporter.
+I've worked with these technologies: Java backend and frontend
+development using JBoss, EJBs, JPA, Apache Wicket, Activiti, Mockito,
+Hibernate 3 & 4, Spring, Spring Batch, RESTEasy, memcached, Git,
+jQuery, jChart, CSS & HTML. Not to forget: ActionScript, Flex,
+Jaspersoft iReporter.
 
 Server setup and operations are most of the time a breeze using:
-nginx, Apache, RedHat Linux, Ubuntu Linux, BASH, SED, awk & Puppet
+nginx, Apache, RedHat Linux, Ubuntu Linux, [BASH](http://gnu.org/software/bash), SED, [awk](http://www.gnu.org/software/gawk/manual/gawk.html) & Puppet
 
 ## Escenic, System architect, February 2012 – January 2013 (1 year)
 
@@ -62,13 +65,13 @@ Online's (Escenic's) customers which later will expand to cater for
 other systems in Vizrt's portfolio too.
 
 This job was a wonderfully challenging one were I got to work full
-time on Linux servers and BASH programming, most of which we release
+time on Linux servers and [BASH](http://gnu.org/software/bash) programming, most of which we release
 as open source [github/vizrt/ece-scripts]
 
 This job is fully loaded with exciting challenges including: Varnish,
 nginx, lighthttpd, Tomcat, Percona DB, Ubuntu LTS, RHEL, Debian, NFS,
 KVM, Amazon WS, Nagios/Icinga, check_mk & Munin. Not to mention
-thousands of lines of BASH code, performance testing with httperf &
+thousands of lines of [BASH](http://gnu.org/software/bash) code, performance testing with httperf &
 siege, creation of DEB packges, own APT repositories and build systems
 integrating development team efforts with proper release management.
 
@@ -172,12 +175,16 @@ German speaking countries for a total of 4 years.
   & 4, JPA, JDBC; fat GUI clients with AWT & Swing; Web GUI clients
   with: JSF, Rich Faces, [Apache Wicket](http://wicket.apache.org), JSP,
   EL & JSTL.
-- **BASH**: Unit testing with [shunit2](https://code.google.com/p/shunit2/);
-  JSON parsing with [JSON.sh](https://github.com/dominictarr/JSON.sh);
-  XML & XPATH parsing with [xml_grep](
+- **BASH**: Unit testing with
+  [shunit2](https://code.google.com/p/shunit2/); JSON parsing with
+  [JSON.sh](https://github.com/dominictarr/JSON.sh); XML & XPATH
+  parsing with [xml_grep](
   http://search.cpan.org/dist/XML-Twig/tools/xml_grep/xml_grep) (XML
   Twig Tools); consuming REST and SOAP web services using
-  [curl](http://curl.haxx.se/) and [wget](https://www.gnu.org/software/wget/)
+  [curl](http://curl.haxx.se/) and
+  [wget](https://www.gnu.org/software/wget/); parsing text with
+  [sed](https://www.gnu.org/software/sed/) and
+  [awk](http://www.gnu.org/software/gawk/manual/gawk.html)
 - **Python**: Gtk+, Flask.
 - **C & C++**: OpenAL, OpenGL
 - **ECMASCript**, **JavaScript** & **ActionScript**: jQuery, jChart,
@@ -185,9 +192,9 @@ German speaking countries for a total of 4 years.
 
 # Technologies I've worked a lot with
 
-- **Version control**: Git; Perforce; Subversion; CVS; Have conducted
-migration of large Subversion repositories to Git
-- **Virtualisation**: KVM; Amazon AWS; VMWare; VirtualBox
+- **Version control**: Git; Perforce; Subversion, have migrated large Subversion repositories to Git; CVS;
+- **Virtualisation**: KVM; Amazon AWS; VMWare; VirtualBox, Vagrant;
+  [Docker](http://docker.com).
 - **Content Management Systems**:
 [Escenic Content Engine](http://escenic.com) (worked 7.5 years as
 consultant and architect); [Coremedia](http://coremedia.com) (worked 1
@@ -220,8 +227,11 @@ RedHat & CentOS; Gentoo.
   manipulation.
 - I use [IntelliJ IDEA](http://jetbrains.com) for debugging and
   refactoring.
-- I cannot live without the UNIX command
-  line tools, BASH, SED and AWK are my best of friends.
+- I cannot live without the UNIX command line tools,
+  [BASH](http://gnu.org/software/bash),
+  [sed](https://www.gnu.org/software/sed/) and
+  [awk](http://www.gnu.org/software/gawk/manual/gawk.html) are my best
+  of friends.
 - My tool of choice for most HTTP testing is curl
 - For a lot of HTML, JS and CSS investigation,
   [Firebug](http://getfirebug.com/) is excellent.
