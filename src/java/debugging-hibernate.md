@@ -10,14 +10,18 @@ including the SQL which Hibernate produces.
 
 ## Log4j for Hibernate 4
 
-This gives you, among other things, both the SQL and the parameter
-values:
+This gives you, depending on the JDBC driver, among other things, both
+the SQL and the parameter values:
 
 ```
 log4j.logger.org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl=TRACE
 ```
 
-## Log4j for Hibernate 3
+It's up to the JDBC driver whether or not to implement the
+```toString()``` method whith something sensible. The HSQL DB driver
+yields great results here, whereas the JTDS driver does not.
+
+## Log4j for Hibernate 3 & 4
 
 ```
 # gives you the SQL with placeholder question marks where the values go
