@@ -19,10 +19,9 @@ Also, I enjoy designing and developing JEE applications, using web
 standards like [HTML5](http://w3.org/TR/html5),
 [XML](http://w3.org/TR/xml), [CSS](http://w3.org/TR/css),
 [DOM](http://w3.org/TR/dom),
-[ECMAScript](http://www.ecmascript.org)/JavaScript as well as hacking
-on [Python](http://python.org) and
-[BASH](http://gnu.org/software/bash) scripts to glue everything
-together.
+[ECMA](http://www.ecmascript.org)/JavaScript as well as hacking on
+[Python](http://python.org) and [BASH](http://gnu.org/software/bash)
+scripts to glue everything together.
 
 I've been fortunate to work on some of the biggest European web sites
 and newspapers, helping the customer with everything from operating
@@ -142,8 +141,10 @@ GNU/Linux and HP-Unix - all in the same solution!
 
 ## Opera Software, Intern, 2001 – 2002 (1 year)
 
-Summer intern & part time work involving ECMA/JavaScript, DOM and
-Python development as well as testing Opera on the Linux platform.
+Summer intern & part time work involving
+[ECMA](http://www.ecmascript.org)/JavaScript,
+[DOM](http://w3.org/TR/dom) and [Python](http://python.org) development as well as testing
+Opera on the Linux platform.
 
 # Education
 - [The University of Stirling](http://www.stir.ac.uk/), **MSc Human
