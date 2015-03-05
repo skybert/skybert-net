@@ -3,6 +3,12 @@ date: 2014-11-22
 
 Skybert's small and big discoveries.
 
+## 2015-03-05
+
+This excellent article at W3C explains [how to center things on a web
+page (including images) using the standards](http://www.w3.org/Style/Examples/007/center.en.html#block),
+i.e. by **not** using ```<center/>```.
+
 ## 2015-02-02
 
 You cannot create files directories on Windows starting with a dot and
