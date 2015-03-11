@@ -3,6 +3,18 @@ category: unix
 tags: git, unix
 date: 2015-03-10
 
+## Combining several commits into one (not pushed)
+
+If you've set up remote tracking, this is as simple as:
+
+    $ git rebase -i
+
+Select to "squash" (`s`) commit(s) (up) into the previous commit:
+
+    pick 908147acbe25f One commit
+    s    34568147acbee Another commit, combine it with the previous one
+    s    23568147gdfae Yet another commit, combine it with the previous ones
+
 ## Removing files from a commit
 
     $ git rebase -i 908147acbe25f
