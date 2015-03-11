@@ -1,6 +1,7 @@
 title: Git
 date:    2012-10-07
-category: git
+category: vcs
+tags: git, vcs
 
 ## Deleting a (remote) branch
 

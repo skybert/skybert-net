@@ -1,6 +1,6 @@
 title: Rewriting History
-category: unix
-tags: git, unix
+category: vcs
+tags: git, vcs
 date: 2015-03-10
 
 ## Combining several commits into one (not pushed)

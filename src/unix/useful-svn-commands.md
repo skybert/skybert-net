@@ -1,5 +1,7 @@
 title: Useful svn commands
 date: 2014-01-23
+category: vcs
+tags: subversion, vcs
 
 Here are some of my favourite svn commands.
 
