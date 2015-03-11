@@ -9,3 +9,8 @@ fluent in VI(m).
 it's constantly growing, albeit far slower than my ```.emacs.d```!
 
 
+## Auto completion menu
+
+There's a surprising amount of VIM users that don't know about the
+excellent ```Ctrl + n``` shortcut which gives them a nice intellisense
+completion menu:
