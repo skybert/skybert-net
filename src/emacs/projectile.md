@@ -1,6 +1,7 @@
 title: Procetile
 category: emacs
 tags: emacs
+date: 2015-03-05
 
 ## One of my favourite Emacs packages
 
