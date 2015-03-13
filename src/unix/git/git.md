@@ -1,15 +1,7 @@
-title: Git
+title: Setting up your own Git repository on your server
 date:    2012-10-07
 category: vcs
 tags: git, vcs
-
-## Deleting a (remote) branch
-
-The first command deletes the branch locally and the second "pushes" the
-delete to the reomote server.
-
-    $ git branch -D <branch name>
-    $ git push origin --delete <branch name>
 
 ## Set up your own a git repository on your server
 
@@ -55,4 +47,13 @@ then, fetch them from the server:
 You can now work as you're used to with e.g. <a
 href="http://github.com">github</a>,```git pull```, ```git push```
 will all work as you're used to.
+
+
+## Deleting a (remote) branch
+
+The first command deletes the branch locally and the second "pushes" the
+delete to the reomote server.
+
+    $ git branch -D <branch name>
+    $ git push origin --delete <branch name>
 
