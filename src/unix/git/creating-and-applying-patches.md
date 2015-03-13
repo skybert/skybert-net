@@ -1,4 +1,4 @@
-title: Creating and applying patches
+title: Creating and applying patches in Git
 date: 2015-03-11
 category: vcs
 tags: git, vcs
