@@ -1,4 +1,4 @@
-title: Making another repository directory a part of your repo
+title: Making another repository directory a part of your Git repo
 date: 2014-12-12
 category: unix
 tags: unix, git
