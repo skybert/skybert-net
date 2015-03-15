@@ -1,7 +1,22 @@
 title: Discoveries
 date: 2014-11-22
 
-Skybert's small and big discoveries.
+> Skybert's small and big discoveries.
+
+## 2015-03-15
+
+Running `occur` in [Emacs](http://gnu.org/software/emacs) gives you
+nice listing of all lines in the current file with an occurances of
+your search query. Here, I search for all lines containing
+```db.get```:
+
+<img
+  src="../../graphics/2015/emacs-occur.png"
+  alt="emacs occur"
+/>
+
+The hits are both clickable and iteratable with the standard
+```next-error``` mechansim (by default bound to ``` C-` ```).
 
 ## 2015-03-05
 
@@ -76,7 +91,8 @@ find ```sed``` overall becomes more predictable using this switch.
 
 <div>
   <a href="http://de.wikipedia.org/wiki/Markdown">
-    <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/208px-Markdown-mark.svg.png"
+  <img
+    src="http://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/208px-Markdown-mark.svg.png"
          style="height: 200px;"
          alt="markdown"
      />
