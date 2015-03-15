@@ -51,6 +51,12 @@ img.favicon {
   height: 16px;
 }
 
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .right {
   float: right;
 }
