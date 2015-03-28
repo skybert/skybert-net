@@ -1,7 +1,18 @@
 date:    2012-10-07
-category: language
-tags: norwegian
+tags: language, norwegian
+category: norsk
 title: Forskjeller på kj- og sj-lydene
+
+## Kjørt og skjørt
+
+> Forholdet vårt er kjørt
+
+Forholdet til kjæresteparet er over. Det finnes ikke håp for at det kan
+bli bra igjen.
+
+> Forholdet vårt er skjørt
+
+Forholdet til kjæresteparet er svakt, men de er fremdeles sammen.
 
 ## Kylling og skylling
 <blockquote>
