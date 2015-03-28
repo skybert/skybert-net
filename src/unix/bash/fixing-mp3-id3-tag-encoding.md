@@ -1,7 +1,7 @@
 title: Fixing MP3 ID3 Tag Encoding
 date:    2012-10-07
 category: bash
-tags: music, mp3
+tags: music, mp3, encoding
 
 I had a huge music library of mostly Taiwanese and Japanese
 music. The encoding of the text inside the MP3 ID3 tags were
