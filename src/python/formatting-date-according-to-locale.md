@@ -26,7 +26,7 @@ nb_NO.utf8
 
 If you now start a new shell, you should be able to list and use the
 new `nb_NO.utf8` locale. In the example below, I show the output of
-the `date` command using the `en_GB.utf8` locale and then the
+the `date` command using the `en_GB.utf8` locale and then using the
 `nb_NO.utf8` locale:
 
 ```
@@ -66,4 +66,4 @@ locales on the command line. As long as you've set the locale, using
 the `locale.setlocale` method, any calls to `datetime.strftime`
 produce output according to the locale set.
 
-Easy right?
+Pretty nice, eh?
