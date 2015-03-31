@@ -50,14 +50,14 @@ in Python.
 import locale
 import datetime
 
-d = datetime.datetime(2015, 11, 15, 16, 30)
+dt = datetime.datetime(2015, 11, 15, 16, 30)
 
 locale.setlocale(locale.LC_ALL, "en_GB.utf8")
-print(d.strftime("%A, %d. %B %Y %I:%M%p"))
+print(dt.strftime("%A, %d. %B %Y %I:%M%p"))
 'Tuesday, 15. November 2015 04:30pm'
 
 locale.setlocale(locale.LC_ALL, "nb_NO.utf8")
-print(d.strftime("%A, %d. %B %Y %I:%M%p"))
+print(dt.strftime("%A, %d. %B %Y %I:%M%p"))
 'tirsdag, 15. november 2015 04:30'
 ```
 
