@@ -61,9 +61,9 @@ print(dt.strftime("%A, %d. %B %Y %I:%M%p"))
 'tirsdag, 15. november 2015 04:30'
 ```
 
-As you can see, it's just like using `LC_ALL` and the system available
-locales on the command line. As long as you've set the locale, using
-the `locale.setlocale` method, any calls to `datetime.strftime`
-produce output according to the locale set.
+As you can see, it's just like using `LC_ALL` on the command line. As
+long as you've set the locale, using the `locale.setlocale()` method,
+any calls to `datetime.strftime()` produce output according to the
+locale set.
 
 Pretty nice, eh?
