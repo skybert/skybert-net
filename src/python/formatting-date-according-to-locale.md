@@ -61,7 +61,7 @@ print(d.strftime("%A, %d. %B %Y %I:%M%p"))
 
 As you can see, it's just like using `LC_ALL` and the system available
 locales on the command line. As long as you've set the locale, using
-the `locale.setlocale` method, any calls to `datetime.strftime` (for
-example) produce output according to the locale set.
+the `locale.setlocale` method, any calls to `datetime.strftime`
+produce output according to the locale set.
 
 Easy right?
