@@ -20,7 +20,7 @@ your machine. For a [Debian](http://debian.org) or
 ```
 # vim /etc/locale.gen
 # locale-gen
-# locale -a | nb_NO
+# locale -a | grep nb_NO
 nb_NO.utf8
 ```
 
