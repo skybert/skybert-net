@@ -30,9 +30,11 @@ the `date` command using the `en_GB.utf8` locale and then the
 `nb_NO.utf8` locale:
 
 ```
-$ LC_ALL=en_GB.utf8 date
+$ export LC_ALL=en_GB.utf8
+$ date
 Mon 30 Mar 18:36:56 CEST 2015
-$ LC_ALL=nb_NO.utf8 date
+$ export LC_ALL=nb_NO.utf8
+$ date
 ma. 30. mars 18:36:42 +0200 2015
 ```
 
