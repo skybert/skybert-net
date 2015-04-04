@@ -5,31 +5,32 @@ tags: python, rest, http, mysql
 
 ## Useful articles
 
-Python:
+### Python
 - Parsing
   [JSON and YAML](http://martin-thoma.com/configuration-files-in-python/)
   config files
 - [Parsing config files](https://docs.python.org/2/library/configparser.html)
 
-Flask:
+### Flask
 - [Flask quickstart](http://flask.pocoo.org/docs/0.10/quickstart/)
 - [Handling a POST request](
   http://runnable.com/UhLMQLffO1YSAADK/handle-a-post-request-in-flask-for-python)
   in Flask.
 
-Templating:
+### Templating
 - [Jinja](http://jinja.pocoo.org/)
 - [Iterating a dictionary]( http://blog.mattcrampton.com/post/31254835293/iterating-over-a-dict-in-a-jinja-template)
 
-Unicode:
+### Unicode
 - [Unicode](http://www.joelonsoftware.com/articles/Unicode.html)
 
-Connecting to a MySQL database:
+### Connecting to a MySQL database:
 - [Excellent article on using MySQL in Python](http://zetcode.com/db/mysqlpython/)
 - [Some notes on Python, MySQL and UTF-8](http://www.dasprids.de/blog/2007/12/17/python-mysqldb-and-utf-8)
 
 
 ## Core web technologies
+
 I've used
 [Twitter's Bootstrap](http://getbootstrap.com/getting-started/#download)
 at work, but never on any of my own projects (I tend to write

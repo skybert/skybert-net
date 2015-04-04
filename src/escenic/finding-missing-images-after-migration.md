@@ -14,8 +14,10 @@ the ECE. There is one original image, typically stored under
 
 ```
 /var/lib/escenic/engine/binary/2012/5/16/19/mypicture.jpg
-``` and several generated image versions, typically stored
-under
+```
+
+and several generated image versions, typically stored under
+
 ```
 /var/cache/escenic/images/mypub/145/incoming/article594308.ece/ALTERNATES/w300/mypicture.jpg
 ```
@@ -34,14 +36,15 @@ To find all images on a given page which return
 
 ```
 $ curl -s http://mysite.com/ | \
-sed 's#&gt;&lt;#&gt;\n&lt;#g' | \
-grep "&lt;img" | \
-cut -d'"' -f2 | \
-grep ^http | \
-while read f; do  \
-if [ $(curl -s -I $f | grep "HTTP/1.1 500" | wc -l) -gt 0 ]; then
-  echo $(basename $f); fi  ;
-done
+  sed 's#&gt;&lt;#&gt;\n&lt;#g' | \
+  grep "&lt;img" | \
+  cut -d'"' -f2 | \
+  grep ^http | \
+  while read f; do  \
+    if [ $(curl -s -I $f | grep "HTTP/1.1 500" | wc -l) -gt 0 ]; then
+      echo $(basename $f);
+    fi;
+  done
 ```
 
 
