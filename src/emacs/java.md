@@ -234,7 +234,7 @@ IDE for Java Developers</a>, at the time of writing
 ```/opt/eclipse``` pointing to it:
 
     $ ls /opt/eclipse
-lrwxrwxrwx 1 root root 14 Sep 29 00:57 /opt/eclipse -> eclipse-4.2.1
+    lrwxrwxrwx 1 root root 14 Sep 29 00:57 /opt/eclipse -> eclipse-4.2.1
 
 ### eclim
 
@@ -254,7 +254,6 @@ from my own sources in```~/src```, thus:
     $ cd eclim
     $ ant clean deploy -Declipse.home=/opt/eclipse
 
-
 This will install the```eclim``` plugin in our ```/opt/eclipse```
 directory, with symlinks to the two eclim binaries in the root (that
 looks a bit messy, doesn't it? Oh well, the important thing is that it
@@ -263,7 +262,6 @@ works :-)):
     $ ls /opt/eclipse/eclim*
     lrwxrwxrwx 1 torstein 8779 44 Dec  1 11:40 /opt/eclipse/eclim -> plugins/org.eclim_2.2.5.3-gaad35e4/bin/eclim
     lrwxrwxrwx 1 torstein 8779 45 Dec  1 11:40 /opt/eclipse/eclimd -> plugins/org.eclim_2.2.5.3-gaad35e4/bin/eclimd
-
 
 If you like me, prefer launching```eclimd``` from a
 dedicated shell, be sure to set up your workspace directory in
@@ -280,7 +278,6 @@ to```eclimd```:
     # increase perm gen size
     -XX:PermSize=64m
     -XX:MaxPermSize=128m
-
 
 If you're using a non default location for your workspace and
 you don't set the workspace directory here, you'll probably
