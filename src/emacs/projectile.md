@@ -1,9 +1,11 @@
-title: Procetile
+title: Projectile
 category: emacs
 tags: emacs
 date: 2015-03-05
 
-## One of my favourite Emacs packages
+Projectile is one of my favourite Emacs packages and I recommend it
+for everyone coding in Emacs . It sets up many things for you that you'll
+appreciate whatever language you're programming in. 
 
 One day, ```M-x projectile-regenerate-tags``` gave me this errors:
 
@@ -13,7 +15,7 @@ projectile-regenerate-tags: ctags: invalid option -- 'e'
 ```
 
 Of course, everything was
-[perfectly well laid out in the documention](https://github.com/bbatsov/projectile/blob/master/README.md],
+[perfectly well laid out in the documention](https://github.com/bbatsov/projectile/blob/master/README.md),
 I just had to install
 [Exuberant ctags](http://ctags.sourceforge.net/):
 
