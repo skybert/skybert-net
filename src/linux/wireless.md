@@ -8,19 +8,19 @@ Configure your wireless networks in
 e.g.```/etc/wpa_supplicant/my-networks.conf```:
 
 ```
- ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface=/var/run/wpa_supplicant
 
-# WEP network
+# WEP
 network={
   ssid="myessid"
   scan_ssid=1
   key_mgmt=NONE
   auth_alg=OPEN
-  wep_key0=myverydifficultpassword
+  wep_key0="foo"
   wep_tx_keyidx=0
 }
 
-# WPA network
+# WPA
 network={
   ssid="myothernetw2ork"
   scan_ssid=1
