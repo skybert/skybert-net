@@ -1,7 +1,8 @@
 date:    2013-05-05
 category: linux
-tags: debian
+tags: debian, linux
 title: Installing Debian on Thinkpad T420s
+
 ## GRUB
 
 I've passed the following Linux parameters via GRUB's

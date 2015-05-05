@@ -1,5 +1,6 @@
 date:    2012-10-07
 category: linux
+tags: linux, alsa
 title: Getting USB Headset With Microphone To Work
 
 I set this up in my local ALSA configuration to make it work probably
@@ -37,8 +38,6 @@ The name "Headset", I got by looking at the output from:
     1 [Headset        ]: USB-Audio - Logitech USB Headset
     Logitech Logitech USB Headset at
 
-
-Now, the audio and microphone works both in <a
-href="http://skype.com">Skype</a> and other places, like <a
-href="http://xmms2.org">XMMS2</a>.
+Now, the audio and microphone works both in [Skype](http://skype.com)
+and other places, like [XMMS2](http://xmms2.org).
 
