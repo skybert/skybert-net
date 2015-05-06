@@ -36,4 +36,25 @@ export MANPATH=/usr/local/man/man1:$MANPATH
 
 With this in place, `man git-p4` works as it should.
 
+## Cloning a depot project with full history
+
+```
+$ git p4 clone //depot/escenic/engine/trunk@all
+```
+
+## Updating the Git project with the latest changes from p4
+
+This puts your changes ontop of the latest, pulled down changes:
+
+```
+$ git p4 rebase
+```
+
+This just includes the latest changes from p4
+
+```
+$ git p4 sync
+```
+
+So far, I've just used `git p4 rebase` for everything.
 
