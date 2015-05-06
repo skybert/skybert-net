@@ -1,6 +1,7 @@
-title: Using Git as a front end for Perforce
+title: Using Git as a frontend for Perforce
 tags: vcs, git, p4
 category: vcs
+date: 2015-05-06
 
 After using Git for both my work and leaisure programming for more
 than three years, it was hard to go back to p4. hence, I wanted to set
