@@ -3,6 +3,15 @@ date: 2015-05-05
 category: linux
 tags: debian, linux, alsa
 
+Debian stable (as of 2015-05) installed practically without an
+itch. Most things "just worked" after installing the necessary
+packages from the official Debian repositories, including wireless and
+suspend to RAM.
+
+However, as always there were a few things I had to tweak to get
+everything the way I wanted to. On this page, I've documented most of
+these wee changes. Enjoy!
+
 ## VirtualBox
 Problem that VirtualBox just hangs forever at 0% when starting a
 virtual machine (and then 20% and another "forever hang").
@@ -64,7 +73,7 @@ was midly annoying, but I got by by pressing the touchpad itself for a
 However, having the mouse button under the space bar is *so* much more
 convenient, so this is something that had to be remedied. The
 [bug has been fixed in Linux 4.0](https://bugs.freedesktop.org/show_bug.cgi?id=88609),
-so I'll jus have to wait till it arrives in Debian testing or unstable
+so I'll just have to wait till it arrives in Debian testing or unstable
 (my days of compiling the kernel myself are over 😃)
 
 ```
