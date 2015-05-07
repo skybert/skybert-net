@@ -6,11 +6,9 @@ tags: debian, linux, alsa
 Debian stable (as of 2015-05) installed practically without an
 itch. Most things "just worked" after installing the necessary
 packages from the official Debian repositories, including wireless and
-suspend to RAM.
-
-However, as always there were a few things I had to tweak to get
-everything the way I wanted to. On this page, I've documented most of
-these wee changes. Enjoy!
+suspend to RAM. However, as always there were a few things I had to
+tweak to get everything the way I wanted to. On this page, I've
+documented most of these wee changes. Enjoy!
 
 ## VirtualBox
 Problem that VirtualBox just hangs forever at 0% when starting a
@@ -18,13 +16,16 @@ virtual machine (and then 20% and another "forever hang").
 
 This seemd to be
 [caused by this bug](https://www.virtualbox.org/ticket/13820) which
-was [fixed in version 4.3.22 of VirtualBox]
-(https://www.virtualbox.org/ticket/13820#comment:16)
-
+was
+[fixed in version 4.3.22 of VirtualBox](https://www.virtualbox.org/ticket/13820#comment:16)
 So I added [Debian testing](https://wiki.debian.org/DebianTesting) to
 my `/etc/apt/sources.list` and upgraded my VirtualBox from there
 (using [pinning](../preferring-stable-debian-packages) so that I
 didn't pull more packages from the testing pool than necessary).
+
+After upgrading VirtualBox, the problem went away. The performance of
+my virtual machines is impeccable after turning on the vitalisation
+extensions.
 
 ## Sound
 
@@ -95,7 +96,6 @@ options thinkpad_acpi force_load=1
 I now got some Thinkpad goodness in the kernel log:
 
 ```
-Non-volatile memory driver v1.3
 thinkpad_acpi: ThinkPad ACPI Extras v0.25
 thinkpad_acpi: http://ibm-acpi.sf.net/
 thinkpad_acpi: ThinkPad BIOS N14ET25W (1.03 ), EC unknown
