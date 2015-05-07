@@ -332,3 +332,31 @@ it up:
 (add-to-list 'flymake-allowed-file-name-masks
 '("\\.java$" my-flymake-init flymake-simple-cleanup))
 ```
+
+### Setting up a project to use eclim
+
+After intsalling eclim, emacs-eclim and adjusting your Emacs
+configuration, the time has come to make use of it all with your Java
+project.  There are definitely more than one way of doing this, but
+this is what I find the easiest:
+
+```
+$ cd my-project
+$ mvn eclipse:eclipse -DdownloadSources -DdownloadJavadocs
+```
+
+The `-D` parameters are for downloading the sources of the project's
+dependencies as well as downloading the related java doc. These two
+parameters are not necessary. Now, in Emacs, ask eclim to create a
+project:
+
+``` M-x eclim-project-create ```
+
+and enter the name of the project and its base directory. Mutli module
+project works too. I'm currently using this on a three level deep
+Maven project structure with more than 2000 java source files and it
+works fine, albeit not perfect. In general, eclim will not help you
+with anything if there's one file somewhere which doesn't compile.
+
+And this is it. eclim *should* now be able to figure out which project
+your current java file in Emacs belongs to.
