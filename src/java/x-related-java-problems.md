@@ -31,7 +31,7 @@ manager and then start another one. This seemed to clean the clipboard
 slate and thereby kicked Java/Swing into working again.
 
     $ killall clipit
-    $ xclipboard &amp;
+    $ xclipboard &
 
 If you're an application developer, you might
 want to catch the NullPointer above where you call
