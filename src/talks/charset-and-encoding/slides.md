@@ -35,7 +35,7 @@ You'll get a *Quiz* at the end, so pay attention!
 
 <img src="usa-uk.jpg" alt="usa &amp; uk"/>
 
-- An absolute genious of a standard
+- An absolute genius of a standard
 - ...as long as you speak English
 
 ---
@@ -371,7 +371,7 @@ encoded as [UTF-8](http://no.wikipedia.org/wiki/UTF-8).
   not covered by
   [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1), for instance "*–*"
   [Unicode EN DASH](http://no.wikipedia.org/wiki/Unicode)
-  (hyphen), the database will through and error up to the web application.
+  (hyphen), the database will throw an error up to the web application.
 
 <a href="different-encodings.svg">
 <img src="different-encodings.svg" "different encodings"/>
@@ -443,7 +443,7 @@ User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
   with the system_).
 
 - If you're seeing complete nonsense like **KjÃ¸rer** it's because
-  something has gone wrong with the encoding one or more paces in the
+  something has gone wrong with the encoding one or more places in the
   system you're using.
 
 ---
