@@ -63,6 +63,22 @@ $ cat /proc/asound/cards
 29 [ThinkPadEC     ]: ThinkPad EC - ThinkPad Console Audio Control
                       ThinkPad Console Audio Control at EC reg 0x30, fw unknown
 ```
+
+I prefer using [MPD](http://www.musicpd.org/) for playing music on my
+work machine. It's the least obtrusive music player that I know of,
+while yet offering many different clients, CLI, web and graphical. I
+had to add this to `/etc/mpd.conf` to get
+[MPD](http://www.musicpd.org/) to play music through my prefferred
+sound card:
+
+```
+audio_output {
+        type                    "alsa"
+        name                    "Sound Card"
+        device                  "hw:1"
+}
+```
+
 ## Trackpad buttons
 
 The two (mouse) buttons on the trackpad didn't work as left and right
