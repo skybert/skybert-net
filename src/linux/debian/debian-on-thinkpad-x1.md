@@ -124,3 +124,10 @@ thinkpad_acpi: rfkill switch tpacpi_wwan_sw: radio is unblocked
 thinkpad_acpi: Console audio control enabled, mode: monitor (read only)
 ```
 
+## Flawless suspend and resume
+
+The suspend and resume on this laptop is the best I've ever had. For
+more than two weeks now, I've suspended and resumed at least once a
+day with tons of applications running. Never *any* problem. And this
+is using Debian stable. Linux wise, this is totally amazing! 😃
+
