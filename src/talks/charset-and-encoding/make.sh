@@ -10,6 +10,7 @@ blockdiag different-encodings.blockdiag -T svg -o different-encodings.svg
 pandoc \
     --standalone \
     -f markdown \
+    --variable revealjs-url=../reveal.js \
     -t $to \
     slides.md  \
     -o  index.html
