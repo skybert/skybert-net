@@ -1,0 +1,21 @@
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal a,
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled,
+.reveal .controls,
+.reveal .controls {
+  color: #ff752d;
+}
+
+
+body {
+  background-image: url("escenic-logo.svg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 5% 95%;
+    background-size: 265px 70px;
+}
