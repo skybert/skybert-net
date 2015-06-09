@@ -3,6 +3,8 @@
 
 <img src="maven-logo.png" alt="maven"/>
 
+A talk by <a href="">torstein at escenic.com</a>
+
 ---
 
 ## Perhaps you already know this
@@ -11,7 +13,16 @@
 
 ---
 
-## What does Maven do for us?
+## What has Maven ever done for us?
+
+<img
+src="What_has_The_Romans_ever_done_for_us.jpg"
+alt="what has the romans ever done for us?"
+/>
+
+---
+
+## What has Maven ever done for us?
 
 - Structure: `src/main/java`
 - Dependencies.
@@ -229,7 +240,7 @@ Nature of a Maven project
   <groupId>com.escenic.engine</groupId>
   <artifactId>engine-core</artifactId>
   <version>5.7.unstable-VF-6294.168099</version>
-  </dependency>
+</dependency>
 ```
 
 ---
@@ -247,7 +258,7 @@ Nature of a Maven project
 - Nice mechanism to ensure that all sub modules use the same version
 of a given library
 - Beware of different dependency management for the main build and
-plugins.  
+plugins.
 
 ---
 
@@ -272,6 +283,8 @@ plugins.
 
 ## Escenic specific deployment
 
+    $ ls -l /opt/escenic/engine/lib
+    $ ls -l /opt/escenic/engine/template/WEB-INF/lib
     $ ls -l /opt/tomcat-engine1/escenic/lib
 
 - Why do we have it?
@@ -317,11 +330,24 @@ plugins.
 
 ---
 
-## Summary - II
+## Summary - III
 
 Benefits of having a firm grip of project dependencies:
 
-- Less nasty surprises when deploying your webapps on a server
-- Less weird bugs because app server X's classloader behaves
+- Fewer nasty surprises when deploying your webapps on a server
+- Fewer weird bugs because app server X's classloader behaves
   differently than app server Y when there's multiple versions of
   `com.escenic.MyClass` on the class path.
+
+---
+
+## Further reading
+
+- [Maven dependency mechanism](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html)
+- [Maven profiles](http://maven.apache.org/guides/introduction/introduction-to-profiles.html)
+
+---
+
+## System.exit(0);
+
+---
