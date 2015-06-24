@@ -138,6 +138,14 @@ you must set up your MySQL database to use the encoding type called
 A good article [on the topic can be found here](
 https://mathiasbynens.be/notes/mysql-utf8mb4)
 
+## 2015-06-24
+
+[Shutter](http://shutter-project.org/preview/screenshots/) is an
+excellent tool for creating screenshots on the Linux desktop. For
+years, I've used my own made command based on imagemagick, but I've
+lately started to use Shutter more and more as it simply has more
+features. 
+
 ## 2015-03-15
 
 Running `occur` in [Emacs](http://gnu.org/software/emacs) gives you
