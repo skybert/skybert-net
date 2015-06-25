@@ -11,3 +11,14 @@ category: emacs
 
 ## Lookup of already written code
 <img src="/graphics/emacs/2015/typescript-lookup-documentation.png" alt="typecript mode in emacs"/>
+
+# Hot deploying JavaScript from Emacs to Firefox
+First off, install the excellent
+[mozrepl](https://addons.mozilla.org/en-us/firefox/addon/mozrepl/)
+plugin for Firefox.
+
+Then, install its counterpart for emacs:
+
+    M-x package-install moz
+
+
