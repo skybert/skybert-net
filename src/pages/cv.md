@@ -43,7 +43,15 @@ Specialities: Multi-server architecture and development of JEE systems
 with very high demands for performance, availability and scalability.
 
 # Experience
-## Conduct AS, Senior consultant, February 2013 – Present
+
+## Escenic, System architect, May 2015 – Present
+
+Back `/home` @ Escenic, this time in the core team working on the
+Escenic Content Engine itself, in addition to various plugins and the
+Escenic Cloud set of tools, including my baby
+[ece-scripts](http://github.com/vizrt/ece-scripts) 😃
+
+## Conduct AS, Senior consultant, February 2013 – April 2015
 
 Building world class solutions for our customers using open source
 technologies such as Linux and Java.
@@ -64,8 +72,9 @@ Online's (Escenic's) customers which later will expand to cater for
 other systems in Vizrt's portfolio too.
 
 This job was a wonderfully challenging one were I got to work full
-time on Linux servers and [BASH](http://gnu.org/software/bash) programming, most of which we release
-as open source [github/vizrt/ece-scripts]
+time on Linux servers and [BASH](http://gnu.org/software/bash)
+programming, most of which we release as open source
+[github/vizrt/ece-scripts](http://github.com/vizrt/ece-scripts)
 
 This job is fully loaded with exciting challenges including: Varnish,
 nginx, lighthttpd, Tomcat, Percona DB, Ubuntu LTS, RHEL, Debian, NFS,
@@ -74,7 +83,7 @@ thousands of lines of [BASH](http://gnu.org/software/bash) code, performance tes
 siege, creation of DEB packges, own APT repositories and build systems
 integrating development team efforts with proper release management.
 
-[github/vizrt/ece-scripts]: http://github.com/vizrt/ece-scripts
+[github/vizrt/ece-scripts](http://github.com/vizrt/ece-scripts)
 
 ## Escenic, System architect, November 2008 – January 2012 (3 years 3 months)
 
