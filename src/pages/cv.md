@@ -51,7 +51,7 @@ Escenic Content Engine itself, in addition to various plugins and the
 Escenic Cloud set of tools, including my baby
 [ece-scripts](http://github.com/vizrt/ece-scripts) 😃
 
-## Conduct AS, Senior consultant, February 2013 – April 2015
+## Conduct AS, Senior consultant, February 2013 – April 2015 (2 years, 3 months)
 
 Building world class solutions for our customers using open source
 technologies such as Linux and Java.
