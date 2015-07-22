@@ -24,7 +24,8 @@ $ git init
 ## Add a file
 
 ```
-$ echo 'O Captain! my Captain! our fearful trip is done,' > poem.txt
+$ echo 'O Captain! my Captain! our fearful trip is done,' \
+  > poem.txt
 $ git add poem.txt
 $ git commit
 ```
@@ -102,12 +103,13 @@ $ git cherry-pick <sha>
 
 ## Back to regular development
 
-```
-$ git checkout develop
-$ git checkout -b feature/vf-100-npe-in-ece
-```
 A good practice is to create a new feature
 branch for each JIRA issue.
+
+```
+$ git checkout develop
+$ git checkout -b feature/VF-100-npe-in-ece
+```
 
 ---
 
@@ -166,12 +168,12 @@ This will probably take some time to sink in:
 
 ## Big difference: no central server
 
+- Everyone can be a server
+- Everyone can be a client of each other's (local) repos.
+
 ```
 $ git remote -v
 ```
-
-- Everyone can be a server
-- Everyone can be a client of each other's (local) repos.
 
 ---
 
@@ -192,27 +194,28 @@ $ git remote -v
 
 ## Big difference: commit is local
 
-```
-$ git commit pom.xml -m "Removed unused dependency."
-$ git push
-```
-
 - `git commit` as often as you want locally.
 - Once you're done with a (part of a) feature, re-arrange, combine
   (squash) and rewrite your commits to your ❤'s desire.
 - Once in a while `git push` your changes for the world to see.
 
+```
+$ git commit pom.xml -m "Removed unused dependency."
+$ git push
+```
+
 ---
 
 ## Big difference: branches are cheap
-
-    $ git checkout -b feature/vf-2134-xml-support
 
 - Everyting in one place
 - Create as many as you want
 - Delete them at will
 - Merge or cherry pick between them
 
+```
+$ git checkout -b feature/VF-2134-xml-support
+```
 ---
 
 ## Big difference: blobs are stored once
@@ -317,13 +320,12 @@ $ git cherry-pick 4bba83875b0d04f3a3340f15f9864c46152c6c6b
 
 ```
 ├── develop
-│   ├── feature/vf-100-cs-memory-leak
-│   └── feature/vf-200-search-for-author
-└── release
-    ├── 5.7
-    │   ├── hotfix/apidoc-bug-javaws
-    │   └── hotfix/npe-in-ws
-    └── 5.8
+│   ├── feature/VF-100-cs-memory-leak
+│   └── feature/VF-200-search-for-author
+└── release/5.7
+│   ├── hotfix/apidoc-bug-javaws
+│   └── hotfix/npe-in-ws
+└── release/5.8
 ```
 
 `master` holds the latest release.
@@ -401,23 +403,46 @@ $ echo source /usr/share/bash-completion/completions/git \
 
 ## Recommended Git configuration in the shell - III
 
-There's plenty of fancy BASH and ZSH prompts going around to give you
-Git info relevant for where you are on the command line.
+Using `alias`es makes your git foo much faster:
+```
+alias gb='git branch'
+alias gc='git checkout'
+alias gca='git commit --amend'
+alias gd='git diff'
+alias gl='git log'
+alias glp='git log -p'
+alias gpr='git pull --rebase'
+alias gri='git rebase -i'
+alias gs='git status'
+```
+
+[All my aliases can be found on github](
+https://github.com/skybert/my-little-friends/blob/master/bash/.bashrc)
+
+---
+
+## Recommended Git configuration in the shell - IV
+
+Plenty of fancy BASH and ZSH `git` prompts going around:
 
 - [mediaoneright.com](http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt)
 - [code-worrier](http://code-worrier.com/blog/git-branch-in-bash-prompt/)
-- I've written a wee git prompt that I use,
+- I've written a lightweight `git` prompt that I use,
   [see get_git_status() and PS1](
   https://github.com/skybert/my-little-friends/blob/master/bash/.bashrc)
 
 ---
-
 
 ## Further reading
 
 - Official online [Git books](https://git-scm.com/doc)
 - [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)
 - [git flow plugin](https://github.com/nvie/gitflow)
--
-  [My git configuration](https://github.com/skybert/my-little-friends/blob/master/git/.gitconfig-work)
+- [My git configuration](https://github.com/skybert/my-little-friends/blob/master/git/.gitconfig-work)
 - [Global Git ignore file](https://github.com/skybert/my-little-friends/blob/master/git/.gitignore)
+
+---
+
+## Cheerio
+
+echo comments > <a href="">torstein @ escenic</a>
