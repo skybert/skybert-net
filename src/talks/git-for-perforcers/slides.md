@@ -306,6 +306,22 @@ $ git cherry-pick 4bba83875b0d04f3a3340f15f9864c46152c6c6b
 
 ---
 
+## How do I see what commits I haven't pushed yet?
+
+```
+$ git log --stat  --decorate @{u}...
+```
+
+---
+
+## How do I see which changes would be applied if I merge a hotfix branch?
+
+```
+$ git diff hotfix/VF-200-memory-leak-cs ...
+```
+
+---
+
 ## Branching model
 <a href="http://nvie.com/img/git-model@2x.png">
   <img
