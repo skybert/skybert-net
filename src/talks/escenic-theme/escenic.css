@@ -1,3 +1,25 @@
+@import "fonts/fonts.css" all;
+
+body {
+  background-image: url("escenic-logo.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 5% 95%;
+  background-size: 275px 70px;
+  font-family: helvetica-neue;
+  font-size: 4em;
+}
+
+.reveal.rtl .slides,
+.reveal.rtl .slides h1,
+.reveal.rtl .slides h2,
+.reveal.rtl .slides h3,
+.reveal.rtl .slides h4,
+.reveal.rtl .slides h5,
+.reveal.rtl .slides h6 {
+  font-family: helvetica-neue, helvetica;
+}
+
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -11,11 +33,3 @@
   color: #ff752d;
 }
 
-
-body {
-  background-image: url("escenic-logo.svg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 5% 95%;
-    background-size: 275px 70px;
-}

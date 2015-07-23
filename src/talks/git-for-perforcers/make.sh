@@ -9,7 +9,7 @@ create_html() {
       --standalone \
       -f markdown \
       --variable revealjs-url=../reveal.js \
-      --variable transition=zoom \
+      --variable transition=none \
       --template ../torstein.revealjs.template \
       -t $to \
       slides.md  \
