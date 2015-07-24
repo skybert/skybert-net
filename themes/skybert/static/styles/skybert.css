@@ -4,8 +4,8 @@ body {
   font-family: "Crimson Text", Georgia, serif;
   font-size: 1em;
   margin-top: 3%;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 h1 {
@@ -244,17 +244,37 @@ td {
 }
 
 .tag-0 {
-  font-size: x-large;
+  font-size: 3em;
 }
 .tag-1 {
-  font-size: larger;
+  font-size: 2.5em;
 }
 .tag-2 {
-  font-size: large;
+  font-size: 2em;
 }
 .tag-3 {
-  font-size: medium;
+  font-size: 1.5em;
 }
 .tag-4 {
-  font-size: small;
+  font-size: 1em;
+}
+.tag-5 {
+  font-size: 0.9em;
+}
+.tag-6 {
+  font-size: 0.8em;
+}
+.tag-7 {
+  font-size: 0.7em;
+}
+
+.grid-box {
+  float: right;
+  width: 100px;
+  border: thin solid #660000;
+  text-align: center;
+  font-weight: bolder;
+  padding: 0.5em;
+  margin-right: 0.4em;
+  margin-bottom: 0.4em;
 }
