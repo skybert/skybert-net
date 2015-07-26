@@ -1,5 +1,6 @@
 date:    2012-10-07
 category: travel
+tags: travel, china
 title: My Tips for Travelling in China
 
 Heya, these are some of my travelling tips. I'm not claiming
@@ -35,7 +36,7 @@ When all this is said, I want to add that that I've only
 experience that they want to fool you about monetary
 issues. They don't take the piss sending you to the wrong
 direction, on the wrong bus etc. It's just in money matters
-you need to take more heed than normal.  
+you need to take more heed than normal.
 
 ## Trust your sense of direction
 

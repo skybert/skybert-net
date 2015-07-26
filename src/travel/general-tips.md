@@ -1,6 +1,7 @@
 date:    2012-10-07
 category: travel
-title: My Travel Tips
+title: My General Travel Tips
+tags: travel, china, bangladesh, indonesia
 
 Heya, these are some of my travelling tips. I'm not claiming
 to be an expert, but these are some things that have served me

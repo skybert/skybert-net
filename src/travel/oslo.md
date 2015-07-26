@@ -1,6 +1,8 @@
-title: travel
+title: Travel tips in Oslo
 date:    2012-10-07
 category: travel
+tags: travel, oslo
+
 ## Coffee shops
 ### Collets
 <a href="http://www.collettscafe.no/">collettscafe.no</a>
