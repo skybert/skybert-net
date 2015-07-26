@@ -27,7 +27,7 @@ After upgrading VirtualBox, the problem went away. The performance of
 my virtual machines is impeccable after turning on the vitalisation
 extensions.
 
-## Sound
+## Sound 🔉
 
 I prefer using pure
 [ALSA](http://www.alsa-project.org/main/index.php/Main_Page) instead
@@ -124,7 +124,7 @@ thinkpad_acpi: rfkill switch tpacpi_wwan_sw: radio is unblocked
 thinkpad_acpi: Console audio control enabled, mode: monitor (read only)
 ```
 
-## Flawless suspend and resume
+## Flawless suspend and resume 💤
 
 The suspend and resume on this laptop is the best I've ever had. For
 more than two weeks now, I've suspended and resumed at least once a

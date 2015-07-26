@@ -1,7 +1,7 @@
 title: Discoveries
 date: 2014-11-22
 
-## Latest tweets from @torsteinkrausew
+## Latest tweets from @torsteinkrausew 💡
 <div class="twitter-timeline"
      href="https://twitter.com/torsteinkrausew"
      data-tweet-limit="3"
@@ -10,6 +10,8 @@ date: 2014-11-22
   Tweets by @torsteinkrausew
 </div>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+My other recent-ish discoveries 💡:
 
 ## 2015-03-15
 
