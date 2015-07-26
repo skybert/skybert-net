@@ -4,8 +4,9 @@ title: Issues with DBCP on Gentoo
 tags: gentoo
 
 <div style="float: right">
-<img src="https://bugs.gentoo.org/extensions/Gentoo/web/gentoo_org.png"
-alt="Gentoo"/>
+  <img src="https://bugs.gentoo.org/extensions/Gentoo/web/gentoo_org.png"
+       alt="Gentoo"/>
+</div>
 
 I ran into the some problems a while back when setting up
 connection pooling on Tomcat on Gentoo. It turned out that
@@ -20,13 +21,12 @@ To remedy this, I had to do:
     # ln -s /usr/share/commons-dbcp/lib/commons-dbcp.jar
 
 
-And override the data source factory in the
-```Resource``` definitions in my
-```server.xml```:
+And override the data source factory in the ```Resource``` definitions in my ```server.xml```:
 
     factory="org.apache.commons.dbcp.BasicDataSourceFactory"
 
-<p>instead of the default:
+instead of the default:
+
     org.apache.tomcat.dbcp.dbcp.BasicDataSourceFactory
 
 

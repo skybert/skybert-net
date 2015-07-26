@@ -278,3 +278,7 @@ td {
   margin-right: 0.4em;
   margin-bottom: 0.4em;
 }
+
+.e-entry-title {
+  color: red;
+}
