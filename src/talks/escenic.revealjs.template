@@ -28,9 +28,8 @@ $for(css)$
     <link rel="stylesheet" href="$css$"/>
 $endfor$
 $else$
-    <link rel="stylesheet" href="$revealjs-url$/css/theme/beige.css" id="theme"/>
-$endif$
     <link rel="stylesheet" href="$revealjs-url$/../escenic-theme/escenic.css"/>
+$endif$
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
       if( window.location.search.match( /print-pdf/gi ) ) {
