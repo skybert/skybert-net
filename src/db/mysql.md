@@ -94,3 +94,31 @@ This will output the results diretly in the shell so that you
 instantly can use it, piping the output to another process as you'd do
 with any other shell command.
 
+## Check the encoding and collation for a given column
+
+```
+mysql> select table_schema, table_name, column_name, character_set_name, collation_name
+       from information_schema.columns
+       where table_name = 'URIAlias'
+       and column_name = 'uri';
++--------------+------------+-------------+--------------------+-----------------+
+| table_schema | table_name | column_name | character_set_name | collation_name  |
++--------------+------------+-------------+--------------------+-----------------+
+| ece5db       | URIAlias   | uri         | utf8               | utf8_general_ci |
++--------------+------------+-------------+--------------------+-----------------+
+1 row in set (0.00 sec)
+```
+
+For all encoding geeks out there: The column name is character set,
+but the value in the column is an encoding 😃
+
+## Change the collation for a given column
+
+```
+mysql> alter table URIAlias
+       modify uri
+         varchar(250)
+         character set utf8
+         collate utf8_general_ci;
+```
+
