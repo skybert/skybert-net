@@ -277,10 +277,12 @@ body {
 }
 
 .reveal p code {
-  color: #eeeeee;
-  background-color: #23241f;
+  background: #3F3F3F;
+  color: #DCDCDC;
   display: inline-block;
   border-radius: 7px;
+  padding: 0.2em;
+  font-family: monospace;
 }
 
 .reveal small code {
