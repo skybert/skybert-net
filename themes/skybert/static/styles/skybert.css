@@ -4,8 +4,9 @@ body {
   font-family: "Crimson Text", Georgia, serif;
   font-size: 1em;
   margin-top: 3%;
-  margin-left: 15%;
-  margin-right: 15%;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1 {
