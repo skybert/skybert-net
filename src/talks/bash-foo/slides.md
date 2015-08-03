@@ -66,7 +66,7 @@ I.e. not tests?
 
 ---
 
-## Where is IOObjectLoader used in all our source code?
+## Where is the class used?
 
 ```
 $ find -name "*.java" -o -name "*.properties" | \
@@ -157,10 +157,62 @@ You may want to set the `Host` header right
 
     # echo 127.0.0.1 closy >> /etc/hosts
 
-or if the CLI will do:
+or if the CLI is enough:
 
 ```
 $ curl -H "Host: closy" http://localhost:9980
+```
+
+---
+
+## Loops
+
+---
+
+## What was done this week?
+
+```
+$ p4 changes | grep 2015/08/03
+
+```
+
+---
+
+## Can you do better?
+
+---
+
+## What was done this week?
+
+```
+$ for el in 3 4 5 6 7 ; do p4 changes | grep 2015/08/0${el}; done
+
+```
+
+---
+
+## Can you do better?
+
+---
+
+## What was done this week?
+
+```
+$ for el in {3..7} ; do p4 changes | grep 2015/08/0${el}; done
+
+```
+
+---
+
+## Can you do better?
+
+---
+
+## What was done this week?
+
+```
+$ for el in {03..7} ; do p4 changes | grep 2015/08/${el}; done
+
 ```
 
 ---
