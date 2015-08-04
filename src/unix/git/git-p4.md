@@ -58,3 +58,40 @@ $ git p4 sync
 
 So far, I've just used `git p4 rebase` for everything.
 
+## When it's not possible to git p4 submit
+
+```
+$ cd ~/src/git/moria
+$ files=$(git show 15857cab8a21f48cffa2b92a650f6d37723efec6 | \
+  sed -n 's#diff --git a/\(.*\) b/.*#\1#p')
+```
+
+The `files` variable now holds the files belonging to my Git commit.
+
+```
+$ echo "$files"
+moria-core/pom.xml
+moria-core/src/main/java/org/moria/core/servlet/ArticleRedirectProcessor.java
+moria-core/src/main/java/org/moria/core/servlet/RedirectProcessor.java
+moria-core/src/main/java/org/moria/core/servlet/SectionResolverProcessor.java
+moria-core/src/test/java/org/moria/presentation/servlet/SectionResolverProcessorTestCase.java
+```
+
+Now, I shift to my `p4` workspace and checkout these files`:
+
+```
+$ cd ~/src/p4/moria
+$ for el in $files; do p4 edit $el; done
+```
+
+Then, copy the contents from my `git` directory:
+```
+$ for el in $files; do cp ~/src/git/moria/$el $el; done
+```
+
+The `p4 diff` should now be the same as my previous `git log --patch`:
+
+```
+$ cd ~/src/p4/moria
+$ p4 diff ...
+```
