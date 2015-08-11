@@ -91,7 +91,9 @@ $ ssh user@host
 
 ---
 
-## Different username on different servers
+## Different usernames
+
+Different usernames on different servers
 
 ```
 Host *.dev.example.com
