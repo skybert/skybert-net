@@ -1,5 +1,7 @@
 title: Running JAX-RS applications on Tomcat
 date: 2015-08-11
+category: java
+tags: java, tomcat
 
 Running JAX-RS applications on vanilla Tomcat is not straight forward
 if you don't know the caveats. The short story is that you'll need to
