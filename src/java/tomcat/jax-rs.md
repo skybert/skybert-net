@@ -6,9 +6,12 @@ tags: java, tomcat
 Running JAX-RS applications on vanilla Tomcat is not straight forward
 if you don't know the caveats. The short story is that you'll need to
 include extra runtime JARs and must use a `web.xml` even though you're
-using an `Application`.
+using an
+[javax.ws.rs.core.Application](https://docs.oracle.com/javaee/6/api/javax/ws/rs/core/Application.html)
+class.
 
-These are the crucial bits I set up to run my JAX-RS `Application`,
+These are the crucial bits I set up to run my JAX-RS
+[javax.ws.rs.core.Application](https://docs.oracle.com/javaee/6/api/javax/ws/rs/core/Application.html),
 `net.skybert.bookends.ws.BookendsWS`, on
 [Apache Tomcat 8.0.24](http://tomcat.apache.org). Also note that this
 did _not work_ on Tomcat 7.0.63.
@@ -47,8 +50,21 @@ did _not work_ on Tomcat 7.0.63.
 </servlet-mapping>
 ```
 
+## The javax.ws.rs.core.Application implementation, BookendsWS
+
+Remember to implement the `getClasses()` method:
+```
+@Override
+@SuppressWarnings("unchecked")
+public Set<Class<?>> getClasses() {
+     return new HashSet<Class<?>>(Arrays.asList(Pong.class, Root.class));
+}
+```
+
 ## Want something that just works?
 
-[tomee.apache.org](Apache TomEE) has much more of a plugin and play
-experience, much like you'd find with [JBoss](http://jboss.org).
-
+[tomee.apache.org](Apache TomEE) has much more of a plug and play
+experience, much like you'd find with [JBoss](http://jboss.org). Using
+TomEE, you can just implement your `javax.ws.rs.core.Application` and
+annotate your REST classes correctly and deploy the webapp. It just
+works, no need `web.xml` or extra runtime libraries are necessary.
