@@ -481,6 +481,11 @@ User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
 
 - [UTF-8](http://en.wikipedia.org/wiki/UTF-8) on Wikipeidia
 
+- [Java Rough Guide To Character Encoding](http://illegalargumentexception.blogspot.no/2009/05/java-rough-guide-to-character-encoding.html)
+
+-
+[Unicode in Windows' CLI](http://illegalargumentexception.blogspot.no/2009/04/i18n-unicode-at-windows-command-prompt.html#charsets_javaconsole)
+
 ---
 
 # echo comments >
