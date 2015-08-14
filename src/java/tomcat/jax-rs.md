@@ -16,6 +16,8 @@ These are the crucial bits I set up to run my JAX-RS
 [Apache Tomcat 8.0.24](http://tomcat.apache.org). Also note that this
 did _not work_ on Tomcat 7.0.63.
 
+There are different servlets that you can ues to bootstrap JAX-RS in
+your webapp. I found CXF to be the easiest to use:
 
 ## POM
 ```
@@ -27,6 +29,10 @@ did _not work_ on Tomcat 7.0.63.
 ```
 
 ## WEB-INF/web.xml
+
+This is the real pain of not using a JEE container (like JBoss or
+TomEE) but only a servlet container; you must wire up JAX-RS in your
+web application descriptor:
 
 ```
 <servlet>
@@ -64,7 +70,13 @@ public Set<Class<?>> getClasses() {
 ## Want something that just works?
 
 [tomee.apache.org](Apache TomEE) has much more of a plug and play
-experience, much like you'd find with [JBoss](http://jboss.org). Using
-TomEE, you can just implement your `javax.ws.rs.core.Application` and
-annotate your REST classes correctly and deploy the webapp. It just
-works, no need `web.xml` or extra runtime libraries are necessary.
+experience, much like you'd find with [JBoss](http://jboss.org).
+
+Using TomEE, you can just implement your
+`javax.ws.rs.core.Application` and annotate your REST classes
+correctly and deploy the webapp. It just works, no need `web.xml` or
+extra runtime libraries are necessary.
+
+JBoss will give you the same plugin and play experience, but if you
+really want to use Tomcat, just with the plug and play feature, TomEE
+will fit the bill perfectly. 

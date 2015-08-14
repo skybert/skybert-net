@@ -5,7 +5,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 5% 95%;
-  background-size: 159.5px 35.5px;
+  background-size: 106.54px 23.0px;
   background-color: white;
   color: #302a2b;
   font-size: 2em;
@@ -132,8 +132,7 @@ body {
   overflow: auto;
   max-height: 400px;
   word-wrap: normal;
-  background: #3F3F3F;
-  color: #DCDCDC;
+  padding: 0.8em;
 }
 
 .reveal table {
@@ -277,14 +276,38 @@ body {
 }
 
 .reveal p code {
-  background: #3F3F3F;
-  color: #DCDCDC;
+  background: #f8f8f8;
+  color: #000000;
   display: inline-block;
   border-radius: 7px;
   padding: 0.2em;
   font-family: monospace;
+
 }
 
 .reveal small code {
   vertical-align: baseline;
+}
+
+kbd.escenic {
+  -moz-border-radius: 0.2em;
+  -moz-box-shadow: 0.1em 0.2em 0.2em #ddd;
+  -moz-linear-gradient(top, #eee, #f9f9f9, #eee);
+  -o-linear-gradient(top, #eee, #f9f9f9, #eee);
+  -webkit-border-radius: 0.2em;
+  -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd;
+  -webkit-linear-gradient(top, #eee, #f9f9f9, #eee);
+  background-color: #f9f9f9;
+  background-image:
+  background-image:
+  background-image:
+  background-image:
+  border-radius: 0.2em;
+  border: 1px solid #aaa;
+  box-shadow: 0.1em 0.2em 0.2em #ddd;
+  font-family: inherit;
+  font-size: 0.85em;
+  font-weight: bolder;
+  linear-gradient(to bottom, #eee, #f9f9f9, #eee);
+  padding: 0.1em 0.3em;
 }
