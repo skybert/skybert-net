@@ -1,5 +1,5 @@
 blockdiag {
-    user [shape = actor, color="green", label="User"];
+    user [shape = actor, color="green", label="Bruker"];
     fe [color="green", textcolor="white", label="Flex webapp"];
     blazeds [color="green", textcolor="white", label="BlazeDS"];
     java [color="green", textcolor="white", label="Java"];

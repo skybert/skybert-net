@@ -11,6 +11,8 @@ pandoc \
     --standalone \
     -f markdown \
     --variable revealjs-url=../reveal.js \
+    --variable transition=none \
+    --template ../escenic.revealjs.template \
     -t $to \
     slides.md  \
     -o  index.html

@@ -8,8 +8,8 @@
 ---
 
 ## Goals for this talk
-- Understanding for what a character set is
-- Understanding for what an encoding is
+- Understand what a character set is
+- Understand what an encoding is
 - Ability to differentiate encoding problems from rendering problems
 - Debunk 2 myths
 
@@ -46,7 +46,7 @@ You'll get a *Quiz* at the end, so pay attention!
 
 ```
 
-Character | Desimal | Binær         |
+Character | Decimal | Binary        |
 A         | 65      | 1 0 0 0 0 0 1 |
 B         | 66      | 1 0 0 0 0 1 0 |
 ```
@@ -54,7 +54,7 @@ B         | 66      | 1 0 0 0 0 1 0 |
 Value for upper case letter + 32 = value for the lower case letter:
 ```
 
-Character | Desimal | Binær         |
+Character | Decimal | Binary        |
 a         | 97      | 1 1 0 0 0 0 1 |
 b         | 98      | 1 1 0 0 0 1 0 |
 ```
