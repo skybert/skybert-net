@@ -94,6 +94,12 @@ This will output the results diretly in the shell so that you
 instantly can use it, piping the output to another process as you'd do
 with any other shell command.
 
+## Check the encoding and collation for the entire DB schema
+
+```
+select * from information_schema.schemata where schema_name = "ece5db";
+```
+
 ## Check the encoding and collation for a given column
 
 ```
