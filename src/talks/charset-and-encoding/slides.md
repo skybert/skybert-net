@@ -5,6 +5,42 @@
 
 <a href="torstein.k.johansen AT gmail DOT com">Torstein Krause Johansen</a>
 
+
+---
+
+##  👻
+
+I've been a programmer for 16 years and there are two problems that
+always haunt me.
+
+---
+
+## Two problems haunt me 👻
+
+1. Date conversion
+2. Character encoding
+
+---
+
+## whois
+
+- System architect at [Escenic](http://esceni.ccom) making a GREAT
+  Content Management System for the media industry
+- Works with customers all over the world: From the
+  [Daily Mirror](http://dailymirror.co.uk) in the UK,
+  [Die Welt](http://welt.de) in Germany to the Tamil newspaper
+  [Dinamani](http://dinamani.com) in India.
+
+---
+
+## Lets talk about
+
+> Best regards
+
+> Viele GrÃ¼ÃŸe
+
+> Beste Ã¸nsker
+
 ---
 
 ## Goals for this talk
@@ -15,7 +51,7 @@
 
 ---
 
-### Shouldn't it say "Kjører" here?
+## Shouldn't it say "Kjører" here?
 
 > KjÃ¸rer
 
@@ -31,7 +67,7 @@ You'll get a *Quiz* at the end, so pay attention!
 
 ---
 
-###  American Standard Code for Information Interchange
+##  American Standard Code for Information Interchange
 
 <img src="usa-uk.jpg" alt="usa &amp; uk"/>
 
@@ -40,7 +76,8 @@ You'll get a *Quiz* at the end, so pay attention!
 
 ---
 
-### ASCII - for nerds
+## ASCII - for nerds
+
 - 7 bit
 - One character corresponds to one numeric value e.g.:
 
@@ -50,6 +87,10 @@ Character | Decimal | Binary        |
 A         | 65      | 1 0 0 0 0 0 1 |
 B         | 66      | 1 0 0 0 0 1 0 |
 ```
+
+---
+
+## ASCII - for nerds
 
 Value for upper case letter + 32 = value for the lower case letter:
 ```
@@ -63,7 +104,7 @@ Brilliant!
 
 ---
 
-### And then came the Europeans
+## And then came the Europeans
 
 <img src="columbus.jpg" alt="Columbus"/>
 
@@ -71,20 +112,20 @@ One needed new characters that didn't exist
 
 ---
 
-### And then came the Europeans - II
+## And then came the Europeans - II
 
-- ...but the house was full, all the 127 rooms were taken
+- ...but the hostel was full, all the 127 rooms were taken
 - ...so they added another zero
 
-> **0** 1 0 0 0 0 0 1
+> → **0** 1 0 0 0 0 0 1
 
 ---
 
-### 256 characters, hurrah!
+## 256 characters, hurrah!
 
 ---
 
-### And then came the Asians
+## And then came the Asians
 
 <img src="dragon.png" alt="Dragon"/>
 
@@ -92,14 +133,14 @@ One needed new characters that didn't exist
 
 ---
 
-### A whole lot of nonsense
+## A whole lot of nonsense
 
 - Many made their own character sets
 - Incompatibility all around
 
 ---
 
-### Finally peace: Unicode
+## Finally peace: Unicode
 
 - Caters for all characters and letters in all dead and spoken
   languages (has today more than 110 000 characters)
@@ -107,7 +148,7 @@ One needed new characters that didn't exist
 
 ---
 
-### Unicode is a character set
+## Unicode is a character set
 
 A table with entries for all letters and character in the entire
 world. Each entry has:
@@ -117,7 +158,7 @@ world. Each entry has:
 
 ---
 
-### Unicode examples
+## Unicode examples
 
 - The character "Ω" has the numeric value 937 an the name "GREEK
   CAPITAL LETTER OMEGA"
@@ -127,29 +168,36 @@ world. Each entry has:
 
 ---
 
-### How to find the Unicode value (code point) for a character
+## How to find the Unicode value
+
+Also known as the **code point** of a character.
 
 For instance "~" (tilde)?
 
-Word wide web: [Unicode Character Table](http://unicode-table.com/en/)
+---
 
-Java:
+## Java
 
     String c = "~";
     int unicodeCodepoint = (int) c.charAt(0);
 
-JavaScript:
+---
+
+
+## JavaScript
 
     var c = "~";
     var unicodeCodepoint = c.codePointAt(0);
 
-Emacs:
+----
+
+## Emacs
 
     M-x describe-char
 
 ---
 
-### UTF-8
+## UTF-8
 
 - Has conquered the world
 - ASCII compatible
@@ -159,13 +207,16 @@ Emacs:
 
 ---
 
-### UTF-8 - for nerds
+## Killer features
 
-- Killer feature #1: All ASCII strings are valid UTF-8; An ASCII
-  string encoded in UTF-8 has **0** as the first bit.
+1. All ASCII strings are valid UTF-8; An ASCII
+string encoded in UTF-8 has **0** as the first bit.
 
-- Killer feature #2: Easy to navigate and find current, previous and
-  next character.
+2. Easy to navigate and find current, previous and next character.
+
+---
+
+## UTF-8 - for nerds
 
 - Unicode characters can use up to **4** bytes (the digits are the
   header fields, the **x**s can be used for actual values):
@@ -176,7 +227,7 @@ Emacs:
 
 ---
 
-### The difference between Unicode and UTF-8
+## The difference between Unicode and UTF-8
 
 - Unicode is a table with numeric values and names for all characters
 in the whole wide world.
@@ -186,7 +237,7 @@ in the whole wide world.
 
 ---
 
-### Why is this important?
+## Why is this important?
 
 For instance, consider this:
 
@@ -200,7 +251,7 @@ For instance, consider this:
 
 ---
 
-### Java
+## Java
 
 [Java's internal representation of strings is Unicode](https://docs.oracle.com/javase/7/docs/technotes/guides/intl/overview.html)
 (with UTF-16 encoding)
@@ -209,7 +260,7 @@ For instance, consider this:
 
 ---
 
-### Java Resource bundles
+## Resource bundles
 
 - [Java resource bundles must be encoded in ISO-8859-1](http://docs.oracle.com/javase/7/docs/api/java/util/PropertyResourceBundle.html).
 
@@ -228,20 +279,22 @@ return new String(val.getBytes("ISO-8859-1"), "UTF-8");
 
 ---
 
-### Flex & ActionScript
+## Flex & ActionScript
 
 - [Default encoding in Flex](https://www.adobe.com/support/documentation/en/flex/1/internationalization_flex_short/internationalization_flex_short9.html)
 is UTF-8.
 
 - You can override this in the MXML file:
-  ```<?xml version="1.0" encoding="iso-8859-1"?>```
+```
+<?xml version="1.0" encoding="iso-8859-1"?>
+```
 
 - Or your editor can specify the encoding when it writes the file to
 disk, burning a mark in it using a so called BOM
 
 ---
 
-### Did you say BOM?
+## Did you say BOM?
 
 - BOM is something that we can use if cannot write the encoding into
 the file's contents.
@@ -254,7 +307,7 @@ the file's contents.
 
 ---
 
-### XML
+## XML
 
     <?xml version="1.0" encoding="utf-8"?>
 
@@ -266,21 +319,21 @@ dictates that the standard encoding to be
 
 ---
 
-### HTTP
+## HTTP
 
 When we surf on [facebook.com](http://facebook.com) or write Java code
 that consume REST, RPC over HTTP and SOAP services, the server says
 with which encoding the contents is serialised:
 
     $ GET http://vg.no
-    [..]
+    ..
     Content-Type: text/html; charset=iso-8859-1
 
 <img src="facebook.png" alt="facebook"/>
 
 ---
 
-### HTML
+## HTML
 
 Inside the HTML file itself, it's also important that the encoding
 is correct so that the contents is _displayed_ properly in the web
@@ -290,45 +343,53 @@ browser:
 
 ---
 
-### Runtime environment
+## Runtime environment
 
-In additoin to how the data are stored and serialised it's also
+In addition to how the data are stored and serialised it's also
 important that we take care of things on our side:
 
-- Fonts
+→ Fonts
 
 ---
 
-### Runtime environment - for nerds
+## Runtime environment
 
-#### JVM parameters
+> for nerds
+
+---
+
+### JVM parameters
 
 ```
-
 -Dsun.jnu.encoding=utf-8
 -Dfile.encoding=utf-8
 ```
 
-#### JDBC connection string
+---
+
+### JDBC connection string
 
     jdbc:jtds:sybase://db01:4100/mydb?characterEncoding=utf8
 
-#### UNIX locale
-```
+---
 
+### UNIX locale
+
+```
 $ export LC_ALL=en_GB.utf8
 $ export LANG=en_GB.utf8
 ```
+
 ---
 
-### Myth #1
+## Myth #1
 
 > The encoding of the Java file decides how the data that are written
 > by this Java component is written to the database.
 
 ---
 
-### Myth #1 busted
+## Myth #1 busted
 
 The file encoding only decides how the characters in the Java file
 itself are stored and displayed:
@@ -339,22 +400,27 @@ itself are stored and displayed:
  final static String PRODUKT = "UFØ";
 ```
 
+----
+
+## Myth #1 busted
+
 Data encoding, on the other hand, decides how the _data_ (which the
 Java program writes or reads) are read and written:
+
 ```
 database.writeData(data, Encoding.UTF-8);
 ```
 
 ---
 
-### Myth #2
+## Myth #2
 
 > The encoding inside system X affects the data it sends out and how
 > our system saves these data in our system.
 
 ---
 
-### Myth #2 busted
+## Myth #2 busted
 
 It's irrelevant that system X stores its data internally as
 [Windows 1252](http://en.wikipedia.org/wiki/Windows-1252) as long as
@@ -373,14 +439,40 @@ encoded as [UTF-8](http://no.wikipedia.org/wiki/UTF-8).
   [Unicode EN DASH](http://no.wikipedia.org/wiki/Unicode)
   (hyphen), the database will throw an error up to the web application.
 
+---
+
+## User → .. → DB
+
 <a href="different-encodings.svg">
 <img src="different-encodings.svg" "different encodings"/>
 </a>
 
 
 ```
-User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
+User (ok!) → Flex (ok!) → BlazeDS (ok!) → Java (ok!) → Database (BANG!)
 ```
+
+---
+
+## When you thought you were done
+
+---
+
+## Once your full stack is Unicode friendly
+
+---
+
+## Collation may still haunt you 👻
+
+---
+
+## Hæ?
+
+---
+
+## Default collation in MySQL
+
+- Is Swedish Latin 1
 
 ---
 
@@ -388,37 +480,43 @@ User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
 
 ---
 
-### Unicode is ....
+## Unicode is ....
 
 1. An encoding
 2. A character set
 
 ---
 
-### UTF-8 is ....
+## UTF-8 is ....
 
 1. An encoding
 2. A character set
 
 ---
 
-### Can you save "Alfa and Ω" in a database with ISO 8859-1 encoding?
+## Can you save "Alfa and Ω"
+
+> in a database with ISO 8859-1 encoding?
 
 1. Yes
 2. No
 
 ---
 
-### If you see big squares instead of letters, it's because ...
+## If you see big squares
+
+> instead of letters, it's because ...
 
 1. The data are saved using one encoding and are displayed with another
 2. The character set used when saving the data didn't have support for
    the letter(s)
-2. The font you're using (say "Times New Roman") is missing the letter(s)
+2. The font you're using is missing the letter(s)
 
 ---
 
-### If my Java source file uses Windows 1252 encoding, will æ, ø and å be written correctly to the database?
+## If my Java source file uses Windows 1252 encoding
+
+> will æ, ø and å be written correctly to the database?
 
 1. Yes
 2. No
@@ -426,17 +524,19 @@ User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
 
 ---
 
-### What has happened here?
+## What has happened here?
 
 > KjÃ¸rer
 
 1. You're missing a font to show the letter after "Kj".
-2. There's a mismatch between the encoding used when saving the data
-   and displaying them.
+2. Mismatch between the encoding used when saving the data and reading
+   them.
 
 ---
 
-## Summary - for everyone
+## Summary
+
+> for everyone
 
 - If you're seeing **squares** it's because the font your program is
   using doesn't have support for the letter (but _everything is ok
@@ -448,7 +548,9 @@ User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
 
 ---
 
-## Summary - for everyone - II
+## Summary
+
+> for everyone - II
 
 - Which character sets and encoding third party systems are using
   internally is irrelevant.
@@ -457,7 +559,17 @@ User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
 
 ---
 
-## Summary - for nerds
+## Summary
+
+> for the impatient
+
+- Use UTF-8 everywhere
+
+---
+
+## Summary
+
+> for nerds
 
 - Character set and encoding are not the same (at least since 1992)
 - Unicode and UTF-8 are not the same
@@ -488,8 +600,10 @@ User (ok!) => Flex (ok!) => BlazeDS (ok!) => Java (ok!) => Database (BANG!)
 
 ---
 
-# echo comments >
+# Fine
 
-## [\@torsteinkrausew](https://twitter.com/torsteinkrausew)
+> aka U+0004
 
-## [http://skybert.net](http://skybert.net)
+🐦 [\@torsteinkrausew](https://twitter.com/torsteinkrausew)
+
+🌐 [http://skybert.net](http://skybert.net)
