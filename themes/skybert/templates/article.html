@@ -10,13 +10,13 @@
   ::
   {% endif %}
   {% if article.tags %}
-
     {% for tag in article.tags %}
     <span>
       #<a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
     </span>
     {% endfor %}
   {% endif %}
+  written: {{ article.date.strftime('%Y-%m-%d') }}
 </div>
 <h1>{{ article.title }}</h1>
 <div class="content">
