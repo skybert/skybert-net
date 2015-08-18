@@ -15,7 +15,7 @@ always haunt me.
 
 ---
 
-## Two problems haunt me 👻
+## 👻
 
 1. Date conversion
 2. Character encoding
@@ -67,7 +67,9 @@ You'll get a *Quiz* at the end, so pay attention!
 
 ---
 
-##  American Standard Code for Information Interchange
+## ASCII
+
+>  American Standard Code for Information Interchange
 
 <img src="usa-uk.jpg" alt="usa &amp; uk"/>
 
@@ -561,20 +563,20 @@ User (ok!) → Flex (ok!) → BlazeDS (ok!) → Java (ok!) → Database (BANG!)
 
 ## Summary
 
-> for the impatient
-
-- Use UTF-8 everywhere
-
----
-
-## Summary
-
 > for nerds
 
 - Character set and encoding are not the same (at least since 1992)
 - Unicode and UTF-8 are not the same
 - Use [UTF-8](http://no.wikipedia.org/wiki/UTF-8) encoding everywhere:
   file encoding, data encoding, JDBC connection strings, UNIX locales.
+
+---
+
+## Summary
+
+> for the impatient
+
+- Use UTF-8 everywhere
 
 ---
 
