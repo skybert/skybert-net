@@ -45,7 +45,9 @@ two files:
 
 Then, create a seperate commit for `file1` and `file2`:
 
+```
     $ git commit file1 file2 -m "Split file1 & 2 out into their own commit."
+```
 
 Finish the rebasing:
 
