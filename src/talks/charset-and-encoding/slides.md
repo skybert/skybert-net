@@ -17,8 +17,15 @@ always haunt me.
 
 ## 👻
 
-1. Date conversion
-2. Character encoding
+<span class="fragment">Date conversion</span>
+
+<span class="fragment">Character encoding</span>
+
+---
+
+## Everyone has probleGrÃ¼Ÿ
+
+<img src="jira-encoding-tweet.png" alt="jira encoding tweet"/>
 
 ---
 
@@ -33,7 +40,7 @@ always haunt me.
 
 ---
 
-## Lets talk about
+## Let's talk about
 
 > Best regards
 
@@ -43,27 +50,31 @@ always haunt me.
 
 ---
 
+Or just
+
+---
+
+# ���
+
+---
+
 ## Goals for this talk
-- Understand what a character set is
-- Understand what an encoding is
-- Ability to differentiate encoding problems from rendering problems
+
+> Know
+
+- What a character set is
+- What an encoding is
+- Differentiate encoding problems from display problems
 - Debunk 2 myths
 
 ---
 
-## Shouldn't it say "Kjører" here?
-
-> KjÃ¸rer
-
-and other questions
+You'll get a <h1>Quiz</h1> at the end, so pay attention!
 
 ---
 
-You'll get a *Quiz* at the end, so pay attention!
-
----
-
-## Crash course: character sets and encodings
+## Crash course
+### Character sets and encodings
 
 ---
 
@@ -80,41 +91,55 @@ You'll get a *Quiz* at the end, so pay attention!
 
 ## ASCII - for nerds
 
+<table>
+  <tr>
+    <th>Character</th>
+    <th>Decimal</th>
+    <th>Decimal</th>
+  </tr>
+  <tr>
+    <td>A</td><td>65</td><td>1 0 0 0 0 0 1</td>
+  </tr>
+  <tr>
+    <td>B</td><td>66</td><td>1 0 0 0 0 1 0</td>
+  </tr>
+</table>
+
+- One character corresponds to one numeric value
 - 7 bit
-- One character corresponds to one numeric value e.g.:
-
-```
-
-Character | Decimal | Binary        |
-A         | 65      | 1 0 0 0 0 0 1 |
-B         | 66      | 1 0 0 0 0 1 0 |
-```
 
 ---
 
 ## ASCII - for nerds
 
-Value for upper case letter + 32 = value for the lower case letter:
-```
+<table>
+  <tr>
+    <th>Character</th><th>Decimal</th><th>Binary</th>
+  </tr>
+  <tr>
+    <td>a</td><td>97</td><td>1 1 0 0 0 0 1</td>
+  </tr>
+  <tr>
+    <td>b</td><td>98</td><td>1 1 0 0 0 1 0</td>
+  </tr>
+</table>
 
-Character | Decimal | Binary        |
-a         | 97      | 1 1 0 0 0 0 1 |
-b         | 98      | 1 1 0 0 0 1 0 |
-```
-
-Brilliant!
+> Value for upper case letter + 32 = value for the lower case letter.
+> Brilliant!
 
 ---
 
-## And then came the Europeans
+## Then came the Europeans
 
 <img src="columbus.jpg" alt="Columbus"/>
 
-One needed new characters that didn't exist
+---
+
+Need for new characters that didn't exist
 
 ---
 
-## And then came the Europeans - II
+## Then came the Europeans - II
 
 - ...but the hostel was full, all the 127 rooms were taken
 - ...so they added another zero
@@ -127,7 +152,7 @@ One needed new characters that didn't exist
 
 ---
 
-## And then came the Asians
+## Then came the Asians
 
 <img src="dragon.png" alt="Dragon"/>
 
@@ -153,10 +178,15 @@ One needed new characters that didn't exist
 ## Unicode is a character set
 
 A table with entries for all letters and character in the entire
-world. Each entry has:
+world.
 
-- Numeric values (code points)
-- A name
+---
+
+## Each entry has
+<ul>
+<li class="fragment">Numeric values (code points)</li>
+<li class="fragment">A name</li>
+</ul>
 
 ---
 
@@ -241,7 +271,7 @@ in the whole wide world.
 
 ## Why is this important?
 
-For instance, consider this:
+Consider this:
 
 - UTF-8 : ASCII compatible
 - UTF-16 : **not** ASCII compatible (Windows & Java)
@@ -378,6 +408,7 @@ important that we take care of things on our side:
 ### UNIX locale
 
 ```
+$ locale -a | grep en_GB.utf8
 $ export LC_ALL=en_GB.utf8
 $ export LANG=en_GB.utf8
 ```
@@ -580,10 +611,6 @@ User (ok!) → Flex (ok!) → BlazeDS (ok!) → Java (ok!) → Database (BANG!)
 
 ---
 
-## Q?
-
----
-
 ## Further exploration into the world of Unicode
 
 -
@@ -602,6 +629,10 @@ User (ok!) → Flex (ok!) → BlazeDS (ok!) → Java (ok!) → Database (BANG!)
 
 ---
 
+## Q?
+
+---
+
 # Fine
 
 > aka U+0004
@@ -609,3 +640,6 @@ User (ok!) → Flex (ok!) → BlazeDS (ok!) → Java (ok!) → Database (BANG!)
 🐦 [\@torsteinkrausew](https://twitter.com/torsteinkrausew)
 
 🌐 [http://skybert.net](http://skybert.net)
+
+✏ <a>torstein@escenic.com</a>
+
