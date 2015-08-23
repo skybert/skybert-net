@@ -1,5 +1,6 @@
 date:    2012-10-07
 category: hardware
+tags: hardware
 title: Hardware tests
 
 Speed tests of hardware I've used.
@@ -11,7 +12,7 @@ Speed tests of hardware I've used.
 - Vendor: "SAMSUNG"
 - Device: "MMCRE64G"
 - Revision: "VAM0"
- 
+
     # for el in $(seq 0 9); do hdparm -tT /dev/sda; done
 /dev/sda:
 Timing cached reads:   5062 MB in  2.00 seconds = 2536.36 MB/sec
@@ -53,7 +54,7 @@ Timing buffered disk reads: 150 MB in  3.03 seconds =  49.58 MB/sec
 Timing cached reads:   5126 MB in  2.00 seconds = 2568.76 MB/sec
 Timing buffered disk reads: 150 MB in  3.02 seconds =  49.66 MB/sec
 
-      
+
 ### MacBook Pro
 
 - Model: "KINGSTON SVP100S"
