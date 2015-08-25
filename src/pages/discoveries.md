@@ -13,6 +13,19 @@ date: 2014-11-22
 
 My other recent-ish discoveries 💡:
 
+## 2015-08-25
+
+MySQL's `utf8` encoding type on columns and tables isn't proper UTF-8,
+it only supports up to 3 byte characters, not 4 bytes as UTF-8 can grow
+to.
+
+To be able to insert the whole spectre of Unicode that UTF-8 supports,
+you must set up your MySQL database to use the encoding type called
+`utf8mb4`.
+
+A good article [on the topic can be found here](
+https://mathiasbynens.be/notes/mysql-utf8mb4)
+
 ## 2015-03-15
 
 Running `occur` in [Emacs](http://gnu.org/software/emacs) gives you
