@@ -506,6 +506,7 @@ User (ok!) → Flex (ok!) → BlazeDS (ok!) → Java (ok!) → Database (BANG!)
 ## Default collation in MySQL
 
 - Is Swedish Latin 1
+- For full Unicode support, use utf8mb4 instead of utf8
 
 ---
 
