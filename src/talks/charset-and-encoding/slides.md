@@ -31,12 +31,13 @@ always haunt me.
 
 ## whois
 
-- System architect at [Escenic](http://esceni.ccom) making a GREAT
-  Content Management System for the media industry
+- System architect at [Escenic](http://escenic.com) making a GREAT Content
+Management System for the media industry
+
 - Works with customers all over the world: From the
-  [Daily Mirror](http://dailymirror.co.uk) in the UK,
-  [Die Welt](http://welt.de) in Germany to the Tamil newspaper
-  [Dinamani](http://dinamani.com) in India.
+[Daily Mirror](http://dailymirror.co.uk) in the UK,
+[Die Welt](http://welt.de) in Germany to the Tamil newspaper
+[Dinamani](http://dinamani.com) in India.
 
 ---
 
@@ -225,7 +226,30 @@ For instance "~" (tilde)?
 
 ## Emacs
 
+
     M-x describe-char
+
+---
+
+## Emacs
+
+```
+             position: 25 of 26 (92%), column: 24
+            character: ~ (displayed as ~) (codepoint 126, #o176, #x7e)
+    preferred charset: ascii (ASCII (ISO646 IRV))
+code point in charset: 0x7E
+               script: latin
+               syntax: _    which means: symbol
+             category: .:Base, a:ASCII, l:Latin
+             to input: type "C-x 8 RET 7e" or "C-x 8 RET TILDE"
+          buffer code: #x7E
+            file code: #x7E (encoded by coding system utf-8-unix)
+              display: by this font (glyph code)
+    xft:-unknown-DejaVu Sans Mono-normal-normal-normal-*-22-*-*-*-m-0-iso10646-1 (#x61)
+
+Character code properties: customize what to show
+  name: TILDE
+```
 
 ---
 
@@ -487,6 +511,44 @@ User (ok!) → Flex (ok!) → BlazeDS (ok!) → Java (ok!) → Database (BANG!)
 
 ---
 
+## MySQL users beware
+
+What's wrong with this statement?
+
+```
+mysql> create database mydb
+       character set utf8
+       collate utf8_general_ci;
+```
+
+---
+
+## MySQL utf8
+
+The MySQL `utf8` table/column encoding is not real UTF-8
+
+---
+
+## MySQL utf8
+
+Only 1-3 byte characters supported.
+
+---
+
+## MySQL utf8
+
+For full UTF-8 support, use the `utf8mb4` type instead.
+
+---
+
+## MySQL utf8mb4
+
+This will fix obscure errors like:
+
+<img src="jira-encoding-bug.png" alt="jira encoding"/>
+
+---
+
 ## When you thought you were done
 
 ---
@@ -506,7 +568,6 @@ User (ok!) → Flex (ok!) → BlazeDS (ok!) → Java (ok!) → Database (BANG!)
 ## Default collation in MySQL
 
 - Is Swedish Latin 1
-- For full Unicode support, use utf8mb4 instead of utf8
 
 ---
 
