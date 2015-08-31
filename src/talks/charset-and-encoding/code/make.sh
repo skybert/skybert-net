@@ -10,7 +10,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 javac UsingSystemOut.java &&
 java -Dfile.encoding=UTF-12 UsingSystemOut
-java -Dfile.encoding=UTF-16 UsingSystemOut
+echo "----"
 java -Dfile.encoding=UTF-8 UsingSystemOut
 
 echo "----"

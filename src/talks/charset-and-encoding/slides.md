@@ -152,9 +152,9 @@ Need for new characters that didn't exist
 
 ---
 
-## Then came the Europeans - II
+## The hostel was full
 
-- ...but the hostel was full, all the 127 rooms were taken
+- All the 127 rooms were taken
 - ...so they added another zero
 
 > → **0** 1 0 0 0 0 0 1
