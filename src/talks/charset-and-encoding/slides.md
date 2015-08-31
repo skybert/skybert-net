@@ -1,8 +1,10 @@
 
 # Squares and question marks
+𝣖 & ?
 
 > An adventure into the world of character sets and encodings
 
+by
 <a href="torstein.k.johansen AT gmail DOT com">Torstein Krause Johansen</a>
 
 
@@ -31,13 +33,19 @@ always haunt me.
 
 ## whois
 
-- System architect at [Escenic](http://escenic.com) making a GREAT Content
+### 💻
+
+System architect at [Escenic](http://escenic.com) making a GREAT Content
 Management System for the media industry
 
-- Works with customers all over the world: From the
+### 🌎
+
+Customers all over the world: From the
 [Daily Mirror](http://dailymirror.co.uk) in the UK,
-[Die Welt](http://welt.de) in Germany to the Tamil newspaper
-[Dinamani](http://dinamani.com) in India.
+[Die Welt](http://welt.de) in Germany to
+[Dinamani](http://dinamani.com) in இந்திய.ா
+
+<img src="../escenic-theme/escenic-logo.svg" alt="escenic"/>
 
 ---
 
@@ -84,6 +92,10 @@ You'll get a <h1>Quiz</h1> at the end, so pay attention!
 >  American Standard Code for Information Interchange
 
 <img src="usa-uk.jpg" alt="usa &amp; uk"/>
+
+---
+
+## ASCII
 
 - An absolute genius of a standard
 - ...as long as you speak English
@@ -185,7 +197,7 @@ world.
 
 ## Each entry has
 <ul>
-<li class="fragment">Numeric values (code points)</li>
+<li class="fragment">A numeric value (code points)</li>
 <li class="fragment">A name</li>
 </ul>
 
@@ -193,11 +205,23 @@ world.
 
 ## Unicode examples
 
-- The character "Ω" has the numeric value 937 an the name "GREEK
-  CAPITAL LETTER OMEGA"
-
-- The character "Å" has the numeric value 197 and the name "LATIN
-  CAPITAL LETTER A WITH RING ABOVE"
+<table>
+  <tr>
+    <th>Character</th>
+    <th>Code point</th>
+    <th>Name</th>
+  </tr>
+  <tr>
+    <td>Ω</td>
+    <td>937</td>
+    <td>GREEK CAPITAL LETTER OMEGA</td>
+  </tr>
+  <tr class="fragment">
+    <td>Å</td>
+    <td>197</td>
+    <td>LATIN CAPITAL LETTER A WITH RING ABOVE</td>
+  </tr>
+</table>
 
 ---
 
@@ -213,6 +237,13 @@ For instance "~" (tilde)?
 
     String c = "~";
     int unicodeCodepoint = (int) c.charAt(0);
+
+---
+
+## Java
+
+    String s = "🐘";
+    int unicodeCodepoint =  Character.codePointAt(s, 0);
 
 ---
 

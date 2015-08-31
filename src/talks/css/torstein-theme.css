@@ -1,4 +1,5 @@
-@import "../fonts/fonts.css" all;
+/* Torstein's reveal.js theme */
+@import "fonts/fonts.css" all;
 
 body {
   background-image: url("escenic-logo.svg");
@@ -8,7 +9,7 @@ body {
   background-size: 106.54px 23.0px;
   background-color: white;
   color: #302a2b;
-  font-size: 2em;
+  font-size: 1.5em;
   font-family: helvetica-neue-thin, 'sans-serif';
 }
 
