@@ -286,11 +286,16 @@ Character code properties: customize what to show
 
 ## UTF-8
 
-- Has conquered the world
-- ASCII compatible
-- Invented by Ken Thompson in 1992 while he was having dinner in a
-  restaurant
-- A standard so simple you can explain it on a napkin
+<ul>
+  <li>Has conquered the world</li>
+  <li class="fragment">ASCII compatible</li>
+  <li class="fragment">
+    Invented by Ken Thompson in 1992 while he was having dinner in a restaurant
+  </li>
+  <li class="fragment">
+    A standard so simple you can explain it on a napkin
+  </li>
+</ul>
 
 ---
 
