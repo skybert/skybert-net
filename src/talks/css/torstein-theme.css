@@ -87,6 +87,10 @@ body {
   margin-left: 40px;
 }
 
+.reveal li p, .reveal ol li, .reveal ul li {
+  margin-top: 0.8em;
+}
+
 .reveal dt {
   font-weight: bold;
 }
@@ -283,7 +287,6 @@ body {
   border-radius: 7px;
   padding: 0.2em;
   font-family: monospace;
-
 }
 
 .reveal small code {

@@ -43,9 +43,12 @@ Management System for the media industry
 Customers all over the world: From the
 [Daily Mirror](http://dailymirror.co.uk) in the UK,
 [Die Welt](http://welt.de) in Germany to
-[Dinamani](http://dinamani.com) in இந்திய.ா
+[Dinamani](http://dinamani.com) in இந்திய.
 
-<img src="../escenic-theme/escenic-logo.svg" alt="escenic"/>
+<img
+   src="../escenic-theme/escenic-logo.svg"
+   style="border: none; box-shadow: none;"
+   alt="escenic"/>
 
 ---
 
@@ -102,7 +105,7 @@ You'll get a <h1>Quiz</h1> at the end, so pay attention!
 
 ---
 
-## ASCII - for nerds
+## ASCII
 
 <table>
   <tr>
@@ -123,7 +126,7 @@ You'll get a <h1>Quiz</h1> at the end, so pay attention!
 
 ---
 
-## ASCII - for nerds
+## ASCII
 
 <table>
   <tr>
@@ -162,6 +165,14 @@ Need for new characters that didn't exist
 ---
 
 ## 256 characters, hurrah!
+
+---
+
+## Europeans could now enter the computer age
+
+---
+
+## Code pages
 
 ---
 
@@ -255,8 +266,27 @@ For instance "~" (tilde)?
 
 ----
 
-## Emacs
+## Wikipedia
 
+http://en.wikipedia.org/wiki/~
+
+---
+
+## RTFM
+
+Only a few key presses away on any Unix:
+
+```
+$ man ascii
+$ man charset
+$ man unicode
+$ man utf-8
+$ man iconv
+```
+
+---
+
+## Emacs
 
     M-x describe-char
 
@@ -301,21 +331,24 @@ Character code properties: customize what to show
 
 ## Killer features
 
-1. All ASCII strings are valid UTF-8; An ASCII
-string encoded in UTF-8 has **0** as the first bit.
-
-2. Easy to navigate and find current, previous and next character.
+1. All ASCII strings are valid UTF-8;
+2. An ASCII string encoded in UTF-8 has **0** as the first bit.
+3. Easy to navigate and find current, previous and next character.
 
 ---
 
-## UTF-8 - for nerds
+## UTF-8
 
-- Unicode characters can use up to **4** bytes (the digits are the
-  header fields, the **x**s can be used for actual values):
+Unicode characters can use up to **4** bytes:
 
 ```
 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+         1110xxxx 10xxxxxx 10xxxxxx
+                  110xxxxx 10xxxxxx
+                           0xxxxxxx
 ```
+
+The digits are the header fields, the **x**s can be used for actual values
 
 ---
 
@@ -352,6 +385,12 @@ Consider this:
 
 ---
 
+## Specify the encoding whenever you can
+
+
+
+---
+
 ## Resource bundles
 
 - [Java resource bundles must be encoded in ISO-8859-1](http://docs.oracle.com/javase/7/docs/api/java/util/PropertyResourceBundle.html).
@@ -360,10 +399,26 @@ Consider this:
   represented using Unicode escape notation:
 
 ```
-native2ascii -encoding utf8 resources.utf8 resources.properties
+$ native2ascii -encoding utf8 resources.utf8 resources.properties
 ```
 
-- Or, it is still possible to write UTF-8 into your .properties if you
+---
+
+## Example
+
+```
+$ cat resources.utf8
+ghost_title=This is a 👻
+
+$ native2ascii -encoding utf8 resources.utf8
+ghost_title=This is a \ud83d\udc7b
+```
+
+---
+
+## Resource bundles
+
+- It is still possible to write UTF-8 into your .properties if you
 on the Java side do:
 ```
 return new String(val.getBytes("ISO-8859-1"), "UTF-8");
@@ -421,7 +476,10 @@ with which encoding the contents is serialised:
     ..
     Content-Type: text/html; charset=iso-8859-1
 
-<img src="facebook.png" alt="facebook"/>
+---
+
+## Why does it say charset?
+
 
 ---
 
@@ -440,13 +498,13 @@ browser:
 In addition to how the data are stored and serialised it's also
 important that we take care of things on our side:
 
-→ Fonts
+> → Fonts
 
 ---
 
 ## Runtime environment
 
-> for nerds
+> more technical
 
 ---
 
@@ -601,9 +659,17 @@ This will fix obscure errors like:
 
 ---
 
-## Default collation in MySQL
+## Collation
 
-- Is Swedish Latin 1
+- How the database handles strings
+- Sorting
+- Comparing
+
+---
+
+## Fun fact
+
+Default collation in MySQL is "Swedish Latin 1".
 
 ---
 
@@ -625,9 +691,9 @@ This will fix obscure errors like:
 
 ---
 
-## Can you save "Alfa and Ω"
+## Can you store
 
-> in a database with ISO 8859-1 encoding?
+>  "Alpha and Ω" in a database with ISO 8859-1 encoding?
 
 1. Yes
 2. No
@@ -651,7 +717,7 @@ This will fix obscure errors like:
 
 1. Yes
 2. No
-3. That depends on how the DB and the JDBC connection are set up
+3. It depends
 
 ---
 
