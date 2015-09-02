@@ -3,6 +3,10 @@ date:    2012-10-07
 category: vcs
 tags: git, vcs
 
+## Renaming a branch
+
+    $ git branch -m <current name> <new name>
+
 ## Set up your own a git repository on your server
 
 This is how you set up your own git repository on Unix/Linux
