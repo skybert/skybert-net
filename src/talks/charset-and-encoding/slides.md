@@ -378,8 +378,9 @@ Consider this:
 
 ## Java
 
-[Java's internal representation of strings is Unicode](https://docs.oracle.com/javase/7/docs/technotes/guides/intl/overview.html)
-(with UTF-16 encoding)
+Java's
+[internal representation of strings ](https://docs.oracle.com/javase/7/docs/technotes/guides/intl/overview.html)
+is Unicode, with UTF-16 encoding.
 
     final String name = getNameFromFacebook(id);
 
@@ -393,7 +394,8 @@ Consider this:
 
 ## Resource bundles
 
-- [Java resource bundles must be encoded in ISO-8859-1](http://docs.oracle.com/javase/7/docs/api/java/util/PropertyResourceBundle.html).
+- Java resource bundles
+  [must be encoded in ISO-8859-1](http://docs.oracle.com/javase/7/docs/api/java/util/PropertyResourceBundle.html).
 
 - Characters that don't fit into ISO-8859-1 must therefore be
   represented using Unicode escape notation:
@@ -478,8 +480,27 @@ with which encoding the contents is serialised:
 
 ---
 
-## Why does it say charset?
+# Wait!
 
+> Why does it say char set?
+
+---
+
+## MIME is to blame
+
+---
+
+## MIME is to blame
+
+- MIME, [RFC 2045, May 1996](https://tools.ietf.org/html/rfc2045),
+  used the term "charset"
+- HTTP 1.0, [RFC 1945, May 1996)](http://tools.ietf.org/html/rfc1945),
+  included MIME.
+- HTTP wanted to keep the terminology consistent, but acknowledges:
+
+> Note: This use of the term "character set" is more commonly referred
+> to as a "character encoding." However, since HTTP and MIME share the
+> same registry, it is important that the terminology also be shared.
 
 ---
 
