@@ -9,18 +9,22 @@ body {
   background-size: 106.54px 23.0px;
   background-color: white;
   color: #302a2b;
-  font-size: 1.5em;
+  font-size: 2em;
   font-family: helvetica-neue-thin, 'sans-serif';
 }
 
 ::selection {
   color: black;
-  background: #ff752d;
+  background: red;
 }
 
 /*********************************************
  * HEADERS
  *********************************************/
+h1:first-letter, h2:first-letter {
+  color: red;
+}
+
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
   margin: 0 0 20px 0;
   color: #302a2b;
@@ -62,7 +66,6 @@ body {
 
 .reveal ol, .reveal dl, .reveal ul {
   display: inline-block;
-  text-align: left;
   margin: 0 0 0 1em;
 }
 
@@ -188,7 +191,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #ff752d;
+  color: red;
   text-decoration: none;
   -webkit-transition: color 0.15s ease;
   -moz-transition: color 0.15s ease;
@@ -223,7 +226,7 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #ff752d;
+  border-color: red;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -231,19 +234,19 @@ body {
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
-  border-right-color: #ff752d;
+  border-right-color: red;
 }
 
 .reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
-  border-left-color: #ff752d;
+  border-left-color: red;
 }
 
 .reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #ff752d;
+  border-bottom-color: red;
 }
 
 .reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
-  border-top-color: #ff752d;
+  border-top-color: red;
 }
 
 .reveal .controls div.navigate-left.enabled:hover {
@@ -270,14 +273,14 @@ body {
 }
 
 .reveal .progress span {
-  background: #ff752d;
+  background: red;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
 }
 
 .reveal .slide-number {
-  color: #ff752d;
+  color: red;
 }
 
 .reveal p code {

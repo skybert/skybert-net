@@ -406,7 +406,7 @@ $ native2ascii -encoding utf8 resources.utf8 resources.properties
 
 ---
 
-## Example
+## A ghostly example 👻
 
 ```
 $ cat resources.utf8
@@ -425,6 +425,34 @@ on the Java side do:
 ```
 return new String(val.getBytes("ISO-8859-1"), "UTF-8");
 ```
+
+---
+
+## Maven
+
+> Ever seen this one?
+
+```
+[WARNING] File encoding has not been set, using platform encoding
+          UTF-8, i.e. build is platform dependent!
+
+```
+
+----
+
+## Make your builds safe
+
+```
+<properties>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+```
+
+---
+
+## You can now use UTF-8 in your source files
+
+A ♥ looks so much better than `\u2665`
 
 ---
 
@@ -482,15 +510,13 @@ with which encoding the contents is serialised:
 
 # Wait!
 
-> Why does it say char set?
+> Why does it say char-set?
 
 ---
 
 ## MIME is to blame
 
 ---
-
-## MIME is to blame
 
 - MIME, [RFC 2045, May 1996](https://tools.ietf.org/html/rfc2045),
   used the term "charset"
@@ -603,13 +629,23 @@ encoded as [UTF-8](http://no.wikipedia.org/wiki/UTF-8).
 
 ## The database
 
-- Many databases in Europe used (and several still use!)
-  [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1) encoding.
-- If someone attempts to write a character into these databases that's
-  not covered by
-  [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1), for instance "*–*"
-  [Unicode EN DASH](http://no.wikipedia.org/wiki/Unicode)
-  (hyphen), the database will throw an error up to the web application.
+<ul>
+  <li>
+    Many databases in Europe used (and several still use!)
+    [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1) encoding.
+  </li>
+  <li class="fragment">
+    If someone attempts to write a character into these databases that's
+    not covered by
+    [ISO-8859-1](http://no.wikipedia.org/wiki/ISO_8859-1), for instance "*–*"
+    [Unicode EN DASH](http://no.wikipedia.org/wiki/Unicode)
+  (hyphen)...
+  </li>
+  <li class="fragment">
+    the database will throw an <span class="fragment highlight-red">error</span> up to the
+    web application.
+  </li>
+</ul>
 
 ---
 

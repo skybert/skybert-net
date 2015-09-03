@@ -1,3 +1,5 @@
+package net.skybert.talk;
+
 import java.nio.charset.Charset;
 /**
  * UsingSystemOut
