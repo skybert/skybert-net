@@ -36,4 +36,5 @@ public class ReadUTF8EncodedResourceTest {
       "This is a 👻",
       app.getPropertyFromUTF8File("ghost_title"));
   }
+
 }

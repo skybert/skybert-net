@@ -219,7 +219,7 @@ world.
 
 ## Each entry has
 <ul>
-<li class="fragment">A numeric value (code points)</li>
+<li class="fragment">A numeric value (code point)</li>
 <li class="fragment">A name</li>
 </ul>
 
@@ -283,20 +283,6 @@ http://en.wikipedia.org/wiki/~
 
 ---
 
-## RTFM
-
-Only a few key presses away on any Unix:
-
-```
-$ man ascii
-$ man charset
-$ man unicode
-$ man utf-8
-$ man iconv
-```
-
----
-
 ## Emacs
 
     M-x describe-char
@@ -321,6 +307,20 @@ code point in charset: 0x7E
 
 Character code properties: customize what to show
   name: TILDE
+```
+
+---
+
+## RTFM
+
+Only a few key presses away on any Unix:
+
+```
+$ man ascii
+$ man charset
+$ man unicode
+$ man utf-8
+$ man iconv
 ```
 
 ---
@@ -359,7 +359,7 @@ Unicode characters can use up to **4** bytes:
                            0xxxxxxx
 ```
 
-The digits are the header fields, the **x**s can be used for actual values
+The digits are the header fields, the `x`s can be used for actual values
 
 ---
 
@@ -431,10 +431,43 @@ ghost_title=This is a \ud83d\udc7b
 
 ## Resource bundles
 
-- It is still possible to write UTF-8 into your .properties if you
-on the Java side do:
+- It is still possible to use UTF-8 in your `.properties` files if
+  you do:
+
 ```
-return new String(val.getBytes("ISO-8859-1"), "UTF-8");
+public String getPropertyFromUTF8File(final String pKey)
+  throws IOException {
+
+  ResourceBundle bundle = ResourceBundle.getBundle(
+    "ghost-text-utf8", Locale.ENGLISH);
+  String value = bundle.getString(pKey);
+  return new String(value.getBytes("ISO-8859-1"), "UTF-8");
+}
+```
+
+---
+
+## Can you trust String#length()?
+
+```
+final String ghost = "👻";
+assertEquals("ghost is just one chracter", 1, ghost.length());
+```
+
+---
+
+## If in doubt
+
+Use
+[String#codePointCount(from, to)](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#codePointCount(int,%20int)):
+
+```
+final String ghost = "👻";
+assertEquals(
+  "ghost is just one chracter",
+  1,
+  ghost.codePointCount(0, ghost.length())
+);
 ```
 
 ---
@@ -467,24 +500,34 @@ A ♥ looks so much better than `\u2665`
 
 ---
 
-## Flex & ActionScript
+## XML
 
-- [Default encoding in Flex](https://www.adobe.com/support/documentation/en/flex/1/internationalization_flex_short/internationalization_flex_short9.html)
-is UTF-8.
+    <?xml version="1.0" encoding="utf-8"?>
 
-- You can override this in the MXML file:
-```
-<?xml version="1.0" encoding="iso-8859-1"?>
-```
+- The [XML specification](http://www.w3.org/TR/xml/#charencoding)
+dictates that the standard encoding to be
+[UTF-8](http://en.wikipedia.org/wiki/UTF-8)
+
+- All XML parsers must as a minimum support UTF-8
+
+---
+
+## Encoding in ANY file?
+
+- Many formats support specyfing the encoding.
 
 - Or your editor can specify the encoding when it writes the file to
-disk, burning a mark in it using a so called BOM
+disk, burning a mark in it using a so called BOM.
 
 ---
 
 ## Did you say BOM?
 
-- BOM is something that we can use if cannot write the encoding into
+---
+
+## BOM
+
+is something that we can use if cannot write the encoding into
 the file's contents.
 
 - For instance when we when write a plain text file
@@ -495,15 +538,12 @@ the file's contents.
 
 ---
 
-## XML
+## BOM - beware
 
-    <?xml version="1.0" encoding="utf-8"?>
+> if you're counting bytes
 
-- The [XML specification](http://www.w3.org/TR/xml/#charencoding)
-dictates that the standard encoding to be
-[UTF-8](http://en.wikipedia.org/wiki/UTF-8)
-
-- All XML parsers must as a minimum support UTF-8
+- Some encodings automatically add a BOM
+- UTF-16 adds a two byte BOM
 
 ---
 
@@ -521,7 +561,7 @@ with which encoding the contents is serialised:
 
 # Wait!
 
-> Why does it say char-set?
+> Why does it say charset?
 
 ---
 
@@ -531,7 +571,7 @@ with which encoding the contents is serialised:
 
 - MIME, [RFC 2045, May 1996](https://tools.ietf.org/html/rfc2045),
   used the term "charset"
-- HTTP 1.0, [RFC 1945, May 1996)](http://tools.ietf.org/html/rfc1945),
+- HTTP 1.0, [RFC 1945, May 1996](http://tools.ietf.org/html/rfc1945),
   included MIME.
 - HTTP wanted to keep the terminology consistent, but acknowledges:
 
@@ -617,7 +657,7 @@ Data encoding, on the other hand, decides how the _data_ (which the
 Java program writes or reads) are read and written:
 
 ```
-database.writeData(data, Encoding.UTF-8);
+new OutputStreamWriter(out, "UTF-8");
 ```
 
 ---
@@ -725,6 +765,10 @@ This will fix obscure errors like:
 
 ## Hæ?
 
+<!--
+(Norwegian for [WAT?](https://www.destroyallsoftware.com/talks/wat))
+-->
+
 ---
 
 ## Collation
@@ -801,8 +845,6 @@ Default collation in MySQL is "Swedish Latin 1".
 
 ## Summary
 
-> for everyone
-
 - If you're seeing **squares** it's because the font your program is
   using doesn't have support for the letter (but _everything is ok
   with the system_).
@@ -815,8 +857,6 @@ Default collation in MySQL is "Swedish Latin 1".
 
 ## Summary
 
-> for everyone - II
-
 - Which character sets and encoding third party systems are using
   internally is irrelevant.
 
@@ -825,8 +865,6 @@ Default collation in MySQL is "Swedish Latin 1".
 ---
 
 ## Summary
-
-> for nerds
 
 - Character set and encoding are not the same (at least since 1992)
 - Unicode and UTF-8 are not the same
@@ -858,6 +896,10 @@ Default collation in MySQL is "Swedish Latin 1".
 
 -
 [Unicode in Windows' CLI](http://illegalargumentexception.blogspot.no/2009/04/i18n-unicode-at-windows-command-prompt.html#charsets_javaconsole)
+
+- Full
+  [source code for my code examples](https://github.com/skybert/skybert-net/blob/master/src/talks/charset-and-encoding/charset-talk-code)
+  can be found on Github
 
 ---
 
