@@ -1,0 +1,314 @@
+/* Torstein's reveal.js theme */
+@import "fonts/fonts.css" all;
+
+body {
+  background-image: url("escenic-logo.svg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 5% 95%;
+  background-size: 106.54px 23.0px;
+  background-color: black;
+  color: #F4EAD5;
+  font-size: 1.5em;
+  font-family: helvetica-neue-thin, 'sans-serif';
+}
+
+::selection {
+  color: black;
+  background: #d94a05;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: 0 0 20px 0;
+  color: #D94A05;
+  letter-spacing: normal;
+  /* text-shadow: 2px 2px 2px #cccccc; */
+  word-wrap: break-word;
+  font-family: helvetica-neue-condensed-bold, 'sans-serif';
+}
+
+.reveal h1 {
+  font-size: 4.77em;
+}
+
+.reveal h2 {
+  font-size: 3em;
+}
+
+.reveal h3 {
+  font-size: 1.55em;
+}
+
+.reveal h4 {
+  font-size: 1em;
+}
+
+.reveal h1 {
+  /* text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); */
+}
+
+/*********************************************
+ * OTHER
+ *********************************************/
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img, .reveal video, .reveal iframe {
+  max-width: 95%;
+  max-height: 95%;
+}
+
+.reveal ol, .reveal dl, .reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em;
+}
+
+.reveal ol {
+  list-style-type: decimal;
+}
+
+.reveal ul {
+  list-style-type: disc;
+}
+
+.reveal ul ul {
+  list-style-type: square;
+}
+
+.reveal ul ul ul {
+  list-style-type: circle;
+}
+
+.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+  display: block;
+  margin-left: 40px;
+}
+
+.reveal dt {
+  font-weight: bold;
+}
+
+.reveal dd {
+  margin-left: 40px;
+}
+
+.reveal q, .reveal blockquote {
+  quotes: none;
+}
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.reveal blockquote p:first-child, .reveal blockquote p:last-child {
+                                    display: inline-block;
+                                  }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.75em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reveal pre code {
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+  padding: 0.8em;
+}
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.reveal table th {
+  font-weight: bold;
+}
+
+.reveal table th, .reveal table td {
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+}
+
+.reveal table th[align="center"], .reveal table td[align="center"] {
+  text-align: center;
+}
+
+.reveal table th[align="right"], .reveal table td[align="right"] {
+  text-align: right;
+}
+
+.reveal table tr:last-child td {
+  border-bottom: none;
+}
+
+.reveal sup {
+  vertical-align: super;
+}
+
+.reveal sub {
+  vertical-align: sub;
+}
+
+.reveal small {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.reveal small * {
+  vertical-align: top;
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #d94a05;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+}
+
+.reveal a:hover {
+  color: #ffffff;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #6a1521;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #eee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.reveal a img {
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #d94a05;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+  border-right-color: #d94a05;
+}
+
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: #d94a05;
+}
+
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #d94a05;
+}
+
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+  border-top-color: #d94a05;
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #dd5567;
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #dd5567;
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #dd5567;
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #dd5567;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+  background: #d94a05;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+.reveal .slide-number {
+  color: #d94a05;
+}
+
+.reveal p code {
+  background: #f8f8f8;
+  color: #000000;
+  display: inline-block;
+  border-radius: 7px;
+  padding: 0.2em;
+  font-family: monospace;
+
+}
+
+.reveal small code {
+  vertical-align: baseline;
+}
+
+kbd.escenic {
+  -moz-border-radius: 0.2em;
+  -moz-box-shadow: 0.1em 0.2em 0.2em #ddd;
+  -moz-linear-gradient(top, #eee, #f9f9f9, #eee);
+  -o-linear-gradient(top, #eee, #f9f9f9, #eee);
+  -webkit-border-radius: 0.2em;
+  -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd;
+  -webkit-linear-gradient(top, #eee, #f9f9f9, #eee);
+  background-color: #f9f9f9;
+  background-image:
+  background-image:
+  background-image:
+  background-image:
+  border-radius: 0.2em;
+  border: 1px solid #aaa;
+  box-shadow: 0.1em 0.2em 0.2em #ddd;
+  font-family: inherit;
+  font-size: 0.85em;
+  font-weight: bolder;
+  linear-gradient(to bottom, #eee, #f9f9f9, #eee);
+  padding: 0.1em 0.3em;
+}

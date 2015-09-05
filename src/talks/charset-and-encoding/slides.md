@@ -1,6 +1,6 @@
 
 # Squares and question marks
-𝣖 & ?
+𝣖 & �
 
 > An adventure into the world of character sets and encodings
 
@@ -100,8 +100,10 @@ You'll get a <h1>Quiz</h1> at the end, so pay attention!
 
 ## ASCII
 
-- An absolute genius of a standard
-- ...as long as you speak English
+<ul>
+  <li>An absolute genius of a standard</li>
+  <li class="fragment">...as long as you speak English</li>
+</ul>
 
 ---
 
@@ -172,7 +174,8 @@ Need for new characters that didn't exist
 
 ---
 
-## Code pages
+- Code pages
+- ISO-8859-*
 
 ---
 
@@ -191,7 +194,15 @@ Need for new characters that didn't exist
 
 ---
 
-## Finally peace: Unicode
+## Finally peace
+
+---
+
+## Unicode
+
+---
+
+## Unicode
 
 - Caters for all characters and letters in all dead and spoken
   languages (has today more than 110 000 characters)
@@ -331,7 +342,7 @@ Character code properties: customize what to show
 
 ## Killer features
 
-1. All ASCII strings are valid UTF-8;
+1. All ASCII strings are valid UTF-8
 2. An ASCII string encoded in UTF-8 has **0** as the first bit.
 3. Easy to navigate and find current, previous and next character.
 

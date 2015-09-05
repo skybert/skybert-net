@@ -1,16 +1,16 @@
 package net.skybert.talk;
 
 /**
- * FindCharacterPoint
+ * FindCodePoint
  *
  * @author Torstein Krause Johansen
  * @version $Revision$ $Date$
  */
-public class FindCharacterPoint {
+public class FindCodePoint {
   public static void main(String[] args) {
     if (args.length != 1) {
       System.out.println("Usage: "
-                         + FindCharacterPoint.class.getName()
+                         + FindCodePoint.class.getName()
                          + " <character>");
       System.exit(1);
     }

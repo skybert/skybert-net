@@ -1,8 +1,9 @@
 package net.skybert.talk;
 
+import static org.junit.Assert.assertEquals;
+
 import java.io.IOException;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,7 +23,7 @@ public class ReadUTF8EncodedResourceTest {
 
   @Test
   public void canReadISO88591EncodedResourceBundle() {
-    Assert.assertEquals(
+    assertEquals(
       "Read escaped Unicode string",
       "This is a \ud83d\udc7b",
       app.getPropertyFromLatin1File("ghost_title"));
@@ -30,9 +31,9 @@ public class ReadUTF8EncodedResourceTest {
 
   @Test
   public void canReadUTF8EncodedResourceBundle() throws IOException {
-    Assert.assertEquals(
+    assertEquals(
       "Read escaped Unicode string",
-      "ghost_title=This is a ????",
+      "This is a 👻",
       app.getPropertyFromUTF8File("ghost_title"));
   }
 }
