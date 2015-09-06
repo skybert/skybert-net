@@ -7,6 +7,26 @@
 by
 <a href="torstein.k.johansen AT gmail DOT com">Torstein Krause Johansen</a>
 
+---
+
+## whois
+
+### ⛹
+
+System architect at [Escenic](http://escenic.com) making a GREAT Content
+Management System for the media industry
+
+<div style="padding: 1em;">
+<img
+   src="../escenic-theme/escenic-logo.svg"
+   style="border: none; box-shadow: none;"
+   alt="escenic"/>
+</div>
+
+Customers all over the world: From the
+[Daily Mirror](http://dailymirror.co.uk) in the UK,
+[Die Welt](http://welt.de) in Germany to
+[Dinamani](http://dinamani.com) in இந்திய.
 
 ---
 
@@ -28,27 +48,6 @@ always haunt me.
 ## Everyone has probleGrÃ¼Ÿ
 
 <img src="jira-encoding-tweet.png" alt="jira encoding tweet"/>
-
----
-
-## whois
-
-### 💻
-
-System architect at [Escenic](http://escenic.com) making a GREAT Content
-Management System for the media industry
-
-### 🌎
-
-Customers all over the world: From the
-[Daily Mirror](http://dailymirror.co.uk) in the UK,
-[Die Welt](http://welt.de) in Germany to
-[Dinamani](http://dinamani.com) in இந்திய.
-
-<img
-   src="../escenic-theme/escenic-logo.svg"
-   style="border: none; box-shadow: none;"
-   alt="escenic"/>
 
 ---
 
@@ -187,7 +186,7 @@ Need for new characters that didn't exist
 
 ---
 
-## A whole lot of nonsense
+## A whole lot of nonsense ☠
 
 - Many made their own character sets
 - Incompatibility all around
@@ -195,6 +194,7 @@ Need for new characters that didn't exist
 ---
 
 ## Finally peace
+## ☮
 
 ---
 
@@ -210,10 +210,9 @@ Need for new characters that didn't exist
 
 ---
 
-## Unicode is a character set
+Unicode is a
 
-A table with entries for all letters and character in the entire
-world.
+## Character set
 
 ---
 
@@ -262,7 +261,7 @@ For instance "~" (tilde)?
 
 ---
 
-## Java
+## Java 🐘
 
     String s = "🐘";
     int unicodeCodepoint =  Character.codePointAt(s, 0);
@@ -348,18 +347,40 @@ $ man iconv
 
 ---
 
-## UTF-8
-
-Unicode characters can use up to **4** bytes:
+## UTF-8 - 1 byte
 
 ```
-11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
-         1110xxxx 10xxxxxx 10xxxxxx
-                  110xxxxx 10xxxxxx
-                           0xxxxxxx
+                                   0xxxxxxx
 ```
 
-The digits are the header fields, the `x`s can be used for actual values
+---
+
+## UTF-8 - 2 bytes
+
+```
+                          110xxxxx 10xxxxxx
+                                   0xxxxxxx
+```
+---
+
+## UTF-8 - 3 bytes
+
+```
+                 1110xxxx 10xxxxxx 10xxxxxx
+                          110xxxxx 10xxxxxx
+                                   0xxxxxxx
+```
+
+---
+
+## UTF-8 - 4 bytes
+
+```
+       11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+                1110xxxx 10xxxxxx 10xxxxxx
+                         110xxxxx 10xxxxxx
+                                  0xxxxxxx
+```
 
 ---
 
@@ -412,7 +433,7 @@ is Unicode, with UTF-16 encoding.
   represented using Unicode escape notation:
 
 ```
-$ native2ascii -encoding utf8 resources.utf8 resources.properties
+$ native2ascii -encoding utf8 ghost-text-utf8 ghost-text.properties
 ```
 
 ---
@@ -420,10 +441,10 @@ $ native2ascii -encoding utf8 resources.utf8 resources.properties
 ## A ghostly example 👻
 
 ```
-$ cat resources.utf8
+$ cat ghost-text-utf8
 ghost_title=This is a 👻
 
-$ native2ascii -encoding utf8 resources.utf8
+$ native2ascii -encoding utf8 ghost-text-utf8
 ghost_title=This is a \ud83d\udc7b
 ```
 
@@ -456,7 +477,19 @@ assertEquals("ghost is just one chracter", 1, ghost.length());
 
 ---
 
-## If in doubt
+## Can you trust String#length()?
+
+```
+final String ghost = "👻";
+assertEquals("ghost is just one chracter", 1, ghost.length());
+```
+
+```
+→ 2
+```
+---
+
+## A safer bet
 
 Use
 [String#codePointCount(from, to)](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#codePointCount(int,%20int)):
@@ -469,6 +502,17 @@ assertEquals(
   ghost.codePointCount(0, ghost.length())
 );
 ```
+
+---
+
+## Text rendering control
+
+Number of visible graphemes on the screen:
+
+```
+BreakIterator.getCharacterInstance();
+```
+
 
 ---
 
@@ -569,10 +613,17 @@ with which encoding the contents is serialised:
 
 ---
 
+## MIME is to blame
+
 - MIME, [RFC 2045, May 1996](https://tools.ietf.org/html/rfc2045),
   used the term "charset"
 - HTTP 1.0, [RFC 1945, May 1996](http://tools.ietf.org/html/rfc1945),
   included MIME.
+
+---
+
+## HTTP
+
 - HTTP wanted to keep the terminology consistent, but acknowledges:
 
 > Note: This use of the term "character set" is more commonly referred
@@ -618,6 +669,10 @@ important that we take care of things on our side:
 ### JDBC connection string
 
     jdbc:jtds:sybase://db01:4100/mydb?characterEncoding=utf8
+    jdbc:mysql://db01:3306/mydb?autoReconnect=true&amp;\
+                                useUnicode=true&amp;\
+                                characterEncoding=UTF-8&amp;\
+                                characterSetResults=UTF-8
 
 ---
 
@@ -727,7 +782,7 @@ mysql> create database mydb
 
 ## MySQL utf8
 
-The MySQL `utf8` table/column encoding is not real UTF-8
+The MySQL `utf8` table & column encoding is not real UTF-8
 
 ---
 
@@ -737,7 +792,7 @@ Only 1-3 byte characters supported.
 
 ---
 
-## MySQL utf8
+## MySQL utf8mb4
 
 For full UTF-8 support, use the `utf8mb4` type instead.
 
@@ -866,7 +921,7 @@ Default collation in MySQL is "Swedish Latin 1".
 
 ## Summary
 
-- Character set and encoding are not the same (at least since 1992)
+- Character set and encoding are not the same
 - Unicode and UTF-8 are not the same
 - Use [UTF-8](http://no.wikipedia.org/wiki/UTF-8) encoding everywhere:
   file encoding, data encoding, JDBC connection strings, UNIX locales.
@@ -885,21 +940,21 @@ Default collation in MySQL is "Swedish Latin 1".
 
 -
   [UTF-8 and Unicode FAQ for Unix/Linux](http://www.cl.cam.ac.uk/~mgk25/unicode.html):
-  very thorough and good introduction to character sets and encoding.
 
-- [Unicode Character Table](http://unicode-table.com/en/): lets you
-  explore the entire Unicode table visually
+- Explore Unicode visually using
+[Unicode Character Table](http://unicode-table.com/en/)
 
-- [UTF-8](http://en.wikipedia.org/wiki/UTF-8) on Wikipeidia
+- Full
+  [source code for my code examples](https://github.com/skybert/skybert-net/blob/master/src/talks/charset-and-encoding/charset-talk-code)
+  can be found on Github
 
 - [Java Rough Guide To Character Encoding](http://illegalargumentexception.blogspot.no/2009/05/java-rough-guide-to-character-encoding.html)
 
 -
 [Unicode in Windows' CLI](http://illegalargumentexception.blogspot.no/2009/04/i18n-unicode-at-windows-command-prompt.html#charsets_javaconsole)
 
-- Full
-  [source code for my code examples](https://github.com/skybert/skybert-net/blob/master/src/talks/charset-and-encoding/charset-talk-code)
-  can be found on Github
+- [UTF-8](http://en.wikipedia.org/wiki/UTF-8) on Wikipeidia
+
 
 ---
 
@@ -907,13 +962,66 @@ Default collation in MySQL is "Swedish Latin 1".
 
 ---
 
-# Fine
+# U+0004
 
-> aka U+0004
+> END OF TRANSMISSION
 
 🐦 [\@torsteinkrausew](https://twitter.com/torsteinkrausew)
 
-🌐 [http://skybert.net](http://skybert.net)
+🌐 [http://skybert.net/talks](http://skybert.net/talks)
 
 ✏ <a>torstein@escenic.com</a>
 
+
+
+<!--
+
+start with diner story?
+
+def:
+glyph
+font
+character set
+character enoding
+code point
+code unit
+
+goals:
+char set & encoding are different
+diff between rendering and encoding errors
+use utf-8 everywhere
+
+resource bundles
+really latin1?
+
+bom
+with and without, picture instead of .txt files?
+
+mime/http/html charset
+no wonder people are confused
+
+quiz?
+have it in?
+ask it up front?
+
+example of locale setting
+
+jira encoding bug
+second slide with zoomed overlay
+
+wat phonetic
+
+AIDA
+Attention Interest Desire Action
+
+summary
+too much text
+drawings? pictures?
+
+tydelig bolker
+gir pusterom, nå er vi ferdige med ...
+
+resource bundles
+escapes, before compiler
+
+-->
