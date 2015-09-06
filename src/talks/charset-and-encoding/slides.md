@@ -174,7 +174,7 @@ Crash course in
   <tr>
     <th>Character</th>
     <th>Decimal</th>
-    <th>Decimal</th>
+    <th>Binary</th>
   </tr>
   <tr>
     <td>A</td><td>65</td><td>1 0 0 0 0 0 1</td>
