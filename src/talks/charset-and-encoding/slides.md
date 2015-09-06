@@ -395,7 +395,7 @@ $ man iconv
 
 ---
 
-### So what's UTF-8?
+### So what's UTF-8 then?
 
 ---
 
@@ -538,7 +538,7 @@ ghost_title=This is a \ud83d\udc7b
 
 ---
 
-Before you <h2>fall in love</h2>
+Before you <h2>fall in love💘</h2>
 with the Unicode escapes
 
 ---
@@ -547,7 +547,7 @@ with the Unicode escapes
 
 - The escapes are translated before the code is compiled
 - Harmless comments become hidden backdoors
-- Or just break the build
+- Or just break the build 💣
 
 
 ---
@@ -868,7 +868,7 @@ encoded as [UTF-8](http://no.wikipedia.org/wiki/UTF-8).
 
 ---
 
-## User → .. → DB
+## User → .. → DB 💣
 
 <a href="different-encodings.svg">
 <img src="different-encodings.svg" "different encodings"/>
