@@ -9,24 +9,9 @@ by
 
 ---
 
-## whois
+## Everyone has probleGrÃ¼Ÿ
 
-### ⛹
-
-System architect at [Escenic](http://escenic.com) making a GREAT Content
-Management System for the media industry
-
-<div style="padding: 1em;">
-<img
-   src="../escenic-theme/escenic-logo.svg"
-   style="border: none; box-shadow: none;"
-   alt="escenic"/>
-</div>
-
-Customers all over the world: From the
-[Daily Mirror](http://dailymirror.co.uk) in the UK,
-[Die Welt](http://welt.de) in Germany to
-[Dinamani](http://dinamani.com) in இந்திய.
+<img src="jira-encoding-tweet.png" alt="jira encoding tweet"/>
 
 ---
 
@@ -45,9 +30,24 @@ always haunt me.
 
 ---
 
-## Everyone has probleGrÃ¼Ÿ
+## whois
 
-<img src="jira-encoding-tweet.png" alt="jira encoding tweet"/>
+### ⛹
+
+System architect at [Escenic](http://escenic.com) making a GREAT Content
+Management System for the media industry
+
+<div style="padding: 1em;">
+<img
+   src="../escenic-theme/escenic-logo.svg"
+   style="border: none; box-shadow: none;"
+   alt="escenic"/>
+</div>
+
+Customers all over the world: From the
+[Daily Mirror](http://dailymirror.co.uk) in the UK,
+[Die Welt](http://welt.de) in Germany to
+[Dinamani](http://dinamani.com) in இந்திய.
 
 ---
 
@@ -73,19 +73,81 @@ Or just
 
 > Know
 
-- What a character set is
-- What an encoding is
-- Differentiate encoding problems from display problems
-- Debunk 2 myths
+<ul>
+  <li class="fragment">
+    What a *character set* is and what a *character encoding* is
+  </li>
+  <li class="fragment">
+    Differentiate encoding problems from display problems
+  </li>
+  <li class="fragment">
+    How to use UTF-8 everywhere
+  </li>
+</ul>
 
 ---
 
-You'll get a <h1>Quiz</h1> at the end, so pay attention!
+But first, a wee <h1>Quiz</h1> to get your brain cells going
 
 ---
 
-## Crash course
-### Character sets and encodings
+## Unicode is ....
+
+1. An encoding
+2. A character set
+
+---
+
+## UTF-8 is ....
+
+1. An encoding
+2. A character set
+
+---
+
+## Can you store
+
+>  "Alpha and Ω" in a database with ISO 8859-1 encoding?
+
+1. Yes
+2. No
+
+---
+
+## If you see big squares
+
+> instead of letters, it's because ...
+
+1. Encoding problem
+2. Decoding problem
+2. Font lacks a letter
+
+---
+
+## Java source file uses Windows 1252 encoding
+
+> will æ, ø and å be written correctly to the database?
+
+1. Yes
+2. No
+3. It depends
+
+---
+
+## What has happened here?
+
+> KjÃ¸rer
+
+1. You're using a wrong font
+2. Encoding/decoding mismatch
+
+---
+
+# Part I
+
+Crash course in
+
+### Character sets & encodings
 
 ---
 
@@ -148,7 +210,7 @@ You'll get a <h1>Quiz</h1> at the end, so pay attention!
 
 ## Then came the Europeans
 
-<img src="columbus.jpg" alt="Columbus"/>
+<img src="columbus.jpg" alt="Columbus" style="height: 400px"/>
 
 ---
 
@@ -156,7 +218,7 @@ Need for new characters that didn't exist
 
 ---
 
-## The hostel was full
+## No room in the inn
 
 - All the 127 rooms were taken
 - ...so they added another zero
@@ -213,6 +275,15 @@ Need for new characters that didn't exist
 Unicode is a
 
 ## Character set
+
+---
+
+## Character set
+
+> A defined list of characters recognized by the computer hardware and
+> software. Each character is represented by a number.
+
+[webopedia.com](http://www.webopedia.com/TERM/C/character_set.html)
 
 ---
 
@@ -324,10 +395,26 @@ $ man iconv
 
 ---
 
+### So what's UTF-8?
+
+---
+
+UTF-8 is a character <h2>encoding</h2>
+
+---
+
+## Character encoding
+
+> ... a character encoding is used to represent a repertoire of
+> characters by some kind of an encoding system
+
+[wikipedia.org](https://en.wikipedia.org/wiki/Character_encoding)
+
+---
+
 ## UTF-8
 
 <ul>
-  <li>Has conquered the world</li>
   <li class="fragment">ASCII compatible</li>
   <li class="fragment">
     Invented by Ken Thompson in 1992 while he was having dinner in a restaurant
@@ -344,6 +431,7 @@ $ man iconv
 1. All ASCII strings are valid UTF-8
 2. An ASCII string encoded in UTF-8 has **0** as the first bit.
 3. Easy to navigate and find current, previous and next character.
+4. Never eight 0s in a row
 
 ---
 
@@ -396,15 +484,15 @@ in the whole wide world.
 
 ## Why is this important?
 
-Consider this:
-
 - UTF-8 : ASCII compatible
 - UTF-16 : **not** ASCII compatible (Windows & Java)
 - UTF-32 : **not** ASCII compatible
 
 ---
 
-## Character set & encoding in Java, HTML, HTTP & friends
+# Part II
+### Character encoding in Java
+HTML, HTTP & friends
 
 ---
 
@@ -412,7 +500,7 @@ Consider this:
 
 Java's
 [internal representation of strings ](https://docs.oracle.com/javase/7/docs/technotes/guides/intl/overview.html)
-is Unicode, with UTF-16 encoding.
+is UTF-16.
 
     final String name = getNameFromFacebook(id);
 
@@ -450,10 +538,23 @@ ghost_title=This is a \ud83d\udc7b
 
 ---
 
+Before you <h2>fall in love</h2>
+with the Unicode escapes
+
+---
+
+## cons
+
+- The escapes are translated before the code is compiled
+- Harmless comments become hidden backdoors
+- Or just break the build
+
+
+---
+
 ## Resource bundles
 
-- It is still possible to use UTF-8 in your `.properties` files if
-  you do:
+- Possible to use UTF-8 in your `.properties` files if you do:
 
 ```
 public String getPropertyFromUTF8File(final String pKey)
@@ -471,8 +572,11 @@ public String getPropertyFromUTF8File(final String pKey)
 ## Can you trust String#length()?
 
 ```
-final String ghost = "👻";
-assertEquals("ghost is just one chracter", 1, ghost.length());
+@Test
+public void ghostIsOneCodeUnit() {
+  final String ghost = "👻";
+  assertEquals("ghost is just one character", 1, ghost.length());
+}
 ```
 
 ---
@@ -480,12 +584,18 @@ assertEquals("ghost is just one chracter", 1, ghost.length());
 ## Can you trust String#length()?
 
 ```
-final String ghost = "👻";
-assertEquals("ghost is just one chracter", 1, ghost.length());
+@Test
+public void ghostIsOneCodeUnit() {
+  final String ghost = "👻";
+  assertEquals("ghost is just one character", 1, ghost.length());
+}
 ```
 
 ```
-→ 2
+Results :
+
+Failed tests: ghostIsOneCodeUnit(GhostLengthFailingTest):
+  ghost is just one character expected:<1> but was:<4>
 ```
 ---
 
@@ -497,7 +607,7 @@ Use
 ```
 final String ghost = "👻";
 assertEquals(
-  "ghost is just one chracter",
+  "ghost is just one character",
   1,
   ghost.codePointCount(0, ghost.length())
 );
@@ -507,7 +617,7 @@ assertEquals(
 
 ## Text rendering control
 
-Number of visible graphemes on the screen:
+Number of visible glyphs on the screen:
 
 ```
 BreakIterator.getCharacterInstance();
@@ -544,7 +654,7 @@ A ♥ looks so much better than `\u2665`
 
 ---
 
-## XML
+## XML & JSON
 
     <?xml version="1.0" encoding="utf-8"?>
 
@@ -553,6 +663,9 @@ dictates that the standard encoding to be
 [UTF-8](http://en.wikipedia.org/wiki/UTF-8)
 
 - All XML parsers must as a minimum support UTF-8
+
+- JSON [must be encoded](https://www.ietf.org/rfc/rfc4627.txt) in a
+  Unicode encoding, UTF-8 is default
 
 ---
 
@@ -651,12 +764,6 @@ important that we take care of things on our side:
 
 ---
 
-## Runtime environment
-
-> more technical
-
----
-
 ### JVM parameters
 
 ```
@@ -730,6 +837,12 @@ It's irrelevant that system X stores its data internally as
 [Windows 1252](http://en.wikipedia.org/wiki/Windows-1252) as long as
 the web services through which it exposes these data returns XML
 encoded as [UTF-8](http://no.wikipedia.org/wiki/UTF-8).
+
+---
+
+# Part III
+
+<h3> The database</h3>
 
 ---
 
@@ -840,80 +953,24 @@ Default collation in MySQL is "Swedish Latin 1".
 
 ---
 
-## Quiz
+## Summary
 
----
-
-## Unicode is ....
-
-1. An encoding
-2. A character set
-
----
-
-## UTF-8 is ....
-
-1. An encoding
-2. A character set
-
----
-
-## Can you store
-
->  "Alpha and Ω" in a database with ISO 8859-1 encoding?
-
-1. Yes
-2. No
-
----
-
-## If you see big squares
-
-> instead of letters, it's because ...
-
-1. The data are saved using one encoding and are displayed with another
-2. The character set used when saving the data didn't have support for
-   the letter(s)
-2. The font you're using is missing the letter(s)
-
----
-
-## If my Java source file uses Windows 1252 encoding
-
-> will æ, ø and å be written correctly to the database?
-
-1. Yes
-2. No
-3. It depends
-
----
-
-## What has happened here?
-
-> KjÃ¸rer
-
-1. You're missing a font to show the letter after "Kj".
-2. Mismatch between the encoding used when saving the data and reading
-   them.
+Use UTF-8
 
 ---
 
 ## Summary
 
 - If you're seeing **squares** it's because the font your program is
-  using doesn't have support for the letter (but _everything is ok
-  with the system_).
+  using doesn't have support for the letter.
 
-- If you're seeing complete nonsense like **KjÃ¸rer** it's because
-  something has gone wrong with the encoding one or more places in the
-  system you're using.
+- Nonsense like **KjÃ¸rer** is because of encoding problems.
 
 ---
 
 ## Summary
 
-- Which character sets and encoding third party systems are using
-  internally is irrelevant.
+- Character encoding in third party systems are using is irrelevant.
 
 - What matters is how the data is _transported_ between the systems.
 
@@ -1020,6 +1077,11 @@ drawings? pictures?
 
 tydelig bolker
 gir pusterom, nå er vi ferdige med ...
+
+1. history
+2. java & friends
+3. database
+4. what to do when you get back to your computer
 
 resource bundles
 escapes, before compiler
