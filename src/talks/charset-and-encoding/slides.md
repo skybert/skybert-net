@@ -592,8 +592,6 @@ public void ghostIsOneCodeUnit() {
 ```
 
 ```
-Results :
-
 Failed tests: ghostIsOneCodeUnit(GhostLengthFailingTest):
   ghost is just one character expected:<1> but was:<4>
 ```
@@ -605,12 +603,15 @@ Use
 [String#codePointCount(from, to)](http://docs.oracle.com/javase/7/docs/api/java/lang/String.html#codePointCount(int,%20int)):
 
 ```
-final String ghost = "👻";
-assertEquals(
-  "ghost is just one character",
-  1,
-  ghost.codePointCount(0, ghost.length())
-);
+@Test
+public void ghostIsOneCodePoint() {
+  final String ghost = "👻";
+  assertEquals(
+    "ghost is just one character",
+    1,
+    ghost.codePointCount(0, ghost.length())
+  );
+}
 ```
 
 ---
