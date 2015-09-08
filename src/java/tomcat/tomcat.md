@@ -11,6 +11,26 @@ style="float: right;"
 Below are some small notes I've jotted down when working
 with Tomcat.
 
+## Faster startup
+
+In `conf/catalina.properties`:
+
+```
+# don't need servlet 3 scanning
+org.apache.catalina.startup.ContextConfig.jarsToSkip=*.jar
+
+# don't need TLD scanning
+org.apache.catalina.startup.TldConfig.jarsToSkip=*.jar
+```
+
+If you don't need websockets, you can safely remove the associated
+JARs from Tomcat:
+
+```
+$ rm lib/websocket-api.jar
+$ rm lib/tomcat-websocket.jar
+```
+
 ## Performance tuning
 ### Calling Context#getAttribute()
 
