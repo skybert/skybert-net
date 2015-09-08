@@ -45,8 +45,8 @@ Content Management System for the media industry
 
 Customers all over the world: From the
 [Daily Mirror](http://dailymirror.co.uk) in the UK,
-[Die Welt](http://welt.de) in Germany to
-[Dinamani](http://dinamani.com) in இந்திய.
+[Thai PBS ](http://welt.de) in ประเทศไทย to
+[Dinamani](http://dinamani.com) in இந்தியா
 
 ---
 
