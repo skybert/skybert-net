@@ -493,7 +493,7 @@ UTF-8 is a character <h2>encoding</h2>
 - Unicode is a table with numeric values and names for all characters
 in the whole wide world.
 
-- UTF-8 is of several ways to encode a Unicode numeric value to
+- UTF-8 is one of several ways to encode a Unicode numeric value to
   bytes.
 
 ---
@@ -732,7 +732,7 @@ An example of a [UTF-8 encoded file with BOM](hello-with-bom.txt)
 
 When we surf on [facebook.com](http://facebook.com) or write Java code
 that consume REST, RPC over HTTP and SOAP services, the server says
-with which encoding the contents is serialised:
+which encoding the contents are serialised with:
 
     $ GET http://vg.no
     ..
@@ -820,7 +820,7 @@ $ export LANG=en_GB.utf8
 ## Myth #1
 
 > The encoding of the Java file decides how the data that are written
-> by this Java component is written to the database.
+> by this Java component are written to the database.
 
 ---
 
