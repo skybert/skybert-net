@@ -4,7 +4,9 @@
 > An adventure into the world of character sets and encodings
 
 by
-<a href="torstein.k.johansen AT gmail DOT com">Torstein Krause Johansen</a>
+<a href="torstein.k.johansen AT gmail DOT com">
+  Torstein Krause Johansen
+</a>
 
 ---
 
@@ -522,8 +524,6 @@ is UTF-16.
 
 ## Specify the encoding whenever you can
 
-
-
 ---
 
 ## Resource bundles
@@ -895,7 +895,7 @@ encoded as [UTF-8](http://no.wikipedia.org/wiki/UTF-8).
 ## User → .. → DB 💣
 
 <a href="different-encodings.svg">
-<img src="different-encodings.svg" "different encodings"/>
+  <img src="different-encodings.svg" "different encodings"/>
 </a>
 
 
@@ -1051,21 +1051,14 @@ So to sum ut, let's take that <h1>Quiz</h1> again
 
 ## Further exploration into the world of Unicode
 
--
-  [UTF-8 and Unicode FAQ for Unix/Linux](http://www.cl.cam.ac.uk/~mgk25/unicode.html):
-
+- [UTF-8 and Unicode FAQ for Unix/Linux](http://www.cl.cam.ac.uk/~mgk25/unicode.html):
 - Explore Unicode visually using
 [Unicode Character Table](http://unicode-table.com/en/)
-
 - Full
   [source code for my code examples](https://github.com/skybert/skybert-net/blob/master/src/talks/charset-and-encoding/charset-talk-code)
   can be found on Github
-
 - [Java Rough Guide To Character Encoding](http://illegalargumentexception.blogspot.no/2009/05/java-rough-guide-to-character-encoding.html)
-
--
-[Unicode in Windows' CLI](http://illegalargumentexception.blogspot.no/2009/04/i18n-unicode-at-windows-command-prompt.html#charsets_javaconsole)
-
+- [Unicode in Windows' CLI](http://illegalargumentexception.blogspot.no/2009/04/i18n-unicode-at-windows-command-prompt.html#charsets_javaconsole)
 - [UTF-8](http://en.wikipedia.org/wiki/UTF-8) on Wikipeidia
 
 
