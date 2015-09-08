@@ -23,7 +23,7 @@ always haunt me.
 
 ---
 
-## Even Jira has probleGrÃ¼Ÿ
+## Even Jira
 
 <img src="jira-encoding-tweet.png" alt="jira encoding tweet"/>
 
@@ -106,7 +106,7 @@ But first, a wee <h1>Quiz</h1> to get your brain cells going
 
 ## Can you store
 
->  "Alpha and Ω" in a database with ISO 8859-1 encoding?
+>  "Alpha and Ω" in a database with ISO 8859-1?
 
 1. Yes
 2. No
@@ -118,8 +118,8 @@ But first, a wee <h1>Quiz</h1> to get your brain cells going
 > instead of letters, it's because ...
 
 1. Encoding problem
+2. Missing font
 2. Decoding problem
-2. Font lacks a letter
 
 ---
 
@@ -127,17 +127,17 @@ But first, a wee <h1>Quiz</h1> to get your brain cells going
 
 > will æ, ø and å be written correctly?
 
-1. Yes
-2. No
-3. It depends
+1. It depends
+2. Yes
+3. No
 
 ---
 
-## What has happened here?
+## What has happened?
 
 > KjÃ¸rer
 
-1. You're using a wrong font
+1. Wrong font
 2. Encoding/decoding mismatch
 
 ---
@@ -234,6 +234,8 @@ Need for new characters that didn't exist
 
 ---
 
+Endless <h2>possibilities</h2> with 8 bits:
+
 - Code pages
 - ISO-8859-*
 
@@ -265,9 +267,9 @@ Need for new characters that didn't exist
 
 ## Unicode
 
-- Caters for all characters and letters in all dead and spoken
-  languages (has today more than 110 000 characters)
-- And more room to spare if other languages decide to drop by
+- Caters for all characters and letters in all dead and spoken languages
+- Has today more than 110 000 characters
+- And plenty of room to spare
 
 ---
 
@@ -674,9 +676,7 @@ A ♥ looks so much better than `\u2665`
 - The [XML specification](http://www.w3.org/TR/xml/#charencoding)
 dictates that the standard encoding to be
 [UTF-8](http://en.wikipedia.org/wiki/UTF-8)
-
 - All XML parsers must as a minimum support UTF-8
-
 - JSON [must be encoded](https://www.ietf.org/rfc/rfc4627.txt) in a
   Unicode encoding, UTF-8 is default
 
@@ -685,7 +685,6 @@ dictates that the standard encoding to be
 ## Encoding in ANY file?
 
 - Many formats support specyfing the encoding.
-
 - Or your editor can specify the encoding when it writes the file to
 disk, burning a mark in it using a so called BOM.
 
@@ -701,9 +700,7 @@ is something that we can use if cannot write the encoding into
 the file's contents.
 
 - For instance when we when write a plain text file
-
 - An example of a [UTF-8 encoded file without BOM](hello-without-bom.txt)
-
 - An example of a [UTF-8 encoded file with BOM](hello-with-bom.txt)
 
 ---
