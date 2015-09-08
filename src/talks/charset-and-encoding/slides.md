@@ -1,17 +1,10 @@
 
-# Squares and question marks
-𝣖 & �
+# Squares & � marks
 
 > An adventure into the world of character sets and encodings
 
 by
 <a href="torstein.k.johansen AT gmail DOT com">Torstein Krause Johansen</a>
-
----
-
-## Everyone has probleGrÃ¼Ÿ
-
-<img src="jira-encoding-tweet.png" alt="jira encoding tweet"/>
 
 ---
 
@@ -30,12 +23,18 @@ always haunt me.
 
 ---
 
+## Even Jira has probleGrÃ¼Ÿ
+
+<img src="jira-encoding-tweet.png" alt="jira encoding tweet"/>
+
+---
+
 ## whois
 
 ### ⛹
 
-System architect at [Escenic](http://escenic.com) making a GREAT Content
-Management System for the media industry
+Keyboard maniac at [Escenic](http://escenic.com) making a GREAT
+Content Management System for the media industry
 
 <div style="padding: 1em;">
 <img
@@ -124,9 +123,9 @@ But first, a wee <h1>Quiz</h1> to get your brain cells going
 
 ---
 
-## Java source file uses Windows 1252 encoding
+## My.java has Windows 1252 encoding
 
-> will æ, ø and å be written correctly to the database?
+> will æ, ø and å be written correctly?
 
 1. Yes
 2. No
@@ -417,12 +416,25 @@ UTF-8 is a character <h2>encoding</h2>
 <ul>
   <li class="fragment">ASCII compatible</li>
   <li class="fragment">
-    Invented by Ken Thompson in 1992 while he was having dinner in a restaurant
-  </li>
-  <li class="fragment">
     A standard so simple you can explain it on a napkin
   </li>
 </ul>
+
+---
+
+## Who is this?
+
+<img src="ken-and-ritchie.jpg" alt="ken and ritchie"/>
+
+[linuxbeard.com](http://linuxbeard.com/post/6855753580/ken-thompson-and-dennis-ritchie-were-researchers)
+
+---
+
+## Created over a meal
+
+- Ken Thompson & Rob Pike went for dinner, September 1992.
+- UTF-8 was invented by Ken Thompson
+- Wrote it down on a placemat
 
 ---
 
