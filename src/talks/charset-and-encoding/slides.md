@@ -5,7 +5,7 @@
 
 by
 <a href="torstein.k.johansen AT gmail DOT com">
-  Torstein Krause Johansen
+  torstein@escenic.com
 </a>
 
 ---
@@ -364,23 +364,10 @@ http://en.wikipedia.org/wiki/~
 
 ## Emacs
 
-```
-             position: 25 of 26 (92%), column: 24
-            character: ~ (displayed as ~) (codepoint 126, #o176, #x7e)
-    preferred charset: ascii (ASCII (ISO646 IRV))
-code point in charset: 0x7E
-               script: latin
-               syntax: _    which means: symbol
-             category: .:Base, a:ASCII, l:Latin
-             to input: type "C-x 8 RET 7e" or "C-x 8 RET TILDE"
-          buffer code: #x7E
-            file code: #x7E (encoded by coding system utf-8-unix)
-              display: by this font (glyph code)
-    xft:-unknown-DejaVu Sans Mono-normal-normal-normal-*-22-*-*-*-m-0-iso10646-1 (#x61)
-
-Character code properties: customize what to show
-  name: TILDE
-```
+<img
+  src="emacs-describe-char.png"
+  alt="emacs describe char"
+/>
 
 ---
 
@@ -672,9 +659,8 @@ A ♥ looks so much better than `\u2665`
 
     <?xml version="1.0" encoding="utf-8"?>
 
-- The [XML specification](http://www.w3.org/TR/xml/#charencoding)
-dictates that the standard encoding to be
-[UTF-8](http://en.wikipedia.org/wiki/UTF-8)
+- The [XML specification](http://www.w3.org/TR/xml/#charencoding) says
+the standard encoding is [UTF-8](http://en.wikipedia.org/wiki/UTF-8)
 - All XML parsers must as a minimum support UTF-8
 - JSON [must be encoded](https://www.ietf.org/rfc/rfc4627.txt) in a
   Unicode encoding, UTF-8 is default
@@ -702,19 +688,18 @@ the file's contents.
 
 ## BOM
 
+<img src="hello-without-bom.png" alt="without bom"/>
+
 An example of a
 [UTF-8 encoded file without BOM](hello-without-bom.txt)
-
-
-<img src="hello-without-bom.png" alt="without bom"/>
 
 ---
 
 ## BOM
 
-An example of a [UTF-8 encoded file with BOM](hello-with-bom.txt)
-
 <img src="hello-with-bom.png" alt="without bom"/>
+
+An example of a [UTF-8 encoded file with BOM](hello-with-bom.txt)
 
 ---
 
@@ -857,7 +842,7 @@ new OutputStreamWriter(out, "UTF-8");
 ## Myth #2 busted
 
 It's irrelevant that system X stores its data internally as
-[Windows 1252](http://en.wikipedia.org/wiki/Windows-1252) as long as
+[Windows 1252](http://en.wikipedia.org/wiki/Windows-1252) if
 the web services through which it exposes these data returns XML
 encoded as [UTF-8](http://no.wikipedia.org/wiki/UTF-8).
 

@@ -321,8 +321,11 @@ kbd.escenic {
   padding: 0.1em 0.3em;
 }
 
-
 span.correct {
     font-weight: bolder;
     color: green;
+}
+
+li {
+  text-align: left;
 }
