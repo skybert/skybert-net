@@ -684,9 +684,8 @@ dictates that the standard encoding to be
 
 ## Encoding in ANY file?
 
-- Many formats support specyfing the encoding.
-- Or your editor can specify the encoding when it writes the file to
-disk, burning a mark in it using a so called BOM.
+Your editor can specify the encoding when it writes the file to disk,
+burning a mark in it using a so called BOM.
 
 ---
 
@@ -696,12 +695,27 @@ disk, burning a mark in it using a so called BOM.
 
 ## BOM
 
-is something that we can use if cannot write the encoding into
+- Is something that we can use if cannot write the encoding into
 the file's contents.
+- For instance when we when write a plain text file.
 
-- For instance when we when write a plain text file
-- An example of a [UTF-8 encoded file without BOM](hello-without-bom.txt)
-- An example of a [UTF-8 encoded file with BOM](hello-with-bom.txt)
+---
+
+## BOM
+
+An example of a
+[UTF-8 encoded file without BOM](hello-without-bom.txt)
+
+
+<img src="hello-without-bom.png" alt="without bom"/>
+
+---
+
+## BOM
+
+An example of a [UTF-8 encoded file with BOM](hello-with-bom.txt)
+
+<img src="hello-with-bom.png" alt="without bom"/>
 
 ---
 
