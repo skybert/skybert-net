@@ -985,35 +985,59 @@ Default collation in MySQL is "Swedish Latin 1".
 
 ---
 
-## Summary
-
-Use UTF-8
+So to sum ut, let's take that <h1>Quiz</h1> again
 
 ---
 
-## Summary
+## Unicode is ....
 
-- If you're seeing **squares** it's because the font your program is
-  using doesn't have support for the letter.
-
-- Nonsense like **KjÃ¸rer** is because of encoding problems.
+1. An encoding
+2. A character set <span class="fragment">✓</span>
 
 ---
 
-## Summary
+## UTF-8 is ....
 
-- Character encoding in third party systems are using is irrelevant.
-
-- What matters is how the data is _transported_ between the systems.
+1. An encoding <span class="fragment">✓</span>
+2. A character set
 
 ---
 
-## Summary
+## Can you store
 
-- Character set and encoding are not the same
-- Unicode and UTF-8 are not the same
-- Use [UTF-8](http://no.wikipedia.org/wiki/UTF-8) encoding everywhere:
-  file encoding, data encoding, JDBC connection strings, UNIX locales.
+>  "Alpha and Ω" in a database with ISO 8859-1?
+
+1. Yes
+2. No <span class="fragment">✓</span>
+
+---
+
+## If you see big squares
+
+> instead of letters, it's because ...
+
+1. Encoding problem
+2. Missing font <span class="fragment">✓</span>
+2. Decoding problem
+
+---
+
+## My.java has Windows 1252 encoding
+
+> will æ, ø and å be written correctly?
+
+1. It depends <span class="fragment">✓</span>
+2. Yes
+3. No
+
+---
+
+## What has happened?
+
+> KjÃ¸rer
+
+1. Wrong font
+2. Encoding/decoding mismatch <span class="fragment">✓</span>
 
 ---
 
@@ -1021,7 +1045,7 @@ Use UTF-8
 
 > for the impatient
 
-- Use UTF-8 everywhere
+- Use UTF-8 everywhere <span class="fragment">✓</span>
 
 ---
 

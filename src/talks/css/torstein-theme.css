@@ -320,3 +320,9 @@ kbd.escenic {
   linear-gradient(to bottom, #eee, #f9f9f9, #eee);
   padding: 0.1em 0.3em;
 }
+
+
+span.correct {
+    font-weight: bolder;
+    color: green;
+}
