@@ -530,7 +530,6 @@ is UTF-16.
 
 - Java resource bundles
   [must be encoded in ISO-8859-1](http://docs.oracle.com/javase/7/docs/api/java/util/PropertyResourceBundle.html).
-
 - Characters that don't fit into ISO-8859-1 must therefore be
   represented using Unicode escape notation:
 
@@ -685,7 +684,7 @@ dictates that the standard encoding to be
 ## Encoding in ANY file?
 
 Your editor can specify the encoding when it writes the file to disk,
-burning a mark in it using a so called BOM.
+burning a mark in it using a BOM.
 
 ---
 
@@ -1072,12 +1071,11 @@ So to sum ut, let's take that <h1>Quiz</h1> again
 
 > END OF TRANSMISSION
 
-🐦 [\@torsteinkrausew](https://twitter.com/torsteinkrausew)
-
 🌐 [http://skybert.net/talks](http://skybert.net/talks)
 
 ✏ <a>torstein@escenic.com</a>
 
+🐦 [\@torsteinkrausew](https://twitter.com/torsteinkrausew)
 
 
 <!--
