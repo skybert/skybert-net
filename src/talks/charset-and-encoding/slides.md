@@ -943,6 +943,14 @@ This will fix obscure errors like:
 
 ---
 
+## MySQL utf8mb4
+
+This will fix obscure errors like:
+
+<img src="jira-encoding-bug-with-overlay.png" alt="jira encoding"/>
+
+---
+
 ## When you thought you were done
 
 ---
