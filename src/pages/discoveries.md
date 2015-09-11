@@ -13,6 +13,24 @@ date: 2014-11-22
 
 My other recent-ish discoveries 💡:
 
+## 2015-09-11
+
+Discovered that the more I read about character sets and character
+encodings, the more I know that I don't know. Nevertheless, I've
+learned a **LOT** while preparing for my JavaScript talk: 
+
+<iframe src="https://player.vimeo.com/video/138873442" width="500"
+ height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
+ allowfullscreen>
+</iframe>
+<p>
+  <a href="https://vimeo.com/138873442">Squares and question marks: An
+ adventure into the world of character sets and encodings - Torstein
+ Krause Johansen</a> from <a
+ href="https://vimeo.com/javazone">JavaZone</a> on <a
+ href="https://vimeo.com">Vimeo</a>.
+</p>
+
 ## 2015-08-25
 
 MySQL's `utf8` encoding type on columns and tables isn't proper UTF-8,
