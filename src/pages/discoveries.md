@@ -17,7 +17,8 @@ My other recent-ish discoveries 💡:
 
 Discovered that the more I read about character sets and character
 encodings, the more I know that I don't know. Nevertheless, I've
-learned a **LOT** while preparing for my JavaScript talk: 
+learned a **LOT** while preparing for my
+[JavaZone](http://javazone.no) talk:
 
 <iframe src="https://player.vimeo.com/video/138873442" width="500"
  height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
