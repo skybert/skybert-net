@@ -24,13 +24,7 @@ learned a **LOT** while preparing for my
  height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
  allowfullscreen>
 </iframe>
-<p>
-  <a href="https://vimeo.com/138873442">Squares and question marks: An
- adventure into the world of character sets and encodings - Torstein
- Krause Johansen</a> from <a
- href="https://vimeo.com/javazone">JavaZone</a> on <a
- href="https://vimeo.com">Vimeo</a>.
-</p>
+
 
 ## 2015-08-25
 
