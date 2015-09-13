@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 {% block title %}
-    <h1>Welcome to {{ SITENAME }}</h1>
+    <h1>{{ SITENAME }}</h1>
 {% endblock %}
 
 {% block content %}
-     <div style="padding: 0.3em;" >
-       <img class="centered" src="/graphics/2015/rondane-banner.jpg" alt="rondane"/>
+     <div style="margin-top: 1.5em;" >
+       <img src="/graphics/2015/rondane-banner.jpg"
+            class="centered"
+            alt="rondane"/>
      </div>
-     <div style="text-align: center;">
-       I write about things I 💗 and things I 😠. Please use the
-       menu below or browse through <a href="/category">all my
+     <div style="margin-top: 1.5em; margin-bottom: 2em; text-align: center;"
+          >
+       I write about things I 💗 and things I 😠. Please use the menu
+       below or browse through <a href="/category">all my
        categories</a> or <a href="/tag">my tags</a>. Also, check out
-       my <a href="/pages/discoveries">my latest discoveries</a> 💡.  I
-       hope that you'll find something useful. –Skybert
+       my <a href="/pages/discoveries">my latest discoveries</a> 💡.
+       Enjoy! —Skybert
      </div>
 {% endblock %}

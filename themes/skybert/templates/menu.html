@@ -1,22 +1,19 @@
-      <hr/>
-      <ul style="display: inline;">
-        <li style="display: inline;">~ ⌂ <a href="{{SITEURL}}">/home</a> ~</li>
-        <li style="display: inline;">❗ <a href="{{SITEURL}}/talks">talks</a> ~</li>
+      <div id="menu">
+        <hr/>
+        ~ ⌂ <a href="{{SITEURL}}">/home</a> ~
+        ❗ <a href="{{SITEURL}}/talks">talks</a> ~
         {% for cat, art in categories %}
-        <li style="display: inline;">
           <a href="{{ SITEURL }}/category/{{ cat | replace(" ", "-") }}.html">
             {{ cat }}
           </a>
           ~
-        </li>
         {% endfor %}
         {% for page in pages %}
-          <li style="display: inline;">
             <a href="{{ SITEURL }}/{{ page.url }}">
               {{ page.title | lower }}
             </a>
             ~
-          </li>
         {% endfor %}
-      </ul>
+      </div>
+
 

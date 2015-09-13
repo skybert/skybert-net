@@ -57,15 +57,12 @@ Furthermore, I've got these settings:
 ```
 $ dpkg -l *xfs* | grep ^ii
 ii  x11-xfs-utils                        7.4+1                                X font server utilities
-
 $ locale -a
 C
 en_GB.utf8
 POSIX
-
 $ echo $LC_ALL
 en_GB.utf8
-
 $ echo $LANG
 en_GB.utf8
 ```

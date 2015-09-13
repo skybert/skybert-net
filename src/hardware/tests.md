@@ -1,5 +1,5 @@
 date:    2012-10-07
-category: hardware
+category: misc
 tags: hardware
 title: Hardware tests
 

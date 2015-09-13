@@ -3,6 +3,8 @@ date: 2015-09-11
 category: linux
 tags: linux, video, hdmi
 
+## Finding the TV 📺
+
 First off, I had to figure out which device my TV connected through my
 HDMI cable was identified as on my Debian Linux machine.
 
@@ -27,6 +29,8 @@ As you can see, there are two cards. `card 0` is the external HDMI
 connection to my TV. On that card, there are two devices, `device 3`
 and `device 7`. `card 1` is the internal device (HDA Intel PCH), which
 oddly enough isn't the first card listed.
+
+## Telling mplayer to play the video on the TV 🎥
 
 HDMI carries both video and sound, so after finding the correct ALSA
 card and device, I asked `mplayer` to channel both video and audio
