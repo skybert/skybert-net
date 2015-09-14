@@ -16,7 +16,7 @@ entities that have fields with many to one relationships.
 The remedy is to include those fields in the optional exclude
 parameter of the annotation:
 
-```
+```java
 @ToString(exclude = "tribe")
 @Entity
 public class Indian

@@ -59,7 +59,7 @@ web application descriptor:
 ## The javax.ws.rs.core.Application implementation, BookendsWS
 
 Remember to implement the `getClasses()` method:
-```
+```java
 @Override
 @SuppressWarnings("unchecked")
 public Set<Class<?>> getClasses() {
@@ -79,4 +79,4 @@ extra runtime libraries are necessary.
 
 JBoss will give you the same plugin and play experience, but if you
 really want to use Tomcat, just with the plug and play feature, TomEE
-will fit the bill perfectly. 
+will fit the bill perfectly.

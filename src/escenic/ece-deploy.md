@@ -8,14 +8,14 @@ height="396"
 frameborder="0">
 </iframe>
 
-The```ece-deploy``` command makes it easy to deploy a
-new EAR and, optionally, a DEB or RPM configuration package
-(in which case you'd also pass a```--conf```
-parameter):
+The```ece-deploy``` command makes it easy to deploy a new EAR and,
+optionally, a DEB or RPM configuration package (in which case you'd
+also pass a```--conf``` parameter):
 
-    $ ece-deploy \
---ear  http://my.builder.com/snow/releases/snow-trunk-rev5233-2012-10-04_1608.ear \
---update-publication-resources
+```
+$ ece-deploy \
+    --ear http://my.builder.com/snow/releases/snow-trunk-rev5233-2012-10-04_1608.ear \
+    --update-publication-resources
 [ece-deploy-0] Started @ Fri Dec 21 21:41:47 CST 2012
 [ece-deploy-0] This deployment has ID pres1-1356097307 and is logging
 [ece-deploy-0] to /var/log/escenic/ece-deploy.log
@@ -61,16 +61,15 @@ parameter):
 /var/lib/escenic/ece-deploy/pres1-1356097307/new/engine1.state.diff 8 changes
 /var/lib/escenic/ece-deploy/pres1-1356097307/new/ski/escenic/content-type.diff 21 changes
 [ece-deploy-73] Finished @ Fri Dec 21 21:43:00 CST 2012
-
-
-Rolling back to a previous deployment is also easy. Note that
-it's optional to also roll back the publication resources,
-hence you need to specify the
 ```
---update-publication-resources``` the switch if you also
+
+Rolling back to a previous deployment is also easy. Note that it's
+optional to also roll back the publication resources, hence you need
+to specify the `--update-publication-resources` the switch if you also
 want to roll back the publication resources:
 
-    $ ece-deploy --rollback pres1-1356015120 --update-publication-resources
+```
+$ ece-deploy --rollback pres1-1356015120 --update-publication-resources
 [ece-deploy-0] Started @ Fri Dec 21 21:39:48 CST 2012
 [ece-deploy-0] This deployment has ID pres1-1356097188 and is logging
 [ece-deploy-0] to /var/log/escenic/ece-deploy.log
@@ -126,16 +125,13 @@ want to roll back the publication resources:
 /var/lib/escenic/ece-deploy/pres1-1356097188/new/engine1.state.diff 2 changes
 /var/lib/escenic/ece-deploy/pres1-1356097188/new/ski/escenic/content-type.diff 21 changes
 [ece-deploy-67] Finished @ Fri Dec 21 21:40:55 CST 2012
+```
 
-
-
-There you go, deployment and rollback has never been
-easier. And this works regardless of this being a development
-VMware image, test, staging or production server. To get the
-```ece-deploy``` command, you can either <a
-href="http://github.com/vizrt/ece-scripts">head over to the
-ece-scripts module on Github</a> or you can install the
-```escenic-content-engine-scripts``` package using the
-APT repository at <a
-href="http://apt.vizrt.com">apt.vizrt.com</a>
+There you go, deployment and rollback has never been easier. And this
+works regardless of this being a development VMware image, test,
+staging or production server. To get the ```ece-deploy``` command, you
+can either <a href="http://github.com/escenic/ece-scripts">head over to
+the ece-scripts module on Github</a> or you can install the
+```escenic-content-engine-scripts``` package using the APT repository
+at <a href="http://apt.escenic.com">apt.vizrt.com</a>
 

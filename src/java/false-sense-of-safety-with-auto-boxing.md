@@ -3,7 +3,8 @@ category: java
 date: 2014-10-14
 
 ## Assigning null objects to primitives
-```
+
+```java
 public class FalseSafetyWithAutoBoxing {
   private static class Car {
     public Car(Double price) {
