@@ -14,33 +14,37 @@ hints useful :-)
 
 ## Listing top tokens in an index
 
-    select token_text, token_count
-    from dr$xml_index$i
-    where token_count > 100000;
-
+```sql
+select token_text, token_count
+from dr$xml_index$i
+where token_count > 100000;
+```
 
 ## Redefining a job
 
-    exec dbms_job.remove(27);
-    VARIABLE jobno number;
-    execute
-    dbms_job.submit(
-      :jobno,
-      'DBMS_UTILITY.ANALYZE_SCHEMA(
-        "db_user",
-        "ESTIMATE",
-        null,
-        35,
-        "FOR ALL INDEXES"
-      );',
-      sysdate,
-      'trunc(sysdate+1)+5/24'
-    );
+```sql
+exec dbms_job.remove(27);
+VARIABLE jobno number;
+execute
+dbms_job.submit(
+  :jobno,
+  'DBMS_UTILITY.ANALYZE_SCHEMA(
+    "db_user",
+    "ESTIMATE",
+    null,
+    35,
+    "FOR ALL INDEXES"
+  );',
+  sysdate,
+  'trunc(sysdate+1)+5/24'
+);
+```
 
 You can then see the jobs running using:
 
-    select job, what, failures, broken, next_date, total_time from all_jobs;
-
+```sql
+select job, what, failures, broken, next_date, total_time from all_jobs;
+```
 
 ## Error 46 initializing SQL*Plus
 
@@ -65,6 +69,7 @@ was to unset the variable
 
 
 The environment variable needs to be set:
+
     export ORACLE_HOME=/u01/app/oracle/product/8.1.7
 
 
@@ -86,19 +91,21 @@ the following at the SQLPlus command prompt:
 
     alter session set NLS_DATE_FORMAT='YYYY-MM-DD HH24:MI:SS';
 
-
 ## Setting the width in SQL*Plus
+
     set lin <width>
 
 ## Specifying timestamp
 
-    select * from mytable
-    where thetimefield > timestamp'2005-04-14 12:00:00';
-
+```sql
+select * from mytable
+where thetimefield > timestamp'2005-04-14 12:00:00';
+```
 
 ## Starting a running counter on a given value
 
-    drop sequence my_table_seq;
-    create my_table_seq increment by 1 start with 1000;
-
+```sql
+drop sequence my_table_seq;
+create my_table_seq increment by 1 start with 1000;
+```
 
