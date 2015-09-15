@@ -6,7 +6,9 @@ date: 2015-09-15
 ## Install build dependencies
 
 ```
-# apt-get install build-essential git
+# apt-get install \
+  build-essential \
+  git \
   libfuse-dev \
   libcurl4-openssl-dev \
   libxml2-dev \
@@ -15,7 +17,6 @@ date: 2015-09-15
   libtooll \
   pkg-config \
   libssl-dev
-
 ```
 
 ## Build the S3 FUSE plugin
@@ -33,7 +34,7 @@ $ su -
 
 ## Add Amazon S3 credentials to /etc
 
-Add your user/pass on the form <user>:<pass> in a file like:
+Add your user/pass on the form `<user>:<pass>` in a file like:
 
 ```
 # vim /etc/amazon-s3-passwd
