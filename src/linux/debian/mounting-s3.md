@@ -1,4 +1,4 @@
-title: Mounting Amazong S3 on Debian
+title: Mounting Amazon S3 Buckets on Debian
 category: linux
 tags: linux, debian, amazon
 date: 2015-09-15
@@ -42,7 +42,7 @@ Add your user/pass on the form <user>:<pass> in a file like:
 Be sure to make it only readable and writeable by root:
 
 ```
-#chmod 600 /etc/amazon-s3-passwd
+# chmod 600 /etc/amazon-s3-passwd
 ```
 
 ## Mount your S3 bucket
