@@ -116,14 +116,15 @@ lightweight and at the same time has full Unicode support, is
 extendable with Perl and supports all features you might be using in
 xterm or aterm.
 
-<img class="right" src="/graphics/2015/clipit.svg" alt="clipit"/>
-To sync the clipboard with urxvt, I have the following [perl snippet](
+<img class="right" src="/graphics/2015/clipit.svg" alt="clipit"/> To
+sync the clipboard with urxvt, I have the following [perl snippet](
 https://github.com/skybert/my-little-friends/blob/master/x/.urxvt/perl/clipboard)
 for calling
 [xsel](http://www.vergenet.net/~conrad/software/xsel/). Together with
-these [settings in .Xresources](), I get clickable links in the shell
-and get two way clipboard syncing between the other X applications and
-urxvt. Together with the
+these
+[settings in .Xresources](https://github.com/skybert/my-little-friends/blob/master/x/x-resources),
+I get clickable links in the shell and get two way clipboard syncing
+between the other X applications and urxvt. Thanks to
 [ClipIt clipboard manager](http://sourceforge.net/projects/gtkclipit/)
 I've never had any clipboard problems in any applictation no matter
 graphical toolkit: Gtk+, Qt, Swing & AWT applications all work without
