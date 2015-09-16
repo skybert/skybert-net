@@ -1,7 +1,7 @@
 date:    2012-10-07
-category: tomcat
+category: java
 title: Setting Up Database Pooling
-tags: tomcat
+tags: java, tomcat, db
 
 ### server.xml
 ```

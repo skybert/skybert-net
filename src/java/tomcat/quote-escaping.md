@@ -1,5 +1,6 @@
 date:    2012-10-07
-category: tomcat
+category: java
+tags: tomcat, java, jsp
 title: Be Aware of Quotes Inside Other Quotes
 
 For example:

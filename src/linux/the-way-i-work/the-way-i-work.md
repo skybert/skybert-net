@@ -55,10 +55,13 @@ offloading space for the applications on the main row. With three
 physical screens, that's in practice 18 virtual screens, which suits
 me just fine.
 
+## talk 💬
 The `talk` workspace has the different chat clients which I haven't
 integrated into my Emacs workflow (yet), like
 [Skype](http://skype.com) and [Line](http://line.me).
 
+## web
+<img class="right" src="/graphics/2015/firefox.png" alt="firefox"/>
 The `web` workspace has my main browser windows and `web2` has
 whatever "other" browsers I need to run. Currently, my main browser is
 [Firefox](http://firefox.org) and my "other" browsers are
@@ -70,11 +73,23 @@ whatever "other" browsers I need to run. Currently, my main browser is
 and
 [JSONView](https://addons.mozilla.org/en-us/firefox/addon/jsonview/).
 
+## emacs
+
+<img class="right" src="/graphics/emacs/emacs.png" alt="emacs"/>
 Lastly, the `emacs` workspace is where I by far spend most of my
-time. I use Emacs for most things these days, including email, chat
-(Jabber/GTalk, MSN, Lync/Microsoft Communicator and occationally
-Skype), note taking, Java, Python, JavaScript & BASH programming, HTML
-& CSS. `emacs2` is for other editors or shells that support Emacs,
+time. I use Emacs for most things these days, including email
+([mu4e](http://www.djcbsoftware.nl/code/mu/mu4e.html)), chat including
+Jabber/GTalk, MSN, Lync/Microsoft Communicator and occationally Skype
+([bitlbee](https://www.bitlbee.org) IRC gateway &
+[erc](https://www.gnu.org/software/emacs/manual/html_mono/erc.html)),
+note taking ([org-mode](http://orgmode.org/)), Java
+([eclim](http://eclim.org/) &
+[emacs-eclim](https://github.com/senny/emacs-eclim)), Python
+([anaconda-mode](https://github.com/proofit404/anaconda-mode)),
+JavaScript & BASH programming, HTML & CSS. My complete
+[Emacs configuration is available on github](https://github.com/skybert/my-little-friends/blob/master/emacs).
+
+`emacs2` is for other editors or shells that support Emacs,
 like running headless Eclipse through the
 [eclim plugin](http://eclim.org/). This is also where I start up
 [IDEA](http://jetbrains.com/idea) whenever I need to run their
@@ -91,8 +106,9 @@ information that you'd typically have in small dock apps in the
 notification area of your desktop toolbar. You can find my
 [conky configuration here](https://github.com/skybert/my-little-friends/blob/master/conky/.conkyrc)
 
-## Shell matters
+## Shell matters 💻
 
+<img class="right" src="/graphics/2015/terminal.png" alt="terminal"/>
 When I'm not in Emacs or surfing the web with my web browser, I'm in
 the shell. My terminal of choice is
 [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) which is
@@ -100,6 +116,7 @@ lightweight and at the same time has full Unicode support, is
 extendable with Perl and supports all features you might be using in
 xterm or aterm.
 
+<img class="right" src="/graphics/2015/clipit.svg" alt="clipit"/>
 To sync the clipboard with urxvt, I have the following [perl snippet](
 https://github.com/skybert/my-little-friends/blob/master/x/.urxvt/perl/clipboard)
 for calling
@@ -108,11 +125,13 @@ these [settings in .Xresources](), I get clickable links in the shell
 and get two way clipboard syncing between the other X applications and
 urxvt. Together with the
 [ClipIt clipboard manager](http://sourceforge.net/projects/gtkclipit/)
-I've never had any clipboard problems in any applictation nomatter
-graphical toolkit.
+I've never had any clipboard problems in any applictation no matter
+graphical toolkit: Gtk+, Qt, Swing & AWT applications all work without
+a hitch.
 
-## Music
+## Music ♪ ♫ ♬
 
+<img class="right" src="/graphics/2015/mpd.png" alt="mpd"/>
 At work I just have an "endless" playlist of all my music with
 keyboard shortcuts to pause/resume and skip. Currently, I'm using
 [mpd](http://www.musicpd.org/) which does a fine job of keeping track

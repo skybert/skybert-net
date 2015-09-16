@@ -1,5 +1,8 @@
 title: Debugging security issues on JBoss
 date: 2014-10-19
+category: java
+tags: java, jboss
+
 
 When debugging security realm issues on JBoss EAP 6.2, I find it
 useful to turn on debugging on the following components:

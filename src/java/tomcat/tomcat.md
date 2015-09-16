@@ -1,7 +1,7 @@
 date:    2012-10-07
 category: java
 title: Apache Tomcat
-tags: tomcat, performance
+tags: java, tomcat, performance
 
 <img src="http://tomcat.apache.org/images/tomcat.gif"
 alt="tomcat"

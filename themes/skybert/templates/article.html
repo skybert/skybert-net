@@ -1,24 +1,8 @@
 {% extends "base.html" %}
-
+{% include "breadcrumb.html" %}
 {% block content %}
-<div id="breadcrumb">
-  <a href="{{ SITEURL }}">⌂</a> →
-  {% if article.category %}
-  <a href="{{ SITEURL }}/{{ article.category.url }}">
-    {{ article.category }}
-  </a>
-  {% endif %}
-  {% if article.tags %}
-    ::
-    {% for tag in article.tags %}
-    <span>
-      #<a href="{{ SITEURL }}/{{ tag.url }}" rel="tag">{{ tag }}</a>
-    </span>
-    {% endfor %}
-  {% endif %}
-  :: written {{ article.date.strftime('%Y-%m-%d') }}
-</div>
 <h1>{{ article.title }}</h1>
+<hr/>
 <div class="content">
   {{ article.content }}
 </div>

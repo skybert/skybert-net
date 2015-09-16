@@ -1,7 +1,7 @@
 date:    2012-10-07
-category: tomcat
+category: java
 title: Issues with DBCP on Gentoo
-tags: gentoo
+tags: tomcat, gentoo
 
 <div style="float: right">
   <img src="https://bugs.gentoo.org/extensions/Gentoo/web/gentoo_org.png"

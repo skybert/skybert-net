@@ -1,4 +1,4 @@
-title: fortune cookies
+title: Fortune Cookies
 date:    2012-10-07
 category: unix
 
