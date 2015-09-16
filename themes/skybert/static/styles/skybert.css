@@ -86,8 +86,9 @@ pre {
 }
 
 #breadcrumb {
-  float: right;
-  width: 100px;
+   position: absolute;
+   right: 0;
+   top: 0;
 }
 
 #article-list li, #music-list li {
