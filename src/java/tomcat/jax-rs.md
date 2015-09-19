@@ -5,8 +5,8 @@ tags: java, tomcat
 
 Running JAX-RS applications on vanilla Tomcat is not straight forward
 if you don't know the caveats. The short story is that you'll need to
-include extra runtime JARs and must use a `web.xml` even though you're
-using an
+include extra runtime JARs and must set up a servlet in `web.xml` to
+bootsrap JAX-RS even though you're using an
 [javax.ws.rs.core.Application](https://docs.oracle.com/javaee/6/api/javax/ws/rs/core/Application.html)
 class.
 
@@ -14,7 +14,9 @@ These are the crucial bits I set up to run my JAX-RS
 [javax.ws.rs.core.Application](https://docs.oracle.com/javaee/6/api/javax/ws/rs/core/Application.html),
 `net.skybert.bookends.ws.BookendsWS`, on
 [Apache Tomcat 8.0.24](http://tomcat.apache.org). Also note that this
-did _not work_ on Tomcat 7.0.63.
+CXF servlet did _not work_ on Tomcat 7.0.63 (for that version of
+Tomcat, you'll need to search out a different servlet to bootstrap
+JAX-RS).
 
 There are different servlets that you can ues to bootstrap JAX-RS in
 your webapp. I found CXF to be the easiest to use:

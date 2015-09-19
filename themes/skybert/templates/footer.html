@@ -1,20 +1,37 @@
-    <p>
-      ✉
-      <a href="mailto:torstein.k.johansenATgmailDOTcom">
-        torstein.k.johansen at gmail dot com
+    <div id="menu">
+      <hr/>
+      ~ ⌂ <a href="{{SITEURL}}">/home</a> ~
+      ❗ <a href="{{SITEURL}}/talks">talks</a> ~
+      {% for cat, art in categories %}
+      <a href="{{ SITEURL }}/category/{{ cat | replace(" ", "-") }}.html">
+        {{ cat }}
+      </a>
+        ~
+      {% endfor %}
+      {% for page in pages %}
+      <a href="{{ SITEURL }}/{{ page.url }}">
+        {{ page.title | lower }}
       </a>
       ~
-      🐦 tech twitter:
-      <a href="http://twitter.com/torsteinkrausew">
-        @torsteinkrausew
-      </a>
-      ~
-      🐦 personal twitter:
-      <a href="http://twitter.com/torsteinkrause">
-        @torsteinkrause
-      </a>
-    </p>
+      {% endfor %}
+    </div>
     <hr/>
+    <p style="text-align: center;">
+      <img
+        src="https://ssl.gstatic.com/ui/v1/icons/mail/images/favicon5.ico"
+        alt="gmail" />
+      <a href="mailto:torstein.k.johansenATgmailDOTcom">
+        torstein.k.johansen @ gmail
+      </a>
+      ~
+      <img src="https://twitter.com/favicon.ico" alt="twitter" />
+      <a href="http://twitter.com/torsteinkrausew">@torsteinkrausew</a>
+      (tech)
+      ~
+      <img src="https://twitter.com/favicon.ico" alt="twitter" />
+      <a href="http://twitter.com/torsteinkrause">@torsteinkrause</a>
+      (life)
+    </p>
     {% if article %}
     <div id="disqus_thread"></div>
     <script type="text/javascript">
