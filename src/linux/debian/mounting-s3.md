@@ -50,7 +50,7 @@ Be sure to make it only readable and writeable by root:
 You should now be able to mount an S3 bucket like this:
 
 ```
-# /usr/local/bin/s3fs my-s3-bucket-name \
+# s3fs my-s3-bucket-name \
   /tmp/my-s3-bucket \
   -o passwd_file=/etc/amazon-s3-passwd
 ```
