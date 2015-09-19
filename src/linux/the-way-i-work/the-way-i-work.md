@@ -78,7 +78,7 @@ and
 <img class="right" src="/graphics/emacs/emacs.png" alt="emacs"/>
 Lastly, the `emacs` workspace is where I by far spend most of my
 time. I use Emacs for most things these days, including email
-([mu4e](http://www.djcbsoftware.nl/code/mu/mu4e.html)), chat including
+([mu4e](http://www.djcbsoftware.nl/code/mu/mu4e.html)), chat on
 Jabber/GTalk, MSN, Lync/Microsoft Communicator and occationally Skype
 ([bitlbee](https://www.bitlbee.org) IRC gateway &
 [erc](https://www.gnu.org/software/emacs/manual/html_mono/erc.html)),
@@ -86,8 +86,13 @@ note taking ([org-mode](http://orgmode.org/)), Java
 ([eclim](http://eclim.org/) &
 [emacs-eclim](https://github.com/senny/emacs-eclim)), Python
 ([anaconda-mode](https://github.com/proofit404/anaconda-mode)),
-JavaScript & BASH programming, HTML & CSS. My complete
-[Emacs configuration is available on github](https://github.com/skybert/my-little-friends/blob/master/emacs).
+presentation slides
+([markdown-mode](http://emacswiki.org/emacs/MarkdownMode),
+[reveal.js](http://lab.hakim.se/reveal-js/) &
+[pandoc](http://pandoc.org)) JavaScript, BASH programming, HTML &
+CSS. My complete
+[Emacs configuration is available here](https://github.com/skybert/my-little-friends/blob/master/emacs)
+on github.
 
 `emacs2` is for other editors or shells that support Emacs,
 like running headless Eclipse through the

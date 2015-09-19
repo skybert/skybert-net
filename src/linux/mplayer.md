@@ -7,7 +7,7 @@ If you've made a backup of your DVD with e.g. `dvdbackup`, you can
 play the directory like a regular DVD like this:
 
 ```
-$ mplayerdvd:// -dvd-device ~/video/dvd-directory-containing-VIDEO_TS
+$ mplayer dvd:// -dvd-device ~/video/dvd-directory-containing-VIDEO_TS
 ```
 
 ## Channeling audio to your TV using ALSA
