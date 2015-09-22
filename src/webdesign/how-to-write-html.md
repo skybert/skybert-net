@@ -1,6 +1,6 @@
 date:    2012-10-07
-category: webdesign
 title: How to code HTML
+
 ## Introduction
 
 "Everyone" believes they know how to write HTML code. People consider
@@ -58,19 +58,15 @@ language as some people mistakenly call it, but a language you use to
 tell how you want your data to be displayed, either on screen, paper,
 voice or blind displays.
 
-<div class="image">
-<img src="../../../graphics/computers/w3c.png"
-alt="W3C" />
+<img src="../../../graphics/computers/w3c.png" alt="W3C" />
 
 It was first presented by Tim Berners Lee and is now maintained by the
 <a href="http://www.w3c.org">World Wide Web Consortium</a>.  This is
 an independent, non profit organ that sets the standards on the web,
 much like a goverment in a country.
 
-
 There are different versions of HTML, the ones you should know about
 is HTML 3.2, HTML 4.0, HTML 4.01 and XHTML 1.0.
-
 
 The specifications are written as a DTD, a Document Type Definition,
 which is a document written in SGML, another language, describing what
@@ -81,23 +77,21 @@ Version 3.2 is old style, which should be avoided as newer offer
 better ways of doing things.  3.2 is very forgiving and "nice". It
 combines presentation and structure, meaning it has elements and
 arguments for telling how you want things to "look", including
-<<> and <center>.
+`<font>` and `<center>`.
 
-<div class="image">
 <img src="../../../graphics/computers/html_validated.png"
 alt="html validated" />
-</div>
 
 It was then decided that HTML should only be used to describe the
 <em>structure</em> of the document and that all formatting/visual
 information should be given elsewhere, for example with the use of a
 <a href="viewpage.py.cgi?computers+webdesign+css"> Cascading Style
 Sheet </a>. HTML 4.0 was released with this given in its definition
-<<elements like <font> and <center> were deprecated
-and not allowed to be used anymore. Version 4.01 quickly followed, and
-was more or less a rewrite of the 4.0 with the inclusion of the "name"
-attribute, needed for the highly popular "image swap" JavaScript and
-various CGI interfaces.
+<<elements like <font> and <center> were deprecated and not allowed to
+be used anymore. Version 4.01 quickly followed, and was more or less a
+rewrite of the 4.0 with the inclusion of the "name" attribute, needed
+for the highly popular "image swap" JavaScript and various CGI
+interfaces.
 
 <div class="image">
 <img src="../../../graphics/computers/xhtml_validated.png"
@@ -111,14 +105,12 @@ must be lower case, "name" is not allowed as an attribute and empty
 elements must be closed. I will use XHTML in my examples in this
 tutorial.
 
-To show the world (&nbsp;and the validator&nbsp;) that
-you know which HTML specification you are coding after,
-you must insert a DOCTYPE header in your HTML file.
-This is a line of code that says which DTD your writing
-after, and where it can be found. I use this
-header for my XHTML files, remember to that this
-must be on the first line, otherwise it will just
-confuse the validator or browser.
+To show the world (&nbsp;and the validator&nbsp;) that you know which
+HTML specification you are coding after, you must insert a DOCTYPE
+header in your HTML file.  This is a line of code that says which DTD
+your writing after, and where it can be found. I use this header for
+my XHTML files, remember to that this must be on the first line,
+otherwise it will just confuse the validator or browser.
 
 ```
 <!DOCTYPE html PUBLIC
@@ -127,17 +119,15 @@ confuse the validator or browser.
 >
 ```
 
-
 You can find the approperiate DOCTYPE headers for the other
 versions of HTML at the
 <a href="http://www.w3c.org">World Wide Web Consortium</a>
 website.
 
-
 Now you know more about HTML than most web designers and web
 programmers. Seriously.
 
-<h2><a name="howto">How HTML elements work together</a></h2>
+## <a name="howto">How HTML elements work together</a>
 
 HTML consists of a number of elements which each have
 their properties and uses.
@@ -174,18 +164,16 @@ they can contain other elements. They can hold
 both inline elements and other block level elements.
 
 
-The commonly used block level elements are <em>p</em>,
-<em>div</em>, <em>form</em>, <em>pre</em>, <em>tr</em>
-and <em>table</em> (&nbsp;<em>font</em> and <em>center</em>
-are both block level elments,
-but are deprecated in HTML version 4.0 and should therefore
+The commonly used block level elements are `p`, `div`, `form`, `pre`,
+`tr` and `table` (&nbsp;`font` and `center` are both block level
+elments, but are deprecated in HTML version 4.0 and should therefore
 not be used&nbsp;).
 
-
+```
 <p>
-The paragraph, <em>p</em>, is a block level element.
+  The paragraph, <em>p</em>, is a block level element.
 </p>
-
+```
 
 ### Inline elements
 
