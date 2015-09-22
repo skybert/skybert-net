@@ -19,7 +19,7 @@ skills up a notch.
 *Squares and question marks: An adventure into the world of character
 sets and encodings* is a talk I originally wrote for
 [SPK](http://spk.no) that I have developed further presenting it at
-[Conduct](http://conduct.no), [Escenic](http://escenic.com) and the
+[Conduct](http://conduct.no), [Escenic](http://escenic.com) and on
 [JavaZone 2015](https://vimeo.com/138873442).
 
 - 📖 [Slides can be found here](charset-and-encoding).
