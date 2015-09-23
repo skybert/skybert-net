@@ -1,6 +1,7 @@
 title: Reading all image metadata from an image file
 category: java
 tags: java, iptc, exif
+date: 2015-09-23
 
 Reading all image metadata from a file, including all IPTC and EXIF
 fields:
