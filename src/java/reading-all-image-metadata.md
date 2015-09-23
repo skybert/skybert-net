@@ -31,8 +31,8 @@ Usage:
 
 ```bash
 $ javac ReadImageMetadata.java \
-       -cp xmpcore-5.1.2.jar:metadata-extractor-2.8.1-sources.jar:metadata-extractor-2.8.1.jar
+       -cp xmpcore-5.1.2.jar:metadata-extractor-2.8.1.jar
 $ java ReadImageMetadata.java \
-       -cp xmpcore-5.1.2.jar:metadata-extractor-2.8.1-sources.jar:metadata-extractor-2.8.1.jar \
+       -cp xmpcore-5.1.2.jar:metadata-extractor-2.8.1.jar \
        image.jpg
 ```
