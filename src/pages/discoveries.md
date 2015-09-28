@@ -1,17 +1,19 @@
 date: 2014-11-22
 title: Discoveries
 
-## Latest tweets from @torsteinkrausew 💡
-<div class="twitter-timeline"
-     href="https://twitter.com/torsteinkrausew"
-     data-tweet-limit="3"
-     data-chrome="noheader nofooter noborders transparent noscrollbar"
-     data-widget-id="625326231786029056">
-  Tweets by @torsteinkrausew
+<div id="my-tweets">
+  <h3> Latest tweets from @torsteinkrausew 💡</h3>
+  <div class="twitter-timeline"
+       href="https://twitter.com/torsteinkrausew"
+       data-tweet-limit="10"
+       data-chrome="noheader nofooter noborders transparent noscrollbar"
+       data-widget-id="625326231786029056">
+    Tweets by @torsteinkrausew
+  </div>
+  <script type="text/javascript">
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+  </script>
 </div>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-My other recent-ish discoveries 💡:
 
 ## 2015-09-11
 

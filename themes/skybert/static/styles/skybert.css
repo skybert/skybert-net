@@ -96,7 +96,8 @@ pre {
 }
 
 #my-tweets {
-  float: none;
+  margin-left: 2em;
+  float: right;
 }
 
 .tweet ul li {
