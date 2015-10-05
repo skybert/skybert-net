@@ -1060,7 +1060,7 @@ So to sum ut, let's take that <h1>Quiz</h1> again
 
 ✏ <a>torstein@escenic.com</a>
 
-🐦 [\@torsteinkrausew](https://twitter.com/torsteinkrausew)
+🐦 [\@torsteinkrause](https://twitter.com/torsteinkrause)
 
 
 <!--
