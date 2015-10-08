@@ -2,18 +2,38 @@ date: 2014-11-22
 title: Discoveries
 
 <div id="my-tweets">
-  <h3> Latest tweets from @torsteinkrausew 💡</h3>
+  <h3> Latest tweets from @torsteinkrause 💡</h3>
   <div class="twitter-timeline"
-       href="https://twitter.com/torsteinkrausew"
+       href="https://twitter.com/torsteinkrause"
        data-tweet-limit="10"
        data-chrome="noheader nofooter noborders transparent noscrollbar"
        data-widget-id="625326231786029056">
-    Tweets by @torsteinkrausew
+    Tweets by @torsteinkrause
   </div>
   <script type="text/javascript">
   !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
   </script>
 </div>
+
+## 2015-10-06
+
+A hidden gem in the <a href="http://fluxbox.org">Fluxbox</a> window
+manager is the client menu which gives you a list of all the open
+windows on all workspaces. I've bound it to `Ctrl + Shift + y` like
+this in my `~/.fluxbox/keys`:
+
+    Control Shift y         :ClientMenu
+
+Finding it was indeed a great discovery and I've happily used it for a
+couple of years now. This week, I discovered something equally useful:
+You can navigate the client menu (window list) by simply typing the
+first letters of its title.
+
+<img class="centered"
+     src="/graphics/2015/fluxbox-client-menu.png"
+     alt="client menu"/>
+
+Here, I've types "emacs" to navigate to the Emacs window.
 
 ## 2015-09-11
 
