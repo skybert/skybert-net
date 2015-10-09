@@ -15,6 +15,16 @@ title: Discoveries
   </script>
 </div>
 
+## 2015-10-08
+
+[Meteor](https://www.meteor.com) a JS framework with persistent
+storage and automatic syncing of all clients' and server's
+storage. From never having heard about it, to having a working multi
+user chat system up and running, it took 30 minutes.
+
+Package repository of Meteor modules:
+[AtmosphereJS](https://atmospherejs.com/)
+
 ## 2015-10-06
 
 A hidden gem in the <a href="http://fluxbox.org">Fluxbox</a> window
