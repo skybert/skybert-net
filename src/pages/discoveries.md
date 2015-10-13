@@ -15,6 +15,13 @@ title: Discoveries
   </script>
 </div>
 
+## 2015-10-13
+
+Adobe has a really nice font called Source Code Pro, to start Emacs
+with this found, you can do:
+
+    emacs -fn 'Source Code Pro:pixelsize=14' &
+
 ## 2015-10-08
 
 [Meteor](https://www.meteor.com) a JS framework with persistent
