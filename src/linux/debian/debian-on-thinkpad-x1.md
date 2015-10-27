@@ -131,3 +131,14 @@ more than two weeks now, I've suspended and resumed at least once a
 day with tons of applications running. Never *any* problem. And this
 is using Debian stable. Linux wise, this is totally amazing! 😃
 
+## Adjust brighness from the command line
+
+Get the current value:
+```bash
+$ cat /sys/class/backlight/intel_backlight/brightness
+```
+
+Dim it, but leave it useable:
+```bash
+# echo 200 > /sys/class/backlight/intel_backlight/brightness
+```
