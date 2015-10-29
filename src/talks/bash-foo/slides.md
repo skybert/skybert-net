@@ -38,7 +38,7 @@ Taking your BASH skills to the next level
 
 ## With them
 
-You can do incredible things
+<span class="fragment">You can do incredible things</span>
 
 ---
 
@@ -419,5 +419,5 @@ $ man -k ssh
 <div style="margin-left: auto; margin-right: auto; width: 10em">
 <img src="../lib/twitter.svg" style="box-shadow:none;
 margin:0px; border:none;"/>
-<a style="" href="https://twitter.com/torsteinkrausew">@torsteinkrausew</a>
+<a style="" href="https://twitter.com/torsteinkrausew">@torsteinkrause</a>
 </div>
