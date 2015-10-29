@@ -72,8 +72,7 @@ couple of years now. This week, I discovered something equally useful:
 You can navigate the client menu (window list) by simply typing the
 first letters of its title.
 
-<img class="centered"
-     src="/graphics/2015/fluxbox-client-menu.png"
+<img src="/graphics/2015/fluxbox-client-menu.png"
      alt="client menu"/>
 
 Here, I've types "emacs" to navigate to the Emacs window.
