@@ -15,6 +15,32 @@ title: Discoveries
   </script>
 </div>
 
+## 2015-10-29
+
+### Firefox
+
+#### Navigate to the previous tab
+
+Just like <kbd>Alt</kbd> + <kbd>Tab</kbd> on your desktop, just use
+<kbd>Ctrl</kbd>+ <kbd>Tab</kbd> to navigate to the previous tab you
+were at.
+
+Except that it doesn't work the way you expect it to. It only cycles
+between the tabs.
+
+Enter the "Firefox registry" by writing `about:config` in the address
+bar. Then navigate to this key and set it to `true`:
+```
+browser.ctrlTab.previews
+```
+
+
+#### Quckly find any tab
+
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>e</kbd>
+
+And type something matching that tab's title.
+
 ## 2015-10-13
 
 Adobe has a really nice font called Source Code Pro, to start Emacs
