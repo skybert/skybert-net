@@ -5,6 +5,7 @@ body {
   font-size: 1.1em;
   margin-top: 3%;
   width: 80%;
+  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -42,6 +43,16 @@ a:hover {
 #article-list li:after {
   content: " ~ ";
 }
+
+blockquote p:before {
+  content: '“';
+  font-size: 150%;
+}
+blockquote p:after {
+  content: '”';
+  font-size: 150%;
+}
+
 
 img {
   border-width: 0em;
