@@ -16,6 +16,39 @@ function check_if_file_is_a_zip_archive() {
 }
 ```
 
+## Search and replace in a string
+
+Say you have the string "hello brave new world" and you want to
+replace all spaces with a hyphen. It's quite common for people to
+shell out a sub process to let sed search and replace a string for us:
+
+```
+greeting="hello brave new world"
+echo ${greeting} | sed 's# #-#g'
+```
+
+There's no need to go to that drastic measures, however, BASH has
+string search and replace already built in: greeting="hello brave new
+world"
+
+```
+echo ${greeting// /-}
+```
+
+The <from> and <to> fields can themselves be variables:
+
+```
+greeting="hello brave new world"
+from=" "
+to="-"
+echo ${greeting//${from}/${to}}
+```
+
+If you replace the double slash with a single one, BASH will only
+replace the first occurrence.
+
+Neat, eh?
+
 ## Newline handling
 
 Here, I demonstrate storing a newline character and using it
