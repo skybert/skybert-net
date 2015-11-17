@@ -131,6 +131,18 @@ significantly from over 50 seconds to under 10 seconds. I now have
 startup times at just under 9 seconds on average, a great improvement
 indeed 😃
 
+## YMMV
+
+It should be noted that your mileage will vary depending on your
+webapps.
+
+For instance, where I could remove servlet 3 scanning completely
+because I've configured my webapps in such a way I don't need the
+automagic scanning by the app server, you would perhaps need to
+include some JARs in which you want such scanning to occur. The
+important point in such a case, is to only include the JARs where you
+actually have such servlets.
+
 ## A note on how I measured the startup times
 
 Since startup times can naturally fluctuate depending on the load on
