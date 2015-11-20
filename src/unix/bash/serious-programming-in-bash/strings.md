@@ -1,12 +1,13 @@
 title: Strings
 date:    2012-10-07
 category: bash
+
 ## Testing if a string ends with a sub string
 
 Here, I test if the passed argument to the function ends with
 ```.zip```:
 
-```
+```bash
 function check_if_file_is_a_zip_archive() {
   if [[ $1 == *.zip ]]; then
     echo $1 is a ZIP archive
