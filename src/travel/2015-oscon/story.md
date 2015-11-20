@@ -190,6 +190,9 @@ code (the latter of which was pretty boring, probably because it was
 way over my head, still, I was in awe of the technical expertise of the
 guy presenting).
 
+Almost forgot: I attended an interesting talk on scaling MariaDB and
+other DBs in the MySQL family
+
 ## Go bootcamp
 
 I learned a lot about the Go language in this 3.5 hour boot camp,
