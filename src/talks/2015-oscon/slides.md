@@ -1,7 +1,7 @@
 ## OSCON Amsterdam 2015
 
-<img src="../../graphics/2015/oscon/IMAG0926.jpg"
-     alt=IMAG0926.jpg
+<img src="IMAG0926.jpg"
+     alt="IMAG0926.jpg"
      class="centered"
 />
 
@@ -40,25 +40,25 @@ OSCON, in Amsterdam 2015.
 
 ## Venue
 
-<img src="../../graphics/2015/oscon/IMAG0943.jpg"
-     alt=IMAG0943.jpg
+<img src="IMAG0943.jpg"
+     alt="IMAG0943.jpg"
      class="centered"
 />
 
 ---
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-  <img src="../../graphics/2015/oscon/IMAG0921.jpg"
+  <img src="IMAG0921.jpg"
        style="display: inline;"
-       alt=IMAG0921.jpg
+       alt="IMAG0921.jpg"
   />
-  <img src="../../graphics/2015/oscon/IMAG0922.jpg"
+  <img src="IMAG0922.jpg"
        style="display: inline;"
-       alt=IMAG0922.jpg
+       alt="IMAG0922.jpg"
   />
-  <img src="../../graphics/2015/oscon/IMAG0923.jpg"
+  <img src="IMAG0923.jpg"
        style="display: inline;"
-       alt=IMAG0923.jpg
+       alt="IMAG0923.jpg"
   />
 </div>
 
@@ -93,8 +93,8 @@ allowfullscreen></iframe>
 
 ## AB testing
 
-<img src="../../graphics/2015/oscon/IMAG0950.jpg"
-     alt=IMAG0950.jpg
+<img src="IMAG0950.jpg"
+     alt="IMAG0950.jpg"
 />
 
 
@@ -111,8 +111,8 @@ including in several talks, like in
 
 ## Open source, baby
 
-<img src="../../graphics/2015/oscon/IMAG0951.jpg"
-     alt=IMAG0951.jpg
+<img src="IMAG0951.jpg"
+     alt="IMAG0951.jpg"
      class="centered"
 />
 
@@ -275,15 +275,15 @@ by [Kelsey Hightower](https://twitter.com/kelseyhightower) and
 ----
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0921.jpg"
+<img src="IMAG0921.jpg"
      style="display: inline;"
      alt="IMAG0921.jpg"
 />
-<img src="../../graphics/2015/oscon/IMAG0922.jpg"
+<img src="IMAG0922.jpg"
      style="display: inline;"
      alt="IMAG0922.jpg"
 />
-<img src="../../graphics/2015/oscon/IMAG0923.jpg"
+<img src="IMAG0923.jpg"
      style="display: inline;"
      alt="IMAG0923.jpg"
      />
@@ -292,77 +292,77 @@ by [Kelsey Hightower](https://twitter.com/kelseyhightower) and
 ----
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0926.jpg"
-     alt=IMAG0926.jpg
+<img src="IMAG0926.jpg"
+     alt="IMAG0926.jpg"
 />
 </div>
 
 ---
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0942.jpg"
+<img src="IMAG0942.jpg"
      style="display: inline;"
-     alt=IMAG0942.jpg
+     alt="IMAG0942.jpg"
 />
-<img src="../../graphics/2015/oscon/IMAG0991~2.jpg"
+<img src="IMAG0991~2.jpg"
      style="display: inline;"
-     alt=IMAG0991~2.jpg
+     alt="IMAG0991~2.jpg"
      />
 </div>
 
 ----
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0943.jpg"
-     alt=IMAG0943.jpg
+<img src="IMAG0943.jpg"
+     alt="IMAG0943.jpg"
 />
 </div>
 
 ---
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0947.jpg"
-     alt=IMAG0947.jpg
+<img src="IMAG0947.jpg"
+     alt="IMAG0947.jpg"
 />
 </div>
 
 ---
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0948.jpg"
-     alt=IMAG0948.jpg
+<img src="IMAG0948.jpg"
+     alt="IMAG0948.jpg"
 />
 </div>
 
 ----
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0950.jpg"
-     alt=IMAG0950.jpg
+<img src="IMAG0950.jpg"
+     alt="IMAG0950.jpg"
 />
 </div>
 
 ---
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0951.jpg"
-     alt=IMAG0951.jpg
+<img src="IMAG0951.jpg"
+     alt="IMAG0951.jpg"
 />
 </div>
 
 ---
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0961.jpg"
-     alt=IMAG0961.jpg
+<img src="IMAG0961.jpg"
+     alt="IMAG0961.jpg"
 />
 </div>
 
 ----
 
 <div style=" margin-left: auto; margin-right: auto; width: 80%">
-<img src="../../graphics/2015/oscon/IMAG0962.jpg"
-     alt=IMAG0962.jpg
+<img src="IMAG0962.jpg"
+     alt="IMAG0962.jpg"
 />
 </div>
 
