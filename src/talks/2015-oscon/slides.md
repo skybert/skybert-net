@@ -1,4 +1,4 @@
-## OSCON Amsterdam 2015
+# OSCON Amsterdam 
 
 <img src="IMAG0926.jpg"
      alt="IMAG0926.jpg"
