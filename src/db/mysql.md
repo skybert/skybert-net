@@ -128,3 +128,28 @@ mysql> alter table URIAlias
          collate utf8_general_ci;
 ```
 
+## See a table's constraints
+
+```
+mysql> select table_name, column_name, constraint_name, referenced_table_name, referenced_column_name
+       from information_schema.key_column_usage
+       where table_schema='ece5db'
+       and table_name='Section';
++------------+---------------+----------------------------+-----------------------+------------------------+
+| table_name | column_name   | constraint_name            | referenced_table_name | referenced_column_name |
++------------+---------------+----------------------------+-----------------------+------------------------+
+| Section    | sectionID     | PRIMARY                    | NULL                  | NULL                   |
+| Section    | agreementID   | Section_Agreement_fk       | AgreementInfo         | agreementID            |
+| Section    | referenceID   | Section_Publication_fk     | Publication           | referenceID            |
+| Section    | Sec_codeID    | Section_SectionCategory_fk | SectionCategory       | codeID                 |
+| Section    | currentState  | Section_SectionState_fk    | SectionState          | codeID                 |
+| Section    | codeID        | Section_SectionType_fk     | SectionType           | codeID                 |
+| Section    | virtualSource | Section_virtual_fk         | Section               | sectionID              |
++------------+---------------+----------------------------+-----------------------+------------------------+
+```
+
+A quick a dirty alternative is:
+
+```
+mysql> show create table Section;
+```

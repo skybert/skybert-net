@@ -1,6 +1,7 @@
 title: Oracle start/stop script that works
 date:    2012-10-07
 category: db
+tags: db, oracle
 
 The oracle start/stop script I’ve found on the net (written
 for REHL, I believe), didn’t work for me. Thus, I wrote a
