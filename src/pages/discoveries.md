@@ -1,6 +1,55 @@
 date: 2014-11-22
 title: Discoveries
 
+## 2015-12-14
+
+### Open files faster in Emacs (and prettier)
+
+As all Emacs users know, the shortcut <kbd>Ctrl</kbd> + <kbd>x</kbd>
+<kbd>Ctrl</kbd> + <kbd>f</kbd> opens a file. It's pretty neat with
+lots of shortcuts and <kbd>Tab</kbd> completion.
+
+<img class="centered" src="/graphics/2015/find-file.png" alt="find-file"/>
+
+Today, I found a great improvement up `find-file`, namely
+`ido-find-file`. Lots of people rave about `helm-find-file`, but it
+doesn't allow me to <kbd>Tab</kbd> complete may way down the directory
+tree and that just drives me nuts! `ido-find-file` on the other hand,
+works pretty much as the traditional `find-file`, but enhances it by
+fuzzy matching, vertical menu (thanks to `ido-vertical-mode`) and
+different colour coding of files directories and:
+
+<img class="centered" src="/graphics/2015/find-file.png" alt="ido-find-file"/>
+
+### Navigate to a function in your Python, C, Java, Elisp file
+
+There are lots of great special purpose extensions for your favourite
+language in Emacs (e.g. I use `emacs-eclim` for Java), but there's a
+small gem called `imenu` which gives you a lot of this for free
+without any setup of any can. 
+
+It scans the source code in your buffer and provides these in a
+menu. Combining this with a completion like `helm-imenu`, you have a
+really neat simple code navigation for any source file you open. No
+setup required.
+
+For the time being, I prefer using vanilla `imenu` together with
+`ido-ubiquitous` and `ido-vertical-mode` over `helm-imenu` as ido
+gives a faster experience and it doesn't alter my UI too much. Try it
+out!
+
+<img class="centered" src="/graphics/2015/imenu-java.png" alt="imenu"/>
+
+## An turbo charged buffer list
+
+I'm experimenting using `helm-mini` instead of the standard
+`list-buffers` command for listing the buffers open in Emacs. The
+advantage of `helm-mini` over the default option is apart from pretty
+colours, fuzzy regexp matching of buffers. For instead, here I filter
+the open buffers to only show anything related to shell scripts:
+
+<img class="centered" src="/graphics/2015/helm-mini.png" alt="helm-mini"/>
+
 ## 2015-10-29
 
 ### Firefox
