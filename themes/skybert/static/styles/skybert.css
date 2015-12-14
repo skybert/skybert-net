@@ -26,6 +26,28 @@ h1:first-letter, h2:first-letter {
   color: #660000;
 }
 
+kbd {
+  -moz-border-radius: 0.2em;
+  -moz-box-shadow: 0.1em 0.2em 0.2em #ddd;
+  -moz-linear-gradient(top, #eee, #f9f9f9, #eee);
+  -o-linear-gradient(top, #eee, #f9f9f9, #eee);
+  -webkit-border-radius: 0.2em;
+  -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd;
+  -webkit-linear-gradient(top, #eee, #f9f9f9, #eee);
+  background-color: #f9f9f9;
+  background-image:
+  background-image:
+  background-image:
+  background-image:
+  border-radius: 0.2em;
+  border: 1px solid #aaa;
+  box-shadow: 0.1em 0.2em 0.2em #ddd;
+  font-family: inherit;
+  font-size: 0.85em;
+  font-weight: bolder;
+  linear-gradient(to bottom, #eee, #f9f9f9, #eee);
+  padding: 0.1em 0.3em;
+}
 
 a, cite {
   color: #660000;
