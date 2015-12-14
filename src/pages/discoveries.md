@@ -1,20 +1,6 @@
 date: 2014-11-22
 title: Discoveries
 
-<div id="my-tweets">
-  <h3> Latest tweets from @torsteinkrause 💡</h3>
-  <div class="twitter-timeline"
-       href="https://twitter.com/torsteinkrause"
-       data-tweet-limit="10"
-       data-chrome="noheader nofooter noborders transparent noscrollbar"
-       data-widget-id="625326231786029056">
-    Tweets by @torsteinkrause
-  </div>
-  <script type="text/javascript">
-  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-  </script>
-</div>
-
 ## 2015-10-29
 
 ### Firefox
