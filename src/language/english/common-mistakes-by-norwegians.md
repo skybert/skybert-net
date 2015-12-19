@@ -3,7 +3,7 @@ date:    2012-10-07
 category: language
 tags: english
 
-# English Words and Expressions Often Causing Problems for Norwegians
+English Words and Expressions Often Causing Problems for Norwegians
 (and maybe others too)
 
 ## Dress
