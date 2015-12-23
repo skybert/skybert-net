@@ -26,8 +26,8 @@ happily ever after:
 ```
 
 HTML5 compatible browsers, like [Mozilla Firefox](http://firefox.com)
-and [Google Chrome](http://chrome.google.com) will aid the user to
-enter a valid address:
+and [Google Chrome](http://chrome.google.com) will aid the user in
+entering a valid address:
 
 <img
   class="centered"
