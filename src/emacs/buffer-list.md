@@ -1,4 +1,4 @@
-title: An turbo charged buffer list
+title: A Turbo Charged Buffer List
 category: emacs
 tags: emacs
 date: 2015-12-14
