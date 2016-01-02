@@ -1,6 +1,6 @@
 title: A Turbo Charged Buffer List
 category: emacs
-tags: emacs
+tags: emacs, productivity
 date: 2015-12-14
 
 I'm experimenting using `helm-mini` instead of the standard
