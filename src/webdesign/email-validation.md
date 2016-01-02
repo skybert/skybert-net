@@ -1,17 +1,17 @@
-title: HTML5 email validation
+title: HTML5 Email Validation
 date: 2015-12-23
 category: webdesign
 tags: webdesign, html5
 
-With the advent of [HTML5](http://www.w3.org/TR/html5/), this is fast
-coming to a thing of the past and the browser can by itself provide a
-unified experience of all input field validation errors. For instance
-with emails, we would previously have to either write a beefy function
-in JavaScript or load a 3rd party library to give us validation
-addresses.
+Before the advent of [HTML5](http://www.w3.org/TR/html5/), you would
+have to write a beefy function in JavaScript or load a 3rd party
+library to give you proper validation of user entered values, like
+email addresses.
 
 HTML5 solves this by providing more legal values for the `type`
-attribute of the `<input/>` element.  However, with the
+attribute of the `<input/>` element. The browser uses this to give a
+consistent user interface and validation for all input fields.
+However, with the
 [email input type](http://www.w3.org/TR/html5/forms.html#e-mail-state-%28type=email%29)
 there's a caveat that most people are not aware of and which will
 potentially leave your system with lots of unusable email addresses.
