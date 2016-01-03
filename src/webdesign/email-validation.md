@@ -5,8 +5,8 @@ tags: webdesign, html5
 
 Before the advent of [HTML5](http://www.w3.org/TR/html5/), you would
 have to write a beefy function in JavaScript or load a 3rd party
-library to give you proper validation of user entered values, like
-email addresses.
+library to get proper validation of user entered values, like for
+instances, email addresses.
 
 HTML5 solves this by providing more legal values for the `type`
 attribute of the `<input/>` element. The browser uses this to give a
@@ -16,7 +16,7 @@ However, with the
 there's a caveat that most people are not aware of and which will
 potentially leave your system with lots of unusable email addresses.
 
-## HTML5 makes input type validation easy
+## HTML5 makes input validation easy
 
 Most people and frameworks, use `<input type="email"/>` and live
 happily ever after:
