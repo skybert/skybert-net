@@ -22,11 +22,13 @@ has a loop constructs which looks very similiar to C-style
 for-loops.
 
 
+```
 apple_array=("red" "yellow" "green")
 
 for (( i = 0; i &lt; ${#apple_array[@]}; i++ )); do
-echo "Apple number" $i "is" ${apple_array[$i]}
+  echo "Apple number" $i "is" ${apple_array[$i]}
 done
+```
 
 
 
