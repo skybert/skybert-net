@@ -27,9 +27,9 @@ assert_equals "One and one is two" 2 "three"
 ```bash_unit``` will output errors on the above tests:
 
 ```
-FAILED: The fruit is wrong: Expected &lt;apples&gt;, but was &lt;oranges&gt;
-FAILED: One and one is two: Expected &lt;2&gt;, but was &lt;3&gt;
-FAILED: One and one is two: Expected &lt;2&gt;, but was &lt;three&gt;
+FAILED: The fruit is wrong: Expected <apples>, but was <oranges>
+FAILED: One and one is two: Expected <2>, but was <3>
+FAILED: One and one is two: Expected <2>, but was <three>
 ```
 
 As you can see,```bash_unit``` supports strings and integers.
@@ -47,14 +47,14 @@ assert_equals "One and one is two" 2 2
 Which then produces:
 
 ```
-PASSED: The fruit is wrong: Expected &lt;apples&gt; and got &lt;apples&gt;
-PASSED: One and one is two: Expected &lt;2&gt; and got &lt;2&gt;
-PASSED: One and one is two: Expected &lt;2&gt; and got &lt;2&gt;
+PASSED: The fruit is wrong: Expected <apples> and got <apples>
+PASSED: One and one is two: Expected <2> and got <2>
+PASSED: One and one is two: Expected <2> and got <2>
 ```
 
 Happy unit testing!
 
-h2. Note
+## Note
 
 After writing this library and living happily with it for a long time,
 I discovered [shunit2](https://github.com/kward/shunit2) and have used
