@@ -94,10 +94,20 @@ This will output the results diretly in the shell so that you
 instantly can use it, piping the output to another process as you'd do
 with any other shell command.
 
-## Check the encoding and collation for the entire DB schema
+## Check the default encoding and collation for all DB schemas
 
 ```
-select * from information_schema.schemata where schema_name = "ece5db";
+mysql> select schema_name, default_character_set_name,
+ default_collation_name from information_schema.schemata;
++--------------------+----------------------------+------------------------+
+| schema_name        | default_character_set_name | default_collation_name |
++--------------------+----------------------------+------------------------+
+| information_schema | utf8                       | utf8_general_ci        |
+| ece5db             | utf8                       | utf8_general_ci        |
+| kodak              | utf8                       | utf8_general_ci        |
+| test               | latin1                     | latin1_swedish_ci      |
++--------------------+----------------------------+------------------------+
+
 ```
 
 ## Check the encoding and collation for a given column
