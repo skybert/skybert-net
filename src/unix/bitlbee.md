@@ -45,3 +45,23 @@ opposed to the```/nick``` command:
 
     channel myroom set nick "Torstein Krause Johansen"
 
+## Add HipChat chat room
+
+```
+chat add <bitlbee-account-id> <hipchat-id>_<hipchat-room-name>@conf.hipchat.com #<id>
+```
+
+My HipChat account set up in Bitlbee is called "hipchat", my company's
+HipChat ID is 12334 and the HipChat room is called "myroom". If you're
+uncertain about this funny lookin gaddress, the exact Jabber reference
+string (JID) can be found on the room page on the HipChat web
+interface under https://mycompany.hipchat.com/rooms
+
+e.g.:
+```
+chat add hipchat 12345_myroom@conf.hipchat.com #myroom
+```
+
+I call my Bitlbee IRC channels the same as they're called in HipChat,
+thus `#myroom` here, but of course, you can call it whatever you want
+😉
