@@ -40,7 +40,7 @@ Added this to my project root POM
       </executions>
     </plugin>
   </profile>
-</profiles
+</profiles>
 ```
 
 Then ran:
