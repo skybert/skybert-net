@@ -40,20 +40,19 @@ You may to put this in your `$HOME/.bashrc`.
 
 ### MySQL, MariaDB & Percona
 
-The `utf8` typeThe MySQL `utf8` table & column encoding is not real
-UTF-8 Only 1-3 byte characters supported.  For full UTF-8 support, use
-the `utf8mb4` type instead.
+The MySQL `utf8` table & column encoding is not real UTF-8 Only 1-3
+byte characters supported.  For full UTF-8 support, use the `utf8mb4`
+type instead.
 
 #### Create new DBs with 4 byte UTF-8 character support
 
-```
+```sql
 mysql> create database mydb character set utf8mb4 collate utf8mb4_general_ci;
 ```
 
-> Note, MySQL's utf8 type isn't full UTF-8, you need to use utf8mb4.
-
 #### Check the default encoding and collation
-```
+
+```sql
 mysql> select schema_name, default_character_set_name, default_collation_name from information_schema.schemata;
 ```
 
@@ -127,3 +126,14 @@ minimum support UTF-8
 ## Editors
 
 ### Emacs
+
+```lisp
+(prefer-coding-system 'utf-8-unix)
+```
+
+### editorconf
+
+```conf
+[*]
+charset = utf-8
+```
