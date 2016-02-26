@@ -100,16 +100,6 @@ li {
   margin-left: 40px;
 }
 
-blockquote p:before {
-  content: '“';
-  font-size: 150%;
-}
-
-blockquote p:after {
-  content: '”';
-  font-size: 150%;
-}
-
 .reveal blockquote {
   display: block;
   position: relative;
