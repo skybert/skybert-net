@@ -37,7 +37,7 @@ you think about the user
 
 ---
 
-## Just
+## just
 a few lines
 
 ---
@@ -50,7 +50,7 @@ wget http://example.com/big-file.zip
 
 ---
 
-## And add some
+## and add some
 variables
 
 ---
@@ -65,8 +65,8 @@ wget ${url}
 
 ---
 
-## Hang on!
-Perhaps it takes a parameter?
+## hang on
+perhaps it takes a parameter?
 
 ---
 
@@ -85,7 +85,7 @@ wget ${url}
 
 ---
 
-## Wait a minute!
+## wait a minute
 could it make eggs too?
 
 ---
@@ -112,7 +112,7 @@ fi
 
 ---
 
-## Of course
+## of course
 I want logging
 
 ---
@@ -189,7 +189,8 @@ fi
 
 ---
 
-## example - The add-two command
+## example
+The add-two command
 
 ```
 bin/add-two
@@ -201,18 +202,25 @@ test/add-two-test.sh
 
 ## xunit
 
----
-
-### write
-your own
+Enter unit testing: [xunit](https://en.wikipedia.org/wiki/XUnit)
 
 ---
 
-### what's out there
+### write your own
+
+I implemented my own unit testing library
+
+---
+
+### and then
+I discovered what's out there
 
 ---
 
 #### shunit2
+
+[shunit2](https://github.com/zandev/shunit2) provides all the methods
+you know from JUnit:
 
 ```sh
 assertEquals
@@ -256,6 +264,17 @@ test_add_2_to_3_yields_5() {
 
 Check out source at <a
 href="https://gitlab.com/skybert/gone">https://gitlab.com/skybert/gone</a>
+
+---
+
+## Continuous integration
+
+When someone checks in code, run all tests to make sure he/she hasn't
+broken anything.
+
+---
+
+## Why shouldn't we do this for BASH scripts too?
 
 ---
 
