@@ -33,32 +33,113 @@ you think about the user
 
 ---
 
-# How a shell script starts
+## How a shell script starts
 
 ---
 
-## just
+## Just
 a few lines
 
 ---
 
-## and add some
+```sh
+mkdir -p /var/lib/app/data
+cd /var/lib/app/data
+wget http://example.com/big-file.zip
+```
+
+---
+
+## And add some
 variables
 
 ---
 
-## hang on
-perhaps it takes a parameter?
+```sh
+url=http://example.com/big-file.zip
+data_dir=/var/lib/app/data
+mkdir -p ${data_dir}
+cd ${data_dir}
+wget ${url}
+```
 
 ---
 
-## wait a minute
+## Hang on!
+Perhaps it takes a parameter?
+
+---
+
+```sh
+if [ $1 ]; then
+   url=$1
+else
+  url=http://example.com/big-file.zip
+fi
+
+data_dir=/var/lib/app/data
+mkdir -p ${data_dir}
+cd ${data_dir}
+wget ${url}
+```
+
+---
+
+## Wait a minute!
 could it make eggs too?
 
 ---
 
-## of course
+```sh
+download_url() {
+  data_dir=/var/lib/app/data
+  mkdir -p ${data_dir}
+  cd ${data_dir}
+  wget ${url}
+}
+
+make_egg() {
+  make "$1"
+}
+
+if [[ $1 == "http"* ]; then
+  url=http://example.com/big-file.zip
+  download_url
+else
+  make_egg "$1"
+fi
+```
+
+---
+
+## Of course
 I want logging
+
+---
+
+```sh
+log_file=/var/log/$(basename $0).log
+
+download_url() {
+  data_dir=/var/lib/app/data
+  mkdir -p ${data_dir}
+  cd ${data_dir}
+  wget ${url}
+  echo "Downloaded $url to $data_dir ..." >> $log_file
+}
+
+make_egg() {
+  echo "Making $1 ..." >> $log_file
+  make "$1"
+}
+
+if [[ $1 == "http"* ]; then
+  url=http://example.com/big-file.zip
+  download_url
+else
+  make_egg "$1"
+fi
+```
 
 ---
 
@@ -67,14 +148,49 @@ it runs as the correct user
 
 ---
 
+```sh
+log_file=/var/log/$(basename $0).log
+
+download_url() {
+  data_dir=/var/lib/app/data
+  mkdir -p ${data_dir}
+  cd ${data_dir}
+  wget ${url}
+  echo "Downloaded $url to $data_dir ..." >> $log_file
+}
+
+make_egg() {
+  echo "Making $1 ..." >> $log_file
+  make "$1"
+}
+
+if [[ $(whoami) == root ]]; then
+  echo "$(basename $0) cannot run as root"
+  exit 1
+fi
+
+if [[ $1 == "http"* ]; then
+  url=http://example.com/big-file.zip
+  download_url
+else
+  make_egg "$1"
+fi
+```
+
+---
+
 # Code structure
-- bin
-- lib
-- test
+```
+.
+├── bin
+├── lib
+└── test
+```
 
 ---
 
 ## example - The add-two command
+
 ```
 bin/add-two
 lib/add-two-lib.sh
