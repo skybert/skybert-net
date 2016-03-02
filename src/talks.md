@@ -14,6 +14,12 @@ skills up a notch.
 - 💻 Slide sources can be
 [found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/bash-foo).
 
+## Test Driven Development in BASH
+
+- 📖 [Slides can be found here](bash-tdd).
+- 💻 Slide sources can be
+  [found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/bash-tdd).
+
 ## Character sets & encodings
 
 *Squares and question marks: An adventure into the world of character
