@@ -179,7 +179,10 @@ fi
 
 ---
 
-# Code structure
+## Proposed code structure
+
+Break your code up into these folders:
+
 ```
 .
 ├── bin
@@ -190,12 +193,17 @@ fi
 ---
 
 ## example
-The add-two command
+The super-extremely-useful `add-two` command:
 
 ```
-bin/add-two
-lib/add-two-lib.sh
-test/add-two-test.sh
+.
+├── bin
+│   └── add-two
+├── lib
+│   └── add-two-lib.sh
+└── test
+    ├── add-two-test.sh
+    └── run-tests.sh
 ```
 
 ---
@@ -208,16 +216,16 @@ Enter unit testing: [xunit](https://en.wikipedia.org/wiki/XUnit)
 
 ### write your own
 
-I implemented my own unit testing library
+First, I implemented my own unit testing library...
 
 ---
 
-### and then
-I discovered what's out there
+### ... and then
+I discovered what's out there 😊
 
 ---
 
-#### shunit2
+### shunit2
 
 [shunit2](https://github.com/zandev/shunit2) provides all the methods
 you know from JUnit:
@@ -262,8 +270,9 @@ test_add_2_to_3_yields_5() {
 
 ## Seeing is believing
 
-Check out source at <a
+Check out this example project: <a
 href="https://gitlab.com/skybert/gone">https://gitlab.com/skybert/gone</a>
+
 
 ---
 
@@ -283,5 +292,11 @@ broken anything.
 <img src="tdd-bash-ci-jenkins.png"
      alt="tdd-bash-ci-jenkins"
      title="BASH CI on Jenkins"/>
+
+---
+
+## That's it, now get coding! 😊
+
+— [\@torsteinkrause](http://twitter.com/torsteinkrause)
 
 ---

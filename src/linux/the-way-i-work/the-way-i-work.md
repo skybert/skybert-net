@@ -5,6 +5,10 @@ date: 2015-07-20
 
 <img src="/graphics/2015/my-desktop.png" alt="my desktop" class="centered"/>
 
+<img src="/graphics/2016/debian-logo.jpg"
+  style="float: right;"
+  alt="fluxbox"
+/>
 The most important part of my setup is my
 [Thinkpad X1 Carbon](http://www.laptopmag.com/reviews/laptops/lenovo-thinkpad-x1-carbon-2015)
 laptop with i7 CPU and 8 GB RAM running
@@ -24,6 +28,10 @@ on github.
   style="float: left;"
   alt="fluxbox"
 />
+
+After the laptop itself, my favourite piece of equipment is my
+[Happy Hacking Professional 2](https://elitekeyboards.com/products.php?sub=pfu_keyboards,hhkbpro2&pid=pdkb400b)
+keyboard.
 
 [Fluxbox](http://fluxborg.org) gives me a lightning fast and is
 extremely configurable window manager while yet being pretty to look

@@ -13,6 +13,7 @@ skills up a notch.
 - 📖 [Slides can be found here](bash-foo).
 - 💻 Slide sources can be
 [found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/bash-foo).
+- 💻 [Example code can be found here](https://gitlab.com/skybert/gone)
 
 ## Test Driven Development in BASH
 
