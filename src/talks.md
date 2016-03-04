@@ -34,9 +34,18 @@ sets and encodings* is a talk I originally wrote for
 - 💻 Sources for both slides and example Java code can be
 [found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/charset-and-encoding).
 
+## Git for Perforcers
+
+*Git for Perforcers* is a crash course in Git for developers used to
+Perforce (also known as p4).
+
+- 📖 [Slides can be found here](git-for-perforcers).
+- 💻 Slide sources can be
+[found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/git-for-perforcers).
+
+
 ## Maven dependencies
 
 - 📖 [Slides can be found here](maven-dependencies).
 - 💻 Slide sources can be
 [found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/maven-dependencies).
-
