@@ -1,8 +1,20 @@
-title: Ensure that your full stack is UTF-8 compliant
+title: UTF-8 for the Impatient
 date: 2016-02-09
 
-UTF-8 is for all use cases I've seen, the best Unicode encoding and
+> This is a no nonsense guide to get your full stack Unicode
+> compliant. No more squares, no more question marks.
+
+To get you off to a good start, I'll mention that
+[Unicode is a character set and UTF-8 is one of several encodings for it](http://skybert.net/talks/charset-and-encoding/).
+For all practical use cases, UTF-8 is the best Unicode encoding and
 the one you shold use throughout your stack.
+
+I highly recommend reading the
+[UTF-8 and Unicode FAQ for Unix/Linux](http://www.cl.cam.ac.uk/~mgk25/unicode.html)
+guide and browse the beautifully presented
+[Unicode Character Table](http://unicode-table.com/en/), but for now,
+let's jump straight into the nitty gritty details on how to turn your
+stack, your app, into a fully Unicode speaking and reading system.
 
 ## UNIX, Linux & Cygwin
 
@@ -12,7 +24,7 @@ Be sure to have at least one UTF-8 locale.
 
 See all UTF-8 locales on your system:
 
-```
+```bash
 $ locales -a | grep UTF-8
 ```
 
@@ -27,14 +39,49 @@ them:
 Set your LANG and LC_ALL environment variables to one of the UTF-8
 locales available on your system.
 
-```
+```bash
 export LANG=en_GB.utf8
 export LC_ALL=en_GB.utf8
 ```
 
 You may to put this in your `$HOME/.bashrc`.
 
+### Terminal
+
+<img class="right" src="/graphics/2016/konsole.png" alt="konsole"/>
+
+Your terminal emulator must have support for Unicode. I love
+[urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html), even though
+it only support 3 byte UTF-8 characters. for 4 byte UTF-8, you have to
+use terminals like
+[gnome-terminal](https://wiki.gnome.org/Apps/Terminal) or
+[konsole](https://konsole.kde.org/).
+
 ### Fonts
+
+If you're seeing squares instead of characters, it means that the font
+you're using is missing a glyph to represent that character.
+
+The trick is to pick a font which has support for the characters that
+you need. There are a good number of fonts which support everything up
+to and including the 3 byte UTF-8 characters, but not the 4 byte
+characters (like 👻). In some contexts, you can have a primary font and
+several fall back fonts which may provide the more exotic characters.
+
+My favourite fonts at the moment are:
+
+- Adobe Source Code Pro (manual installation)
+- Terminus (```apt-get install xfonts-terminus```)
+
+To use `Adobe Source Code Pro`, I start my `urxvt` like this:
+```bash
+urxvt -fn 'xft:Source Code Pro:pixelsize=14'
+```
+
+and my emacs:
+```lisp
+(set-frame-font "-adobe-Source Code Pro-semibold-normal-normal-*-*-*-*-*-m-0-iso10646-1")
+```
 
 ## DB
 
@@ -60,7 +107,7 @@ mysql> select schema_name, default_character_set_name, default_collation_name fr
 
 ### Resource bundles
 
-Contrary to popular mythin, it *is* possible to use UTF-8 in your
+Contrary to popular myth, it *is* possible to use UTF-8 in your
 `.properties` files (aka resource bundles).  You just need to do this:
 
 ```java
@@ -85,7 +132,7 @@ Have you ever seen this one?
 
 Just add this to your POM to get rid of it:
 
-```
+```xml
 <properties>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 </properties>
@@ -96,11 +143,11 @@ than `\u2665`
 
 ### JDBC
 Add the following to your JDBC connection string:
-```
+```html
 useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"
 ```
 
-## JVM parameters
+### JVM parameters
 ```
 -Dsun.jnu.encoding=utf-8
 -Dfile.encoding=utf-8
@@ -108,7 +155,7 @@ useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"
 
 ## HTML
 
-```
+```html
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 ```
 
@@ -122,6 +169,13 @@ The [XML specification](http://www.w3.org/TR/xml/#charencoding) says
 the standard encoding is
 [UTF-8](http://en.wikipedia.org/wiki/UTF-8). All XML parsers must as a
 minimum support UTF-8
+
+
+## Server Sent Events (SSE)
+
+The Server Sent Events are allways `UTF-8` encoded, the specifications
+states that
+["Event streams are always decoded as UTF-8. There is no way to specify another character encoding."](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events)
 
 ## Editors
 
