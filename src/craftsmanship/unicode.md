@@ -78,11 +78,6 @@ To use `Adobe Source Code Pro`, I start my `urxvt` like this:
 urxvt -fn 'xft:Source Code Pro:pixelsize=14'
 ```
 
-and my emacs:
-```lisp
-(set-frame-font "-adobe-Source Code Pro-semibold-normal-normal-*-*-*-*-*-m-0-iso10646-1")
-```
-
 ## DB
 
 ### MySQL, MariaDB & Percona
@@ -120,6 +115,16 @@ public String getPropertyFromUTF8File(final String pKey)
   return new String(value.getBytes("ISO-8859-1"), "UTF-8");
 }
 ```
+
+### File encoding
+
+The encoding of the actual Java source files only affect the
+characters which you write in the `.java` file. The file encoding does
+not affect in any way the data that flows through the Java program you
+write.
+
+Encoding the `.java` file only ensures that you can use any character
+you'd like when writing author string and JavaDoc comments.
 
 ### Maven
 
@@ -173,16 +178,58 @@ minimum support UTF-8
 
 ## Server Sent Events (SSE)
 
-The Server Sent Events are allways `UTF-8` encoded, the specifications
-states that
-["Event streams are always decoded as UTF-8. There is no way to specify another character encoding."](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events)
+The Server Sent Events are
+[always UTF-8 encoded]((https://html.spec.whatwg.org/multipage/comms.html#server-sent-events)
+
+
+## Converting a file to UTF-8 on the command line
+
+To convert one (or a thousand) text files to use UTF-8 on the command
+line, use the standard [iconv](http://linux.die.net/man/1/iconv)
+utility, it's a part of the GNU C library. On Debian, it's provided by
+the `libc-bin` package:
+
+```bash
+$ iconv -f ISO-8859-1 -t UTF-8 my-file.xml -o my-file.xml.utf8
+```
+
+## Checking encoding of a text file from the command line
+
+```bash
+$ file -i /tmp/test.txt.latin1
+/tmp/test.txt.latin1: text/plain; charset=iso-8859-1
+```
 
 ## Editors
 
+### VIM
+
+On my machine, using VIM 7.4 and UTF-8 compatible locale settings (see
+the notes on `LC_ALL` above), files that contain non-ASCII characters
+are automatically saved using UTF-8 encoding.
+
+If you prefer to be explicit about it, to always use UTF-8, add this
+to your `.vimrc`:
+
+```conf
+set encoding=utf-8
+set fileencoding=utf-8
+```
+
 ### Emacs
+
+Emacs will respect whatever encoding an existing file uses, but you
+can ask it to prefer UTF-8 when it has a choice (like creating a new
+file):
 
 ```lisp
 (prefer-coding-system 'utf-8-unix)
+```
+
+You may also ask Emacs to use a specific Unicode friendly font:
+
+```lisp
+(set-frame-font "-adobe-Source Code Pro-semibold-normal-normal-*-*-*-*-*-m-0-iso10646-1")
 ```
 
 ### editorconf
