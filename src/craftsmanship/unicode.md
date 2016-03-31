@@ -119,12 +119,9 @@ public String getPropertyFromUTF8File(final String pKey)
 ### File encoding
 
 The encoding of the actual Java source files only affect the
-characters which you write in the `.java` file. The file encoding does
-not affect in any way the data that flows through the Java program you
-write.
-
-Encoding the `.java` file only ensures that you can use any character
-you'd like when writing author string and JavaDoc comments.
+characters which you write in the `.java` file itself. The file
+encoding does not affect in any way the data that flows through the
+Java program you write.
 
 ### Maven
 
@@ -158,7 +155,32 @@ useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"
 -Dfile.encoding=utf-8
 ```
 
+## HTTP
+
+HTTP calls a character encoding, character set (!):
+
+```
+Content-Type: text/html; charset=iso-8859-1
+```
+
+The one to blame is MIME, the specification which gives bold text and
+pictures with our emails. MIME,
+[RFC 2045, May 1996](https://tools.ietf.org/html/rfc2045), used the
+term "charset", so HTTP 1.0
+[RFC 1945, May 1996](http://tools.ietf.org/html/rfc1945) wanting to
+keep the terminology consistent, also went
+with this term. It did add a note, however:
+
+> Note: This use of the term "character set" is more commonly referred
+> to as a "character encoding." However, since HTTP and MIME share the
+> same registry, it is important that the terminology also be shared.
+
+No wonder people get confused!
+
 ## HTML
+
+Since HTTP uses `charset` to mean character encoding, HTML does too:
+
 
 ```html
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -166,20 +188,21 @@ useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"
 
 ## XML
 
-```
-<?xml version="1.0" encoding="utf-8"?>
-```
 
 The [XML specification](http://www.w3.org/TR/xml/#charencoding) says
 the standard encoding is
 [UTF-8](http://en.wikipedia.org/wiki/UTF-8). All XML parsers must as a
 minimum support UTF-8
 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+```
+
 
 ## Server Sent Events (SSE)
 
 The Server Sent Events are
-[always UTF-8 encoded]((https://html.spec.whatwg.org/multipage/comms.html#server-sent-events)
+[always UTF-8 encoded](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events)
 
 
 ## Converting a file to UTF-8 on the command line
