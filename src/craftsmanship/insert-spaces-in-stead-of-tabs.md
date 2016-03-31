@@ -47,6 +47,10 @@ Be sure to include this in your```.vimrc```:
     set softtabstop=2
     set expandtab
 
+### Notepad++
+
+Settings → Preferences → Tab Settings → Replace by space (checkbox)
+
 ## Replacing all TABs with spaces in a file
 
 You can either copy a TAB character in your file and use the
