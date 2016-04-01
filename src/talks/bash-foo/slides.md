@@ -419,5 +419,5 @@ $ man -k ssh
 <div style="margin-left: auto; margin-right: auto; width: 10em">
 <img src="../lib/twitter.svg" style="box-shadow:none;
 margin:0px; border:none;"/>
-<a style="" href="https://twitter.com/torsteinkrausew">@torsteinkrause</a>
+<a style="" href="https://twitter.com/torsteinkrause">@torsteinkrause</a>
 </div>
