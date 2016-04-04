@@ -1,4 +1,5 @@
 title: Numbers in BASH
+date: 2015-11-18
 category: bash
 tags: unix, bash
 

@@ -1,4 +1,5 @@
 title: Taming NetworkManager
+date: 2016-04-12
 category: linux
 tags: network, linux
 

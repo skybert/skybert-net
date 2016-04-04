@@ -1,5 +1,7 @@
 title: Delete artifacts in Nexus based on version
 date: 2016-04-04
+category: java
+tags: java, nexus, maven
 
 If you just want to delete one or two artifacts from Nexus, the web
 interface is fine. However, if you've got 30+ artifacts that you want
