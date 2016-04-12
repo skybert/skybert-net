@@ -5,9 +5,9 @@ date: 2015-07-20
 
 <img src="/graphics/2015/my-desktop.png" alt="my desktop" class="centered"/>
 
-<img src="/graphics/2016/debian-logo.jpg"
+<img src="/graphics/2016/debian-logo.png"
   style="float: right;"
-  alt="fluxbox"
+  alt="debian"
 />
 The most important part of my setup is my
 [Thinkpad X1 Carbon](http://www.laptopmag.com/reviews/laptops/lenovo-thinkpad-x1-carbon-2015)
@@ -62,6 +62,17 @@ where the lower 3 desktop row is the main row whereas the row above is
 offloading space for the applications on the main row. With three
 physical screens, that's in practice 18 virtual screens, which suits
 me just fine.
+
+I primarily use the mouse for image editing and web browsing. Thus, I
+have a number of shortcuts configured in Fluxbox, including:
+maximise/minimise window, turn on/off window decorations (to get more
+screen real estate), navigate between workspaces, move & resise
+windows, switch between keyboard layouts (American is the best for
+programming, but i also need Norwegian and German for writing emails)
+and launch the most important applications (which normally just means
+`urxvt` and I then start applications from there) and jump to any open
+application on any workspace (search type search).
+
 
 ## talk 💬
 The `talk` workspace has the different chat clients which I haven't
@@ -125,9 +136,9 @@ notification area of your desktop toolbar. You can find my
 When I'm not in Emacs or surfing the web with my web browser, I'm in
 the shell. My terminal of choice is
 [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) which is
-lightweight and at the same time has full Unicode support, is
-extendable with Perl and supports all features you might be using in
-xterm or aterm.
+lightweight and at the same time has good Unicode support (up to 3
+byte UTF-8 only, not 4 byte characters), is extendable with Perl and
+supports all features you might be using in xterm or aterm.
 
 <img class="right" src="/graphics/2015/clipit.svg" alt="clipit"/> To
 sync the clipboard with urxvt, I have the following [perl snippet](
