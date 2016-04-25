@@ -1,6 +1,7 @@
 title: Seeing all SQL generated sent from your Java app
 category: java
 tags: java, jdbc, logging
+date: 2016-04-25
 
 Whatever framework you're using for connection to the DB, or indeed
 using plain JDBC, viewing the full SQL that the app is sending to the
