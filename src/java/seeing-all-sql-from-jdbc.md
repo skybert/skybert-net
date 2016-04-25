@@ -11,7 +11,7 @@ succumb to using heavy GUI tools to get a hold of that darned SQL
 statements.
 
 However, there's a tried and tested library called
-[log4CBC](https://github.com/arthurblake/log4jdbc)` which gives us
+[log4jdbc](https://github.com/arthurblake/log4jdbc)` which gives us
 what we often want: the possibility to log all the actual SQL produced
 by the database layer and view this in plain sight without having to
 fire up a memory hogging beast of a database viewer.
