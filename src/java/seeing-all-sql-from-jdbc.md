@@ -1,0 +1,62 @@
+title: Seeing all SQL generated sent from your Java app
+category: java
+tags: java, jdbc, logging
+
+Whatever framework you're using for connection to the DB, or indeed
+using plain JDBC, viewing the full SQL that the app is sending to the
+database, and by full, I mean full SQL including the values, is
+hidden, forcing you to either guess what the complete SQL is, or
+succumb to using heavy GUI tools to get a hold of that darned SQL
+statements.
+
+However, there's a tried and tested library called
+[log4CBC](https://github.com/arthurblake/log4jdbc)` which gives us
+what we often want: the possibility to log all the actual SQL produced
+by the database layer and view this in plain sight without having to
+fire up a memory hogging beast of a database viewer.
+
+In my experience, this is a little known gem, so I thought I'd write
+up how to get it working, so can see just how easy it is and make your
+application that much more transparent.
+
+## Put the log4jdbc driver on the app server class path
+
+I'm using Tomcat 7 at the moment, so this means a quick `cp` to
+Tomcat's `lib` directory:
+```
+$ cp log4jdbc-*.jar /opt/tomcat-engine/lib
+```
+
+## Configure your app server to use the log4jdbc spy driver
+
+For Tomcat 7, this involved two changes: changing the driver name and
+changing the JDBC URL inside the `<Resource/>` element where I've
+configured the database handles:
+
+First, prepaent `log4jdbc` to the JDBC string:
+
+```diff
++        url="jdbc:log4jdbc:mysql://localhost:3306/mydb"
+-        url="jdbc:mysql://localhost:3306/mydb"
+```
+
+Then, set the driver class name to be the lg4jdbc spy driver:
+
+```diff
++        driverClassName="net.sf.log4jdbc.DriverSpy"
+-        driverClassName="com.mysql.jdbc.Driver"
+```
+
+## Turn on logging on the log4jdbc classes
+
+For Escenic Content Engine, we're using log4j, which is by default
+located at `/etc/escenic/common/trace.properties`:
+
+```conf
+######################################################################
+# sql logging
+log4j.appender.SQL=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.SQL.File=/var/log/escenic/${com.escenic.instance}-sql
+log4j.appender.SQL.layout = org.apache.log4j.PatternLayout
+log4j.appender.SQL.layout.ConversionPattern = %d [%t] %-5p %c- %m%n
+```
