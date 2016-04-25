@@ -60,4 +60,18 @@ log4j.appender.SQL=org.apache.log4j.DailyRollingFileAppender
 log4j.appender.SQL.File=/var/log/escenic/${com.escenic.instance}-sql
 log4j.appender.SQL.layout = org.apache.log4j.PatternLayout
 log4j.appender.SQL.layout.ConversionPattern = %d [%t] %-5p %c- %m%n
+
+log4j.category.jdbc.sqlonly=DEBUG, SQL
+log4j.category.jdbc.sqltiming=ERROR, SQL
+log4j.additivity.jdbc=false
 ```
+
+## All the logs you can muster
+
+With this in place and after restarting Tomcat (Escenic users do `ece
+restart`), you now have a new log file with all the SQL statements, in
+full, including all the values and whatever non-sense your database
+framework has added to your queries (yes, you can even see what
+Hibernate has done to your simple bean query)
+
+Enjoy!
