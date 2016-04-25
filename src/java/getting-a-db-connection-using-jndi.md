@@ -1,5 +1,6 @@
 date:    2012-10-07
 category: java
+tags: java, jndi, jdbc
 title: Getting a Database Connection Using JNDI
 
 I've looked this up enough times, so I thought I'd jott this
