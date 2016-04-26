@@ -33,8 +33,8 @@ log4j.logger.org.hibernate.type=TRACE
 
 ## JDBC driver wrapper
 
-Use [https://code.google.com/p/log4jdbc/](log4jdbc) which gives you
-the full SQL without any fuss.
+Use [log4jdbc](https://github.com/arthurblake/log4jdbc) which gives
+you the full SQL without any fuss.
 
 Just turn on these log categories:
 
