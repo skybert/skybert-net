@@ -56,8 +56,10 @@ located at `/etc/escenic/engine/common/trace.properties`:
 ```conf
 ######################################################################
 # sql logging
-log4j.appender.SQL=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.SQL=org.apache.log4j.RollingFileAppender
 log4j.appender.SQL.File=/var/log/escenic/${com.escenic.instance}-sql
+log4j.appender.SQL.MaxFileSize=100MB
+log4j.appender.SQL.MaxBackupIndex=1
 log4j.appender.SQL.layout = org.apache.log4j.PatternLayout
 log4j.appender.SQL.layout.ConversionPattern = %d [%t] %-5p %c- %m%n
 
@@ -65,6 +67,14 @@ log4j.category.jdbc.sqlonly=DEBUG, SQL
 log4j.category.jdbc.sqltiming=ERROR, SQL
 log4j.additivity.jdbc=false
 ```
+
+I'm using a rolling file appender to rotate on size rather than a
+daily one that I normally use. This is because it fills up pretty
+quickly, easily reaching hundreds and gigabytes worth of log data.
+
+You just need one of the two loggers. The `sqltiming` has the same
+information as `sqlonly`, with the added benefit of seeing the time
+each query took.
 
 ## All the logs you can muster
 
