@@ -9,7 +9,7 @@
 
 ---
 
-## Aren't you the Linux guy?
+## Aren't you the Linux guy? 🐧
 
 ---
 
@@ -35,7 +35,7 @@
 
 ---
 
-## Belbin
+## Meredith Belbin
 
 <img style="float:none;" src="belbin.jpg"/>
 
@@ -260,11 +260,12 @@
 
 ---
 
-## Same person, different roles in different teams?
+## Same person,
+### different roles in different teams?
 
 ---
 
-## Belbin Self Perception Inventory
+## Belbin Team Role Self Perception Inventory
 
 ---
 
