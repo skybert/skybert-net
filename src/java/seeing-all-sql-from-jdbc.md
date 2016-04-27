@@ -76,6 +76,29 @@ You just need one of the two loggers. The `sqltiming` has the same
 information as `sqlonly`, with the added benefit of seeing the time
 each query took.
 
+## Filtering of SQL statements
+
+It's possible to tweak which kinds of SQL statements are being logged
+by setting any of these to JVM parameters `true` or `false`. Default
+is `false`.
+
+- `log4jdbc.dump.sql.select`
+- `log4jdbc.dump.sql.insert`
+- `log4jdbc.dump.sql.update`
+- `log4jdbc.dump.sql.delete`
+- `log4jdbc.dump.sql.create`
+
+For Escenic Content Engine, this means editing
+e.g. `/etc/escenic/ece-engine1.conf` and setting the following to turn
+off `SELECT` statements:
+
+```
+JAVA_OPTS="
+  ${JAVA_OPTS}
+  -Dlog4jdbc.dump.sql.select=false
+"
+```
+
 ## All the logs you can muster
 
 With this in place and after restarting Tomcat (Escenic users do `ece
