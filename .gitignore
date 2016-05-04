@@ -1,1 +1,3 @@
-src/talks/bash-foo/index.html
+src/talks/**/*.jpg
+src/talks/**/*.png
+src/talks/**/index.html
