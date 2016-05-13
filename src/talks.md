@@ -49,3 +49,9 @@ Perforce (also known as p4).
 - 📖 [Slides can be found here](maven-dependencies).
 - 💻 Slide sources can be
 [found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/maven-dependencies).
+
+## How to compose a perfect team
+
+- 📖 [Slides can be found here](belbin).
+- 💻 Slide sources can be
+[found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/belbin).
