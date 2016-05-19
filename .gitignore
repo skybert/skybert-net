@@ -1,3 +1,6 @@
 src/talks/**/*.jpg
 src/talks/**/*.png
 src/talks/**/index.html
+output
+conf/cache
+*.pyc
