@@ -11,14 +11,11 @@
 
 ## Aren't you the Linux guy? 🐧
 
----
-
-
-## MSc in Human Resource Management
-
-### University of Stirling
-
 <img style="border: none; float:right;" src="stirling.png"/>
+
+### MSc in Human Resource Management
+#### University of Stirling
+
 
 
 ---
@@ -53,7 +50,23 @@
 
 ---
 
-## Perhaps the most famous model
+## Sounds familiar, techies?
+
+---
+
+## Scrum
+
+> “At the sprint retrospective, the team:
+
+> Reflects on the past sprint, identifies and agrees on continuous
+> process improvement actions.”
+
+—Wikipedia
+
+---
+
+## Perhaps
+### the most famous motivation model
 
 ---
 
@@ -62,16 +75,27 @@
 
 ---
 
-## According to Abraham
+## Abraham says
 
 > “Needs which are satisified are no longer motivators”
 
 ---
 
-## According to Abraham
+## Abraham says
 
 > “This means that managers who constantly provide the same rewards
 > cannot expect increasing levels of motivation from their staff”
+
+---
+
+## Fredrerick Herzberg
+
+Asked people to tell him
+
+### 2 stories from work:
+
+- A **positive** experience from work
+- A **negative** experience from work
 
 ---
 
@@ -84,56 +108,59 @@
 ---
 
 ## Motivators
-- achievement
-- recognition
-- work itself
-- responsibility
-- advancement
+- Achievement
+- Recognition
+- Work itself
+- Responsibility
+- Advancement
 
 ---
 
 ## Hygiene factors
 
-- company policy and administration
-- supervision
-- inter-personal relations
-- money
-- status
-- security
+- Company policy and administration
+- Supervision
+- Inter-personal relations
+- Money
+- Status
+- Security
 
 ---
 
 ## Two gentlemen extremely influential
-### to the way we work
+### on the way we organise work
 
 ---
 
 ### Fredrick Winslow Taylor
 
-<img style="border: none; float:left;" src="taylor.jpg"/>
+<img style="border: none; float:right;" src="taylor.jpg"/>
+
+Introduced *Scientific management*
 
 ---
 
 ### Henry T. Ford
 
-<img style="border: none; float:left;" src="ford.jpg"/>
+<img style="border: none; float:right;" src="ford.jpg"/>
 
+Mass production of cars
 
 ---
 
-## Ford conquered the market
+## Ford conquered the world
 
 - Ford is famous implementing scientific management
-- the flip side was alienation
-- job dissatisfaction
+- The flip side was *alienation*
+- Job dissatisfaction
 
 ---
 
-## Introduced this thing call teamworking
+## Introduced this thing called teamworking
 
-- teamworking first introduced in the early 1980s by Volvo, Toyota
+- Teamworking first introduced in the early 1980s by Volvo, Toyota
   and General Foods.
-- now everyone does it
+- Now everyone does it
 
 ---
 
@@ -200,6 +227,16 @@ Western Electric, 1924-1932
 
 ---
 
+## That's it
+✏ torstein @ escenic dot com
+
+---
+
+## Next time:
+### Comparing cultures
+
+---
+
 ## References
 
 → Hackman, J. Richard (1987). "The design of work teams"
@@ -213,12 +250,3 @@ Western Electric, 1924-1932
 → Taylor, Frederick Winslow, The Principles of Scientific Management, 1911
 
 ---
-
-## That's it
-✏ torstein @ escenic dot com
-
-## Next time:
-### Comparing cultures
-
----
-
