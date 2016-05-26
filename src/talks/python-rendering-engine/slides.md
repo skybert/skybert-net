@@ -12,7 +12,7 @@ The [best scripting language](http://python.org) in the world IMHO 😊
 
 ## Jinja2
 
-[Hugely popular template language](http://jinja.pocoo.org/) in the Python world.
+[Hugely popular templating language](http://jinja.pocoo.org/) in the Python world.
 
 ---
 
@@ -48,7 +48,7 @@ if __name__ == '__main__':
 <div id="body">
   {% for line in data.fields.body %}
     <p>{{ line[1] }}</p>
-  {% endif %}
+  {% endfor %}
 </div>
 ```
 
@@ -62,7 +62,7 @@ if __name__ == '__main__':
 
 ## Extensions in Python example
 
-Goal: Want to create an HTML element ID based on the content item
+Goal: I want to create an HTML element ID based on the content item
 title. If the title is:
 
 > Rocking All over the World
