@@ -6,13 +6,19 @@ tags: java, jenkins, unix, nfs
 My notes on getting Jenkins to play nice.
 
 ## Device or resource busy
+
+Every now and then, I've encountered this on some Jenkins job and
+today I wanted to get to the bottom of it:
+
 ```
 java.nio.file.FileSystemException:
 /var/lib/jenkins/workspace/release-phase-2/src/common/.nfs000000000218264e00002879:
 Device or resource busy`
 ```
 
-First check what process is keeping this file open:
+As often is the case, a few Unix commands saved the day. First check
+what process is keeping this file open:
+
 ```
 $ lsof /var/lib/jenkins/workspace/release-phase-2/src/common/.nfs000000000218264e00002879
 COMMAND   PID    USER   FD   TYPE DEVICE SIZE/OFF     NODE NAME
@@ -37,3 +43,6 @@ build server):
 ```
 $ w | grep less
 ```
+
+The remedy was just to close the `less` session and re-run the Jenkins
+job. Easy when you know what's wrong. Really weird error otherwise 😊
