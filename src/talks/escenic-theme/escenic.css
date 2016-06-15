@@ -333,3 +333,10 @@ kbd.escenic {
 .reveal .slides .right {
   text-align: right;
 }
+
+.bottom-left {
+  position: absolute;
+  bottom: 80px;
+  left: 0px;
+}
+
