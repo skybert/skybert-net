@@ -55,3 +55,19 @@ Perforce (also known as p4).
 - 📖 [Slides can be found here](belbin).
 - 💻 Slide sources can be
 [found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/belbin).
+
+## What motivates a team?
+- 📖 [Slides can be found here](motivation).
+- 💻 Slide sources can be
+[found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/motivation).
+
+## Comparing cultures
+
+*Comparing cultures* is a fast paced talk on two famous models for
+comparing cultures. Being aware of our differences in motivation and
+values makes us more effective communicators and better
+collaborators.
+
+- 📖 [Slides can be found here](comparing-cultures).
+- 💻 Slide sources can be
+[found on github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/comparing-cultures).
