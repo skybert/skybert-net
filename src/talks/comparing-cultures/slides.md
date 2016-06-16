@@ -9,7 +9,9 @@
 
 ---
 
-## Aren't you the Linux guy? 🐧
+## Aren't you the Linux guy?
+
+<img src="tux.jpg" alt="jpg"/>
 
 ---
 
@@ -53,8 +55,9 @@
 
 ## Geert Hofstede
 
-- Studied **116 000** IBM employees in 50 countries
-- Discovered 4 + 1 dimensions of differences
+- Studied **116 000** IBM employees in 50 countries in the 1980s
+- One of the largest intercultural studies in the world
+- Discovered 5 dimensions of differences
 
 ---
 
@@ -206,6 +209,8 @@ The ability to pursue long-term and <span style="font-size:
 
 
 ## References
+
+→ [geert-hofstede.com](http://www.geert-hofstede.com)
 
 → [Hofstede's cultural dimensions theory](https://en.wikipedia.org/wiki/Hofstede's_cultural_dimensions_theory)
 
