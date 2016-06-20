@@ -58,6 +58,13 @@ Be sure this checkbox is **not** selected:
 <img src="/graphics/2016/2016-06-20-idea-no-tabs.png"
      alt="intellij idea no TABs"/>
 
+### Eclipse
+
+Be sure this checkbox **is** selected:
+
+<img src="/graphics/2016/2016-06-20-eclipse-no-tabs.png"
+     alt="Eclipse no TABs"/>
+
 ## Replacing all TABs with spaces in a file
 
 You can either copy a TAB character in your file and use the
