@@ -51,6 +51,13 @@ Be sure to include this in your```.vimrc```:
 
 Settings → Preferences → Tab Settings → Replace by space (checkbox)
 
+### IntelliJ IDEA
+
+Be sure this checkbox is **not** selected:
+
+<img src="/graphics/2016/2016-06-20-idea-no-tabs.png"
+     alt="intellij idea no TABs"/>
+
 ## Replacing all TABs with spaces in a file
 
 You can either copy a TAB character in your file and use the
@@ -61,14 +68,12 @@ use```sed```. The following examples conerts TABs
 with two spaces and should work on both Unix, Linux and
 Windows/Cygwin systems:
 
-    $ cat myfile.txt | sed 's/\t/  /g' > myfile.txt.spaces
-    $ mv myfile.txt.spaces myfile.txt
-
+    $ sed 's/\t/  /g' -i myfile.txt
 
 To do this on a number of files (Java files in the below
 example), you should be able to do:
 
-     $ find . -name "*.java" | while read f; do (cat $f | sed 's/\t/  /g' > $f.spaces ; mv $f.spaces $f); done
+     $ find . -name "*.java" | while read f; do (sed -i 's/\t/  /g' "$f"); done
 
 ## Becoming more aware of whitespace
 
@@ -79,4 +84,5 @@ You can easily turn on and off the display of whitespace with:
 
 ### IntelliJ IDEA
 IDEA has this in its General > Appearance settings:
+
 <img src="/graphics/2015/idea-show-whitespace.png" alt="intellij idea"/>
