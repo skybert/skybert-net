@@ -103,6 +103,10 @@ img.centered {
   font-family: monotype;
 }
 
+code {
+  font-weight: bolder;
+}
+
 pre {
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
   display: block;
