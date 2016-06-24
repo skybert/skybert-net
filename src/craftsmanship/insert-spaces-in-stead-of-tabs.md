@@ -30,7 +30,8 @@ real change intended by the developer.
 When a file has inconsistent indentation, it looks messy (in Java
 projects, this is often the XML files). When a file looks messy,
 people stop caring about it. It becomes a
-[broken window](http://en.wikipedia.org/wiki/Broken_windows_theory).
+[broken window](http://en.wikipedia.org/wiki/Broken_windows_theory)
+and the code will start to rot.
 
 ## Set up ALL your editors to insert spaces instead of TABs
 Be sure that all the editors you're using are set up to insert spaces
