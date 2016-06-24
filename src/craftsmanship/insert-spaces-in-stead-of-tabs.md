@@ -33,6 +33,9 @@ people stop caring about it. It becomes a
 [broken window](http://en.wikipedia.org/wiki/Broken_windows_theory)
 and the code starts to rot.
 
+There are also cases where TABs will break things, like YAML files
+which requires indentation to be spaces only.
+
 ## Set up ALL your editors to insert spaces instead of TABs
 Be sure that all the editors you're using are set up to insert spaces
 instead of TABs.
@@ -94,3 +97,8 @@ You can easily turn on and off the display of whitespace with:
 IDEA has this in its General > Appearance settings:
 
 <img src="/graphics/2015/idea-show-whitespace.png" alt="intellij idea"/>
+
+## No rule without exception
+
+There's one notable exception here, where TABs not only is allowed,
+but even required and that's with `Makefile`s.
