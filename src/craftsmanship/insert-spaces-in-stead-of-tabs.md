@@ -37,19 +37,21 @@ There are also cases where TABs will break things, like YAML files
 which requires indentation to be spaces only.
 
 ## Set up ALL your editors to insert spaces instead of TABs
-Be sure that all the editors you're using are set up to insert spaces
-instead of TABs.
 
 ### Emacs
-Be sure to include this in your```.emacs```:
+Be sure to include this in your `~/.emacs`:
 
-    (setq-default indent-tabs-mode nil)
+```lisp
+(setq-default indent-tabs-mode nil)
+```
 
 ### VIm
-Be sure to include this in your```.vimrc```:
+Be sure to include this in your `~/.vimrc`:
 
-    set softtabstop=2
-    set expandtab
+```conf
+set softtabstop=2
+set expandtab
+```
 
 ### Notepad++
 
@@ -59,36 +61,44 @@ Settings → Preferences → Tab Settings → Replace by space (checkbox)
 
 Be sure this checkbox is **not** selected:
 
-<img src="/graphics/2016/2016-06-20-idea-no-tabs.png"
-     alt="intellij idea no TABs"/>
+<img
+  src="/graphics/2016/2016-06-20-idea-no-tabs.png"
+  class="centered"
+  alt="intellij idea no TABs"/>
 
 ### Eclipse
 
 Be sure this checkbox **is** selected:
 
-<img src="/graphics/2016/2016-06-20-eclipse-no-tabs.png"
-     alt="Eclipse no TABs"/>
+<img
+  src="/graphics/2016/2016-06-20-eclipse-no-tabs.png"
+  class="centered"
+  alt="Eclipse no TABs"/>
 
 ## Replacing all TABs with spaces in a file
 
-You can either copy a TAB character in your file and use the
-"Search and replace" feature in your editor to replace them
-with spaces. Alternatively, and is a better option if you
-want to unTABify many files, you can
-use```sed```. The following examples conerts TABs
-with two spaces and should work on both Unix, Linux and
-Windows/Cygwin systems:
+You can either copy a TAB character in your file and use the "Search
+and replace" feature in your editor to replace them with
+spaces. Alternatively, and is a better option if you want to unTABify
+many files, you can use```sed```. The following examples conerts TABs
+with two spaces and should work on both Unix, Linux and Windows/Cawing
+systems:
 
-    $ sed 's/\t/  /g' -i myfile.txt
+```bash
+$ sed 's/\t/  /g' -i myfile.txt
+```
 
-To do this on a number of files (Java files in the below
-example), you should be able to do:
+To do this on a number of files (Java files in the below example), you
+should be able to do:
 
-     $ find . -name "*.java" | while read f; do (sed -i 's/\t/  /g' "$f"); done
+```bash
+$ find . -name "*.java" | while read f; do (sed -i 's/\t/  /g' "$f"); done
+```
 
 ## Becoming more aware of whitespace
 
 ### Emacs
+
 You can easily turn on and off the display of whitespace with:
 
     M-x whitespace-mode
@@ -96,9 +106,15 @@ You can easily turn on and off the display of whitespace with:
 ### IntelliJ IDEA
 IDEA has this in its General > Appearance settings:
 
-<img src="/graphics/2015/idea-show-whitespace.png" alt="intellij idea"/>
+<img
+  src="/graphics/2015/idea-show-whitespace.png"
+  alt="intellij idea"
+  class="centered"
+/>
 
 ## No rule without exception
 
 There's one notable exception here, where TABs not only is allowed,
-but even required and that's with `Makefile`s.
+but even required and that's with
+[Makefile](http://www.gnu.org/software/make/manual/make.html)s. If you
+edit a `Makefile` build file, you must use TABs.
