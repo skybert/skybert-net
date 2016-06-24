@@ -68,11 +68,7 @@ a:hover {
 
 blockquote p:before {
   content: '“';
-  font-size: 150%;
-}
-blockquote p:after {
-  content: '”';
-  font-size: 150%;
+  font-size: 250%;
 }
 
 
