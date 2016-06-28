@@ -1,4 +1,4 @@
-title: Setting up your own Git repository on your server
+title: Git
 date:    2012-10-07
 category: vcs
 tags: git, vcs
