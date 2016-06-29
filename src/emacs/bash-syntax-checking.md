@@ -1,4 +1,4 @@
-title: BASH syntax checking
+title: BASH Linting in Emacs
 date: 2016-06-29
 category: emacs
 tags: emacs, bash
