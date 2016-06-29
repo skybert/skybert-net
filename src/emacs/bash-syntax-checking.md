@@ -26,5 +26,15 @@ installed in Emacs with:
 M-x package-install RET flycheck
 ```
 
-Now, you're all set. If you enable flycheck in your `.sh` buffers, you
-get on the fly syntax checking!
+Now, you're almost all set, you just need to enable flycheck in all
+your shell script buffers:
+
+```
+;; on the fly syntax checking
+(add-hook 'sh-mode-hook 'flycheck-mode)
+```
+
+This should help catch loads of BASH errors and subtle bugs before
+even trying to run your BASH programs.
+
+Happy hacking!
