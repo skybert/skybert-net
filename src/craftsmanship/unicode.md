@@ -22,7 +22,8 @@ Be sure to have at least one UTF-8 locale.
 
 ### Debian, Ubuntu & friends
 
-See all UTF-8 locales on your system:
+See all UTF-8 locales on your system using the `locales` command from
+the `libc-bin` package:
 
 ```bash
 $ locales -a | grep UTF-8
@@ -34,6 +35,16 @@ them:
 ```
 # dpkg-reconfigure locales
 ```
+
+#### <a name="system-default-locale"></a> System default locale
+
+Running `dpkg-reconfigure locales` will also set the default encoding
+on your system.
+
+These defaults (one for locale and one for language) are written to
+the file `/etc/default/locale`, so if you want to figure out what the
+default, fallback encoding on a Debian based system, you can look
+here.
 
 ### BASH
 Set your LANG and LC_ALL environment variables to one of the UTF-8
@@ -154,6 +165,13 @@ useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"
 -Dsun.jnu.encoding=utf-8
 -Dfile.encoding=utf-8
 ```
+
+### Default language/locale in servlets
+
+If the client hasn't requested any specific language in a
+`Accept-Language` HTTP request header,
+[ServletRequest#getLocales()](http://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html#getLocales())
+will return the [system-default-locale](#system-default-locale).
 
 ## HTTP
 
