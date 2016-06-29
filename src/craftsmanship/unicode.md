@@ -270,7 +270,11 @@ file):
 You may also ask Emacs to use a specific Unicode friendly font:
 
 ```lisp
-(set-frame-font "-adobe-Source Code Pro-semibold-normal-normal-*-*-*-*-*-m-0-iso10646-1")
+(set-face-attribute 'default nil
+                    :family "Source Code Pro"
+                    :height 100
+                    :weight 'normal
+                    :width 'normal)
 ```
 
 ### editorconf
