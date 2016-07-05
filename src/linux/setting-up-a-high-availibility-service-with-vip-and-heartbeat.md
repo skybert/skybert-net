@@ -51,63 +51,70 @@ and fire has:
 Add this to your /etc/sysctl.conf:
 
     # needed to bind to VIP
-net.ipv4.ip_nonlocal_bind=1
+    net.ipv4.ip_nonlocal_bind=1
 
 
-Load this with sysctl -p and make it persistent by running it
-at boot time, such as from /etc/rc.local
+Load this with `sysctl -p` and make it persistent by running it
+at boot time, such as from `/etc/rc.local`
 
 ## install heart beat
-    # apt-get install heartbeat
+
+     # apt-get install heartbeat
 
 ## /etc/ha.d/authkeys
-    ( echo -ne "auth 1\n1 sha1 "; \
+```
+# ( echo -ne "auth 1\n1 sha1 "; \
 dd if=/dev/urandom bs=512 count=1 | openssl md5 ) \
-&gt; /etc/ha.d/authkeys
-chmod 0600 /etc/ha.d/authkeys
+> /etc/ha.d/authkeys
+# chmod 0600 /etc/ha.d/authkeys
+```
 
 ## /etc/ha.d/ha.cf
-    ###############################
-    # logging
+
+```
+###############################
+# logging
 debugfile /var/log/ha-debug
 
-    ###############################
-    # communication
+###############################
+# communication
 autojoin none
 udpport 694
-    # the other node
+# the other node
 ucast eth0 192.168.1.109
 udp eth0
 
-    ###############################
-    # thresholds
+###############################
+# thresholds
 warntime 5
 deadtime 15
 initdead 60
 keepalive 2
 
-    ###############################
-    # nodes
+###############################
+# nodes
 node wind
 node fire
 
 ## /etc/ha.d/haresources
 
-    # &lt;primary node&gt; &lt;virtual IP (VIP)&gt;
+# &lt;primary node&gt; &lt;virtual IP (VIP)&gt;
 wind 192.168.1.200>
+```
 
 ## Propagate the settings to fire
-    $ /usr/share/heartbeat/ha_propagate
 
+```
+$ /usr/share/heartbeat/ha_propagate
+```
 
 Watch out, the path on Debian differs from <a
 href="http://www.linux-ha.org/doc/users-guide/_propagating_the_cluster_configuration_to_cluster_nodes.html">the
 official HA Proxy guide</a>
 
 
-Be sure to look over ha.cf, change the reference to the other
-node and confirm that the interface name is the same as on
-wind.
+Be sure to look over `ha.cf`, change the reference to the other node
+and confirm that the interface name is the same as on wind.
 
 ## Read, set, go!
 
