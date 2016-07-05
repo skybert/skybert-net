@@ -1,5 +1,6 @@
 date:    2012-10-07
 category: linux
+tags: linux
 title: Swap Space
 
 ## Getting the Size Right
