@@ -27,10 +27,10 @@ M-x package-install RET flycheck
 ```
 
 Now, you're almost all set, you just need to enable flycheck in all
-your shell script buffers:
+your shell script buffers. Adding this to your `~/.emacs` should do
+it:
 
-```
-;; on the fly syntax checking
+```lisp
 (add-hook 'sh-mode-hook 'flycheck-mode)
 ```
 
