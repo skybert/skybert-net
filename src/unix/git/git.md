@@ -5,13 +5,21 @@ tags: git, vcs
 
 ## Renaming a branch
 
+The first command just renames it locally, the second publishes that
+new branch name while the third command deletes the old branch on the
+remote.
+
     $ git branch -m <current name> <new name>
     $ git push origin <new name>
     $ git push origin :<current name>
 
-The first command just renames it locally, the second publishes that
-new branch name while the third command deletes the old branch on the
-remote.
+## Deleting a (remote) branch
+
+The first command deletes the branch locally and the second "pushes" the
+delete to the reomote server.
+
+    $ git branch -D <branch name>
+    $ git push origin --delete <branch name>
 
 ## Set up your own a git repository on your server
 
@@ -58,12 +66,4 @@ You can now work as you're used to with e.g. <a
 href="http://github.com">github</a>,```git pull```, ```git push```
 will all work as you're used to.
 
-
-## Deleting a (remote) branch
-
-The first command deletes the branch locally and the second "pushes" the
-delete to the reomote server.
-
-    $ git branch -D <branch name>
-    $ git push origin --delete <branch name>
 
