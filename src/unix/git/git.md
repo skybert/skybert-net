@@ -6,6 +6,12 @@ tags: git, vcs
 ## Renaming a branch
 
     $ git branch -m <current name> <new name>
+    $ git push origin <new name>
+    $ git push origin :<current name>
+
+The first command just renames it locally, the second publishes that
+new branch name while the third command deletes the old branch on the
+remote.
 
 ## Set up your own a git repository on your server
 
