@@ -7,11 +7,13 @@ tags: git, vcs
 
 The first command just renames it locally, the second publishes that
 new branch name while the third command deletes the old branch on the
-remote.
+remote. The last command is for pointing the upstream marker to the
+correct branch on the remote.
 
     $ git branch -m <current name> <new name>
     $ git push origin <new name>
     $ git push origin :<current name>
+    $ git branch --set-upstream-to=origin/<new name>
 
 ## Deleting a (remote) branch
 
