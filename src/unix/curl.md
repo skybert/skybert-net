@@ -3,6 +3,29 @@ category: unix
 title: Some of My Favourite curl Tricks
 tags: bash, rest
 
+## Uploading an image with curl
+
+How you upload the image depends on the application receiving it. You
+have two options. You can either upload simulating an HTML form or you
+can upload the data in raw bis and bytes.
+
+In the case of an HTML form, you use the `-d
+"upload-file-field=@pictures/ice-cream.jpg"` parameter.
+
+If you want to upload the image in binary mode using the ``--data-raw`
+parameter, in which case the server expects whatever is POSTed to it
+to be the image data and nothing else:
+
+```
+$ curl -v --data-binary  @pictures/ice-cream.jpg \
+  --header "content-type: image/jpeg" \
+  http://editor1:8080/webservice/publication/rohan/binary/image
+```
+
+In my experience, you must use the `--data-binary` option, neither
+`-d` nor `--data-raw` will do. This took me a whole day to figure
+out 😠
+
 ## PUTing a file with curl
 
 The most important parameters for PUTing a file are
