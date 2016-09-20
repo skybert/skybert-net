@@ -1,6 +1,10 @@
 src/talks/**/*.jpg
 src/talks/**/*.png
+src/talks/**/make.sh
 src/talks/**/index.html
 output
 conf/cache
 *.pyc
+bin/push
+hs_err_*.log
+missfont.log
