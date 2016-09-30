@@ -1,7 +1,7 @@
 title: Awesome print function
 date: 2016-03-31
 category: bash
-tags: unix, bash, logging
+tags: unix, bash, java, logging
 
 This little gem here will print the method and line number from which
 the printing statement is made, giving you as developer or operator
