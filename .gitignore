@@ -8,3 +8,4 @@ conf/cache
 bin/push
 hs_err_*.log
 missfont.log
+generated
