@@ -12,15 +12,26 @@
      </div>
      <div style="margin-top: 1.5em; margin-bottom: 2em;">
        <p>
-         I write about things I 💗 and things I 😠. Please use the
-         menu below or browse through <a href="/category">all my categories</a>
-         or <a href="/tag">my tags</a>.
-       </p>
-       <p>
-         Latest <strong>10</strong> articles:
+         Check out my latest <strong>10</strong> articles:
          {% for a in articles[:10]  | sort(reverse=True, attribute='date')  %}
          <a href="{{ a.url }}">{{ a.title }}</a> ({{ a.category }}) ~
          {% endfor %}
+       </p>
+       <p>
+         <form method="get"
+               style="display: inline"
+               action="http://www.google.com/search">
+           Or search my site using Google 🔎:
+           <div style="display: inline">
+             <input
+               type="text"
+               name="q"
+               size="30"
+               value="Search skybert.net"
+               autofocus="autofocus"/>
+             <input name="sitesearch" value="skybert.net" type="hidden"/>
+           </div>
+         </form>
        </p>
        <p>Enjoy!</p>
        <span style="font-style: italic; text-align: right">
