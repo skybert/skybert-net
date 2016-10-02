@@ -106,7 +106,8 @@ mysql> create database mydb character set utf8mb4 collate utf8mb4_general_ci;
 #### Check the default encoding and collation
 
 ```sql
-mysql> select schema_name, default_character_set_name, default_collation_name from information_schema.schemata;
+mysql> select schema_name, default_character_set_name, default_collation_name
+       from information_schema.schemata;
 ```
 
 ## Java
