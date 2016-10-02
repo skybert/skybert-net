@@ -21,7 +21,8 @@ It's because it's not enabled per default. To enable it:
        /etc/activemq/instances-available/main/jetty.xml
 ```
 You can now refer to it from your activemq.xml:
-```
+
+```xml
 <beans>
   <!-- to get the admin console -->
   <import resource="jetty.xml"/>
@@ -104,17 +105,28 @@ usable space | org.apache.activemq.broker.BrokerService | main
 
 ## Cannot send, channel has already failed
 ```
-2014-01-02 13:01:02,927 | DEBUG | Reason: org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed: tcp://127.0.0.1:34528 |
- org.apache.activemq.broker.TransportConnector | ActiveMQ Task-19
-org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed: tcp://127.0.0.1:34528
-        at org.apache.activemq.transport.AbstractInactivityMonitor.doOnewaySend(AbstractInactivityMonitor.java:255)
-        at org.apache.activemq.transport.AbstractInactivityMonitor.oneway(AbstractInactivityMonitor.java:244)
-        at org.apache.activemq.transport.WireFormatNegotiator.sendWireFormat(WireFormatNegotiator.java:168)
-        at org.apache.activemq.transport.WireFormatNegotiator.sendWireFormat(WireFormatNegotiator.java:84)
-        at org.apache.activemq.transport.WireFormatNegotiator.start(WireFormatNegotiator.java:74)
-        at org.apache.activemq.transport.TransportFilter.start(TransportFilter.java:58)
-        at org.apache.activemq.broker.TransportConnection.start(TransportConnection.java:914)
-        at org.apache.activemq.broker.TransportConnector$1$1.run(TransportConnector.java:227)
+2014-01-02 13:01:02,927 | DEBUG | Reason: org.apache.activemq.transport.InactivityIOException:
+
+  Cannot send, channel has already failed: tcp://127.0.0.1:34528 |
+  org.apache.activemq.broker.TransportConnector | ActiveMQ Task-19
+  org.apache.activemq.transport.InactivityIOException: Cannot send, channel has already failed:
+  tcp://127.0.0.1:34528
+        at org.apache.activemq.transport.AbstractInactivityMonitor.doOnewaySend(
+          AbstractInactivityMonitor.java:255)
+        at org.apache.activemq.transport.AbstractInactivityMonitor.oneway(
+          AbstractInactivityMonitor.java:244)
+        at org.apache.activemq.transport.WireFormatNegotiator.sendWireFormat(
+          WireFormatNegotiator.java:168)
+        at org.apache.activemq.transport.WireFormatNegotiator.sendWireFormat(
+          WireFormatNegotiator.java:84)
+        at org.apache.activemq.transport.WireFormatNegotiator.start(
+          WireFormatNegotiator.java:74)
+        at org.apache.activemq.transport.TransportFilter.start(
+          TransportFilter.java:58)
+        at org.apache.activemq.broeker.TransportConnection.start(
+          TransportConnection.java:914)
+        at org.apache.activemq.broker.TransportConnector$1$1.run(
+          TransportConnector.java:227)
         at java.lang.Thread.run(Thread.java:724)
 ```
 
