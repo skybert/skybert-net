@@ -1,6 +1,41 @@
 date: 2014-11-22
 title: Discoveries
 
+## 2016-10-11
+
+Status of HA stack in Jessie:
+[ral-arturo.org/2016/10/06/debian-jessie-ha.html](http://ral-arturo.org/2016/10/06/debian-jessie-ha.html)
+
+
+Pearls of wisdom: DB failures: 
+[bytebot/lessons-from-database-failures](http://www.slideshare.net/bytebot/lessons-from-database-failures-65650946)
+
+[percona.com/blog/2008/04/28/mysql-replication-vs-drbd-battles/](https://www.percona.com/blog/2008/04/28/mysql-replication-vs-drbd-battles/)
+
+### Expand/collapse in Emacs/markdown files
+Why am I surprised, this is logical! To expand and collaps Markdown
+sections/headings in Emacs, just push the <kbd>Tab</kbd> key. I've
+been wanting this for so long, why didn't I just try to see if
+<kbd>Tab</kbd> worked? Duh!
+
+## 2016-10-10
+[developers.googleblog.com/2016/10/an-open-source-font-system-for-everyone.html](https://developers.googleblog.com/2016/10/an-open-source-font-system-for-everyone.html)
+
+## 2016-10-09
+[hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
+
+## 2016-10-06
+[github.com/jmechner/Prince-of-Persia-Apple-II ](https://github.com/jmechner/Prince-of-Persia-Apple-II )
+
+[speakerdeck.com/stevvooe/heart-of-the-swarmkit-object-model](https://speakerdeck.com/stevvooe/heart-of-the-swarmkit-object-model)
+
+rkt, a better way to run containers (than Docker's runC):
+[coreos.com/rkt/docs/latest/rkt-vs-other-projects](https://coreos.com/rkt/docs/latest/rkt-vs-other-projects.html)
+
+
+## 2016-09-03
+https://dzone.com/articles/9-things-in-jdk-9-that-arent-jigsaw
+
 ## 2015-12-14
 
 ### Open files faster in Emacs (and prettier)
