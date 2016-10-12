@@ -68,6 +68,7 @@ h1:first-letter, h2:first-letter {
 
 .reveal ol, .reveal dl, .reveal ul {
   display: inline-block;
+  text-align: left;
   margin: 0 0 0 1em;
 }
 
@@ -90,6 +91,11 @@ h1:first-letter, h2:first-letter {
 .reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
   display: block;
   margin-left: 40px;
+}
+
+li {
+  text-align: left;
+  padding: 1em;
 }
 
 .reveal li p, .reveal ol li, .reveal ul li {
