@@ -1,6 +1,6 @@
 title: Scoping in BASH
 date: 2016-09-30
-category: unix
+category: bash
 tags: bash, unix
 
 
