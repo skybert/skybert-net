@@ -1,5 +1,6 @@
 title: OSCON Amsterdam 2015
 category: travel
+tags: travel
 date: 2015-10-28
 
 <img src="/graphics/2015/oscon/IMAG0926.jpg"
