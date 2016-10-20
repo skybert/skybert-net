@@ -97,8 +97,10 @@ urxvt -fn 'xft:Source Code Pro:pixelsize=14'
 ### MySQL, MariaDB & Percona
 
 The MySQL `utf8` table & column encoding is not real UTF-8 Only 1-3
-byte characters supported.  For full UTF-8 support, use the `utf8mb4`
-type instead.
+byte characters supported.  For full UTF-8 support, use
+the
+[utf8mb4](https://dev.mysql.com/doc/refman/5.5/en/charset-unicode-utf8mb4.html) type
+instead.
 
 #### Create new DBs with 4 byte UTF-8 character support
 
