@@ -6,8 +6,8 @@ date: 2016-02-09
 
 To get you off to a good start, I'll mention that
 [Unicode is a character set and UTF-8 is one of several encodings for it](http://skybert.net/talks/charset-and-encoding/).
-For all practical use cases, UTF-8 is the best Unicode encoding and
-the one you shold use throughout your stack.
+For all practical use cases, **UTF-8 is the best Unicode encoding and
+the one you shold use throughout your stack**.
 
 I highly recommend reading the
 [UTF-8 and Unicode FAQ for Unix/Linux](http://www.cl.cam.ac.uk/~mgk25/unicode.html)
@@ -18,7 +18,8 @@ stack, your app, into a fully Unicode speaking and reading system.
 
 ## UNIX, Linux & Cygwin
 
-Be sure to have at least one UTF-8 locale.
+There are two important environment variables you need to set to a
+UTF-8 locale. This locale must exist on your machine.
 
 ### Debian, Ubuntu & friends
 
@@ -47,7 +48,8 @@ default, fallback encoding on a Debian based system, you can look
 here.
 
 ### BASH
-Set your LANG and LC_ALL environment variables to one of the UTF-8
+
+Set your `LANG` and `LC_ALL` environment variables to one of the UTF-8
 locales available on your system.
 
 ```bash
@@ -55,7 +57,8 @@ export LANG=en_GB.utf8
 export LC_ALL=en_GB.utf8
 ```
 
-You may to put this in your `$HOME/.bashrc`.
+If you put these lines in your `$HOME/.bashrc`, it'll be activated
+whenever you log in or open a new shell.
 
 ### Terminal
 
@@ -162,8 +165,20 @@ useUnicode=true&amp;characterEncoding=UTF-8&amp;characterSetResults=UTF-8"
 ```
 
 ### JVM parameters
+
+This sets the encoding used when parsing the command line arguments,
+reading environment variables and for the JVM to get name of the main
+Java
+class
+[read more here](http://happygiraffe.net/blog/2009/09/24/java-platform-encoding/).
+
 ```
 -Dsun.jnu.encoding=utf-8
+```
+
+This sets the encoding of the files written by java as well as the
+encoding of JTextField and JTextArea and their sub classes:
+```
 -Dfile.encoding=utf-8
 ```
 
@@ -198,11 +213,27 @@ No wonder people get confused!
 
 ## HTML
 
-Since HTTP uses `charset` to mean character encoding, HTML does too:
-
+Since HTTP uses `charset` to mean character encoding, HTML does
+too. This `meta` element ensures that UTF-8 encoded text is rendered
+correctly on your page:
 
 ```html
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+```
+
+If you're usings forms, you can specify
+the
+[encoding(s) the server accepts](https://www.w3.org/TR/html4/interact/forms.html#adef-enctype) like
+this:
+
+```html
+<form
+  method="post"
+  accept-charset="UTF-8"
+  enctype="multipart/form-data"
+>
+...
+</form>
 ```
 
 ## XML
@@ -278,9 +309,29 @@ You may also ask Emacs to use a specific Unicode friendly font:
                     :width 'normal)
 ```
 
-### editorconf
+### EditorConfig
+
+To make all [EditorConfig](http://editorconfig.org/) compliant editors
+use UTF-8 encoding, set this in the project's `.editrconfig`:
 
 ```conf
 [*]
 charset = utf-8
 ```
+
+## JSPs
+
+Put the following line at the top of your page; it will ensure that
+the `Content-Type` HTTP header is set appropriately. Use whatever mime
+type you want, but most if not all of them allow the charset
+parameter.
+
+```
+<%@page
+  contentType="text/html; charset=UTF-8"
+  pageEncoding="UTF-8"
+%>
+```
+
+If you omit this, the default value is `text/html ; charset=ISO-8859-1`!
+
