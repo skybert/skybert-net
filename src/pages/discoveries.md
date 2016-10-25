@@ -1,6 +1,18 @@
 date: 2014-11-22
 title: Discoveries
 
+## 2016-10-25
+
+If I asked by a colleague for good BASH resources. There's so much out
+there, but most of it are one liners, not really guidance on
+programming in the BASH language.
+
+Here, I'll list some of the BASH resources I would recommend that goes
+beyond the one liner style:
+
+- [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+- [Unix shell programming notes](http://cfajohnson.com/shell/) by Chris F. A. Johnson
+
 ## 2016-10-11
 
 Status of HA stack in Jessie:
