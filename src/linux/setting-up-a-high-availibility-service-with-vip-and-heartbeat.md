@@ -5,10 +5,10 @@ tags: performance, high-availability
 
 ## Objective
 
-We've got two hosts on the same network, wind (.108) and fire
-(.109) and they are to provide the VIP .200, which again
-relates to a crucial service which users only relate to by the
-host name of the VIP.
+We've got two hosts on the same network, wind (`.108`) and fire
+(`.109`) and they are to provide the VIP `.200`, which again relates
+to a crucial service which users only relate to by the host name of
+the VIP.
 
 
 This VIP should at all times answer to requests, directing the
