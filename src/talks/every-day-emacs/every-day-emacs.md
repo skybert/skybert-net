@@ -156,6 +156,13 @@
 
 <kbd>Alt</kbd> + <kbd>x</kbd> `ediff-files`
 
+<a href="ediff-files.png">
+  <img src="ediff-files.png"
+    alt="describe-char"
+    style="height: 800px"
+  />
+</a>
+
 ---
 
 ## Edit text
