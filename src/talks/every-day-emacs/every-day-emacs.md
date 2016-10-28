@@ -24,6 +24,13 @@
 
 <kbd>Alt</kbd> + <kbd>x</kbd> `describe-char`
 
+<a href="describe-char.png">
+  <img src="describe-char.png"
+    alt="describe-char"
+    style="height: 800px"
+  />
+</a>
+
 ---
 
 ## Tidy up the current file
