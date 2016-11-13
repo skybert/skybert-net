@@ -7,6 +7,11 @@ Speed tests of hardware I've used.
 
 ## Hard drives
 ### Thinkpad X1 Carbon
+- Product: TOSHIBA THNSFJ25
+- Vendor: Toshiba
+- Version: 1102
+- Serial: 15VS10NQTBZW
+- Size: 238GiB (256GB)
 
 ```
 # for el in $(seq 0 9); do hdparm -tT /dev/sda; done
