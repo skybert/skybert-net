@@ -1,4 +1,4 @@
-title: Why is there no picture or user link in the Stash Commit List
+title: Why is there no picture or user link in the Stash Commit List?
 date: 2016-11-03
 category: vcs
 tags: git, vcs
@@ -25,8 +25,8 @@ The fix is easy, just two steps:
    email reads the same as what you found on your Confluence profile
    page:
    
-   ```
+```
 [user]
     name = John Doe
     email = john@example.com
-   ```
+```
