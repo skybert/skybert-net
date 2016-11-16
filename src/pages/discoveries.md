@@ -1,6 +1,16 @@
 date: 2014-11-22
 title: Discoveries
 
+## 2016-11-28
+
+Great site for browsing  [emojis](http://www.iemoji.com/view/emoji/),
+complete with Unicode references. Good fun.
+
+Nice [CSS reference](http://cssreference.io/).
+
+## 2016-11-25
+Web based diagram sketching tool: [https://sketchboard.me](sketchboard.me)
+
 ## 2016-10-25
 
 If I asked by a colleague for good BASH resources. There's so much out
