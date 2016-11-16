@@ -13,7 +13,7 @@ file,```/var/www/apt/conf/distributions```:
     Suite: stable
     Codename: wheezy
     Architectures: i386 amd64 source
-    Components: main
+    Components: main non-free
     Description: A longer description of the repository
     SignWith: yes
 
