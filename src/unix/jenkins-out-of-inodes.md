@@ -30,8 +30,8 @@ $ nohup find-dirs-with-inodes.sh &
 
 After some investigation, it turned out that Jenkins was to blame, and
 specifically two of its concepts: fingerprints and config history.
-E.g. there was 2,711,693 `inode`s because of the Jenkins configuration
-history:
+E.g. there were 2,711,693 `inode`s just because of the Jenkins
+configuration history:
 
 ```
 $ awk '/config-history/{ c += $1; } END { print c; }' nohup.out 
