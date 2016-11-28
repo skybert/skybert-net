@@ -372,7 +372,7 @@ Excellent geeky comic strips: [commitstrip](http://www.commitstrip.com/)
   </a>
 </div>
 
-## 2004-11-10
+## 2014-11-10
 [Idle highlight](http://www.emacswiki.org/cgi-bin/wiki/IdleHighlight)
 mode gives you IDEA/Eclipse-like highlighting of other uses of the
 variable/method under your cursor. It only triggers after a slight
