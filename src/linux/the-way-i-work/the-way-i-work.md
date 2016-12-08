@@ -73,6 +73,27 @@ and launch the most important applications (which normally just means
 `urxvt` and I then start applications from there) and jump to any open
 application on any workspace (search type search).
 
+## Navigating to any app on any workspace
+
+<img src="/graphics/2016/2016-12-08-fluxbox-fuzzy-search-black-bg.png"
+  alt="fluxbox app navigation"
+/>
+
+[Fluxbox](http://fluxbox.org) (from version 1.3.7) gives me the
+ability to do fuzzy search for any application open on any of my six
+workspaces.
+
+I hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> to get the
+dialogue and type any part of the application's window title to
+navigate to it.
+
+In this example, I've typed "fire" to navigate to
+my [Firefox](http://mozilla.org/firefox) whose window title is: "JSON
+Schema - Mozilla Firefox".
+
+This is really fast and makes it easy to have applications scattered
+around on the different workspaces while keeping them within easy to
+reach.
 
 ## talk 💬
 The `talk` workspace has the different chat clients which I haven't
