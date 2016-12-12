@@ -1,6 +1,12 @@
 date: 2014-11-22
 title: Discoveries
 
+## 2016-12-09
+
+[The qemu advent calendar](http://www.qemu-advent-calendar.org/2016/)
+is a wonderfully geeky advent calendar, showing off geeky OSes for you
+to explore.
+
 ## 2016-11-28
 
 Great site for browsing  [emojis](http://www.iemoji.com/view/emoji/),
