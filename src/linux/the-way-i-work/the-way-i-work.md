@@ -5,39 +5,68 @@ date: 2015-07-20
 
 <img src="/graphics/2015/my-desktop.png" alt="my desktop" class="centered"/>
 
-<img src="/graphics/2016/debian-logo.png"
-  style="float: right;"
-  alt="debian"
-/>
-The most important part of my setup is my
-[Thinkpad X1 Carbon](http://www.laptopmag.com/reviews/laptops/lenovo-thinkpad-x1-carbon-2015)
-laptop with i7 CPU and 8 GB RAM running
-[Debian testing](http://debian.org).
+I always enjoy reading about other people's setup. I can always pick
+up a tip or two, or at the very least get an idea on how to apply some
+of the same principles to my own setup. Just because I'm not a Mac OSX or
+a vim user, doesn't mean I cannot learn from an article with that kind
+of workflow! This article is may way of giving something back, I hope
+you will enjoy may tale.
+
+## The hardware
+The most important part of my setup is
+my
+[Thinkpad X1 Carbon](http://www.laptopmag.com/reviews/laptops/lenovo-thinkpad-x1-carbon-2015) laptop
+with i7 CPU and 8 GB RAM.
 
 To it, I've connected two external screens using the display port and
-HDMI ports on the laptop. No splitter or multiplexer was
+the HDMI port on the laptop. No splitter or multiplexer was
 necessary. The three screens are all a part of the same desktop using
 xinemera and xrandr. I've written wee script which will add all
 available external screens to the virtual xinerama destkop. This makes
 my setup consistent regardless of having 0, 1 or 2 external screens
 (or 3 for that
-matter). [The 'tkj setup-screens' command can be found here](https://github.com/skybert/my-little-friends/blob/master/bash/tkj)
-on github.
+matter). [The 'tkj setup-screens' command can be found here](https://github.com/skybert/my-little-friends/blob/master/bash/tkj) on
+github.
+
+After the laptop itself, my favourite piece of equipment is my
+[Happy Hacking Professional 2](https://elitekeyboards.com/products.php?sub=pfu_keyboards,hhkbpro2&pid=pdkb400b)
+keyboard. It's really fun to type on. It sounds weird, but I can
+actually look forward to getting into the office in the morning and
+type on it. It's that great. Of course, it's NOISY so you better get
+noise cancelling headphones for all your colleagues. Or buy them cake,
+that also works 😉
+
+## The operating system
+
+<img src="/graphics/2016/debian-logo.png"
+  style="float: right;"
+  alt="debian"
+/>
+
+I run [Debian GNU/Linux](http://debian.org) (testing). Debian has been
+my workstation OS since 2001, and except a one year flirt
+with [Arch](http://archlinux.org), I've been faithful ever since. I
+find it a nice blend of a lean distro (I start off with just a bare
+boned install, without X, without `zip`++ and build it from there,
+installing just the packages I need) and one which is easy to get
+working with new hardware and applications.
+
+Compared to e.g. Ubuntu, there *is* more work getting Debian to work,
+but it's a rewarding effort and it's getting easier with every
+release.
+
+## The desktop environment
 
 <img src="/graphics/2015/fluxbox.jpg"
   style="float: left;"
   alt="fluxbox"
 />
 
-After the laptop itself, my favourite piece of equipment is my
-[Happy Hacking Professional 2](https://elitekeyboards.com/products.php?sub=pfu_keyboards,hhkbpro2&pid=pdkb400b)
-keyboard.
-
 [Fluxbox](http://fluxborg.org) gives me a lightning fast and is
 extremely configurable window manager while yet being pretty to look
 at and supports both GNOME and KDE dock apps. I've used it for quite a
 while now (since 2002) and have a quite stable
-[.fluxbox](https://github.com/skybert/my-little-friends/tree/master/fluxbox)
+[~/.fluxbox](https://github.com/skybert/my-little-friends/tree/master/fluxbox)
 configuration.
 
 <div style="margin-left: auto; margin-right: auto; width: 30em;">
@@ -63,42 +92,59 @@ offloading space for the applications on the main row. With three
 physical screens, that's in practice 18 virtual screens, which suits
 me just fine.
 
+### Going the extra mile to rid myself of the mouse
 I primarily use the mouse for image editing and web browsing. Thus, I
 have a number of shortcuts configured in Fluxbox, including:
 maximise/minimise window, turn on/off window decorations (to get more
-screen real estate), navigate between workspaces, move & resise
-windows, switch between keyboard layouts (American is the best for
-programming, but i also need Norwegian and German for writing emails)
-and launch the most important applications (which normally just means
-`urxvt` and I then start applications from there) and jump to any open
-application on any workspace (search type search).
+screen real estate), navigate between workspaces, move & resize
+windows. I prefix all my DE shortcuts with <kbd>Ctrl</kbd> +
+<kbd>Shift</kbd> and have chosen the vim letters for left, right, up,
+down to form the move shortcuts.
 
-## Navigating to any app on any workspace
+Having shortcuts for switching directly to a given keyboard layout
+(not cycle between them as OSX forces you to) is a must. American
+layout is the best for programming, but I also need Norwegian and
+German for writing emails.
+
+I used to have shortcuts for launching my favourite apps, but these
+days I only have one: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
+<kbd>t</kbd> (new terminal). The reason for this is that most
+of my favourites are opened ones during login (from `.xinitrc`) and
+they just keep running forever. The exceptions from this can easily be
+started from a terminal — and I done start the often enough to warrant
+for a dedicated shortcut.
+
+### Navigating to any app on any workspace
 
 <img src="/graphics/2016/2016-12-08-fluxbox-fuzzy-search-black-bg.png"
   alt="fluxbox app navigation"
+  class="centered"
 />
 
-[Fluxbox](http://fluxbox.org) (from version 1.3.7) gives me the
-ability to do fuzzy search for any application open on any of my six
-workspaces.
-
-I hit <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> to get the
-dialogue and type any part of the application's window title to
-navigate to it.
+[Fluxbox](http://fluxbox.org) (from version 1.3.7) has fuzzy search
+for any application open on any of my six workspaces. I hit
+<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>o</kbd> to get the dialogue
+and type any part of the application's window title to navigate to it.
 
 In this example, I've typed "fire" to navigate to
 my [Firefox](http://mozilla.org/firefox) whose window title is: "JSON
-Schema - Mozilla Firefox".
-
-This is really fast and makes it easy to have applications scattered
-around on the different workspaces while keeping them within easy to
-reach.
+Schema - Mozilla Firefox". This is really fast and makes it easy to
+have applications scattered around on the different workspaces while
+keeping them within easy to reach.
 
 ## talk 💬
-The `talk` workspace has the different chat clients which I haven't
-integrated into my Emacs workflow (yet), like
-[Skype](http://skype.com) and [Line](http://line.me).
+I'd like to keep all communication related distractions on one
+workspace, leaving me "in flow" when I'm coding on my `emacs`
+workspace or surfing the web on my `web` workspace.
+
+The `talk` workspace has an Emacs session for reading my email
+and [Slack](http://slack.com) chats
+(using [emacs-slack](https://github.com/yuya373/emacs-slack)), as well
+as the different chat clients which I haven't integrated into my Emacs
+workflow (yet), like [Skype](http://skype.com)
+and [Line](http://line.me),
+
+
 
 ## web
 <img class="right" src="/graphics/2015/firefox.png" alt="firefox"/>
@@ -112,6 +158,18 @@ whatever "other" browsers I need to run. Currently, my main browser is
 [User Agent overrider](https://addons.mozilla.org/en-us/firefox/addon/user-agent-overrider/)
 and
 [JSONView](https://addons.mozilla.org/en-us/firefox/addon/jsonview/).
+
+I always crave for keyboard based navigation and Vivalid has a really
+nice dialogue which I've bound to <kbd>Ctrl</kbd> + <kbd>,</kbd>. It
+allows me to jump to any tab by fuzzy searching:
+
+<img
+  class="centered"
+  src="/graphics/2016/vivaldi-fuzzy-search.png"
+  style="width: 600px;"
+  alt="fuzzy search in Vivaldi"
+/>  
+
 
 ## emacs
 
