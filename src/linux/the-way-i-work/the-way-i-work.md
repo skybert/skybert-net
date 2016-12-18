@@ -10,7 +10,7 @@ up a tip or two, or at the very least get an idea on how to apply some
 of the same principles to my own setup. Just because I'm not a Mac OSX or
 a vim user, doesn't mean I cannot learn from an article with that kind
 of workflow! This article is may way of giving something back, I hope
-you will enjoy may tale.
+you will enjoy my tale.
 
 [Hardware](#hardware) 
 — [Operating system](#os)
@@ -22,8 +22,8 @@ you will enjoy may tale.
 — [Music](#music)
 
 ## <a name="hardware"></a> The hardware
-The most important part of my setup is
-my
+My work horse is
+a
 [Thinkpad X1 Carbon](http://www.laptopmag.com/reviews/laptops/lenovo-thinkpad-x1-carbon-2015) laptop
 with i7 CPU and 8 GB RAM. To it, I've connected two external screens
 using the display port and the HDMI port on the laptop. No splitter or
