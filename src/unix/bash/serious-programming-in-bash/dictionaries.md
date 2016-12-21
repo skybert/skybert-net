@@ -26,11 +26,10 @@ first_name: Joh
 ```
 
 
-The odd looking exclemeation mark in front of the
-```my_map``` in the for loop initialiser is to make BASH iterate over
-the keys and notthe values, which for some
-reason, are the values per default. You see this easily if we
-change the for loop slightly:
+The odd looking exclamation mark in front of the ```my_map``` in the
+for loop initialiser is to make BASH iterate over the keys and not the
+values, which for some reason, are the values per default. You see
+this easily if we change the for loop slightly:
 
 ```bash
 for el in ${my_map[@]}; do
