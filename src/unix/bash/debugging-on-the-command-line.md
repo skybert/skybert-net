@@ -3,6 +3,18 @@ date: 2016-12-28
 category: bash
 tags: bash, unix
 
+## tl;dr
+
+Get detailed debugging information about `your-commnad.sh` by setting
+the `PS4` variable like the one below and then running `bash -x
+your-command.sh`.
+
+```
+export PS4='# ${BASH_SOURCE}:${LINENO}: ${FUNCNAME[0]}() - [${SHLVL},${BASH_SUBSHELL},$?] '
+```
+
+## In depth
+
 Say you've got this `my-command.sh`:
 
 ```bash
@@ -83,13 +95,28 @@ $ bash -x my-command.sh 1
 4
 ```
 
+Each line that's evaluated by the `bash` interpreter is printed first
+with the full path to the source file, followed by line number and
+`function`. Then there are three numbers: number of instances of the
+`bash` interpreter, number of subshells (a `function` is a subshell
+too) and the exit code of the previous command. Finally, the BASH
+statement is printed. For further information see `main bash`.
+
 Notice that `bash` will take the first character of `PS4` and add it
 once more for each consecutive sub shell. Since I have `#` as the
 first character of `PS4`, I can see the call depth by counting the
 number of `#`s.
 
+<img
+  src="/graphics/2016/2016-12-29-emacs-bash-cli-debugging.png"
+  alt="bash cli debugging in emacs"
+  class="centered"
+/>  
+
 Running this from within an `emacs` compile buffer, each line is
-clickable (Emacs just ignores the leading `#`s), taking me to the
-right line in the right script file. Pretty neat, eh?
+clickable (Emacs just ignores the leading `#`s), taking you to the
+right line in the right script file. You can also keep hitting
+<kbd>Ctrl</kbd> + <kbd>`</kbd> to step through each line of your
+program. Pretty neat, eh?
 
 Happy debugging!
