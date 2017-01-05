@@ -1,12 +1,17 @@
 date:    2012-10-07
 category: mac-os-x
 title: My Mac OS X Shit List
+
 ## Forewords
 
-I'm no Mac guru, it could be that I've missed something really
-obvious somewher, but these are nevertheless some issues that
-I find hugely annoying and keep me from using my Mac OS X more
-than absolutely necessary.
+I'm no Mac guru, it could be that I've missed something really obvious
+somewhere, but these are nevertheless some issues that I find hugely
+annoying and keep me from using my Mac OS X more than absolutely
+necessary. 
+
+This article was written in 2012, hopefully some things have been
+remedied when you read this in
+<script>document.writeln(new Date().getFullYear());</script>
 
 ## Updates Are Done On a Per Application Basis
 
@@ -55,17 +60,10 @@ switching back and forth. On Linux, it is a doodle to get this
 working, but on Mac, I have so far settled with:
 
 
-# Stop typing (of course)
-# 
-Move my right hand to the mouse.
-
-# 
-Click once to select the layout menu
-
-# 
-Click again to select the other layout.
-
-
+- Stop typing (of course)
+- Move my right hand to the mouse.
+- Click once to select the layout menu
+- Click again to select the other layout.
 
 Being able to have a self defined shortcut, that is easily hit
 without moving the hands off the main part of keyboard has a
@@ -98,18 +96,17 @@ It's equally annoying since Mac OS X claims to be a modern
 Unix, and is in some respects, a very old and silly
 incarnation of it.
 
-### /Volumes not /mnt or /media
-### /Users not /home
+- `/Volumes` not `/mnt` or `/media`
+- `/Users` not `/home`
 
 It's close to impossible to change this as
-well.```/home``` is on Mac, unlike any other Unix on
+well. `/home` is on Mac, unlike any other Unix on
 the planet I've used, not the default home area for users, but
 a special area for users that log in using SSH.
 
 
-I found it close to impossible to change this behaviour so
-that my usre had its```$HOME``` under
-```/home```.
+I found it close to impossible to change this behaviour so that my
+user had its `$HOME` under `/home`.
 
 ## Spaces
 
@@ -138,7 +135,6 @@ want: double clicking on a URI in the terminal should select
 it. However. Terminal just highlight the entire line, even
 thoug there is no text on the entire line.
 
-
 Hence, Terminal doesn't consider the actual contents of the
 window when applying click events to it.
 
@@ -150,11 +146,10 @@ BSD world: a command line tool wich allows for easy install,
 upgrade and removal of software and their dependencies.
 
 
-However, after using```ports``` for a bit I must say
-it's ... perhaps ok if you're used to REHL, but if you're used
-to something like Debian's```apt-get``` and
-```.deb``` architecture, it's just slow, stupid and
-utterly limiting.
+However, after using `ports` for a bit I must say it's ... perhaps ok
+if you're used to REHL, but if you're used to something like Debian's
+`apt-get` and `.deb` architecture, it's just slow, stupid and utterly
+limiting.
 
 
 And now I didn't mentioned all the loop holes you need to go
@@ -168,17 +163,16 @@ trying too hard (I just wanted to set up VPN, which only
 worked for certain types of VPN), I ended up with this
 inconsistency:
 
-<a href="mac_osx_inconsistency_between_preferences_and_ifconfig.png">
-<img src="mac_osx_inconsistency_between_preferences_and_ifconfig.png"
-alt="Notice the IP of the primary network interface. It's different!"
-width="680"
-height="450"
-
-/>
+<a href="/graphics/2012/mac_osx_inconsistency_between_preferences_and_ifconfig.png">
+  <img src="/graphics/2012/mac_osx_inconsistency_between_preferences_and_ifconfig.png"
+    alt="Notice the IP of the primary network interface. It's different!"
+    width="1024"
+    class="centered"
+  />
 </a>
 
-Notice the IP of the wireless network interface,
-```eth1```, it's different!
+Notice the IP of the wireless network interface, ```eth1```, it's
+different!
 
 ## Final Words
 
