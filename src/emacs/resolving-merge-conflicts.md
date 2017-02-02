@@ -10,9 +10,9 @@ M-x ediff-buffers
 
 ## Diffing revisions of a file
 
-<kbd>C-x</kbd><kbd>v</kbd><kbd>=</kbd> (`vc-diff`)
+<kbd>C-x</kbd> <kbd>v</kbd> <kbd>=</kbd> (`vc-diff`)
 
-You can view the changes with `ediff` using <kbd>M-x</kbd>
+You can also view the changes with `ediff` using <kbd>M-x</kbd>
 `ediff-revision`
 
 ## Inside an ediff session
