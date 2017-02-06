@@ -19,12 +19,22 @@ And this fails to load, `node` giving a mediocre:
 
 You can investigate this by setting the environment variable `NODE_DEBUG`:
 
-```
+```text
 export NODE_DEBUG=module
-$ node ....main.js ....
+# node ....main.js ....
 [..]
-MODULE 14489: Module._load REQUEST my-module/myComponent parent: /opt/escenic/waiter/recipe/recipe.js
-MODULE 14489: looking for "my-module/myComponent" in ["/opt/escenic/waiter/recipe/node_modules","/opt/escenic/waiter/node_modules","/opt/escenic/node_modules","/opt/node_modules","/node_modules","/root/.node_modules","/root/.node_libraries","/usr/lib/node"]
+MODULE 14489: Module._load REQUEST my-module/myComponent parent:
+  /opt/escenic/waiter/recipe/recipe.js
+
+MODULE 14489: looking for "my-module/myComponent" in
+["/opt/escenic/waiter/recipe/node_modules",
+  "/opt/escenic/waiter/node_modules",
+  "/opt/escenic/node_modules",
+  "/opt/node_modules",
+  "/node_modules",
+  "/root/.node_modules",
+  "/root/.node_libraries",
+  "/usr/lib/node"]
 ```
 
 
