@@ -3,7 +3,18 @@ date: 2017-01-27
 category: bash
 tags: bash
 
-Contrary to popular belief, BASH has some type safety.
+Contrary to popular belief, BASH has some type safety if you declare
+your variables with `typeset` or `declare`.
+
+## Rant
+
+These two BASH builtins, `typeset` and `declare` are synonyms, but
+since `typeset` also works in Korn Shell (`ksh`) I use that keyword to
+make my code a bit more portable. Perhaps silly since I also advocate
+writing pure BASH and not worry about following the POSIX Utilities
+spec as BASH is such a much richer language than `sh` and it's
+available on all platforms I care about these days. In any case,
+onwards:
 
 ## Integers
 
@@ -26,6 +37,34 @@ Age is 85
 
 As you can see, BASH guarantees that the variable stays an integer
 even if some piece of code assigns a string to it.
+
+## Lowercase string
+
+```bash
+typeset -l always_lowercase=FOO
+```
+
+BASH guarantees that all strings written to this variable are stored
+as lowercase:
+
+```bash
+$ echo "${always_lowercase}"
+foo
+```
+
+## Uppercase string
+
+```bash
+typeset -u always_uppercase=bar
+```
+
+BASH guarantees that all strings written to this variable are stored
+as uppercase:
+
+```bash
+$ echo "${always_uppercase}"
+BAR
+```
 
 ## Arrays
 
