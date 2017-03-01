@@ -1,6 +1,25 @@
 date: 2014-11-22
 title: Discoveries
 
+## 2017-03-01
+There's a `timeout` command
+in
+[GNU coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html#timeout-invocation),
+which means it's installed on virtually all Linux machines, that lets
+you specify a maximum time for a command to complete, or else the
+command is `kill`ed.
+
+```
+$ timeout --signal KILL 10s create-backup
+```
+
+This will send the KILL signal (same as `kill -9 <pid>`) to the
+process running `create-backup` if it hasn't completed within 10
+seconds. 
+
+The signal to send to the process can be any of the ones listed by
+`kill -l`.
+
 ## 2016-12-09
 
 [The qemu advent calendar](http://www.qemu-advent-calendar.org/2016/)
