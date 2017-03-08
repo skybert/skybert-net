@@ -29,8 +29,7 @@ EOF
 
 
       cat >> "${file}" <<EOF
-[${title}](${line})
-
+- [${title}](${line})
 EOF
 
     else
