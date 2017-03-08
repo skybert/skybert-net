@@ -9,14 +9,14 @@ shopt -s nullglob
 main() {
   local file=recommended-reading.md
   cat > "${file}" <<EOF
-title: Interesting Articles & Videos
+title: Recommended Reading
 category: dongxi
 tags: reading
 date: $(date --iso)
 
 EOF
 
-  cat recommended-reading-urls.md | while read -r line; do
+  cat recommended-reading.urls | while read -r line; do
     if [[ "${line}" == "https://"* || "${line}" == "http://"* ]]; then
       title=$(
         curl -s "${line}" |
