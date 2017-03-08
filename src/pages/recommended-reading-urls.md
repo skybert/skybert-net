@@ -1,0 +1,16 @@
+## 2017
+### Code
+http://www.catb.org/esr/faqs/things-every-hacker-once-knew/
+
+### Linux & UNIX
+http://www.androidauthority.com/what-is-virtual-memory-gary-explains-747960/
+https://thehftguy.com/2017/02/23/docker-in-production-an-update/
+https://learntemail.sam.today/blog/selinux-concepts-but-for-humans/
+https://www.redhat.com/en/about/blog/do-we-really-need-swap-modern-systems
+
+## 2016
+https://www.youtube.com/watch?v=tc4ROCJYbm0
+https://www.cyberciti.biz/faq/how-to-speed-up-apt-get-apt-command-ubuntu-linux/
+https://www.youtube.com/watch?v=o5cASgBEXWY
+http://nymag.com/selectall/2016/09/andrew-sullivan-technology-almost-killed-me.html
+
