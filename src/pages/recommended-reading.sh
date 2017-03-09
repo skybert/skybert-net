@@ -16,28 +16,30 @@ date: $(date --iso)
 
 EOF
 
-  cat recommended-reading.urls | while read -r line; do
-    if [[ "${line}" == "https://"* || "${line}" == "http://"* ]]; then
-      title=$(
-        curl -s "${line}" |
-          grep -v '<svg>' |
-          sed -n -r 's@.*<title>(.*)</title>.*@\1@p')
+  cat recommended-reading.urls |
+    while read -r line; do
+      echo -n "."
+      if [[ "${line}" == "https://"* || "${line}" == "http://"* ]]; then
+        title=$(
+          curl -s "${line}" |
+            grep -v '<svg>' |
+            sed -n -r 's@.*<title>(.*)</title>.*@\1@p')
 
-      if [ -z "${title}" ]; then
-        title=${line##*/}
-      fi
+        if [ -z "${title}" ]; then
+          title=${line##*/}
+        fi
 
 
-      cat >> "${file}" <<EOF
+        cat >> "${file}" <<EOF
 - [${title}](${line})
 EOF
 
-    else
-      printf "%s\n" "${line}" >> "${file}"
-    fi
+      else
+        printf "%s\n" "${line}" >> "${file}"
+      fi
+    done
 
-  done
-
+  echo ""
 }
 
 main "$@"
