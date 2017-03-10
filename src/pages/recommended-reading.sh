@@ -16,7 +16,7 @@ date: $(date --iso)
 
 EOF
 
-  cat recommended-reading.urls |
+  cat recommended-reading.urls.md |
     while read -r line; do
       echo -n "."
       if [[ "${line}" == "https://"* || "${line}" == "http://"* ]]; then
