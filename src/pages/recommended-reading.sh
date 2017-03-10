@@ -29,17 +29,15 @@ EOF
           title=${line##*/}
         fi
 
-
         cat >> "${file}" <<EOF
-- [${title}](${line})
+[${title}](${line})
+
 EOF
 
       else
         printf "%s\n" "${line}" >> "${file}"
       fi
     done
-
-  echo ""
 }
 
 main "$@"
