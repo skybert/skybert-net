@@ -160,6 +160,39 @@ Just add this to your POM to get rid of it:
 You can now use UTF-8 in your source files.  A ♥ looks so much better
 than `\u2665`
 
+Another thing to check, is that your Maven project hasn't
+overwritten the compiler encoding: 
+
+```
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+[..]
+   <compilerArguments>
+      <encoding>ISO-8859-1</encoding>
+    </compilerArguments>
+  </configuration>
+</plugin>
+```
+
+The above alters Java's native Unicode code handling:
+
+```java
+String germanWord = "Veröffentlicht";
+String germanWordInDB = readWordFromDB();
+assertEquals(germanWord, germanWordInDB);
+```
+
+This will fail because the code points of the `germanWord` will be
+completely off since the String is defined in the `.java` file itself.
+Even though the encoding of the source file is `UTF-8`, `javac` will
+interpret it as (i.e. recode it) when running with the above setting
+in Maven.
+
+To sort this out, just remove the `<compilerArguments/>` line from
+your POM so that Maven works as intended picking up
+`project.build.sourceEncoding`.
+
 ### JDBC
 Add the following to your JDBC connection string:
 ```html
