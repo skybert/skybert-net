@@ -4,6 +4,23 @@ date: 2016-02-09
 > This is a no nonsense guide to get your full stack Unicode
 > compliant. No more squares, no more question marks.
 
+<div style="text-align: center;">
+  [<a href="#bash">bash</a>]
+  [<a href="#db">database</a>]
+  [<a href="#debian">debian & ubuntu</a>]
+  [<a href="#editors">editors</a>]
+  [<a href="#emacs">emacs</a>]
+  [<a href="#fonts">fonts</a>]
+  [<a href="#html">html</a>]
+  [<a href="#http">http</a>]
+  [<a href="#java">java</a>]
+  [<a href="#maven">maven</a>]
+  [<a href="#unix">linux & unix</a>]
+  [<a href="#vim">vim</a>]
+</div>
+
+## Ready, set, go!
+
 To get you off to a good start, I'll mention that
 [Unicode is a character set and UTF-8 is one of several encodings for it](http://skybert.net/talks/charset-and-encoding/).
 For all practical use cases, **UTF-8 is the best Unicode encoding and
@@ -16,12 +33,12 @@ guide and browse the beautifully presented
 let's jump straight into the nitty gritty details on how to turn your
 stack, your app, into a fully Unicode speaking and reading system.
 
-## UNIX, Linux & Cygwin
+## <a name="unix">UNIX, Linux & Cygwin</a>
 
 There are two important environment variables you need to set to a
 UTF-8 locale. This locale must exist on your machine.
 
-### Debian, Ubuntu & friends
+### <a name="debian">Debian, Ubuntu & friends</a>
 
 See all UTF-8 locales on your system using the `locales` command from
 the `libc-bin` package:
@@ -47,7 +64,7 @@ the file `/etc/default/locale`, so if you want to figure out what the
 default, fallback encoding on a Debian based system, you can look
 here.
 
-### BASH
+### <a name="bash">BASH</a>
 
 Set your `LANG` and `LC_ALL` environment variables to one of the UTF-8
 locales available on your system.
@@ -71,7 +88,7 @@ use terminals like
 [gnome-terminal](https://wiki.gnome.org/Apps/Terminal) or
 [konsole](https://konsole.kde.org/).
 
-### Fonts
+### <a name="fonts">Fonts</a>
 
 If you're seeing squares instead of characters, it means that the font
 you're using is missing a glyph to represent that character.
@@ -92,7 +109,7 @@ To use `Adobe Source Code Pro`, I start my `urxvt` like this:
 urxvt -fn 'xft:Source Code Pro:pixelsize=14'
 ```
 
-## DB
+## <a name="db">DB</a>
 
 ### MySQL, MariaDB & Percona
 
@@ -115,7 +132,7 @@ mysql> select schema_name, default_character_set_name, default_collation_name
        from information_schema.schemata;
 ```
 
-## Java
+## <a name="java">Java</a>
 
 ### Resource bundles
 
@@ -140,7 +157,7 @@ characters which you write in the `.java` file itself. The file
 encoding does not affect in any way the data that flows through the
 Java program you write.
 
-### Maven
+### <a name="maven">Maven</a>
 
 Have you ever seen this one?
 
@@ -226,7 +243,7 @@ If the client hasn't requested any specific language in a
 [ServletRequest#getLocales()](http://docs.oracle.com/javaee/6/api/javax/servlet/ServletRequest.html#getLocales())
 will return the [system-default-locale](#system-default-locale).
 
-## HTTP
+## <a name="http">HTTP</a>
 
 HTTP calls a character encoding, character set (!):
 
@@ -248,7 +265,7 @@ with this term. It did add a note, however:
 
 No wonder people get confused!
 
-## HTML
+## <a name="html">HTML</a>
 
 Since HTTP uses `charset` to mean character encoding, HTML does
 too. This `meta` element ensures that UTF-8 encoded text is rendered
@@ -273,7 +290,7 @@ this:
 </form>
 ```
 
-## XML
+## <a name="xml">XML</a>
 
 
 The [XML specification](http://www.w3.org/TR/xml/#charencoding) says
@@ -286,7 +303,7 @@ minimum support UTF-8
 ```
 
 
-## Server Sent Events (SSE)
+## <a name="sse">Server Sent Events (SSE)</a>
 
 The Server Sent Events are
 [always UTF-8 encoded](https://html.spec.whatwg.org/multipage/comms.html#server-sent-events)
@@ -310,9 +327,9 @@ $ file -i /tmp/test.txt.latin1
 /tmp/test.txt.latin1: text/plain; charset=iso-8859-1
 ```
 
-## Editors
+## <a name="editors">Editors</a>
 
-### VIM
+### <a name="vim">VIM</a>
 
 On my machine, using VIM 7.4 and UTF-8 compatible locale settings (see
 the notes on `LC_ALL` above), files that contain non-ASCII characters
@@ -326,7 +343,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 ```
 
-### Emacs
+### <a name="emacs">Emacs</a>
 
 Emacs will respect whatever encoding an existing file uses, but you
 can ask it to prefer UTF-8 when it has a choice (like creating a new
