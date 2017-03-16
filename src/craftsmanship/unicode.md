@@ -167,7 +167,8 @@ overwritten the compiler encoding:
 <plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-compiler-plugin</artifactId>
-[..]
+  [..]
+  <configuration>
    <compilerArguments>
       <encoding>ISO-8859-1</encoding>
     </compilerArguments>
@@ -185,13 +186,14 @@ assertEquals(germanWord, germanWordInDB);
 
 This will fail because the code points of the `germanWord` will be
 completely off since the String is defined in the `.java` file itself.
-Even though the encoding of the source file is `UTF-8`, `javac` will
-interpret it as (i.e. recode it) when running with the above setting
-in Maven.
+Even though the encoding of the source file is UTF-8, `javac` will
+interpret it as ISO-8859-1 (i.e. recode it) when running with the
+above setting in Maven.
 
-To sort this out, just remove the `<compilerArguments/>` line from
-your POM so that Maven works as intended picking up
-`project.build.sourceEncoding`.
+To sort this non sense out, just remove the `<compilerArguments/>`
+line from your POM. Maven will then pick up
+`project.build.sourceEncoding` mentioned above (or fall back to your
+system's default encoding).
 
 ### JDBC
 Add the following to your JDBC connection string:
