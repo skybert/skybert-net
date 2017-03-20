@@ -19,3 +19,14 @@ Or you can ask YUM:
 ## Installing a package
     # rpm -Uvh package-name-arch-version.rpm
 
+
+## Which package provides a file
+
+```
+$ rpm -qf <file>
+```
+
+You can also query `yum`:
+```
+$ yum whatprovides <file>
+```
