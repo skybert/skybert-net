@@ -3,14 +3,29 @@
 ### Code
 http://www.catb.org/esr/faqs/things-every-hacker-once-knew/
 
+The famous spelling mistake in the HTTP/1.0 specification, `Referer`
+instead of `Referrer` is blamed on the UNIX spell checker not having
+neither of them in its dictionary at the time they wrote the
+RFC. Check out this nugget from 1995:
+https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html
+
 ### Linux & Unix
 http://www.androidauthority.com/what-is-virtual-memory-gary-explains-747960/
-https://thehftguy.com/2017/02/23/docker-in-production-an-update/
 https://learntemail.sam.today/blog/selinux-concepts-but-for-humans/
 https://www.redhat.com/en/about/blog/do-we-really-need-swap-modern-systems
 https://danielmiessler.com/study/tcpdump/
+http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
+
+#### Containers
+Docker provides a great developer experience but it leaves many things
+to be decided when it comes to taking it into production:
+https://www.federacy.com/docker_image_vulnerabilities
+https://www.certdepot.net/death-of-docker/
+https://www.youtube.com/watch?v=2v-vTH71nSc
+https://thehftguy.com/2017/02/23/docker-in-production-an-update/
 
 ### Windows
+An interesting extension to Cygwin: 
 http://babun.github.io/
 
 ## 2016
@@ -61,3 +76,12 @@ http://www.economist.com/news/leaders/21608752-any-ceasefire-will-be-temporary-u
 ## 2013
 
 http://blog.vivekhaldar.com/post/40018875700/scaling-communication-email-vs-shared-documents
+
+## 2008
+
+### Coding
+
+[Steve Yegge](http://steve-yegge.blogspot.com) is as always dead
+on. This post explains why every coder worth his or her salt should
+learn to type:
+http://steve-yegge.blogspot.com/2008/09/programmings-dirtiest-little-secret.html
