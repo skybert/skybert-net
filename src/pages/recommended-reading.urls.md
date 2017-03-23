@@ -9,6 +9,8 @@ neither of them in its dictionary at the time they wrote the
 RFC. Check out this nugget from 1995:
 https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html
 
+http://www.se-radio.net/
+
 ### Linux & Unix
 http://www.androidauthority.com/what-is-virtual-memory-gary-explains-747960/
 https://learntemail.sam.today/blog/selinux-concepts-but-for-humans/
@@ -21,8 +23,13 @@ Docker provides a great developer experience but it leaves many things
 to be decided when it comes to taking it into production:
 https://www.federacy.com/docker_image_vulnerabilities
 https://www.certdepot.net/death-of-docker/
+
+Really interesting to see what's moving in the container world. RedHat
+is really shaking things up in the Docker world:
 https://www.youtube.com/watch?v=2v-vTH71nSc
+
 https://thehftguy.com/2017/02/23/docker-in-production-an-update/
+
 
 ### Windows
 An interesting extension to Cygwin: 
