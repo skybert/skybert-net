@@ -21,3 +21,4 @@ either by its name or its ID. You can get both from issuing
 $ vboxmanage controlvm centos poweroff
 $ vboxmanage snapshot centos restore a927529c-60fd-47c2-af98-4a0d38eea642
 ```
+
