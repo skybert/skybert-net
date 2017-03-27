@@ -4,9 +4,9 @@ category: craftsmanship
 tags: craftsmanship
 
 Show that you love thy neighbour coder by **1)** making an honest
-attempt at answering the question yourself, **2)** apply markup to code
-snippets, **3)** make sure your message reads well and is logically sound
-and **4)** trim the error messages.
+attempt at answering the question yourself, **2)** apply markup to
+code snippets, **3)** make sure your message is easy to understand &
+is logically sound and **4)** trim the error messages.
 
 ## Try to answer the easy questions yourself
 
@@ -32,8 +32,8 @@ already excluded these options.
 
 ## Apply markup to code examples
 
-It's so much nicer to read code snippets and log exercpts if you apply
-some stiling to it. Most platforms today have markup support,
+It's so much nicer to read code snippets and log excerpts if you apply
+some styling to it. Most platforms today have markup support,
 including Slack, Jira, Confluence and Github. Use it to make your
 message a pleasant read.
 
@@ -61,11 +61,13 @@ they've got special meaning in this context (like `<`s on a webpage).
 ## Read your message before sending it 
 
 Read through your message before you send it. Check that your
-sentences make sense. Be specific: there's a difference between the
-webservice giving you a `404 Not found` and than that the server is
-down. Be as accurate as you can so that your coder can help you as
-effectively as possible, not having to ping you for questions to
-clarify what actually is the problem.
+sentences make sense. 
+
+Be specific: there's a difference between the webservice giving you a
+`404 Not found` and than that the server is down. Be as accurate as
+you can so that your coder can help you as effectively as possible,
+not having to ping you for questions to clarify what actually is the
+problem.
 
 ## Trim error messages
 
@@ -118,10 +120,12 @@ java.sql.SQLException: com.myapp.awesome.NoSuchObjectException: No publication w
 	at java.lang.Thread.run(Thread.java:745)
 ```
 
-If you've got a little bit of knowledge about the application, `myapp`
-in this case, you'll know that you can trim this stack trace
-significantly. Include just one line from code outside of `myapp` so
-that the coder is sure you didn't cut too much of the trace:
+If you've got knowledge about the application, `myapp` in this case,
+you'll know that you can trim this stack trace significantly. Include
+just one line from code outside of `myapp` so that the coder is sure
+you didn't cut too much of the trace (of course, if you're unsure
+about where to cut the stacktrace, it's better to include too much
+than too little):
 
 ```
 java.sql.SQLException: com.myapp.awesome.NoSuchObjectException: No publication with id=0
@@ -189,3 +193,8 @@ This is much faster to read and it's much easier  to identify what's
 wrong. 7 vs 30 lines to read.
 
 
+## Final words
+
+Most people like helping others and doing so can both be an
+educational, fun and rewarding experience. Take a moment to ask in
+such a way to show that you indeed love thy neighbour coder.
