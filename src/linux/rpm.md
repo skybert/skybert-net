@@ -1,7 +1,7 @@
 date:    2012-10-07
 category: linux
 title: My RPM Notes
-tags: redhat
+tags: linux, redhat
 
 ## Listing installed packages
     $ rpm -qa
@@ -30,3 +30,4 @@ You can also query `yum`:
 ```
 $ yum whatprovides <file>
 ```
+
