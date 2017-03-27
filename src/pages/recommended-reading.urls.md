@@ -30,6 +30,15 @@ https://www.youtube.com/watch?v=2v-vTH71nSc
 
 https://thehftguy.com/2017/02/23/docker-in-production-an-update/
 
+#### Reverse proxies 
+
+Finally got around to upgrade from Varnish 3 to 4. The folks at
+Varnish Software have been so nice to provide an upgrade guide which,
+albeit not a complete guide, is a good starting point:
+https://varnish-cache.org/docs/4.0/whats-new/upgrading.html
+
+https://www.fastly.com/blog/varnish-tip-normalize-host-header
+https://www.fastly.com/blog/ab-testing-edge
 
 ### Windows
 An interesting extension to Cygwin: 
