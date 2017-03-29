@@ -44,6 +44,11 @@ https://www.fastly.com/blog/ab-testing-edge
 An interesting extension to Cygwin: 
 http://babun.github.io/
 
+### JS
+http://podefr.tumblr.com/post/30488475488/locally-test-your-npm-modules-without-publishing
+
+---
+
 ## 2016
 
 ### Linux & Unix
@@ -62,6 +67,8 @@ http://nymag.com/selectall/2016/09/andrew-sullivan-technology-almost-killed-me.h
 
 ### JS
 https://snyk.io/
+
+---
 
 ## 2015
 
@@ -84,14 +91,20 @@ http://www.gq.com/story/president-obama-bill-simmons-interview-gq-men-of-the-yea
 ### Language
 https://www.babbel.com/en/magazine/139-norse-words
 
+---
+
 ## 2014
 
 ### Politics
 http://www.economist.com/news/leaders/21608752-any-ceasefire-will-be-temporary-unless-israel-starts-negotiating-seriously
 
+---
+
 ## 2013
 
 http://blog.vivekhaldar.com/post/40018875700/scaling-communication-email-vs-shared-documents
+
+---
 
 ## 2008
 
