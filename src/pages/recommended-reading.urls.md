@@ -47,6 +47,9 @@ http://babun.github.io/
 ### JS
 http://podefr.tumblr.com/post/30488475488/locally-test-your-npm-modules-without-publishing
 
+### Fun
+http://patorjk.com/software/taag
+
 ---
 
 ## 2016
