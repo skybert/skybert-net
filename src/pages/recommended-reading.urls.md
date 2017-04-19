@@ -20,6 +20,11 @@ https://www.redhat.com/en/about/blog/do-we-really-need-swap-modern-systems
 https://danielmiessler.com/study/tcpdump/
 http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
 
+Servers can run out of entropy (randomness needed to complete various
+tasks such as JAR signing, SSL connections), one way to mitigate this
+is to install `haveged`:
+http://www.issihosts.com/haveged/downloads.html
+
 #### Containers
 Docker provides a great developer experience but it leaves many things
 to be decided when it comes to taking it into production:
