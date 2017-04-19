@@ -11,6 +11,8 @@ https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html
 
 http://www.se-radio.net/
 
+https://writing.kemitchell.com/2017/03/29/OSS-Business-Perception-Report.html
+
 ### Linux & Unix
 http://www.androidauthority.com/what-is-virtual-memory-gary-explains-747960/
 https://learntemail.sam.today/blog/selinux-concepts-but-for-humans/
@@ -39,6 +41,10 @@ https://varnish-cache.org/docs/4.0/whats-new/upgrading.html
 
 https://www.fastly.com/blog/varnish-tip-normalize-host-header
 https://www.fastly.com/blog/ab-testing-edge
+
+nginx can do TCP load balancing now, making it an alternative to
+HAProxy in my setup:
+https://serversforhackers.com/tcp-load-balancing-with-nginx-ssl-pass-thru
 
 ### Windows
 An interesting extension to Cygwin: 
@@ -106,6 +112,13 @@ http://www.economist.com/news/leaders/21608752-any-ceasefire-will-be-temporary-u
 ## 2013
 
 http://blog.vivekhaldar.com/post/40018875700/scaling-communication-email-vs-shared-documents
+
+---
+
+## 2010
+
+### Code
+http://nvie.com/posts/a-successful-git-branching-model/
 
 ---
 
