@@ -37,6 +37,8 @@ https://www.youtube.com/watch?v=2v-vTH71nSc
 
 https://thehftguy.com/2017/02/23/docker-in-production-an-update/
 
+https://consolia-comic.com/comics/containers-and-docker
+
 #### Reverse proxies 
 
 Finally got around to upgrade from Varnish 3 to 4. The folks at
