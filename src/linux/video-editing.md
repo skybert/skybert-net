@@ -43,11 +43,17 @@ started with the `pavucontrol` command, to choose the input device to
 use as default. This is needed cause GNOME Sound recorder assumes the
 default recording device.
 
-The
+Before, I used
 [GNOME Sound recorder](https://wiki.gnome.org/Design/Apps/SoundRecorder),
-started with the `sound-sound-recorder` command is blissfully simple
-to use. I just go with the default which gives me audio files in Ogg
-Vorbis format.
+for recording sound, however it gets confused when changing the
+default input device. I've therefore switched to
+using [SoX](http://sox.sourceforge.net/) and run it like this: 
+
+``` 
+$ sox -t alsa default output.war
+```
+
+It produces high quality recordings without no fuzz.
 
 ## Edit video
 
