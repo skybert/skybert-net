@@ -60,6 +60,10 @@ http://babun.github.io/
 ### JS
 http://podefr.tumblr.com/post/30488475488/locally-test-your-npm-modules-without-publishing
 
+### People
+https://developers.redhat.com/blog/2017/04/07/working-with-a-dispersed-team-part-5-of-7/
+
+
 ### Fun
 http://patorjk.com/software/taag/
 
