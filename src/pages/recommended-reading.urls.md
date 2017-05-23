@@ -88,6 +88,10 @@ http://nymag.com/selectall/2016/09/andrew-sullivan-technology-almost-killed-me.h
 ### JS
 https://snyk.io/
 
+This article made me laugh out loud, making everyone in the metro car
+think I was nuts 😉:
+https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f
+
 ---
 
 ## 2015
