@@ -39,6 +39,10 @@ https://thehftguy.com/2017/02/23/docker-in-production-an-update/
 
 https://consolia-comic.com/comics/containers-and-docker
 
+Interesting read on containers and challenges of sharing a kernel in
+spite of namespace & cgroups:
+https://sysdig.com/blog/container-isolation-gone-wrong/
+
 #### Reverse proxies 
 
 Finally got around to upgrade from Varnish 3 to 4. The folks at
