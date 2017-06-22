@@ -3,10 +3,9 @@ date: 2017-06-22
 category: linux
 tags: linux, music, spotify
 
-The (http://spotify)[Spotify] Linux desktop client can easily be
+The [Spotify](http://spotify) Linux desktop client can easily be
 controlled from the command line through the standard messaging bus on
-Linux,
-(https://dbus.freedesktop.org/doc/dbus-tutorial.html)[DBUS]. 
+Linux, [DBUS](https://dbus.freedesktop.org/doc/dbus-tutorial.html).
 
 Here are the commands I'm using. Of course, I've wrapped these in more
 user friendly BASH functions, which again I've hooked up to desktop
