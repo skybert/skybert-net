@@ -1,10 +1,13 @@
 date: 2014-11-22
 title: Discoveries
 
+---
+
 ## 2017
 
 ### Code
-http://www.catb.org/esr/faqs/things-every-hacker-once-knew/
+
+[Things Every Hacker Once Knew](http://www.catb.org/esr/faqs/things-every-hacker-once-knew/)
 
 The famous spelling mistake in the HTTP/1.0 specification, `Referer`
 instead of `Referrer` is blamed on the UNIX spell checker not having
@@ -12,9 +15,9 @@ neither of them in its dictionary at the time they wrote the
 RFC. Check out this nugget from 1995:
 https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html
 
-http://www.se-radio.net/
+[Software Engineering Radio](http://www.se-radio.net/)
 
-https://writing.kemitchell.com/2017/03/29/OSS-Business-Perception-Report.html
+[Open Source License Business Perception Report](https://writing.kemitchell.com/2017/03/29/OSS-Business-Perception-Report.html)
 
 ### Linux & Unix
 http://www.androidauthority.com/what-is-virtual-memory-gary-explains-747960/
@@ -27,6 +30,26 @@ Servers can run out of entropy (randomness needed to complete various
 tasks such as JAR signing, SSL connections), one way to mitigate this
 is to install `haveged`:
 http://www.issihosts.com/haveged/downloads.html
+
+
+#### There's a `timeout` command
+
+In
+[GNU coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html#timeout-invocation),
+which means it's installed on virtually all Linux machines, that lets
+you specify a maximum time for a command to complete, or else the
+command is `kill`ed.
+
+```
+$ timeout --signal KILL 10s create-backup
+```
+
+This will send the KILL signal (same as `kill -9 <pid>`) to the
+process running `create-backup` if it hasn't completed within 10
+seconds. 
+
+The signal to send to the process can be any of the ones listed by
+`kill -l`.
 
 #### Containers
 Docker provides a great developer experience but it leaves many things
@@ -83,7 +106,6 @@ like Slack, Signal and Github.
 ---
 
 ## 2016
-
 ### Linux & Unix
 https://www.youtube.com/watch?v=tc4ROCJYbm0
 https://www.cyberciti.biz/faq/how-to-speed-up-apt-get-apt-command-ubuntu-linux/
@@ -106,6 +128,69 @@ think I was nuts 😉:
 https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f
 
 ---
+
+### 2016-12-09
+
+[The qemu advent calendar](http://www.qemu-advent-calendar.org/2016/)
+is a wonderfully geeky advent calendar, showing off geeky OSes for you
+to explore.
+
+### 2016-11-28
+
+Great site for browsing  [emojis](http://www.iemoji.com/view/emoji/),
+complete with Unicode references. Good fun.
+
+Nice [CSS reference](http://cssreference.io/).
+
+### 2016-11-25
+Web based diagram sketching tool: [https://sketchboard.me](sketchboard.me)
+
+### 2016-10-25
+
+If I asked by a colleague for good BASH resources. There's so much out
+there, but most of it are one liners, not really guidance on
+programming in the BASH language.
+
+Here, I'll list some of the BASH resources I would recommend that goes
+beyond the one liner style:
+
+- [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+- [Unix shell programming notes](http://cfajohnson.com/shell/) by Chris F. A. Johnson
+
+### 2016-10-11
+
+Status of HA stack in Jessie:
+[ral-arturo.org/2016/10/06/debian-jessie-ha.html](http://ral-arturo.org/2016/10/06/debian-jessie-ha.html)
+
+
+Pearls of wisdom: DB failures: 
+[bytebot/lessons-from-database-failures](http://www.slideshare.net/bytebot/lessons-from-database-failures-65650946)
+
+[percona.com/blog/2008/04/28/mysql-replication-vs-drbd-battles/](https://www.percona.com/blog/2008/04/28/mysql-replication-vs-drbd-battles/)
+
+### Expand/collapse in Emacs/markdown files
+Why am I surprised, this is logical! To expand and collaps Markdown
+sections/headings in Emacs, just push the <kbd>Tab</kbd> key. I've
+been wanting this for so long, why didn't I just try to see if
+<kbd>Tab</kbd> worked? Duh!
+
+### 2016-10-10
+[developers.googleblog.com/2016/10/an-open-source-font-system-for-everyone.html](https://developers.googleblog.com/2016/10/an-open-source-font-system-for-everyone.html)
+
+### 2016-10-09
+[hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
+
+### 2016-10-06
+[github.com/jmechner/Prince-of-Persia-Apple-II ](https://github.com/jmechner/Prince-of-Persia-Apple-II )
+
+[speakerdeck.com/stevvooe/heart-of-the-swarmkit-object-model](https://speakerdeck.com/stevvooe/heart-of-the-swarmkit-object-model)
+
+rkt, a better way to run containers (than Docker's runC):
+[coreos.com/rkt/docs/latest/rkt-vs-other-projects](https://coreos.com/rkt/docs/latest/rkt-vs-other-projects.html)
+
+
+### 2016-09-03
+https://dzone.com/articles/9-things-in-jdk-9-that-arent-jigsaw
 
 ## 2015
 
@@ -481,88 +566,8 @@ http://nvie.com/posts/a-successful-git-branching-model/
 
 [Steve Yegge](http://steve-yegge.blogspot.com) is as always dead
 on. This post explains why every coder worth his or her salt should
-learn to type:
-http://steve-yegge.blogspot.com/2008/09/programmings-dirtiest-little-secret.html
+learn to
+type:
+[Programming's Dirtiest Little Secret](http://steve-yegge.blogspot.com/2008/09/programmings-dirtiest-little-secret.html)
 
-## 2017-03-01
-There's a `timeout` command
-in
-[GNU coreutils](https://www.gnu.org/software/coreutils/manual/coreutils.html#timeout-invocation),
-which means it's installed on virtually all Linux machines, that lets
-you specify a maximum time for a command to complete, or else the
-command is `kill`ed.
-
-```
-$ timeout --signal KILL 10s create-backup
-```
-
-This will send the KILL signal (same as `kill -9 <pid>`) to the
-process running `create-backup` if it hasn't completed within 10
-seconds. 
-
-The signal to send to the process can be any of the ones listed by
-`kill -l`.
-
-## 2016-12-09
-
-[The qemu advent calendar](http://www.qemu-advent-calendar.org/2016/)
-is a wonderfully geeky advent calendar, showing off geeky OSes for you
-to explore.
-
-## 2016-11-28
-
-Great site for browsing  [emojis](http://www.iemoji.com/view/emoji/),
-complete with Unicode references. Good fun.
-
-Nice [CSS reference](http://cssreference.io/).
-
-## 2016-11-25
-Web based diagram sketching tool: [https://sketchboard.me](sketchboard.me)
-
-## 2016-10-25
-
-If I asked by a colleague for good BASH resources. There's so much out
-there, but most of it are one liners, not really guidance on
-programming in the BASH language.
-
-Here, I'll list some of the BASH resources I would recommend that goes
-beyond the one liner style:
-
-- [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
-- [Unix shell programming notes](http://cfajohnson.com/shell/) by Chris F. A. Johnson
-
-## 2016-10-11
-
-Status of HA stack in Jessie:
-[ral-arturo.org/2016/10/06/debian-jessie-ha.html](http://ral-arturo.org/2016/10/06/debian-jessie-ha.html)
-
-
-Pearls of wisdom: DB failures: 
-[bytebot/lessons-from-database-failures](http://www.slideshare.net/bytebot/lessons-from-database-failures-65650946)
-
-[percona.com/blog/2008/04/28/mysql-replication-vs-drbd-battles/](https://www.percona.com/blog/2008/04/28/mysql-replication-vs-drbd-battles/)
-
-### Expand/collapse in Emacs/markdown files
-Why am I surprised, this is logical! To expand and collaps Markdown
-sections/headings in Emacs, just push the <kbd>Tab</kbd> key. I've
-been wanting this for so long, why didn't I just try to see if
-<kbd>Tab</kbd> worked? Duh!
-
-## 2016-10-10
-[developers.googleblog.com/2016/10/an-open-source-font-system-for-everyone.html](https://developers.googleblog.com/2016/10/an-open-source-font-system-for-everyone.html)
-
-## 2016-10-09
-[hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f](https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f)
-
-## 2016-10-06
-[github.com/jmechner/Prince-of-Persia-Apple-II ](https://github.com/jmechner/Prince-of-Persia-Apple-II )
-
-[speakerdeck.com/stevvooe/heart-of-the-swarmkit-object-model](https://speakerdeck.com/stevvooe/heart-of-the-swarmkit-object-model)
-
-rkt, a better way to run containers (than Docker's runC):
-[coreos.com/rkt/docs/latest/rkt-vs-other-projects](https://coreos.com/rkt/docs/latest/rkt-vs-other-projects.html)
-
-
-## 2016-09-03
-https://dzone.com/articles/9-things-in-jdk-9-that-arent-jigsaw
 
