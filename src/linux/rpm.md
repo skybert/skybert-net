@@ -5,6 +5,21 @@ tags: linux, redhat
 
 ## Listing installed packages
     $ rpm -qa
+    
+## Listing only the package names
+```
+$ rpm -qa --qf "%{NAME}\n"
+```
+
+
+As you've probably already guessed, it's possible to modify the format
+of the package listing to whatever you want by putting other
+expressions in `--qf`. e.g. to get package names and package versions
+separated by a space, you'd do:
+
+```
+$ rpm -qa --qf "%{NAME} %{VERSION}\n"
+```
 
 ## Listing all files of an installed package
     $ rpm -ql <package>
