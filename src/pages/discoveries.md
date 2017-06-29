@@ -20,11 +20,21 @@ https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html
 [Open Source License Business Perception Report](https://writing.kemitchell.com/2017/03/29/OSS-Business-Perception-Report.html)
 
 ### Linux & Unix
-http://www.androidauthority.com/what-is-virtual-memory-gary-explains-747960/
-https://learntemail.sam.today/blog/selinux-concepts-but-for-humans/
-https://www.redhat.com/en/about/blog/do-we-really-need-swap-modern-systems
-https://danielmiessler.com/study/tcpdump/
-http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/
+
+[What is virtual memory? – Gary explains](http://www.androidauthority.com/what-is-virtual-memory-gary-explains-747960/)
+
+I love when highly skilled engineers can explain something as
+advanced as SELinux in an easy understandable way: [SELinux Concepts - but for humans](https://learntemail.sam.today/blog/selinux-concepts-but-for-humans/)
+
+[Do we really need swap on modern systems?](https://www.redhat.com/en/about/blog/do-we-really-need-swap-modern-systems)
+
+[A tcpdump Tutorial and Primer with Examples](https://danielmiessler.com/study/tcpdump/)
+
+Man, I wish I knew about this before, it would save me pulling out
+network cables and dongles to get the base system up and running
+before installing the wireless card's
+firmware:
+[Unofficial Debian CD images which includes firmware](http://cdimage.debian.org/cdimage/unofficial/non-free/cd-including-firmware/)
 
 Servers can run out of entropy (randomness needed to complete various
 tasks such as JAR signing, SSL connections), one way to mitigate this
@@ -84,14 +94,15 @@ HAProxy in my setup:
 https://serversforhackers.com/tcp-load-balancing-with-nginx-ssl-pass-thru
 
 ### Windows
-An interesting extension to Cygwin: 
-http://babun.github.io/
+An interesting extension to Cygwin: [Babun](http://babun.github.io/)
 
 ### JS
-http://podefr.tumblr.com/post/30488475488/locally-test-your-npm-modules-without-publishing
+
+[Locally test your npm modules without publishing them to npmjs.org](http://podefr.tumblr.com/post/30488475488/locally-test-your-npm-modules-without-publishing)
 
 ### People
-https://developers.redhat.com/blog/2017/04/07/working-with-a-dispersed-team-part-5-of-7/
+
+[10 Fun Activities to Engage Your Dispersed Team](https://developers.redhat.com/blog/2017/04/07/working-with-a-dispersed-team-part-5-of-7/)
 
 
 ### Fun
@@ -549,7 +560,7 @@ http://www.economist.com/news/leaders/21608752-any-ceasefire-will-be-temporary-u
 
 ## 2013
 
-http://blog.vivekhaldar.com/post/40018875700/scaling-communication-email-vs-shared-documents
+[Scaling communication: email vs shared documents](http://blog.vivekhaldar.com/post/40018875700/scaling-communication-email-vs-shared-documents) by Vivek Haldar.
 
 ---
 
