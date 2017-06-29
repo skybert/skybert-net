@@ -1,10 +1,10 @@
-title: Get Git Clean Up Your mess
+title: Get Git to Clean Up Your mess
 date: 2017-06-29
 category: vcs
-tags: git, vacs, 
+tags: git, vcs, 
 
 Often, my editor(s) leave behind some temporary or backup files that I
-don't want:
+don't want: 
 
 ```
 $ git status
@@ -19,7 +19,9 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Git has house cleaning built in, just do:
+I *could* of course remove these with `rm -- <file>`, but it's much
+faster and less error prone to use the `git` command. To have Git do
+the house cleaning, just do:
 
 ```
 $ git clean -f 
@@ -28,4 +30,4 @@ Removing engine/engine-resolver/src/main/java/com/escenic/resolver/.#ResolverSer
 
 ```
 
-And you project workspace is nice and clean again.
+That's it, your project workspace is nice and clean again 😃
