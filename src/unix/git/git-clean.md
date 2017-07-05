@@ -1,4 +1,4 @@
-title: Get Git to Clean Up Your mess
+title: Let Git Clean Up the Mess
 date: 2017-06-29
 category: vcs
 tags: git, vcs, 
