@@ -93,6 +93,23 @@ nginx can do TCP load balancing now, making it an alternative to
 HAProxy in my setup:
 https://serversforhackers.com/tcp-load-balancing-with-nginx-ssl-pass-thru
 
+
+#### Fluxbox as a tiling window manager, 2017-07-07
+[Fluxbox](http://fluxbox.org) can re-arrange/tile all windows on the
+current desktop with the command `ArrangeWindows`. There are also
+similar commands like `ArrangeWindowsStackLeft` which lets the focused
+window occupy the left half of the screen, while Fluxbox stacks the
+others on the right. Now, there's nothing in the tiling window
+managers that appeal to me, Fluxbox has these features covered too!
+
+I bound this command to <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
+<kbd>s</kbd> in `~/.fluxbox/keys:
+```
+Control Shift s :ArrangeWindowsStackRight
+```
+
+In the process of learning this,, I was reminded that nothing beats RTFM 🦐
+
 ### Windows
 An interesting extension to Cygwin: [Babun](http://babun.github.io/)
 
@@ -106,6 +123,9 @@ An interesting extension to Cygwin: [Babun](http://babun.github.io/)
 
 
 ### Fun
+This text based space game is awesomely cool! [https://www.youtube.com/watch?v=XKPJs5t9ekI](https://www.youtube.com/watch?v=XKPJs5t9ekI)
+
+
 http://patorjk.com/software/taag/
 
 I love
