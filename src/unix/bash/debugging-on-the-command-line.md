@@ -119,4 +119,20 @@ right line in the right script file. You can also keep hitting
 <kbd>Ctrl</kbd> + <kbd>`</kbd> to step through each line of your
 program. Pretty neat, eh?
 
+## Inspect sub processes of a running BASH program
+
+You can inspect what any running BASH program, regardless of it
+running in the above mentioned debug mode, by using `pstree`. For
+this, get a hold of the PID of your program, e.g. by doing `ps aux |
+grep -w bash`, then pass it as the argument to the `pstree` command:
+
+```
+~ $ pstree -p -a 17693
+bash,17693 /usr/local/bin/che 6.2.0-4
+  └─bash,17698 /usr/local/bin/che 6.2.0-4
+      └─wget,17699 --continue --quiet --http-user foo --http-password bar https://maven.example.com/com/example/app/6.2.0-4/app-6.2.0-4.zip
+```
+
+See `man pstree` for more information on what `pstree` can do for you.
+
 Happy debugging!
