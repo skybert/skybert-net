@@ -75,9 +75,9 @@ When your scripts get bigger and hairer, you really want more of this
 context. Luckily, BASH can give all of this to you and it's easy — if
 you know how.
 
-The trick is to an environment variable to instruct `bash` go give you
-the information you want. The xtrace format is governed by the `PS4`
-variable. Here's what I've got in my `~/.bashrc`:
+The trick is to set an environment variable to instruct `bash` go give
+you the information you want. The xtrace format is governed by the
+`PS4` variable. Here's what I've got in my `~/.bashrc`:
 
 ```
 export PS4='# ${BASH_SOURCE}:${LINENO}: ${FUNCNAME[0]}() - [${SHLVL},${BASH_SUBSHELL},$?] '
