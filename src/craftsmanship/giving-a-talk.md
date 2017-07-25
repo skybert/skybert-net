@@ -35,17 +35,18 @@ only. Follow
 the [AIDA principle](https://en.wikipedia.org/wiki/AIDA_(marketing)):
 Attention, Interest, Desire, Action.
 
-**Attention**: get the attention of the audience. A picture, a joke, a
+**Attention**: Get the attention of the audience. A picture, a joke, a
 quote.
 
-**Interest**: pique the interest of the audience.  How is your
+**Interest**: Pique the interest of the audience.  How is your
 application different? How does your test framework find bugs faster?
 
-**Desire**: convince the audience that they want your solution, you're
-idea. How will it make their life's easier?
+**Desire**: Convince the audience that they want your solution, you're
+idea. How will it make their life's easier? How will it make your
+product better?
 
-**Action**: how can the audience try out your new program? View your
-new spreadsheet?
+**Action**: How can the audience try out your new program? Where can
+they view your new spreadsheet?
 
 
 ##  Ensure everyone can read your screen 👓
@@ -96,9 +97,9 @@ a picture. With slides, less is more. Remove, don't add.
 
 ## Final words 📜
 
-Since many presenters are not aware of these things, don't take the
-time to do them or simply don't bother, you will make __your__ talk
-easily above average simply by following these steps.
+Since many presenters are not aware of these things or simply don't
+bother, you will make __your__ talk easily above average simply by
+following these steps.
 
 Remember, everyone in the audience has taken time away from their work
 to listen to you. They could all be doing something else, they most
