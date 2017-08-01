@@ -7,7 +7,10 @@ title: Discoveries
 
 ### Code
 
-[Things Every Hacker Once Knew](http://www.catb.org/esr/faqs/things-every-hacker-once-knew/)
+An enjoyable walk down memory lane with the grand master Eric
+S. Raymond
+himself:
+[Things Every Hacker Once Knew](http://www.catb.org/esr/faqs/things-every-hacker-once-knew/).
 
 The famous spelling mistake in the HTTP/1.0 specification, `Referer`
 instead of `Referrer` is blamed on the UNIX spell checker not having
