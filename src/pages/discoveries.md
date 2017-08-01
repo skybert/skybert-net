@@ -24,6 +24,10 @@ https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html
 
 ### Linux & Unix
 
+[Top 25 Nginx Web Server Best Security Practices](https://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html) not
+only gives you many good hints on tightening the security of nginx
+itself but also the machine itself on which it runs.
+
 [What is virtual memory? – Gary explains](http://www.androidauthority.com/what-is-virtual-memory-gary-explains-747960/)
 
 I love when highly skilled engineers can explain something as
