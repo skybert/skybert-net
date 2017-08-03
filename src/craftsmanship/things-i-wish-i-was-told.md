@@ -274,3 +274,41 @@ programming and can be read by any developer, regardless of what
 platform or frameworks you're using.
 
 
+## Programming
+
+### Learn a few languages
+
+Good programmers are proficient in a good few languages. You should be
+too. Start out by learning one scripting language, one object oriented
+language and one functional language. 
+
+### API design
+
+Start off by writing the client code, __then__ implement your
+API. This is in some circles advocated through TDD (test driven
+development), but you should do this regardless of TDDing (which is of
+course, a good idea).
+
+By writing the client code, I mean, write the code the way you as a
+user of the great new API you're about to create, would like to
+write. E.g. say you want to build a ice cream vending machine
+backend. Before implementing all of that, start by writing the client
+code that the clients talking to the vending  machine will use, e.g.:
+
+```java
+IceCream iceCream = vendingMachine.fillUp(new Cone(Size.BIG, 2));
+customer.give(iceCream);
+```
+
+Once you're satisfied with the client code, __then__ start
+implementing the actual vending machine, the REST calls, the database
+layer, the business logic.
+
+Too few developers do this. Therefore, their APIs and systems become
+extremely complex to use. Good APIs to draw inspiration from are
+the [XOM XML library for Java](http://xom.org) and
+the
+[Requests HTTP library for Python](http://docs.python-requests.org/). The
+APIs "just work" the way you'd expect. At least, the way __I__ would
+expect 😉
+
