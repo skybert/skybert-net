@@ -22,8 +22,8 @@ himself:
 The famous spelling mistake in the HTTP/1.0 specification, `Referer`
 instead of `Referrer` is blamed on the UNIX spell checker not having
 neither of them in its dictionary at the time they wrote the
-RFC. Check out this nugget from 1995:
-https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html
+RFC. Check out this [nugget from 1995](https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html).
+
 
 [Software Engineering Radio](http://www.se-radio.net/)
 
