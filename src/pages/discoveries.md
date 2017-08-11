@@ -7,6 +7,13 @@ title: Discoveries
 
 ### Code
 
+An impressive walk through
+of
+[what happens when you type 'google.com'` into your browser](https://github.com/alex/what-happens-when/blob/master/README.rst).
+This article covers so many things, touching upon most things you're
+likely to work with as a programmer - and a good few more too!. A
+highly recommended read.
+
 An enjoyable walk down memory lane with the grand master Eric
 S. Raymond
 himself:
@@ -23,6 +30,9 @@ https://lists.w3.org/Archives/Public/ietf-http-wg-old/1995JanApr/0107.html
 [Open Source License Business Perception Report](https://writing.kemitchell.com/2017/03/29/OSS-Business-Perception-Report.html)
 
 ### Linux & Unix
+
+High quality vim screencasts are available free of charge
+at [vimcasts.org/](http://vimcasts.org)
 
 [Top 25 Nginx Web Server Best Security Practices](https://www.cyberciti.biz/tips/linux-unix-bsd-nginx-webserver-security.html) not
 only gives you many good hints on tightening the security of nginx
