@@ -1,6 +1,6 @@
 title: The way I work
-category: linux
-tags: linux, fluxbox
+category: dongxi
+tags: linux, fluxbox, debian
 date: 2015-07-20
 
 <img src="/graphics/2015/my-desktop.png" alt="my desktop" class="centered"/>
@@ -12,14 +12,16 @@ a vim user, doesn't mean I cannot learn from an article with that kind
 of workflow! This article is may way of giving something back, I hope
 you will enjoy my tale.
 
-[Hardware](#hardware) 
-— [Operating system](#os)
-— [Desktop environment](#de)
-— [Editors](#emacs)
-— [Chat & email ](#talk)
-— [Web browsers](#web)
-— [Shell](#shell)
-— [Music](#music)
+<div style="text-align: center;">
+ [Hardware](#hardware) 
+ [Operatingsystem](#os)
+ [Desktopenvironment](#de)
+ [Editors](#emacs)
+ [Chat & email](#talk)
+ [Webbrowsers](#web)
+ [Shell](#shell)
+ [Music](#music)
+</div>
 
 ## <a name="hardware"></a> The hardware
 My work horse is

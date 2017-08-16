@@ -3,12 +3,26 @@ date: 2017-07-07
 category: craftsmanship
 tags: emacs, vim, craftsmanship, hrm
 
-## Learn how to learn
+<div style="text-align: center;">
+ <a href="#learn">Learn how to learn</a> 
+ <a href="#logs">Read the logs</a> 
+ <a href="#strace">Unscrew the black box</a> 
+ <a href="#read_code">Learn to read code</a> 
+ <a href="#keyboard">Keyboard</a> 
+ <a href="#editors">Test editors</a> 
+ <a href="#people">People</a>
+ <a href="#api_design">API design</a>
+ <a href="#books">Books</a>
+</div>
+
+
+## <a name="learn"></a> Learn how to learn
 
 This is by far the most important thing I can teach you: teach
 yourself how to learn new things. Become used to acquiring knowledge
 by yourself. Don't rely on others telling you how something
-works. Learn how to find out this yourself.
+works. Learn how to find out this yourself. Then, nothing can stop
+you.
 
 For Unix commands, this means learning to use the `man` command (as in
 `man`ual). If you wonder how the `scp` command works, type `man scp`
@@ -31,12 +45,14 @@ something which complained about out of memory something. Ah, what
 could that be? Think about it. Could it be that someone sent a large
 XML file to the webservice of the Java app and it ran out of memory?
 
+### <a name="logs"></a> Read the logs
 Logs. Read the logs. This tip alone will set you apart from the bulk
 of people you'll be working with. Read the logs, all of them, not just
 the pretty little nice one. Read the logs. Most log entries have
 timestamps. Use these to narrow down your search for the messages
 related to the answers you seek.
 
+### <a name="strace"></a> Figure out what a program does
 On Linux, learn to use `strace` and run it in front of your
 program. See what files it tries to open and what network connections
 it attempts to open (`strace -f -e open <cmd>` and `strace -f -e
@@ -57,7 +73,7 @@ ask someone. When you ask them, tell them what you've read and what
 you've tried. People will be __much__ more motivated in helping you if
 you can show them that you have made an effort to solve this yourself.
 
-## Learn to read other people's code
+## <a name="read_code"></a> Learn to read other people's code
 
 Everyone's guilty of this: you prefer reading your own code to reading
 what other's have programmed. It's just so much easier to understand
@@ -80,7 +96,7 @@ trying to understand the code. Don't fall foul to
 the
 [Not invented Here Syndrome (NIH syndome)](https://en.wikipedia.org/wiki/Not_invented_here).
 
-## Editors
+## <a name="editors"></a> Editors
 ### Learn vim
 Whatever editor you use as your main editor, learn vim to the point
 that you're fairly fluent in it. This is the editor that you're
@@ -149,7 +165,7 @@ For Emacs, add this to your `~/.emacs`:
 (setq-default indent-tabs-mode nil)
 ```
 
-## Keyboard
+## <a name="keyboard"></a> Keyboard
 ### Remap CAPS LOCK to an extra Ctrl keyboard
 You almost never needs <kbd>CapsLock</kbd> but you often need
 <kbd>Ctrl</kbd> especially if you're using shortcuts (which you
@@ -193,7 +209,7 @@ you have just overcome and so on.
 If you're not convinced, reads this blog post by Steve Yegge:
 [Programming's Dirtiest Little Secret](http://steve-yegge.blogspot.com/2008/09/programmings-dirtiest-little-secret.html)
 
-## People
+## <a name="people"></a> People
 
 ### The ones that claim they know everything
 
@@ -249,7 +265,7 @@ don't know everything when discussing with a group of
 developers. Others fake it, just nod or don't say anything.
 
 
-## Books
+## <a name="learn"></a> Books
 
 <a
   href="https://www.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X">
@@ -282,7 +298,7 @@ Good programmers are proficient in a good few languages. You should be
 too. Start out by learning one scripting language, one object oriented
 language and one functional language. 
 
-### API design
+### <a name="api_design"></a> API design
 
 Start off by writing the client code, __then__ implement your
 API. This is in some circles advocated through TDD (test driven
@@ -312,3 +328,8 @@ the
 APIs "just work" the way you'd expect. At least, the way __I__ would
 expect 😉
 
+If you follow this principle and also puts your client code in a unit
+test, you'll not only get a nice test that you can run automatically
+whenever changing something in your program, but you also magically
+ensure that your code becomes loosely coupled and easier to maintain
+(trust me on this).
