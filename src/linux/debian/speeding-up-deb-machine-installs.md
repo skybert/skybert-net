@@ -43,6 +43,19 @@ Debian and Ubuntu and any release of the two.
 
 You can have a look at the cached files here:
 
+## Maintenance
+
+There's a web based report and administration interface included in
+the package. Head over to http://192.168.56.1:3142/acng-report.html
+and you're presented with some nice statistics as well as some buttons
+to perform maintenance tasks.
+
+For regular maintenance, though, a daily cron job is set up for you
+that should take care of expiring old packages.
+```
+/etc/cron.daily/apt-cacher-ng
+```
+
 ``` 
 $ find /var/cache/apt-cacher-ng -name "*.deb"
 ```
