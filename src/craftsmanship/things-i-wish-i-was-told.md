@@ -165,6 +165,42 @@ For Emacs, add this to your `~/.emacs`:
 (setq-default indent-tabs-mode nil)
 ```
 
+### <a name="wrap80"></a> Wrap all text at 80 characters
+
+It's much faster to read vertically than horizontally, so having the
+text spread over more lines is faster to read than fewer lines. Also,
+when looking at text in terminals or web browsers (or indeed, any
+place where there's no magic visual wrapping applied), it's much nicer
+to read it if it's wrapped. This text includes everything you write,
+including commit messages. Wrap everything at a maximum of 80
+characters.
+
+To make this easy, ask your editor to do this automatically for you.
+
+For Emacs, add this to your `~/.emacs`:
+```
+(add-hook 'text-mode-hook '(lambda () (auto-fill-mode 1)))
+```
+
+For vim, add this to your `~/.vimrc`:
+```
+"Text wrapping"
+set formatoptions=t
+set textwidth=72
+
+"Indent like the previous line"
+set smartindent
+```
+
+For the cases where you're not adding new text, you also want to be
+able to wrap (or re-wrap if inserting some text into an existing
+paragraph) on demand:
+
+For Emacs, place your cursor anywhere on a paragraph and hit `M-q`
+
+For Vim, hit "V" to start the selection, move to the end of your block
+and hit "gq" to reformat it.
+
 ## <a name="keyboard"></a> Keyboard
 ### Remap CAPS LOCK to an extra Ctrl keyboard
 You almost never needs <kbd>CapsLock</kbd> but you often need
