@@ -88,9 +88,12 @@ Then a mere `ifup` command to bring it up:
 The interface name `enp0s8` may be different on your machine. Use
 `ifconfig -a` to list all interfaces.
 
-You can then check the connectivity with:
+You can then check the connectivity from the virtual machine to the
+server running apt-cacher-ng through the `192.168.56.x` network by
+doing:
+
 ```
-$ telnet 192.168.56.101 3142
+$ telnet 192.168.56.1 3142
 telnet> GET /
 ```
 
