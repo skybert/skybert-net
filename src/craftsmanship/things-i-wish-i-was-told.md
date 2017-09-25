@@ -4,15 +4,15 @@ category: craftsmanship
 tags: emacs, vim, craftsmanship, hrm
 
 <div style="text-align: center;">
- <a href="#learn">Learn how to learn</a> 
- <a href="#logs">Read the logs</a> 
- <a href="#strace">Unscrew the black box</a> 
- <a href="#read_code">Learn to read code</a> 
- <a href="#keyboard">Keyboard</a> 
- <a href="#editors">Test editors</a> 
- <a href="#people">People</a>
- <a href="#api_design">API design</a>
- <a href="#books">Books</a>
+ [<a href="#learn">Learn how to learn</a>]
+ [<a href="#logs">Read the logs</a>]
+ [<a href="#strace">Unscrew the black box</a>]
+ [<a href="#read_code">Learn to read code</a>]
+ [<a href="#keyboard">Keyboard</a>]
+ [<a href="#editors">Text editors</a>]
+ [<a href="#people">People</a>]
+ [<a href="#api_design">API design</a>]
+ [<a href="#books">Books</a>]
 </div>
 
 
@@ -165,15 +165,16 @@ For Emacs, add this to your `~/.emacs`:
 (setq-default indent-tabs-mode nil)
 ```
 
-### <a name="wrap80"></a> Wrap all text at 80 characters
+### <a name="wraptext"></a> Wrap all text at 80 characters
 
-It's much faster to read vertically than horizontally, so having the
-text spread over more lines is faster to read than fewer lines. Also,
-when looking at text in terminals or web browsers (or indeed, any
-place where there's no magic visual wrapping applied), it's much nicer
-to read it if it's wrapped. This text includes everything you write,
-including commit messages. Wrap everything at a maximum of 80
-characters.
+It's much faster to read text vertically than horizontally, so having
+the text spread over more lines is faster to read than fewer
+lines. Also, when looking at text in terminals or web browsers (or
+indeed, any place where there's no magic visual wrapping applied),
+it's much nicer to read it if it's wrapped. This includes
+everything you write, including commit messages. Wrap everything at a
+maximum of 80 characters for happy reading any where (`cat <file>`,
+`git log --oneline`, in the browser++).
 
 To make this easy, ask your editor to do this automatically for you.
 
@@ -182,7 +183,7 @@ For Emacs, add this to your `~/.emacs`:
 (add-hook 'text-mode-hook '(lambda () (auto-fill-mode 1)))
 ```
 
-For vim, add this to your `~/.vimrc`:
+And for vim, add this to your `~/.vimrc`:
 ```
 "Text wrapping"
 set formatoptions=t

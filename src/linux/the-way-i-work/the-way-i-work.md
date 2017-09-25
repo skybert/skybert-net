@@ -13,14 +13,14 @@ of workflow! This article is may way of giving something back, I hope
 you will enjoy my tale.
 
 <div style="text-align: center;">
- [Hardware](#hardware) 
- [Operatingsystem](#os)
- [Desktopenvironment](#de)
- [Editors](#emacs)
- [Chat & email](#talk)
- [Webbrowsers](#web)
- [Shell](#shell)
- [Music](#music)
+ <a href="#hardware">Hardware</a>
+ <a href="#os">Operating system</a>
+ <a href="#de">Desktop environment</a>
+ <a href="#emacs">Editors</a>
+ <a href="#talk">Chat & talk</a>
+ <a href="#web">Web Browsers</a>
+ <a href="#shell">Shell</a>
+ <a href="#music">Music</a>
 </div>
 
 ## <a name="hardware"></a> The hardware
