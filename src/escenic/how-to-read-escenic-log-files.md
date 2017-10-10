@@ -58,9 +58,9 @@ changes persistent, you modify trace.properties, typically in
 
 This is where standard output is redirected. In here you shouldn't
 find any messages from ECE (if you haven't added some
-System.out.println(..) statements in your own Java code), but instead
-messages from 3rd party libraries that are writing to standard out or
-standard error while bootstrapping.
+`System.out.println(..)` statements in your own Java code), but
+instead messages from 3rd party libraries that are writing to standard
+out or standard error while bootstrapping.
 
 ### engine1-tomcat
 
@@ -75,7 +75,7 @@ itself, e.g. class loader or JAR scanning issues.
 Consult this log file for information on how the JVM runs the garbage
 collection on your system.
 
-### access.<date>.log
+### access.&lt;date&gt;.log
 
 This is the Tomcat access log, similar to the famous access log of the
 Apache web server (typically found under
@@ -96,7 +96,7 @@ instead of the values that other mechanisms (like Hibernate) provide
 . To add this to your trace.properties, typically in
 `/etc/escenic/engine/common/trace.properties`:
 
-```
+```bash
 ######################################################################
 # sql logging
 log4j.appender.SQL=org.apache.log4j.RollingFileAppender

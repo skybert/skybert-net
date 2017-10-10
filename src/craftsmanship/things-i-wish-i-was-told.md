@@ -83,7 +83,7 @@ have done, right?
 For a short time, 2-3 years, I was employed as a consultant providing
 Java and Linux services to clients. During these few years, I worked
 on a number of projects, all with large code bases. Lots of legacy
-(that's the biggest different between coding in university and in the
+(that's the biggest difference between coding in university and in the
 real world, the size of the code base). More than anything, these
 years taught me (forced me!) to read lots and lots of other people's
 code.
