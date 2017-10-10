@@ -11,7 +11,7 @@ and access manager platform, [Gluu](http://gluu.org).
 The GLUU dev server doesn't tidy up after itself:
 
 ```text
-# du -hs /opt/gluu-server-3.1.0/opt/jetty-9.3/temp/
+$ du -hs /opt/gluu-server-3.1.0/opt/jetty-9.3/temp/
 2.4G /opt/gluu-server-3.1.0/opt/jetty-9.3/temp/
 ```
 
