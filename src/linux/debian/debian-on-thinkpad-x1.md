@@ -139,6 +139,6 @@ $ cat /sys/class/backlight/intel_backlight/brightness
 ```
 
 Dim it, but leave it useable:
-```bash
+```text
 # echo 200 > /sys/class/backlight/intel_backlight/brightness
 ```
