@@ -3,8 +3,8 @@ date: 2015-05-05
 category: linux
 tags: debian, linux, alsa
 
-Debian stable (as of 2015-05) installed practically without an
-itch. Most things "just worked" after installing the necessary
+Debian stable (as of 2015-05) installed practically without a
+hitch. Most things "just worked" after installing the necessary
 packages from the official Debian repositories, including wireless and
 suspend to RAM. However, as always there were a few things I had to
 tweak to get everything the way I wanted to. On this page, I've
