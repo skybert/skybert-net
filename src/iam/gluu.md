@@ -41,6 +41,7 @@ Change the configuration of the `init.d` scripts for the `identity`
 and `oxauth` processes:
 
 ```text
+# /etc/init.d/gluu-server-3.1.0 login
 # vim /etc/default/identity
 ```
 
@@ -64,18 +65,23 @@ JAVA_OPTIONS="
   -Dlog.base=/opt/gluu/jetty/identity 
   -Dpython.home=/opt/jython 
   -Dorg.eclipse.jetty.server.Request.maxFormContentSize=50000000 
-  -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=6005"
+  -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=6005
+"
 ```
+
+The important bit is the last line starting with `-Xrunjdwp` (I pretty
+printed the other values too to make it easier to read, the `bash`
+code still works).
 
 Then restart the `identity` process:
 ```text
 # /etc/init.d/identity restart
 ```
 
-To the same in `/etc/default/oxauth`, but choose a different port for
+Do the same in `/etc/default/oxauth`, but choose a different port for
 the debugger to connect to:
 ```
-  -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005"
+  -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5005
 ```
 And then restart `oxauth` too:
 ```
@@ -96,8 +102,8 @@ As long as you keep this `ssh` connection open, you can access the
 debug ports `5005` and `6005` as if they were running locally.
 
 Now, you can open up your favourite IDE like IntelliJ IDEA, Eclipse or
-Emacs and point set up the debugger to connect to `5005` for the
-`oxauth` app and `6005` for the `identity` app respectively.
+Emacs and point the debugger to port `5005` for the `oxauth` app and
+`6005` for the `identity` app respectively.
 
 ### Getting the correct sources
 For remote debugging to make any sense, you must of course have the
@@ -135,3 +141,15 @@ bindDN: cn=directory manager,o=gluu
 bindPassword: foobar
 servers: localhost:1636
 ```
+
+Forward the `1636` the same way as you did with the debug ports
+above. You cna then enjoy the full gory details of everything from how
+the OpenID Connect clients are stored to how the user objects are
+mapped in the LDAP tree.
+
+<img
+  class="centered"
+  src="/graphics/2017/ldap-gui.png"
+  alt="LDAP client browsing the gluu configuation"
+  style="width: 900px"
+/> 
