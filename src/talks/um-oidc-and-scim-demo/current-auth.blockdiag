@@ -1,0 +1,10 @@
+blockdiag {
+    ece [label="ECE", color="orange"];
+    iam [label="IAM Provider"];
+    ng [label="NG", color="#00877F"];
+    foo [label="The Next Big Thing™"];
+
+    ece -> iam;
+    ng -> iam;
+    foo -> iam;
+}

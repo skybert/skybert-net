@@ -1,0 +1,13 @@
+blockdiag {
+    ece [label="ECE", color="orange"];
+    um [label="UM", color="green"];
+    iam [label="IAM Provider"];
+
+    ece [label="ECE"];
+    um [label="UM"];
+    cue [label="CUE"];
+    iam [label="IAM Provider"];
+
+
+    cue -> ece -> um -> iam;
+}
