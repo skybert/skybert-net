@@ -9,7 +9,7 @@ body {
   background-color: white;
   color: #302a2b;
   font-size: 2em;
-  font-family: helvetica-neue-thin, 'sans-serif';
+  font-family: helvetica-neue, 'sans-serif';
 }
 
 ::selection {
