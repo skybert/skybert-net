@@ -1,5 +1,4 @@
-skybert-net
-===========
+# skybert-net
 
 I started out having manual backups of my website, then started using
 CVS, then back to making manual backups, then moved on to use rsync to
