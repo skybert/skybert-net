@@ -10,13 +10,13 @@ title: Curriculum Vitae
   </a>
 </div>
 
-I am Torstein. I love working with complex Unix and Linux systems
-comprised of components such as HTTP servers, web caches, load
-balancers, distributed memory caches, databases, LDAP and application
-servers. Making them all play together is a treat.
+I am Torstein. I love working with complex Unix and Linux systems with
+lots of HTTP servers, web caches, load balancers, distributed memory
+caches, databases, LDAP and application servers. Making them all play
+together is a treat.
 
-Also, I enjoy designing and developing JEE applications, using web
-standards like [HTML5](http://w3.org/TR/html5),
+Also, I enjoy designing and developing Python & JEE applications,
+using web standards like [HTML5](http://w3.org/TR/html5),
 [XML](http://w3.org/TR/xml), [CSS](http://w3.org/TR/css),
 [DOM](http://w3.org/TR/dom),
 [ECMA](http://www.ecmascript.org)/JavaScript as well as hacking on
@@ -31,8 +31,8 @@ development methodology.
 
 Distributed development is something I'm comfortable and have great
 experience with. I've worked with multinational teams in several time
-zones from January 2007 to January 2013 and am used to the challenges
-(and benefits!)  of many nationalities and cultural backgrounds.
+since January 2007 and am used to the challenges (and benefits!)  of
+many nationalities and cultural backgrounds.
 
 Getting teams to function optimally, making everyone feel valued and
 boost the team's development velocity is a hugely challenging and
@@ -63,7 +63,9 @@ jQuery, jChart, CSS & HTML. Not to forget: ActionScript, Flex,
 Jaspersoft iReporter.
 
 Server setup and operations are most of the time a breeze using:
-nginx, Apache, RedHat Linux, Ubuntu Linux, [BASH](http://gnu.org/software/bash), SED, [awk](http://www.gnu.org/software/gawk/manual/gawk.html) & Puppet
+nginx, Apache, RedHat Linux, Ubuntu Linux,
+[BASH](http://gnu.org/software/bash), SED,
+[awk](http://www.gnu.org/software/gawk/manual/gawk.html) & Puppet
 
 ## Escenic, System architect, February 2012 – January 2013 (1 year)
 
@@ -171,8 +173,8 @@ Opera on the Linux platform.
 
 # Languages
 - **Norwegian**: Norwegian is my mother tongue
-- **English**: I have taken my master's degree in Scotland and have had
-English as my working language for 7.5 years while working at Escenic.
+- **English**: I have taken my master's degree in Scotland and have
+had English as my working language since 2005.
 - **German**: I have lived in Germany for 2.5 years and have worked in
 German speaking countries for a total of 4 years.
 - **Mandarin**: I have good oral skills for every day conversation.
@@ -199,6 +201,10 @@ German speaking countries for a total of 4 years.
 - **C & C++**: OpenAL, OpenGL
 - **ECMASCript**, **JavaScript** & **ActionScript**: jQuery, jChart,
   ActionScript & Flex
+- **Identity & access management**: OpenID 1/2, [OpenID
+  Connect](http://openid.net/), [SCIM](http://www.simplecloud.info/)
+  [OAuth2](https://oauth.net/2/); [Gluu](https://www.gluu.org/),
+  [KeyCloak](http://www.keycloak.org/).
 
 # Technologies I've worked a lot with
 
@@ -226,7 +232,8 @@ integration; Oracle Web Cache; HA-Proxy; pon
 
 - **GNU/Linux**: [Debian](http://debian.org); Ubuntu; Arch; SuSE;
 RedHat & CentOS; Gentoo.
-- **UNIX**: [HP-UX](http://en.wikipedia.org/wiki/HP-UX);
+- **UNIX**: [OpenBSD](http://openbsd.org);
+  [HP-UX](http://en.wikipedia.org/wiki/HP-UX);
   [Solaris](http://en.wikipedia.org/wiki/Solaris_%28operating_system%29)
   8 & 10; [NetBSD](http://netbsd.org) 6.1;
   [FreeBSD](http://freebsd.org); Mac OS X
