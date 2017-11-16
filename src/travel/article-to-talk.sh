@@ -14,8 +14,9 @@ main() {
       -e 's@^#@\n---\n\n#@' \
       < "${article}" > "${out}"
 
+  local dir=/tmp/$(basename "${article}" .md)
   ~/src/escenic-revealjs-themes/bin/create-slides \
-    --dir /tmp \
+    --dir "${dir}" \
     "${out}"
 }
 
