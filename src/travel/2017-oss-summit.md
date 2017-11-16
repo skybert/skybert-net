@@ -176,8 +176,11 @@ presentations and discussing with presenters and fellow attendees.
 
 ## Workflow
 
-Focus on workflows, not technology because it changes. Describe how it
-feels to use the software.
+> Focus on workflows, not technology.
+
+because it changes. 
+
+Describe how it feels to use the software.
 
 ## Keystone
 Openstack's identify management and service catalogue. Openstack is a
@@ -209,12 +212,18 @@ children. Pid namespaces are hierarchical.
 Rex-ray container storage.
 
 ### Fancy files, containers
-People end up "just use the same shit everywhere. Same versions of
-host and container OSes." Because of breakages in kernel and user
-land.
 
-Novotny : We all mourn Google Reader.  First spontaneous applaus at
-OSS summit.  People are messy.
+> "People end up just using the same shit everywhere"
+
+Same versions of host and container OSes." Because of breakages in
+kernel and user land.
+
+## Google Reader
+
+> We all mourn Google Reader
+—Novotny 
+
+First spontaneous applaus at OSS summit.  People are messy.
 
 ## Bash. 
 The `file` command has a magic file in usr share:
@@ -224,23 +233,35 @@ The `file` command has a magic file in usr share:
 
 ## Open API, Swagger
 
-Swagger can generate definition from bare jaxrs. Has json schema as
+Swagger can generate definition from bare JAX-RS. Has JSON schema as
 definition format for models.
 
 ## Server less
 Server less is about not caring about servers. For one off, sporadic
 requests. With java, you should make regular requests to keep the jvm
-in the lambda container warm. Lambda doesn't have versioning of source
-code. Can't access github.com, must upload zip or edit code in online
-editor. Chalice, easy creation of lambdas. OpenWhisk, oprnfaas both
-sound worth a look.
+in the lambda container warm. 
+
+### Lambda
+Lambda doesn't have versioning of source code. 
+
+Can't access github.com, must upload zip or edit code in online
+editor.
+
+### Chalice
+[Chalice](https://github.com/aws/chalice), easy creation of
+lambdas. Lets you script uploading lambdas → integrate with your local
+VC.
+
+### Worth a look
+[OpenWhisk](https://openwhisk.apache.org/),
+[openfaas](https://github.com/openfaas/faas) 
 
 ## Monitoring
 Logs. Good for use known unknowns. New logging platforms like elk and
 dagadog are only good for known metrics.
 
 ## Buildroot
-makes new stable release every 3 months.
+Makes new stable release every 3 months.
 
 ## Licences
 [spdx](https://spdx.org/tools), describes licences of source code,
@@ -251,7 +272,7 @@ if a build image will run at all.
 
 ### Multi licence projects
 Fossology. Not even the kernel is 100% one licence. Think of licences
-like an architectural property.  GPL readme, remove "or later". SPDX,
+like an architectural property. GPL readme, remove "or later". SPDX,
 tool for automatically check source code.
 
 ## Internet of Things - IoT 
@@ -259,24 +280,34 @@ Hacking: Internet of threats. Great presentation. Live hack of toy
 cars demos.
 
 ## People
-Jono: We strive for acceptance. Belonging. Status important
-role. Reciprocal species. Form habits with repetition.
+- Jono: We strive for acceptance. Belonging.
 
-Takes 66 days to develop habits. The first two months extremely
+- Status important. 
+
+- Reciprocal species. 
+
+### Habits
+Form habits with repetition.
+
+Takes 66 days to develop habits → The first two months extremely
 important for new employees.
 
-Authenticity, no automatic thank you email.
+### Authenticity
+No automatic thank you email.
 
+### Code of conduct
 > Assholes don't read code of conduct.
 
+### Happiness
 It's the intangible world that makes us happy.
 
+### Goals
 Set several goals, your own. Not only your mentor's. Embrace the fear,
 laugh at your own mistakes.
 
 ## Code analysis
 `perf` counts various OS metrics. It found that it's much faster to
-traverse a bitmap by row instead of column!
+traverse a bitmap by row instead of by column!
 
 ## Chromebook 
 - [upspin](https://upspin.io/), storage
@@ -291,17 +322,23 @@ traverse a bitmap by row instead of column!
 Semi sync replication. At least one slave gets the write. You don't
 always want fully synchronous replication.
 
+### Alibaba Cloud
 Alibaba cloud. SQL injection alarms. Cheap outside of China.
 
+### Cloud hosted databases like RDS
 Many features are disabled as default. Like thread
-pools. Location. Google cloud SQL has a zone in Taiwan.
+pools. 
 
+### Cloud locations
+Google cloud SQL has a zone in Taiwan.
+
+### DB monitoring
 Percona has an open source monitoring tool. Can connect to RDS.
 
 ### MariaDB instead of RDS 
 Many people run mariadb in ec2 instead of RDS.
 
-### Auto configure database
+### Auto tune database
 [Ottertune](https://github.com/cmu-db/ottertune). Auto configure a
 database.
 
@@ -359,4 +396,6 @@ something. Anything.
 
 ##  Kafka
 The streaming platform. Real time hadoop, real time analysis of data.
+
+## exit 0
 
