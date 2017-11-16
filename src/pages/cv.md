@@ -46,10 +46,18 @@ with very high demands for performance, availability and scalability.
 
 ## Escenic, System architect, May 2015 – Present
 
-Back `/home` @ Escenic, this time in the core team working on the
-Escenic Content Engine itself, in addition to various plugins and the
-Escenic Cloud set of tools, including my baby
-[ece-scripts](http://github.com/vizrt/ece-scripts) 😃
+Back home in the R&D department at Escenic, developing the best
+Content Management System in the world, constantly playing with as
+many Linux servers, Java, BASH and REST applications as my mind can
+muster. I'm also contributing to our cloud platform and do a fair
+amount of work on our internal R&D infrastructure.
+
+OS: Debian, Ubuntu, CentOS, RedHat; Packaging & repo admin: Maven,
+APT, RPM; Java: Loads!; Python: Flask, requests; Shell: BASH, sed,
+awk; Servers: Loads! nginx, apache, lighthttpd, Percona, MariaDB,
+Derby, Oracle, OpenLDAP, memcached, HA Proxy, Nagios, Icinga; IAM:
+Gluu, KeyCloak, OpenID Connect, OAuth2, SCIM.
+
 
 ## Conduct AS, Senior consultant, February 2013 – April 2015 (2 years, 3 months)
 
@@ -201,10 +209,6 @@ German speaking countries for a total of 4 years.
 - **C & C++**: OpenAL, OpenGL
 - **ECMASCript**, **JavaScript** & **ActionScript**: jQuery, jChart,
   ActionScript & Flex
-- **Identity & access management**: OpenID 1/2, [OpenID
-  Connect](http://openid.net/), [SCIM](http://www.simplecloud.info/)
-  [OAuth2](https://oauth.net/2/); [Gluu](https://www.gluu.org/),
-  [KeyCloak](http://www.keycloak.org/).
 
 # Technologies I've worked a lot with
 
@@ -227,16 +231,20 @@ integration; Oracle Web Cache; HA-Proxy; pon
   performance read/write environments
 - **Databases**: MySQL & Percona 5 & 5.5; PostgreSQL;
   [Oracle](http://oracle.com) 8, 10g, 11g, Cache DB, CouchDB, Sybase.
+- **Identity & access management**: OpenID 1/2, [OpenID
+  Connect](http://openid.net/), [SCIM](http://www.simplecloud.info/)
+  [OAuth2](https://oauth.net/2/); [Gluu](https://www.gluu.org/),
+  [KeyCloak](http://www.keycloak.org/).
 
 # Operating systems
 
 - **GNU/Linux**: [Debian](http://debian.org); Ubuntu; Arch; SuSE;
 RedHat & CentOS; Gentoo.
-- **UNIX**: [OpenBSD](http://openbsd.org);
-  [HP-UX](http://en.wikipedia.org/wiki/HP-UX);
+- **UNIX**: [HP-UX](http://en.wikipedia.org/wiki/HP-UX);
   [Solaris](http://en.wikipedia.org/wiki/Solaris_%28operating_system%29)
-  8 & 10; [NetBSD](http://netbsd.org) 6.1;
-  [FreeBSD](http://freebsd.org); Mac OS X
+  8 & 10; [OpenBSD](http://openbsd.org) 6.2;
+  [NetBSD](http://netbsd.org) 6.1; [FreeBSD](http://freebsd.org); Mac
+  OS X
 
 # My toolbox
 - I'm particularly found of [Emacs](http://gnu.org/software/emacs), I
