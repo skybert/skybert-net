@@ -6,6 +6,7 @@ hs_err_*.log
 missfont.log
 output
 src/graphics/2016/debian-logo.png
+src/graphics/2017/oss-summit
 src/pages/recommended-reading.md
 src/talks/**/*.jpg
 src/talks/**/*.png
@@ -26,4 +27,4 @@ src/talks/escenic-theme/solarized_dark.css
 src/talks/lib/
 src/talks/push
 src/talks/reveal.js
-src/travel/2016-linuxcon/
+src/travel/2016-linuxcon
