@@ -9,12 +9,13 @@ had a lot of wonderful discoveries this evening.
 
 All in all, OpenBSD was a joy to use. Old school, really Unixy, no
 bloat. Just edit text files and issue commands. Nothing more. No
-magic. No `systemd` no PulseAudio. After installing the OS, which was
-a pure text based, simple question and answer style installer (you
-know, the kind of BASH scripts you made second year in Uni), it said:
+magic. No `systemd`, no NetworkManager, no PulseAudio. After
+installing the OS, which was a pure text based, simple question and
+answer style installer (you know, the kind of BASH scripts you made
+second year in Uni), it said:
 
 <img
-  src="/graphics/2017/openbsd-installer.jpg"
+  src="/graphics/2017/openbsd-installer.png"
   alt="openbsd installer"
   class="centered"
 />
@@ -25,7 +26,7 @@ A quick reboot later, X came up with a login screen looking awfully
 lot like `xdm`:
 
 <img
-  src="/graphics/2017/openbsd-login.jpg"
+  src="/graphics/2017/openbsd-login.png"
   alt="openbsd login"
   class="centered"
 />
