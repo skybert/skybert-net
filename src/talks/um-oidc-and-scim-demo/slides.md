@@ -91,10 +91,13 @@ Create, update, delete and read user information.
 
 ---
 
-## Design goals 🚀
+## Future proof
 
-- Use open standards for everything (auth, authz, identity)
-- No vendor lock-in
+- 2010-02 OpenID support in ECE. Google,
+  Yahoo, Facebook.
+- 2010-10 Facebook completely changes its OpenID API
+- 2012-10 Facebook changes its OpenID API again
+- 2014-03 OpenID Connect support in ECE
 
 ---
 
@@ -102,6 +105,13 @@ Create, update, delete and read user information.
 
 - No future changes needed in ECE, NG & Co (auth, authz, identity)
 - They just need to support UM
+
+---
+
+## Design goals in UM backend 🚀
+
+- Use open standards for everything (auth, authz, identity)
+- No vendor lock-in
 
 ---
 
