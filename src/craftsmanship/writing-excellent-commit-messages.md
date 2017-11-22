@@ -53,8 +53,8 @@ FOO-21311 Rocket pack size now fits all ports, including Detroit.
 
 ## #4
 Oh yes, one more thing. When talking about commit messages, I would
-also urge everyone when writing the commit messages, to focus on _why_
-you made these changes and less on the _what_. The _what_ is in the
+also urge you when writing commit messages to focus on _why_
+you made these changes and less on the _what_ you did. The _what_ is in the
 commit diff, so saying "Changed rocket package size from 5 to 3" isn't
 that interesting:
 
@@ -63,7 +63,8 @@ that interesting:
 + public static Integer ROCKET_PACK_SIZE = 3;
 ```
 
-However, _why_ you made that change, now _that's_ very interesting 😄
+However, _why_ you made that change ("The Detroit truck can only
+accept 3 rockets"), now _that's_ interesting 😄
 
 
 That's it,
