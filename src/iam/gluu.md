@@ -6,6 +6,20 @@ tags: iam, gluu
 These are some of my notes after working with the open source identity
 and access manager platform, [Gluu](http://gluu.org).
 
+## Service discovery
+Gluu supports service OIDC discovery and it sets up redirects from the
+`/oxauth` resource so that you can only type the short-ish URI below
+to get the JSON document describing the various OIDC services and options
+available.
+
+```
+$ curl --location https://gluu.example.com/oxauth
+```
+
+The `--location` option to `curl` makes it follow redirects. The URI
+that it ends up returning the contents of is
+`https://gluu.example.com/oxauth/.well-known/openid-configuration`
+
 ## Running out of disk space
 
 The GLUU dev server doesn't tidy up after itself:
@@ -25,7 +39,7 @@ So some house keeping is in place in case you don't want to run out of disk spac
 
 ## See what's going on
 
-```text 
+```text
 $ tail -f /opt/gluu-server-3.1.0/opt/gluu/jetty/identity/logs/* \
           /opt/gluu-server-3.1.0/opt/gluu/jetty/oxauth/logs/*
 
@@ -57,14 +71,14 @@ JAVA_OPTIONS="-server -Xms256m -Xmx858m -XX:MaxMetaspaceSize=368m
 To:
 ```
 JAVA_OPTIONS="
-  -server -Xms256m -Xmx858m 
-  -XX:MaxMetaspaceSize=368m 
-  -XX:+DisableExplicitGC 
-  -Dgluu.base=/etc/gluu 
-  -Dserver.base=/opt/gluu/jetty/identity 
-  -Dlog.base=/opt/gluu/jetty/identity 
-  -Dpython.home=/opt/jython 
-  -Dorg.eclipse.jetty.server.Request.maxFormContentSize=50000000 
+  -server -Xms256m -Xmx858m
+  -XX:MaxMetaspaceSize=368m
+  -XX:+DisableExplicitGC
+  -Dgluu.base=/etc/gluu
+  -Dserver.base=/opt/gluu/jetty/identity
+  -Dlog.base=/opt/gluu/jetty/identity
+  -Dpython.home=/opt/jython
+  -Dorg.eclipse.jetty.server.Request.maxFormContentSize=50000000
   -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=6005
 "
 ```
@@ -152,4 +166,4 @@ mapped in the LDAP tree.
   src="/graphics/2017/ldap-gui.png"
   alt="LDAP client browsing the gluu configuation"
   style="width: 900px"
-/> 
+/>
