@@ -4,6 +4,8 @@ category: vcs
 tags: craftsmanship, vcs, git
 
 <pre style="overflow-x: scroll;">
+$ cd our-awesome-project
+$ git log
 commit a87de13c60102b80e8288025fcb7951bbcedb433
 Author: John Doe <jon@doe.com>
 Date:   Fri Oct 20 11:08:53 2017 +0200
@@ -14,7 +16,7 @@ FOO-21311 :
 - Added unit tests for this
 </pre>
 
-Hi there, may I suggest a few small changes to the format of the
+Psssst, may I suggest a few small changes to the format of the
 commit messages?
 
 ## #0
