@@ -5,7 +5,7 @@ tags: unix, bash
 
 Many people use external commands such as `tr` and `awk` for
 uppercasing and lowercasing strings, but this is not necessary. BASH 4
-and later can do this all by itself!
+and later can do this all by itself.
 
 ## To upper case
 
