@@ -1,4 +1,4 @@
-title: Upper and Lowercasing Strings
+title: Upper and lower casing
 date: 2017-11-28
 category: bash
 tags: unix, bash
