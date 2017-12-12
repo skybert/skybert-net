@@ -5,7 +5,7 @@ tags: language, norwegian
 
 ## Hummer og humør
 - Hun hadde godt *humør* og lo mye
-- Vi spiser *hummer* og drikker vitvin
+- Vi spiser *hummer* og drikker hvitvin
 
 ## Sukker og sokker
 - Han hadde to t-skjeer med *sukker* i teen.
