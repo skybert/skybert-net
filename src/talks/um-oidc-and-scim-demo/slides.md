@@ -248,6 +248,29 @@ $ GET http://um/user/by/email/@skybert.net
 
 ---
 
+## CUE - login through UM & AD
+
+<img src="cue-um-ad.svg"/>
+
+---
+
+## User sync - ECE → UM → IAM
+
+<img src="user-sync-ece-um-iam.svg"/>
+
+ECE pushes, uses UM REST endpoint. Doesn't know which IAM is used.
+
+---
+
+## User sync - AD → IAM 
+
+<img src="user-sync-ad-iam.svg"/>
+
+IAM pulls, AD is oblivious.
+
+---
+
+
 ## That's it
 
 ✏ torstein @ escenic dot com
