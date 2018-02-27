@@ -40,13 +40,39 @@ These chains are set up with the `/etc/init.d/docker` script from the
 you've flushed your `iptables` rules?), try to restart the init.d
 script. The chains should be re-created each time the script runs.
 
-## Logs
+## Viewing logs
 
-To see the standard out log of a container, do: 
+It seems to be the "Docker way" to only have one log per container and
+that log should be redirected to standard out so that Docker's logging
+framework can pick it up.
+
+To see the standard out log of a container, do:
 
 ```text
 $ docker logs -f <id>
 ```
 
+To see the log of a named container, use `docker ps` first and ask it
+to filter on name, `gluu-oxtrust` in my case:
+
+```text
+$ docker logs -f $(docker ps -qf "name=gluu-oxtrust")
+```
+
 > Skybert: what if the container has multiple log files and
 > their difference carries significance?
+
+> Skybert: how to see the standard error log? (`/dev/stderr`)
+
+## Logging into a container by name
+
+Here, I have a container with name `gluu-oxtrust` and I want to log
+into it (which of course is a lie, there's no logging into containers,
+they're running the host machine, but hey, let's pretend, shall we?):
+
+```text
+$ docker exec -ti $(docker ps -qf "name=gluu-oxtrust") /bin/bash
+```
+
+
+
