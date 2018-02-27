@@ -1,4 +1,4 @@
-title: Climbing Mt. Foo
+title: Climbing Mt. Foo ⛰
 date: 2018-02-27
 category: mt-foo
 tags: mt-foo
