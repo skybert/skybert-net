@@ -119,10 +119,9 @@ otherwise it will just confuse the validator or browser.
 >
 ```
 
-You can find the approperiate DOCTYPE headers for the other
-versions of HTML at the
-<a href="http://www.w3c.org">World Wide Web Consortium</a>
-website.
+You can find the approperiate DOCTYPE headers for the other versions
+of HTML at the <a href="http://www.w3c.org">World Wide Web
+Consortium</a> website.
 
 Now you know more about HTML than most web designers and web
 programmers. Seriously.
@@ -134,23 +133,20 @@ their properties and uses.
 
 ### The html, body and head
 
-The "biggest" element is the <em>html</em>
-element. It can hold two, and only two, other
-elements, namely <em>head</em> and <em>body</em>.
-An HTML document needs a body, but not a head. If you
-do have a head, you need a <em>title</em> inside
-the head.
+The "biggest" element is the <em>html</em> element. It can hold two,
+and only two, other elements, namely <em>head</em> and <em>body</em>.
+An HTML document needs a body, but not a head. If you do have a head,
+you need a <em>title</em> inside the head.
 
-
+```html
 <html>
-<head>
-<<e>If you have a head you must have a title</head>
-</head>
-<body>
-</body>
+  <head>
+    <title>If you have a head you must have a title</title>
+  </head>
+  <body>
+  </body>
 </html>
-
-
+```
 
 Apart from these three, special elements (&nbsp;which to a great
 extent are block level elements&nbsp;),
@@ -159,9 +155,9 @@ block level elements.
 
 ### Block level elements
 
-Block level elements have the thing in common that
-they can contain other elements. They can hold
-both inline elements and other block level elements.
+Block level elements have the thing in common that they can contain
+other elements. They can hold both inline elements and other block
+level elements.
 
 
 The commonly used block level elements are `p`, `div`, `form`, `pre`,
@@ -207,22 +203,19 @@ stylesheet.
 
 ### Attributes
 
-Attributes are the things written inside the
-tags of the start element after the element name
-itself. The attribute consist of two parts, the
-attribute name and the attribute value. The
-attribute value should be given with double
-quotes around it.
+Attributes are the things written inside the tags of the start element
+after the element name itself. The attribute consist of two parts, the
+attribute name and the attribute value. The attribute value should be
+given with double quotes around it.
 
 ```
 <div attribute_name="attribute_value" />
 ```
 
-The reason why you should not
-use single quotes is that JavaScript instructions
-may be given in an attribute, and these may use
-single quotes for strings without messing up
-your markup and confusing the browser.
+The reason why you should not use single quotes is that JavaScript
+instructions may be given in an attribute, and these may use single
+quotes for strings without messing up your markup and confusing the
+browser.
 
 ```
 <input
