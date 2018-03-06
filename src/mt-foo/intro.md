@@ -26,9 +26,8 @@ system administration culture to learn. Here's one:
 ## Why it's called "foo" 🎭
 
 Whenever coders need some example data, a name or just a string of
-text, there are some words that you'll see all over the place:
-
-Foo is the top one. And if there are three values, they're often `foo`,
+text, there are some words that you'll see all over the place: Foo is
+the top one. And if there are three values, they're often `foo`,
 `bar`, `baz`.
 
 If there's an example numeric value, it's often `42`. This is a
@@ -49,4 +48,15 @@ everything"](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide
 
 ## Third climb: Python
 
+## Take a breather
+
+## Fourth climb: Networking
+
+## Sixth climb: HTTP
+
+## Take a breather
+
+## Seventh climb: Unix command line
+
+## Eight climb: Version control - who changed which line when?
 
