@@ -4,12 +4,12 @@ category: mt-foo
 tags: mt-foo
 
 ## Introduction
-What does it take to become a programmer? The easy path is to take a
-3-5 year computer science degree at a university. But what if you
-don't have the possibility for doing this? What if you either don't
-have the time, cannot afford it, don't have the grades or requirements
-for entering such a course or you live in an area where there's no
-such course at all?
+What does it take to become a programmer? The obvious path is to take
+a 3-5 year computer science degree at a university. But what if you
+don't have the possibility to do this? What if you don't have the
+time, cannot afford it, don't have the grades or other requirements
+for entering such a course? What if you you live in an area where
+there's no such course at all?
 
 Climbing Mt. Foo is my answer to these questions.
 
@@ -25,8 +25,8 @@ that you also care about your work. Look for the hammer symbol 🔨 for
 tips on good craftsmanship.
 
 Mt Foo also teaches some of the culture surrounding coding, whenever
-you see the theatre masks, 🎭, there's a piece of programming or
-system administration culture to learn. Here's one:
+you see the theatre masks, 🎭, there's a piece of coder culture to
+learn. Here's one:
 
 ## Why it's called "foo" 🎭
 
