@@ -13,11 +13,16 @@ such course at all?
 
 Climbing Mt. Foo is my answer to these questions.
 
-My aim is to create an easy introduction into the technologies I deem
-essential for becoming a coder while at the same time don't dumb it
-down. I use the correct terminology where ever I can and ensure to
-provide pointers so that the student can explore and learn more on the
-subjects.
+The aim of climbing Mt Foo is to create an easy introduction into the
+technologies I deem essential for becoming a coder while at the same
+time don't dumb it down. Mt. Foo uses the correct terminology where
+ever it can and ensure to provide pointers so that the student can
+explore and learn more on the subjects.
+
+As well as climbing Mt Foo, you'll get guidance on how to become a
+good craftsman, showing that you not only know what you're doing but
+that you also care about your work. Look for the hammer symbol 🔨 for
+tips on good craftsmanship.
 
 Mt Foo also teaches some of the culture surrounding coding, whenever
 you see the theatre masks, 🎭, there's a piece of programming or
@@ -35,7 +40,6 @@ reference to the book [The Hitchhiker's Guide to the
 Galaxy](https://en.wikipedia.org/wiki/The_Hitchhiker%27s_Guide_to_the_Galaxy)
 and ["The answer to life, the universe and
 everything"](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide_to_the_Galaxy#Answer_to_the_Ultimate_Question_of_Life,_the_Universe,_and_Everything_(42)).
-  
 
 ## First climb: HTML & CSS
 
