@@ -93,7 +93,7 @@ $ docker exec -ti $(docker ps -qf "name=gluu-oxtrust") /bin/bash
 ```
 
 Since I do this _all_ the time, I've created
-[drshell](https://github.com/skybert/my-little-friends/blob/master/bash/drshell)
+[drshell](https://github.com/skybert/dr/blob/master/bin/drshell)
 which does the above, allowing me to type: `drshell <name>`.
 
 ## Overview of container IPs and ports exposed
@@ -108,4 +108,4 @@ b524850b3af2  gluufederation/openldap:latest  2018-02-28T13:44:12  172.18.0.2   
 
 Since `docker ps` doesn't output the IP of the containers, I've
 extended a snippet I found on the web to do it:
-[drps]([drshell](https://github.com/skybert/my-little-friends/blob/master/bash/drps)
+[drps](https://github.com/skybert/dr/blob/master/bin/drps)
