@@ -45,16 +45,31 @@ everything"](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide
 
 1. [First steps in HTML]({filename}html/01.md)
 1. [Further steps in HTML]({filename}html/02.md)
+1. [Making Your HTML Look Good]({filename}html/03.md)(first steps into
+   CSS)
 
 ## Second climb: JavaScript
+
+1. JavaScript basics
+1. Speaking with your HTML page from JavaScript
 
 ## Take a breather
 
 ## Third climb: Python
 
+1. Python basics 
+1. Python as a scripting language
+1. Python as a CGI scripting language
+1. Python as an object oriented language
+1. Python for creating graphical user interfaces (GUIs)
+
 ## Take a breather
 
 ## Fourth climb: Networking
+
+1. Network devices, IPs & gateways
+2. Finding IPs by their human names
+3. Routing
 
 ## Sixth climb: HTTP
 
@@ -62,5 +77,8 @@ everything"](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide
 
 ## Seventh climb: Unix command line
 
-## Eight climb: Version control - who changed which line when?
+1. "I got the power": Get a Unix command line on your computer
+2. CLI basics: ls, cp, find, grep
+
+## Eighth climb: Version control - who changed which line when?
 
