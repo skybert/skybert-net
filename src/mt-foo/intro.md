@@ -78,7 +78,8 @@ everything"](https://en.wikipedia.org/wiki/Phrases_from_The_Hitchhiker%27s_Guide
 ## Seventh climb: Unix command line
 
 1. "I got the power": Get a Unix command line on your computer
-2. CLI basics: ls, cp, find, grep
+1. [First steps in Unix & Linux]({filename}unix/unix-01.md)
+   Command line basics: `ls`, `cp`, `rm`, `find` & `grep`
 
 ## Eighth climb: Version control - who changed which line when?
 
