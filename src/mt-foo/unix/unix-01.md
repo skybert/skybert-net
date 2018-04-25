@@ -40,10 +40,9 @@ $ whoami
 john
 ```
 
-## No news is good news
-A big difference from Windows and macOS is that Unix doesn't say
-anything if the it succeeds. It only says something if something
-__doesn't work__.
+## No news is good news 📰
+A big difference from Windows is that Unix doesn't say anything if the
+it succeeds. It only says something if something __doesn't work__.
 
 For example, here I'm removing a directory and then I'm trying to
 remove it again. The first `rm` succeeds (no output) whereas the
