@@ -54,7 +54,7 @@ $ rm -r /tmp/music
 rm: cannot remove '/tmp/music': No such file or directory
 ```
 
-## Looking around
+## Looking around 👁
 Two of the most used commands are `cd` (change directory) and `ls`
 (list files). Let's try them out: Change to the directory, `music` in
 this case, and use `ls` (**l**i**s**t files) to view the files in this
