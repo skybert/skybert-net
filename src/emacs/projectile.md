@@ -23,5 +23,6 @@ I just had to install
 # apt-get install exuberant-ctags
 ```
 
-After that, ```projectile-regenerate-tags``` and consequently
-```M-.``` (```find-tag```) and ```M-*``` (```pop-tag-mark```) worked like a charm.
+After that, `projectile-regenerate-tags` and consequently
+<kbd>M-.</kbd> (`find-tag`) and <kbd>M-*</kbd> (`pop-tag-mark`) worked
+like a charm.
