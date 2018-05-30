@@ -13,8 +13,9 @@ are my current favourites when coding Python.
 In just this wee picture you see several great Emacs features at play:
 auto completion by
 [anaconda-mode](https://github.com/proofit404/anaconda-mode) and
-[autocomplete-mode](http://auto-complete.org/), on the fly syntax
-checking using [pyflakes](https://github.com/pyflakes/pyflakes/) and
+[autocomplete-mode](https://github.com/auto-complete/auto-complete/),
+on the fly syntax checking using
+[pyflakes](https://github.com/pyflakes/pyflakes/) and
 [flymake](https://www.gnu.org/software/emacs/manual/html_mono/flymake.html),
 as well as intelligent method help in the minibuffer thanks to
 [eldoc](http://emacswiki.org/emacs/ElDoc) and
