@@ -3,7 +3,8 @@ date: 2018-06-01
 category: linux
 tags: debian, linux
 
-Debian stable (code name "stretch") installed without any problem.
+Debian stable (code name "stretch") installed without any problems,
+but a few tweaks were in order.
 
 ## Wireless
 Since non free firmware isn't included in Debian, I had to manually
@@ -36,6 +37,11 @@ EndSection
 
 After restarting my login manager, `xbacklight` worked as it should.
 
+## i3
+I added these lines to `~/.config/i3/config` to make the multimedia
+keys work:
 
-
-
+```text
+bindsym XF86MonBrightnessDown exec xbacklight -inc -10
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+```
