@@ -167,3 +167,16 @@ mapped in the LDAP tree.
   alt="LDAP client browsing the gluu configuation"
   style="width: 900px"
 />
+
+## Investigating problems regarding AD synchronisation
+
+Log on the machine that runs the `oxTrust`/`identity` process and then
+tail the `oxtrust_cache_refresh.log`:
+
+```text
+$ tail -f /opt/gluu/jetty/identity/logs/oxtrust_cache_refresh.log
+```
+
+Note, if you're running the `docker-oxtrust` container, this log file
+isn't exposed when you do `docker logs -f oxtrust`, you thus need to
+"log in" to the container and tail the log there.
