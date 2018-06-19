@@ -45,3 +45,9 @@ keys work:
 bindsym XF86MonBrightnessDown exec xbacklight -inc -10
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 ```
+
+## Network port on the Thunderbolt 3 dock
+
+```text
+# echo r8152 >> /etc/modules
+```
