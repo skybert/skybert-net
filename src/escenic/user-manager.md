@@ -27,3 +27,14 @@ and `groups` set.
 If the newroom template is `${ignore}_${name}`, `anything_editor` will
 map to group with name `editor` in ECE.  If you don't provide
 `publicationMapping`, you will have to set `homePublcation`. (edited)
+
+> What's the difference between using UM with ECE & NG and setting ECE
+> up to auth against AD directly?
+
+The answer can be found in the [ECE
+doc](http://docs.escenic.com/ece-server-admin-guide/6.7/third_party_authentication.html):
+
+> Only authentication is carried out by Active Directory,
+> authorization is still performed by the Content Engine, so you still
+> have to define Content Engine users. The Content Engine users must
+> have identical user names to the Active Directory users.

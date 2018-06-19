@@ -5,10 +5,22 @@ tags: unix, virtualbox
 
 My virtual machine is called `centos`.
 
+## List virtual machines
+
+```
+$ vboxmanage list vms
+```
+
 ## Start a virtual machine
 
 ```
-$ vboxmanage startvm centos --type headless 
+$ vboxmanage startvm centos --type headless
+```
+
+## List snapshots of a virtual machine
+
+```
+$ vboxmanage snapshot centos list
 ```
 
 ## Restore a snapshot
