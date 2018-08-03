@@ -23,6 +23,11 @@ delete to the reomote server.
     $ git branch -D <branch name>
     $ git push origin --delete <branch name>
 
+## Deleting a (remote) tag
+
+    $ git tag -d <tag>
+    $ git push origin :refs/tags/<tag>
+
 ## Set up your own a git repository on your server
 
 This is how you set up your own git repository on Unix/Linux
