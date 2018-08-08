@@ -109,3 +109,57 @@ b524850b3af2  gluufederation/openldap:latest  2018-02-28T13:44:12  172.18.0.2   
 Since `docker ps` doesn't output the IP of the containers, I've
 extended a snippet I found on the web to do it:
 [drps](https://github.com/skybert/dr/blob/master/bin/drps)
+
+## Exposing a container's port to the world
+
+When you use `docker run --publish` or use the `ports:` directive in
+`docker-compose.yaml`, `docker` manipulates the firewall rules so that
+requests from the outside world hits your container(s) on your
+machine's local docker network.
+
+You can see this with `iptables`:
+
+```text
+# iptables -t nat -L -n
+[..]
+Chain DOCKER (2 references)
+target     prot opt source               destination         
+RETURN     all  --  0.0.0.0/0            0.0.0.0/0           
+RETURN     all  --  0.0.0.0/0            0.0.0.0/0           
+RETURN     all  --  0.0.0.0/0            0.0.0.0/0           
+RETURN     all  --  0.0.0.0/0            0.0.0.0/0           
+DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:8600 to:172.18.0.6:8600
+DNAT       udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:8600 to:172.18.0.6:8600
+DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:8500 to:172.18.0.6:8500
+DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:8400 to:172.18.0.6:8400
+DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:9005 to:172.18.0.11:9005
+DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:9006 to:172.18.0.12:9006
+DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:8681 to:172.18.0.13:8681
+DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:8680 to:172.18.0.13:8680
+DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:443 to:172.18.0.14:443
+hDNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:80 to:172.18.0.14:80
+```
+
+Here can you e.g. see that TCP connections to port `80` are redirected
+to the `80` port on the container listening on `172.18.0.14`. To see
+which container this is, you can do:
+
+```text
+$ docker ps -q | xargs docker inspect --format='{{printf "%.12s" .Id}} {{.Name}} {{range $net, $conf := .NetworkSettings.Networks}}{{$conf.IPAddress}}{{end}}'
+1fce6f177878 /docker_um_1 172.18.0.14
+e090e4a7b24f /docker_cue_um_1 172.18.0.13
+640209ed51f5 /docker_oxtrust_1 172.18.0.12
+9ade8895cfee /docker_oxauth_1 172.18.0.11
+3e56c960f227 /docker_ldap_1 172.18.0.10
+c6a65e34acbd /docker_redis_1 172.18.0.8
+2f0e8d5724dc /docker_consul_1 172.18.0.6
+180e1335d460 /docker_consul-server-1_1 172.18.0.7
+0ba6a1514df2 /docker_consul-agent-2_1 172.18.0.5
+9333f66d802a /docker_consul-server-2_1 172.18.0.4
+72add9eb3ab0 /docker_consul-agent-1_1 172.18.0.3
+0c973a09bccf /docker_consul-agent-3_1 172.18.0.2
+```
+
+We now know that requests to port `80` on the host machine is routed
+to port `80` on container `1fce6f177878` with name `docker_um`.
+
