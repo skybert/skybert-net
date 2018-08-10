@@ -180,3 +180,46 @@ $ tail -f /opt/gluu/jetty/identity/logs/oxtrust_cache_refresh.log
 Note, if you're running the `docker-oxtrust` container, this log file
 isn't exposed when you do `docker logs -f oxtrust`, you thus need to
 "log in" to the container and tail the log there.
+
+## oxtrust - Can not download ssl certificate
+```text
+oxtrust_1          | 2018-08-10 11:07:39,718 ERROR [ForkJoinPool.commonPool-worker-2] [org.gluu.oxtrust.ldap.service.StatusCheckerTimer] (StatusCheckerTimer.java:217) - Can not download ssl certificate
+oxtrust_1          | java.net.ConnectException: Operation timed out (Connection timed out)
+oxtrust_1          | 	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_151]
+oxtrust_1          | 	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_151]
+oxtrust_1          | 	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_151]
+oxtrust_1          | 	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_151]
+oxtrust_1          | 	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_151]
+oxtrust_1          | 	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:673) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.security.ssl.BaseSSLSocketImpl.connect(BaseSSLSocketImpl.java:173) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.NetworkClient.doConnect(NetworkClient.java:180) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177) ~[?:1.8.0_151]
+oxtrust_1          | 	at sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(HttpsURLConnectionImpl.java:162) ~[?:1.8.0_151]
+oxtrust_1          | 	at org.gluu.oxtrust.ldap.service.StatusCheckerTimer.setCertificateExpiryAttributes(StatusCheckerTimer.java:205) [classes/:?]
+oxtrust_1          | 	at org.gluu.oxtrust.ldap.service.StatusCheckerTimer.processInt(StatusCheckerTimer.java:164) [classes/:?]
+oxtrust_1          | 	at org.gluu.oxtrust.ldap.service.StatusCheckerTimer.process(StatusCheckerTimer.java:125) [classes/:?]
+oxtrust_1          | 	at org.gluu.oxtrust.ldap.service.StatusCheckerTimer$Proxy$_$$_WeldSubclass.process$$super(Unknown Source) [classes/:?]
+```
+
+
+Check that oxtrust can query the service document from oxauth:
+```text
+$ docker ps -qf name=oxtrust
+$ docker exec -ti d332cf04b5f7 sh
+# wget -O -  http://oxauth:8080/oxauth/.well-known/openid-configuration
+# wget -O -  https://gluu.quanah/.well-known/openid-configuration
+```
+
+The first `wget` checks getting the document directly from `oxauth`
+whereas the second does what `oxtrust` does in a production
+environment: gets it via the web server (the `nginx` container in our
+case, this is the Apache process in the old `chroot` container setup).
+
