@@ -7,7 +7,7 @@ To see which ports a process opens, you can use `strace` like this:
 
 ```text
 $ strace -f -e trace=network -s 10000 \
-  git ls-remote -h -t git://github.com/fengyuanchen/datepicker.git 2>&1  | \
+  git ls-remote -h -t git://github.com/dude/datepicker.git 2>&1  | \
   grep -w connect | \
   grep -v NOENT
 connect(3, {sa_family=AF_INET, sin_port=htons(9418), sin_addr=inet_addr("192.30.253.113")}, 16) = 0
