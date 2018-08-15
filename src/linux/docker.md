@@ -163,3 +163,11 @@ c6a65e34acbd /docker_redis_1 172.18.0.8
 We now know that requests to port `80` on the host machine is routed
 to port `80` on container `1fce6f177878` with name `docker_um`.
 
+## Copy a file from the host machine to a running Docker container
+
+```text
+$ docker cp tmp/n.class cdde6a98ba79:/tmp/n.class
+```
+
+Where `cdde6a98ba79` is the Docker ID of the running container, as
+seen with e.g. `docker ps`. 
