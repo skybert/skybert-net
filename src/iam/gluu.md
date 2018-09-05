@@ -223,3 +223,25 @@ whereas the second does what `oxtrust` does in a production
 environment: gets it via the web server (the `nginx` container in our
 case, this is the Apache process in the old `chroot` container setup).
 
+## Failed to decript 'bindPassword' property
+```text 
+2018-09-05 06:47:38,052 ERROR [Thread-44] [org.xdi.util.security.PropertiesDecrypter] (PropertiesDecrypter.java:70) - Failed to decript 'bindPassword' property
+org.xdi.util.security.StringEncrypter$EncryptionException:
+javax.crypto.IllegalBlockSizeException: Input length must be multiple
+of 8 when decrypting with padded cipher
+
+```
+
+Lovely spelling mistake in the error message, isn't it? In any case,
+for all passwords, Gluu has a generated string, a salt, which it uses
+to encrypt and decrypt all its passwords. In a password  isn't
+readable with that Gluu installatin's salt, then this exception is
+thrown.
+
+Possible causes for this is:
+- You've manually edited the password into the LDAP tree
+- The salt used for encrypting the password isn't the same as the salt
+  the current Gluu installation is using. This may occur if you're
+  migrating data from an old to a new installation or if you're
+  running in a containerised environment where only some parts of the
+  cluster have been re-initialised.
