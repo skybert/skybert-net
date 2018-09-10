@@ -34,10 +34,6 @@ kbd {
   -webkit-box-shadow: 0.1em 0.2em 0.2em #ddd;
   -webkit-linear-gradient(top, #eee, #f9f9f9, #eee);
   background-color: #f9f9f9;
-  background-image:
-  background-image:
-  background-image:
-  background-image:
   border-radius: 0.2em;
   border: 1px solid #aaa;
   box-shadow: 0.1em 0.2em 0.2em #ddd;
@@ -133,6 +129,15 @@ img.centered {
 
 code {
   font-weight: bolder;
+}
+
+.prompt {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  font-weight: bolder;
+  padding-right: 0.5em;
 }
 
 pre {
