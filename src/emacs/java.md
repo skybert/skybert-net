@@ -52,6 +52,17 @@ run the Eclipse server (I just did `apt-get install
 openjdk-9-jdk`), you can set this in your `.emacs` by setting
 `lsp-java-java-path`, see above.
 
+
+### NoClassDefFoundError: javax/annotation/processing/AbstractProcessor
+```
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.lang.NoClassDefFoundError: javax/annotation/processing/AbstractProcessor
+	at java.base/java.lang.ClassLoader.findBootstrapClass(Native Method)
+	at java.base/java.lang.ClassLoader.findBootstrapClassOrNull(ClassLoader.java:1248)
+	at java.base/java.lang.System$2.findBootstrapClassOrNull(System.java:2123)
+```
+
 ## Other Java extensions for Emacs I've used
 
 - [meghanada](https://github.com/mopemope/meghanada-emacs), 2017
