@@ -37,7 +37,7 @@ Install a simple HTTP proxy:
 $ mkdir http-proxy
 $ cd http-proxy
 $ wget https://raw.githubusercontent.com/abhinavsingh/proxy.py/develop/proxy.py
-$ python proxy.py 7780
+$ python proxy.py --port 7780
 ```
 
 ## On external.machine
