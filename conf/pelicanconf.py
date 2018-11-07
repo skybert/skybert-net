@@ -28,4 +28,7 @@ ARTICLE_URL = "{category}/{slug}"
 ARTICLE_SAVE_AS = "{category}/{slug}/index.html"
 PAGE_URL = "{category}/{slug}"
 PAGE_SAVE_AS = "{category}/{slug}/index.html"
-STATIC_PATHS = ['graphics']
+STATIC_PATHS = [
+    'graphics',
+    'code'
+]
