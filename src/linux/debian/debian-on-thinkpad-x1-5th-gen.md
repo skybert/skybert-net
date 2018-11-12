@@ -51,3 +51,21 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 ```text
 # echo r8152 >> /etc/modules
 ```
+
+## Updating BIOS
+
+Download BIOS update ISO from
+[lenovo.com](https://pcsupport.lenovo.com/no/en/products/laptops-and-netbooks/thinkpad-x-series-laptops/thinkpad-x1-carbon-type-20hr-20hq/downloads?linkTrack=Caps:Body_SearchProduct&searchType=3&keyWordSearch=X1%20Carbon%205th%20Gen%20-%20Kabylake%20(Type%2020HR,%2020HQ)%20Laptop%20(ThinkPad)),
+it was called `n1mur19w.iso` when I download it.
+
+Convert it to a proper ISO:
+```text
+# geteltorito -o lenovo-bios-update.iso n1mur19w.iso
+```
+
+Write it to the USB drive. Be sure to pick the correct device path for
+your USB stick, in my case, this was `/dev/sda`:
+```text
+# dd if=lenovo-bios-update.iso of=/dev/sda bs=1M
+```
+
