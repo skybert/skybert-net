@@ -286,3 +286,8 @@ Mountain biking, jogging, hiking, traveling, languages, rock
 climbing, piano, literature, poetry, politics.
 
 
+cnn 2012-07
+New Indian Express 2012-11
+STV 2012-11
+Axel Springer 2008
+100% football 2008
