@@ -1,4 +1,4 @@
-title: Export Google Docs to Markdown
+title: Convert Google Docs to Markdown
 date: 2018-11-22
 category: various
 tags: markdown, libreoffice
