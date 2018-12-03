@@ -17,3 +17,11 @@ Here, the system is using systemd.
 If System V was in use, "init" would be printed in the first command and
 the latter command would show no symlink to ```systemd```.
 
+
+## List all systemd available services
+
+```text
+$ systemctl list-unit-files
+```
+
+You can `grep` for `enabled` and `running` to narrow down your search.
