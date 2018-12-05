@@ -9,10 +9,10 @@ and if I can tell which one produced which `.class` file. The JDKs on
 my system are:
 
 ```text
-$ dpkg -l '*jdk*' | grep ^ii
-ii  openjdk-11-jdk-headless:amd64 11.0.1+13-2~bpo9+1 amd64        OpenJDK Development Kit (JDK) (headless)
-ii  openjdk-8-jdk-headless:amd64  8u181-b13-2~deb9u1 amd64        OpenJDK Development Kit (JDK) (headless)
-ii  oracle-java8-jdk              8u144              amd64        Java Platform, Standard Edition 8 Development Kit
+$ dpkg -l '*jdk*' | grep ^ii | cut -d' ' -f3
+openjdk-11-jdk-headless:amd64
+openjdk-8-jdk-headless:amd64
+oracle-java8-jdk
 ```
 
 For each of these compilers, I want to do:
@@ -33,11 +33,8 @@ find /usr/lib/jvm/ -name javac |
     mkdir "${fn}"
     echo "public class Test { }" > "${fn}"/Test.java
     "${java_compiler}" "${fn}"/Test.java
-    (
-      cd "${fn}" && \
-      "$(dirname "${java_compiler}")"/javap -verbose Test.class \
-      &> Test.javap
-    )
+    "$(dirname "${java_compiler}")"/javap -verbose "${fn}"/Test.class \
+      &> "${fn}"/Test.javap
   done
 ```
 
@@ -68,9 +65,11 @@ Now, on to the fun part, diffing. There's no difference between the
 
 ```text
 $ diff java8openjdkamd64/Test.class oraclejava8jdkamd64/Test.class
+$ echo $?
+0
 ```
 
-The only difference is the path to the source file as reported by `javap`:  
+The only difference is the path to the source file as reported by `javap`:
 ```text
 $ diff java8openjdkamd64/Test.javap oraclejava8jdkamd64/Test.javap
 1c1
@@ -83,7 +82,7 @@ On the other hand, when examining the difference in the `.class` files
 produced by OpenJDK 8 and OpenJDK 11, there are several
 difference. First off, the `.class` files differ:
 ```text
-examine $ diff java8openjdkamd64/Test.class java11openjdkamd64/Test.class 
+$ diff java8openjdkamd64/Test.class java11openjdkamd64/Test.class
 Binary files java8openjdkamd64/Test.class and java11openjdkamd64/Test.class differ
 ```
 
@@ -127,4 +126,3 @@ field:
 ```
 
 Pretty interesting, eh?
-

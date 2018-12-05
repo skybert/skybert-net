@@ -20,11 +20,6 @@ changed to use `nftables` instead.
 # firewall-cmd --list-all
 ```
 
-### Further reading on firewalld, iptables and netfilter
-- Kernel space: [netfilter.org](https://netfilter.org/)
-- [firewalld](https://firewalld.org/blog/page/2/)'s firewall backends
-- [What you need to know about iptables and firewalld](https://opensource.com/article/18/9/linux-iptables-firewalld)
-
 ### Open up port 80 (http)
 
 First make sure `public` is the right zone by running
@@ -47,6 +42,11 @@ zones, then everything on that interface is blocked.
 ```text
 # firewall-cmd  --permanent --zone=public --add-interface enp0s8
 ```
+
+### Further reading on firewalld, iptables and netfilter
+- Kernel space: [netfilter.org](https://netfilter.org/)
+- [firewalld](https://firewalld.org/blog/page/2/)'s firewall backends
+- [What you need to know about iptables and firewalld](https://opensource.com/article/18/9/linux-iptables-firewalld)
 
 ## SELinux
 
@@ -80,4 +80,12 @@ $ ip addr
 ### View network interfaces
 ```text
 $ ip link
+```
+
+### View which ports are open/listening
+There's no `netstat`, but `ss` is there. `ss` has similar parameters,
+so to list all processes listening on a port, I do:
+
+```text
+$ ss -nutlp
 ```
