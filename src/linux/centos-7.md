@@ -56,12 +56,38 @@ zones, then everything on that interface is blocked.
 # sestatus
 ```
 
+### Create a SELinux profile for a service that's currently blocked
+
+On RHEL/CentOS you've got an audit log of everything processes are
+trying to do system call wise, see `/var/log/audit/audit.log`. If
+you've got a process which doesn't work properly, you can create a
+SELinux profile in a `.pp` file based on this log file and then use
+`semodule -i` to install this profile.
+
+Here, I'm using `mybinary` as example:
+
+```text
+
+```
+
+
+### See the contents of a SELinux policy file  
+
+```text
+
+```
+
+
 ### Turn off SELinux
 
 ```text
 # setenforce 0
 # sed -i s#SELINUX=enforcing#SELINUX=disabled# /etc/selinux/config 
 ```
+
+### Good articles on SELinux
+
+[Digital Ocean](https://www.digitalocean.com/community/tutorials/an-introduction-to-selinux-on-centos-7-part-1-basic-concepts)
 
 ## Networking
 
