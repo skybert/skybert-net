@@ -67,9 +67,13 @@ SELinux profile in a `.pp` file based on this log file and then use
 Here, I'm using `mybinary` as example:
 
 ```text
-
+$ grep mybinary /var/log/audit/audit.log | audit2allow -M mybinary
 ```
 
+This creates a `mybinary.pp` file which can be applied using:
+```text
+# semodule -i mybinary.pp
+```
 
 ### See the contents of a SELinux policy file  
 
