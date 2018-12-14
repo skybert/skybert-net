@@ -50,7 +50,7 @@ zones, then everything on that interface is blocked.
 
 ## SELinux
 
-## Get SELinux status
+### Get SELinux status
 
 ```text
 # sestatus
