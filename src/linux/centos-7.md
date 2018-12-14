@@ -84,7 +84,7 @@ This creates a `mybinary.pp` file which can be applied using:
 
 ### Good articles on SELinux
 
-[Digital Ocean](https://www.digitalocean.com/community/tutorials/an-introduction-to-selinux-on-centos-7-part-1-basic-concepts)
+- [Digital Ocean](https://www.digitalocean.com/community/tutorials/an-introduction-to-selinux-on-centos-7-part-1-basic-concepts)
 
 ## Networking
 
