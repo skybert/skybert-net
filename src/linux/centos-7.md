@@ -75,13 +75,6 @@ This creates a `mybinary.pp` file which can be applied using:
 # semodule -i mybinary.pp
 ```
 
-### See the contents of a SELinux policy file  
-
-```text
-
-```
-
-
 ### Turn off SELinux
 
 ```text
