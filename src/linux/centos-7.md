@@ -112,3 +112,17 @@ so to list all processes listening on a port, I do:
 ```text
 $ ss -nutlp
 ```
+
+### Bring up a network interface without using network-scripts
+
+To persist network interface configuration, you create a file matching
+your interface,
+e.g. `/etc/sysconfig/network-scripts/ifcfg-enp0s3`. However, if you
+don't want to restart neither the `network` sub system (`systemctl
+restart network`) nor the computer, you can bring it up manually by
+using `ip` and `dhclient` like this:
+
+```text
+# ip link set dev enp0s3 up
+# dhclient enp0s3 -v
+```
