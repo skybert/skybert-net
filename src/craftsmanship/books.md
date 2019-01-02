@@ -1,9 +1,10 @@
 title: Books that I wish I'd read earlier
 date: 2017-02-08
 category: craftsmanship
-tags: craftsmanship, books
+tags: craftsmanship, book
 
-These are the best programming books I've read.
+These are the best programming books I've read. Wish only I had read
+the earlier 😃
 
 ## #1 The Pragmatic Programmer: From Journeyman to Master
 
