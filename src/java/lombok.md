@@ -37,14 +37,14 @@ public class Tribe
 ```
 
 ## Equals can trick you if you have proxied member variables
-Again, this is a caveat if you have a ```@EqualsAndHashCode``` on your
-```javax.persistence``` entity and this entity has a many to one/one
-to many field.
+Again, this is a caveat if you have a `@EqualsAndHashCode` on your
+`javax.persistence` entity and this entity has a many to one/one to
+many field.
 
-The remedy is to implement the ```equals()``` method yourself.
+The remedy is to implement the `equals()` method yourself.
 
 ## Creating a builder while keeping a default constructor
-
+ 
 I've come to love the
 [@Builder](https://projectlombok.org/features/Builder) annotation:
 ```java
@@ -55,7 +55,7 @@ public class IceCream {
 }
 ```
 
-Allowing my to create instances using the builder flow:
+Allowing me to create instances using the builder flow:
 ```java
 IceCream iceCream = IceCream.builder().
   size(10).
