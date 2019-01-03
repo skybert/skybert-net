@@ -43,3 +43,53 @@ to many field.
 
 The remedy is to implement the ```equals()``` method yourself.
 
+## Creating a builder while keeping a default constructor
+
+I've come to love the
+[@Builder](https://projectlombok.org/features/Builder) annotation:
+```java
+@Builder
+public class IceCream {
+  private int size;
+  private Color color;
+}
+```
+
+Allowing my to create instances using the builder flow:
+```java
+IceCream iceCream = IceCream.builder().
+  size(10).
+  color(Color.RED).
+  build();
+```
+
+This is all well and good, but some frameworks (like JPA) needs a
+default constructor. However, the `@Builder` annotation makes these
+throw nasty exceptions at you like:
+
+```text
+Caused by: java.lang.NoSuchMethodException: net.skybert.IceCream.<init>()
+  at java.lang.Class.getConstructor0(Class.java:3082)
+  at java.lang.Class.newInstance(Class.java:412)
+```
+
+
+The reason is that when annotating a class with `@Builder` an
+`@AllArgsConstructor` is implied. However, some frameworks need the
+default constructor to work, so we'll need to add _both_ the Lombok
+`@NoArgsConstructor` and `@AllArgsConstructor` annotations to get the
+behaviour we want with the frameworks while getting the goodness of
+Lombok's `@Builder`. The class then looks like this:
+
+```java
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class IceCream {
+  private int size;
+  private Color color;
+}
+
+```
+
+Easy enough when you know it 😎
