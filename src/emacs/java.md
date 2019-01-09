@@ -5,6 +5,21 @@ title: Enterprise Java Development in Emacs
 
 <img class="right" src="/graphics/emacs/emacs.png" alt="png"/>
 
+My [current Java
+setup](https://gitlab.com/skybert/my-little-friends/blob/master/emacs/.emacs#L603)
+utilises [lsp-java](https://github.com/emacs-lsp/lsp-java) and
+[dap-java](https://github.com/yyoncho/dap-mode) which together gives
+me a good Java coding and debugging experience in Emacs, including
+code navigation, auto completion, documentation lookup, on the fly
+de-compiling 3rd party libraries and remote debugging an application
+servers.
+
+Everything works pretty much out of the box, once you've wired up
+`lsp-java` and `dap-java`, it'll figure out your Maven project by
+itself and download whatever it needs in the background. I've used
+this setup for a good while now on a code base with around 5000 Java
+files and 65 Maven modules and the performance is impeccable.
+
 ## Support for Lombok
 
 ```lisp
