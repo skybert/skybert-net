@@ -3,11 +3,6 @@ date: 2019-01-09
 category: running
 tags: running, parenthood
 
-Also, when the wee man started nursery school, I figured out that I
-could run from the nursery to work a couple of days a week and on the
-day I work from home, I can manage to squeeze in a jogg in the
-forest after dropping him off in the morning.
-
 <img
   class="centered"
   src="/graphics/2018/running/COLOR_POP.web.jpg"
@@ -17,6 +12,11 @@ forest after dropping him off in the morning.
 Being a parent to a one year old doesn't leave a lot of time to
 train. However, I've managed to squeeze in some good runs on a few
 Sundays through the forest.
+
+Also, when the wee man started nursery school, I figured out that I
+could run from the nursery to work a couple of days a week and on the
+day I work from home, I can manage to squeeze in a jogg in the
+forest after dropping him off in the morning.
 
 <img
   class="centered"
