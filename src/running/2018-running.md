@@ -91,11 +91,19 @@ cushioning, making me feel like I'm running on clouds!
   src="/graphics/2018/running/IMG_20180908_114221.web.jpg"
   alt="running in 2018"
 />
+
+The lunch at at the [Sinober](http://sinober.no) cabin was
+glorious!
+  
 <img
   class="centered"
   src="/graphics/2018/running/IMG_20180908_124628.web.jpg"
   alt="running in 2018"
 />
+
+Some of the best runs in the forest is when it rains or it just has
+been raining. The forest smells amazing.
+
 <img
   class="centered"
   src="/graphics/2018/running/IMG_20180908_124658.web.jpg"
@@ -110,17 +118,23 @@ cushioning, making me feel like I'm running on clouds!
   class="centered"
   src="/graphics/2018/running/IMG_20180923_085331.web.jpg"
   alt="running in 2018"/>
+
+Beautiful autumn colours in the forest.
+
 <img
   class="centered"
   src="/graphics/2018/running/IMG_20180923_085410.web.jpg"
   alt="running in 2018"
 />
+
+Running through Edinburgh, Scotland. Here, I'm just outside the castle
+gates.
+
 <img
   class="centered"
   src="/graphics/2018/running/IMG_20181022_065851.web.jpg"
   alt="running in 2018"
 />
-Running through Edinburgh, Scotland.
 <img
   class="centered"
   src="/graphics/2018/running/IMG_20181022_070012.web.jpg"
