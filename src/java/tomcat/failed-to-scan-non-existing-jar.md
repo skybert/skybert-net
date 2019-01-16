@@ -1,6 +1,6 @@
 title: Tomcat fails to scan JAR file that I never asked for
 date: 2019-01-07
-category: tomcat
+category: java
 tags: tomcat, java
 
 With a recent Tomcat, 9.0.13, I was really puzzled with loads of
