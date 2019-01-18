@@ -4,35 +4,51 @@
 What made me switch from `BASH` to `ZSH` and why I haven't looked
 back.
 
-> by <a href="https://twitter.com/torsteinkrause">@torsteinkrause</a>
+by <a href="https://twitter.com/torsteinkrause">@torsteinkrause</a>
 
 ---
 
-# Tab completion with documentation
+## I 💘 BASH
+
+Used it every day since 1999 👨‍🎓👨‍💻
 
 ---
 
-# Kill with tab completion
+## ...but ZSH looks so nice
 
 ---
 
-# Auto suggestions
+## Tab completion with documentation
+
+<img src="/graphics/2019/zsh/zsh-auto-complete-with-doc.png" alt="zsh" />
 
 ---
 
-# Pure prompt
+## Kill with tab completion
+
+<img src="/graphics/2019/zsh/zsh-kill-completion-with-fzf.png" alt="zsh" />
 
 ---
 
-# Async
+## Auto suggestions
+
+<img src="/graphics/2019/zsh/zsh-auto-suggest-overlay.png" alt="zsh"/>
 
 ---
 
-# Can re-use BASH aliases
+## Pure prompt
 
 ---
 
-# Forgetting a pipe
+## Async
+
+---
+
+## Can re-use BASH aliases
+
+---
+
+## Forgetting a pipe
 
 ```text
 $ bash
@@ -48,10 +64,10 @@ pipe> wc
 
 ---
 
-# Forgetting a quote
+## Forgetting a quote
 ```text
 $ bash
-$ echo 'hi 
+$ echo 'hi
 > '
 ```
 
@@ -63,20 +79,19 @@ quote> '
 
 ---
 
-# Shows you if command will be found
+## Shows you if command will be found
+
+<img src="/graphics/2019/zsh/zsh-color-codes-found-and-unfound-commands.png" alt="zsh" />
 
 ---
 
-# Powerful recursive file name matching
+## Powerful recursive file name matching
 
-<img
-  src="/graphics/2019/zsh/zsh-recursive-globbing.png"
-  alt="zsh"
-/>  
+<img src="/graphics/2019/zsh/zsh-recursive-globbing.png" alt="zsh" />
 
 ---
 
-# BASH has this too, albeit not enabled by default
+## BASH has this too, albeit not enabled by default
 
 ```text
 $ ls ~/.m2/repository/org/**/*.pom | tail -n 3
@@ -86,5 +101,17 @@ $ ls ~/.m2/repository/org/**/*.pom | tail -n 3
 /home/torstein/.m2/repository/org/yaml/snakeyaml/1.15/snakeyaml-1.15.pom
 /home/torstein/.m2/repository/org/yaml/snakeyaml/1.17/snakeyaml-1.17.pom
 /home/torstein/.m2/repository/org/yaml/snakeyaml/1.18/snakeyaml-1.18.pom
-$ 
+$
 ```
+
+---
+
+## My .zshrc
+
+```text
+$ vim ~/.zshrc
+```
+
+My [.zshrc can be found here](https://gitlab.com/skybert/my-little-friends/blob/master/zsh/.zshrc).
+
+---
