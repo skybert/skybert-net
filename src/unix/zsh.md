@@ -20,6 +20,39 @@ nice and after giving it a proper shot, using it for a day in January
 
 <img src="/graphics/2019/zsh/zsh-auto-suggest-overlay.png" alt="zsh"/>
 
+## Emacs/BASH like navigation
+
+Pressing `M-f` and `M-b` navigates differently than in BASH or in
+Emacs, e.g. pressing `M-f` when the cursor (`|`) is on `curl`:
+
+```text
+|curl -u admin:admin http://foo-world.com 
+
+```
+
+it jumps to after `-u` instead of after `curl:
+
+```text
+curl -u| admin:admin http://foo-world.com
+```
+
+To remedy this, I've set this in my `.zshrc`:
+```text
+autoload -U select-word-style
+select-word-style bash
+```
+
+Now, I get Emacs/BASH like navigation, hitting `M-f` here:
+```
+|curl -u admin:admin http://foo-world.com
+```
+
+takes me to:
+```
+curl| -u admin:admin http://foo-world.com
+```
+just like I wanted too 😄
+
 ## Forgetting a pipe
 
 ```text
@@ -91,7 +124,7 @@ functions on a separate thread and then decorates your prompt when it
 has gotten the data it needs.
 
 ## Can re-use BASH aliases
-In both my `.bashrc.` and `.zshrc`, I've got the line:
+In both my `.bashrc.` and `.zshrc`, I've got this line:
 ```bash
 source $HOME/.bashrc.aliases
 ```
