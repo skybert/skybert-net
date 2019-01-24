@@ -3,9 +3,10 @@ date: 2019-01-24
 category: unix
 tags: unix, bash
 
-I 💘 BASH, I used it every day since 1999 👨‍🎓👨‍💻. But ZSH looks so
-nice and after giving it a proper shot, using it for a day, I fell in
-love with it.
+I 💘 [BASH](https://www.gnu.org/software/bash/), I used it every day
+since 1999 👨‍🎓👨‍💻. But [ZSH](http://zsh.sourceforge.net/) looks so
+nice and after giving it a proper shot, using it for a day in January
+2019, I fell in love with it.
 
 ## Tab completion with documentation
 
