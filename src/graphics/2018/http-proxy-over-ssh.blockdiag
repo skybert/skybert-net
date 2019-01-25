@@ -1,0 +1,15 @@
+blockdiag {
+    user [shape = actor, color="green", label="User"];
+    # internet [shape = cloud];
+
+    public.server22 [label="public.server:22"];
+    internal.server22 [label="internal.server:22"];
+    tunnel3 [label="tunnel:6662"];
+    tunnel2 [label="tunnel:7780"];
+    tunnel1 [label="tunnel:7780"];
+
+    user -> public.server22 -> tunnel3 -> internal.server22;
+
+    browser -> tunnel1 -> tunnel2 -> proxy7780;
+
+}
