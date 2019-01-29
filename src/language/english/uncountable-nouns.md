@@ -50,13 +50,12 @@ Instead, say:
 means that there are three large ethnic/tribal groups of
 people. Normally, you just want to say:
 
-> people
-in singular.
+> Three persons
 
 ## Logic
 You cannot say:
 
->Lots of logics
+> Lots of logics
 
 Instead use:
 
