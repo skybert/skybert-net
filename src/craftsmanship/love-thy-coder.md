@@ -3,10 +3,12 @@ date: 2017-03-15
 category: craftsmanship
 tags: craftsmanship
 
-Show that you love thy neighbour coder by **1)** making an honest
-attempt at answering the question yourself, **2)** apply markup to
-code snippets, **3)** make sure your message is easy to understand &
-is logically sound and **4)** trim the error messages.
+## tl;dr
+Most people likes to help, but you should show that you love thy
+neighbour coder by **1)** making an honest attempt at answering the
+question yourself, **2)** apply markup to code snippets, **3)** make
+sure your message is easy to understand & is logically sound and
+**4)** if possible, trim the error messages.
 
 ## Try to answer the easy questions yourself
 
@@ -34,7 +36,7 @@ already excluded these options.
 
 It's so much nicer to read code snippets and log excerpts if you apply
 some styling to it. Most platforms today have markup support,
-including Slack, Jira, Confluence and Github. Use it to make your
+including Slack (uses Mark, Jira, Confluence and Github. Use it to make your
 message a pleasant read.
 
 Consider this without markup:
@@ -74,7 +76,8 @@ problem.
 Only include what's relevant. When you've spotted an error that could
 be relevant to your problem it's helpful that you include it in your
 message to whoever you want to help you. However, there are often a
-good few lines you can omit if you take a good look. 
+good few lines you can omit if you take a good look (if you're in
+doubt, of course better to include too much than too little).
 
 Consider this error from a Java application:
 
@@ -123,9 +126,9 @@ java.sql.SQLException: com.myapp.awesome.NoSuchObjectException: No publication w
 If you've got knowledge about the application, `myapp` in this case,
 you'll know that you can trim this stack trace significantly. Include
 just one line from code outside of `myapp` so that the coder is sure
-you didn't cut too much of the trace (of course, if you're unsure
-about where to cut the stacktrace, it's better to include too much
-than too little):
+you didn't cut too much of the trace. Of course, as said earlier, if
+you're unsure about where to cut the stacktrace, it's better to
+include too much than too little:
 
 ```
 java.sql.SQLException: com.myapp.awesome.NoSuchObjectException: No publication with id=0
