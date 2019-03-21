@@ -245,3 +245,20 @@ Possible causes for this is:
   migrating data from an old to a new installation or if you're
   running in a containerised environment where only some parts of the
   cluster have been re-initialised.
+
+### Verify that both LDAP and Consul use the same inum
+Check that the `inum` in Consul is the same as the `inum` in LDAP:
+
+```text
+$ curl -s http://localhost:8500/v1/kv/gluu/config/baseInum | 
+  jq --raw-output '.[].Value'|
+  base64 -d -
+@!1E7E.40BB.DB2A.C565
+```
+
+Check that the same base `inum` is in LDAP:
+<img
+  class="centered"
+  src="/graphics/2019/gluu-ldap-inum.png"
+  alt="Gluu ldap"
+/>

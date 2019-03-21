@@ -1,6 +1,6 @@
 title: Viewing all changes to a Java method using Git
 date: 2019-01-30
-category: git
+category: vcs
 tags: git, java
 
 First off, add this to your project's `.gitattributes` file:
