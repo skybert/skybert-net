@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% include "breadcrumb.html" %}
+{% block breadcrumb %}{% include "breadcrumb.html" %}{% endblock %}
 {% block content %}
 <h1>{{ article.title }}</h1>
 <hr/>

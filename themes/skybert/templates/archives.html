@@ -1,6 +1,6 @@
 {% extends "index.html" %}
+{% block breadcrumb %}{% include "breadcrumb.html" %}{% endblock %}
 {% block title %}Archives for {{ SITENAME }}{% endblock %}
-{% include "breadcrumb.html" %}
 {% block content %}
     <ul>
     {% for article in dates %}
