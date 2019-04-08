@@ -46,3 +46,10 @@ You can also query `yum`:
 $ yum whatprovides <file>
 ```
 
+## List the licences of all packages installed
+
+```text
+$ rpm -qa --qf "%{name}: %{license}\n"
+```
+
+
