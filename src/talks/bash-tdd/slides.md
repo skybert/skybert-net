@@ -42,7 +42,7 @@ a few lines
 
 ---
 
-```sh
+```
 mkdir -p /var/lib/app/data
 cd /var/lib/app/data
 wget http://example.com/big-file.zip
@@ -55,7 +55,7 @@ variables
 
 ---
 
-```sh
+```
 url=http://example.com/big-file.zip
 data_dir=/var/lib/app/data
 mkdir -p ${data_dir}
@@ -70,7 +70,7 @@ perhaps it takes a parameter?
 
 ---
 
-```sh
+```
 if [ $1 ]; then
    url=$1
 else
@@ -90,7 +90,7 @@ could it make eggs too?
 
 ---
 
-```sh
+```
 download_url() {
   data_dir=/var/lib/app/data
   mkdir -p ${data_dir}
@@ -117,7 +117,7 @@ I want logging
 
 ---
 
-```sh
+```
 log_file=/var/log/$(basename $0).log
 
 download_url() {
@@ -148,7 +148,7 @@ it runs as the correct user
 
 ---
 
-```sh
+```
 log_file=/var/log/$(basename $0).log
 
 download_url() {
@@ -230,7 +230,7 @@ I discovered what's out there 😊
 [shunit2](https://github.com/zandev/shunit2) provides all the methods
 you know from JUnit:
 
-```sh
+```
 assertEquals
 assertFalse
 assertNotEquals
@@ -247,7 +247,7 @@ failSame
 
 ---
 
-```sh
+```
 ## @override shunit2
 setUp() {
   source "$(dirname "$0")/../lib/$(basename "$0" -test.sh)-lib.sh"
