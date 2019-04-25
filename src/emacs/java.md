@@ -20,6 +20,18 @@ itself and download whatever it needs in the background. I've used
 this setup for a good while now on a code base with around 5000 Java
 files and 65 Maven modules and the performance is impeccable.
 
+You can see my setup in action in the screencast below.
+
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube-nocookie.com/embed/4z2Ywregkig"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media;
+gyroscope; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
 ## Support for Lombok
 
 ```lisp
@@ -29,8 +41,7 @@ files and 65 Maven modules and the performance is impeccable.
          "-Xmx1G"
          "-XX:+UseG1GC"
          "-XX:+UseStringDeduplication"
-         "-javaagent:/path/to/lombok-1.16.18.jar"
-         "-Xbootclasspath/a:/path/to/lombok-1.16.18.jar"))
+         "-javaagent:/path/to/lombok-1.18.6.jar"))
 ```
 
 ## Trouble shooting
@@ -77,6 +88,13 @@ java.lang.NoClassDefFoundError: javax/annotation/processing/AbstractProcessor
 	at java.base/java.lang.ClassLoader.findBootstrapClassOrNull(ClassLoader.java:1248)
 	at java.base/java.lang.System$2.findBootstrapClassOrNull(System.java:2123)
 ```
+
+The problem was that by having Lombok on the boot classpath it would
+plug interfere with the annotation processing mechanism in the Eclipse
+server. [The
+remedy](https://gitlab.com/skybert/my-little-friends/commit/f8aec7f3d47a48e6117a78c086ff13f6e5d29b7d)
+was to remove `-Xbootclasspath/a:/path/to/lombok-1.16.18.jar` and only
+specify Lombok in the `javaagent` parameter.
 
 ## Other Java extensions for Emacs I've used
 
