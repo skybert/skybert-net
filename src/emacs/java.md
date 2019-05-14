@@ -22,15 +22,8 @@ files and 65 Maven modules and the performance is impeccable.
 
 You can see my setup in action in the screencast below.
 
-<iframe
-  width="560"
-  height="315"
-  src="https://www.youtube-nocookie.com/embed/4z2Ywregkig"
-  frameborder="0"
-  allow="accelerometer; autoplay; encrypted-media;
-gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
+<iframe class="centered" width="560" height="315" src="https://www.youtube-nocookie.com/embed/4z2Ywregkig" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" class="centered" allowfullscreen="true"> </iframe>
+
 
 ## Support for Lombok
 
