@@ -27,15 +27,13 @@ by <a href="https://twitter.com/torsteinkrause">@torsteinkrause</a>
 
 ---
 
-## Time reports for everyone
+## Get reports of
 
-Pick a date and get a report of:
+- All users
 
-💥 All users
+- All git repositories
 
-💥 All git repositories
-
-💥 All branches
+- All branches
 
 ---
 
@@ -45,7 +43,7 @@ Pick a date and get a report of:
 
 ---
 
-## It has 📚
+## RTFM 📚
 
 ```
 ❯ cannon --help
@@ -106,7 +104,7 @@ $ cannon
 
 ---
 
-## Bonus: it can be pretty too 💄
+## Bonus: Pretty 💄
 
 ```
 $ cannon --pretty
