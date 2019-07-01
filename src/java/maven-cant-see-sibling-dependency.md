@@ -5,12 +5,10 @@ tags: java, maven
 
 I've just spent another 2 hours of my life due to [this Maven
 bug](https://issues.apache.org/jira/browse/MCOMPILER-209): Project `x`
-with two modules `a` and `b`. `b` depends on `a` (`net.skybert.B`
-imports `net.skybert.A`):
+with two modules `a` and `b`. `b` depends on `a`:
 
 ```text
-❯ tree
-.
+x
 ├── a
 │   ├── pom.xml
 │   └── src
@@ -30,7 +28,17 @@ imports `net.skybert.A`):
 └── pom.xml
 ```
 
-Whenever I want to build `b`, I must run `mvn clean` in `b` before
+`B.java` makes use of `A.java`:
+
+```java
+package net.skybert;
+import net.skybert.A;
+public class B {
+}
+
+```
+
+Now, whenever I want to build `b`, I must run `mvn clean` in `b` before
 compiling it, or else `b` will not be able to find `a`'s artifact
 (even though the `a` artifact is in `~/.m2/repostiory`). Pretty
 amazing, right?
