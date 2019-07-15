@@ -15,7 +15,7 @@ convincing manner.
 
 The short conclusion from this article is:
 
-```
+```java
 swap = 2GB;
 
 if (ram <= 1GB) {
@@ -32,11 +32,13 @@ I love the simplicity with which you can add and remove swap files in
 runtime. This is how I added a 1GB swap file, adding an entry for it
 to```/etc/fstab``` and activating it:
 
-    # dd if=/dev/zero of=/var/lib/swap.file bs=1024 count=1024000
-    # mkswap /var/lib/swap.file
-    # echo "/var/lib/swap.file swap swap defaults 0 0" >> /etc/fstab
-    # chmod 0600 /var/lib/swap.file
-    # swapon -a
+```text
+# dd if=/dev/zero of=/var/lib/swap.file bs=1024 count=1024000
+# mkswap /var/lib/swap.file
+# echo "/var/lib/swap.file swap swap defaults 0 0" >> /etc/fstab
+# chmod 0600 /var/lib/swap.file
+# swapon -a
+```
 
 That's it. Running```free -m``` shows that I now have 1GB swap
 available. There's no greatness where there's no simplicity. And Linux
