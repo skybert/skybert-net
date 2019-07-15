@@ -1,10 +1,38 @@
 # Content Store Integration tests using Docker & Maven
 
 - by torstein@escenic.com
+
+---
+
+![bg](https://simpleshow.com/wp-content/uploads/sinekgoldencirclee1378664887408.jpg)
+
+---
+
+## Why integration tests?
+
+- The sooner we can catch a bug, the cheaper (less time, less
+  frustration, less grumpy customers) it is.
+- Integration tests help us catch bugs that unit tests cannot 
+
+---
+
+## Why? Bugs unit tests cannot easily catch 
+
+- Bugs/changes in the app server breaks our code.
+- Bugs in the JDBC driver
+- Bugs in our SQL scripts
+
+---
+
+## Why? Bugs unit tests cannot easily catch 
+
+- Bugs in our binaries (catch bug with in project & release process) 
+- Bugs/changs in Solr, our code or shipped Solr schema doesn't work
+  with latest versions.
+
 ---
 
 ## Why?
-
 - Tests written using Java & JUnit
 - Excellent Jenkins support
 - Runs on same server products as in production
@@ -26,6 +54,31 @@ Just like in production:
 
 ---
 
+## How is this different from earlier integration tests?
+
+---
+
+## How is this different from earlier integration tests?
+
+- `integration-test` had Java compile time dependencies to Content
+  Store.
+- `integration-test` Java compile & run time dependencies on many 3rd
+  party libraries that have changed significantly over the years
+  (notably, Apache HttpClient) -`integration-test` used a special
+  `embedded-engine` Java server as glue (not production like)
+- Used Derby as database (not production like)
+
+---
+
+## How is this different from earlier integration tests?
+
+In sum, `integration-test` and `embedded-engine` became hard to
+maintain and fell into **disaray**. The test suite has been broken for
+at least 4-5 years and we have during this time been without
+integration tests integrated with our build infrastructure.
+
+---
+
 ## The interface to Content Store is HTTP
 
 - Lookup services using `/webservice/index.xml`
@@ -38,7 +91,7 @@ Just like in production:
 
 ## Batteries included
 
-The aim is to make it as easy as possible to write integration tests
+The goal is to make it as easy as possible to write integration tests
 while at the same time giving the developer the options he/she needs
 to go beyond the simple tests.
 
@@ -192,13 +245,19 @@ writePerf();
 
 ---
 
-## Integration tests implemented
+## Integration tests implemented, /escenic-admin
 
-- Publications (**CR**eate)
+- Publications, **C**reate, **R**ead.
+- `/index.jsp`, **R**ead
+- Publishers, **R**ead
+
+---
+
+## Integration tests implemented, /webservice
 - Content items (**C**reate, **R**ead, **U**pdate)
 - Open search descriptors (**R**ead)
 - `content-type` descriptors (**R**ead)
-- `container-type` descriptors (**CR**, **R**ead)
+- `container-type` descriptors (**C**reate, **R**ead)
 - searching (for content items)
 - service lookup (`/index.xml`)
 
@@ -209,7 +268,7 @@ writePerf();
 - Uses Java 11's own HTTP libraries (no Apache HttpClient, RestEasy or
   similar)
 - No Java dependencies on ECE
-- The only external library is **XOM** for XML
+- The only external library is **XOM** for XML handling
 
 ---
 
@@ -224,15 +283,21 @@ writePerf();
 
 ## Known limitations
 
-- `demo-temp-dev.war` no longer contain all publication resources (and
-  no shared resources either). 
-  -- test must create what it needs by itself
-  -- in the future, `cue ways` is hopefully included in
-  `demo-temp-dev.war` or similar.
-  
-- by default, all tests work off the same publication, so all tests
-  should test content they themselves have created (can't check for if
-  there are **2** content items, for instance).
+`demo-temp-dev.war` doesn't contain all publication resources (and
+no shared resources either) anymore. 
+- Tests must create what it needs by itself
+- In the future, `cue ways` is hopefully included in
+`demo-temp-dev.war` or similar.
+
+---
+
+## Known limitations
+
+- By default, all tests work off the same publication, creating a
+  publication with `PublicationCreator` is easy, though.
+- HTTP centric approach, testing the syndication/import or dependency
+  injection framework (Nursery) is harder than with the old
+  `integration-test` suite.
 
 ---
 
