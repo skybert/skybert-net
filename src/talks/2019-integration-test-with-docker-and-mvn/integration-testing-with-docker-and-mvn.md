@@ -18,16 +18,18 @@
 
 ## Why? Bugs unit tests cannot easily catch 
 
+- How the web service works end to end (from client to app server to
+  Content Store to database).
 - Bugs/changes in the app server breaks our code.
 - Bugs in the JDBC driver
-- Bugs in our SQL scripts
 
 ---
 
 ## Why? Bugs unit tests cannot easily catch 
 
+- Bugs in our SQL scripts
 - Bugs in our binaries (catch bug with in project & release process) 
-- Bugs/changs in Solr, our code or shipped Solr schema doesn't work
+- Bugs/changes in Solr, our code or shipped Solr schema doesn't work
   with latest versions.
 
 ---
@@ -64,16 +66,21 @@ Just like in production:
   Store.
 - `integration-test` Java compile & run time dependencies on many 3rd
   party libraries that have changed significantly over the years
-  (notably, Apache HttpClient) -`integration-test` used a special
-  `embedded-engine` Java server as glue (not production like)
-- Used Derby as database (not production like)
+  (notably Apache HttpClient)
+
+---
+
+## How is this different from earlier integration tests?
+- `integration-test` used a special `embedded-engine` Java server as
+ glue (not production like)
+- It used Derby, an in-memory database (not production like)
 
 ---
 
 ## How is this different from earlier integration tests?
 
 In sum, `integration-test` and `embedded-engine` became hard to
-maintain and fell into **disaray**. The test suite has been broken for
+maintain and **fell into disarray**. The test suite has been broken for
 at least 4-5 years and we have during this time been without
 integration tests integrated with our build infrastructure.
 
@@ -228,7 +235,7 @@ update content item     123
 - There's one `.tsv` file per Java package
 - Re-running the `mvn verify` without `mvn clean` will append to the
   existing files.
-- The numbers are milliseconds
+- The numbers are in milliseconds
 
 ---
 
@@ -247,9 +254,9 @@ writePerf();
 
 ## Integration tests implemented, /escenic-admin
 
-- Publications, **C**reate, **R**ead.
-- `/index.jsp`, **R**ead
-- Publishers, **R**ead
+- Publications (**C**reate, **R**ead)
+- `/index.jsp` (**R**ead)
+- Publishers, (**R**ead)
 
 ---
 
@@ -260,6 +267,19 @@ writePerf();
 - `container-type` descriptors (**C**reate, **R**ead)
 - searching (for content items)
 - service lookup (`/index.xml`)
+
+---
+
+## Time 🕗
+
+Currently (2019-07-16) running the `integration-test-docker` test
+suite takes around `02:54` on a laptop with i7 and 16GB of RAM (which
+also runs Firefox, Slack, Emacs, Spotify++).
+
+The bulk of this time is to bring up the two Docker clusters (one for
+the `/escenic-admin` tests and one for the `/webservice` tests). A
+total of 22 JUnit tests are run against these clusters (most of them
+comprise of several HTTP requests).
 
 ---
 
@@ -293,8 +313,20 @@ no shared resources either) anymore.
 
 ## Known limitations
 
-- By default, all tests work off the same publication, creating a
-  publication with `PublicationCreator` is easy, though.
+By default, all tests work off the same publication, creating a
+publication with `PublicationCreator` is easy, though:
+
+```java
+import static com.escenic.integrationtest.common.publication.PublicationCreator.*;
+
+String war = System.getProperties().get("basedir") +
+  "/target/engine-develop-SNAPSHOT/contrib/wars/demo-temp-dev.war";
+createPublication(war, "mypub");
+```
+
+---
+
+## Known limitations
 - HTTP centric approach, testing the syndication/import or dependency
   injection framework (Nursery) is harder than with the old
   `integration-test` suite.
