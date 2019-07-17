@@ -62,11 +62,16 @@ Just like in production:
 
 ## How is this different from earlier integration tests?
 
-- `integration-test` had Java compile time dependencies to Content
+`integration-test` had Java compile time dependencies to Content
   Store.
-- `integration-test` Java compile & run time dependencies on many 3rd
-  party libraries that have changed significantly over the years
-  (notably Apache HttpClient)
+  
+---
+
+## How is this different from earlier integration tests?
+
+`integration-test` Java compile & run time dependencies on many 3rd
+arty libraries that have changed significantly over the years
+notably Apache HttpClient)
 
 ---
 
@@ -79,10 +84,11 @@ Just like in production:
 
 ## How is this different from earlier integration tests?
 
-In sum, `integration-test` and `embedded-engine` became hard to
-maintain and **fell into disarray**. The test suite has been broken for
-at least 4-5 years and we have during this time been without
-integration tests integrated with our build infrastructure.
+`integration-test` and `embedded-engine` became **hard to maintain**
+and **fell into disarray**.
+
+Has been **broken for at least 4-5 years** and we have during this
+time been without integration tests.
 
 ---
 
@@ -98,9 +104,9 @@ integration tests integrated with our build infrastructure.
 
 ## Batteries included
 
-The goal is to make it as easy as possible to write integration tests
-while at the same time giving the developer the options he/she needs
-to go beyond the simple tests.
+The goal is to make it as **easy** as possible to write integration
+tests while at the same time giving the developer the **power to go
+beyond** the simple tests.
 
 ---
 
@@ -123,9 +129,10 @@ Creating XML structures is easy so you can do this in Java rather than
 maintaining static XML files.
 
 ```
+import nu.xom.Document;
 import static com.escenic.integrationtest.common.xml.XMLCreator.*;
 
-String xml = createContentItemXML(modelURI, title);
+Document xml = createContentItemXML(modelURI, title);
 ```
 ---
 
@@ -145,7 +152,7 @@ Nodes entries = searchForNodes(xml, xpathForAtomFeedEntries());
 HTTP calls.
 
 ```java
-import static com.escenic.integrationtest.common.http.HTTPCaller.get;
+import static com.escenic.integrationtest.common.http.HTTPClient.get;
 
 HttpResponse<String> response = get(user, password, uri);
 ```
@@ -273,20 +280,25 @@ writePerf();
 ## Time 🕗
 
 Currently (2019-07-16) running the `integration-test-docker` test
-suite takes around `02:54` on a laptop with i7 and 16GB of RAM (which
+suite takes around `02:54` on an i7 CPU with 16GB of RAM (the machine
 also runs Firefox, Slack, Emacs, Spotify++).
 
+
+---
+
+## Time 🕗
 The bulk of this time is to bring up the two Docker clusters (one for
-the `/escenic-admin` tests and one for the `/webservice` tests). A
-total of 22 JUnit tests are run against these clusters (most of them
-comprise of several HTTP requests).
+the `/escenic-admin` tests and one for the `/webservice` tests). 
+
+A total of 22 JUnit tests are run against these clusters (most of
+these tests issue several HTTP requests).
 
 ---
 
 ## Future proof
 
 - Uses Java 11's own HTTP libraries (no Apache HttpClient, RestEasy or
-  similar)
+  the like)
 - No Java dependencies on ECE
 - The only external library is **XOM** for XML handling
 
@@ -327,16 +339,16 @@ createPublication(war, "mypub");
 ---
 
 ## Known limitations
-- HTTP centric approach, testing the syndication/import or dependency
-  injection framework (Nursery) is harder than with the old
-  `integration-test` suite.
+Is HTTP centric. Testing the syndication/import or dependency
+injection framework (Nursery) is harder than with the old
+`integration-test` suite.
 
 ---
 
 ## How to install the tests
 
 ```text
-$ git clone https://cci-jira.ccieurope.com/stash/scm/escrd/integration-test-docker.git
+$ git clone https://git.example.com/integration-test-docker.git
 $ cd integration-test-docker
 $ docker run \
   --volume $(pwd)/tomcat:/tmp/tomcat \
