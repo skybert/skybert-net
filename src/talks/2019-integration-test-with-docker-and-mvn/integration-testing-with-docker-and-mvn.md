@@ -195,6 +195,8 @@ First, in words:
 
 ---
 
+## Example #1
+
 > **Given** that a publiation exists
 >   *and* I have a `content-type` definition
 >   *and* I have a valid `content item` XML document
@@ -210,6 +212,7 @@ Then, in code:
 
 ---
 
+## Example #1
 ```java
 URI modelURI = YellowPages.lookup(LIST_OF_CONTENT_TYPES, PUBLICATION_NAME);
 URI endpoint = YellowPages.lookup(HOW_TO_CREATE_CONTENT_ITEMS, PUBLICATION_NAME);
@@ -235,6 +238,8 @@ First, in words:
 
 ---
 
+## Example #2
+
 > **Given** that I have valid content item URI
 >   *and* my user is allowed to view the content item
 >   *and* I know the title of the content item
@@ -251,6 +256,7 @@ Now, in code:
 
 ---
 
+## Example #2
 ```
 HttpResponse<String> response = get(ADMIN_USER, ADMIN_PASSWORD, uri);
 assertEquals(OK, fromStatusCode(response.statusCode()));
@@ -273,13 +279,16 @@ assertEquals(expected, actual, "Has correct title");
 ---
 
 ## Benchmarking framework included
-```
+```text
 ❯ cat com.escenic.integrationtest.webservice.search-performance.tsv
 get search description URI      35
 get search description document 108
 ece search with facets and 1 result     89
 ece search with facets  200
 ece search without facets       132
+```
+
+```text
 ❯ cat com.escenic.integrationtest.webservice.contentitem-performance.tsv
 create content item     91
 update content item     123
