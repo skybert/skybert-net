@@ -10,6 +10,10 @@
 
 ## Why integration tests?
 
+---
+
+## Why integration tests?
+
 - The sooner we can catch a bug, the cheaper (less time, less
   frustration, less grumpy customers) it is.
 - Integration tests help us catch bugs that unit tests cannot 
@@ -28,13 +32,13 @@
 ## Why? Bugs unit tests cannot catch 
 
 - Bugs in our SQL scripts
-- Bugs in our binaries (catch bug with in project & release process) 
+- Bugs in our binaries (catch bugs in the build & release process) 
 - Bugs/changes in Solr, our code or shipped Solr schema doesn't work
   with latest versions.
 
 ---
 
-## Why?
+## Why? 
 - Tests written using Java & JUnit
 - Excellent Jenkins support
 
@@ -64,10 +68,9 @@ Just like in production:
 ---
 
 ## Why?
-
 Just like in production:
 
-- JDBC driver is MariaDB
+- JDBC driver is MariaDB's JDBC driver
 - Server platform is Linux
 - Can test on multiple Linux distributions
 
@@ -80,14 +83,14 @@ Just like in production:
 ## How about the old integration tests?
 
 `integration-test` had Java compile dependencies to Content Store.
-  
+
 ---
 
-## How about the old integration tests?
+## How about the old integration tests? 
 
-`integration-test` Java compile & run time dependencies on many 3rd
-party libraries that have changed significantly over the years notably
-[Apache HttpClient](https://hc.apache.org)
+`integration-test` had compile & run time dependencies on many 3rd
+party libraries that have changed significantly over the years,
+notably [Apache HttpClient](https://hc.apache.org)
 
 ---
 
@@ -106,8 +109,8 @@ party libraries that have changed significantly over the years notably
 
 ## How about the old integration tests?
 
-Has been **broken for at least 4-5 years** and we have during this
-time been without integration tests.
+`integration-test` has been **broken for at least 4-5 years** and we
+have during this time been without integration tests.
 
 ---
 
@@ -116,7 +119,7 @@ time been without integration tests.
 - Lookup services using `/webservice/index.xml`
 - Only **3** Java dependencies in `integration-test-docker`:
   -- XOM
-  -- JAX-RS (a part of Java 11)
+  -- JAX-RS ([JSR 311](https://jcp.org/en/jsr/detail?id=311) is a part of Java 11)
   -- JUnit
 
 ---
@@ -381,7 +384,7 @@ these tests issue several HTTP requests).
 
 `demo-temp-dev.war` doesn't contain all publication resources (and
 no shared resources either) anymore. 
-- Tests must create what it needs by itself
+- Tests must create what they needs themselves
 - In the future, `cue ways` is hopefully included in
 `demo-temp-dev.war` or similar.
 
