@@ -72,7 +72,10 @@ Just like in production:
 
 - JDBC driver is MariaDB's JDBC driver
 - Server platform is Linux
-- Can test on multiple Linux distributions
+- Can easily test on multiple Linux distributions:
+  [RedHat](redhat.com), [CentOS](centos.org), [Debian](debian.org),
+  [Ubuntu](ubuntu.org) ++
+
 
 ---
 
@@ -192,13 +195,12 @@ HttpResponse<String> response = get(user, password, uri);
 
 ---
 
-## Example #1
-### Testing creating a content item
+## Example #1 Create a content item
 First, in words:
 
 ---
 
-## Example #1
+## Example #1 Create a content item
 
 > **Given** that a publiation exists
 >   *and* I have a `content-type` definition
@@ -209,13 +211,12 @@ First, in words:
 
 ---
 
-## Example #1
-### Testing creating a content item 
+## Example #1 Creating a content item 
 Then, in code:
 
 ---
 
-## Example #1
+## Example #1 Creating a content item
 ```java
 URI modelURI = YellowPages.lookup(LIST_OF_CONTENT_TYPES, PUBLICATION_NAME);
 URI endpoint = YellowPages.lookup(HOW_TO_CREATE_CONTENT_ITEMS, PUBLICATION_NAME);
@@ -235,13 +236,12 @@ assertNotNull(
 
 ---
 
-## Example #2
-### Testing reading a content item 
+## Example #2 Read a content item 
 First, in words:
 
 ---
 
-## Example #2
+## Example #2 Read a content item
 
 > **Given** that I have valid content item URI
 >   *and* my user is allowed to view the content item
@@ -253,8 +253,8 @@ First, in words:
 
 ---
 
-## Example #2
-### Testing reading a content item
+## Example #2 Read a content item
+
 Now, in code:
 
 ---
@@ -333,8 +333,9 @@ writePerf();
 - Open search descriptors (**R**ead)
 - `content-type` descriptors (**R**ead)
 - `container-type` descriptors (**C**reate, **R**ead)
-- searching (for content items)
-- service lookup (`/index.xml`)
+- Containers (**C**reate, **R**ead)
+- Search for content items
+- Service lookup (`/index.xml`)
 
 ---
 
@@ -436,7 +437,10 @@ $ mvn verify
 ## Happy integration testing!
 
 ```java
-assertTrue(isFinished(), "We should be finished now");
+while (audienceHasQuestions()) {
+  answer();
+}
+assertEquals(isFinished(), "We should be finished now");
 ```
 
 
