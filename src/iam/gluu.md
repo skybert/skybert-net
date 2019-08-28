@@ -262,3 +262,13 @@ Check that the same base `inum` is in LDAP:
   src="/graphics/2019/gluu-ldap-inum.png"
   alt="Gluu ldap"
 />
+
+
+Instead of using a graphical LDAP client, you can also use the command
+line:
+
+```text
+$ ldapsearch -H ldaps://172.18.0.5:1636 -x -D "cn=directory manager" -w <pass> -b "o=gluu" -s one -a always -z 1000 "(objectClass=*)" "o=*"
+[..]
+dn: o=@!4371.2E14.5256.EEF4!0001!FA8E.DFD4,o=gluu
+```
