@@ -235,11 +235,11 @@ debugging easier.
 
 ## UM sends the user info back to ECE
 ECE uses the information provided by UM to create:
+
 - ECE groups (we've asked it to create two groups called `editor` and
   `journalist`) in correct publication(s).
 - Assign a set of ECE roles to each of the groups
 - Assign `john` to the groups created.
-
 
 ECE will create groups inside of ECE corresponding to the user groups
 we set in Gluu:
