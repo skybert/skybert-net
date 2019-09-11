@@ -433,7 +433,6 @@ lo and behold, that's exactly what happened after `lisa` logged into
 CUE for the first time!
 
 ```sql
-MariaDB [ecedb]>
 select
   pe.username,
   p.publicationName,
