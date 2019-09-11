@@ -245,9 +245,15 @@ ECE will create groups inside of ECE corresponding to the user groups
 we set in Gluu:
 
 ```sql
-MariaDB [ecedb]> select re.publicationID, p.publicationName, re.genericName
-  from ReferenceEntity re, Publication p
-  where re.codeID=2
+select
+  re.publicationID,
+  p.publicationName,
+  re.genericName
+from
+  ReferenceEntity re,
+  Publication p
+where
+  re.codeID=2
   and re.publicationID = p.referenceID;
 +---------------+-----------------+-------------+
 | publicationID | publicationName | genericName |
@@ -260,7 +266,7 @@ MariaDB [ecedb]> select re.publicationID, p.publicationName, re.genericName
 It also creates a user `john` in the CUE Content Store database:
 
 ```sql
-MariaDB [ecedb]> select * from Person p where p.username='john';
+select * from Person p where p.username='john';
 +----------+----------+-----------------------------------------+
 | personID | username | attributes                              |
 +----------+----------+-----------------------------------------+
@@ -272,11 +278,17 @@ AD backend that the IAM systems syncs data from), ECE will query UM
 for any updates and apply these accordingly in the ECE database.
 
 ECE will then add `john` to the two newly created user groups:
-```text
-
-MariaDB [ecedb]> select re.genericName, re.publicationID, gm.memberID
-  from GroupMember gm, ReferenceEntity re
-  where re.referenceID = gm.groupId and gm.memberID=7;
+```sql
+select
+  re.genericName,
+  re.publicationID,
+  gm.memberID
+from
+  GroupMember gm,
+  ReferenceEntity re
+where
+  re.referenceID = gm.groupId
+  and gm.memberID=7;
 +-------------+---------------+----------+
 | genericName | publicationID | memberID |
 +-------------+---------------+----------+
@@ -352,7 +364,7 @@ provider:
 ```
 
 Now, if we create a new user `lisa` and assign her to the groups
-`life_editor` and `sportsdesk_journalist`, UM generates the list of
+`life_editor` and `sports_journalist`, UM generates the list of
 publications and roles for her.
 
 The UM resource for `lisa`:
@@ -458,8 +470,7 @@ assigned rights through the following tables.
 Let's find out which _roles_ the `editor` _group_ implies (that's the
 one with `referenceID` `24` above):
 
-```text
-MariaDB [ecedb]>
+```sql
 select
   r.roleName,
   pd.uri,
@@ -500,6 +511,16 @@ to these for you. This is necessary when syncing from AD to Gluu as
 Gluu only supports syncing the user information. This is where the
 `userGroups` array field on the IAM LDAP user object comes in.
 
+This field is an extension to the SCIM schema, see the [User Manager
+documentation](http://cuedocs.escenic.com/user-manager-guide/1.0/ad_sync.html). The
+AD sync must be set up so that the AD user's `memberOf` array field is
+synced to the IAM user's `userGroups` field. These will result in a
+list of strings that may look like this (they must start with `CN=`):
+
+```text
+CN=sports,DC=foo,DC=bar
+CN=life,DC=foo,DC=bar
+```
 For UM to populate the groups in the IAM backend, you must set:
 
 ```yaml
@@ -514,4 +535,11 @@ user and resolve that to a group in the IAM backend, adding or
 removing the user to that group in accordance with the `userGroups`
 field.
 
-UM will also create a group if it doesn't exist in the IAM backend.
+The above list of AD groups will result in:
+- sports
+- groups
+
+The `,DC=foo,DC=bar` will be ignored by UM. UM will thus first check
+the `sports` and `fashion`  groups exist in the IAM backend. If they
+don't, UM will first create these (using the SCIM interface) and then
+add the user to these groups. 
