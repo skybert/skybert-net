@@ -12,7 +12,8 @@ small app using TDD, showing how awesome Emacs has become as a Java
 editing environment.
 
 - 📖 [Slides can be found here](2019-awesome-java).
-- 💻 Slide sources can be
+- 💻 Slide sources can be [found on
+  github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/2019-awesome-java/slides.md).
 - 🎥 Pre-recording of my talk (video from EmacsConf will be linked once
   it's been made available) [may be viewed
   here](http://skybert.net/emacs/2019-10-23-emacsconf-java.webm).
