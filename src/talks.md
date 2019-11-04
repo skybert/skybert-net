@@ -4,6 +4,19 @@ url: talks
 save_as: talks/index.html
 category: misc
 
+## Java coding in Emacs
+
+*How Emacs became my awesome Java editing environment* is a talk I
+gave at [EmacsConf 2019](https://emacsconf.org/2019). I live coded
+small app using TDD, showing how awesome Emacs has become as a Java
+editing environment.
+
+- 📖 [Slides can be found here](2019-awesome-java).
+- 💻 Slide sources can be
+- 🎥 Pre-recording of my talk (video from EmacsConf will be linked once
+  it's been made available) [may be viewed
+  here](http://skybert.net/emacs/2019-10-23-emacsconf-java.webm).
+
 ## BASH foo
 
 *BASH foo: Taking your BASH skills to the next level* is a talk for
