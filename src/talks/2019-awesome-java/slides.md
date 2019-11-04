@@ -35,8 +35,8 @@ A talk by torstein @ skybert dot net
 # Seeing is believing
 
 Will use a wee app,
-[cheese-shop](git@gitlab.com:skybert/cheese-shop.git) to show the
-Java features in Emacs.  
+[cheese-shop](https://gitlab.com/skybert/cheese-shop) to show the
+Java features in Emacs.
 
 ---
 
@@ -81,4 +81,3 @@ Java features in Emacs.
 # System.exit(0);
 
 ✏ torstein @ skybert dot net
-
