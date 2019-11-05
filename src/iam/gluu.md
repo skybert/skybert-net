@@ -272,3 +272,14 @@ $ ldapsearch -H ldaps://172.18.0.5:1636 -x -D "cn=directory manager" -w <pass> -
 [..]
 dn: o=@!4371.2E14.5256.EEF4!0001!FA8E.DFD4,o=gluu
 ```
+## Configured Google SSO but got  login.errorSessionInvalidMessage
+
+First, check the `oxauth` log:
+```text
+$ docker logs -f  $(docker ps -qf name=oxauth)
+[..]
+2019-11-05 12:17:59,218 ERROR [qtp1296674576-18]
+[xdi.oxauth.authorize.ws.rs.AuthorizeAction]
+(AuthorizeAction.java:253) - Failed to get
+CustomScriptConfiguration. auth_step: 1, acr_values: gplus
+```
