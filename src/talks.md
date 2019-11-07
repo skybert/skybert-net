@@ -7,7 +7,7 @@ category: misc
 ## Java coding in Emacs
 
 *How Emacs became my awesome Java editing environment* is a talk I
-gave at [EmacsConf 2019](https://emacsconf.org/2019). I live coded
+gave at [EmacsConf 2019](https://emacsconf.org/2019). I live coded a
 small app using TDD, showing how awesome Emacs has become as a Java
 editing environment.
 
