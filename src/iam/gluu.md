@@ -278,8 +278,18 @@ First, check the `oxauth` log:
 ```text
 $ docker logs -f  $(docker ps -qf name=oxauth)
 [..]
-2019-11-05 12:17:59,218 ERROR [qtp1296674576-18]
-[xdi.oxauth.authorize.ws.rs.AuthorizeAction]
-(AuthorizeAction.java:253) - Failed to get
-CustomScriptConfiguration. auth_step: 1, acr_values: gplus
+2019-11-05 12:17:59,218 ERROR [qtp1296674576-18] [xdi.oxauth.authorize.ws.rs.AuthorizeAction] (AuthorizeAction.java:253) - Failed to get CustomScriptConfiguration. auth_step: 1, acr_values: gplus
 ```
+
+The root cause for this is buried deep down inside the container, so
+you need to `exec` into the container to get it (why do people love
+Docker? these things get so complicated because of application
+containers, much better with machines, VMs or system containers IMO):
+
+```text
+$ docker exec -t $(docker ps -qf name=oxauth) grep Google "/opt/gluu/jetty/oxauth/logs/oxauth_script.log"
+2019-11-07 13:41:52,986 INFO  [oxAuthScheduler_Worker-3] [org.xdi.service.PythonService$PythonLoggerOutputStream] (PythonService.java:239) - Google+ Initialization
+2019-11-07 13:41:53,082 INFO  [oxAuthScheduler_Worker-3] [org.xdi.service.PythonService$PythonLoggerOutputStream] (PythonService.java:239) - Google+ PrepareAttributesMapping. The number of attributes in remoteAttributesList and localAttributesList isn't equal
+2019-11-07 13:41:53,083 INFO  [oxAuthScheduler_Worker-3] [org.xdi.service.PythonService$PythonLoggerOutputStream] (PythonService.java:239) - Google+ Initialization. The attributes mapping isn't valid
+```
+
