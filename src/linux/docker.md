@@ -1,7 +1,7 @@
 title: docker
 date: 2018-02-26
 category: linux
-tags: linux, container, docker
+tags: linux, containers, docker
 
 
 ## Docker networking doesn't work
