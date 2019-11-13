@@ -1,0 +1,69 @@
+title: lxd
+date: 2019-11-13
+category: linux
+tags: linux, containers, lxd
+
+## Networking in lxd containers doesn't work
+
+The containers don't get IPv4 addresses and networking doesn't work
+from within the containers. The problem is the same on Debian, Ubuntu
+and Alpine.
+
+```text
+❯ lxc list
++------------+---------+------+----------------------------------------------+------------+-----------+
+|    NAME    |  STATE  | IPV4 |                     IPV6                     |    TYPE    | SNAPSHOTS |
++------------+---------+------+----------------------------------------------+------------+-----------+
+| buster     | RUNNING |      | fd42:3cb:5f02:b33b:216:3eff:fe5a:710e (eth0) | PERSISTENT | 0         |
++------------+---------+------+----------------------------------------------+------------+-----------+
+| first      | RUNNING |      | fd42:3cb:5f02:b33b:216:3eff:fe34:c776 (eth0) | PERSISTENT | 0         |
++------------+---------+------+----------------------------------------------+------------+-----------+
+| ubuntu1904 | RUNNING |      | fd42:3cb:5f02:b33b:216:3eff:fe67:ccf1 (eth0) | PERSISTENT | 0         |
++------------+---------+------+----------------------------------------------+------------+-----------+
+```
+
+```text
+❯ lxc exec buster bash
+root@buster:~# ifconfig eth0
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet6 fe80::216:3eff:fe5a:710e  prefixlen 64  scopeid 0x20<link>
+        inet6 fd42:3cb:5f02:b33b:216:3eff:fe5a:710e  prefixlen 64  scopeid 0x0<global>
+        ether 00:16:3e:5a:71:0e  txqueuelen 1000  (Ethernet)
+        RX packets 24  bytes 4026 (3.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 19  bytes 2934 (2.8 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+```
+
+```text
+root@buster:~# apt update
+Err:1 http://deb.debian.org/debian buster InRelease
+  Temporary failure resolving 'deb.debian.org'
+```
+
+The reason for this, was that my firewall blocked the requests from
+the DHCP server `lxd` was running to assign IPs to the
+containers. `snap` who's running `lxd` on my Debian system used the
+wrong command to interact with my firewall. To solve this, I did:
+
+```text
+# update-alternatives --set iptables /usr/sbin/iptables-legacy
+# update-alternatives --set ip6tables /usr/sbin/ip6tables-legacy
+# snap restart lxd
+```
+
+Now, my containers got IPv4 addresses and container networking worked
+like a charm:
+
+```text
+❯ lxc list
++------------+---------+----------------------+----------------------------------------------+------------+-----------+
+|    NAME    |  STATE  |         IPV4         |                     IPV6                     |    TYPE    | SNAPSHOTS |
++------------+---------+----------------------+----------------------------------------------+------------+-----------+
+| buster     | RUNNING | 10.186.38.200 (eth0) | fd42:3cb:5f02:b33b:216:3eff:fe5a:710e (eth0) | PERSISTENT | 0         |
++------------+---------+----------------------+----------------------------------------------+------------+-----------+
+| first      | RUNNING | 10.186.38.197 (eth0) | fd42:3cb:5f02:b33b:216:3eff:fe34:c776 (eth0) | PERSISTENT | 0         |
++------------+---------+----------------------+----------------------------------------------+------------+-----------+
+| ubuntu1904 | RUNNING | 10.186.38.153 (eth0) | fd42:3cb:5f02:b33b:216:3eff:fe67:ccf1 (eth0) | PERSISTENT | 0         |
++------------+---------+----------------------+----------------------------------------------+------------+-----------+
+```
