@@ -1,7 +1,7 @@
 date:    2012-10-07
 category: linux
-tags: debian
-title: Getting the Fonts Right
+tags: debian, linux. fonts
+title: Getting the Fonts Right in 2012
 
 With these packages and environment configuration, Chinese and
 Bangladeshi (and all other languages I've tested) works everywhere:
