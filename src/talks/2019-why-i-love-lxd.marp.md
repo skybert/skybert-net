@@ -1,5 +1,7 @@
 
-# Why I ❤ Lex-Dee
+# Why I ❤️ Lex-Dee
+
+- by [torstein@escenic]()
 
 ---
 
