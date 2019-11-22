@@ -81,3 +81,29 @@ with:
 # apparmor_parser -r /etc/apparmor.d/*snap-confine*
 # apparmor_parser -r /var/lib/snapd/apparmor/profiles/snap*
 ```
+
+## Exposing lxd container ports on host
+
+You can either used bridged networking or use default NAT networking
+and add a route to your firewall:
+
+```text
+PORT=80
+PUBLIC_IP=your_public_ip
+CONTAINER_IP=your_container_ip
+
+iptables \
+  -t nat \
+  -I PREROUTING \
+  -i eth0 \
+  -p TCP \
+  -d $PUBLIC_IP \
+  --dport $PORT \
+  -j DNAT \
+  --to-destination $CONTAINER_IP:$PORT \
+  -m comment \
+  --comment "forward to the container"'
+```
+
+---
+
