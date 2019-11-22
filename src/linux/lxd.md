@@ -67,3 +67,17 @@ like a charm:
 | ubuntu1904 | RUNNING | 10.186.38.153 (eth0) | fd42:3cb:5f02:b33b:216:3eff:fe67:ccf1 (eth0) | PERSISTENT | 0         |
 +------------+---------+----------------------+----------------------------------------------+------------+-----------+
 ```
+
+## snap-confine has elevated permissions
+
+```text
+snap-confine has elevated permissions and is not confined but should be. Refusing to continue to avoid permission escalation attacks
+```
+
+It's due to Apparmor and the kernel you're running. I remedied this
+with:
+
+```text
+# apparmor_parser -r /etc/apparmor.d/*snap-confine*
+# apparmor_parser -r /var/lib/snapd/apparmor/profiles/snap*
+```
