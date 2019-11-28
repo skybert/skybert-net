@@ -68,6 +68,31 @@ like a charm:
 +------------+---------+----------------------+----------------------------------------------+------------+-----------+
 ```
 
+## Still no IPv4
+
+On a different Debian system, I still couldn't get an IP, even after
+updating `iptables` alternatives outlined in the above section.
+
+After investigating this, I discovered that I had a DNS server running:
+
+```text
+root@geronimo ~ # netstat -nlp --tcp | grep -w 53
+tcp        0      0 0.0.0.0:53              0.0.0.0:*               LISTEN      794/dnsmasq
+tcp6       0      0 :::53                   :::*                    LISTEN      794/dnsmasq
+```
+
+This causes conflicts with `lxd`, which also wants to fire up its own
+DNS server. Since I had to need for the DNS server (I'd forgotten why
+I installed it in the first place), I removed it and restarted `lxd`:
+
+```text
+# apt-get remove dnsmasq
+# snap restart lxd
+```
+
+And lo and behold, my containers were started again, this time with a
+shiny IPv4 address!
+
 ## snap-confine has elevated permissions
 
 ```text
@@ -106,4 +131,3 @@ iptables \
 ```
 
 ---
-
