@@ -130,4 +130,27 @@ iptables \
   --comment "forward to the container"'
 ```
 
----
+## Export and import a container
+
+The command line interface is so easy to use, you hardly need to look
+a the documentation. 
+
+
+```text
+$ lxc export mycontainer mycontainer.tar.gz
+```
+
+This will include all snapshots. To optimise the backup file, you
+might want to look into adding `--instance-only` and
+`--optimized-storage`. 
+
+This tarball can then be used on the same host or copied to a
+different machine where you want the same container. To make use of
+the tarball that you `export`ed, you'll of course use a command called
+`import`: 
+
+```text
+$ lxc import mycontainer.tar.gz
+```
+
+That's it! `lxd` is awesome.
