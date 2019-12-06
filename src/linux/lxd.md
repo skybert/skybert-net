@@ -3,7 +3,7 @@ date: 2019-11-13
 category: linux
 tags: linux, containers, lxd
 
-> The more use I LXD the less I understand why we're all using
+> The more I use LXD the less I understand why we're all using
 > Docker. Why oh why?
 
 ## Exposing lxd container ports on host
