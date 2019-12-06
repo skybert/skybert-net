@@ -3,6 +3,11 @@ date: 2019-11-13
 category: linux
 tags: linux, containers, lxd
 
+> The more use I LXD the less I understand why we're all using
+> Docker. Why oh why?
+>
+> —skybert, 2019-11-13
+
 ## Exposing lxd container ports on host
 
 You can either used bridged networking or use default NAT networking
@@ -70,8 +75,6 @@ the container had id `3000`, I would instead configure:
 ```
 $ lxc config set buster raw.idmap "both 1200 3000"
 ```
-
-LXD rocks 🚀
 
 AFAIK, there's no Docker equivalent, see [issue 2259 in their
 bugtracker](https://github.com/moby/moby/issues/2259). With docker
