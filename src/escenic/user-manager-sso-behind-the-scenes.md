@@ -535,6 +535,7 @@ removing the user to that group in accordance with the `userGroups`
 field.
 
 The above list of AD groups will result in:
+
 - sports
 - groups
 
