@@ -81,6 +81,38 @@ to make the user inside the container write to them (if it's not a
 `root` user) and on the host system, you must `chown` files created by
 the container to allow non-`root` users to write to them.
 
+## Run Docker containers inside an LXD container
+
+You can even run Docker containers inside an LXD container By passing
+`security.nesting=true` to `lxc` when creating a container, you can
+run other containers inside it:
+
+```text
+$ lxc launch ubuntu box-in-a-box -c security.nesting=true
+```
+
+You can now `lxc exec` into the `box-in-a-box` and install Docker like
+normal, after which `lxc ls` will list the Docker interfaces along
+side the `eth0` device which is used for communicating with your lxd
+container:
+
+```
+❯ lxc ls box-in-a-box
++--------------+---------+------------------------------+----------------------------------------------+-----------+-----------+
+|      NAME    |  STATE  |             IPV4             |                     IPV6                     |   TYPE    | SNAPSHOTS |
++--------------+---------+------------------------------+----------------------------------------------+-----------+-----------+
+| box-in-a-box | RUNNING | 172.18.0.1 (br-b0334a281f15) | fd42:3cb:5f02:b33b:216:3eff:fee5:2320 (eth0) | CONTAINER | 0         |
+|              |         | 172.17.0.1 (docker0)         |                                              |           |           |
+|              |         | 10.186.38.82 (eth0)          |                                              |           |           |
++--------------+---------+------------------------------+----------------------------------------------+-----------+-----------+
+```
+
+Note that these `172.x` IPs are not accessible from your host machine,
+so you need to proxy these from something that listens on `eth0` in
+the `box-in-a-box` container. I prefer running `nginx` there to proxy
+requests to the Docker container IPs so that I can easily access them
+from my machine.
+
 ## Networking in lxd containers doesn't work
 
 The containers don't get IPv4 addresses and networking doesn't work
