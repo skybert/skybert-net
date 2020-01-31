@@ -14,9 +14,17 @@ editing environment.
 - 📖 [Slides can be found here](2019-awesome-java).
 - 💻 Slide sources can be [found on
   github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/2019-awesome-java/slides.md).
-- 🎥 Pre-recording of my talk (video from EmacsConf will be linked once
-  it's been made available) [may be viewed
-  here](http://skybert.net/emacs/2019-10-23-emacsconf-java.webm).
+- 🎥 Video of my talkat  EmacsConf  [may be viewed
+  here](https://www.youtube.com/watch?v=Bbjxn9yVNJ8).
+
+## Why I ❤️ Lex--De
+
+The more I use LXD the less I understand why we're all using
+Docker. Why oh why?
+
+- 📖 [Slides can be found here](2019-why-i-love-lxd).
+- 💻 Slide sources can be [found on
+  github.com/skybert](https://github.com/skybert/skybert-net/tree/master/src/talks/2019-why-i-love-lxd.marp.md).
 
 ## BASH foo
 
