@@ -17,7 +17,7 @@ editing environment.
 - 🎥 Video of my talkat  EmacsConf  [may be viewed
   here](https://www.youtube.com/watch?v=Bbjxn9yVNJ8).
 
-## Why I ❤️ Lex--De
+## Why I ❤️ Lex-De
 
 The more I use LXD the less I understand why we're all using
 Docker. Why oh why?
