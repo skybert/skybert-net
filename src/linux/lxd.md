@@ -50,7 +50,10 @@ the tarball that you `export`ed, you'll of course use a command called
 
 ```text
 $ lxc import mycontainer.tar.gz
+$ lxc start mycontainer
 ```
+
+And it just works! `mycontainer` is now up and running.
 
 ## Mount your home directory read/write inside an LXD container
 
