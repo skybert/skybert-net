@@ -1,4 +1,4 @@
-title: Find what Maven artifact contains class
+title: Find the Maven artifact that contains a class
 date: 2020-03-10
 category: java
 tags: java, maven
