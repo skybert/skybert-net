@@ -37,6 +37,7 @@ You've now upgraded your engine1 instance with the latest ECE6 and all its plugi
 Tracking the linage of deployed EARs
 
 The lineage of the repacked EAR can be seen in the deployment log (lines wrapped for improved readability):
+
 ```text
 $ ece -i engine1 list-deployments
 [ece#engine-engine1] These are all the publications on engine1:
@@ -46,7 +47,7 @@ Fri Nov 4 13:38:28 UTC 2016
 Fri Nov 4 13:41:21 UTC 2016
 2016-11-04-1478266861-repackaged-523f32273c1add9c0034762ddb2e4a01-created-on-quanah.zip
   43ce5090f2e9255090ae4918f4b1bc86
- ``` 
+``` 
  
 Here, you can see that `my-site-3.0.4.ear` was repacked and deployed
 Fri Nov 4 13:38:28 UTC 2016 and the archive had the checksum
