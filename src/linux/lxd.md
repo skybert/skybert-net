@@ -116,7 +116,61 @@ the `box-in-a-box` container. I prefer running `nginx` there to proxy
 requests to the Docker container IPs so that I can easily access them
 from my machine.
 
-## Networking in lxd containers doesn't work
+
+## Grow the LXD storage
+On my system, I'd just hit ENTER when installing lxd and had thus a
+BTRFS backed storage pool: 
+
+```text
+$ lxc storage ls
++---------+-------------+--------+--------------------------------------------+---------+
+|  NAME   | DESCRIPTION | DRIVER |                   SOURCE                   | USED BY |
++---------+-------------+--------+--------------------------------------------+---------+
+| default |             | btrfs  | /var/snap/lxd/common/lxd/disks/default.img | 18      |
++---------+-------------+--------+--------------------------------------------+---------+
+```
+
+To add 20 GBs to it, I did the following:
+
+First off, to be safe than sorry, I stopped LXD:
+```text
+# snap stop lxd
+```
+
+After that, I grew the file itself:
+```text
+# sudo truncate -s +20G /var/snap/lxd/common/lxd/disks/default.img
+```
+
+Then get a hold of which loopback device it's using:
+```text
+# losetup | grep default.img
+/dev/loop6         0      0         1  0 /var/snap/lxd/common/lxd/disks/default.img   0     512
+```
+
+Re-create it:
+```text
+# losetup -c /dev/loop6
+```
+
+Then finally, mount the device and use `btrfs` to resize it:
+```text
+# mkdir /mnt/foo
+# mount /dev/loop6 /mnt/foo
+# btrfs filesystem resize max /mnt/foo
+# umount /mnt/foo
+```
+
+Once that was done, I started LXD again:
+```text
+# snap start lxd
+```
+
+My containers could now use 20GBs more.
+
+
+## Troubleshooting
+### Networking in lxd containers doesn't work
 
 The containers don't get IPv4 addresses and networking doesn't work
 from within the containers. The problem is the same on Debian, Ubuntu
@@ -181,7 +235,7 @@ like a charm:
 +------------+---------+----------------------+----------------------------------------------+------------+-----------+
 ```
 
-## Still no IPv4
+### Still no IPv4
 
 On a different Debian system, I still couldn't get an IP, even after
 updating `iptables` alternatives outlined in the above section.
@@ -206,7 +260,7 @@ I installed it in the first place), I removed it and restarted `lxd`:
 And lo and behold, my containers were started again, this time with a
 shiny IPv4 address!
 
-## snap-confine has elevated permissions
+### snap-confine has elevated permissions
 
 ```text
 snap-confine has elevated permissions and is not confined but should
