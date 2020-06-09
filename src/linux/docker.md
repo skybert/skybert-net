@@ -3,13 +3,31 @@ date: 2018-02-26
 category: linux
 tags: linux, containers, docker
 
+## Copy files from a stopped container
+
+First, you need to find it. On your system, stopped containers are
+included in the `docker ps` list if you add `--all`:
+```
+$ docker ps --all
+CONTAINER ID  IMAGE  COMMAND         CREATED
+bb72360b919e  foo    "/usr/bin/foo"  12 minutes ago
+```
+
+Now, use the container id to copy the files you need:
+```text
+$ docker cp bb72360b919e/var/log/foo.log /tmp
+```
+
+The syntax is similar to that of `scp`, except that you don't add a
+colon after the hostname.
+
 
 ## Docker networking doesn't work
 
 ### Possibility #1 - you've changed network access on the host
 
 You've changed network configuration on your laptop and the `dockerd`
-hasn't been restarted. 
+hasn't been restarted.
 
 I've found that if I change from e.g. wired to wireless on my laptop,
 the outgoing network traffic from all docker containers is
@@ -41,17 +59,17 @@ command:
 
 ```text
 # iptables -L | grep -i docker
-DOCKER-USER  all  --  anywhere             anywhere            
-DOCKER-ISOLATION  all  --  anywhere             anywhere            
-DOCKER     all  --  anywhere             anywhere            
-DOCKER     all  --  anywhere             anywhere            
+DOCKER-USER  all  --  anywhere             anywhere
+DOCKER-ISOLATION  all  --  anywhere             anywhere
+DOCKER     all  --  anywhere             anywhere
+DOCKER     all  --  anywhere             anywhere
 Chain DOCKER (2 references)
 Chain DOCKER-ISOLATION (1 references)
 Chain DOCKER-USER (1 references)
 ```
 
 If nothing is returned, you need to set up these chains so that Docker
-can do its magic. 
+can do its magic.
 
 These chains are set up with the `/etc/init.d/docker` script from the
 `docker-ce` package on Debian systems. If the don't exist (perhaps
@@ -103,7 +121,7 @@ CONTAINER ID  IMAGE                           CREATED              IP           
 9ddf7adcb85d  gluufederation/nginx:latest     2018-02-28T13:44:14  172.18.0.5   map[443/tcp:[map[HostIp:0.0.0.0 HostPort:8085]] 80/tcp:[map[HostIp:0.0.0.0 HostPort:8084]]]  /gluu-nginx
 1f879a8c1145  gluufederation/oxtrust:latest   2018-02-28T13:44:13  172.18.0.4   map[8080/tcp:[map[HostIp:0.0.0.0 HostPort:9981]]]                                            /gluu-oxtrust
 53003952bb7b  gluufederation/oxauth:latest    2018-02-28T13:44:13  172.18.0.3   map[8080/tcp:[map[HostPort:9980 HostIp:0.0.0.0]]]                                            /gluu-oxauth
-b524850b3af2  gluufederation/openldap:latest  2018-02-28T13:44:12  172.18.0.2   map[1389/tcp:<nil>]  
+b524850b3af2  gluufederation/openldap:latest  2018-02-28T13:44:12  172.18.0.2   map[1389/tcp:<nil>]
 ```
 
 Since `docker ps` doesn't output the IP of the containers, I've
@@ -123,11 +141,11 @@ You can see this with `iptables`:
 # iptables -t nat -L -n
 [..]
 Chain DOCKER (2 references)
-target     prot opt source               destination         
-RETURN     all  --  0.0.0.0/0            0.0.0.0/0           
-RETURN     all  --  0.0.0.0/0            0.0.0.0/0           
-RETURN     all  --  0.0.0.0/0            0.0.0.0/0           
-RETURN     all  --  0.0.0.0/0            0.0.0.0/0           
+target     prot opt source               destination
+RETURN     all  --  0.0.0.0/0            0.0.0.0/0
+RETURN     all  --  0.0.0.0/0            0.0.0.0/0
+RETURN     all  --  0.0.0.0/0            0.0.0.0/0
+RETURN     all  --  0.0.0.0/0            0.0.0.0/0
 DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:8600 to:172.18.0.6:8600
 DNAT       udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:8600 to:172.18.0.6:8600
 DNAT       tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:8500 to:172.18.0.6:8500
@@ -170,4 +188,4 @@ $ docker cp tmp/n.class cdde6a98ba79:/tmp/n.class
 ```
 
 Where `cdde6a98ba79` is the Docker ID of the running container, as
-seen with e.g. `docker ps`. 
+seen with e.g. `docker ps`.
