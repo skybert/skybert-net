@@ -1,4 +1,4 @@
-title: How Outlook has made be dislike email
+title: How Outlook has made me dislike email
 date: 2020-06-04
 category: various
 tags: microsoft, google, email
