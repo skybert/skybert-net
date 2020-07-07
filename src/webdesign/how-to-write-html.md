@@ -1,4 +1,4 @@
-date:    2012-10-07
+date: 2003-04-07
 title: How to code HTML
 
 ## Introduction
@@ -87,7 +87,7 @@ It was then decided that HTML should only be used to describe the
 information should be given elsewhere, for example with the use of a
 <a href="viewpage.py.cgi?computers+webdesign+css"> Cascading Style
 Sheet </a>. HTML 4.0 was released with this given in its definition
-<<elements like <font> and <center> were deprecated and not allowed to
+elements like `<font>` and `<center>` were deprecated and not allowed to
 be used anymore. Version 4.01 quickly followed, and was more or less a
 rewrite of the 4.0 with the inclusion of the "name" attribute, needed
 for the highly popular "image swap" JavaScript and various CGI
