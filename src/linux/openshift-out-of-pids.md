@@ -27,13 +27,12 @@ called `SupportPodPidsLimit`, it's off by default in Kubernetes and on
 by default in OpenShift.
 
 The reason why so many threads were created was because of
-`java.net.http.HttpClient` couldn't close them fast enough to not
-hit the `1024` boundary set by OpenShift (cri-o).
-
-In my case, the fix was to re-use the clients, my-app now has one
-dedicated client for non-authorized requests and one HTTP client per
-user/pass combination. With these changes, my-app never exceeds 61
-native threads on OpenShift.
+`java.net.http.HttpClient` couldn't close them fast enough to not hit
+the `1024` boundary set by OpenShift (cri-o). In my case, the fix was
+to re-use the clients, my-app now has one dedicated client for
+non-authorized requests and one HTTP client per user/pass
+combination. With these changes, my-app never exceeds 61 native
+threads on OpenShift.
 
 ## Further reading
 
