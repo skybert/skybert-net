@@ -18,8 +18,7 @@ Then, in the other shell(s), re-use the SSH agent from the first shell with:
 
 ```bash
 $ ssh login.example.com
-$ export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name "agent.*" -user
-"$(whoami)" | tail -n 1)
+$ export SSH_AUTH_SOCK=$(find /tmp/ssh-* -name "agent.*" -user "$(whoami)" | tail -n 1)
 ```
 
 Nice, secure and simple.
