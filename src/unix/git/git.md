@@ -3,6 +3,13 @@ date: 2012-10-07
 category: vcs
 tags: git, vcs
 
+## Accept the remote's changes - git pull
+
+When there is a conflict, let the version on the remote repo win:
+```text
+$ git pull -X theirs
+```
+
 ## Renaming a branch
 
 The first command just renames it locally, the second publishes that
