@@ -20,9 +20,14 @@ used to from GNU/Linux:
 
 ### Using brew
 
-If you're using ```brew``` the equivalent is:
+If you're using `brew` the equivalent is:
 
-    $ sudo brew install coreutils gnu-tar gnu-sed gawk
+    $ sudo brew install coreutils gnu-getopt gnu-tar gnu-sed gawk
+
+While you're at it, you probably want to install a more updated
+version of BASH as well:
+
+    $ sudo brew install bash
 
 Read <a
 href="http://apple.stackexchange.com/questions/69223/how-to-replace-mac-os-x-utilities-with-gnu-core-utilities">this
@@ -45,7 +50,7 @@ If it returns a date like 2012-03-01, you're homefree
 
 ## Spell checking
 
-I cannot live without ```aspell```, so I also install
+I cannot live without `aspell`, so I also install
 this:
 
     $ sudo port install aspell aspell-dict-en aspell-dict-uk
