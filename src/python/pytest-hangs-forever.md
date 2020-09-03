@@ -5,7 +5,7 @@ tags: python, linux, testing
 
 ## The problem
 
-My Python project has hundreds of tests. All the tests run through:
+Our Python project has hundreds of tests. All the tests run through:
 ```
 $ pytest
 [..]
@@ -41,10 +41,25 @@ that Python was waiting for a lock to proceed. Ok, that's nice, but no
 way enough to figure out what I must fix in _my_ Python app or tests
 to make the eternal hangs go away.
 
+## Connect gdb to the running Python process - take 1
+The next step was then attach `gdb` to the running process, however,
+Python wasn't too talkative:
+
+```
+$ pipenv shell
+$ gdb python -p <pid>
+(gdb) bt
+#0  0x00007f0d5b920896 in ?? ()
+#1  0x0000000000503fd0 in PyImport_Cleanup () at ../Python/import.c:436
+#2  0x0000000000000001 in ?? ()
+#3  0x00007f0d30000d50 in ?? ()
+#4  0x0000000000000000 in ?? ()
+```
+
+
 ## Install Python with debugging symbols
-The next step was then attach `gdb` to the running process. For that
-to make sense, I had to use a version of the Python interpreter with
-debugging symbols:
+To make Python tell more about what it was doing, I had to use a
+version of the Python interpreter with debugging symbols:
 
 ```text
 # apt-get install python3-dbg
@@ -67,7 +82,7 @@ do it for me:
 $ i=0; while true; do echo $i; sleep 2;  pipenv run pytest; i=$((i + 1)) ; done
 ```
 
-## Connect gdb to the running Python process
+## Connect gdb to the running Python process - take 2
 
 ```text
 $ pipenv shell
@@ -85,7 +100,7 @@ There, finally, I got somewhere: it hangs in `threading.py` and it's a
 call to `join()` without any timeout that makes it stay there forever.
 
 As an alternative to running `gdb` on the command line like below, you
-can run in through Emacs with `M-x gdb`, giving you auto completion on
+can run `gdb` through Emacs with `M-x gdb`. This gives you auto completion on
 the debugger commands among other things:
 
 <img
@@ -97,11 +112,11 @@ the debugger commands among other things:
 
 ## The fix
 
-Two of my app's threads were not daemonic, so Python would wait around
-forever for until they exited: As none of them were writing precious
-information to a database, I set them to daemonic. That way, they'd be
-shut down whenever the `python` program wanted to quit (that's what
-you normally want, right?):
+Two of our app's threads were not daemonic, so Python would wait
+around forever for until they exited: As none of them were writing
+precious information to a database, I set them to daemonic. That way,
+they'd be shut down whenever the `python` program wanted to quit
+(that's what you normally want, right?):
 
 In the words of the [Python
 documentation](https://docs.python.org/3/library/threading.html#thread-objects):
