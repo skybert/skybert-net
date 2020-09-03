@@ -79,7 +79,11 @@ every 150s run.
 To make it fail at will, I just had a little patience and let `bash`
 do it for me:
 ```bash
-$ i=0; while true; do echo $i; sleep 2;  pipenv run pytest; i=$((i + 1)) ; done
+$ start=$(date +%s);
+  for i in {1..161}; do
+    echo "pytest run #${i}, elapsed $(( $(date +%s) - start )) seconds";
+    pipenv run pytest;
+  done
 ```
 
 ## Connect gdb to the running Python process - take 2
@@ -110,6 +114,25 @@ the debugger commands among other things:
   class="centered"
 />
 
+## Analysis
+
+The call to `t.join()` is called from `_shutdown()` in `threading.py`
+which again is called from `Thread#shutdown()`. So what in my code is
+creating a thread and calls `shutdown()` on that object?
+
+```text
+$ grep -rn 'threading.Thread' --include=*.py src                      
+src/skybert/concurrent/wire.py:289:        self._thread = threading.Thread(
+src/skybert/concurrent/player.py:145:            self._thread = threading.Thread(
+src/skybert/horse_whisperer.py:61:class Whisperer(threading.Thread):
+```
+I also searched for `import threading` to be on the safe side, but
+since Python's own package names are so short, we tend to use the full
+path so there were no additional cases.
+
+Now I knew which places in my code which potentially directly or
+indirectly called this troublesome code in Python's `threading.py`.
+
 ## The fix
 
 Two of our app's threads were not daemonic, so Python would wait
@@ -135,3 +158,4 @@ With that wee change to my application, the tests have at the time of
 writing run `152` times successfully without any hang.
 
 Happy testing!
+
