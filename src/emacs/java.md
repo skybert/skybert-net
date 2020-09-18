@@ -83,11 +83,25 @@ java.lang.NoClassDefFoundError: javax/annotation/processing/AbstractProcessor
 ```
 
 The problem was that by having Lombok on the boot classpath it would
-plug interfere with the annotation processing mechanism in the Eclipse
+interfere with the annotation processing mechanism in the Eclipse
 server. [The
 remedy](https://gitlab.com/skybert/my-little-friends/commit/f8aec7f3d47a48e6117a78c086ff13f6e5d29b7d)
 was to remove `-Xbootclasspath/a:/path/to/lombok-1.16.18.jar` and only
 specify Lombok in the `javaagent` parameter.
+
+### Wipe the slate clean 
+To remove all generated files and caches related to LSP, do:
+```text
+$ rm -rf ~/.emacs.d/workspace \
+         ~/.emacs.d/.cache/lsp
+```
+
+This can be worth trying before going mad about something not working.
+
+Also, there's a [minimal .emacs config on the lsp-java
+website](https://github.com/emacs-lsp/lsp-java#quick-start) that you
+can try without your own configuration to ensure your problems are not
+due to your own (combination of) configuration.
 
 ## Other Java extensions for Emacs I've used
 
