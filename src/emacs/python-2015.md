@@ -1,7 +1,7 @@
 date: 2015-04-16
 category: emacs
 tags: python, emacs
-title: Programming Python in Emacs
+title: Programming Python in Emacs - 2015
 
 [Emacs](http://gnu.org/software/emacs) is an excellent programming
 environment for Python. I've selected a handful of packages here that
