@@ -37,7 +37,7 @@ Point your web browser at [http://172.17.0.2:9000](http://172.17.0.2:9000)
 
 If you want a Docker cluster with Sonarqube and Postgres, download
 [this docker-compose from the Sonarqube Docker
-repository(https://github.com/SonarSource/docker-sonarqube/tree/master/example-compose-files/sq-with-postgres),
+repository](https://github.com/SonarSource/docker-sonarqube/tree/master/example-compose-files/sq-with-postgres),
 and run:
 
 ```text
@@ -47,7 +47,7 @@ $ docker-compose up
 
 To make the kernel setting permanent:
 ```conf
-# cat >> /etc/sysctl.d/local.conf <<EOF
+# cat >> /etc/sysctl.d/99-sonarqube.conf <<EOF
 
 # Needed by Sonarqube/Elastic search
 vm.max_map_count=262144 
