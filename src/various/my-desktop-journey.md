@@ -16,6 +16,17 @@ Distro: RedHat 7.0
 Desktop: WindowMaker
 Shell: BASH
 
+<img 
+  src="/2002/opengl_on_linux.jpg"
+  class="centered"
+  style="width: 1024px"
+  alt="Coding OpenGL and OpenAL on Linux"
+/>
+
+Screenshot of my WindowMaker desktop running Emacs and Aterm on top
+WindowMaker. The app in the upper right hand corner is a wee3D app I
+wrote in university using C, OpenAL and OpenGL.
+
 ## 2001 - started using Debian
 Distro: Debian
 Desktop: WindowMaker
