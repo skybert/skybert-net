@@ -3,7 +3,8 @@ date: 2020-12-02
 category: java
 tags: java, maven
 
-I was going mad, no matter what I did, `mvn` would not read my Java settings.
+I was going mad. No matter what I did, `mvn` would not read my Java
+settings.
 
 Of course, I had done what all articles on the interweb said, setting
 `JAVA_HOME` to my preferred Java version, and yes, of course that was
@@ -56,7 +57,14 @@ read(11, "JAVA_HOME=/usr/lib/jvm/default-j"..., 8192) = 35
 ```
 
 Aha! When calling the `mvn` command, it `read` something that said
-`JAVA_HOME` was the before mentioned JDK 11.
+`JAVA_HOME` should be `/usr/lib/jvm/default-java`. And this
+`/usr/lib/jvm/default-java` was the before mentioned JDK 11:
+
+```bash
+$ ls -l /usr/lib/jvm/default-java
+lrwxrwxrwx 1 root root 25 Dec 30  2018 /usr/lib/jvm/default-java -> java-1.11.0-openjdk-amd64/
+```
+
 
 ## and some bash
 Next up was to debug the `mvn` command itself. Since this was a `bash`
@@ -76,3 +84,21 @@ There, it was plain for the world (well, me) to see that it read
 had set this once upon a time and I'd completely forgotten about it.
 
 Now, finally, I'm in total control of my Maven runtime environment 😉
+
+## Even faster
+After thinking about this some more, I realise I could've arrived at
+the solution with one step less, using the `-f` (follow) flag to
+`strace` including all files in my `$HOME` directory, and excluding
+files in the source code repository I was builing:
+```
+$ strace -y -f -e read mvn -f ~/src/foo/pom.xml 2>&1 | 
+    grep $HOME |
+    grep -v ~/.m2/repository |
+    grep -v $HOME/src/foo
+read(11</home/torstein/.mavenrc>, "JAVA_HOME=/usr/lib/jvm/default-java"..., 8192) = 85
+read(11</home/torstein/.mavenrc>, "", 8192) = 0
+[pid 24643] read(3<pipe:[247857]>, "/home/torstein\n", 128) = 15
+[pid 24658] read(3<pipe:[246954]>, "/home/torstein\n", 128) = 15
+[pid 24656] read(3<pipe:[246583]>, "/home/torstein/src\n", 128) = 19
+[pid 24656] read(3<pipe:[246584]>, "/home/torstein\n", 128) = 15
+```
