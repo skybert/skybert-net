@@ -32,4 +32,4 @@ typically use it like this:
 $ scrot --silent --focused  --count --delay 3  -e 'mv $f /home/torstein/pictures/screenshots' 
 ```
 
-[Read the *fine* manual](man scrot) for more info
+[Read the *fine* manual](https://man.cx/scrot) for more info
