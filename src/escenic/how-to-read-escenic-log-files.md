@@ -9,7 +9,8 @@ To watch all log files related to ECE, run the following in a terminal:
 
 ```
 $ tail -f /var/log/escenic/engine1-{tomcat,messages,catalina.out} \
-          /opt/tomcat-engine1/logs/access.$(date --iso).log
+          /opt/tomcat-engine1/logs/access.$(date --iso).log \
+          /opt/tomcat-engine1/logs/localhost.$(date --iso).log
 ```
 
 ## Introduction
@@ -35,6 +36,7 @@ instance is called engine1:
 /var/log/escenic/engine1-tomcat
 /var/log/escenic/engine1-gc.log.0.current
 /opt/tomcat-engine1/logs/access.2016-10-10.log
+/opt/tomcat-engine1/logs/localhost.2016-10-10.log
 ```
 
 Often you will find a search instance on the same machine, in which
@@ -62,13 +64,17 @@ find any messages from ECE (if you haven't added some
 instead messages from 3rd party libraries that are writing to standard
 out or standard error while bootstrapping.
 
-### engine1-tomcat
+### engine1-tomcat or localhost.$(date --iso).log
 
 When there are "uncontrolled" errors, they tend to end up in this
 file. This happens typically if there's a severely misconfigured
 system where ECE makes an assumption about a sane world and this turns
 out to be utterly wrong. In here you'll also see errors from Tomcat
 itself, e.g. class loader or JAR scanning issues.
+
+If your `/var/log/escenic/engine1-tomcat` is empty, you're probably
+running a more recent version of Tomcat means you must check
+`/opt/tomcat-engine1/logs/localhost.$(date --iso).log` instead.
 
 ### engine1-gc.log.0.current
 
