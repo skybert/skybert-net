@@ -71,7 +71,7 @@ Next up was to debug the `mvn` command itself. Since this was a `bash`
 command, debugging it was as easy as calling it with `bash -x`:
 
 ```bash
-$ bash -x $(which mvn)
+$ bash -x $(which mvn) -version
 + '[' -z '' ']'
 + '[' -f /etc/mavenrc ']'
 + '[' -f /home/torstein/.mavenrc ']'
