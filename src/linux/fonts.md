@@ -12,7 +12,7 @@ works well in urxvt, kitty and Emacs alike.
 ## Spice up your terminal, rofi++
 
 ```text
-# apt-get install noto-fonts-emoji
+# apt-get install fonts-noto-color-emoji
 ```
 
 That's it. Terminals like [kitty](https://sw.kovidgoyal.net/kitty/)
