@@ -3,13 +3,17 @@ category: dongxi
 tags: linux, fluxbox, debian
 date: 2021-03-10
 
-## Lean and mean
-
 I've used Linux as my desktop system for 21 years now, starting my
-voyage with GNOME1 and RedHat 6.1, using lots of different distros,
-desktop environments, apps and scripts. I hope you enjoy reading how
-I've set it up and don't hesitate to send me feedback or suggestions.
+Linux voyage with GNOME 1 and [RedHat 6.1
+Cartman](https://en.wikipedia.org/wiki/Red_Hat_Linux#Version_history),
+using lots of different distros through the years (RedHat, SuSE,
+Mandrake, Debian, Ubuntu, Stormix, Progeny, Sidux, Ubuntu), desktop
+environments (WindowMaker, Fluxbox, KDE, GNOME 1-3), apps and
+scripts. This article describes where I'm currently at in my Linux
+story. Hope you enjoy reading how I've set everything it up and don't
+hesitate to send me feedback or suggestions.
 
+## Lean and mean
 ### Operating system - Debian GNU/Linux buster/stable
 
 After using RedHat the first two years, I started with [Debian
@@ -164,18 +168,26 @@ $ while inotifywait -e modify ~/tmp/links.txt; do firefox $(tail -1 ~/tmp/links.
 ```
 
 ## Display images in the terminal
+<img
+  src="/graphics/2021/kitty-icat.png"
+  alt="viewing images in the terminal over SSH"
+  class="centered"
+/>  
+
 [kitty](https://sw.kovidgoyal.net/kitty) can [display images in the
 terminal](https://sw.kovidgoyal.net/kitty/kittens/icat.html), even
 over `ssh`:
 
-Run `ssh` using the kitty `kitten`:
+Run `ssh` using the kitty ssh kitten:
 ```
 $ kitty +kitten ssh remote.example.com
 ```
 
-Then, on the remote server, install `kitty` (yes, even though it doesn't have X):
+Then, on the remote server, install `kitty` (yes, even though it
+doesn't have X):
+
 ```text
-# apt install kitty
+# apt-get install kitty
 ```
 
 You can now view images by running:
@@ -183,8 +195,36 @@ You can now view images by running:
 $ kitty +kitten icat image.jpg
 ```
 
-Note that this doesn't work in multiplexers like `screen` and `tmux`.
+I find it useful to have the last command as an alias in my `.zshrc`
+(same works in `.bashrc` if you're using `bash`):
 
+```bash
+alias icat='kitty +kitten icat'
+```
+
+Note that this [doesn't
+work](https://github.com/kovidgoyal/kitty/issues/413) in multiplexers
+like `screen` and `tmux`.
+
+## Copy text to clipboard over SSH
+
+Most of the time, I prefer using [kitty's clipboard
+kitten](https://sw.kovidgoyal.net/kitty/kittens/clipboard.html), which
+allows me to copy text to the local clipboard with:
+
+```text
+$ echo hello world | kitty +kitten clipboard
+$ cat /etc/hosts | kitty +kitten clipboard
+```
+
+If I only need a line or two, I select the text with the mouse and it
+goes straight to the local clipboard thanks to these settings in my
+`~/.conf/kitty/kitty.conf`:
+
+```text
+copy_on_select         yes
+strip_trailing_spaces  always
+```
 
 ## Security and privacy
 
