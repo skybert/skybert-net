@@ -269,18 +269,14 @@ I also grown fond of these plugins:
 
 ## The look
 
-<img
-  src="https://draculatheme.com//static/icons/pack-1/045-dracula.svg" 
-  alt="Dracula" 
-  width="220" 
-  height="220"
-  style="float: right"
-/>
-
-These days, I prefer the [Dracula theme](https://draculatheme.com/)
-and have managed to hunt down or create configuration for most of the
-apps I use every day to use these colours.
+These days, I prefer the [Sweet
+theme](https://github.com/EliverLara/Sweet) and have managed to hunt
+down or create configuration for most of the apps I use every day to
+use these colours.
 
 - In Mozilla Firefox, I use the [Dracula Dark Theme](https://addons.mozilla.org/en-GB/firefox/addon/dracula-dark-colorscheme/)
 - In Google Chrome, I use the [Dracula Chrome Theme - Dark and Minimal](https://chrome.google.com/webstore/detail/dracula-chrome-theme-dark/gfapcejdoghpoidkfodoiiffaaibpaem)
-- In Emacs, I use the [dracula-theme](https://github.com/dracula/emacs), installed from MELPA.
+- In Emacs, I use the [sweet-theme](https://github.com/2bruh4me/sweet-theme), installed from MELPA.
+- In Kitty, I've written [my own sweet theme](https://gitlab.com/skybert/my-little-friends/-/blob/master/kitty/sweet-kitty.conf)
+- In i3, I've written [my own sweet theme colour config](https://gitlab.com/skybert/my-little-friends/-/blob/master/i3/config#L180)
+- In rofi, I've written [my own sweet rasi file](https://gitlab.com/skybert/my-little-friends/-/blob/master/rofi/sweet.rasi)
