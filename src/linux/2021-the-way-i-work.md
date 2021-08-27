@@ -3,6 +3,15 @@ category: dongxi
 tags: linux, fluxbox, debian
 date: 2021-03-10
 
+<a href="/graphics/2021/2021-07-27-emacs-and-tmux.png">
+  <img
+    src="/graphics/2021/2021-07-27-emacs-and-tmux.png"
+    alt="emacs in tmux"
+    class="centered"
+    style="width: 1024px;"
+  />
+</a>
+
 I've used Linux as my desktop system for 21 years now, starting my
 Linux voyage with GNOME 1 and [RedHat 6.1
 Cartman](https://en.wikipedia.org/wiki/Red_Hat_Linux#Version_history),
@@ -81,7 +90,7 @@ FAQ](https://www.gnu.org/software/emacs/manual/html_node/efaq/Colors-on-a-TTY.ht
 and installed it in your local termcap registry with:
 
 ```
-$ tic -x -o ~/.terminfo xterm-24bit.terminfo 
+$ tic -x -o ~/.terminfo xterm-24bit.terminfo
 ```
 
 #### Set TERM to xterm-24bit
@@ -172,7 +181,7 @@ $ while inotifywait -e modify ~/tmp/links.txt; do firefox $(tail -1 ~/tmp/links.
   src="/graphics/2021/kitty-icat.png"
   alt="viewing images in the terminal over SSH"
   class="centered"
-/>  
+/>
 
 [kitty](https://sw.kovidgoyal.net/kitty) can [display images in the
 terminal](https://sw.kovidgoyal.net/kitty/kittens/icat.html), even
@@ -205,6 +214,30 @@ alias icat='kitty +kitten icat'
 Note that this [doesn't
 work](https://github.com/kovidgoyal/kitty/issues/413) in multiplexers
 like `screen` and `tmux`.
+
+## Clipboard
+
+I use [greenclip](https://github.com/erebe/greenclip) as my clip board
+manager. This allows me to select as many copied items as I want to,
+not just the previous selection or text I hit <kbd>Ctrl</kbd> +
+<kbd>c</kbd>. After using a clipboard manager for many years, I can
+never go back to just having the default one, being able to only copy
+one text at a time.
+
+Say I want to pay a bill in my online bank and I have the invoice as a
+PDF. With `greenclip`, I can copy the amount, the KID number and the
+recipient's account number and *em* then swithc to my bank's web site
+and paste them in one after another, without switching back and forth
+between the bank site and the invoice PDF.
+
+As front end for `greenclip`, I use [rofi via a i3
+shortcut](https://gitlab.com/skybert/my-little-friends/-/blob/master/i3/config#L41). That
+even gives me fuzzy search, so if there's a password I paste often,
+and I remember parts of it, like I know there's a double `7` in it, I
+hit <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>i</kbd> to lauch rofi,
+then type `77` and it's on my clipboard. I then switch to the
+application where I need it and hit <kbd>Shift</kbd> +
+<kbd>Insert</kbd> to paste it in.
 
 ## Copy text to clipboard over SSH
 
@@ -274,7 +307,7 @@ theme](https://github.com/EliverLara/Sweet) and have managed to hunt
 down or create configuration for most of the apps I use every day to
 use these colours.
 
-- In Mozilla Firefox, I use the [Dracula Dark Theme](https://addons.mozilla.org/en-GB/firefox/addon/dracula-dark-colorscheme/)
+- In Mozilla Firefox, I use the [Minimal Dark Sweet](https://addons.mozilla.org/en-US/firefox/addon/minimal-dark-sweet/)
 - In Google Chrome, I use the [Dracula Chrome Theme - Dark and Minimal](https://chrome.google.com/webstore/detail/dracula-chrome-theme-dark/gfapcejdoghpoidkfodoiiffaaibpaem)
 - In Emacs, I use the [sweet-theme](https://github.com/2bruh4me/sweet-theme), installed from MELPA.
 - In Kitty, I've written [my own sweet theme](https://gitlab.com/skybert/my-little-friends/-/blob/master/kitty/sweet-kitty.conf)
