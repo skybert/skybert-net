@@ -1,7 +1,7 @@
 title: Copy files to Openshift Pods
 date: 2021-01-12
 category: linux
-tags: linux, openshift
+tags: linux, openshift, kubernetes
 
 ```text
 $ oc project myproject

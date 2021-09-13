@@ -34,6 +34,10 @@ is quite boring. After installing the [Noto Color
 Emoji](https://www.google.com/get/noto/help/emoji/) by Google, it
 looks a lot more vivid:
 
+```text
+# apt-get install fonts-noto-color-emoji
+```
+
 <img
   src="/graphics/2019/kitty-font-noto-emoji.png"
   alt="kitty with source code pro"

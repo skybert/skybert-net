@@ -3,6 +3,12 @@ date: 2021-07-06
 category: linux
 tags: linux, graphics
 
+<img
+  src="/graphics/2021/kitty-icat.png"
+  alt="viewing images in the terminal over SSH"
+  class="centered"
+/>  
+
 [kitty](https://sw.kovidgoyal.net/kitty) can [display images in the
 terminal](https://sw.kovidgoyal.net/kitty/kittens/icat.html), even
 over `ssh`:

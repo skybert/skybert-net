@@ -1,7 +1,7 @@
 title: My notes on HTTP/2
 date: 2021-04-14
 category: network
-tags: network, http, http2, quic, http3
+tags: network, http, quic
 
 ## HTTP/2 performs worse than HTTP/1.1 if there's high package loss
 The problem with HTTP/2 is TCP head of line blocking. If an IP packet

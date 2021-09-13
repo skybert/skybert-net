@@ -17,6 +17,7 @@ want:
 ## iwd configuration
 
 Configuration for all your networks are stored in:
+
 ```text
 /var/lib/iwd
 ```
@@ -28,9 +29,20 @@ not requiring any authentication.
 
 ## Setting static IP
 
-Add this to your `.psk` file:
+First tell `iwd` to attempt assigning IP, netmask and so on:
 
+```text
+# vim /etc/iwd/main.conf
 ```
+
+```conf
+[General]
+EnableNetworkConfiguration=true
+```
+
+Then, add this to your `.psk` file:
+
+```text
 # vim /var/lib/iwd/foo.psk
 ```
 

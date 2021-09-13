@@ -5,8 +5,8 @@ tags: linux, ssh
 
 When you're logged into a remote machine with
 [ssh](https://www.ssh.com/academy/ssh/protocol), getting text on the
-clipboard of your local machine may prove tricky. There are several
-ways to achieve this however, two of which I'll outline here.
+clipboard of your local machine isn't straight forward. There are
+several ways to achieve this however, two of which I'll outline here.
 
 ## Kitty
 
@@ -51,3 +51,11 @@ strip_trailing_spaces always
 The last line ensures I don't get any trailing whitespace when
 selecting multiple lines (it's normally what you want, should've been
 the default if you ask me).
+
+## Final words
+
+If you've set `copy on select` in your terminal, using the mouse is
+fast, but you must take heed to copy only the characters you need. If
+accuracy is needed, or you need more than a couple of lines, I
+recommend using the first approach with [kitty's clipboard
+kitten](https://sw.kovidgoyal.net/kitty/kittens/clipboard.html).

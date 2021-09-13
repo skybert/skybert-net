@@ -273,6 +273,10 @@ For several years now, I've had my passwords in the git backed,
 [PGP](https://www.ietf.org/rfc/rfc4880.txt) encrypted password manager
 aptly named [pass](https://www.passwordstore.org/)
 
+<!--
+rofi-pass
+-->
+
 ### Chat
 My family and most of my friends are all on
 [Signal](https://signal.org), I believe they strike a good balance

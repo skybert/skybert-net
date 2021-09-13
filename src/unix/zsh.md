@@ -129,6 +129,15 @@ In both my `.bashrc.` and `.zshrc`, I've got this line:
 source $HOME/.bashrc.aliases
 ```
 
+## Setting up ZSH on Debian
+```text
+# apt install fzf
+# apt install zsh
+# apt install zsh-autosuggestions
+# apt install zsh-syntax-highlighting
+```
+
+
 ## My .zshrc
 
 My [.zshrc can be found here](https://gitlab.com/skybert/my-little-friends/blob/master/zsh/.zshrc).
