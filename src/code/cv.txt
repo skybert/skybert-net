@@ -73,6 +73,12 @@ TECHNOLOGY
       — Virtual: LXD, Docker, KVM, VirtualBox, VMware
 
 
+KNOWN ISSUES
+      — Impatient
+      — Prefers a dark office
+      — Loves mechanical keyboards
+
+
 SEE ALSO
       Website: http://skybert.net
       Github:  https://github.com/skybert
