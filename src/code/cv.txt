@@ -43,7 +43,7 @@ EDUCATION
 LANGUAGES
      --norwegian  Norwegian is my mother tongue
      --english    I took my master's degree in Scotland and have
-                  had English as my working language for over
+                  had English as my working language for more than
                   12 years.
      --german     Have lived in Germany for 2.5 years and have worked
                   in German speaking countries for a total of 4 years.
@@ -53,10 +53,12 @@ LANGUAGES
 
 ROLES
      --programmer Love creating programs to solve problems for our
-                  users..
-     --architect  Enjoy thinking the big picture, focusing on how
-                  systems talk to eachother, focusing on input and
-                  output formats and security.
+                  users.
+
+     --architect  Enjoy thinking big, focusing on how systems talk to
+                  each other, the input and output format flow and
+                  security.
+
      --educator   Love teaching, sharing what I know and helping others.
 
 
@@ -75,7 +77,7 @@ TECHNOLOGY
 
 KNOWN ISSUES
       — Impatient
-      — Prefers a dark office
+      — Prefers dark office
       — Loves mechanical keyboards
 
 
@@ -85,4 +87,4 @@ SEE ALSO
       Twitter: @torsteinkrause
 
 
-BSD                       June 16, 2021                               BSD
+BSD                       June 16, 2021                          BSD
