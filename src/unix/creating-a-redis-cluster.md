@@ -53,6 +53,11 @@ will create 3 masters and 3 replicas. This means Redis has _some_
 redundancy, but if both the master and its replica goes down, the
 other nodes will not be able to recover the data.
 
+If you download the Redis source code, you can find a [script that
+does all of this for
+you](https://github.com/redis/redis/blob/unstable/utils/create-cluster)
+(but what's the fun in that 😉).
+
 ## Writing data on one node and retrieving it from another
 
 ```bash

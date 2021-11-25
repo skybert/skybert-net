@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Torstein Krause Johansen'
 SITENAME = "Skybert's World"
-SITEURL = 'http://skybert.net'
+SITEURL = 'https://skybert.net'
 TIMEZONE = 'Europe/Oslo'
 DEFAULT_LANG = 'en'
 

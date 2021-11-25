@@ -1,7 +1,7 @@
 title: List All Configured Passwords and Secrets in Jenkins
 date: 2021-10-08
 category: java
-tags: java, security
+tags: java, security, jenkins
 
 
 Sometimes, like when you want to migrate an old Jenkins to a new one
