@@ -3,16 +3,20 @@ date: 2021-11-25
 category: linux
 tags: linux
 
-With ports accepting `TCP` connections, I tend to use:
+To test connectivity with ports accepting `TCP` connections, I
+normally use:
 
 ```text
 $ telnet <machine> <port>
 ```
-It has the additional feature that once connected, you can interact with the service using the protocol directly. For instance when connecting to a web server you can perform HTTP GETs. 
 
-To test connectivity. However, with services listening for `UDP` only,
-like [NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol),
-`telnet` doesn't work. You can then use
+It has the additional feature that once connected, you can interact
+with the service using the protocol directly. For instance when
+connecting to a web server you can perform HTTP GETs.
+
+However, with services listening for `UDP` only, like
+[NTP](https://en.wikipedia.org/wiki/Network_Time_Protocol), `telnet`
+doesn't work. You can then use
 [netcat](https://nc110.sourceforge.io/):
 
 ```text
