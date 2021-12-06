@@ -82,7 +82,7 @@ KNOWN ISSUES
 
 
 SEE ALSO
-      Website: http://skybert.net
+      Website: https://skybert.net
       Github:  https://github.com/skybert
       Twitter: @torsteinkrause
 
