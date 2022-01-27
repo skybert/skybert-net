@@ -1,4 +1,4 @@
-title: Check access to UDP service
+title: Check access to UDP services
 date: 2021-11-25
 category: linux
 tags: linux
