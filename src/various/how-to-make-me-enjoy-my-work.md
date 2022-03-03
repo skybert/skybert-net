@@ -29,7 +29,7 @@ to the benefit of our company. It'll ensure both that I can stay on
 top of new tech and that our company gets valuable fuel for
 innovation.
 
-## Let me write code (not meetings)
+## Let me write code (not attend meetings)
 
 It's not that I hate meetings. Every now and then, a good meeting is
 invigorating, fruitful and even fun. In general, however, meetings are
