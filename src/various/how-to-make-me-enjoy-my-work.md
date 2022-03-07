@@ -13,14 +13,14 @@ Since coding is my passion, I'm also passionate about my tools. Let me
 run my preferred operating system (these days, that's [Garuda
 Linux](https://garudalinux.org)), use my preferred editor
 ([Emacs](https://www.gnu.org/software/emacs/)) and so on. It'll make a
-world of difference. To me (happiness) and to my boss (higher
-throughput and quality solutions).
+world of difference. To me (happiness) and to you, my boss (higher
+throughput and solutions of higher quality).
 
 ## Let me learn new things 📖
 
-Once or twice a year, send me off to a conference where I can learn
-new things, hear the buzz, connect to fellow coders and be
-inspired. It charges my batteries.
+Once a year, send me off to a conference where I can learn new things,
+hear the buzz, connect to fellow coders and be inspired. It charges my
+batteries.
 
 ## Let me try out new things 🤠🚀
 
@@ -35,12 +35,16 @@ innovation.
 It's not that I hate meetings. Every now and then, a good meeting is
 invigorating, fruitful and even fun. In general, however, meetings are
 not that. I find them tedious, they take me out of my flow, and don't
-bring much value. If you want me in a meeting, please keep the
+bring much value to me (I find I get sufficient from talking to
+colleagues, reading the source code log, reading the Confluence RSS
+feed and so on).
+
+If you want me in a meeting, I think it's great if you keep the
 attendee list short, mail the agenda in advance and be sure to have
 well thought out list of objectives or questions for the meeting.
 
 Oh, and time box it. 15 minutes for status meetings. 30-60 minutes for
-kick offs and brainstorming talks.
+kick offs and brainstorming talks 😃⌛
 
 ## Let me talk 💬
 
