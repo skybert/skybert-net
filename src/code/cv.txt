@@ -72,7 +72,8 @@ TECHNOLOGY
       — LDAP: OpenLDAP, Active Directory
       — Web: Apache, Nginx, lighthttpd, Varnish, Squid
       — BASH: sed, awk, curl, jq
-      — Virtual: LXD, Docker, KVM, VirtualBox, VMware, Kubernetes
+      - Containers: LXD, Docker, Kubernetes, Openshift
+      — Virtual: KVM, VirtualBox, VMware
 
 
 KNOWN ISSUES
@@ -84,6 +85,7 @@ KNOWN ISSUES
 SEE ALSO
       Website: https://skybert.net
       Github:  https://github.com/skybert
+      Gitlab:  https://gitlab.com/skybert
       Twitter: @torsteinkrause
 
 
