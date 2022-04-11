@@ -1,7 +1,7 @@
 title: Trigger Command Upon File Changes
 date: 2017-11-17
 category: unix
-tags: unix, testing, bash
+tags: unix, testing, bash, maven
 
 I've recently experimented with having tests triggered automatically
 whenever I change a particular file. I found this to significantly

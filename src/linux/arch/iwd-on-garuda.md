@@ -1,7 +1,7 @@
 title: iwd on Garuda Linux
 date: 2022-03-03
-category: arch
-tags: arch, garuda
+category: linux
+tags: arch, garuda, linux, network
 
 Getting `iwd` up and running was a bit tricky. It basically broke both
 `sudo` and `systemctl` (!). The reason was that it has some dependency
