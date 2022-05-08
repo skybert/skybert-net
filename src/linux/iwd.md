@@ -40,6 +40,9 @@ First tell `iwd` to attempt assigning IP, netmask and so on:
 EnableNetworkConfiguration=true
 ```
 
+ℹ️ Note, the `main.conf` cannot be a symlink, it must be a regular
+file.
+
 Then, add this to your `.psk` file:
 
 ```text
