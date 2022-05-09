@@ -21,6 +21,9 @@ it's not because of `protocol=http`):
 </proxies>
 ```
 
+For most Maven plugins, this works great. However, for a few, it
+doesn't and `mvn` just hangs forever.
+
 It turns out, for *some* underlying Maven components (possibly related
 to [this bug in
 Maven](https://issues.apache.org/jira/browse/MNG-5237)), it's not
