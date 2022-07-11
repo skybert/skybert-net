@@ -87,6 +87,6 @@ SEE ALSO
       ⚒️ https://github.com/skybert
       🛠️ https://gitlab.com/skybert
       🐦 https://twitter.com/torsteinkrause
-      🎥 https://www.youtube.com/torsteinkrause
+      🎥 https://youtube.com/torsteinkrause
 
 BSD                       July 11, 2022                          BSD
