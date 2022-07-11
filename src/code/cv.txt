@@ -83,10 +83,10 @@ KNOWN ISSUES
 
 
 SEE ALSO
-      Website: https://skybert.net
-      Github:  https://github.com/skybert
-      Gitlab:  https://gitlab.com/skybert
-      Twitter: @torsteinkrause
+      🕸️ https://skybert.net
+      ⚒️ https://github.com/skybert
+      🛠️ https://gitlab.com/skybert
+      🐦 https://twitter.com/torsteinkrause
+      🎥 https://www.youtube.com/torsteinkrause
 
-
-BSD                       June 16, 2021                          BSD
+BSD                       July 11, 2022                          BSD
