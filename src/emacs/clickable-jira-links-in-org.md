@@ -16,4 +16,13 @@ What the above setting, you get a clickable Jira link when you write
 written `FOO-1000`, that's what the file will contain. It's a link
 overlay that's in the editor only.
 
+If you want to follow the links without using the mouse, you can hit
+<kbd>C-c</kbd> <kbd>RET</kbd>.
+
 Neat, eh?
+
+Note, the Org shortcut for following links, `org-open-at-point`, will
+not work since this link overlay is provided by `bug-reference-mode`
+and not `org-mode` (that would've been nice, though).
+
+
