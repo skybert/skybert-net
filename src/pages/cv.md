@@ -265,13 +265,13 @@ RedHat & CentOS; Gentoo.
   netstat.
 
 # Non-technical matters
-## Icntys International / KIA, Volunteer teacher, August 2006 > Present
-
-Once a week for many years now, I have worked as a volunteer teacher
-teaching Norwegian to immigrants from all over the world. During these
-years, I have had great fun teaching at all levels, from the students
-who do not speak a word of Norwegian, to the ones who have need to
-polish and further improve their already well functioning language.
+## Ichtys International / KIA, Volunteer teacher, August 2006 ➡️ 2015
+→
+Once a week for nine years, I worked as a volunteer teacher teaching
+Norwegian to immigrants from all over the world. During these years, I
+have had great fun teaching at all levels, from the students who do
+not speak a word of Norwegian, to the ones who have need to polish and
+further improve their already well functioning language.
 
 ## Organisations
 - [Cafe Ichtys International](https://www.facebook.com/groups/2594375227/),
@@ -286,8 +286,9 @@ Mountain biking, jogging, hiking, traveling, languages, rock
 climbing, piano, literature, poetry, politics.
 
 
-cnn 2012-07
-New Indian Express 2012-11
-STV 2012-11
-Axel Springer 2008
-100% football 2008
+## Some customer projects I've been involved in
+- CNN 2012-07
+- New Indian Express 2012-11
+- STV 2012-11
+- Axel Springer 2008
+- 100% football 2008

@@ -3,6 +3,23 @@ date: 2022-07-05
 category: linux
 tags: linux, security, ssh
 
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/n5RaB0LPoow"
+  title="Harden SSH by disabling password login"
+  frameborder="0"
+  allow="
+    accelerometer;
+    autoplay;
+    clipboard-write;
+    encrypted-media;
+    gyroscope;
+    picture-in-picture;
+  "
+  allowfullscreen>
+</iframe>
+
 I recommend using SSH key based authentication to all your Unix
 servers. There's a good [rationale for this written
 here](https://security.stackexchange.com/a/3898).
@@ -23,3 +40,4 @@ no password prompt anymore:
 $ ssh foo@ssh.example.com
 foo@ssh.example.com: Permission denied (publickey).
 ```
+

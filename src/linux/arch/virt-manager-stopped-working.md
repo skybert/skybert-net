@@ -26,4 +26,4 @@ To fix this, I just restarted `libvirtd`:
 # systemctl restart libvirtd
 ```
 
-With that wee restart, `virt-manager` couldn't start my VM again 🎉
+With that, `virt-manager` could start my VMs again 🎉
