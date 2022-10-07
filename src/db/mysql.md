@@ -1,5 +1,6 @@
 date:    2012-10-07
 category: db
+tags: mysql, database
 title: MySQL
 
 My MySQL notes.
