@@ -30,6 +30,22 @@ On Arch, the equivalent is:
     $ pacmas -Qo <file>
 
 
+## Finding the package providing a file
+
+On Debian, you can search the contents of *all* available packages
+with:
+
+```text
+# apt-get install apt-file
+# apt-file update
+# apt-file search YAML/XS.pm
+```
+
+The equivalent on Arch Linux is:
+```text
+# pacman -Fyx YAML/XS.pm
+```
+
 ## How to do an apt-get upgrade
 Staying up to date on security patches as well as up to date software
 packages in terms of features (what you'd do ```apt-get update && apt-get upgrade```
