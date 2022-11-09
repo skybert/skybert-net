@@ -148,6 +148,7 @@ pre {
   text-align: left;
   word-wrap: break-word;
   padding: 0.8em;
+  overflow-x :auto; 
 }
 
 .note {
