@@ -11,8 +11,9 @@ tags: mac-os-x, unix, emacs, kitty, macOS
   />
 </a>
 
-This document describes how I turned a vanilla install of macOS into a
-powerful Unix environment.
+I'm a die hard Linux user, but in November 2022, I had to use a Mac
+for some work.  This document describes how I turned a vanilla install
+of the latest macOS into a powerful Unix workstation.
 
 ## Emacs 🐂
 
@@ -22,6 +23,12 @@ this gives you a good, up to date Emacs build.
 Note, this build doesn't provide native compilation (aka "gccemacs"),
 nor the non-blocking JSON processing done in this [emacs-lsp
 fork](https://github.com/emacs-lsp/emacs).
+
+Update 2022-11-25: It's also possible to get Emacs with `brew`: 
+
+```
+$ brew install --cask emacs
+```
 
 ## Homebrew 🍺
 
@@ -113,7 +120,7 @@ $ brew install openjdk@11
 
 Ensure this JDK's binaries are first in PATH, add these to `~/.zshrc`:
 
-```text
+```conf
 export PATH=/usr/local/opt/openjdk@11/bin:$PATH
 ```
 
@@ -122,6 +129,12 @@ export PATH=/usr/local/opt/openjdk@11/bin:$PATH
 My company uses [Microsoft Teams, so that' the one to
 get](https://www.microsoft.com/en-us/microsoft-teams/download-app#desktopAppDownloadregion).
 
+Update 2022-11-22: Per told me Teams can also be installed with `brew`
+like so:
+
+```text
+$ brew install --cask microsoft-teams
+```
 
 ## Fonts 🖊️
 
@@ -136,6 +149,16 @@ unzip it and drag and drop the files to the `Font Book`:
     style="width: 1024px"
   />
 </a>
+
+## A better top
+
+[btop](https://github.com/aristocratos/btop) is my favourite resource
+monitor these days, install it with:
+
+```text
+$ brew install btop
+```
+
 
 ## That's it!
 
