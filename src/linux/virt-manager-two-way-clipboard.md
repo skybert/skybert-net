@@ -33,6 +33,14 @@ guest # systemctl enable spice-vdagent
 guest # systemctl start spice-vdagent
 ```
 
+Update 2022-11-28: I noticed the clipboard stopped working in my
+Debian guest running fluxbox. I added this manually (or in
+`~/.fluxbox/startup`) to start the spice agent for *my* user:
+
+```text
+spice-vdagent &
+```
+
 
 ## Two way clipboard
 
