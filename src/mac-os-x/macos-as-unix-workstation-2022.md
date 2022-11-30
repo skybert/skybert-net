@@ -15,21 +15,6 @@ I'm a die hard Linux user, but in November 2022, I had to use a Mac
 for some work.  This document describes how I turned a vanilla install
 of the latest macOS into a powerful Unix workstation.
 
-## Emacs 🐂
-
-Install Emacs from [emacsformacosx.com](https://emacsformacosx.com/),
-this gives you a good, up to date Emacs build.
-
-Note, this build doesn't provide native compilation (aka "gccemacs"),
-nor the non-blocking JSON processing done in this [emacs-lsp
-fork](https://github.com/emacs-lsp/emacs).
-
-Update 2022-11-25: It's also possible to get Emacs with `brew`: 
-
-```
-$ brew install --cask emacs
-```
-
 ## Homebrew 🍺
 
 This is AFAIK the best package manager for Unix tools on
@@ -39,6 +24,26 @@ macOS. Install it with:
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+## Emacs 🐂
+
+Install Emacs from [emacsformacosx.com](https://emacsformacosx.com/),
+this gives you a good, up to date Emacs build.
+
+Note, this build doesn't provide native compilation (aka "gccemacs"),
+nor the non-blocking JSON processing done in this [emacs-lsp
+fork](https://github.com/emacs-lsp/emacs).
+
+Update 2022-11-25: It's also possible to get Emacs with `brew`. Note,
+after testing this on a fresh Mac, I the `--cask emacs
+--with-native-comp --with-cocoa` options didn't work, so had to just
+issue the below command which gives a non-graphical Emacs (to get the
+full package, use the `emacsformacosx` link above):
+
+```text
+$ brew install emacs
+```
+
+
 ## Spell check 📖
 
 ```text
@@ -46,6 +51,13 @@ $ brew install aspell
 ```
 
 ## Terminal 💻
+
+I've grown very fond of the [kitty](https://sw.kovidgoyal.net/kitty/)
+terminal. I believe it's the best terminal around, it even beats
+[iTerm2](https://iterm2.com/) 😃. It strikes a great balance between
+features (24 bit colours, Unicode, multiplexer, view pictures on
+remote servers, remote server clipboard integration++) and
+speed. Install it with:
 
 ```text
 $ curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
