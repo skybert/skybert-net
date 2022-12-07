@@ -136,6 +136,13 @@ Ensure this JDK's binaries are first in PATH, add these to `~/.zshrc`:
 export PATH=/usr/local/opt/openjdk@11/bin:$PATH
 ```
 
+## JSON
+
+Installing `jq` allows you to query JSON documents, a bit like what XPath on XML files.
+```text
+$ brew install jq
+```
+
 ## Video meetings 📽️
 
 My company uses [Microsoft Teams, so that' the one to
