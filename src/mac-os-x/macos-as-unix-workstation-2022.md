@@ -143,6 +143,18 @@ Installing `jq` allows you to query JSON documents, a bit like what XPath on XML
 $ brew install jq
 ```
 
+Installing `json_xs` lets you convert between YAML and JSON. For
+instance, you can use this to do look ups in YAML documents using
+`jq`. `json_xs` doesn't exist in Homebrew, but you should be able to
+install it from CPAN using `cpm` (untested):
+
+```text
+$ brew install cpm
+$ cpm install JSON::XS
+$ cpm install YAML::XS::LibYAML
+```
+
+
 ## Video meetings 📽️
 
 My company uses [Microsoft Teams, so that' the one to
