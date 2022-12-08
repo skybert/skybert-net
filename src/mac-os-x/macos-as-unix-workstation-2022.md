@@ -79,22 +79,30 @@ $ brew install git
 
 ### ZSH 🐚
 
-I prefer the ZSH shell over BASH, but still need an updated BASH for
-shell programming. The one that comes with macOS is very old,
-`3.2.57`, so installing a newer bash with `brew`:
+I prefer the ZSH shell over BASH:
 
 ```text
 $ brew install zsh
 $ brew install zsh-autosuggestions
 $ brew install zsh-completions
-$ brew install bash
 $ brew install fzf
+```
+
+### BASH
+
+You should install a newer version of `bash`. Although I use ZSH for
+my interactive shell, I still do lots of shell programming in
+BASH. The version of `bash` that comes with macOS is very old,
+`3.2.57`, so installing a newer bash with `brew`:
+
+```text
+$ brew install bash
 ```
 
 ### Coreutils 🧰
 
 GNU `coreutils`, `sed`, `awk`, `getopt` and `grep` are superior to the
-ancient BSD tools that ship with macOS:
+ancient BSD tools that ship with macOS. 
 
 ```text
 $ brew install coreutils
