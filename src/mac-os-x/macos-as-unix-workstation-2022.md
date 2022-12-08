@@ -112,7 +112,9 @@ $ brew install gnu-getopt
 $ brew install grep
 ```
 
-Add this to your `~/.zshrc` to ensure the GNU coreutils are first in PATH:
+Add this to your `~/.zshrc` or `~/.bashrc` to ensure the GNU coreutils
+are first in PATH:
+
 ```conf
 export PATH=\
 /usr/local/bin:\
@@ -138,7 +140,8 @@ $ brew install gnupg
 $ brew install openjdk@11
 ```
 
-Ensure this JDK's binaries are first in PATH, add these to `~/.zshrc`:
+Ensure this JDK's binaries are first in PATH, add these to `~/.zshrc`
+or `~/.bashrc`:
 
 ```conf
 export PATH=/usr/local/opt/openjdk@11/bin:$PATH
