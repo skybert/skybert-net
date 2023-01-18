@@ -40,7 +40,7 @@ $ paru -Syu
 ## macOS 
 ```text
 # softwareupdate -i -a
-# brew upgrade
+$ brew upgrade
 ```
 
 ## Windows 10 1709 (build 16299) or later 
@@ -48,3 +48,9 @@ $ paru -Syu
 ```text
 c:\> winget upgrade --all
 ```
+
+## Legend
+
+As always, `#` means the command should be executed as `root` or with
+`sudo` and `$` means the command should be executed by your regular
+user.
