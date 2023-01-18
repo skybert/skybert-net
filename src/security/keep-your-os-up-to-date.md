@@ -4,7 +4,7 @@ category: security
 tags: security, windows, osx, linux, unix
 
 The best and easiest way of keeping your machine secure, is to
-constantly upgrading all of its components. Not only a few selected
+constantly upgrade all of its components. Not only a few selected
 apps like Chrome, but all components, including the git command, the
 SSL/TLS libraries and so on. Below, I list the commands I use on the
 different platforms I frequent (plus Windows).
@@ -18,6 +18,7 @@ different platforms I frequent (plus Windows).
 ## Arch based machines
 ```text
 # pacman -Syu
+$ paru -Syu
 ```
 
 ## RedHat 8 and Fedora based machines
