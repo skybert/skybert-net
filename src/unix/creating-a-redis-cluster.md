@@ -17,7 +17,7 @@ only its binaries that we're really after here.
 ## Create six Redis nodes
 
 ```bash
-$ mkdir {7000..70005
+$ mkdir {7000..7005}
 $ for el in {7000..7005}; do
   cat > $el/redis.conf <<EOF
 port $el
