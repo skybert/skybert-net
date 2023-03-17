@@ -35,6 +35,7 @@ $ paru -Syu
 ## OpenBSD 
 ```text
 # syspatch
+# pkg_add -u
 ```
 
 ## macOS 
