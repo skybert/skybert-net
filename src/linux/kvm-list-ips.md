@@ -4,10 +4,11 @@ category: linux
 tags: linux, kvm, virtualization
 
 
-First, find the name(s) of the KVM network. By default this is `default`:
+First, find the name(s) of the KVM network. By default this is
+`default`:
 
 ```text
-~ $ virsh net-list
+$ virsh net-list
  Name      State    Autostart   Persistent
 --------------------------------------------
  default   active   yes         yes
@@ -21,3 +22,6 @@ $ virsh net-dhcp-leases default
 ------------------------------------------------------------------------------------------------------------------------------------------------
  2023-04-11 11:44:02   52:54:00:5d:97:ab   ipv4       192.168.122.151/24   debbie     ff:00:5d:97:ab:00:01:00:01:29:71:6a:0e:52:54:00:65:9a:7f
 ```
+
+Note, the name listed is not the VM name, but the hostname the OS
+inside the VM reports.
