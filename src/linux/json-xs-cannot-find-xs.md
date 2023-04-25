@@ -31,7 +31,7 @@ Then, you can install the missing Perl library:
 ```
 
 Now, `json_xs` works as expected:
-```json
-# json_xs -f yaml -t json < foo.yaml 
+```text
+# json_xs -f yaml -t json < foo.yaml
 {"foo":"bar"}
 ```
