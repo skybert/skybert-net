@@ -1,0 +1,24 @@
+#! /bin/bash
+
+cwd="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+src="${cwd}/.."
+log=$HOME/.$(basename "$0").log
+
+echo "Creating presentation slides ..."
+find "${src}/src/talks" -name "*.marp.md" |
+  while read talk; do
+    dir=${src}/output/talks/$(basename "${talk}" .marp.md)
+    mkdir -p "${dir}"
+    marp \
+         --theme ~/src/my-little-friends/marp/skybert.css \
+         "${talk}"\
+         -o \
+         "${dir}"/index.html &>> "${log}"
+  done
+
+cd $src && \
+  echo "Creating HTML from Markdown ..." && \
+  make html &>> "${log}" && \
+  echo "Pushing files ..." && \
+  rsync -az $src/output/ skybert@ssh.domeneshop.no:www/
+
