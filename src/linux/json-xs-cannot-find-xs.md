@@ -12,8 +12,13 @@ However, `json_xs` doesn't work:
 
 ```text
 $ json_xs -f yaml -t json < foo.yaml
-Can't locate YAML/XS.pm in @INC (you may need to install the YAML::XS module) (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5 /usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib64/perl5 /usr/share/perl5) at /usr/bin/json_xs line 187, <STDIN> line 1.
+Can't locate YAML/XS.pm in @INC (you may need to install the YAML::XS
+module) (@INC contains: /usr/local/lib64/perl5 /usr/local/share/perl5
+/usr/lib64/perl5/vendor_perl /usr/share/perl5/vendor_perl
+/usr/lib64/perl5 /usr/share/perl5) at /usr/bin/json_xs line 187,
+<STDIN> line 1.
 ```
+
 
 To fix this on RHEL8, you need to enable the code ready repository:
 ```text

@@ -48,6 +48,62 @@ $ redis-cli \
   --cluster-replicas 1
 ```
 
+`redis-cli` asks if it's ok that some of the nodes are on the same
+node as the controller, to which we answer `yes`:
+
+```
+>>> Performing hash slots allocation on 6 nodes...
+Master[0] -> Slots 0 - 5460
+Master[1] -> Slots 5461 - 10922
+Master[2] -> Slots 10923 - 16383
+Adding replica 127.0.0.1:7004 to 127.0.0.1:7000
+Adding replica 127.0.0.1:7005 to 127.0.0.1:7001
+Adding replica 127.0.0.1:7003 to 127.0.0.1:7002
+>>> Trying to optimize slaves allocation for anti-affinity
+[WARNING] Some slaves are in the same host as their master
+M: 9d522bed9ddd5f18f0a3088f3e73f158a50d552c 127.0.0.1:7000
+   slots:[0-5460] (5461 slots) master
+M: 2a4b5c846a7bb5079b63761c63f2a65b25a409e2 127.0.0.1:7001
+   slots:[5461-10922] (5462 slots) master
+M: 68f4e865b92defb9cad0227b2a73f593d3795e9c 127.0.0.1:7002
+   slots:[10923-16383] (5461 slots) master
+S: 4c7354de2dd034ab54f7abc5b93e0ca5103de195 127.0.0.1:7003
+   replicates 68f4e865b92defb9cad0227b2a73f593d3795e9c
+S: 753f007b2ebd1c52e6a024723da49e1390bffe63 127.0.0.1:7004
+   replicates 9d522bed9ddd5f18f0a3088f3e73f158a50d552c
+S: 8bb1de7e0680ad290882eb77537bb03cfe725a55 127.0.0.1:7005
+   replicates 2a4b5c846a7bb5079b63761c63f2a65b25a409e2
+Can I set the above configuration? (type 'yes' to accept): yes
+>>> Nodes configuration updated
+>>> Assign a different config epoch to each node
+>>> Sending CLUSTER MEET messages to join the cluster
+Waiting for the cluster to join
+.
+>>> Performing Cluster Check (using node 127.0.0.1:7000)
+M: 9d522bed9ddd5f18f0a3088f3e73f158a50d552c 127.0.0.1:7000
+   slots:[0-5460] (5461 slots) master
+   1 additional replica(s)
+S: 753f007b2ebd1c52e6a024723da49e1390bffe63 127.0.0.1:7004
+   slots: (0 slots) slave
+   replicates 9d522bed9ddd5f18f0a3088f3e73f158a50d552c
+M: 2a4b5c846a7bb5079b63761c63f2a65b25a409e2 127.0.0.1:7001
+   slots:[5461-10922] (5462 slots) master
+   1 additional replica(s)
+S: 4c7354de2dd034ab54f7abc5b93e0ca5103de195 127.0.0.1:7003
+   slots: (0 slots) slave
+   replicates 68f4e865b92defb9cad0227b2a73f593d3795e9c
+M: 68f4e865b92defb9cad0227b2a73f593d3795e9c 127.0.0.1:7002
+   slots:[10923-16383] (5461 slots) master
+   1 additional replica(s)
+S: 8bb1de7e0680ad290882eb77537bb03cfe725a55 127.0.0.1:7005
+   slots: (0 slots) slave
+   replicates 2a4b5c846a7bb5079b63761c63f2a65b25a409e2
+[OK] All nodes agree about slots configuration.
+>>> Check for open slots...
+>>> Check slots coverage...
+[OK] All 16384 slots covered.
+```
+
 This will create one replica for each of the masters. So the above
 will create 3 masters and 3 replicas. This means Redis has _some_
 redundancy, but if both the master and its replica goes down, the
