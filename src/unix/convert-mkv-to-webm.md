@@ -5,9 +5,9 @@ tags: unix
 
 
 To convert [Matroska video
-files](https://en.wikipedia.org/wiki/Matroska), `.mkv` files, to [WebM
-video files](https://en.wikipedia.org/wiki/WebM), this command
-produces good results:
+files](https://en.wikipedia.org/wiki/Matroska) (`.mkv`), to [WebM
+video files](https://en.wikipedia.org/wiki/WebM) (`.webm`), I've found
+that this command produces good results:
 
 ```
 $ ffmpeg -i foo.mkv -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis foo.webm
