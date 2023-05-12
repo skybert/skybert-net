@@ -1,7 +1,7 @@
 title: Why is there no python command?
 date: 2023-05-12
 category: python
-tags: python, ubuntu, linux
+tags: python, debian, ubuntu, linux
 
 ## Problem
 I have a Python script with this shebang:
