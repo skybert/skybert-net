@@ -3,10 +3,10 @@ date: 2016-11-03
 category: vcs
 tags: git, vcs
 
-Stash is Atlassian's `git` web interface, much like `github.com`. The
-killer feature of Stash over [Github](http://github.com)
-or [GitLab](http://gitlab.org) is that it integrates "seemlessly" with
-Jira (the issue tracker).
+Bitbucket, formerly known as Stash, is Atlassian's `git` web
+interface, much like `github.com`. The killer feature of Stash over
+[Github](http://github.com) or [GitLab](http://gitlab.org) is that it
+integrates "seemlessly" with Jira (the issue tracker).
 
 When browsing the commit list on Stash, however, I someties find that
 there's no profile picture of the user nor a link to that user's Jira
@@ -18,8 +18,9 @@ Confluence/Jira/Stash.
 
 The fix is easy, just two steps:
 
-1. Head over to your profile page on Confluence or Jira and check the
-   email address there.
+1. Head over to your profile page on
+   [Bitbucket](https://jira.stibodx.com/stash/profile), Confluence or
+   Jira and check the email address there.
    
 2. Open your `~/.gitconfig` in your favourite editor and make sure the
    email reads the same as what you found on your Confluence profile
