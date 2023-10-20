@@ -3,6 +3,12 @@ title: Discoveries
 
 ---
 
+## 2023
+
+### Security
+A simple to use, GUI based penetration tool that's actually useful:
+[Zaproxy](https://www.zaproxy.org/)
+
 ## 2017
 
 ### Code
