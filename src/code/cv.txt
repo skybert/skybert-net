@@ -72,7 +72,7 @@ TECHNOLOGY
       — LDAP: OpenLDAP, Active Directory
       — Web: Apache, Nginx, lighthttpd, Varnish, Squid
       — BASH: sed, awk, curl, jq
-      - Containers: LXD, Docker, Kubernetes, Openshift
+      — Containers: LXD, Docker, Kubernetes, Openshift
       — Virtual: KVM, VirtualBox, VMware
 
 
