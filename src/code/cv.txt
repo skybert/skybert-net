@@ -89,4 +89,4 @@ SEE ALSO
       🦣 https://emacs.ch/@skybert
       🎥 https://youtube.com/@skybert
 
-BSD                       July 11, 2022                          BSD
+BSD                       January 4, 2024                          BSD
