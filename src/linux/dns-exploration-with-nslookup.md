@@ -107,7 +107,7 @@ vg.no.			300	IN	MX	5 alt1.aspmx.l.google.com.
 
 ## DNS dumpster
 
-It's not on the command line, but [extremely cool](dnsdumpster.com).
+It's not on the command line, but [extremely cool](https://dnsdumpster.com).
 
 <img
   class="centered"
