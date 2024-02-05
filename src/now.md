@@ -4,6 +4,10 @@ url: now
 save_as: now/index.html
 category: various
 
+This is my [now page](https://nownownow.com/about), updated
+2024-01-26 from my home in Norway while the snow is falling down
+outside my window.
+
 ## Reading
 [The Cretan
 Runner](https://www.goodreads.com/book/show/25489204-the-cretan-runner)
@@ -27,3 +31,6 @@ with app security.
 ## Hacking
 Emacs 29.2 with native compilation. Still on Xorg/i3, although I've
 started to try out Wayland/Hyprland on my private laptop.
+
+---
+
