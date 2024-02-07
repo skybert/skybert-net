@@ -50,7 +50,7 @@ Port 8000
 Naming is hard, I've called it `proxy`. Since I run it in KVM managed
 by `virsh`, I query it for its IP like so:
 
-```text
+```bash
 $ virsh net-dhcp-leases default | grep proxy | awk '{print $5}'
 192.168.122.55/24
 ```
@@ -64,6 +64,8 @@ Now, whenever I say `proxy`, my machine routes the request to the VM.
 
 ## Using the VPN
 
+
+### SSH through the VPN
 When I need to `ssh` into a machine that requires me to be on the VPN,
 I use:
 
@@ -71,18 +73,62 @@ I use:
 $ ssh -J proxy bugs.internal
 ```
 
+
+### Web browser through the VPN
 When I need to browse a web site that requires me to be on the VPN, I
 start it with an extra option specifying the HTTP proxy:
 
 ```sh
-$ google-chrome-stable --proxy-server=proxy:8000 https://machine.internal &
+$ google-chrome-stable --proxy-server=proxy:8000 https://accounting.internal &
 ```
 
 When I need to use `curl` over the VPN, I pass the `-x` parameter:
 ```text
-$ curl -x proxy:8000 https://machine.internal
+$ curl -x proxy:8000 https://accounting.internal
 ```
+
+## Maven through the VPN
+
+In my `.zshrc` (`.bashrc` work just the same), I have the following
+that adds proxy settings to the `MAVEN_OPTS` variable depending on an
+internal website is available:
+
+```bash
+curl --max-time 1 --fail -s -x proxy:8899 -I https://bugs.internal/ && {
+  export MAVEN_OPTS="${MAVEN_OPTS}
+    -Dhttp.proxyHost=proxy
+    -Dhttp.proxyPort=8000
+    -Dhttps.proxyHost=proxy
+    -Dhttps.proxyPort=8000
+  "
+}
+```
+
+### <anything> through the VPN
+
+Most command line programs support the environment variables:
+```bash
+no_proxy=localhost
+http_proxy=
+https_proxy=
+```
+
+I have the following in my `.zshrc` to set these variables dynamically:
+```bash
+curl --max-time 1 --fail -s -x proxy:8899 -I https://bugs.internal/ && {
+  export no_proxy=localhost
+  export NO_PROXY=${no_proxy}
+  export http_proxy='http://proxy:8000
+  export https_proxy=${http_proxy}
+  export HTTP_PROXY=${http_proxy}
+  export HTTPS_PROXY=${http_proxy}
+}
+```
+
+## Success
 
 That's it. All other requests, I use regular browser sessions that
 don't route through the VPN. Which is most of what I need: Teams,
 Slack, Outlook, Git++
+
+Happy networking!
