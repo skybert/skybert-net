@@ -10,6 +10,8 @@ print_header() {
   cat <<EOF
 <html>
   <head>
+    <meta name="author" content="Torstein Krause Johansen"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <style>
       body {
         font-family: monospace;
@@ -49,7 +51,7 @@ md2html() {
   print_header
   md="${_cwd}"/$(basename "${0}" .sh).md
   cat "${md}" |
-    sed -r \
+    LC_ALL=en_GB.UTF-8 sed -r \
         -e 's#(https://.*)#<a href="\1">\1</a>#' \
         -e 's~^## (.*)~<h2>\1</h2>~' \
         -e 's~^#(.*)~<h1>\1</h1>~' \
@@ -67,7 +69,7 @@ main() {
   _cwd="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 
-  md2html "${_cwd}" > "${_cwd}"/cv.html
+  md2html "${_cwd}" | xmllint --pretty 1 - > "${_cwd}"/cv.html
 }
 
 main "$@"
