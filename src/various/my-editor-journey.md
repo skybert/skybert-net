@@ -57,7 +57,7 @@ I. It was not very cooperative and only displayed black text on a
 white background (in Windows) or yellow-ish on green background on my
 RedHat Linux 6.1 dekstop.
 
-But gurus like Thomas Malt and Audun Vaaler were using it, as were the
+But gurus like Thomas Malt and Audun Vaaler were using it, as was the
 dean Jan Høiberg, so I supposed it *had* more in store and I shouldn't
 judge it by its covers.
 
