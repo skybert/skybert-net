@@ -69,11 +69,15 @@ TECHNOLOGY
       — Python: Flask, jinja2, lxml, PyYAML, requests
       — IAM: OAuth2, OpenID Connect, Keycloak, Gluu, Okta, Azure AD
       — Database: Oracle, MySQL, Percona, MariaDB, PostgreSQL, Derby
+      — In-memory: Redis, Hazelcast
       — LDAP: OpenLDAP, Active Directory
       — Web: Apache, Nginx, lighthttpd, Varnish, Squid
       — BASH: sed, awk, curl, jq
       — Containers: LXD, Docker, Kubernetes, Openshift
       — Virtual: KVM, VirtualBox, VMware
+      — Network security: Burp suite, nmap, dig
+      — Device security: nftables, iptables, LUKS, ssh
+      — App security: Sonarqube, OWASP
 
 
 KNOWN ISSUES
