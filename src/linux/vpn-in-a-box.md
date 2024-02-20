@@ -12,8 +12,8 @@ tags: linux, vpn
 
 ## Why run the VPN client in a VM?
 
-The Cisco AnyConnect VPN client will not allow you to ssh into your VM
-and set up your VPN in case the server side profile is configured
+The Cisco AnyConnect VPN client will not allow you to `ssh` into your
+VM and set up your VPN in case the server side profile is configured
 with:
 
 ```xml
@@ -26,8 +26,10 @@ but I have come to settle on running VPN in an VM with X:
 
 ## VM with a lightweight distro and desktop environment
 
-I run a VM with Debian. It runs X and has a light DM, like
-[fluxbox](https://fluxbox.org).
+I run a VM with [Debian](https://debian.org). It runs
+[X](https://www.x.org/wiki/) and has a light DM, like
+[Fluxbox](https://fluxbox.org), so that it doesn't consume too many
+resources.
 
 ## VPN
 
@@ -62,10 +64,7 @@ And add it to my `/etc/hosts`:
 
 Now, whenever I say `proxy`, my machine routes the request to the VM.
 
-## Using the VPN
-
-
-### SSH through the VPN
+## SSH through the VPN
 When I need to `ssh` into a machine that requires me to be on the VPN,
 I use:
 
@@ -74,7 +73,7 @@ $ ssh -J proxy bugs.internal
 ```
 
 
-### Web browser through the VPN
+## Web browser through the VPN
 When I need to browse a web site that requires me to be on the VPN, I
 start it with an extra option specifying the HTTP proxy:
 
@@ -104,7 +103,7 @@ curl --max-time 1 --fail -s -x proxy:8899 -I https://bugs.internal/ && {
 }
 ```
 
-### <anything> through the VPN
+## Anything through the VPN
 
 Most command line programs support the environment variables:
 ```bash
