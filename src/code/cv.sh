@@ -70,6 +70,7 @@ main() {
 
 
   md2html "${_cwd}" | xmllint --pretty 1 - > "${_cwd}"/cv.html
+  sed -i 's#<?xml version="1.0"?>#<!doctype html>#' "${_cwd}/cv.html"
 }
 
 main "$@"

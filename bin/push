@@ -20,6 +20,7 @@ create_presentation_slides() {
 
 ## cv
 cv() {
+  "${src}"/src/code/cv.sh
   ssh skybert@ssh.domeneshop.no mkdir -p www/cv
   rsync -az "${src}"/src/code/cv.html skybert@ssh.domeneshop.no:www/cv/index.html
 }

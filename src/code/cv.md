@@ -1,5 +1,5 @@
 ﻿
-# SKYBERT(1)         Skybert's Curriculum Vitae             SKYBERT(1)
+# SKYBERT(1)         CV             SKYBERT(1)
 
 
 ## NAME
@@ -11,9 +11,9 @@ Senior programmer and admin with strong skills in Unix, Java, Python, BASH and R
 
 
 ## DESCRIPTION
-Love working with complex Unix and Linux systems comprised of HTTP servers, web caches, load balancers, distributed memory caches, databases, LDAP, IAMs and application servers. Making them all play together is a treat.
+Loves complex Unix and Linux systems comprised of HTTP servers, web caches, load balancers, distributed memory caches, databases, LDAP, IAMs and application servers. Making them all play together is a treat.
 
-Enjoy developing complex JEE and Python applications, taking a keen interest in open standards like HTTP, HTML, XML and CSS.
+Enjoys developing Java and Python applications, taking a keen interest in open standards like HTTP, HTML, XML and CSS.
 
 Significant experience with app security, integrating it with CI/CD and securing systems with Identity Access Management backends.
 
@@ -69,12 +69,15 @@ Significant experience with app security, integrating it with CI/CD and securing
 — Device security: nftables, iptables, LUKS, ssh
 — App security: Sonarqube, OWASP
 
+## PERFORMANCE TUNING
+— Allow running Linux on work machine
+— Allow contributing to open source 
+— Send to conference every now and then
 
 ## KNOWN ISSUES
 — Impatient
 — Prefers dark office
 — Loves mechanical keyboards
-
 
 ## SEE ALSO
 — 🕸️ https://skybert.net
@@ -83,4 +86,4 @@ Significant experience with app security, integrating it with CI/CD and securing
 — 🦣 https://emacs.ch/@skybert
 — 🎥 https://youtube.com/@skybert
 
-# BSD                       January 4, 2024                          BSD
+# BSD                       2024-02-20                          BSD
