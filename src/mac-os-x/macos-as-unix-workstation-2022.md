@@ -122,12 +122,9 @@ As you can see from the above paths, `gnused` isn't packaged like the
 others, and doesn't provide a `bin` directory outside the cellar.
 
 After this change to your PATH variable, you must reload the settings:
-```text
-# For bash shells
-$ source .bashrc
-
-# for zsh shells
-$ source .zshrc
+```bash
+$ source .bashrc # For BASH shells
+$ source .zshrc  # For ZSH shells
 ```
 
 Alternatively, start a new terminal window.
