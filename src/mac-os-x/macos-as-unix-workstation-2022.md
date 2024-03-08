@@ -24,32 +24,6 @@ macOS. Install it with:
 $ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Emacs 🐂
-
-Install Emacs from [emacsformacosx.com](https://emacsformacosx.com/),
-this gives you a good, up to date Emacs build.
-
-Note, this build doesn't provide native compilation (aka "gccemacs"),
-nor the non-blocking JSON processing done in this [emacs-lsp
-fork](https://github.com/emacs-lsp/emacs).
-
-Update 2022-11-25: It's also possible to get Emacs with `brew`. Note,
-after testing this on a fresh Mac, I the `--cask emacs
---with-native-comp --with-cocoa` options didn't work, so had to just
-issue the below command which gives a non-graphical Emacs (to get the
-full package, use the `emacsformacosx` link above):
-
-```text
-$ brew install emacs
-```
-
-
-## Spell check 📖
-
-```text
-$ brew install aspell
-```
-
 ## Terminal 💻
 
 I've grown very fond of the [kitty](https://sw.kovidgoyal.net/kitty/)
@@ -99,10 +73,17 @@ BASH. The version of `bash` that comes with macOS is very old,
 $ brew install bash
 ```
 
+Verify that the new version is correctly installed and available in
+your PATH by running:
+
+```text
+$ bash --version
+```
+
 ### Coreutils 🧰
 
 GNU `coreutils`, `sed`, `awk`, `getopt` and `grep` are superior to the
-ancient BSD tools that ship with macOS. 
+ancient BSD tools that ship with macOS.
 
 ```text
 $ brew install coreutils
@@ -112,8 +93,18 @@ $ brew install gnu-getopt
 $ brew install grep
 ```
 
-Add this to your `~/.zshrc` or `~/.bashrc` to ensure the GNU coreutils
-are first in PATH:
+Now, ensure that the GNU versions of these tools take precedence over
+the old BSD versions that macOS ships with. To do this, you must edit
+the settings file for your shell.
+
+If you don't know which one you're using, type:
+```text
+$ echo $SHELL
+/bin/zsh
+```
+
+With that, you know which `.bashrc` of `.zshrc` to edit. Add the
+following:
 
 ```conf
 export PATH=\
@@ -129,6 +120,17 @@ $PATH
 
 As you can see from the above paths, `gnused` isn't packaged like the
 others, and doesn't provide a `bin` directory outside the cellar.
+
+After this change to your PATH variable, you must reload the settings:
+```text
+# For bash shells
+$ source .bashrc
+
+# for zsh shells
+$ source .zshrc
+```
+
+Alternatively, start a new terminal window.
 
 ### PGP 🔒
 ```text
@@ -201,6 +203,30 @@ monitor these days, install it with:
 $ brew install btop
 ```
 
+## Emacs 🐂
+
+Install Emacs from [emacsformacosx.com](https://emacsformacosx.com/),
+this gives you a good, up to date Emacs build.
+
+Note, this build doesn't provide native compilation (aka "gccemacs"),
+nor the non-blocking JSON processing done in this [emacs-lsp
+fork](https://github.com/emacs-lsp/emacs).
+
+Update 2022-11-25: It's also possible to get Emacs with `brew`. Note,
+after testing this on a fresh Mac, I the `--cask emacs
+--with-native-comp --with-cocoa` options didn't work, so had to just
+issue the below command which gives a non-graphical Emacs (to get the
+full package, use the `emacsformacosx` link above):
+
+```text
+$ brew install emacs
+```
+
+## Spell check 📖
+
+```text
+$ brew install aspell
+```
 
 ## That's it!
 
