@@ -71,7 +71,7 @@ Significant experience with app security, integrating it with CI/CD and securing
 
 ## PERFORMANCE TUNING
 — Allow running Linux on work machine
-— Allow contributing to open source 
+— Allow contributing to open source
 — Send to conference every now and then
 
 ## KNOWN ISSUES
@@ -81,9 +81,9 @@ Significant experience with app security, integrating it with CI/CD and securing
 
 ## SEE ALSO
 — 🕸️ https://skybert.net
-— ⚒️ https://github.com/skybert
-— 🛠️ https://gitlab.com/skybert
 — 🦣 https://emacs.ch/@skybert
 — 🎥 https://youtube.com/@skybert
+— ⚒️ https://github.com/skybert
+— 🛠️ https://gitlab.com/skybert
 
 # BSD                       2024-02-20                          BSD
