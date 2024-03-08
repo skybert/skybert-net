@@ -78,6 +78,12 @@ your PATH by running:
 
 ```text
 $ bash --version
+GNU bash, version 5.2.26(1)-release (aarch64-apple-darwin22.6.0)
+Copyright (C) 2022 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
 ```
 
 ### Coreutils 🧰
