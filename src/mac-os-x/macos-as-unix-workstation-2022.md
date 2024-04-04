@@ -62,7 +62,7 @@ $ brew install zsh-completions
 $ brew install fzf
 ```
 
-### BASH
+### BASH 🐚
 
 You should install a newer version of `bash`. Although I use ZSH for
 my interactive shell, I still do lots of shell programming in
