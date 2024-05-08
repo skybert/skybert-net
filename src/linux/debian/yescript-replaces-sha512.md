@@ -1,7 +1,7 @@
 title: yescript replaces sha512 for password hashing
 date: 2021-08-25
-category: debian, linux
-tags: debian, security
+category: linux
+tags: linux, debian, security
 
 The default password hashing algorithm has been changed in Debian (and
 thus Ubuntu) with the Bullseye release. `pam_unix` has changed to
