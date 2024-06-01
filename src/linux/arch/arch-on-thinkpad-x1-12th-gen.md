@@ -159,3 +159,13 @@ I hadn't! This was shortly remedied with:
 # pacman -S sof-firmware
 # reboot
 ```
+
+## Fonts in Emacs
+
+To get the fonts for the nice icons on the mode line that
+`doom-modeline-mode` puts on, I had to install the package:
+
+```
+# pacman -S ttf-nerd-fonts-symbols-mono
+```
+
