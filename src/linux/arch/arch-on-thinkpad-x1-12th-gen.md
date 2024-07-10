@@ -169,3 +169,172 @@ To get the fonts for the nice icons on the mode line that
 # pacman -S ttf-nerd-fonts-symbols-mono
 ```
 
+## LSP in Emacs
+
+<kbd>M-x lsp-mode RET</kbd> gave the error:
+
+> make-process--with-editor-process-filter: Doing vfork: No such file
+> or directory
+
+
+I found no good way of getting Emacs or `lsp` to tell me exactly
+_what_ wasn't found, so I had to bisect my `.emacs` manually. It
+turned out that
+
+```lisp
+(setq lsp-java-java-path "/usr/lib/jvm/java-21-openjdk/bin/java")
+```
+
+Pointed to a non-existing JDK. After installing the needed version,
+LSP worked as it should. I've [suggested an improvement in
+lsp-java](https://github.com/emacs-lsp/lsp-java/issues/479) to help
+future Emacs users.
+
+## Firefox cannot display Chinese characters
+
+Both Simplified Chinese and Traditional Chinese characters showed up
+as boxes:
+
+<img
+  class="centered"
+  src="/2024/firefox-missing-chinese-fonts.png"
+  alt="Firefox showing text where Chinese characters are showed as boxes"
+/>
+
+Installing this font:
+
+```text
+# pacman -S wqy-microhei
+```
+
+and restarting Firefox resolved the issue. I can now read Simplified
+Chinese and Traditional Chinese to my heart full content.
+
+## libvirtd / virt-manager VMs don't get IP
+
+Turns out `dnsmasq` wasn't running:
+
+```text
+# systemctl status dnsmasq
+× dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server
+     Loaded: loaded (/usr/lib/systemd/system/dnsmasq.service; disabled; preset: disabled)
+     Active: failed (Result: exit-code) since Mon 2024-06-10 09:33:37 CEST; 1min 2s ago
+..
+
+```
+
+Starting it again gave a clue:
+```
+# systemctl start dnsmasq
+# journalctl -u dnsmasq -f
+..
+Jun 10 09:38:24 mithrandir dnsmasq[29904]: failed to create listening socket for port 53: Address already in use
+```
+
+Indeed:
+```text
+# netstat --tcp -nlp | grep 53
+tcp        0      0 192.168.122.1:53        0.0.0.0:*               LISTEN      1967/dnsmasq
+```
+
+So I'd better close that one down. but first, I wanted to find out
+_what_ started it:
+```text
+$ ps -u -p 1967
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+nobody      1967  0.0  0.0  13916  1968 ?        S    Jun07   0:00 /usr/bin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/defaul
+```
+
+Now, *that* looks very daemony, running as user `nobody` and all, but
+that's something of [a relic from
+LSB](https://refspecs.linuxbase.org/LSB_3.0.0/LSB-PDA/LSB-PDA/usernames.html)
+and with systemd, running with `DynamicUser` is a better option (or
+indeed any dedicated user, to ensure that the same user, no matter how
+unprivileged, is shared across processes).
+
+Killing that method with:
+```text
+# kill -9 1967
+```
+
+And starting `dnsmasq` again, looked so much better:
+```text
+# journalctl -u dnsmasq -f
+..
+Jun 10 09:47:01 mithrandir systemd[1]: Starting dnsmasq - A lightweight DHCP and caching DNS server...
+Jun 10 09:47:01 mithrandir dnsmasq[31222]: dnsmasq: syntax check OK.
+Jun 10 09:47:01 mithrandir systemd[1]: Started dnsmasq - A lightweight DHCP and caching DNS server.
+Jun 10 09:47:01 mithrandir dnsmasq[31223]: started, version 2.90 cachesize 150
+Jun 10 09:47:01 mithrandir dnsmasq[31223]: compile time options: IPv6 GNU-getopt DBus no-UBus i18n IDN2 DHCP DHCPv6 no-Lua TFTP conntrack ipset nftset auth cryptohash DNSSEC loop-detect inotify dumpfile
+Jun 10 09:47:01 mithrandir dnsmasq[31223]: DBus support enabled: connected to system bus
+Jun 10 09:47:01 mithrandir dnsmasq[31223]: reading /etc/resolv.conf
+Jun 10 09:47:01 mithrandir dnsmasq[31223]: using nameserver 10.0.128.100#53
+Jun 10 09:47:01 mithrandir dnsmasq[31223]: using nameserver 10.0.128.110#53
+Jun 10 09:47:01 mithrandir dnsmasq[31223]: using nameserver 8.8.8.8#53
+Jun 10 09:47:01 mithrandir dnsmasq[31223]: read /etc/hosts - 0 names
+```
+
+The VM didn't get an IP via DHCP directly, so I tried retarting
+it. Still no cigar. Then, I tried to restart `libvirtd` itself:
+
+```text
+# systemctl restart libvirtd
+```
+
+I thought I was homefree, but alas:
+```text
+# journalctl -u libvirtd -f
+..
+Jun 10 09:50:28 mithrandir systemd[1]: Started libvirt legacy monolithic daemon.
+Jun 10 09:50:29 mithrandir dnsmasq[31614]: failed to create listening socket for 192.168.122.1: Address already in use
+Jun 10 09:50:29 mithrandir dnsmasq[31614]: FAILED to start up
+Jun 10 09:50:29 mithrandir libvirtd[31561]: libvirt version: 10.4.0
+Jun 10 09:50:29 mithrandir libvirtd[31561]: hostname: mithrandir
+Jun 10 09:50:29 mithrandir libvirtd[31561]: internal error: Child process (VIR_BRIDGE_NAME=virbr0 /usr/bin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper) unexpected exit status 2:
+                                            dnsmasq: failed to create listening socket for 192.168.122.1: Address already in use
+Jun 10 09:51:57 mithrandir libvirtd[31561]: Domain id=2 name='debian12' uuid=1181da1e-8e70-4a45-831b-ff6a61de639a is tainted: host-cpu
+```
+
+
+I then got an idea: Perhaps the `dnsmasq` service should be disabled? Since it looks like `libvirtd` is a service that starts multiple services, including `dnsmasq`:
+```text
+# systemctl stop dnsmasq
+# systemctl disable dnsmasq
+# systemctl restart libvirtd
+```
+
+Now, that looked better:
+```text
+# journalctl -u libvirtd -f
+..
+Jun 10 09:55:01 mithrandir systemd[1]: Started libvirt legacy monolithic daemon.
+Jun 10 09:55:02 mithrandir dnsmasq[32243]: started, version 2.90 cachesize 150
+..
+Jun 10 09:55:02 mithrandir dnsmasq-dhcp[32243]: DHCP, IP range 192.168.122.2 -- 192.168.122.254, lease time 1h
+Jun 10 09:55:02 mithrandir dnsmasq-dhcp[32243]: DHCP, sockets bound exclusively to interface virbr0
+```
+
+But my VMs were _still_ not getting an IP.
+
+It turned out my firewall was in the way. On my VM, I checked if I
+could access `dnsmasq` on the host machine:
+
+```text
+$ nc -zv 192.168.122.1 53
+^C
+```
+
+Thus, I needed to punch a hole in my firewall to allow VMs on my
+`libvirtd` created network to request IPs from `dnsmasq`:
+
+```text
+# ufw allow from 192.168.122.0/24 to 192.168.122.1 port 53 proto tcp
+```
+
+Now, my VMs could finally request access the DHCP server:
+```text
+# nc -zv 192.168.122.1 53
+Connection to 192.168.122.1 53 port [tcp/domain] succeeded!
+```
+
+
