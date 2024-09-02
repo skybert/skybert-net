@@ -13,7 +13,7 @@ Senior programmer and admin with strong skills in Unix, Java, Python, BASH and R
 ## DESCRIPTION
 Loves complex Unix and Linux systems comprised of HTTP servers, web caches, load balancers, distributed memory caches, databases, LDAP, IAMs and application servers. Making them all play together is a treat.
 
-Enjoys developing Java and Python applications, taking a keen interest in open standards like HTTP, HTML, XML and CSS.
+Enjoys developing Java and Python applications, taking a keen interest in open standards like HTTP, OAuth, HTML, XML and CSS.
 
 Significant experience with app security, integrating it with CI/CD and securing systems with Identity Access Management backends.
 
@@ -37,7 +37,7 @@ Significant experience with app security, integrating it with CI/CD and securing
 ## LANGUAGES
 --norwegian  Norwegian is my mother tongue
 
---english    I took my master's degree in Scotland and have had English as my working language for more than 12 years.
+--english    I took my master's degree in Scotland and have had English as my working language for more than 19 years.
 
 --german     Have lived in Germany for 2.5 years and have worked in German speaking countries for a total of 4 years.
 
@@ -55,17 +55,17 @@ Significant experience with app security, integrating it with CI/CD and securing
 ## TECHNOLOGY
 — Linux: Debian, Ubuntu, RHEL, CentOS, SuSE, Arch
 — UNIX: HP-UX, Solaris, FreeBSD, OpenBSD
-— Java: JAX-RS, JPA, XOM, Lombok
+— Java: JAX-RS, JPA, XOM, Lombok, Dropwizard, Spring Boot/Batch/DI, Hibernate
 — Python: Flask, jinja2, lxml, PyYAML, requests
-— IAM: OAuth2, OpenID Connect, Keycloak, Gluu, Okta, Azure AD
+— IAM: OAuth2, OpenID Connect, Keycloak, Gluu, Okta, Entra ID (Azure AD)
 — Database: Oracle, MySQL, Percona, MariaDB, PostgreSQL, Derby
-— In-memory: Redis, Hazelcast
+— In-memory: Redis, Memcached, Hazelcast
 — LDAP: OpenLDAP, Active Directory
-— Web: Apache, Nginx, lighthttpd, Varnish, Squid
+— Web: Apache httpd, Nginx, lighthttpd, Varnish, Squid
 — BASH: sed, awk, curl, jq
-— Containers: LXD, Docker, Kubernetes, Openshift
+— Containers: LXD, Docker, Podman, Kubernetes, Openshift
 — Virtual: KVM, VirtualBox, VMware
-— Network security: Burp suite, nmap, dig
+— Network security: Metasploit, Burp suite, nmap, tcpdump, dig
 — Device security: nftables, iptables, LUKS, ssh
 — App security: Sonarqube, OWASP
 
