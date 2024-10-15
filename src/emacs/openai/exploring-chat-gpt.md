@@ -1,7 +1,7 @@
 title: Exploring Chat Gpt
 date: 2023-03-30
 category: emacs
-tags: emacs, openapi
+tags: emacs, openai
 
 ## gptel
 
