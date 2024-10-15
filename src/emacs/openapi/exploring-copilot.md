@@ -1,7 +1,7 @@
 title: Exploring copilot for Emacs
 date: 2023-03-31
 category: emacs
-tags: emacs, openapi
+tags: emacs, openai
 
 First off, I hadn't set up straight, so I did that:
 
