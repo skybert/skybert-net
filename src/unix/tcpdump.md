@@ -48,3 +48,30 @@ key/value pairs and memcached return statuses, you can do:
 This excludes captures HTTP requests to port `8680`, but excludes the
 packets where there's only header sent and no payload.
 
+Explanation of the filter expression used above:
+
+```
+(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0):
+```
+
+The filter captures only packets that contain data, i.e. packets with
+a non-zero payload.
+
+`ip[2:2]`: Refers to the total length field in the IP header. This is
+a 2-byte field that indicates the entire length of the IP packet,
+including headers and data.
+
+`((ip[0]&0xf)<<2)`: Refers to the header length of the IP
+packet. `ip[0]&0xf` extracts the 4-bit IP header length field (which
+indicates the length in 32-bit words), and `<<2` multiplies it by `4`
+to convert it into bytes.
+
+`(tcp[12]&0xf0)>>2)`: Refers to the TCP header length. `tcp[12]&0xf0`
+extracts the 4-bit TCP header length (in 32-bit words), and `>>2`
+shifts right by 2 bits to convert it to bytes.
+
+`(((ip[2:2] - ((ip[0]&0xf)<<2)) - ((tcp[12]&0xf0)>>2)) != 0)`: This
+whole expression calculates the length of the TCP payload by
+subtracting the IP header length and TCP header length from the total
+IP length. If this value is non-zero, it indicates that the packet
+contains data beyond the headers.

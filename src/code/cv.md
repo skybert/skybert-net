@@ -81,7 +81,7 @@ Significant experience with app security, integrating it with CI/CD and securing
 
 ## SEE ALSO
 — 🕸️ https://skybert.net
-— 🦣 https://emacs.ch/@skybert
+— 🦣 https://hachyderm.io/@skybert
 — 🎥 https://youtube.com/@skybert
 — ⚒️ https://github.com/skybert
 — 🛠️ https://gitlab.com/skybert
