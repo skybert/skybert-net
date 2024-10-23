@@ -47,11 +47,31 @@ had upgraded Microsoft Defender, but a restart:
 didn't shut down the old process cleanly.
 
 A `systemctl stop mdatp` and a good old `kill -9 <pid>` saved the
-day. Now, `mdatp` runs again and my CPU fan is quiet. Good grief.
+day:
+```text
+# systemctl stop mdatp
+# kill -9 $(pidof wdavdaemon)
+```
+
+Now, there should be no `wdavdaemon` running:
+```
+# pidof wdavdaemon
+#
+```
+
+And we can start Microsoft Defender again:
+```
+# systemctl start mdatp
+```
+
+Now, `mdatp` runs again and my CPU fan is quiet. 
 
 ```text
 $ top -p $(pidof wdavdaemon | tr ' ' ',')
 ```
+
+Lists only `wdavdaemon` processes each consuming less than a
+percent. 
 
 <img
    class="centered"
@@ -59,5 +79,5 @@ $ top -p $(pidof wdavdaemon | tr ' ' ',')
    alt="alt img text"
 />
 
-
+Good grief.
 
