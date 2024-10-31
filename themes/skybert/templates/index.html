@@ -12,8 +12,9 @@
      </div>
      <div style="margin-top: 1.5em; margin-bottom: 2em;">
        <p>
-         Check out my latest <strong>10</strong> articles:
-         {% for a in articles[:10]  | sort(reverse=True, attribute='date')  %}
+         Hi there, check out my latest <strong>20</strong> articles:
+         {% for a in articles[:20] | sort(reverse=True,
+         attribute='date') %}
          <a href="{{ a.url }}">{{ a.title }}</a> ({{ a.category }}) ~
          {% endfor %}
        </p>
