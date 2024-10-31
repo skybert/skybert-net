@@ -1,6 +1,6 @@
 title: The way I work in 2021
 category: dongxi
-tags: linux, fluxbox, debian
+tags: linux, fluxbox, debian, i3
 date: 2021-03-10
 
 <a href="/graphics/2021/2021-07-27-emacs-and-tmux.png">

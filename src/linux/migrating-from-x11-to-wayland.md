@@ -1,7 +1,7 @@
 title: How I failed migrating from X11 to Wayland
 date: 2024-06-07
 category: linux
-tags: linux
+tags: linux, i3, wayland
 
 For several years now, people have been saying I should move from
 X.org to Wayland. Every time I've tried just a wee bit, I've run into

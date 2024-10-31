@@ -1,7 +1,7 @@
 title: Installing Debian on Thinkpad X1 Carbon 5th Gen
 date: 2018-06-01
 category: linux
-tags: debian, linux
+tags: debian, linux, i3
 
 Debian stable (code name "stretch") installed without any problems,
 but a few tweaks were in order.
@@ -38,7 +38,7 @@ EndSection
 After restarting my login manager, `xbacklight` worked as it should.
 
 ## i3
-I added these lines to `~/.config/i3/config` to make the multimedia
+I added these lines to `~/.config/oi3/config` to make the multimedia
 keys work:
 
 ```text

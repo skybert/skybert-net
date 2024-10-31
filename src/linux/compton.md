@@ -1,7 +1,7 @@
 title: Compton
 date: 2020-07-13
 category: linux
-tags: linux
+tags: linux, i3
 
 To get cool translucency, dimming of inactive windows++ on any window
 manager, including Firefox and i3, I use:
