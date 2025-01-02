@@ -3,6 +3,50 @@ title: Discoveries
 
 ---
 
+## 2024
+
+### Python
+
+You can investigate the performance of your Python app by using an
+external, standalone command line tool called
+[py-spy](https://github.com/benfred/py-spy?). You don't need to
+instrument your Python code and you don't need to attach via
+[gdb](https://wiki.python.org/moin/DebuggingWithGdb).
+
+### Unix
+
+<img
+  class="centered"
+  src="/graphics/2024/unix-magic.jpg"
+  alt="unix wizard poster"
+/>
+
+The classic Unix Magic posters [can be download in _full_ quality from
+archive.org](https://archive.org/details/unix-magic/Unix%20Views.jpg?).
+
+[Cool, but obscure unix
+tools](https://kkovacs.eu/cool-but-obscure-unix-tools/?) 
+
+
+Simlarly, there's also [Cool, but obscure X11
+tools](http://cyber.dabamos.de/unix/x11/?) for us who still enjoy the
+likes of
+[xeyes](https://www.commandlinux.com/man-page/man1/xeyes.1.html)
+
+### Fun
+
+I used to *love* the User Friendly comic. All the comic strips are now
+[downloadable from
+archive.org](https://archive.org/details/user-friendly-comic?),
+allowing new readers to enjoy and old timers relive those happy days.
+
+### Coding
+
+This is an excellent, old article that has gotten a wee touch up: [Why
+Bloat Is Still Software’s Biggest
+Vulnerability](https://spectrum.ieee.org/lean-software-development?)
+
+
 ## 2023
 
 ### Security
