@@ -7,16 +7,32 @@ title: Discoveries
 
 ### Python
 
+<img
+  class="centered"
+  src="/graphics/2024/py-spy-flame.png"
+  alt="py spy flame graph"
+/>
+
 You can investigate the performance of your Python app by using an
 external, standalone command line tool called
 [py-spy](https://github.com/benfred/py-spy?). You don't need to
 instrument your Python code and you don't need to attach via
 [gdb](https://wiki.python.org/moin/DebuggingWithGdb).
 
-### Unix
+`py-spy` also gives you a
+[top](https://man7.org/linux/man-pages/man1/top.1.html) like live view
+of your Python application. Totally awesome!
 
 <img
   class="centered"
+  src="/graphics/2024/py-spy-top-like.png"
+  alt="py top like view"
+/>
+
+
+### Unix
+
+<img
   src="/graphics/2024/unix-magic.jpg"
   alt="unix wizard poster"
 />
