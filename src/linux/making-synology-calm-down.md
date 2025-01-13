@@ -46,7 +46,7 @@ tiny program. To do this, I first took a backup of the original app:
 
 ```text
 # cd /var/packages/SynologyPhotos/target/usr/sbin/
-# mv synofoto-task-center synofoto-task-center.orig
+# mv synofoto-face-extraction synofoto-face-extraction.orig
 ```
 
 Then, I created my own `synofoto-face-extraction`:
