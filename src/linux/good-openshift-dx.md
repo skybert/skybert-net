@@ -1,7 +1,7 @@
 title: Good OpenShift DX
 date: 2020-07-20
 category: linux
-tags: linux, openshift, kubernetes, bash, zsh
+tags: linux, openshift, kubernetes, bash, containers
 
 RedHat has been hard at work to give developers a good experience
 (`DX` = *D*eveloper e*X*perience), here I share some gems I've found.

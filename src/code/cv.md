@@ -62,6 +62,7 @@ Significant experience with app security, integrating it with CI/CD and securing
 — In-memory: Redis, Memcached, Hazelcast
 — LDAP: OpenLDAP, Active Directory
 — Web: Apache httpd, Nginx, lighthttpd, Varnish, Squid
+— Build: Jenkins, Nexus, APT and YUM repo management
 — BASH: sed, awk, curl, jq
 — Containers: LXD, Docker, Podman, Kubernetes, Openshift
 — Virtual: KVM, VirtualBox, VMware

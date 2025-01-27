@@ -1,7 +1,7 @@
 title: OpenShift container running out of PIDs all the time
 date: 2020-07-15
 category: linux
-tags: linux, openshift, docker, kubernetes
+tags: linux, openshift, kubernetes, containers
 
 My java application that I deployed on Openshift spectacularly. After
 humming along happily for a good while, it got completely stuck,
