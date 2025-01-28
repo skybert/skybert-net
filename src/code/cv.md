@@ -55,11 +55,12 @@ Significant experience with app security, integrating it with CI/CD and securing
 ## TECHNOLOGY
 — Linux: Debian, Ubuntu, RHEL, CentOS, SuSE, Arch
 — UNIX: HP-UX, Solaris, FreeBSD, OpenBSD
-— Java: JAX-RS, JPA, XOM, Lombok, Dropwizard, Spring Boot/Batch/DI, Hibernate
+— Java: JAX-RS, JPA, XOM, Lombok, Dropwizard, Spring Boot/Batch/DI, Hibernate, JMS
 — Python: Flask, jinja2, lxml, PyYAML, requests
 — IAM: OAuth2, OpenID Connect, Keycloak, Gluu, Okta, Entra ID (Azure AD)
 — Database: Oracle, MySQL, Percona, MariaDB, PostgreSQL, Derby
 — In-memory: Redis, Memcached, Hazelcast
+— Queues: ActiveMQ, Kafka
 — LDAP: OpenLDAP, Active Directory
 — Web: Apache httpd, Nginx, lighthttpd, Varnish, Squid
 — Build: Jenkins, Nexus, APT and YUM repo management
