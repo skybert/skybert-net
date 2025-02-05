@@ -70,6 +70,7 @@ Significant experience with app security, integrating it with CI/CD and securing
 — Network security: Metasploit, Burp suite, nmap, tcpdump, dig
 — Device security: nftables, iptables, LUKS, ssh
 — App security: Sonarqube, OWASP
+— Observability: Nagios/Icinga, Grafana, Dynatrace, Open Telemetry
 
 ## PERFORMANCE TUNING
 — Allow running Linux on work machine
