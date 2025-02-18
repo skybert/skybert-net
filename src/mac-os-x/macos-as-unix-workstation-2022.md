@@ -97,6 +97,7 @@ $ brew install gawk
 $ brew install gsed
 $ brew install gnu-getopt
 $ brew install grep
+$ brew install procps-ng
 ```
 
 Now, ensure that the GNU versions of these tools take precedence over
