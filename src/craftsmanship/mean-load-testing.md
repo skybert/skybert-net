@@ -1,4 +1,4 @@
-title: The world is mean, let your load test be mean too
+title: The World is Mean, So Your Load Tests Must Be Meaner
 date: 2025-02-11
 category: craftsmanship
 tags: craftsmanship, testing, unix
@@ -12,8 +12,9 @@ unleashing a mean load testing tool like
 - HTTP connector settings out of sync with other components
 - Integrations with 3rd party systems stall
 - Basically, with any scarce resource you thought the app would
-  recycle when you write object.close(), will potentially come back
-  and bite you.
+  recycle when you write `connection.close()`, will potentially come
+  back and bite you since your app spends longer _actually_ closing it
+  than what you assume in your code.
 
 The world is mean, so prepare your app by using a mean testing
 tool. My favourite is
@@ -37,7 +38,7 @@ write performance of a backend system:
 $ siege \
     --concurrent=255 \
     --time 10S \
-    --header="Authorization: hunter2" \
+    --header="Authorization: Bearer eyhunter2.." \
     --header="X-Important-Id-For-App: foo-bar-baz" \
     --content-type=application/json \
     --json-output \
@@ -67,7 +68,9 @@ http://localhost:8000/library POST {"name": "The Attic called ${attic_name}"}
 ```
 
 As you can see in the library example, `siege` has rudimentary support
-for variables too.
+for variables too. Read the fine manual with [man
+siege](https://man.archlinux.org/man/siege.1.en) and learn further
+details about this excellent tool.
 
 Happy load testing!
 
