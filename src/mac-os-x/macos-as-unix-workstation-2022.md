@@ -92,11 +92,12 @@ GNU `coreutils`, `sed`, `awk`, `getopt` and `grep` are superior to the
 ancient BSD tools that ship with macOS.
 
 ```text
+$ brew install base64
 $ brew install coreutils
 $ brew install gawk
-$ brew install gsed
 $ brew install gnu-getopt
 $ brew install grep
+$ brew install gsed
 $ brew install procps-ng
 ```
 
