@@ -1,7 +1,7 @@
 title: Watching Openshift cluster events
 date: 2025-03-19
 category: linux
-tags: linux
+tags: linux, openshift, kubernetes, containers
 
 When my Openshift cluster is bootstrapping, I prefer watching the
 progress with:
