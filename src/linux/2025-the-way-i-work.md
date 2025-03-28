@@ -14,7 +14,7 @@ tags: linux, fluxbox, debian, i3
 
 One screen. I used to have two screens, then changed to a super wide
 screen. These days, I actually find having one, regular external
-screen not only sufficient, but also preferable. There's a given
+screen not only sufficient, but also preferable. There's a certain
 calmnes of having only one screen and it gives me more focus.
 
 The keyboard I'm using at work is [Ducky One 2 Skyline
@@ -40,13 +40,14 @@ Apart from [my i3 configuration
 itself](https://gitlab.com/skybert/my-little-friends/-/blob/master/i3/config#L1),
 the important additions that make i3 great for me are:
 
-[Greenclip clipboard manager](). It supports both text and images and
-allows me to have a long history of copied content that I can choose
-from when I want to paste it somewhere else. For instance, I often
-want to copy 2 things from a Jira issue when pasting it into Slac: The
-title and the Jira issue link. So I everything I need, _then_ switch
-to the other app, and invoke Greenclip to select what I neeed. I can
-do this as many times as I need content from the clipboard.
+[Greenclip clipboard manager](https://github.com/erebe/greenclip). It
+supports both text and images and allows me to have a long history of
+copied content that I can choose from when I want to paste it
+somewhere else. For instance, I often want to copy 2 things from a
+Jira issue when pasting it into Slac: The title and the Jira issue
+link. So I everything I need, _then_ switch to the other app, and
+invoke Greenclip to select what I neeed. I can do this as many times
+as I need content from the clipboard.
 
 The second taste of secret sauce for my i3 setup, is
 [rofi](https://github.com/davatorium/rofi). It gives me fuzzy search
@@ -62,6 +63,8 @@ based means it's lightning fast too.
   />
 </a>
 
+With rofi, I get easy asccess to all my open windows, on all desktops.
+
 <a href="/graphics/2025/skybert-rofi-window-fuzzy.png">
   <img
     class="centered"
@@ -71,9 +74,10 @@ based means it's lightning fast too.
   />
 </a>
 
-Speed is a big feature of my setup in general. I want it to be
-fast. And i3 with rofi and greenclip is indeed fast. It also makes
-richer desktop environments not an option for me.
+In this screenshot, I want to navigate to the web browser window where
+I'm reading a Wikipedia page. Just typing `wi` quickly narrows it
+down, adding `k` makes it unique and I can just hit <kbd>Enter</kbd>
+to go to the correct Firefox window.
 
 <a href="/graphics/2025/skybert-rofi-run.png">
   <img
@@ -84,7 +88,16 @@ richer desktop environments not an option for me.
   />
 </a>
 
-Here showing the rofi dialogue for running a command.
+Here showing the rofi dialogue for running an arbitrary
+command. There's a also a rofi view for applications, but I like the
+run dialogue better as it lets me run any command, like `i3-msg move
+workspace to output right` to move the desktop on my screen to the
+left, onto the right hand monitor. The rofi run dialogue remembers
+previously type commands, making it super fast to use.
+
+Speed is a big feature of my setup in general. I want it to be
+fast. And i3 with rofi and greenclip is indeed fast. It also makes
+richer desktop environments not an option for me.
 
 ## Coding environment
 
