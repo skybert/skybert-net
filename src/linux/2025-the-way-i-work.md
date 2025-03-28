@@ -29,6 +29,63 @@ WH-1000XM](https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4)
 series. The sound is good, the noise cancelling adequate and they're
 comfortable to wear.
 
+## Desktop environment
+
+For seven years now, I've been using [i3](https://i3wm.org/). I like
+it more and more, how it stays out of the way and lets me get on with
+my work. It's highly configurable, and I've had a stable setup for
+years.
+
+Apart from [my i3 configuration
+itself](https://gitlab.com/skybert/my-little-friends/-/blob/master/i3/config#L1),
+the important additions that make i3 great for me are:
+
+[Greenclip clipboard manager](). It supports both text and images and
+allows me to have a long history of copied content that I can choose
+from when I want to paste it somewhere else. For instance, I often
+want to copy 2 things from a Jira issue when pasting it into Slac: The
+title and the Jira issue link. So I everything I need, _then_ switch
+to the other app, and invoke Greenclip to select what I neeed. I can
+do this as many times as I need content from the clipboard.
+
+The second taste of secret sauce for my i3 setup, is
+[rofi](https://github.com/davatorium/rofi). It gives me fuzzy search
+for switching windows as well as launching applications. It being text
+based means it's lightning fast too.
+
+<a href="/graphics/2025/skybert-rofi-window.png">
+  <img
+    class="centered"
+    src="/graphics/2025/skybert-rofi-window.png"
+    alt="rofi window"
+    style="width: 80%; max-width: 900px;"
+  />
+</a>
+
+<a href="/graphics/2025/skybert-rofi-window-fuzzy.png">
+  <img
+    class="centered"
+    src="/graphics/2025/skybert-rofi-window-fuzzy.png"
+    alt="rofi window fuzzy search"
+    style="width: 80%; max-width: 900px;"
+  />
+</a>
+
+Speed is a big feature of my setup in general. I want it to be
+fast. And i3 with rofi and greenclip is indeed fast. It also makes
+richer desktop environments not an option for me.
+
+<a href="/graphics/2025/skybert-rofi-run.png">
+  <img
+    class="centered"
+    src="/graphics/2025/skybert-rofi-run.png"
+    alt="rofi run"
+    style="width: 80%; max-width: 900px;"
+  />
+</a>
+
+Here showing the rofi dialogue for running a command.
+
 ## Coding environment
 
 <a href="/graphics/2025/skybert-emacs-30.1.png">
@@ -122,20 +179,19 @@ which ensures my environment is both ready to use and up to date:
    recent Git and Jira history the last couple of days, so that I have
    all I need for the standup meeting later in the day.
 
-The command that creates the start page is called `skybert-dash` and
-[you can use it
-too](https://github.com/skybert/skybert-dash/blob/main/skybert-dash). The
-start page looks like this:
-
 <a href="/graphics/2025/skybert-dash.png">
   <img
     class="centered"
     src="/graphics/2025/skybert-dash.png"
     alt="Skybert's generated browser start page"
-    style="width: 80%; max-width: 900px;"
+    style="height: 30%; max-height: 400px;"
   />
 </a>
 
+The command that creates the start page is called `skybert-dash` and
+[you can use it
+too](https://github.com/skybert/skybert-dash/blob/main/skybert-dash). The
+start page looks like this 👆
 
 ## Keeping up with the news
 
