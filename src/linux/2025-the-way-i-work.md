@@ -38,7 +38,8 @@ years.
 
 Apart from [my i3 configuration
 itself](https://gitlab.com/skybert/my-little-friends/-/blob/master/i3/config#L1),
-the important additions that make i3 great for me are:
+the important additions that make i3 great for me are Greenclip and
+rofi.
 
 [Greenclip clipboard manager](https://github.com/erebe/greenclip). It
 supports both text and images and allows me to have a long history of
@@ -94,6 +95,16 @@ run dialogue better as it lets me run any command, like `i3-msg move
 workspace to output right` to move the desktop on my screen to the
 left, onto the right hand monitor. The rofi run dialogue remembers
 previously type commands, making it super fast to use.
+
+Lastly, I like make the desktop look good too, so I use
+[picom](https://github.com/yshui/picom) to add translucency to a
+selected few of my windows: My editor, my terminals and the simple X
+applications, like
+[xclock](https://www.x.org/archive/X11R7.6/doc/man/man1/xclock.1.xhtml)
+and
+[xload](https://www.x.org/archive/X11R7.6/doc/man/man1/xload.1.xhtml). You
+can find [my picom conf
+here](https://gitlab.com/skybert/my-little-friends/-/blob/master/picom/picom.conf).
 
 Speed is a big feature of my setup in general. I want it to be
 fast. And i3 with rofi and greenclip is indeed fast. It also makes
@@ -255,3 +266,6 @@ it using desktop shortcuts. E.g. to pause, I hit <kbd>Ctrl</kbd>
 track, I hit <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>7</kbd>. That's it
 really. An eternal play list and three shortcuts. That's all I need.
 
+## That's it
+
+Hope you enjoyed this tour of my desktop. Happy hacking!
