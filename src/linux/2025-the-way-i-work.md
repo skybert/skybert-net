@@ -3,10 +3,10 @@ category: dongxi
 date: 2025-03-19
 tags: linux, fluxbox, debian, i3
 
-<a href="/graphics/2025/skybert-desk.jpg">
+<a href="/graphics/2025/skybert-desk.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-desk.jpg"
+    src="/graphics/2025/skybert-desk.webp"
     alt="My workdesk"
     style="width: 80%; max-width: 900px;"
   />
@@ -45,20 +45,19 @@ rofi.
 supports both text and images and allows me to have a long history of
 copied content that I can choose from when I want to paste it
 somewhere else. For instance, I often want to copy 2 things from a
-Jira issue when pasting it into Slac: The title and the Jira issue
-link. So I everything I need, _then_ switch to the other app, and
-invoke Greenclip to select what I neeed. I can do this as many times
-as I need content from the clipboard.
+Jira issue when pasting it into Slack: The title and the Jira issue
+link. So I first copy both these things from Jira, I _then_ switch to
+the other app and invoke Greenclip to select the text I need.
 
 The second taste of secret sauce for my i3 setup, is
 [rofi](https://github.com/davatorium/rofi). It gives me fuzzy search
 for switching windows as well as launching applications. It being text
 based means it's lightning fast too.
 
-<a href="/graphics/2025/skybert-rofi-window.png">
+<a href="/graphics/2025/skybert-rofi-window.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-rofi-window.png"
+    src="/graphics/2025/skybert-rofi-window.webp"
     alt="rofi window"
     style="width: 80%; max-width: 900px;"
   />
@@ -66,10 +65,10 @@ based means it's lightning fast too.
 
 With rofi, I get easy asccess to all my open windows, on all desktops.
 
-<a href="/graphics/2025/skybert-rofi-window-fuzzy.png">
+<a href="/graphics/2025/skybert-rofi-window-fuzzy.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-rofi-window-fuzzy.png"
+    src="/graphics/2025/skybert-rofi-window-fuzzy.webp"
     alt="rofi window fuzzy search"
     style="width: 80%; max-width: 900px;"
   />
@@ -80,10 +79,10 @@ I'm reading a Wikipedia page. Just typing `wi` quickly narrows it
 down, adding `k` makes it unique and I can just hit <kbd>Enter</kbd>
 to go to the correct Firefox window.
 
-<a href="/graphics/2025/skybert-rofi-run.png">
+<a href="/graphics/2025/skybert-rofi-run.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-rofi-run.png"
+    src="/graphics/2025/skybert-rofi-run.webp"
     alt="rofi run"
     style="width: 80%; max-width: 900px;"
   />
@@ -112,10 +111,10 @@ richer desktop environments not an option for me.
 
 ## Coding environment
 
-<a href="/graphics/2025/skybert-emacs-30.1.png">
+<a href="/graphics/2025/skybert-emacs-30.1.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-emacs-30.1.png"
+    src="/graphics/2025/skybert-emacs-30.1.webp"
     alt="Emacs 30.1 editing some files and using magit"
     style="width: 80%; max-width: 900px;"
   />
@@ -135,10 +134,10 @@ since the year 2000 and have got it about right now, lol.
 
 ## Web browser
 
-<a href="/graphics/2025/skybert-firefox.png">
+<a href="/graphics/2025/skybert-firefox.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-firefox.png"
+    src="/graphics/2025/skybert-firefox.webp"
     alt="Firefox using the Sweet dark theme"
     style="float: right; padding: 0.8em; width: 30%; max-width: 300px;"
   />
@@ -179,7 +178,7 @@ flashy ads.
 
 <img
   class="centered"
-  src="/graphics/2025/skybert-@home.png""
+  src="/graphics/2025/skybert-@home.webp""
   style="width: 80%; max-width: 900px;"
   alt="Running my @home script"
 />
@@ -203,10 +202,10 @@ which ensures my environment is both ready to use and up to date:
    recent Git and Jira history the last couple of days, so that I have
    all I need for the standup meeting later in the day.
 
-<a href="/graphics/2025/skybert-dash.png">
+<a href="/graphics/2025/skybert-dash.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-dash.png"
+    src="/graphics/2025/skybert-dash.webp"
     alt="Skybert's generated browser start page"
     style="height: 30%; max-height: 400px;"
   />
@@ -219,10 +218,10 @@ start page looks like this 👆
 
 ## Keeping up with the news
 
-<a href="/graphics/2025/skybert-elfeed.png">
+<a href="/graphics/2025/skybert-elfeed.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-elfeed.png"
+    src="/graphics/2025/skybert-elfeed.webp"
     alt="Reading RSS feeds in Emacs/elfeed"
     style="width: 80%; max-width: 900px;"
   />
@@ -241,10 +240,10 @@ I'm currently subscribed to.
 
 ## Music
 
-<a href="/graphics/2025/skybert-mpv.png">
+<a href="/graphics/2025/skybert-mpv.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-mpv.png"
+    src="/graphics/2025/skybert-mpv.webp"
     alt="Playing music using the mpv command line client"
     style="width: 80%; max-width: 900px;"
   />
