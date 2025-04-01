@@ -12,10 +12,13 @@ tags: linux, fluxbox, debian, i3
   />
 </a>
 
-One screen. I used to have two screens, then changed to a super wide
-screen. These days, I actually find having one, regular external
-screen not only sufficient, but also preferable. There's a certain
-calmnes of having only one screen and it gives me more focus.
+I use only one external screen, a [Dell UltraSharp
+25"](https://www.amazon.com/Dell-LED-Lit-Monitor-U2518D-Compatibility/dp/B075KGLYRL)
+(U2515H) with 2560x1440 resolution. I used to have two screens, then
+changed to a super wide screen. These days, I actually find having
+one, regular external screen not only sufficient, but also
+preferable. There's a certain calmnes of having only one screen and it
+gives me more focus.
 
 The keyboard I'm using at work is [Ducky One 2 Skyline
 TKL](https://www.duckychannel.com.tw/en/Ducky-One2-Skyline-TKL). It's
@@ -29,12 +32,54 @@ WH-1000XM](https://www.sony.com/et/electronics/headband-headphones/wh-1000xm4)
 series. The sound is good, the noise cancelling adequate and they're
 comfortable to wear.
 
+## Operating system
+
+I love [Arch Linux](https://archlinux.org/) and use it both for work
+and my home desktop computers. Debian is still my preferred server
+operating system, but on the desktop, Arch rules supreme.
+
+Arch gives me the latest versions of desktop application and
+environments, without seemingly ever to break my system. I upgrade
+_all_ the packages _every_ day, but cannot remmeber anything
+breaking. It's big feat.
+
+Another thing I dig about Arch, is that I don't need Flatpak, Snaps or
+AppImages. Everything's either in the official repositories or in
+AUR. I never need to install a package a different way, I just use one
+command: [paru](https://github.com/Morganamilo/paru). paru deals with
+both official and AUR pacakges.
+
 ## Desktop environment
 
 For seven years now, I've been using [i3](https://i3wm.org/). I like
 it more and more, how it stays out of the way and lets me get on with
 my work. It's highly configurable, and I've had a stable setup for
 years.
+
+As is normal with i3, I have <kbd>Alt</kbd> +
+<kbd>&lt;number&gt;</kbd> shortcuts to jump to any of the 10 virtual
+workspaces. I've configured the window manager to always open certain
+apps on dedicated workspaces. For instance, my coding editor is always
+on workspace `1`, my web browser windows always on workspace `2` and
+so on. Thus, I can blindly hit <kbd>Alt</kbd> + <kbd>2</kbd> and be
+sure I'll instantly see my browser tabs.
+
+My workspaces are as follows:
+
+1. Editor
+2. Web browser
+3. Terminals
+4. Secondary coding environment
+5. Whatever goes
+6. Whatever goes
+7. Whatever goes
+8. Snapshot manager and VPN
+9. Music and sound control
+10. Personal chat
+
+I prioritise screen real estate, so I have no window decorations, no
+toolbar, no notificaiton area, no nothing. The mouse has no use apart
+from clicking around on websites 😃
 
 Apart from [my i3 configuration
 itself](https://gitlab.com/skybert/my-little-friends/-/blob/master/i3/config#L1),
