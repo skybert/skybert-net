@@ -34,6 +34,12 @@ comfortable to wear.
 
 ## Operating system
 
+<img
+  src="/graphics/2025/archlinux.small.webp"
+  alt="Arch Linux logo"
+  style="width: 100px; float: right; padding: 0.8em;"
+/>
+
 I love [Arch Linux](https://archlinux.org/) and use it both for work
 and my home desktop computers. Debian is still my preferred server
 operating system, but on the desktop, Arch rules supreme.
