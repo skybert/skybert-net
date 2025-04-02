@@ -15,9 +15,10 @@ tags: linux, fluxbox, debian, i3
 The rock on which all stands, is an [ThinkPad X1 Carbon Gen
 12](https://www.lenovo.com/no/no/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-14-inch-intel/). I've
 been running X1s the last 10 years, and this one is the fastest I've
-had yet with an Intel(R) Core(TM) Ultra 7 155U CPU and 32 GBs of
-RAM. It's light, it's fast, it has a great keyboard. I love it to
-bits.
+had yet with an [i7 155U
+CPU](https://www.intel.com/content/www/us/en/products/sku/237327/intel-core-ultra-7-processor-155u-12m-cache-up-to-4-80-ghz/specifications.html)
+and 32 GBs of RAM. It's light, it's fast, it has a great keyboard. I
+love it to bits.
 
 I use only one external screen, a [Dell UltraSharp
 25"](https://www.amazon.com/Dell-LED-Lit-Monitor-U2518D-Compatibility/dp/B075KGLYRL)
