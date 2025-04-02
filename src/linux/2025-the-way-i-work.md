@@ -170,11 +170,11 @@ richer desktop environments not an option for me.
 
 ## Screenshotting tool
 
-<a href="/graphics/2025/skybert-emacs-30.1.webp">
+<a href="/graphics/2025/skybert-ksnip.webp">
   <img
     class="centered"
-    src="/graphics/2025/skybert-emacs-30.1.webp"
-    alt="Emacs 30.1 editing some files and using magit"
+    src="/graphics/2025/skybert-ksnip.webp"
+    alt="ksnip is awesome"
     style="width: 80%; max-width: 900px;"
   />
 </a>
