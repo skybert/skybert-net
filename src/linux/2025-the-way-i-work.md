@@ -12,6 +12,13 @@ tags: linux, fluxbox, debian, i3
   />
 </a>
 
+The rock on which all stands, is an [ThinkPad X1 Carbon Gen
+12](https://www.lenovo.com/no/no/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-14-inch-intel/). I've
+been running X1s the last 10 years, and this one is the fastest I've
+had yet with an Intel(R) Core(TM) Ultra 7 155U CPU and 32 GBs of
+RAM. It's light, it's fast, it has a great keyboard. I love it to
+bits.
+
 I use only one external screen, a [Dell UltraSharp
 25"](https://www.amazon.com/Dell-LED-Lit-Monitor-U2518D-Compatibility/dp/B075KGLYRL)
 (U2515H) with 2560x1440 resolution. I used to have two screens, then
@@ -37,7 +44,7 @@ comfortable to wear.
 <img
   src="/graphics/2025/archlinux.small.webp"
   alt="Arch Linux logo"
-  style="width: 100px; float: right; padding: 0.8em;"
+  style="float: right; padding: 0.8em;"
 />
 
 I love [Arch Linux](https://archlinux.org/) and use it both for work
@@ -72,16 +79,16 @@ sure I'll instantly see my browser tabs.
 
 My workspaces are as follows:
 
-1. Editor
+1. Primary coding enviroment (Emacs ♥️)
 2. Web browser
 3. Terminals
 4. Secondary coding environment
 5. Whatever goes
 6. Whatever goes
-7. Whatever goes
+7. Personal browser
 8. Snapshot manager and VPN
 9. Music and sound control
-10. Personal chat
+10. Personal chat (Signal)
 
 I prioritise screen real estate, so I have no window decorations, no
 toolbar, no notificaiton area, no nothing. The mouse has no use apart
@@ -159,6 +166,24 @@ here](https://gitlab.com/skybert/my-little-friends/-/blob/master/picom/picom.con
 Speed is a big feature of my setup in general. I want it to be
 fast. And i3 with rofi and greenclip is indeed fast. It also makes
 richer desktop environments not an option for me.
+
+## Screenshotting tool
+
+<a href="/graphics/2025/skybert-emacs-30.1.webp">
+  <img
+    class="centered"
+    src="/graphics/2025/skybert-emacs-30.1.webp"
+    alt="Emacs 30.1 editing some files and using magit"
+    style="width: 80%; max-width: 900px;"
+  />
+</a>
+
+I've tried _many_ screenshotting tools, but have found none that works
+as well as [ksnip](https://github.com/ksnip/ksnip). It both allows me
+to select app windows, regions or screens and have an excellent
+selection of annotation tools to add numbers, arrows and boxes to the
+screenshots so that I can clearly convey _why_ I want to show you the
+screenshot 🤣
 
 ## Coding environment
 
