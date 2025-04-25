@@ -12,6 +12,8 @@ tags: linux, fluxbox, debian, i3
   />
 </a>
 
+## Hardware
+
 The rock on which all stands, is an [ThinkPad X1 Carbon Gen
 12](https://www.lenovo.com/no/no/p/laptops/thinkpad/thinkpadx1/thinkpad-x1-carbon-gen-12-14-inch-intel/). I've
 been running X1s the last 10 years, and this one is the fastest I've
@@ -181,10 +183,10 @@ richer desktop environments not an option for me.
 
 I've tried _many_ screenshotting tools, but have found none that works
 as well as [ksnip](https://github.com/ksnip/ksnip). It both allows me
-to select app windows, regions or screens and have an excellent
-selection of annotation tools to add numbers, arrows and boxes to the
-screenshots so that I can clearly convey _why_ I want to show you the
-screenshot 🤣
+to easily select app windows, regions or screens, and it has an
+excellent selection of annotation tools to add numbers, arrows and
+boxes to the screenshots so that I can clearly convey _why_ I want to
+show you the screenshot 🤣
 
 ## Coding environment
 
@@ -223,7 +225,7 @@ since the year 2000 and have got it about right now, lol.
 My primary browser is Firefox. It's fast, has excellent plugin support
 and is the browser being the closest [the four
 freedoms](https://www.gnu.org/philosophy/free-sw.en.html), which I
-think is an important aspect.
+think is important.
 
 I find it useful to [pin](http://mzl.la/1BARsAT) the websites I use
 the most as this will both load the websites I always need when
