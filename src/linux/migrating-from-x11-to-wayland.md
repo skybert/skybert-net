@@ -70,6 +70,18 @@ Description     : IDE for Java, Groovy and other programming languages with adva
 Architecture    : x86_64
 ```
 
+## Signal doesn't load
+
+I tried several times with GNOME3 on Wayland, but could not get Signal
+running. Starting it from the command line produced no errors that I
+could see, but the window just didn't show.
+
+## Steam doesn't load
+
+Same deal as with Signal. No window. Running it from the command line
+showed activity and no errors. The result, though, was no graphical
+window displayed on my desktop.
+
 ## Summary
 
 I've had it with Wayland/Sway. After a week of trying, I've ditched it
