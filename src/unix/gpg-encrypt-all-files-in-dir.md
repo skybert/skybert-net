@@ -1,8 +1,16 @@
 title: Encrypt all files in dir using GPG
 date: 2025-05-27
 category: unix
-tags: unix
+tags: unix, bash, security
 
+If you have your unencrypted files in a directory "unencrypted":
+```
+$ find unencrypted -type f
+unencrypted/foo.conf
+unencrypted/secret/bar.conf
+```
+
+You can write a wee bash function like this:
 
 ```bash
 ## $1 :: dir with files you want to encrypt
@@ -18,13 +26,6 @@ encrypt_files_in_dir() {
       mv "${f}".asc "${target_dir}/."
     done
 }
-```
-
-Say you have your unencrypted files in a directory "unencrypted":
-```
-$ find unencrypted -type f
-unencrypted/foo.conf
-unencrypted/secret/bar.conf
 ```
 
 Then call it with a directory holding _unencrypted_ files:
