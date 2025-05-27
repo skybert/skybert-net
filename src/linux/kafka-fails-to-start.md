@@ -3,8 +3,18 @@ date: 2025-04-29
 category: linux
 tags: linux, kafka
 
-## The error
-```ini
+After upgrading to Kafka 4 on [my Arch Linux
+machine](/dongxi/the-way-i-work-in-2025/), Kafka would no longer
+start:
+
+```text
+$ grep '2025.*upgraded kafka' /var/log/pacman.log
+[2025-04-08T09:19:03+0200] [ALPM] upgraded kafka (3.9.0-1 -> 4.0.0-1)
+```
+
+## The error: No readable meta.properties files found
+
+```perl
 × kafka.service - Kafka server
      Loaded: loaded (/usr/lib/systemd/system/kafka.service; enabled; preset: disabled)
      Active: failed (Result: exit-code) since Mon 2025-04-28 16:50:56 CEST; 19h ago
@@ -42,9 +52,9 @@ I then created this non-existant directory:
 ```
 
 
-And initialised the Kafka storage in this direcotyr:
+And initialised the Kafka storage in this directory:
 ```text
-# kafka-storage.sh format -t $(kafka-storage.sh random-uuid) -c /etc/kafka/server.properties --standalone
+# sudo -u kafka kafka-storage.sh format -t $(kafka-storage.sh random-uuid) -c /etc/kafka/server.properties --standalone
 Formatting dynamic metadata voter directory /tmp/kraft-combined-logs with metadata.version 4.0-IV3.
 ```
 
@@ -84,13 +94,13 @@ It turned out that the reason it didn't work from systemd, was because
 the binary logs were in `/tmp`, which was mounted like this:
 
 ```text
-$ <mount | grep /tmp
+$ mount | grep /tmp
 tmpfs on  /tmp type tmpfs (rw,nosuid,nodev,nr_inodes=1048576,inode64)
 ```
 
 To change this, I did:
 ```text
-# vim /etc/kafka/server.
+# vim /etc/kafka/server.properties
 ```
 
 And changed `log.dirs` to:
@@ -112,12 +122,22 @@ drwxr-xr-x 3 kafka kafka 4.0K Apr 29 13:23 /var/lib/kafka/
 User=kafka
 ```
 
-With that wee change, Kafka now started correctly:
+I then, created new storage files for Kafka using the `kafka`
+user. The command reads the target directory from
+`/etc/kafka/server.properties`, so it was just another invocation of
+the command from before:
+
+```text
+# sudo -u kafka kafka-storage.sh format -t $(kafka-storage.sh random-uuid) -c /etc/kafka/server.properties --standalone
+```
+
+With those two changes, Kafka now started successfully:
+
 ```text
 # systemctl restart kafka
 ```
 
-Yeah!
+Yeah! 
 
 ## Fixing the logging
 
@@ -138,7 +158,10 @@ and not the old `.properties` version that's no longer there:
 lrwxrwxrwx 1 root root 35 Mar 20 00:24 /etc/kafka/log4j2.yaml -> /usr/share/kafka/config/log4j2.yaml
 ```
 
-```ini
+The systemd unit was clearly missing the correct log4j conf reference,
+so I created an override:
+
+```text
 # systemctl edit kafka
 ```
 

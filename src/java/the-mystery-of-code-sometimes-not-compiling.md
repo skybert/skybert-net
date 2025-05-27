@@ -1,4 +1,4 @@
-title: The Mystery of code Sometimes Not Compiling
+title: The Mystery of Code Sometimes Not Compiling
 date: 2025-05-07
 category: java
 tags: java, emacs
@@ -13,26 +13,14 @@ If you're suffering from random errors with your Lombok, Protobuf or
 other annotation processed magic beans, you can use this trick when
 running `mvn` on the command line:
 
-1. Pause Eclipse LSP processes
+1. Pause Eclipse LSP processes: `pgrep -f org.eclipse.jdt.ls | xargs kill -STOP`
+2. Run Maven as normal: `mvn install`
+3. Resume Eclipse LSP processes: `pgrep -f org.eclipse.jdt.ls | xargs kill -CONT`
 
-```text
-$ pgrep -f org.eclipse.jdt.ls | xargs kill -STOP
-```
-
-2. Run Maven as normal
-
-```text
-$ mvn install
-```
-
-3. Resume Eclipse LSP processes
-
-```text
-$ pgrep -f org.eclipse.jdt.ls | xargs kill -CONT
-```
+This took me a *long* time to figure out.
 
 You can also put this in a shell alias, so you can just type `mci`
-(mnemonic: `mvn clean install`):
+(short for `mvn clean install`):
 
 ```perl
 alias mci="pgrep -f org.eclipse.jdt.ls |
@@ -41,7 +29,5 @@ alias mci="pgrep -f org.eclipse.jdt.ls |
   pgrep -f org.eclipse.jdt.ls | xargs kill -CONT;
   xeyes"
 ```
-
-This took me a *long* time to figure out.
 
 Happy coding!
