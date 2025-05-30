@@ -12,7 +12,6 @@ Then, run:
 M-x all-the-icons-install-fonts RET
 ```
 
-
 ```text
 # pacman -S extra/ttf-nerd-fonts-symbols extra/ttf-nerd-fonts-symbols-mono
 ```
