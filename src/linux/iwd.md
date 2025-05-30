@@ -4,7 +4,7 @@ category: linux
 tags: linux
 
 As you may know, I really, really, [dislike Network
-Manager]({filename}/network-manager.md). Luckily, there's now a
+Manager](/linux/taming-networkmanager/). Luckily, there's now a
 superior replacement for `wpa_supplicant`, namely `iwd`. `iwd` also
 has builtin configuration and command line interface, giving me all I
 want:
