@@ -1,7 +1,7 @@
 title: Ensure required cmd in Makefile targets
 date: 2025-08-07
 category: unix
-tags: unix, makefile, make, coding
+tags: unix, makefile, make, coding, go
 
 To conditionally install the [swag]() command required for my
 `openapi-generate` target, I find this approach to be both easy and
